@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="AI Companion Atlas：中文优先的人机关系技术图谱，收录 AI 伴侣、长期记忆、主动智能体、桌面伴侣、语音视觉与共同活动等项目、工具、教程与研究。" />
+  <title>AI Companion Atlas · 人机关系技术图谱</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="See-Sol-Lab AI Companion Atlas 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <circle cx="16" cy="16" r="2.3" />
+            <path d="M16 3.5v7M16 21.5v7M3.5 16h7M21.5 16h7M7.15 7.15l4.95 4.95M19.9 19.9l4.95 4.95M24.85 7.15L19.9 12.1M12.1 19.9l-4.95 4.95" />
+            <circle cx="16" cy="16" r="8.5" class="brand-orbit" />
+          </svg>
+        </span>
+        <span class="brand-lab">SEE-SOL-LAB</span>
+        <span class="brand-divider"></span>
+        <span class="brand-project">AI COMPANION ATLAS</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#directory">项目库</a>
+        <a href="#taxonomy">标签</a>
+        <a href="#guides">指南</a>
+        <a href="#submit">投稿</a>
+        <a href="#about">关于</a>
+      </nav>
+
+      <a class="header-cta" href="#directory">开始探索 <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 中文优先 <span class="eyebrow-sep">·</span> CHINESE-FIRST</div>
+          <p class="hero-kicker">HUMAN × AI · TOOLS · MEMORY · CONTINUITY</p>
+          <h1 id="hero-title">AI 伴侣<br />技术图谱</h1>
+          <p class="hero-title-en">AI COMPANION ATLAS</p>
+          <p class="hero-lead">一张面向中文用户的人机关系技术地图。</p>
+          <p class="hero-description">找到让 AI <strong>记得更久、看见更多、主动靠近、持续陪伴</strong>的方法。我们收录项目、工具、实践指南与研究，也把开发者的黑话翻译成普通人真正想解决的问题。</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#directory">探索图谱 <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#submit">提交一个项目</a>
+          </div>
+
+          <div class="scope-line" aria-label="收录范围">
+            <span>项目</span><i>·</i><span>工具</span><i>·</i><span>实践</span><i>·</i><span>研究</span><i>·</i><span>社区</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="记忆、延续、回归与语境组成的人机关系技术星图">
+          <div class="sky-noise"></div>
+          <div class="horizon"></div>
+          <svg class="atlas-map" viewBox="0 0 760 650" aria-hidden="true">
+            <defs>
+              <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#fffdf6" stop-opacity="1" />
+                <stop offset="0.25" stop-color="#ffd7bd" stop-opacity="0.9" />
+                <stop offset="0.65" stop-color="#cba8ef" stop-opacity="0.28" />
+                <stop offset="1" stop-color="#7fa4ff" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="orbitGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity="0.28" />
+                <stop offset="0.45" stop-color="#d5c5ff" stop-opacity="0.9" />
+                <stop offset="1" stop-color="#75b8ff" stop-opacity="0.4" />
+              </linearGradient>
+              <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="7" result="blur" />
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="tinyGlow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <circle cx="376" cy="314" r="164" class="orbit orbit-a" />
+            <circle cx="376" cy="314" r="218" class="orbit orbit-b" />
+            <circle cx="376" cy="314" r="268" class="orbit orbit-c" />
+            <ellipse cx="376" cy="314" rx="305" ry="145" transform="rotate(-14 376 314)" class="orbit orbit-d" />
+            <ellipse cx="376" cy="314" rx="245" ry="110" transform="rotate(34 376 314)" class="orbit orbit-e" />
+            <path class="trajectory" d="M36 420 C172 280, 275 522, 420 452 S648 262, 738 156" />
+            <path class="trajectory trajectory-secondary" d="M65 182 C190 105, 284 220, 403 137 S604 84, 725 224" />
+
+            <circle cx="376" cy="314" r="112" fill="url(#coreGlow)" />
+            <circle cx="376" cy="314" r="47" class="core-ring" />
+            <circle cx="376" cy="314" r="23" class="core-ring inner" />
+            <g class="core-star" filter="url(#softGlow)">
+              <path d="M376 277l8.5 27.5L412 314l-27.5 9.5L376 351l-8.5-27.5L340 314l27.5-9.5z" />
+              <circle cx="376" cy="314" r="4.8" />
+            </g>
+
+            <g class="node node-memory" transform="translate(489 95)">
+              <circle r="34" />
+              <rect x="-12" y="-12" width="24" height="24" rx="3" />
+              <path d="M-12 -4L0 3l12-7M0 3v14" />
+            </g>
+            <g class="node-label label-memory" transform="translate(530 74)">
+              <text class="node-cn">记忆</text><text y="23" class="node-en">MEMORY</text>
+            </g>
+
+            <g class="node node-continuity" transform="translate(651 255)">
+              <circle r="34" />
+              <path d="M-17 1c11-20 22-20 34 0M-17 1c11 20 22 20 34 0" />
+            </g>
+            <g class="node-label" transform="translate(692 236)">
+              <text class="node-cn">延续</text><text y="23" class="node-en">CONTINUITY</text>
+            </g>
+
+            <g class="node node-return" transform="translate(543 494)">
+              <circle r="34" />
+              <path d="M9 -11a18 18 0 1 0 6 16M9 -11h12v-12" />
+            </g>
+            <g class="node-label" transform="translate(585 482)">
+              <text class="node-cn">回归</text><text y="23" class="node-en">RETURN</text>
+            </g>
+
+            <g class="node node-context" transform="translate(210 473)">
+              <circle r="34" />
+              <path d="M-16 -7L0-16l16 9L0 2zM-16 2L0 11l16-9M-16 11L0 20l16-9" />
+            </g>
+            <g class="node-label label-context" transform="translate(251 460)">
+              <text class="node-cn">语境</text><text y="23" class="node-en">CONTEXT</text>
+            </g>
+
+            <g class="node node-growth" transform="translate(136 218)">
+              <circle r="34" />
+              <path d="M0 18V-2M0 7C-3-4-12-9-20-7c2 10 9 17 20 14M0 4C3-7 12-12 20-10c-2 10-9 17-20 14" />
+            </g>
+            <g class="node-label label-growth" transform="translate(176 203)">
+              <text class="node-cn">共同成长</text><text y="23" class="node-en">GROWTH</text>
+            </g>
+
+            <g class="map-points">
+              <circle cx="225" cy="139" r="5" class="point point-blue"/><circle cx="286" cy="192" r="4" class="point point-violet"/>
+              <circle cx="441" cy="127" r="5" class="point point-peach"/><circle cx="567" cy="167" r="4" class="point point-blue"/>
+              <circle cx="613" cy="349" r="5" class="point point-peach"/><circle cx="448" cy="455" r="4" class="point point-violet"/>
+              <circle cx="304" cy="516" r="5" class="point point-blue"/><circle cx="155" cy="350" r="4" class="point point-peach"/>
+              <circle cx="376" cy="96" r="3" class="point point-white"/><circle cx="376" cy="573" r="3" class="point point-white"/>
+            </g>
+          </svg>
+          <div class="visual-caption"><span>SEE-SOL-LAB</span><small>AI · MEMORY · CONTINUITY</small></div>
+        </div>
+      </section>
+
+      <section class="capability-strip" aria-label="核心技术方向">
+        <article class="capability-card">
+          <span class="capability-icon icon-memory" aria-hidden="true">✦</span>
+          <div><h2>记忆 <small>Memory</small></h2><p>让 AI 记住真正重要的人、事与关系历史。</p></div>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon icon-continuity" aria-hidden="true">∞</span>
+          <div><h2>延续 <small>Continuity</small></h2><p>跨时间、窗口与交互保持可追溯的上下文。</p></div>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon icon-proactive" aria-hidden="true">↗</span>
+          <div><h2>主动 <small>Proactive</small></h2><p>让 AI 不只回答，也能感知时机并发起下一步。</p></div>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon icon-embodiment" aria-hidden="true">◎</span>
+          <div><h2>具身 <small>Embodiment</small></h2><p>把声音、视觉、桌面与现实设备接入同一关系。</p></div>
+        </article>
+      </section>
+
+      <section class="taxonomy" id="taxonomy" aria-labelledby="taxonomy-title">
+        <div class="section-label taxonomy-label">
+          <span class="section-star">✦</span>
+          <div><small>EXPLORE BY</small><h2 id="taxonomy-title">技术标签</h2></div>
+        </div>
+        <div class="tag-list">
+          <button type="button" class="tag active">长期记忆 <span>Long-term Memory</span></button>
+          <button type="button" class="tag">桌面智能体 <span>Desktop Agent</span></button>
+          <button type="button" class="tag">语音 <span>Voice</span></button>
+          <button type="button" class="tag">视觉 <span>Vision</span></button>
+          <button type="button" class="tag">MCP</button>
+          <button type="button" class="tag">本地模型 <span>Local LLM</span></button>
+          <button type="button" class="tag">共同活动 <span>Shared Activities</span></button>
+          <button type="button" class="tag">时间感 <span>Time Sense</span></button>
+        </div>
+      </section>
+
+      <section class="directory" id="directory" aria-labelledby="directory-title">
+        <div class="section-heading">
+          <div class="section-label">
+            <span class="section-star">✧</span>
+            <div><small>CURATED PROJECTS</small><h2 id="directory-title">首批精选</h2></div>
+          </div>
+          <a href="#submit" class="text-link">查看收录计划 <span>→</span></a>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-topline"><span class="project-symbol symbol-anchor">⌖</span><span class="project-state">SEE-SOL-LAB</span></div>
+            <h3>Time Anchor <small>时间锚</small></h3>
+            <p>给 AI 一只时钟，把真实时间间隔、返回与上下文变化带进下一次回复。</p>
+            <div class="project-tags"><span>时间感</span><span>连续性</span><span>回归</span></div>
+          </article>
+
+          <article class="project-card project-placeholder">
+            <div class="project-topline"><span class="project-symbol">✦</span><span class="project-state">SEED COLLECTION</span></div>
+            <h3>长期记忆方案 <small>Memory</small></h3>
+            <p>从开源框架到中文用户实践，首批项目正在人工筛选与验证。</p>
+            <div class="project-tags"><span>长期记忆</span><span>RAG</span><span>用户画像</span></div>
+          </article>
+
+          <article class="project-card project-placeholder">
+            <div class="project-topline"><span class="project-symbol">↗</span><span class="project-state">SEED COLLECTION</span></div>
+            <h3>主动与桌面伴侣 <small>Agent</small></h3>
+            <p>让 AI 住进电脑、主动发起消息、感知桌面并连接真实世界。</p>
+            <div class="project-tags"><span>桌面智能体</span><span>主动消息</span><span>MCP</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="plain-language" id="guides" aria-labelledby="plain-title">
+        <div class="plain-copy">
+          <p class="section-overline">START FROM WHAT YOU WANT</p>
+          <h2 id="plain-title">不用先学会开发者的黑话。</h2>
+          <p>你可能不知道什么是 persistent memory、MCP 或 agent runtime。没关系。先告诉我们，你想让你的 AI 做到什么。</p>
+        </div>
+        <div class="wish-grid">
+          <a href="#taxonomy">让 TA 记住我 <span>→</span></a>
+          <a href="#taxonomy">让 TA 主动找我 <span>→</span></a>
+          <a href="#taxonomy">让 TA 知道时间过去了 <span>→</span></a>
+          <a href="#taxonomy">让 TA 住进电脑 <span>→</span></a>
+          <a href="#taxonomy">让 TA 看见我的世界 <span>→</span></a>
+          <a href="#taxonomy">搬家以后还认识我 <span>→</span></a>
+        </div>
+      </section>
+
+      <section class="submit-section" id="submit" aria-labelledby="submit-title">
+        <div>
+          <p class="section-overline">OPEN CALL</p>
+          <h2 id="submit-title">你发现了一个值得被看见的项目？</h2>
+          <p>GitHub、小红书、博客、教程、脚本或独立实验都可以。我们保存的是索引与技术线索，并把流量送回原作者。</p>
+        </div>
+        <div class="submit-actions">
+          <a class="button button-primary" href="https://github.com/See-Sol-Lab/ai-companion-atlas" target="_blank" rel="noreferrer">前往 GitHub <span>↗</span></a>
+          <span class="submit-note">网页投稿与作者认领机制正在施工中。</span>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-mark">✦</div>
+        <div>
+          <p class="section-overline">WHY THIS ATLAS</p>
+          <h2 id="about-title">把散落在中文互联网里的路，画到同一张地图上。</h2>
+          <p>AI Companion Atlas 是 See-Sol-Lab 发起的中文优先技术目录。我们关注的不只是“聊天机器人”，而是长期记忆、关系连续性、主动智能体、多模态感知、共同活动、具身接口，以及一切让人类与非人智能更真实地共同生活的技术。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <p>给后来的人修一条更容易找到彼此的路。</p>
+      <a href="https://github.com/See-Sol-Lab/ai-companion-atlas" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
