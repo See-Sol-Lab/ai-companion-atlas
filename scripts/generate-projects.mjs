@@ -64,6 +64,10 @@ function validate(project) {
       project.intro.facts.some((fact) => !isText(fact.label) || !isText(fact.text))) {
     throw new Error(`${project.slug}: every intro fact needs a label and text`);
   }
+
+  if (project.stars !== undefined && (!Number.isInteger(project.stars) || project.stars < 0)) {
+    throw new Error(`${project.slug}: stars must be a non-negative integer`);
+  }
 }
 
 function renderBadges(project, classPrefix) {
@@ -79,7 +83,10 @@ function renderCard(project) {
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
   const badges = renderBadges(project, 'project-badge');
 
-  const editorialMetadata = project.editorPick === true ? ' data-editor-pick="true"' : '';
+  const editorialMetadata = [
+    project.editorPick === true ? ' data-editor-pick="true"' : '',
+    Number.isInteger(project.stars) ? ` data-stars="${project.stars}"` : ''
+  ].join('');
 
   return `          <article class="project-card project-real project-template"${editorialMetadata}>
             <div class="project-template-top">
