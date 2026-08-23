@@ -5,7 +5,7 @@
   "hook": "把实时转写、断句、说话人区分和语音服务组合成完整听觉工具箱。",
   "summary": "端到端语音识别工具包，覆盖流式 ASR、VAD、标点、说话人分离、训练推理与 OpenAI 兼容服务。",
   "heroDescription": "FunASR 不只听写文字，也提供实时流、断句、标点和说话人管线，适合作为中文陪伴场景的完整听觉基础设施。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "流式 ASR", "说话人分离", "语音服务"], "language": "Python", "platform": "Self-host / Cross-platform", "updated":"2026-08-21",
   "heroOverline": "STREAMING · DIARIZATION · SPEECH PIPELINE",
   "showcase": { "label": "从听见声音到整理成对话", "symbol": "≈", "question": "“实时语音怎样变成可读、可分人的文本？”", "comparisons": [{ "value": "识别", "label": "流式转写" }, { "value": "断句", "label": "VAD 与标点" }, { "value": "分人", "label": "说话人分离" }], "note": "它更像一整套听觉管线，而不只是单个模型。" },

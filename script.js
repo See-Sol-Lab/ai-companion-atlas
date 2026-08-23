@@ -89,7 +89,7 @@ const CATEGORY_FILTERS = {
   desktop: 'PC 前端',
   mobile: '手机前端',
   game: '游戏',
-  tool: '基础工具',
+  tool: '工具 / 插件',
   adult: '18+'
 };
 const normalizeSearch = (value) => value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();

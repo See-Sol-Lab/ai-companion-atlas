@@ -11,7 +11,8 @@
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "游戏", "tone": "game" }
+    { "label": "游戏", "tone": "game" },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": ["游戏", "Minecraft", "Bot API", "游戏工具"],
   "language": "JavaScript",

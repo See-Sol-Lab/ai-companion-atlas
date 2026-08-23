@@ -5,7 +5,7 @@
   "hook": "用几秒到一分钟的参考语音，为伴侣训练一套属于自己的声线。",
   "summary": "少样本语音克隆与 TTS 工具，支持零样本、少样本微调、跨语言合成、WebUI、训练和推理 API。",
   "heroDescription": "GPT-SoVITS 把少量参考音频变成可持续调用的合成声线，是许多自托管伴侣获得专属声音的基础工具。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "TTS", "声音克隆", "少样本"], "language": "Python", "platform": "Windows / macOS / Linux / Docker", "updated":"2026-08-18",
   "heroOverline": "VOICE · CLONING · FEW-SHOT",
   "showcase": { "label": "为伴侣塑造稳定声线", "symbol": "声", "question": "“少量语音样本，能不能变成长期使用的声音？”", "comparisons": [{ "value": "5 秒", "label": "零样本参考" }, { "value": "1 分钟", "label": "少样本微调" }, { "value": "多语言", "label": "跨语种合成" }], "note": "声音数据涉及真人授权，训练和发布前需确认使用权。" },

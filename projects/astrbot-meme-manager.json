@@ -5,7 +5,7 @@
   "hook": "让 AI 根据情绪挑选、发送并积累属于自己的表情包。",
   "summary": "AstrBot 表情包插件，支持情绪标签智能发送、自动收集、分类管理、WebUI、图床和云端同步。",
   "heroDescription": "AstrBot 表情包管理器为文字回复补上一套日常视觉表达器官，让 AI 能像熟悉的人一样用表情包回应情绪。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["视觉表达", "AstrBot", "表情包", "情绪"], "language": "Python", "platform": "AstrBot / WebUI", "updated":"2026-08-20",
   "heroOverline": "MEMES · EMOTION · VISUAL EXPRESSION",
   "showcase": { "label": "把表情包变成伴侣的表达习惯", "symbol": "☺", "question": "“AI 能不能像人一样在合适的时候甩一张图？”", "comparisons": [{ "value": "识别", "label": "情绪标签" }, { "value": "选择", "label": "智能匹配" }, { "value": "积累", "label": "自动收集" }], "note": "视觉表达从固定头像变成会成长的日常图库。" },

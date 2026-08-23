@@ -5,7 +5,7 @@
   "hook": "让伴侣用多语言、跨语言和可控情绪的声音自然说话。",
   "summary": "多语言大规模语音生成模型，覆盖零样本音色、跨语言合成、指令控制、流式推理、训练和部署。",
   "heroDescription": "CosyVoice 提供从模型到流式服务的完整语音生成栈，适合为伴侣构建低延迟、多语言的声音器官。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "TTS", "流式语音", "多语言"], "language": "Python", "platform": "Self-host / GPU", "updated":"2026-05-26",
   "heroOverline": "VOICE · STREAMING · CONTROL",
   "showcase": { "label": "一套可训练、可部署的声音器官", "symbol": "≈", "question": "“声音怎样兼顾自然度、语言和实时响应？”", "comparisons": [{ "value": "音色", "label": "零样本复刻" }, { "value": "语言", "label": "多语与跨语" }, { "value": "实时", "label": "流式合成" }], "note": "从研究模型到在线推理服务都在同一套工程中。" },

@@ -5,7 +5,7 @@
   "hook": "用高质量多语言 TTS，为伴侣提供自然、可克隆的声音输出。",
   "summary": "多语言生成式语音系统，提供零样本与少样本声音克隆、推理服务、WebUI 和训练工具。",
   "heroDescription": "Fish Speech 面向高质量语音生成和声音克隆，可作为伴侣实时说话、朗读与语音消息的自托管嘴巴。",
-  "badges": [{ "label": "研究许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "研究许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "TTS", "声音克隆", "多语言"], "language": "Python", "platform": "Self-host / GPU", "updated":"2026-08-22",
   "heroOverline": "TTS · VOICE CLONING · MULTILINGUAL",
   "showcase": { "label": "把文字回复变成自然语音", "symbol": "♪", "question": "“伴侣怎样拥有稳定、自然且可自托管的声音？”", "comparisons": [{ "value": "生成", "label": "文本转语音" }, { "value": "克隆", "label": "参考音色" }, { "value": "服务", "label": "API 与 WebUI" }], "note": "模型能力强，使用范围需遵守 Fish Audio Research License。" },

@@ -18,7 +18,8 @@
     {
       "label": "开源",
       "tone": "open"
-    }
+    },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": [
     "共同阅读",

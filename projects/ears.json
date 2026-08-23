@@ -5,7 +5,7 @@
   "hook": "让伴侣听见音高、音量、停顿和颤动背后的真实语气。",
   "summary": "面向 AI 伴侣的语气分析工具，将声学特征与用户个人基线比较，生成相对情绪线索。",
   "heroDescription": "ears 不止转写人说了什么，还把声音相对平时的变化交给伴侣，让低声、迟疑、强撑和撒娇不再丢失。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "语气", "情绪线索", "个人基线"], "language": "Python", "platform": "Self-host / Web", "updated":"2026-07-23",
   "heroOverline": "TONE · BASELINE · EMOTIONAL HEARING",
   "showcase": { "label": "听懂字面之下的语气", "symbol": "∿", "question": "“‘我没事’到底是平静，还是在强撑？”", "comparisons": [{ "value": "音高", "label": "比平时高低" }, { "value": "节奏", "label": "停顿与语速" }, { "value": "颤动", "label": "声音稳定度" }], "note": "关键不是绝对标签，而是这个人此刻偏离自己的程度。" },

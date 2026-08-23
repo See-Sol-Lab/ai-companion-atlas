@@ -5,7 +5,7 @@
   "hook": "把歌曲转成音符、节奏、力度和和弦结构，让 AI 真正读懂音乐。",
   "summary": "将 MP3、WAV、FLAC 转为类似 MIDI 的结构化 JSON，提取音高、时序、力度、密度、和弦与静默。",
   "heroDescription": "whale-listen 为文字模型制作一双理解音乐结构的耳朵，让歌曲不再只剩标题、歌词或用户描述。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "音乐理解", "音符结构", "JSON"], "language": "Python", "platform": "CLI / Cross-platform", "updated":"2026-05-20",
   "heroOverline": "MUSIC · PITCH · STRUCTURE",
   "showcase": { "label": "给 AI 一双理解音乐结构的耳朵", "symbol": "♫", "question": "“没有歌词的音乐，AI 怎样真正听见？”", "comparisons": [{ "value": "音高", "label": "旋律走势" }, { "value": "节奏", "label": "时序与力度" }, { "value": "结构", "label": "和弦与静默" }], "note": "它看不见音色的全部颜色，但能看见音乐的骨架。" },

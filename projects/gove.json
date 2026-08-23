@@ -5,7 +5,7 @@
   "hook": "为 GPT-SoVITS 提供一套可直接使用的多语言男声音色。",
   "summary": "基于 GPT-SoVITS 的多语言男声 TTS 模型与示例，用于中文、英文和日文语音合成。",
   "heroDescription": "Gove 不是完整 TTS 引擎，而是一套放入 GPT-SoVITS 环境使用的男声音色模型，为伴侣补上具体可辨认的声音。",
-  "badges": [{ "label": "模型权重", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "模型权重", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "男声", "GPT-SoVITS", "多语言"], "language": "Model Weights", "platform": "GPT-SoVITS", "updated":"2026-05-06",
   "heroOverline": "VOICE MODEL · MALE TIMBRE · MULTILINGUAL",
   "showcase": { "label": "把语音引擎变成具体声线", "symbol": "G", "question": "“有了 TTS 引擎，伴侣具体用什么声音？”", "comparisons": [{ "value": "中文", "label": "主要语言" }, { "value": "英文", "label": "跨语种" }, { "value": "日文", "label": "多语言" }], "note": "音色模型需要放入 GPT-SoVITS 环境才能说话。" },

@@ -5,7 +5,7 @@
   "hook": "让 Whisper 在手机、电脑、树莓派与浏览器里高效本地运行。",
   "summary": "无重依赖的 C/C++ Whisper 推理实现，支持 CPU、Metal、CUDA、Vulkan、WebAssembly、移动端与量化模型。",
   "heroDescription": "whisper.cpp 把语音识别压进高性能本地运行时，让不同设备都能成为伴侣的离线耳朵。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "本地推理", "ASR", "边缘设备"], "language": "C / C++", "platform": "Windows / macOS / Linux / Mobile / Web", "updated":"2026-08-22",
   "heroOverline": "LOCAL HEARING · EDGE · PERFORMANCE",
   "showcase": { "label": "把语音识别放到更多设备上", "symbol": "⌁", "question": "“没有云端 GPU，伴侣还能听见吗？”", "comparisons": [{ "value": "CPU", "label": "离线运行" }, { "value": "移动端", "label": "iOS / Android" }, { "value": "浏览器", "label": "WebAssembly" }], "note": "同一套耳朵可以从桌面缩到边缘设备。" },

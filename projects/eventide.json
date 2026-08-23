@@ -31,7 +31,8 @@
     {
       "label": "18+",
       "tone": "adult"
-    }
+    },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": [
     "18+",

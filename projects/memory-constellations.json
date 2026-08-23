@@ -26,7 +26,8 @@
     {
       "label": "记忆",
       "tone": "memory"
-    }
+    },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": [
     "长期记忆",

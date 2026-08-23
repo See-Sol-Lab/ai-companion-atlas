@@ -5,7 +5,7 @@
   "hook": "用更少内存和更快推理，把 Whisper 听觉接进实时陪伴管线。",
   "summary": "基于 CTranslate2 的 Whisper 复实现，支持批量转写、量化、词级时间戳和语音活动检测。",
   "heroDescription": "faster-whisper 优化 Whisper 的速度与显存占用，让语音消息、通话转写和长音频处理更适合日常运行。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "ASR", "高速推理", "量化"], "language": "Python", "platform": "Windows / macOS / Linux", "updated":"2025-11-19",
   "heroOverline": "FAST HEARING · QUANTIZATION · TIMESTAMPS",
   "showcase": { "label": "让基础听觉更适合持续运行", "symbol": "≫", "question": "“长时间语音转写怎样更快、更省？”", "comparisons": [{ "value": "速度", "label": "CTranslate2" }, { "value": "内存", "label": "量化运行" }, { "value": "时间", "label": "词级时间戳" }], "note": "更轻的耳朵，更容易留在后台持续工作。" },

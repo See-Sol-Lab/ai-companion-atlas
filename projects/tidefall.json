@@ -22,7 +22,8 @@
     {
       "label": "非商业",
       "tone": "limited"
-    }
+    },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": [
     "身体状态",

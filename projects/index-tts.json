@@ -5,7 +5,7 @@
   "hook": "用零样本音色和细粒度控制，为伴侣生成稳定、高质量的中文声音。",
   "summary": "工业级可控零样本 TTS 系统，支持参考音色、情绪与韵律控制、长文本和高效推理。",
   "heroDescription": "IndexTTS 面向可控、高效语音合成，为伴侣的中文说话、朗读和情绪表达提供成熟声音后端。",
-  "badges": [{ "label": "模型许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "模型许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "TTS", "零样本", "情绪控制"], "language": "Python", "platform": "Self-host / GPU", "updated":"2026-08-18",
   "heroOverline": "ZERO-SHOT · CONTROL · EFFICIENT TTS",
   "showcase": { "label": "把音色与说话方式分开控制", "symbol": "声", "question": "“同一种声音，怎样表达不同情绪与节奏？”", "comparisons": [{ "value": "音色", "label": "参考语音" }, { "value": "情绪", "label": "表达控制" }, { "value": "节奏", "label": "韵律与长文" }], "note": "适合需要稳定中文合成与精细控制的声音器官。" },

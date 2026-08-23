@@ -11,7 +11,8 @@
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "18+", "tone": "adult" }
+    { "label": "18+", "tone": "adult" },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": ["18+", "Toy", "私密硬件", "Intiface", "心率输入"],
   "language": "Python",

@@ -5,7 +5,7 @@
   "hook": "让伴侣听见文字之外的语言、情绪和环境声音。",
   "summary": "多语言语音理解模型，支持 ASR、语种识别、语音情绪识别和音频事件检测。",
   "heroDescription": "SenseVoice 把转写、语言、情绪与音频事件放进同一个听觉模型，让伴侣获得比纯文字更丰富的声音上下文。",
-  "badges": [{ "label": "源码公开", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "源码公开", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "情绪识别", "音频事件", "多语言"], "language": "Python", "platform": "Self-host / Edge", "updated":"2026-08-18",
   "heroOverline": "SPEECH · EMOTION · AUDIO EVENTS",
   "showcase": { "label": "听懂话语，也听懂声音里的状态", "symbol": "♪", "question": "“同一句话的情绪和环境，能一起被听见吗？”", "comparisons": [{ "value": "内容", "label": "语音识别" }, { "value": "情绪", "label": "声音状态" }, { "value": "环境", "label": "音频事件" }], "note": "文字只是听觉结果的一层。" },

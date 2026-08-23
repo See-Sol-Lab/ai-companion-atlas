@@ -5,7 +5,7 @@
   "hook": "在本地隐私边界内，为纯文字模型接上图像、视频、声音与音乐感知。",
   "summary": "本地多模态 MCP 感知层，代理分析图像、视频、音频和音乐，并以受控结果返回文字模型。",
   "heroDescription": "cove-sensory-mcp 把多模态模型封装成一组本地眼睛和耳朵，让纯文字伴侣在严格目录边界内读取媒体。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["视觉", "听觉", "多模态", "MCP"], "language": "Python", "platform": "Cross-platform / MCP", "updated":"2026-08-15",
   "heroOverline": "EYES · EARS · PRIVACY SANDBOX",
   "showcase": { "label": "给纯文字伴侣接入多模态感官", "symbol": "◉", "question": "“怎样看图听音，又不把本地文件暴露出去？”", "comparisons": [{ "value": "图像", "label": "视觉理解" }, { "value": "视频", "label": "时序画面" }, { "value": "音频", "label": "声音与音乐" }], "note": "感官入口受到目录与工具边界约束。" },

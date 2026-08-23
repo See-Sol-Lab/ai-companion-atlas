@@ -11,7 +11,8 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "记忆", "tone": "memory" }
+    { "label": "记忆", "tone": "memory" },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": ["记忆", "OpenAI 兼容", "代理", "RAG"],
   "language": "Python",

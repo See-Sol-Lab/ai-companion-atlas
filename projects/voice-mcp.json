@@ -5,7 +5,7 @@
   "hook": "给 Agent 一个直接调用的 speak 工具，让回复带着专属声音播放出来。",
   "summary": "AI 语音合成 MCP 服务，支持 DashScope 与 ElevenLabs Provider 切换、克隆音色、内联播放器和实时可视化。",
   "heroDescription": "voice-mcp 把 TTS 封装成 speak(text) 工具，让 Claude 等 Agent 能主动调用声音，并在对话中直接展示播放器。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["声音", "MCP", "TTS", "内联播放器"], "language": "TypeScript", "platform": "Cloudflare Workers / MCP", "updated":"2026-07-18",
   "heroOverline": "SPEAK TOOL · TTS · INLINE AUDIO",
   "showcase": { "label": "把语音变成 Agent 可调用的工具", "symbol": "▶", "question": "“AI 怎样自己决定何时开口说话？”", "comparisons": [{ "value": "调用", "label": "speak 工具" }, { "value": "音色", "label": "Provider 切换" }, { "value": "播放", "label": "内联 UI" }], "note": "模型负责决定要说什么，MCP 负责把文字变成声音。" },

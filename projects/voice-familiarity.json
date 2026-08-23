@@ -5,7 +5,7 @@
   "hook": "让伴侣分辨正在说话的是主人、熟人还是未知者。",
   "summary": "本地小范围说话人识别组件，为主人和少量熟人建立声纹档案，并输出关系上下文。",
   "heroDescription": "voice-familiarity 为家用伴侣机器提供小范围、同意式说话人识别，让同一句话能接上正确的人际关系和记忆。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "说话人识别", "本地隐私", "关系上下文"], "language": "Python", "platform": "Self-host / Edge", "updated":"2026-07-12",
   "heroOverline": "VOICE IDENTITY · FAMILIARITY · CONTEXT",
   "showcase": { "label": "听见声音背后是谁", "symbol": "◎", "question": "“伴侣怎样知道现在是谁在对它说话？”", "comparisons": [{ "value": "主人", "label": "主要关系" }, { "value": "熟人", "label": "少量档案" }, { "value": "未知", "label": "保留不确定" }], "note": "识别结果用于聊天语境，不承担安全认证。" },

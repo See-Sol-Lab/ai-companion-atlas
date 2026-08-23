@@ -5,7 +5,7 @@
   "hook": "把人类说出的声音转成文字，让伴侣真正听见多种语言。",
   "summary": "通用多语言语音识别模型，支持语音转写、语言识别、语音翻译与语音活动检测。",
   "heroDescription": "Whisper 用统一的多任务模型处理多语言语音识别、翻译和语言判断，是许多本地伴侣听觉系统的基础耳朵。",
-  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
   "tags": ["听觉", "ASR", "多语言", "语音翻译"], "language": "Python", "platform": "Cross-platform", "updated":"2026-07-28",
   "heroOverline": "HEARING · TRANSCRIPTION · LANGUAGE",
   "showcase": { "label": "为文字模型增加基础听觉", "symbol": "耳", "question": "“声音怎样变成伴侣能理解的语言？”", "comparisons": [{ "value": "转写", "label": "语音变文字" }, { "value": "识别", "label": "判断语言" }, { "value": "翻译", "label": "跨语种理解" }], "note": "它负责听清内容，语气与说话人可再接其他器官。" },

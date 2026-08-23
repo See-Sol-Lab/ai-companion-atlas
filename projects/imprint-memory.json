@@ -10,7 +10,8 @@
   "badges": [
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
-    { "label": "记忆", "tone": "memory" }
+    { "label": "记忆", "tone": "memory" },
+    { "label": "工具 / 插件", "tone": "tool" }
   ],
   "tags": ["记忆", "Claude Code", "Telegram", "混合检索"],
   "language": "Python",
