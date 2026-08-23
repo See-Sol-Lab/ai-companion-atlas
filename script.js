@@ -12,6 +12,33 @@ if (retiredProjectGrid) {
     const match = href.match(/\.\/projects\/([^/]+)\//);
     if (match && RETIRED_PROJECT_SLUGS.has(match[1])) card.remove();
   });
+
+  /* Keep manually corrected editorial metadata in sync until the next generator run. */
+  retiredProjectGrid.querySelectorAll(':scope > .project-card').forEach((card) => {
+    const href = card.querySelector('.project-detail-button')?.getAttribute('href') || '';
+    const match = href.match(/\.\/projects\/([^/]+)\//);
+    if (match?.[1] !== 'xinchao-nian') return;
+
+    const categories = new Set((card.dataset.categories || '').split(' ').filter(Boolean));
+    categories.add('adult');
+    card.dataset.categories = Array.from(categories).join(' ');
+    card.dataset.search = `${card.dataset.search || ''} 18+ 成人内容 欲望系统`.trim();
+
+    const badgeRow = card.querySelector('.project-badges');
+    if (badgeRow && !badgeRow.querySelector('.badge-adult')) {
+      const badge = document.createElement('span');
+      badge.className = 'project-badge badge-adult';
+      badge.textContent = '18+';
+      badgeRow.appendChild(badge);
+    }
+
+    const tags = card.querySelector('.project-tags');
+    if (tags && !Array.from(tags.children).some((tag) => tag.textContent.trim() === '18+')) {
+      const tag = document.createElement('span');
+      tag.textContent = '18+';
+      tags.prepend(tag);
+    }
+  });
 }
 
 /* A quiet, always-available return-to-top control for long catalog browsing. */
