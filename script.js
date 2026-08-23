@@ -114,7 +114,15 @@ if (directorySection && projectGrid && projectCards.length > PROJECTS_PER_PAGE) 
     const end = start + PROJECTS_PER_PAGE;
 
     projectCards.forEach((card, index) => {
-      card.hidden = index < start || index >= end;
+      const isVisible = index >= start && index < end;
+      card.hidden = !isVisible;
+      if (isVisible) {
+        card.style.removeProperty('display');
+        card.removeAttribute('aria-hidden');
+      } else {
+        card.style.display = 'none';
+        card.setAttribute('aria-hidden', 'true');
+      }
     });
 
     numbers.replaceChildren();
