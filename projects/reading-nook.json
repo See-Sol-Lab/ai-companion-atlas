@@ -8,6 +8,7 @@
   "summary": "轻量自托管共读网页，支持书籍导入、章节阅读、用户批注和 AI 直接读取服务器上的完整上下文。",
   "heroDescription": "reading-nook 用一个简单网页承接阅读与批注，并把正文和批注保存为 AI 可以直接访问的文件，减少每次对话重复传输整本书。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "PC 前端", "tone": "desktop" }

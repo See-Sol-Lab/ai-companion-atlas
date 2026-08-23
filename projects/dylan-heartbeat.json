@@ -8,6 +8,7 @@
   "summary": "Kelivo 常驻插件，负责主动唤醒、手机推送、共同时间线、长期时间感与自动日记。",
   "heroDescription": "Dylan Heartbeat 在 Kelivo 与模型 API 之间加入一个常驻 Gateway，并用后台 runtime 定期唤醒 AI。AI 可以根据上下文选择推送或保持沉默，所有主动行为都会回写共同时间线。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },

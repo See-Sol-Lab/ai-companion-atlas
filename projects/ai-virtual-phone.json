@@ -8,6 +8,7 @@
   "summary": "浏览器中的完整 AI 虚拟手机，支持多角色社交、长期关系、剧情创作、应用市场、游戏、多媒体与 PWA 安装。",
   "heroDescription": "AI Virtual Phone 用 Next.js 模拟一部完整手机，让用户创建角色、私聊、群聊、看朋友圈、写日记、跑剧情、玩游戏和安装自定义应用。所有模型服务由用户自行配置。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" },

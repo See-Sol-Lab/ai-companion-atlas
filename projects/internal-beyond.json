@@ -8,6 +8,7 @@
   "summary": "离线运行的单文件伴侣空间，集成像素房间、多模型聊天、日历、日志、书信、记忆星图、音乐、故事与创作工具。",
   "heroDescription": "边界之外把十二个关系与创作模块放进一个可以直接打开的 HTML 文件。所有个人资料、聊天、日记、记忆与 API 设置保存在本地，也可以完整导出和迁移。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "PC 前端", "tone": "desktop" },

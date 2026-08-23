@@ -8,6 +8,7 @@
   "summary": "面向长期陪伴的自托管 PWA，用一个 Gateway 管理模型、会话、项目、阅读、通知与可选记忆服务。",
   "heroDescription": "Ocean 是一个 provider-neutral 的自托管伴侣空间。它把移动端 PWA 与服务端 Gateway 连接起来，让不同房间、项目、书籍和模型共享稳定的会话边界，同时保留使用量、通知和数据所有权。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" },

@@ -8,6 +8,7 @@
   "summary": "人和 AI 共用的手帐风日历前端，支持不同笔迹、便签点赞、照片拼贴、整页渲染、桌面组件与推送。",
   "heroDescription": "shared-page 把关系中的日程、便签和照片放进一本双方都能编辑的手帐，让 AI 的留言拥有清晰可见的位置。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" }

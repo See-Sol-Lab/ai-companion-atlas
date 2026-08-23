@@ -8,6 +8,7 @@
   "summary": "自托管共读与批注系统，人和 AI 共享 EPUB 页码、划线、评论、回复、阅读进度与 MCP 工具。",
   "heroDescription": "Coread 用统一的服务端分页让人和 AI 看见相同页码。用户在浏览器中阅读、划线和评论，AI 通过 MCP 翻书、批注、回复，并能接收新评论通知。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" }

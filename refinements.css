@@ -104,6 +104,7 @@
 .badge-game{color:#376b93;background:rgba(74,132,187,.1);border:1px solid rgba(65,119,170,.2)}
 .badge-memory{color:#6655a5;background:rgba(112,91,181,.1);border:1px solid rgba(101,82,165,.2)}
 .badge-senses{color:#8a4e6d;background:rgba(173,83,126,.1);border:1px solid rgba(155,73,113,.2)}
+.badge-companion{color:#8b5a39;background:rgba(194,129,76,.1);border:1px solid rgba(173,112,62,.2)}
 .badge-mobile{color:#2d7480;background:rgba(55,151,164,.1);border:1px solid rgba(48,136,149,.2)}
 .badge-desktop{color:#455f9d;background:rgba(76,105,171,.1);border:1px solid rgba(68,95,157,.2)}
 .project-hook-row{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:13px}

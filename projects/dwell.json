@@ -8,6 +8,7 @@
   "summary": "可直接使用的伴侣网页前端与完整架构文档，覆盖主动心跳、推送、日记、待办、共读、健康和媒体卡片。",
   "heroDescription": "dwell 提供一套仿官方风格的完整前端，并把长期伴侣空间背后的数据设计和实现经验拆成可阅读的功能文档。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "非商业", "tone": "limited" },
     { "label": "PC 前端", "tone": "desktop" }
   ],

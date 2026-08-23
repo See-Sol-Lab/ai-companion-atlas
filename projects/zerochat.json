@@ -8,6 +8,7 @@
   "summary": "Flutter Android 伴侣前端，支持多角色对话、AI 朋友圈、主动消息、定时任务和自定义模型接口。",
   "heroDescription": "ZeroChat 把伴侣互动设计成一款微信式 Android 应用，让多个角色能聊天、发布动态，并按设定主动发来消息。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" }

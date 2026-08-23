@@ -8,6 +8,7 @@
   "summary": "功能密集的 Android AI Agent 客户端，支持长期记忆、语音视频、工作流、MCP、文件和设备操作。",
   "heroDescription": "YSClaude 从日常聊天延伸到实时通话、内置记忆、联网工具、共读音乐和 Android 设备控制，是一款偏全能工作台的手机前端。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },

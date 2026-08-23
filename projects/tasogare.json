@@ -8,6 +8,7 @@
   "summary": "支持 PDF、EPUB 与 TXT 的共读网页，人与 AI 可用双色划线、批注、生词本、书签和 MCP 工具共享阅读进度。",
   "heroDescription": "Tasogare 是一个面向人机共读的网页阅读器与 MCP Server。人类在浏览器中阅读，AI 可以翻页、划线、评论、查看最近活动和当天阅读状态，两种笔迹并排留在同一页。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],

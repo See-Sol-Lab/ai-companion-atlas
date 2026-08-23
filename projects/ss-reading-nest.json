@@ -8,6 +8,7 @@
   "summary": "移动端优先的 AI 共读前端，支持小说漫画、阅读进度、书签、摘录、短评与 ChatGPT Apps SDK 接入。",
   "heroDescription": "共读小窝把阅读器和 AI 对话放在同一移动界面中，让伴侣知道你读到哪里，并能围绕具体区间、书签和摘录继续交流。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" }

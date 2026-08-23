@@ -8,6 +8,7 @@
   "summary": "面向人机关系的多端生活空间，包含聊天、状态、纪念日、旅行、音乐、相册与多角色房间。",
   "heroDescription": "LandricSpace 用 Expo 前端和自托管服务端搭建一座人和 AI 共同生活的赛博别墅，可通过 Web、Android 与 iOS 进入。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" },

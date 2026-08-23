@@ -8,6 +8,7 @@
   "summary": "面向 AI 伴侣的自托管语音通话栈，支持主动来电、未接留言、免打扰、柔性挂断、情绪与语气感知。",
   "heroDescription": "Callhome 把 PWA 电话界面、语音识别、声学特征、模型 Gateway 和 TTS 串成完整通话。AI 可以决定来电、说明理由、听懂拒接原因，并在结束前给人留下继续说话的时间。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },

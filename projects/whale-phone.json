@@ -8,6 +8,7 @@
   "summary": "面向角色扮演与情感陪伴的 Android 拟真手机前端，支持多模型、私聊群聊、朋友圈、语音、记忆与共听。",
   "heroDescription": "玄鲸小手机用 Web 技术和 Capacitor 构建移动端陪伴应用，把常见社交与共同生活模块整合进一套可自行配置模型的本地前端。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" }

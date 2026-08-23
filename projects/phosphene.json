@@ -8,6 +8,7 @@
   "summary": "面向人机关系的任务与奖励系统，AI 可通过 MCP 创建日常、挑战和惊喜，用户提交证据后积累积分、连击与成就。",
   "heroDescription": "Phosphene 把日常互动变成双方都能参与的任务循环。AI 可以布置任务、设定难度和证据要求，用户在 PWA 中完成并提交，审核结果写入不可变积分账本。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" }

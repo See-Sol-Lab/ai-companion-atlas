@@ -8,6 +8,7 @@
   "summary": "跨平台自托管视觉伴侣壳，支持 Live2D、VRM、实时语音、浏览器与桌面应用，并可连接游戏和聊天平台。",
   "heroDescription": "AIRI 以“灵魂容器”为目标，把模型、语音、记忆、Live2D/VRM 身体和游戏能力整合进 Web、桌面与移动端前端。",
   "badges": [
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
