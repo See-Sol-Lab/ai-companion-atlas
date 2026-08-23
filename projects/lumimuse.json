@@ -1,0 +1,43 @@
+{
+  "slug": "lumimuse",
+  "order": 72,
+  "name": { "zh": "LumiMuse", "en": "Private Companion Space" },
+  "author": "in30mn1a",
+  "sourceUrl": "https://github.com/in30mn1a/LumiMuse",
+  "hook": "在一个安静的自托管空间里创建角色、长期聊天并慢慢积累共同记忆。",
+  "summary": "轻量自托管角色陪伴网页，支持角色创建、长期记忆、现实时间、生图、数据导入导出与 Docker 部署。",
+  "heroDescription": "LumiMuse 把角色设定、对话、记忆和生图整合成一间简洁的私人陪伴空间，所有数据留在本地或自己的服务器。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["角色陪伴", "长期记忆", "生图", "自托管"],
+  "language": "TypeScript",
+  "platform": "Web / Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "CHARACTERS · MEMORY · PRIVATE SPACE",
+  "showcase": {
+    "label": "一间能被关系慢慢填满的房间",
+    "symbol": "✧",
+    "question": "“角色怎样从设定卡变成长期相处的人？”",
+    "comparisons": [
+      { "value": "人设", "label": "角色创建" },
+      { "value": "相处", "label": "持续对话" },
+      { "value": "记忆", "label": "关系细节" }
+    ],
+    "note": "界面保持克制，把重点留给角色和共同经历。"
+  },
+  "intro": {
+    "paragraphs": [
+      "LumiMuse 支持创建角色并设置性格、背景、开场白、示例对话和生图标签，在聊天中抽取关于用户、关系与共同经历的长期记忆。它还提供现实时间注入、原生生图和数据导入导出。",
+      "项目可在本地用 Node.js 运行，也支持 Docker Compose；数据保存在 SQLite 与本地文件中，便于备份和迁移。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想要好看、安静、能长期自托管的角色陪伴网页的人。" },
+      { "label": "平台", "text": "现代 PC 浏览器与自托管服务器。" },
+      { "label": "使用方式", "text": "本地运行或 Docker 部署，首次进入后配置模型和生图服务。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

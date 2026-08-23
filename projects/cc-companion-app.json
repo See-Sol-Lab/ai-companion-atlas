@@ -1,0 +1,44 @@
+{
+  "slug": "cc-companion-app",
+  "order": 63,
+  "name": { "zh": "CC Companion App", "en": "Self-hosted Companion PWA" },
+  "author": "tjing9430",
+  "sourceUrl": "https://github.com/tjing9430/cc-companion-app",
+  "hook": "把本地 Agent 变成手机里随时能找到的私聊与群聊伙伴。",
+  "summary": "零依赖自托管陪伴聊天 PWA，支持私聊、群聊、持久记忆、图片、控制台和 Claude Code bridge。",
+  "heroDescription": "CC Companion App 在自己的电脑或服务器上保存聊天、记忆与上传文件，再通过浏览器和可安装 PWA 把本地 Agent 带到手机上。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["PWA", "自托管", "私聊群聊", "Claude Code"],
+  "language": "JavaScript",
+  "platform": "PC / 手机 PWA",
+  "updated": "2026-08-23",
+  "heroOverline": "CHAT · MEMORY · LOCAL DATA",
+  "showcase": {
+    "label": "一个轻量入口连接本地 Agent",
+    "symbol": "↔",
+    "question": "“电脑上的伴侣，怎么装进口袋？”",
+    "comparisons": [
+      { "value": "私聊", "label": "双人对话" },
+      { "value": "群聊", "label": "多 Agent" },
+      { "value": "记忆", "label": "本地便笺" }
+    ],
+    "note": "日常入口像手机 App，数据仍由自己的机器掌管。"
+  },
+  "intro": {
+    "paragraphs": [
+      "CC Companion App 提供私聊、按提及触发的群聊、持久记忆便笺、图片上传、草稿气泡、SSE 实时推送和运行控制台。内置 Claude Code bridge，也允许通过适配器连接其他 Agent；没有模型时还可先用本地 mock 助手体验界面。",
+      "项目使用 Node.js 自托管，默认把聊天、记忆和附件保存在 data 目录。手机可以通过同一 Wi-Fi、Tailscale 或受保护的公网入口安装 PWA，电脑浏览器也能直接使用。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想用手机连接本地 Claude Code 或其他 Agent，同时保留自有数据的人。" },
+      { "label": "平台", "text": "电脑浏览器、Android 与 iOS PWA。" },
+      { "label": "使用方式", "text": "Node.js 启动服务，配置访问口令与所需 Agent 适配器。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

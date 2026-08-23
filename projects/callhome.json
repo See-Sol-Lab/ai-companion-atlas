@@ -10,6 +10,8 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "PC 前端", "tone": "desktop" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["语音通话", "主动来电", "情绪感知", "PWA"],

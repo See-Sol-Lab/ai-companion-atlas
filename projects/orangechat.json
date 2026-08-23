@@ -9,6 +9,7 @@
   "heroDescription": "橘瓣面向“AI 与人一起生活”的 Android 使用方式。它增加完整插件框架，并让 AI 在授权后读取位置、应用使用、相机、可穿戴健康数据、日历、音乐和系统状态。",
   "badges": [
     { "label": "开源", "tone": "open" },
+    { "label": "手机前端", "tone": "mobile" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["Android", "插件生态", "生活感知", "主动消息"],

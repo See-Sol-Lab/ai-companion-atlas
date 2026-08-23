@@ -1,0 +1,43 @@
+{
+  "slug": "yuzuki-phone",
+  "order": 74,
+  "name": { "zh": "柚月小手机", "en": "Yuzuki's Little Phone" },
+  "author": "gaigai315",
+  "sourceUrl": "https://github.com/gaigai315/yuzuki-phone",
+  "hook": "在 SillyTavern 里给角色一部会聊天、发动态和打视频的虚拟手机。",
+  "summary": "SillyTavern 虚拟手机前端，包含微信、朋友圈、微博热搜、视频通话，以及剧情注入和独立 API 双模式。",
+  "heroDescription": "柚月小手机把角色的现代社交生活嵌进 SillyTavern，用高交互手机 UI 承接聊天、动态和视频通话。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["SillyTavern", "虚拟手机", "角色扮演", "视频通话"],
+  "language": "JavaScript / CSS",
+  "platform": "SillyTavern / PC Browser",
+  "updated": "2026-08-23",
+  "heroOverline": "PHONE UI · SOCIAL LIFE · ROLEPLAY",
+  "showcase": {
+    "label": "让角色拥有独立的手机生活",
+    "symbol": "▥",
+    "question": "“聊天主线之外，角色还能在哪里生活？”",
+    "comparisons": [
+      { "value": "微信", "label": "独立聊天" },
+      { "value": "动态", "label": "朋友圈微博" },
+      { "value": "通话", "label": "视频演出" }
+    ],
+    "note": "手机是界面形态，当前主要运行入口仍是 PC 上的 SillyTavern。"
+  },
+  "intro": {
+    "paragraphs": [
+      "柚月小手机为 SillyTavern 提供微信式聊天、朋友圈、微博热搜和视频通话等模块，并实现手势返回、视图栈和剧情时间引擎。图片保存到酒馆服务器本地，避免大型 Base64 数据拖累存档。",
+      "它同时支持剧情注入模式和独立 API 模式：前者把手机动态带回酒馆主线，后者让手机内对话不污染主聊天记录。项目保留全部权利，明确禁止商业化和未经授权的二改发布。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "使用 SillyTavern，并想给角色增加拟真手机社交生活的人。" },
+      { "label": "平台", "text": "SillyTavern 与 PC 浏览器。" },
+      { "label": "使用方式", "text": "按 README 把前端文件接入自己的 SillyTavern 环境。" },
+      { "label": "许可", "text": "源码公开、保留全部权利；禁止商业化与未经授权的二改发布。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "shared-page",
+  "order": 79,
+  "name": { "zh": "共享手帐", "en": "shared-page" },
+  "author": "KKarsyline",
+  "sourceUrl": "https://github.com/KKarsyline/shared-page",
+  "hook": "让人和 AI 在同一页日历上写字、贴照片、留便签并互相回应。",
+  "summary": "人和 AI 共用的手帐风日历前端，支持不同笔迹、便签点赞、照片拼贴、整页渲染、桌面组件与推送。",
+  "heroDescription": "shared-page 把关系中的日程、便签和照片放进一本双方都能编辑的手帐，让 AI 的留言拥有清晰可见的位置。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["共享手帐", "日历", "便签", "照片"],
+  "language": "Swift / Python",
+  "platform": "iOS / Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "CALENDAR · NOTES · SHARED PAGE",
+  "showcase": {
+    "label": "把共同生活写在同一页上",
+    "symbol": "□",
+    "question": "“AI 留下的日程和便签，能不能像真的手帐？”",
+    "comparisons": [
+      { "value": "笔迹", "label": "双方区分" },
+      { "value": "便签", "label": "互相点赞" },
+      { "value": "照片", "label": "页面拼贴" }
+    ],
+    "note": "一页既能给人阅读，也能渲染成图片交给 AI。"
+  },
+  "intro": {
+    "paragraphs": [
+      "shared-page 提供手帐风日历、三种笔迹、可互相点赞的便签、照片拼贴和桌面小组件。服务端还能把整页渲染为 PNG，并通过 MCP 让 AI 读取和写入同一份日历。",
+      "项目包含 iOS 客户端与自托管服务端，当前仓库历史较短，但核心代码、文档和许可已经公开。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望与 AI 共用日历、便签和照片手帐的人。" },
+      { "label": "平台", "text": "iOS 客户端与自托管服务。" },
+      { "label": "使用方式", "text": "部署服务端，构建 iOS 客户端，并按需连接 MCP 与推送。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

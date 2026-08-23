@@ -10,6 +10,7 @@
   "badges": [
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["伴侣空间", "本地优先", "日记", "共同活动"],

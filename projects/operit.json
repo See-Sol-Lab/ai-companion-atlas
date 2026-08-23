@@ -10,6 +10,7 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["Android Agent", "设备控制", "长期记忆", "本地模型"],

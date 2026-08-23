@@ -1,0 +1,43 @@
+{
+  "slug": "journal",
+  "order": 81,
+  "name": { "zh": "Journal", "en": "AI Chat Timeline" },
+  "author": "BomBomLab",
+  "sourceUrl": "https://github.com/BomBomLab/Journal",
+  "hook": "把聊天时间线、日记和待办渲染成可以每天翻看的手帐前端。",
+  "summary": "AI 聊天时间线可视化前端，将 timeline、diary 与 todo 数据呈现为日、周、月手帐视图。",
+  "heroDescription": "Journal 把 Agent 产生的时间线、日记与待办数据转换成清晰的手帐页面，让长期相处留下可回看的视觉记录。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["时间线", "日记", "待办", "手帐视图"],
+  "language": "JavaScript",
+  "platform": "PC Browser",
+  "updated": "2026-08-23",
+  "heroOverline": "TIMELINE · DIARY · VISUAL JOURNAL",
+  "showcase": {
+    "label": "让长期聊天拥有可翻阅的时间形状",
+    "symbol": "▦",
+    "question": "“散落的数据怎样变成一眼能读懂的共同记录？”",
+    "comparisons": [
+      { "value": "日", "label": "当天时间线" },
+      { "value": "周", "label": "连续回顾" },
+      { "value": "月", "label": "长期手帐" }
+    ],
+    "note": "它负责展示已有数据，不替代聊天与记忆后端。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Journal 读取 timeline、diary 和 todo 等约定结构，将 AI 聊天事件、日记和任务渲染为日、周、月手帐页面。它适合作为现有 Agent 系统的展示层，让记录从原始文件变成可持续浏览的生活时间线。",
+      "项目的前端与 UI 采用仅限个人学习、非商业修改和自用的 Source-Available 授权。README 同时注明其结构参考 cyberboss 与 timeline-for-agent，复用时需分别核对上游许可。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经有聊天、日记或待办数据，想增加可视化手帐入口的人。" },
+      { "label": "平台", "text": "PC 现代浏览器。" },
+      { "label": "使用方式", "text": "按项目 schema 准备 timeline、diary 与 todo 数据，再运行前端。" },
+      { "label": "许可", "text": "Source-Available，仅允许个人学习、非商业修改与自用；另有上游参考。" }
+    ]
+  }
+}

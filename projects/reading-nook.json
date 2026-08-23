@@ -1,0 +1,43 @@
+{
+  "slug": "reading-nook",
+  "order": 80,
+  "name": { "zh": "共读小屋", "en": "reading-nook" },
+  "author": "zzyyksl",
+  "sourceUrl": "https://github.com/zzyyksl/reading-nook",
+  "hook": "在人类可读的网页里批注书籍，再让 AI 直接读取同一份正文与批注。",
+  "summary": "轻量自托管共读网页，支持书籍导入、章节阅读、用户批注和 AI 直接读取服务器上的完整上下文。",
+  "heroDescription": "reading-nook 用一个简单网页承接阅读与批注，并把正文和批注保存为 AI 可以直接访问的文件，减少每次对话重复传输整本书。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["共读", "网页阅读器", "批注", "自托管"],
+  "language": "Python",
+  "platform": "PC Browser / Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "READ · ANNOTATE · FULL CONTEXT",
+  "showcase": {
+    "label": "让正文与批注成为共享材料",
+    "symbol": "¶",
+    "question": "“怎样让 AI 读到整章，而不是只看到几句转述？”",
+    "comparisons": [
+      { "value": "正文", "label": "章节阅读" },
+      { "value": "批注", "label": "人工标记" },
+      { "value": "文件", "label": "AI 直接读取" }
+    ],
+    "note": "共享的是同一份书和批注文件，不必每次重新复制。"
+  },
+  "intro": {
+    "paragraphs": [
+      "reading-nook 是一个自托管网页阅读器，用户可以导入书籍、按章节阅读并添加批注。正文和批注保存在服务器 JSON 文件中，AI 可以用自己的文件工具直接读取完整章节与用户标记。",
+      "项目使用 Python 启动，提供简单的四位数访问密码与同 IP 限速；README 明确说明这不是强认证，建议只在私有网络或带 HTTPS 和正式认证的反向代理后使用。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和本地 Agent 共读长文本，并保留逐章批注的人。" },
+      { "label": "平台", "text": "PC 浏览器与 Python 自托管服务。" },
+      { "label": "使用方式", "text": "配置书籍目录并启动 app.py，在私有网络中打开阅读网页。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

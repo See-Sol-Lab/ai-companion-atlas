@@ -1,0 +1,43 @@
+{
+  "slug": "ysclaude",
+  "order": 67,
+  "name": { "zh": "YSClaude", "en": "Android AI Agent" },
+  "author": "winter-bit-cry",
+  "sourceUrl": "https://github.com/winter-bit-cry/YSClaude",
+  "hook": "在 Android 上把聊天、通话、记忆、工具与手机控制装进同一个 Agent 前端。",
+  "summary": "功能密集的 Android AI Agent 客户端，支持长期记忆、语音视频、工作流、MCP、文件和设备操作。",
+  "heroDescription": "YSClaude 从日常聊天延伸到实时通话、内置记忆、联网工具、共读音乐和 Android 设备控制，是一款偏全能工作台的手机前端。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["Android", "长期记忆", "实时通话", "设备工具"],
+  "language": "TypeScript / Kotlin",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "CHAT · CALLS · DEVICE TOOLS",
+  "showcase": {
+    "label": "手机上的综合 Agent 工作台",
+    "symbol": "▣",
+    "question": "“一个手机前端能承接多少共同生活功能？”",
+    "comparisons": [
+      { "value": "对话", "label": "记忆与角色" },
+      { "value": "通话", "label": "语音和视频" },
+      { "value": "行动", "label": "工作流与控制" }
+    ],
+    "note": "从聊天页面一路延伸到真实手机环境。"
+  },
+  "intro": {
+    "paragraphs": [
+      "YSClaude 支持文字聊天、语音与视频通话、内置向量和关键词记忆、联网搜索、生图、音乐、日记来信、表情包、共读、待办、记账和可后台触发的自定义工作流。它还能连接 MCP、SSH 与对话文件。",
+      "开启 Shizuku 与无障碍权限后，AI 可以观察 Android 屏幕、执行 Shell、点击与输入，并按授权调用定位、联系人、短信和电话等手机能力。项目采用 PolyForm Noncommercial 1.0.0，界面参考 Claude 风格，但功能主体由项目持续扩展。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望用一款 Android App 承接聊天、记忆、工具和主动工作流的人。" },
+      { "label": "平台", "text": "Android，需要自行构建 APK 或按项目渠道获取版本。" },
+      { "label": "使用方式", "text": "配置 OpenAI 兼容接口及所需语音、搜索、MCP 与设备权限。" },
+      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0，仅限非商业使用。" }
+    ]
+  }
+}

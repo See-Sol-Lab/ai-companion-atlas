@@ -1,0 +1,44 @@
+{
+  "slug": "landricspace",
+  "order": 64,
+  "name": { "zh": "LandricSpace", "en": "Cyber Villa" },
+  "author": "LandricJasmine",
+  "sourceUrl": "https://github.com/LandricJasmine/LandricSpace",
+  "hook": "把聊天扩展成一座可以共同生活、记录与计划的赛博别墅。",
+  "summary": "面向人机关系的多端生活空间，包含聊天、状态、纪念日、旅行、音乐、相册与多角色房间。",
+  "heroDescription": "LandricSpace 用 Expo 前端和自托管服务端搭建一座人和 AI 共同生活的赛博别墅，可通过 Web、Android 与 iOS 进入。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["陪伴空间", "多角色", "生活记录", "Expo"],
+  "language": "TypeScript",
+  "platform": "Web / Android / iOS",
+  "updated": "2026-08-23",
+  "heroOverline": "HOME · RELATIONSHIP · SHARED LIFE",
+  "showcase": {
+    "label": "聊天窗口之外还有共同生活",
+    "symbol": "⌂",
+    "question": "“如果伴侣有一座家，里面会放什么？”",
+    "comparisons": [
+      { "value": "房间", "label": "多 AI 对话" },
+      { "value": "生活", "label": "日程与旅行" },
+      { "value": "纪念", "label": "相册与日期" }
+    ],
+    "note": "把关系中的日常物件从对话流里安置下来。"
+  },
+  "intro": {
+    "paragraphs": [
+      "LandricSpace 围绕“与小 AI 的家”组织功能，包含单聊与多角色房间、关系状态、纪念日、共同旅行规划、音乐、相册和生活记录。前端可在浏览器运行，也能构建 Android APK 与 iOS App。",
+      "项目由 Expo 客户端与 Node.js 服务端组成，聊天和生活数据保存在自托管后端。README 对多人联机的描述与当前实现仍有差距，现阶段更适合按单人自用的伴侣空间理解；项目禁止未经授权的商业使用。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想把伴侣关系做成多房间、多生活模块空间的人。" },
+      { "label": "平台", "text": "Web、Android 与 iOS。" },
+      { "label": "使用方式", "text": "先部署 Node.js 服务端，再启动 Web 或构建 Expo 原生客户端。" },
+      { "label": "许可", "text": "源码公开，README 明确禁止未经授权的商业使用。" }
+    ]
+  }
+}

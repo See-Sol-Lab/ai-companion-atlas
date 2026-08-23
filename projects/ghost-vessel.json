@@ -10,6 +10,7 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["虚拟形象", "桌面伴侣", "情绪表现", "本地 Agent"],

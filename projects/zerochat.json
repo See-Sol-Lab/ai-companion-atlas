@@ -1,0 +1,43 @@
+{
+  "slug": "zerochat",
+  "order": 70,
+  "name": { "zh": "ZeroChat", "en": "WeChat-style AI Companion" },
+  "author": "sh1nny0u",
+  "sourceUrl": "https://github.com/sh1nny0u/ZeroChat",
+  "hook": "用熟悉的微信式界面承接多角色聊天、朋友圈与主动联系。",
+  "summary": "Flutter Android 伴侣前端，支持多角色对话、AI 朋友圈、主动消息、定时任务和自定义模型接口。",
+  "heroDescription": "ZeroChat 把伴侣互动设计成一款微信式 Android 应用，让多个角色能聊天、发布动态，并按设定主动发来消息。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["Android", "微信风格", "主动消息", "多角色"],
+  "language": "Dart / Python",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "CHAT · MOMENTS · PROACTIVE",
+  "showcase": {
+    "label": "让伴侣像联系人一样生活在手机里",
+    "symbol": "●",
+    "question": "“角色能不能不等我打开聊天才出现？”",
+    "comparisons": [
+      { "value": "私聊", "label": "多角色会话" },
+      { "value": "动态", "label": "AI 朋友圈" },
+      { "value": "主动", "label": "定时消息" }
+    ],
+    "note": "用熟悉的社交软件结构降低陪伴入口的距离。"
+  },
+  "intro": {
+    "paragraphs": [
+      "ZeroChat 是一款 Flutter Android 应用，提供微信式消息列表、多角色对话、AI 朋友圈、主动消息和定时任务。用户可以在应用内设置模型接口、角色信息与后端地址。",
+      "项目配套 Python 服务端，可运行在本地电脑或服务器；手机通过局域网或内网穿透连接。当前需要使用者自行准备 OpenAI 兼容模型 API。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望伴侣像手机联系人一样聊天、发动态并主动出现的人。" },
+      { "label": "平台", "text": "Android；后端可运行于 Windows、Linux 或服务器。" },
+      { "label": "使用方式", "text": "启动配套后端，安装 Flutter 客户端并填写模型与后端地址。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

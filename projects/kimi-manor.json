@@ -1,0 +1,43 @@
+{
+  "slug": "kimi-manor",
+  "order": 78,
+  "name": { "zh": "Kimi Manor", "en": "CLI Agent Desktop Home" },
+  "author": "marikagura",
+  "sourceUrl": "https://github.com/marikagura/kimi-manor",
+  "hook": "把真实 CLI Agent 终端嵌进一座房间，让命令行也拥有可见的家。",
+  "summary": "面向 Claude Code、Codex 等 CLI Agent 的桌面空间，融合 xterm.js 终端、房间界面、状态气泡、语音与多 Agent 同席。",
+  "heroDescription": "Kimi Manor 用 PWA 与 Electron 包住真实终端，把 CLI Agent 的会话、状态和多模型互动呈现在四室 atelier 里。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["CLI Agent", "真实终端", "桌面空间", "多 Agent"],
+  "language": "HTML / JavaScript",
+  "platform": "Web / Electron",
+  "updated": "2026-08-23",
+  "heroOverline": "TERMINAL · ROOMS · AGENT PRESENCE",
+  "showcase": {
+    "label": "命令行之外多一层空间感",
+    "symbol": "⌘",
+    "question": "“CLI Agent 能不能拥有自己的房间？”",
+    "comparisons": [
+      { "value": "终端", "label": "真实 xterm.js" },
+      { "value": "房间", "label": "四室界面" },
+      { "value": "同席", "label": "Claude 与 Codex" }
+    ],
+    "note": "终端仍是真终端，视觉空间负责承接存在感。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Kimi Manor 提供 atelier、alcove、cabinet 和 ops 四个空间，并把 xterm.js 真终端嵌入画框。使用者可以把启动命令替换成 Claude Code、Codex、Gemini、Aider 等任意 CLI Agent。",
+      "可选 bridge 能把 Agent 状态显示为气泡，让多个 Agent 同席并接入语音。项目提供浏览器 PWA 与 Electron 桌面方式，默认使用占位数据且可离线运行。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "长期使用 CLI Agent，又希望增加桌面空间感和可见状态的人。" },
+      { "label": "平台", "text": "PC 浏览器 PWA 与 Electron 桌面端。" },
+      { "label": "使用方式", "text": "启动本地服务或 Electron，并把终端命令指向自己的 Agent CLI。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

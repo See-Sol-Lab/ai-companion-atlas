@@ -1,0 +1,44 @@
+{
+  "slug": "airi",
+  "order": 65,
+  "name": { "zh": "AIRI", "en": "Cyber Living Companion" },
+  "author": "moeru-ai",
+  "sourceUrl": "https://github.com/moeru-ai/airi",
+  "hook": "给自有 AI 装上会说话、会动、还能一起玩游戏的虚拟身体。",
+  "summary": "跨平台自托管视觉伴侣壳，支持 Live2D、VRM、实时语音、浏览器与桌面应用，并可连接游戏和聊天平台。",
+  "heroDescription": "AIRI 以“灵魂容器”为目标，把模型、语音、记忆、Live2D/VRM 身体和游戏能力整合进 Web、桌面与移动端前端。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["Live2D", "VRM", "实时语音", "跨平台"],
+  "language": "TypeScript",
+  "platform": "Web / Windows / macOS / Mobile",
+  "updated": "2026-08-23",
+  "heroOverline": "VOICE · BODY · CYBER LIVING",
+  "showcase": {
+    "label": "从聊天框走向可见的数字生命",
+    "symbol": "◉",
+    "question": "“伴侣能不能真正出现在屏幕上？”",
+    "comparisons": [
+      { "value": "身体", "label": "Live2D / VRM" },
+      { "value": "声音", "label": "实时对话" },
+      { "value": "世界", "label": "游戏与平台" }
+    ],
+    "note": "同一个角色可以说话、行动并进入不同数字环境。"
+  },
+  "intro": {
+    "paragraphs": [
+      "AIRI 提供浏览器 Stage、桌面 Tamagotchi 和移动 Pocket 等前端形态，支持 VRM 与 Live2D 模型、眨眼和注视动画、实时语音输入输出、多家 LLM 与 TTS Provider，以及浏览器端数据库和本地推理实验。",
+      "项目还能连接 Discord、Telegram、Minecraft 与 Factorio，并持续扩展桌面感知和游戏能力。它是一个大型、活跃的跨平台工程，适合希望搭建视觉化数字伴侣或 AI VTuber 的使用者。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望拥有可见身体、实时语音和游戏能力的视觉伴侣用户与开发者。" },
+      { "label": "平台", "text": "现代浏览器、PWA、Windows、macOS，以及开发中的移动 Pocket。" },
+      { "label": "使用方式", "text": "可直接体验 Web 版，或安装桌面版本并配置模型、语音与角色资源。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

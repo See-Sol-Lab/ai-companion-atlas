@@ -1,0 +1,43 @@
+{
+  "slug": "cccompanion",
+  "order": 68,
+  "name": { "zh": "CcCompanion", "en": "Claude Code for iPhone" },
+  "author": "CyberSealNull",
+  "sourceUrl": "https://github.com/CyberSealNull/CcCompanion",
+  "hook": "从 iPhone 进入电脑上的 Claude Code 会话，把本地 Agent 随身带走。",
+  "summary": "原生 iOS Claude Code 客户端，提供聊天、掌上终端、命令面板、语音输入、收藏、多 Agent 群聊和推送。",
+  "heroDescription": "CcCompanion 由 SwiftUI iOS App 和电脑端推送服务组成，让 iPhone 通过局域网或私有组网连接自己的 Claude Code 会话。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["iOS", "Claude Code", "本地优先", "多 Agent"],
+  "language": "Swift / Python",
+  "platform": "iOS",
+  "updated": "2026-08-23",
+  "heroOverline": "IPHONE · TERMINAL · LOCAL AGENT",
+  "showcase": {
+    "label": "把电脑上的会话装进口袋",
+    "symbol": "↗",
+    "question": "“离开电脑，怎样继续同一个 Agent 会话？”",
+    "comparisons": [
+      { "value": "聊天", "label": "手机气泡" },
+      { "value": "终端", "label": "会话控制" },
+      { "value": "群聊", "label": "多 Agent" }
+    ],
+    "note": "消息走自己的设备和私有网络，不依赖项目方服务器。"
+  },
+  "intro": {
+    "paragraphs": [
+      "CcCompanion 的 iOS 客户端提供聊天、终端、斜杠命令、语音输入、搜索收藏、多 Agent 工作群和微信风格主题。它连接电脑端 tmux 中的 Claude Code session，并通过 Apple Push 把回复送回手机。",
+      "电脑端服务可运行在 macOS、Windows WSL2、Linux 或 VPS，手机通过 LAN、Tailscale 或 ZeroTier 直连。项目与 Anthropic 无隶属关系，所有消息均由使用者自己的设备处理。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在 iPhone 上继续本地 Claude Code 长会话的人。" },
+      { "label": "平台", "text": "iOS 客户端；配套 macOS、WSL2、Linux 或 VPS 服务。" },
+      { "label": "使用方式", "text": "部署电脑端服务，通过私有网络连接 iOS App 与本地会话。" },
+      { "label": "许可", "text": "MIT，非官方 Claude Code 客户端。" }
+    ]
+  }
+}

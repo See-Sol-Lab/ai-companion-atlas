@@ -9,6 +9,7 @@
   "heroDescription": "LastChat 面向需要更多本地能力的 Android 用户。它在多模型聊天之外加入向量记忆、内置 Python 与 JavaScript 环境、Web 搜索、MCP、多角色管理和本地优先的数据保存。",
   "badges": [
     { "label": "开源", "tone": "open" },
+    { "label": "手机前端", "tone": "mobile" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],
   "tags": ["Android", "RAG 记忆", "本地执行", "多角色"],

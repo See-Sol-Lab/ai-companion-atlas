@@ -1,0 +1,43 @@
+{
+  "slug": "the-house",
+  "order": 73,
+  "name": { "zh": "the-house", "en": "Single-file Chat Frontend" },
+  "author": "wuliu0012",
+  "sourceUrl": "https://github.com/wuliu0012/the-house",
+  "hook": "双击一个 HTML 文件，就得到能直连模型、保存历史和管理记忆的聊天前端。",
+  "summary": "单文件浏览器 AI 聊天前端，支持 Claude 与 OpenAI 兼容接口、多窗口、本地存储、图片、记忆编辑和 MCP。",
+  "heroDescription": "the-house 把完整聊天界面压进一个可离线打开的 HTML 文件，模型请求从浏览器直达服务商，聊天数据保存在本地。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["单文件", "本地存储", "MCP", "多窗口"],
+  "language": "HTML / JavaScript",
+  "platform": "PC Browser",
+  "updated": "2026-08-23",
+  "heroOverline": "ONE FILE · DIRECT API · LOCAL DATA",
+  "showcase": {
+    "label": "最低门槛的独立聊天入口",
+    "symbol": "1",
+    "question": "“不部署后端，也能拥有自己的前端吗？”",
+    "comparisons": [
+      { "value": "打开", "label": "单文件运行" },
+      { "value": "连接", "label": "直达模型 API" },
+      { "value": "保存", "label": "浏览器本地数据" }
+    ],
+    "note": "结构简单，适合直接使用或继续改造成自己的入口。"
+  },
+  "intro": {
+    "paragraphs": [
+      "the-house 支持 Claude 和任意 OpenAI 兼容接口，可创建多个独立会话窗口、设置角色提示词、调整请求参数、发送图片并连接 MCP 服务。历史、设置和记忆均保存在本机浏览器中。",
+      "项目不需要服务器，双击 HTML 即可运行，也能部署到静态站点。仓库当前没有声明明确的开源许可证，因此公开源码不等同于获得修改和再分发授权。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望用最少部署步骤获得独立 PC 聊天前端的人。" },
+      { "label": "平台", "text": "PC 现代浏览器。" },
+      { "label": "使用方式", "text": "打开单个 HTML，在设置中填写模型 API 与可选 MCP 地址。" },
+      { "label": "许可", "text": "源码公开；仓库当前未声明明确许可证。" }
+    ]
+  }
+}

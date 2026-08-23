@@ -1,0 +1,43 @@
+{
+  "slug": "lingchat",
+  "order": 76,
+  "name": { "zh": "LingChat", "en": "AI Galgame Companion" },
+  "author": "SlimeBoyOwO",
+  "sourceUrl": "https://github.com/SlimeBoyOwO/LingChat",
+  "hook": "用 Galgame 演出、桌宠和屏幕感知，把对话变成持续发生的视觉陪伴。",
+  "summary": "Windows AI Galgame 伴侣前端，支持永久记忆、情绪表情、桌宠、屏幕感知、语音、日程和互动剧情。",
+  "heroDescription": "LingChat 把角色立绘、情绪动作、语音、剧情和桌宠融进 Windows 聊天软件，让伴侣既能在主界面交流，也能停留在桌面。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["Windows", "Galgame", "桌宠", "屏幕感知"],
+  "language": "TypeScript / Rust",
+  "platform": "Windows",
+  "updated": "2026-08-23",
+  "heroOverline": "GALGAME · DESKTOP PET · AWARENESS",
+  "showcase": {
+    "label": "把情绪和关系演成看得见的场景",
+    "symbol": "◇",
+    "question": "“角色能不能不只活在文字气泡里？”",
+    "comparisons": [
+      { "value": "表情", "label": "情绪演出" },
+      { "value": "桌宠", "label": "桌面停留" },
+      { "value": "剧情", "label": "多角色模块" }
+    ],
+    "note": "聊天、主动感知和视觉小说演出共享同一个角色。"
+  },
+  "intro": {
+    "paragraphs": [
+      "LingChat 支持独立存档和永久记忆、自研情绪识别、动态表情动作、角色服装与触摸互动、VITS 语音、多角色剧本和羁绊系统，并内置番茄钟、日程和待办。",
+      "桌宠模式可以观察桌面工作、游戏或挂机状态，并据此主动发起对话。项目提供 Windows 安装包，也开放 Tauri 前端源码。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "偏爱 Galgame 演出、桌宠和强视觉角色陪伴的 Windows 用户。" },
+      { "label": "平台", "text": "Windows 10 64 位及以上。" },
+      { "label": "使用方式", "text": "从 Releases 下载程序，首次启动后配置自己的模型 API。" },
+      { "label": "许可", "text": "AGPL-3.0。" }
+    ]
+  }
+}

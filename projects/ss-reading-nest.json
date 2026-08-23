@@ -1,0 +1,43 @@
+{
+  "slug": "ss-reading-nest",
+  "order": 71,
+  "name": { "zh": "共读小窝", "en": "ss-reading-nest" },
+  "author": "yueyue95",
+  "sourceUrl": "https://github.com/yueyue95/ss-reading-nest-open",
+  "hook": "在手机上和 AI 并肩读小说与漫画，让进度、摘录和讨论都留在同一个小窝。",
+  "summary": "移动端优先的 AI 共读前端，支持小说漫画、阅读进度、书签、摘录、短评与 ChatGPT Apps SDK 接入。",
+  "heroDescription": "共读小窝把阅读器和 AI 对话放在同一移动界面中，让伴侣知道你读到哪里，并能围绕具体区间、书签和摘录继续交流。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["共读", "移动优先", "ChatGPT Apps", "小说漫画"],
+  "language": "TypeScript",
+  "platform": "ChatGPT / Mobile Web",
+  "updated": "2026-08-23",
+  "heroOverline": "READ · ANNOTATE · SHARE CONTEXT",
+  "showcase": {
+    "label": "把阅读位置变成共同上下文",
+    "symbol": "§",
+    "question": "“AI 怎样知道我刚刚读到了哪里？”",
+    "comparisons": [
+      { "value": "进度", "label": "阅读位置" },
+      { "value": "摘录", "label": "重点片段" },
+      { "value": "短评", "label": "共同回应" }
+    ],
+    "note": "讨论锚定在具体文本和位置，而不是只靠口头转述。"
+  },
+  "intro": {
+    "paragraphs": [
+      "共读小窝面向小说和漫画阅读，记录当前进度、补课区间、书签、摘录与短评，并通过 ChatGPT Apps SDK 和 MCP 把这些阅读状态提供给 AI。伴侣可以围绕真实阅读位置继续讨论。",
+      "项目包含 Web 前端、服务端与共享协议，使用 Cloudflare D1 和 R2 保存结构化数据与媒体。仓库公开了运行代码与许可文件，但许可条款需按项目文件逐项确认。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在手机上与 AI 共读小说、漫画并保留共同进度的人。" },
+      { "label": "平台", "text": "移动端优先 Web 前端，结合 ChatGPT Apps SDK。" },
+      { "label": "使用方式", "text": "按 README 配置 Web、MCP 服务与 Cloudflare D1/R2。" },
+      { "label": "许可", "text": "源码公开；仓库同时提供 LICENSE 与 License 文件，使用前应核对具体条款。" }
+    ]
+  }
+}
