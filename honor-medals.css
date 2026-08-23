@@ -44,7 +44,53 @@
   filter:drop-shadow(0 4px 7px rgba(39,49,82,.19));
 }
 
+/* Reuse the exact same honors on the two collection entry cards so the visual meaning is explicit. */
+.atlas-quick-filter[data-catalog-filter="high-star"],
+.atlas-quick-filter[data-catalog-filter="editor-pick"]{padding-right:72px!important}
+
+.atlas-quick-filter[data-catalog-filter="high-star"]::before,
+.atlas-quick-filter[data-catalog-filter="editor-pick"]::before{
+  content:""!important;
+  position:absolute!important;
+  top:50%!important;
+  right:18px!important;
+  width:42px!important;
+  height:42px!important;
+  margin:0!important;
+  transform:translateY(-50%)!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:contain!important;
+  filter:drop-shadow(0 4px 7px rgba(24,39,74,.18));
+  opacity:1!important;
+  pointer-events:none;
+  transition:transform .18s ease,filter .18s ease!important;
+}
+
+.atlas-quick-filter[data-catalog-filter="high-star"]::before{
+  background-image:url("./assets/honor-high-star.webp")!important;
+}
+
+.atlas-quick-filter[data-catalog-filter="editor-pick"]::before{
+  background-image:url("./assets/honor-editor-pick.webp")!important;
+}
+
+.atlas-quick-filter[data-catalog-filter="high-star"]:hover::before,
+.atlas-quick-filter[data-catalog-filter="editor-pick"]:hover::before{
+  transform:translateY(calc(-50% - 1px)) scale(1.035)!important;
+  filter:drop-shadow(0 6px 10px rgba(24,39,74,.24));
+}
+
+@media (max-width:520px){
+  .atlas-quick-filter[data-catalog-filter="high-star"],
+  .atlas-quick-filter[data-catalog-filter="editor-pick"]{padding-right:58px!important}
+  .atlas-quick-filter[data-catalog-filter="high-star"]::before,
+  .atlas-quick-filter[data-catalog-filter="editor-pick"]::before{right:12px!important;width:38px!important;height:38px!important}
+}
+
 @media (prefers-reduced-motion:reduce){
   .project-card.has-editor-pick-honor .project-tags::before,
-  .project-card.has-high-star-honor .project-tags::after{transition:none}
+  .project-card.has-high-star-honor .project-tags::after,
+  .atlas-quick-filter[data-catalog-filter="high-star"]::before,
+  .atlas-quick-filter[data-catalog-filter="editor-pick"]::before{transition:none!important}
 }
