@@ -254,7 +254,11 @@ for (const fileName of dataFiles) {
   projects.push(project);
 }
 
-projects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999) || a.slug.localeCompare(b.slug));
+projects.sort((a, b) =>
+  b.updated.localeCompare(a.updated) ||
+  (a.order ?? 999) - (b.order ?? 999) ||
+  a.slug.localeCompare(b.slug)
+);
 
 const index = await readFile(indexPath, 'utf8');
 const startIndex = index.indexOf(cardsStart);
