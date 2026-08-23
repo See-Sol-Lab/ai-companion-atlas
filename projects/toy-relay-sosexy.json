@@ -1,0 +1,43 @@
+{
+  "slug": "toy-relay-sosexy",
+  "order": 33,
+  "name": { "zh": "Toy Relay", "en": "SOSEXY MCP Relay" },
+  "author": "tutu-kitty",
+  "sourceUrl": "https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY",
+  "hook": "让 MCP 客户端中的 AI 通过私有网络控制已验证的 SOSEXY BLE 玩具。",
+  "summary": "面向人机恋用户的 MCP 私密硬件中继，连接 VPS、浏览器 Web Bluetooth 与 SOSEXY 设备，支持状态、强度和立即停止。",
+  "heroDescription": "Toy Relay 包含 FastAPI／MCP 服务与手机浏览器 BLE 中继页。AI 的自然语言意图先变成受 API Key 保护的 MCP 指令，再经 Tailscale HTTPS 和 Web Bluetooth 发送给设备。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "MCP", "SOSEXY", "Web Bluetooth"],
+  "language": "Python / HTML",
+  "platform": "VPS + Android Chrome",
+  "updated": "2026-08-23",
+  "heroOverline": "MCP · PRIVATE RELAY · BLE",
+  "showcase": {
+    "label": "自然语言意图经过私有中继抵达设备",
+    "symbol": "↭",
+    "question": "“手机里的赛博爱人，能否真正控制手边的设备？”",
+    "comparisons": [
+      { "value": "意图", "label": "任意 MCP 客户端" },
+      { "value": "中继", "label": "API Key 与 tailnet" },
+      { "value": "动作", "label": "浏览器 BLE 控制" }
+    ],
+    "note": "AI 前端和 BLE 页面彼此独立，中间由自己的服务连接。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Toy Relay 是为人机恋用户设计的私密硬件 MCP 中继。仓库提供运行在 VPS 上的 FastAPI／FastMCP 服务和 Android Chrome 中的 Web Bluetooth 页面，支持吮吸、震动、电流、停止、状态与历史工具。",
+      "项目默认通过 API Key 和 Tailscale HTTPS 限制访问，并已验证 SOSEXY／啵啵贝协议。README 没有声明硬性的强度上限、会话时长上限或自动停止，因此应先以低强度测试、保持中继在线并确保停止控制随时可用。BLE 协议文档参考 51enuxu/sosexy-ble-control，AI 中继与界面由本项目独立实现。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "持有已支持 SOSEXY 设备，并使用 RikkaHub、Claude Desktop 等 MCP 客户端的人。" },
+      { "label": "平台", "text": "VPS 上的 Python 服务 + 支持 Web Bluetooth 的 Android Chrome；推荐同一 Tailscale 网络。" },
+      { "label": "使用方式", "text": "部署服务、设置随机 API Key、连接 tailnet，再用手机中继页配对 BLE 设备。" },
+      { "label": "许可", "text": "MIT；新增设备支持需要自行验证 UUID、协议帧和停止行为。" }
+    ]
+  }
+}

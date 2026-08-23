@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Phantom Touch Bridge Local Intimate Hardware Bridge：Windows 本地私密硬件桥，为 AI 提供连接、强度、停止和可选心率参考接口，优先兼容 Intiface／Buttplug。 AI Companion Atlas 中文项目档案。" />
+  <title>Phantom Touch Bridge · Local Intimate Hardware Bridge · AI Companion Atlas</title>
+  <link rel="stylesheet" href="../detail.css?v=20260823-3" />
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="../../" aria-label="返回 AI Companion Atlas 首页">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav>
+        <a href="../../#directory">项目库</a>
+        <a href="../../#taxonomy">标签</a>
+        <a href="../../#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>Phantom Touch Bridge</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-adult">18+</span><span class="status">Windows</span></div>
+          <p class="overline">CONNECT · CONTROL · STOP</p>
+          <h1>Phantom Touch Bridge</h1>
+          <p class="cn-name">LOCAL INTIMATE HARDWARE BRIDGE · @MFSNLQY</p>
+          <h2>让本地 AI 通过一层简单桥接控制兼容设备，也可以参考心率输入。</h2>
+          <p class="hero-desc">Phantom Touch Bridge 把设备控制包装成 AI 可以调用的本地 HTTP 接口。用户不必自己处理蓝牙协议，先通过 Intiface 判断设备兼容性，也可以在明确掌握协议后尝试 custom 路线。</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="https://github.com/mfsnlqy/phantom-touch-bridge" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+            <a class="secondary-btn" href="../../">返回主页</a>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Phantom Touch Bridge解决的问题">
+          <p class="problem-label">把设备协议藏在本地桥接层后面</p>
+          <div class="clock-mark">⌁</div>
+          <p class="problem-question">“TA 可以直接控制设备，而不需要我写协议吗？”</p>
+          <div class="time-compare">
+            <span><b>连接</b><small>Intiface 优先</small></span>
+            <i>≠</i>
+            <span><b>调节</b><small>强度与心率参考</small></span>
+            <i>≠</i>
+            <span><b>停止</b><small>本地控制接口</small></span>
+          </div>
+          <p class="problem-note">先确认兼容范围，再把控制权交给本地 AI。</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">项目介绍</h2>
+        </div>
+        <div class="intro-content">
+          <p>Phantom Touch Bridge 是一个运行在 Windows 上的本地桥接服务，让 Claude Code 或其他能发送 HTTP 请求的 AI 连接设备、调整强度并停止输出。心率输入是可选能力，可作为伴侣判断节奏的额外参照。</p>
+          <p>项目建议先用 Intiface Central 扫描设备；无法识别时才评估 custom 协议路线。作者明确说明 Intiface 路线尚未用其本人设备完成全套实机验证，心率功能目前主要验证于小米手环。</p>
+          <ul>
+            <li><strong>适合：</strong>有 Windows 本地 AI 环境，并持有 Intiface 兼容或可明确验证协议设备的人。</li>
+            <li><strong>平台：</strong>Windows 本地服务；AI 端需要能够发起 HTTP 请求。</li>
+            <li><strong>使用方式：</strong>先确认设备支持范围，再启动本地桥并把 API 使用说明交给 AI。</li>
+            <li><strong>许可：</strong>MIT；使用前需自行验证硬件兼容性与实际停止控制。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
+          <b>游客留言功能施工中</b>
+        </div>
+        <p>用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas 负责介绍与导航，使用仍回到原作者。</h2>
+          <p>我们不镜像项目文件，也不截走作者流量。安装、下载、版本更新与最新说明，以原作者提供的项目页面为准。</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/mfsnlqy/phantom-touch-bridge" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="../../">返回图谱首页 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

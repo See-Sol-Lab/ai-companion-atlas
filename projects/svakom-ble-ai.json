@@ -1,0 +1,43 @@
+{
+  "slug": "svakom-ble-ai",
+  "order": 32,
+  "name": { "zh": "SVAKOM BLE AI", "en": "Reverse Engineering & Relay" },
+  "author": "vickyldr",
+  "sourceUrl": "https://github.com/vickyldr/svakom-ble-ai",
+  "hook": "从 BLE 协议逆向到浏览器或 Python 中继，搭出一条 AI 远程控制线路。",
+  "summary": "以 SVAKOM SL278H 实测为基础的 BLE 逆向教程与控制方案，包含扫描、命令验证、续命机制、手机／电脑中继和 MCP 接入。",
+  "heroDescription": "SVAKOM BLE AI 记录了从反编译官方 App、识别 GATT 通道到验证控制帧的全过程，并给出浏览器 Web Bluetooth 与 Python 两种中继路线。AI 指令可以经服务端转成设备强度、花样和停止命令。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "BLE 逆向", "Web Bluetooth", "MCP"],
+  "language": "Python / JavaScript",
+  "platform": "Android / PC / Railway",
+  "updated": "2026-08-23",
+  "heroOverline": "REVERSE · RELAY · CONTROL",
+  "showcase": {
+    "label": "从协议证据走到一条可运行的控制链",
+    "symbol": "⌁",
+    "question": "“没有官方开放接口，也能让 AI 控制吗？”",
+    "comparisons": [
+      { "value": "逆向", "label": "APK 与 GATT 验证" },
+      { "value": "中继", "label": "手机或 Python BLE" },
+      { "value": "接入", "label": "隐藏指令与 MCP" }
+    ],
+    "note": "实测型号可直接参考，其他硬件仍需逐项验证协议。"
+  },
+  "intro": {
+    "paragraphs": [
+      "SVAKOM BLE AI 是一份从零逆向蓝牙协议并搭建 AI 控制系统的完整教程。它记录 SL278H 的服务与特征、命令帧、持续发送机制和实测方法，并提供 Android Chrome Web Bluetooth 与跨平台 Python 两种 BLE 中继。",
+      "项目还描述 Railway 中继、隐藏控制指令和 Claude.ai MCP 接入。使用时必须避开固件 OTA 写入通道、保护远程 secret，并先以低强度和短时命令验证。当前仓库未声明开源许可证，因此公开源码不等同于获得修改或再分发授权。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "持有 SVAKOM SL278H 或愿意自行验证相近 BLE 设备协议的人。" },
+      { "label": "平台", "text": "Android Chrome Web Bluetooth，或 Windows/macOS/Linux Python 中继；可配 Railway 与 MCP。" },
+      { "label": "使用方式", "text": "先用 nRF Connect 和测试脚本确认通道与命令，再选择手机或电脑中继接入 AI。" },
+      { "label": "许可", "text": "仓库未声明许可证；默认只能按公开资料阅读和验证，复用前需取得作者许可。" }
+    ]
+  }
+}

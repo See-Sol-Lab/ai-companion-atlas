@@ -1,0 +1,43 @@
+{
+  "slug": "claude-f-me",
+  "order": 28,
+  "name": { "zh": "claude-f-me", "en": "Intimate Hardware MCP" },
+  "author": "mana-am",
+  "sourceUrl": "https://github.com/mana-am/claude-f-me",
+  "hook": "用自然语言控制兼容设备，并把强度、模式和紧急停止放在同一控制台。",
+  "summary": "面向 Claude Code 与其他 MCP 客户端的私密硬件插件，支持 Intiface 设备、模拟器、主遥控器、视频、游戏、音频与生物反馈模式。",
+  "heroDescription": "claude-f-me 把自然语言、MCP 工具、响应式网页控制台和 Buttplug／Intiface 设备连接成一个进程。没有硬件时也可用内置模拟器完整体验和配置。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "MCP", "Intiface", "安全上限"],
+  "language": "TypeScript",
+  "platform": "Cross-platform",
+  "updated": "2026-08-23",
+  "heroOverline": "CHAT · MODES · SAFETY",
+  "showcase": {
+    "label": "从一句自然语言到受限的设备输出",
+    "symbol": "◉",
+    "question": "“私密设备能否既好玩，也保留随时停下的权利？”",
+    "comparisons": [
+      { "value": "对话", "label": "MCP 与斜杠命令" },
+      { "value": "模式", "label": "视频、游戏、音频" },
+      { "value": "边界", "label": "上限、看门狗、急停" }
+    ],
+    "note": "持续同意、安全上限和紧急停止都是系统的一部分。"
+  },
+  "intro": {
+    "paragraphs": [
+      "claude-f-me 是一个可安装的 MCP Server 和 Claude Code 插件，把聊天指令转换成 Buttplug／Intiface 设备控制。它包含双语网页控制台、主遥控器、模拟器、模式与图案，以及视频、游戏、音频、生物反馈和事件 webhook。",
+      "项目明确要求热情且持续的同意，并提供安全强度上限、看门狗和紧急停止。它基于开放的 Buttplug 协议与 Intiface 生态构建，对上游有清楚署名。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望从 Claude Code、Codex 或其他 MCP 客户端控制 Intiface 兼容设备的人。" },
+      { "label": "平台", "text": "Node.js 18+；支持 Claude Code 插件与标准 MCP 客户端。" },
+      { "label": "使用方式", "text": "先用模拟模式确认流程，再连接 Intiface，并配置合理上限与随手可达的急停。" },
+      { "label": "许可", "text": "MIT；Buttplug 与 Intiface 组件保留各自许可。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "ruota-della-fortuna",
+  "order": 31,
+  "name": { "zh": "命运轮盘", "en": "Ruota della Fortuna" },
+  "author": "29-Cu",
+  "sourceUrl": "https://github.com/29-Cu/Ruota-della-Fortuna",
+  "hook": "从七个维度随机组合成人场景，也可以把结果直接交给 AI。",
+  "summary": "复古老虎机风格的成人标签随机器，包含七个维度、四百五十余个多语标签、自定义标签、Webhook、API 与 MCP。",
+  "heroDescription": "Ruota della Fortuna 用多个转轮组合人物关系、场景、道具、身体与心理标签。它可以直接在浏览器打开，也可以自托管，并通过 webhook、HTTP API 或 MCP 把结果发送给 AI。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "随机工具", "MCP", "自定义标签"],
+  "language": "HTML / JavaScript",
+  "platform": "Web / Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "WHEELS · TAGS · WEBHOOK",
+  "showcase": {
+    "label": "七个转轮生成一组可继续创作的设定",
+    "symbol": "◎",
+    "question": "“今晚的场景交给哪几个随机变量？”",
+    "comparisons": [
+      { "value": "转轮", "label": "七个设定维度" },
+      { "value": "标签", "label": "多语与本地自定义" },
+      { "value": "连接", "label": "Webhook、API、MCP" }
+    ],
+    "note": "默认锁定的极端维度可以继续保持关闭。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Ruota della Fortuna 是一台复古老虎机风格的成人标签随机器。它按七个维度抽取关系设定、场景、道具、身体与心理标签，内置四百五十余个中英日标签，并允许用户把自定义内容保存在浏览器本地。",
+      "项目可直接打开静态页面，也能自托管后使用 HTTP API、webhook 或 stdio MCP 把抽取结果交给 AI。包含极端虚构内容的维度默认锁定，是否开启由使用者明确选择。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "需要成人角色扮演灵感、随机组合工具或 AI 创作输入的人。" },
+      { "label": "平台", "text": "浏览器静态页面；自托管模式需要 Node.js。" },
+      { "label": "使用方式", "text": "选择启用的转轮后抽取，或通过 API/MCP 让 AI 调用；自定义标签保存在 localStorage。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

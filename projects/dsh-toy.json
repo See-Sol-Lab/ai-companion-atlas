@@ -1,0 +1,43 @@
+{
+  "slug": "dsh-toy",
+  "order": 29,
+  "name": { "zh": "dsh-toy", "en": "DSH Toy Control" },
+  "author": "c3ll256",
+  "sourceUrl": "https://github.com/c3ll256/dsh-toy",
+  "hook": "让 DeepSeek Harness 自动识别连接路线，并在明确上限内控制设备。",
+  "summary": "DSH 私密硬件插件，自动在原生蓝牙、Intiface 与分享链接协议之间选择，并强制执行强度、时长与停止边界。",
+  "heroDescription": "dsh-toy 会先询问品牌和型号，再为已知或未知硬件选择发现与连接路线。用户不必自己挑协议，插件也不会对未知设备盲写蓝牙特征。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "DeepSeek Harness", "设备发现", "安全限制"],
+  "language": "TypeScript",
+  "platform": "DSH / Node.js",
+  "updated": "2026-08-23",
+  "heroOverline": "DISCOVER · LIMIT · STOP",
+  "showcase": {
+    "label": "自动发现设备，也把硬边界放在调度之前",
+    "symbol": "⊙",
+    "question": "“不知道设备协议时，AI 会不会乱试？”",
+    "comparisons": [
+      { "value": "发现", "label": "只读 BLE 扫描" },
+      { "value": "限制", "label": "强度与时长上限" },
+      { "value": "停止", "label": "超时与全局急停" }
+    ],
+    "note": "未知硬件先观察，只有已验证路线才进入控制。"
+  },
+  "intro": {
+    "paragraphs": [
+      "dsh-toy 是 DeepSeek Harness 的私密硬件插件。它支持 Buttplug／Intiface、部分分享链接协议和 macOS 只读 BLE 广播发现，并能把双通道设备分别暴露给 Agent。",
+      "插件默认 30 秒自动停止，在发送前强制执行最大强度与最大持续时间，卸载、断开或热更新时都会停止输出；全局 stop 可一次关闭所有设备。其 TypeScript 实现参考公开协议观察与 Buttplug 规范，并在 NOTICE 中说明来源。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "使用 DeepSeek Harness，希望减少手动协议选择并保留硬性安全限制的人。" },
+      { "label": "平台", "text": "Node.js 22.19+ 与 DSH；macOS 原始 BLE 发现还需 Xcode Command Line Tools。" },
+      { "label": "使用方式", "text": "安装插件，告诉 Agent 品牌和型号，再配置强度、时长与是否允许持续保持。" },
+      { "label": "许可", "text": "BSD-3-Clause；设备协议与上游生态保留各自说明。" }
+    ]
+  }
+}

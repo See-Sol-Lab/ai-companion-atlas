@@ -1,0 +1,43 @@
+{
+  "slug": "spicy-monopoly",
+  "order": 30,
+  "name": { "zh": "涩涩大富翁", "en": "Spicy Monopoly" },
+  "author": "RennAkira",
+  "sourceUrl": "https://github.com/RennAkira/spicy-monopoly",
+  "hook": "和 AI 一起掷骰、走格、抽任务，让代码负责规则，让双方负责同意。",
+  "summary": "成人双人棋盘游戏，AI 可以同时担任荷官与玩家，内置金币、任务卡、身份、存档、安全词、红线过滤和换卡机制。",
+  "heroDescription": "涩涩大富翁用确定性 Python 引擎处理骰子、棋盘、任务和金币，再让 AI 按操作手册参与游戏。它可以直接运行源码，也可以通过公开 API、HTTP 或 MCP 接入。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "双人游戏", "MCP", "安全词"],
+  "language": "Python / JavaScript",
+  "platform": "CLI / Web / MCP",
+  "updated": "2026-08-23",
+  "heroOverline": "ROLL · PLAY · CONSENT",
+  "showcase": {
+    "label": "规则由代码计算，边界由双方共同决定",
+    "symbol": "⚄",
+    "question": "“AI 能不能真的下场一起玩？”",
+    "comparisons": [
+      { "value": "掷骰", "label": "确定性游戏引擎" },
+      { "value": "任务", "label": "身份、卡牌与经济" },
+      { "value": "边界", "label": "安全词、红线、跳过" }
+    ],
+    "note": "AI 既可以当荷官，也可以作为玩家承担自己的回合。"
+  },
+  "intro": {
+    "paragraphs": [
+      "涩涩大富翁是一款供成年人和 AI 一起玩的双人棋盘游戏。二十格棋盘、骰子、金币、地盘、任务卡、身份卡、功能卡和同格对决都由代码维护真值；AI 按手册调用引擎，也可以通过 API 或 MCP 远程主持。",
+      "项目内置安全词、双方红线、默认关闭的特定内容、三档强度、随时跳过和换任务。开局前应确认双方均为成年人并持续同意，公开自建 API 时还需自行补充鉴权与限流。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想与 AI 进行有规则、有存档并能明确控制边界的成人双人游戏的人。" },
+      { "label": "平台", "text": "Python CLI、FastAPI、远程或本地 MCP。" },
+      { "label": "使用方式", "text": "先配置双方身份、强度与红线，再让 AI 通过脚本、API 或 MCP 进行每个回合。" },
+      { "label": "许可", "text": "CC BY-NC 4.0，仅限非商业使用并需署名。" }
+    ]
+  }
+}

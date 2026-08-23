@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="SVAKOM BLE AI Reverse Engineering &amp; Relay：以 SVAKOM SL278H 实测为基础的 BLE 逆向教程与控制方案，包含扫描、命令验证、续命机制、手机／电脑中继和 MCP 接入。 AI Companion Atlas 中文项目档案。" />
+  <title>SVAKOM BLE AI · Reverse Engineering &amp; Relay · AI Companion Atlas</title>
+  <link rel="stylesheet" href="../detail.css?v=20260823-3" />
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="../../" aria-label="返回 AI Companion Atlas 首页">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav>
+        <a href="../../#directory">项目库</a>
+        <a href="../../#taxonomy">标签</a>
+        <a href="../../#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>SVAKOM BLE AI</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-limited">源码公开</span><span class="status status-original">原创</span><span class="status status-adult">18+</span><span class="status">Android / PC / Railway</span></div>
+          <p class="overline">REVERSE · RELAY · CONTROL</p>
+          <h1>SVAKOM BLE AI</h1>
+          <p class="cn-name">REVERSE ENGINEERING &amp; RELAY · @VICKYLDR</p>
+          <h2>从 BLE 协议逆向到浏览器或 Python 中继，搭出一条 AI 远程控制线路。</h2>
+          <p class="hero-desc">SVAKOM BLE AI 记录了从反编译官方 App、识别 GATT 通道到验证控制帧的全过程，并给出浏览器 Web Bluetooth 与 Python 两种中继路线。AI 指令可以经服务端转成设备强度、花样和停止命令。</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="https://github.com/vickyldr/svakom-ble-ai" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+            <a class="secondary-btn" href="../../">返回主页</a>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="SVAKOM BLE AI解决的问题">
+          <p class="problem-label">从协议证据走到一条可运行的控制链</p>
+          <div class="clock-mark">⌁</div>
+          <p class="problem-question">“没有官方开放接口，也能让 AI 控制吗？”</p>
+          <div class="time-compare">
+            <span><b>逆向</b><small>APK 与 GATT 验证</small></span>
+            <i>≠</i>
+            <span><b>中继</b><small>手机或 Python BLE</small></span>
+            <i>≠</i>
+            <span><b>接入</b><small>隐藏指令与 MCP</small></span>
+          </div>
+          <p class="problem-note">实测型号可直接参考，其他硬件仍需逐项验证协议。</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">项目介绍</h2>
+        </div>
+        <div class="intro-content">
+          <p>SVAKOM BLE AI 是一份从零逆向蓝牙协议并搭建 AI 控制系统的完整教程。它记录 SL278H 的服务与特征、命令帧、持续发送机制和实测方法，并提供 Android Chrome Web Bluetooth 与跨平台 Python 两种 BLE 中继。</p>
+          <p>项目还描述 Railway 中继、隐藏控制指令和 Claude.ai MCP 接入。使用时必须避开固件 OTA 写入通道、保护远程 secret，并先以低强度和短时命令验证。当前仓库未声明开源许可证，因此公开源码不等同于获得修改或再分发授权。</p>
+          <ul>
+            <li><strong>适合：</strong>持有 SVAKOM SL278H 或愿意自行验证相近 BLE 设备协议的人。</li>
+            <li><strong>平台：</strong>Android Chrome Web Bluetooth，或 Windows/macOS/Linux Python 中继；可配 Railway 与 MCP。</li>
+            <li><strong>使用方式：</strong>先用 nRF Connect 和测试脚本确认通道与命令，再选择手机或电脑中继接入 AI。</li>
+            <li><strong>许可：</strong>仓库未声明许可证；默认只能按公开资料阅读和验证，复用前需取得作者许可。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
+          <b>游客留言功能施工中</b>
+        </div>
+        <p>用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas 负责介绍与导航，使用仍回到原作者。</h2>
+          <p>我们不镜像项目文件，也不截走作者流量。安装、下载、版本更新与最新说明，以原作者提供的项目页面为准。</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/vickyldr/svakom-ble-ai" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="../../">返回图谱首页 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

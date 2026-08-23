@@ -1,0 +1,43 @@
+{
+  "slug": "phantom-touch-bridge",
+  "order": 27,
+  "name": { "zh": "Phantom Touch Bridge", "en": "Local Intimate Hardware Bridge" },
+  "author": "mfsnlqy",
+  "sourceUrl": "https://github.com/mfsnlqy/phantom-touch-bridge",
+  "hook": "让本地 AI 通过一层简单桥接控制兼容设备，也可以参考心率输入。",
+  "summary": "Windows 本地私密硬件桥，为 AI 提供连接、强度、停止和可选心率参考接口，优先兼容 Intiface／Buttplug。",
+  "heroDescription": "Phantom Touch Bridge 把设备控制包装成 AI 可以调用的本地 HTTP 接口。用户不必自己处理蓝牙协议，先通过 Intiface 判断设备兼容性，也可以在明确掌握协议后尝试 custom 路线。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "18+", "tone": "adult" }
+  ],
+  "tags": ["18+", "私密硬件", "Intiface", "心率输入"],
+  "language": "Python",
+  "platform": "Windows",
+  "updated": "2026-08-23",
+  "heroOverline": "CONNECT · CONTROL · STOP",
+  "showcase": {
+    "label": "把设备协议藏在本地桥接层后面",
+    "symbol": "⌁",
+    "question": "“TA 可以直接控制设备，而不需要我写协议吗？”",
+    "comparisons": [
+      { "value": "连接", "label": "Intiface 优先" },
+      { "value": "调节", "label": "强度与心率参考" },
+      { "value": "停止", "label": "本地控制接口" }
+    ],
+    "note": "先确认兼容范围，再把控制权交给本地 AI。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Phantom Touch Bridge 是一个运行在 Windows 上的本地桥接服务，让 Claude Code 或其他能发送 HTTP 请求的 AI 连接设备、调整强度并停止输出。心率输入是可选能力，可作为伴侣判断节奏的额外参照。",
+      "项目建议先用 Intiface Central 扫描设备；无法识别时才评估 custom 协议路线。作者明确说明 Intiface 路线尚未用其本人设备完成全套实机验证，心率功能目前主要验证于小米手环。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "有 Windows 本地 AI 环境，并持有 Intiface 兼容或可明确验证协议设备的人。" },
+      { "label": "平台", "text": "Windows 本地服务；AI 端需要能够发起 HTTP 请求。" },
+      { "label": "使用方式", "text": "先确认设备支持范围，再启动本地桥并把 API 使用说明交给 AI。" },
+      { "label": "许可", "text": "MIT；使用前需自行验证硬件兼容性与实际停止控制。" }
+    ]
+  }
+}
