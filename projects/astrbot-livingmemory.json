@@ -15,7 +15,7 @@
   "tags": ["记忆", "AstrBot", "生命周期", "插件"],
   "language": "Python",
   "platform": "AstrBot",
-  "updated": "2026-08-23",
+  "updated":"2026-08-18",
   "heroOverline": "WRITE · RECALL · DECAY",
   "showcase": {
     "label": "让 AstrBot 的记忆拥有自己的生命周期",

@@ -1,6 +1,7 @@
 {
   "slug": "omemo",
   "order": 53,
+  "editorPick": true,
   "name": { "zh": "omemo", "en": "OpenAI Memory Proxy" },
   "author": "OmniDimen",
   "sourceUrl": "https://github.com/OmniDimen/omemo",
@@ -15,7 +16,7 @@
   "tags": ["记忆", "OpenAI 兼容", "代理", "RAG"],
   "language": "Python",
   "platform": "Self-host",
-  "updated": "2026-08-23",
+  "updated":"2026-07-07",
   "heroOverline": "PROXY · STORE · INJECT",
   "showcase": {
     "label": "不改客户端，也能在 API 路径上加入记忆",

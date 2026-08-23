@@ -15,7 +15,7 @@
   "tags": ["记忆", "原文真源", "向量索引", "网关"],
   "language": "JavaScript",
   "platform": "Self-host",
-  "updated": "2026-08-23",
+  "updated":"2026-06-13",
   "heroOverline": "VERBATIM · INDEX · RETRIEVE",
   "showcase": {
     "label": "索引可以变化，原话仍留在原处",

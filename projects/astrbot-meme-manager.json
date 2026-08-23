@@ -6,7 +6,7 @@
   "summary": "AstrBot 表情包插件，支持情绪标签智能发送、自动收集、分类管理、WebUI、图床和云端同步。",
   "heroDescription": "AstrBot 表情包管理器为文字回复补上一套日常视觉表达器官，让 AI 能像熟悉的人一样用表情包回应情绪。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["视觉表达", "AstrBot", "表情包", "情绪"], "language": "Python", "platform": "AstrBot / WebUI", "updated": "2026-08-23",
+  "tags": ["视觉表达", "AstrBot", "表情包", "情绪"], "language": "Python", "platform": "AstrBot / WebUI", "updated":"2026-08-20",
   "heroOverline": "MEMES · EMOTION · VISUAL EXPRESSION",
   "showcase": { "label": "把表情包变成伴侣的表达习惯", "symbol": "☺", "question": "“AI 能不能像人一样在合适的时候甩一张图？”", "comparisons": [{ "value": "识别", "label": "情绪标签" }, { "value": "选择", "label": "智能匹配" }, { "value": "积累", "label": "自动收集" }], "note": "视觉表达从固定头像变成会成长的日常图库。" },
   "intro": { "paragraphs": ["AstrBot 表情包管理器按情绪标签选择和发送表情包，支持自动收集、去重、分类、图床与云端同步，并提供 WebUI 管理图库。", "首次启动不会自动导入默认包，使用者需要安装官方包或准备自己的素材。它适合为长期伴侣建立逐渐形成的视觉表达习惯。"], "facts": [{ "label": "适合", "text": "希望 AstrBot 伴侣能自然使用并积累表情包的人。" }, { "label": "平台", "text": "AstrBot 插件与 WebUI。" }, { "label": "使用方式", "text": "安装插件，在 WebUI 中导入表情包并配置情绪分类与可选图床。" }, { "label": "许可", "text": "MIT；表情包素材仍需遵守各自版权。" }] }

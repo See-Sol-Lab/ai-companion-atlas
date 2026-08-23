@@ -15,7 +15,7 @@
   "tags": ["游戏", "推理", "盲玩", "章节制"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-08-22",
   "heroOverline": "CLUES · REASON · REVEAL",
   "showcase": {
     "label": "五个章节逐步向 AI 玩家开放线索",

@@ -15,7 +15,7 @@
   "tags": ["单文件", "本地存储", "MCP", "多窗口"],
   "language": "HTML / JavaScript",
   "platform": "PC Browser",
-  "updated": "2026-08-23",
+  "updated":"2026-08-02",
   "heroOverline": "ONE FILE · DIRECT API · LOCAL DATA",
   "showcase": {
     "label": "最低门槛的独立聊天入口",

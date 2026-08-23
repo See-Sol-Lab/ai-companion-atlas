@@ -15,7 +15,7 @@
   "tags": ["CLI Agent", "真实终端", "桌面空间", "多 Agent"],
   "language": "HTML / JavaScript",
   "platform": "Web / Electron",
-  "updated": "2026-08-23",
+  "updated":"2026-07-29",
   "heroOverline": "TERMINAL · ROOMS · AGENT PRESENCE",
   "showcase": {
     "label": "命令行之外多一层空间感",

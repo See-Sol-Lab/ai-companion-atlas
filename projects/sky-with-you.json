@@ -16,7 +16,7 @@
   "tags": ["游戏", "光遇", "Arduino HID", "共同游玩"],
   "language": "Python",
   "platform": "Windows + Arduino",
-  "updated": "2026-08-23",
+  "updated":"2026-07-03",
   "heroOverline": "PERCEIVE · DECIDE · MOVE",
   "showcase": {
     "label": "从游戏画面到真实按键的一条陪玩闭环",

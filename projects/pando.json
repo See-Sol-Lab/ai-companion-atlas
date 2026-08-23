@@ -36,7 +36,7 @@
   ],
   "language": "Python",
   "platform": "PC + 手机 PWA",
-  "updated": "2026-08-23",
+  "updated":"2026-08-23",
   "heroOverline": "PHONE · STREAM · APPROVE",
   "showcase": {
     "label": "让本地 CLI 长出一扇手机窗口",

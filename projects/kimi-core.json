@@ -1,6 +1,7 @@
 {
   "slug": "kimi-core",
   "order": 51,
+  "editorPick": true,
   "name": {
     "zh": "kimi-core",
     "en": "Agent Memory OS"
@@ -36,7 +37,7 @@
   ],
   "language": "TypeScript",
   "platform": "Self-host / MCP",
-  "updated": "2026-08-23",
+  "updated":"2026-07-25",
   "heroOverline": "RECALL · CONCERN · SELF-AUDIT",
   "showcase": {
     "label": "让主动关心有真实记忆作为依据",

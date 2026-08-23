@@ -14,7 +14,7 @@
   "tags": ["游戏", "AI 决策", "盲玩", "剧情实验"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-07-24",
   "heroOverline": "SCENE · CHOICE · CONSEQUENCE",
   "showcase": {
     "label": "只给当前情境，不提前泄露结局",

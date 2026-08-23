@@ -15,7 +15,7 @@
   "tags": ["游戏", "Roguelike", "文字游戏", "AI 玩家"],
   "language": "Python",
   "platform": "CLI / MCP",
-  "updated": "2026-08-23",
+  "updated":"2026-08-21",
   "heroOverline": "WORDS · SILENCE · RESISTANCE",
   "showcase": {
     "label": "说出口的词，同时改变世界与自己",

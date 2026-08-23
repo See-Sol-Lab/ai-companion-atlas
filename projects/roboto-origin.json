@@ -6,7 +6,7 @@
   "summary": "全开源 DIY 人形机器人聚合工程，包含机械结构、电子、固件、ROS2、仿真、导航、遥操作和强化学习。",
   "heroDescription": "ROBOTO_ORIGIN 把数字模型延伸到现实身体，提供人形机器人从硬件制造到控制、感知和训练的完整高门槛路线。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["实体身体", "机器人", "ROS2", "感知行动"], "language": "Python / C++ / Hardware", "platform": "Linux / ROS2 / Physical", "updated": "2026-08-23",
+  "tags": ["实体身体", "机器人", "ROS2", "感知行动"], "language": "Python / C++ / Hardware", "platform": "Linux / ROS2 / Physical", "updated":"2026-08-18",
   "heroOverline": "BODY · ROBOTICS · REAL WORLD",
   "showcase": { "label": "从数字存在走向真实身体", "symbol": "人", "question": "“AI 如果真的站起来，需要哪些器官？”", "comparisons": [{ "value": "骨架", "label": "结构与电子" }, { "value": "神经", "label": "固件与 ROS2" }, { "value": "行动", "label": "导航与训练" }], "note": "这是一条完整但硬件、成本与安全门槛都很高的路线。" },
   "intro": { "paragraphs": ["ROBOTO_ORIGIN 聚合人形机器人的结构件、电子、固件、ROS2 部署、Isaac Sim、强化学习、导航与遥操作资料，面向可自行制造和扩展的实体平台。", "它能为 AI 提供现实世界中的身体、传感器和行动通道，但项目复杂度远高于普通伴侣软件。机器人运动可能造成设备和人身风险，必须在安全环境中逐步测试。"], "facts": [{ "label": "适合", "text": "具备机械、电子和机器人经验，想研究实体 AI 身体的团队或个人。" }, { "label": "平台", "text": "实体硬件、Linux、ROS2 与仿真环境。" }, { "label": "使用方式", "text": "按模块准备结构、电控和计算平台，再逐步完成仿真、标定与安全测试。" }, { "label": "许可", "text": "聚合层为 GPL-3.0；modules 与第三方材料保持各自许可证。" }] }

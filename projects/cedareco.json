@@ -15,7 +15,7 @@
   "tags": ["游戏", "生态模拟", "AI 玩家", "文字游戏"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-07-17",
   "heroOverline": "SEED · OBSERVE · EMERGE",
   "showcase": {
     "label": "一个会在等待中自行变化的小生态",

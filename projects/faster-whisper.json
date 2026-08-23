@@ -6,7 +6,7 @@
   "summary": "基于 CTranslate2 的 Whisper 复实现，支持批量转写、量化、词级时间戳和语音活动检测。",
   "heroDescription": "faster-whisper 优化 Whisper 的速度与显存占用，让语音消息、通话转写和长音频处理更适合日常运行。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["听觉", "ASR", "高速推理", "量化"], "language": "Python", "platform": "Windows / macOS / Linux", "updated": "2026-08-23",
+  "tags": ["听觉", "ASR", "高速推理", "量化"], "language": "Python", "platform": "Windows / macOS / Linux", "updated":"2025-11-19",
   "heroOverline": "FAST HEARING · QUANTIZATION · TIMESTAMPS",
   "showcase": { "label": "让基础听觉更适合持续运行", "symbol": "≫", "question": "“长时间语音转写怎样更快、更省？”", "comparisons": [{ "value": "速度", "label": "CTranslate2" }, { "value": "内存", "label": "量化运行" }, { "value": "时间", "label": "词级时间戳" }], "note": "更轻的耳朵，更容易留在后台持续工作。" },
   "intro": { "paragraphs": ["faster-whisper 使用 CTranslate2 运行 Whisper，支持 GPU 与 CPU 量化、批量转写、词级时间戳和 Silero VAD，并提供与常见 Python 管线相近的调用方式。", "它适合为伴侣的语音消息、实时通话或长音频记忆处理提供更高效的听觉后端。"], "facts": [{ "label": "适合", "text": "需要高吞吐、低显存 Whisper 转写的本地语音系统。" }, { "label": "平台", "text": "Python，支持 CPU 与 NVIDIA GPU。" }, { "label": "使用方式", "text": "安装 faster-whisper，加载模型并选择计算精度与 VAD 设置。" }, { "label": "许可", "text": "MIT。" }] }

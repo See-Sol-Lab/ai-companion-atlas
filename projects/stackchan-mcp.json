@@ -32,7 +32,7 @@
   ],
   "language": "Python / C++",
   "platform": "M5Stack + PC",
-  "updated": "2026-08-23",
+  "updated":"2026-08-07",
   "heroOverline": "SEE · HEAR · MOVE",
   "showcase": {
     "label": "从模型工具调用到桌面上的动作",

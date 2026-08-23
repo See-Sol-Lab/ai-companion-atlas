@@ -15,7 +15,7 @@
   "tags": ["游戏", "文字塔防", "AI 玩家", "存档"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-08-01",
   "heroOverline": "SLOTS · WAVES · SAVE",
   "showcase": {
     "label": "让布阵与波次都能被文字命令准确控制",

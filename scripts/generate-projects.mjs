@@ -79,14 +79,27 @@ function renderBadges(badges, classPrefix) {
 
 function renderCard(project) {
   const tags = project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
-  const meta = [project.language, project.platform, `${project.dateLabel ?? '核验'} ${project.updated}`]
+  const dateLabel = project.dateLabel ?? (project.sourceUrl.startsWith('https://github.com/') ? '更新' : '核验');
+  const meta = [project.language, project.platform, `${dateLabel} ${project.updated}`]
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
   const cardBadges = project.badges.length <= 5
     ? project.badges
     : [...project.badges].sort((left, right) => [...left.label].length - [...right.label].length).slice(0, 5);
   const badges = renderBadges(cardBadges, 'project-badge');
+  const searchText = [
+    project.name.zh,
+    project.name.en,
+    project.author,
+    project.hook,
+    project.summary,
+    project.heroDescription,
+    ...project.badges.map((badge) => badge.label),
+    ...project.tags
+  ].join(' ');
 
   const editorialMetadata = [
+    ` data-categories="${escapeHtml(project.badges.map((badge) => badge.tone).join(' '))}"`,
+    ` data-search="${escapeHtml(searchText)}"`,
     project.editorPick === true ? ' data-editor-pick="true"' : '',
     Number.isInteger(project.stars) ? ` data-stars="${project.stars}"` : ''
   ].join('');

@@ -15,7 +15,7 @@
   "tags": ["游戏", "钓鱼", "单文件", "确定性"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-07-17",
   "heroOverline": "CAST · WAIT · COLLECT",
   "showcase": {
     "label": "一款足够简单，也能长期积累的 AI 小游戏",

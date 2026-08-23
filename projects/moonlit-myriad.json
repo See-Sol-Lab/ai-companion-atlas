@@ -15,7 +15,7 @@
   "tags": ["游戏", "卡牌肉鸽", "单文件", "可复现"],
   "language": "Python",
   "platform": "CLI",
-  "updated": "2026-08-23",
+  "updated":"2026-07-26",
   "heroOverline": "DRAW · BUILD · SURVIVE",
   "showcase": {
     "label": "一局能被复现，也能被长期记住的卡牌循环",

@@ -1,12 +1,12 @@
 {
-  "slug": "cove-sensory-mcp", "order": 90,
+  "slug": "cove-sensory-mcp", "order": 90, "editorPick": true,
   "name": { "zh": "Cove 感官 MCP", "en": "cove-sensory-mcp" },
   "author": "moonlin1213", "sourceUrl": "https://github.com/moonlin1213/cove-sensory-mcp",
   "hook": "在本地隐私边界内，为纯文字模型接上图像、视频、声音与音乐感知。",
   "summary": "本地多模态 MCP 感知层，代理分析图像、视频、音频和音乐，并以受控结果返回文字模型。",
   "heroDescription": "cove-sensory-mcp 把多模态模型封装成一组本地眼睛和耳朵，让纯文字伴侣在严格目录边界内读取媒体。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["视觉", "听觉", "多模态", "MCP"], "language": "Python", "platform": "Cross-platform / MCP", "updated": "2026-08-23",
+  "tags": ["视觉", "听觉", "多模态", "MCP"], "language": "Python", "platform": "Cross-platform / MCP", "updated":"2026-08-15",
   "heroOverline": "EYES · EARS · PRIVACY SANDBOX",
   "showcase": { "label": "给纯文字伴侣接入多模态感官", "symbol": "◉", "question": "“怎样看图听音，又不把本地文件暴露出去？”", "comparisons": [{ "value": "图像", "label": "视觉理解" }, { "value": "视频", "label": "时序画面" }, { "value": "音频", "label": "声音与音乐" }], "note": "感官入口受到目录与工具边界约束。" },
   "intro": { "paragraphs": ["cove-sensory-mcp 通过 stdio MCP 为文字模型提供图像、视频、音频和音乐分析工具，并把不同媒体任务路由给对应多模态代理。", "项目强调本地隐私沙箱和严格路径边界，适合给 Claude Code、Codex 等纯文字 Agent 增加受控的眼睛与耳朵。"], "facts": [{ "label": "适合", "text": "需要在本地安全读取多种媒体的文字型伴侣或 Agent。" }, { "label": "平台", "text": "跨平台 Python 与 stdio MCP 客户端。" }, { "label": "使用方式", "text": "配置允许访问的目录和媒体代理，再在 MCP 客户端注册服务。" }, { "label": "许可", "text": "Apache-2.0。" }] }

@@ -6,7 +6,7 @@
   "summary": "多语言生成式语音系统，提供零样本与少样本声音克隆、推理服务、WebUI 和训练工具。",
   "heroDescription": "Fish Speech 面向高质量语音生成和声音克隆，可作为伴侣实时说话、朗读与语音消息的自托管嘴巴。",
   "badges": [{ "label": "研究许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["声音", "TTS", "声音克隆", "多语言"], "language": "Python", "platform": "Self-host / GPU", "updated": "2026-08-23",
+  "tags": ["声音", "TTS", "声音克隆", "多语言"], "language": "Python", "platform": "Self-host / GPU", "updated":"2026-08-22",
   "heroOverline": "TTS · VOICE CLONING · MULTILINGUAL",
   "showcase": { "label": "把文字回复变成自然语音", "symbol": "♪", "question": "“伴侣怎样拥有稳定、自然且可自托管的声音？”", "comparisons": [{ "value": "生成", "label": "文本转语音" }, { "value": "克隆", "label": "参考音色" }, { "value": "服务", "label": "API 与 WebUI" }], "note": "模型能力强，使用范围需遵守 Fish Audio Research License。" },
   "intro": { "paragraphs": ["Fish Speech 是多语言生成式 TTS 系统，支持参考音色克隆、长文本语音生成、自托管推理和训练，并提供命令行、服务接口与 WebUI。", "它适合承担伴侣的语音回复、朗读与语音消息输出；代码和模型权重当前均受 Fish Audio Research License 约束。"], "facts": [{ "label": "适合", "text": "重视自然度和多语言能力，并能自托管 GPU 推理的语音项目。" }, { "label": "平台", "text": "Python 与 GPU 自托管环境。" }, { "label": "使用方式", "text": "下载模型，启动推理服务或 WebUI，再由伴侣前端调用。" }, { "label": "许可", "text": "Fish Audio Research License，使用前需核对研究与分发边界。" }] }

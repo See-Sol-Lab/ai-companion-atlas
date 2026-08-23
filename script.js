@@ -19,20 +19,30 @@ if (menuToggle && mainNav) {
     menuToggle.setAttribute('aria-label', open ? '关闭导航' : '打开导航');
   });
 
+  const scrollTargets = new Map([
+    ['#taxonomy', 'center'],
+    ['#guides', 'start'],
+    ['#about', 'start']
+  ]);
+
   mainNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
       mainNav.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
+
+      const block = scrollTargets.get(link.hash);
+      const target = block ? document.querySelector(link.hash) : null;
+      if (!target) return;
+
+      event.preventDefault();
+      window.history.pushState(null, '', link.hash);
+      target.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block
+      });
     });
   });
 }
-
-document.querySelectorAll('.tag').forEach((tag) => {
-  tag.addEventListener('click', () => {
-    document.querySelectorAll('.tag').forEach((item) => item.classList.remove('active'));
-    tag.classList.add('active');
-  });
-});
 
 const visual = document.querySelector('.hero-visual');
 const map = document.querySelector('.atlas-map');
@@ -59,6 +69,53 @@ const projectGrid = directorySection?.querySelector('.project-grid');
 const projectCards = projectGrid
   ? Array.from(projectGrid.querySelectorAll(':scope > .project-card'))
   : [];
+const directoryTitle = document.getElementById('directory-title');
+const directoryFilterNote = document.getElementById('directory-filter-note');
+const catalogSearch = document.getElementById('catalogSearch');
+const catalogSearchInput = document.getElementById('catalogSearchInput');
+const catalogSearchClear = document.getElementById('catalogSearchClear');
+const projectAuthorCount = new Set(
+  projectCards
+    .map((card) => card.querySelector('.project-author')?.textContent.replace(/^@/, '').trim().toLowerCase())
+    .filter(Boolean)
+).size;
+const CATEGORY_FILTERS = {
+  memory: '记忆',
+  subjectivity: 'AI 主体性',
+  senses: '五感与器官',
+  companion: '陪伴类',
+  continuity: '关系延续',
+  desktop: 'PC 前端',
+  mobile: '手机前端',
+  game: '游戏',
+  tool: '基础工具',
+  adult: '18+'
+};
+const normalizeSearch = (value) => value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
+
+const scoreSearchMatch = (card, query) => {
+  const terms = query.split(' ').filter(Boolean);
+  const fullText = normalizeSearch(card.dataset.search || '');
+  if (terms.some((term) => !fullText.includes(term))) return -1;
+
+  const title = normalizeSearch(`${card.querySelector('.project-title-zh')?.textContent || ''} ${card.querySelector('.project-title-en')?.textContent || ''}`);
+  const author = normalizeSearch(card.querySelector('.project-author')?.textContent || '');
+  const tags = normalizeSearch(card.querySelector('.project-tags')?.textContent || '');
+  const hook = normalizeSearch(card.querySelector('.project-problem')?.textContent || '');
+  const summary = normalizeSearch(card.querySelector('.project-description')?.textContent || '');
+
+  return terms.reduce((score, term) => {
+    if (title === term) score += 100;
+    else if (title.startsWith(term)) score += 70;
+    else if (title.includes(term)) score += 50;
+    if (author.includes(term)) score += 35;
+    if (tags.includes(term)) score += 25;
+    if (hook.includes(term)) score += 16;
+    if (summary.includes(term)) score += 8;
+    if (fullText.includes(term)) score += 4;
+    return score;
+  }, 0);
+};
 
 /* Verified 500★+ slugs in the Atlas as of 2026-08-23. Future generated cards can
    use data-stars and will not need to be added here. */
@@ -118,6 +175,7 @@ const isEditorPickCard = (card) =>
 
 let catalogFilter = 'all';
 let quickFilters = null;
+let searchQuery = '';
 
 if (taxonomySection && directorySection) {
   quickFilters = document.createElement('aside');
@@ -168,13 +226,23 @@ if (directorySection && projectGrid && projectCards.length > 0) {
 
   const filterFromUrl = () => {
     const value = new URL(window.location.href).searchParams.get('filter');
-    return ['high-star', 'editor-pick'].includes(value) ? value : 'all';
+    return ['high-star', 'editor-pick', ...Object.keys(CATEGORY_FILTERS)].includes(value) ? value : 'all';
   };
 
   const filteredCards = () => {
-    if (catalogFilter === 'high-star') return projectCards.filter(isHighStarCard);
-    if (catalogFilter === 'editor-pick') return projectCards.filter(isEditorPickCard);
-    return projectCards;
+    let matches = projectCards;
+    if (catalogFilter === 'high-star') matches = projectCards.filter(isHighStarCard);
+    else if (catalogFilter === 'editor-pick') matches = projectCards.filter(isEditorPickCard);
+    if (CATEGORY_FILTERS[catalogFilter]) {
+      matches = projectCards.filter((card) => (card.dataset.categories || '').split(' ').includes(catalogFilter));
+    }
+    if (!searchQuery) return matches;
+
+    return matches
+      .map((card, index) => ({ card, index, score: scoreSearchMatch(card, searchQuery) }))
+      .filter((item) => item.score >= 0)
+      .sort((left, right) => right.score - left.score || left.index - right.index)
+      .map((item) => item.card);
   };
 
   const pageFromUrl = (totalPages) => {
@@ -232,6 +300,42 @@ if (directorySection && projectGrid && projectCards.length > 0) {
     });
   };
 
+  const syncCategoryFilterState = () => {
+    taxonomySection.querySelectorAll('.tag[data-catalog-filter]').forEach((button) => {
+      const active = button.dataset.catalogFilter === catalogFilter;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  };
+
+  const syncDirectoryHeading = (matchCount) => {
+    if (searchQuery) {
+      directoryTitle.classList.remove('directory-stats');
+      directoryTitle.textContent = '搜索结果';
+      directoryFilterNote.textContent = `找到 ${matchCount} 个相关项目`;
+      directoryFilterNote.hidden = false;
+      return;
+    }
+
+    const filteredHeading = {
+      'high-star': ['高星项目', 'GitHub Star ≥ 500'],
+      'editor-pick': ['人工精选', '小红书高赞项目']
+    }[catalogFilter] || (CATEGORY_FILTERS[catalogFilter] ? [`${CATEGORY_FILTERS[catalogFilter]}项目`, '分类标签'] : null);
+
+    if (filteredHeading) {
+      directoryTitle.classList.remove('directory-stats');
+      directoryTitle.textContent = filteredHeading[0];
+      directoryFilterNote.textContent = filteredHeading[1];
+      directoryFilterNote.hidden = false;
+      return;
+    }
+
+    directoryTitle.classList.add('directory-stats');
+    directoryTitle.innerHTML = `<strong>${projectCards.length}</strong><span>个项目 ·</span><strong>${projectAuthorCount}</strong><span>位作者</span>`;
+    directoryFilterNote.textContent = '';
+    directoryFilterNote.hidden = true;
+  };
+
   const renderPage = (requestedPage, { historyMode = 'push', scroll = false } = {}) => {
     const matches = filteredCards();
     const totalPages = Math.max(1, Math.ceil(matches.length / PROJECTS_PER_PAGE));
@@ -252,6 +356,7 @@ if (directorySection && projectGrid && projectCards.length > 0) {
     });
 
     emptyState.hidden = matches.length !== 0;
+    emptyState.textContent = searchQuery ? '没有找到相关项目。' : '当前分类暂时没有项目。';
     pagination.hidden = matches.length === 0 || totalPages <= 1;
     numbers.replaceChildren();
 
@@ -287,6 +392,8 @@ if (directorySection && projectGrid && projectCards.length > 0) {
     }
 
     syncQuickFilterState();
+    syncCategoryFilterState();
+    syncDirectoryHeading(matches.length);
     syncUrl(currentPage, historyMode);
     if (scroll) scrollToDirectory();
   };
@@ -303,6 +410,30 @@ if (directorySection && projectGrid && projectCards.length > 0) {
     const requestedFilter = button.dataset.catalogFilter;
     catalogFilter = catalogFilter === requestedFilter ? 'all' : requestedFilter;
     renderPage(1, { historyMode: 'push', scroll: true });
+  });
+
+  taxonomySection.addEventListener('click', (event) => {
+    const button = event.target.closest('.tag[data-catalog-filter]');
+    if (!button) return;
+    const requestedFilter = button.dataset.catalogFilter;
+    catalogFilter = catalogFilter === requestedFilter ? 'all' : requestedFilter;
+    renderPage(1, { historyMode: 'push', scroll: true });
+  });
+
+  catalogSearch?.addEventListener('submit', (event) => event.preventDefault());
+
+  catalogSearchInput?.addEventListener('input', (event) => {
+    searchQuery = normalizeSearch(event.target.value);
+    catalogSearchClear.hidden = !searchQuery;
+    renderPage(1, { historyMode: 'replace', scroll: false });
+  });
+
+  catalogSearchClear?.addEventListener('click', () => {
+    catalogSearchInput.value = '';
+    searchQuery = '';
+    catalogSearchClear.hidden = true;
+    renderPage(1, { historyMode: 'replace', scroll: false });
+    catalogSearchInput.focus();
   });
 
   window.addEventListener('popstate', () => {

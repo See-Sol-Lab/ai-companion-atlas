@@ -1,6 +1,7 @@
 {
   "slug": "eventide",
   "order": 26,
+  "editorPick": true,
   "name": {
     "zh": "Eventide",
     "en": "Physiological State Engine"
@@ -40,7 +41,7 @@
   ],
   "language": "Python",
   "platform": "Any",
-  "updated": "2026-08-23",
+  "updated":"2026-07-26",
   "heroOverline": "CYCLES · EVENTS · SETTLEMENT",
   "showcase": {
     "label": "一套能被时间与互动共同推进的身体状态",

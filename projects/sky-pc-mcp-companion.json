@@ -16,7 +16,7 @@
   "tags": ["游戏", "光遇", "MCP", "OCR"],
   "language": "Python",
   "platform": "Windows / PC Sky",
-  "updated": "2026-08-23",
+  "updated":"2026-06-14",
   "heroOverline": "CAPTURE · READ · INPUT",
   "showcase": {
     "label": "把 PC 光遇窗口变成 AI 可读可操作的工具面",

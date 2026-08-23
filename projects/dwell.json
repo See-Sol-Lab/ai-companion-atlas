@@ -1,6 +1,7 @@
 {
   "slug": "dwell",
   "order": 75,
+  "editorPick": true,
   "name": {
     "zh": "dwell",
     "en": "Companion Living Space"
@@ -36,7 +37,7 @@
   ],
   "language": "HTML / JavaScript",
   "platform": "PC Browser",
-  "updated": "2026-08-23",
+  "updated":"2026-08-07",
   "heroOverline": "DWELL · HEARTBEAT · SHARED LIFE",
   "showcase": {
     "label": "让伴侣真正住进一个持续运转的空间",

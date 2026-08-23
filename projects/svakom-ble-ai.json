@@ -16,7 +16,7 @@
   "tags": ["18+", "BLE 逆向", "Web Bluetooth", "MCP"],
   "language": "Python / JavaScript",
   "platform": "Android / PC / Railway",
-  "updated": "2026-08-23",
+  "updated":"2026-06-15",
   "heroOverline": "REVERSE · RELAY · CONTROL",
   "showcase": {
     "label": "从协议证据走到一条可运行的控制链",

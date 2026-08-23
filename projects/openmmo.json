@@ -15,7 +15,7 @@
   "tags": ["游戏", "MMO", "AI Agent", "共享世界"],
   "language": "Rust / TypeScript",
   "platform": "Web / Linux / Windows",
-  "updated": "2026-08-23",
+  "updated":"2026-08-23",
   "heroOverline": "WORLD · PROTOCOL · COEXIST",
   "showcase": {
     "label": "真人与 Agent 使用同一套世界规则",

@@ -15,7 +15,7 @@
   "tags": ["游戏", "文字游戏", "框架", "AI 玩家"],
   "language": "Python",
   "platform": "CLI / Any",
-  "updated": "2026-08-23",
+  "updated":"2026-07-17",
   "heroOverline": "DISCOVER · ROUTE · SHARE",
   "showcase": {
     "label": "多款文字游戏共用一套大厅状态",

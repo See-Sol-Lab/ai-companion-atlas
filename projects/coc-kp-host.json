@@ -15,7 +15,7 @@
   "tags": ["游戏", "跑团", "CoC", "Agent Skill"],
   "language": "Python / Skill",
   "platform": "Claude Code / Codex / ChatGPT",
-  "updated": "2026-08-23",
+  "updated":"2026-06-26",
   "heroOverline": "SCENE · HANDOUT · KEEPER",
   "showcase": {
     "label": "让 AI 组织一场带音乐和讲义的中文跑团",

@@ -6,7 +6,7 @@
   "summary": "AstrBot 视觉表达插件，根据情绪标签切换立绘，将回复渲染成可自定义布局的 Galgame 聊天框图片。",
   "heroDescription": "传画筒为文字型 AstrBot 增加一套视觉表达器官，让不同情绪、角色立绘和对话层次直接呈现在回复图片里。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["视觉表达", "AstrBot", "Galgame", "情绪立绘"], "language": "Python", "platform": "AstrBot / WebUI", "updated": "2026-08-23",
+  "tags": ["视觉表达", "AstrBot", "Galgame", "情绪立绘"], "language": "Python", "platform": "AstrBot / WebUI", "updated":"2026-06-27",
   "heroOverline": "PORTRAIT · EMOTION · VISUAL REPLY",
   "showcase": { "label": "让文字回复拥有表情与画面", "symbol": "画", "question": "“同一句话，怎样让表情和立绘一起说出来？”", "comparisons": [{ "value": "情绪", "label": "标签识别" }, { "value": "立绘", "label": "差分切换" }, { "value": "布局", "label": "拖拽 WebUI" }], "note": "输出仍是一条消息，但视觉表达不再只有纯文字。" },
   "intro": { "paragraphs": ["传画筒读取 AstrBot 回复中的情绪标签，切换对应角色立绘，并将多层文本、图片、背景和毛玻璃组件渲染为 Galgame 风聊天框图片。", "项目提供拖拽式 WebUI 编辑布局和自定义模板，适合让群聊或私聊中的 AI 获得稳定视觉形象与情绪差分。"], "facts": [{ "label": "适合", "text": "使用 AstrBot，希望回复带角色立绘和情绪演出的用户。" }, { "label": "平台", "text": "AstrBot 插件与 WebUI。" }, { "label": "使用方式", "text": "安装插件，准备角色立绘并在 WebUI 中配置布局和情绪标签。" }, { "label": "许可", "text": "AGPL-3.0。" }] }

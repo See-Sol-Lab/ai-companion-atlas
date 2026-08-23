@@ -14,7 +14,7 @@
   "tags": ["记忆", "情绪模型", "本地模型", "GGUF"],
   "language": "Model",
   "platform": "LM Studio / Ollama / Edge",
-  "updated": "2026-08-23",
+  "updated":"2025-12-11",
   "heroOverline": "RECOGNIZE · RESPOND · RUN LOCAL",
   "showcase": {
     "label": "把情绪能力放进本地可部署的模型本体",

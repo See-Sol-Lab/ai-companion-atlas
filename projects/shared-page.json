@@ -1,6 +1,7 @@
 {
   "slug": "shared-page",
   "order": 79,
+  "editorPick": true,
   "name": { "zh": "共享手帐", "en": "shared-page" },
   "author": "KKarsyline",
   "sourceUrl": "https://github.com/KKarsyline/shared-page",
@@ -16,7 +17,7 @@
   "tags": ["共享手帐", "日历", "便签", "照片"],
   "language": "Swift / Python",
   "platform": "iOS / Self-host",
-  "updated": "2026-08-23",
+  "updated":"2026-08-03",
   "heroOverline": "CALENDAR · NOTES · SHARED PAGE",
   "showcase": {
     "label": "把共同生活写在同一页上",

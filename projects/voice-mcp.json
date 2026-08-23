@@ -6,7 +6,7 @@
   "summary": "AI 语音合成 MCP 服务，支持 DashScope 与 ElevenLabs Provider 切换、克隆音色、内联播放器和实时可视化。",
   "heroDescription": "voice-mcp 把 TTS 封装成 speak(text) 工具，让 Claude 等 Agent 能主动调用声音，并在对话中直接展示播放器。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "五感与器官", "tone": "senses" }],
-  "tags": ["声音", "MCP", "TTS", "内联播放器"], "language": "TypeScript", "platform": "Cloudflare Workers / MCP", "updated": "2026-08-23",
+  "tags": ["声音", "MCP", "TTS", "内联播放器"], "language": "TypeScript", "platform": "Cloudflare Workers / MCP", "updated":"2026-07-18",
   "heroOverline": "SPEAK TOOL · TTS · INLINE AUDIO",
   "showcase": { "label": "把语音变成 Agent 可调用的工具", "symbol": "▶", "question": "“AI 怎样自己决定何时开口说话？”", "comparisons": [{ "value": "调用", "label": "speak 工具" }, { "value": "音色", "label": "Provider 切换" }, { "value": "播放", "label": "内联 UI" }], "note": "模型负责决定要说什么，MCP 负责把文字变成声音。" },
   "intro": { "paragraphs": ["voice-mcp 提供 speak(text) MCP 工具，可在 DashScope Qwen-TTS VC 与 ElevenLabs 之间切换，并通过 MCP Apps 内联播放器和实时可视化面板播放结果。", "该仓库是 garan0613/voice-mcp 的 MIT fork，保留原始行为并增加 Provider 切换、ElevenLabs 和可视化功能，因此不标原创。"], "facts": [{ "label": "适合", "text": "希望 Claude、Codex 等 MCP Agent 主动调用专属声音的人。" }, { "label": "平台", "text": "Cloudflare Workers 与支持 MCP Apps 的客户端。" }, { "label": "使用方式", "text": "部署 Worker，配置语音 Provider，再向 MCP 客户端注册服务。" }, { "label": "许可", "text": "MIT；基于 garan0613/voice-mcp。" }] }

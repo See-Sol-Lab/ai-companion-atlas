@@ -16,7 +16,7 @@
   "tags": ["PWA", "自托管", "私聊群聊", "Claude Code"],
   "language": "JavaScript",
   "platform": "PC / 手机 PWA",
-  "updated": "2026-08-23",
+  "updated":"2026-08-14",
   "heroOverline": "CHAT · MEMORY · LOCAL DATA",
   "showcase": {
     "label": "一个轻量入口连接本地 Agent",

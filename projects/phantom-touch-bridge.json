@@ -16,7 +16,7 @@
   "tags": ["18+", "私密硬件", "Intiface", "心率输入"],
   "language": "Python",
   "platform": "Windows",
-  "updated": "2026-08-23",
+  "updated":"2026-06-19",
   "heroOverline": "CONNECT · CONTROL · STOP",
   "showcase": {
     "label": "把设备协议藏在本地桥接层后面",

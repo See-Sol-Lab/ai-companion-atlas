@@ -16,7 +16,7 @@
   "tags": ["共读", "网页阅读器", "批注", "自托管"],
   "language": "Python",
   "platform": "PC Browser / Self-host",
-  "updated": "2026-08-23",
+  "updated":"2026-07-03",
   "heroOverline": "READ · ANNOTATE · FULL CONTEXT",
   "showcase": {
     "label": "让正文与批注成为共享材料",
