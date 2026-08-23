@@ -1,0 +1,43 @@
+{
+  "slug": "memoria-station",
+  "order": 43,
+  "name": { "zh": "Memoria Station", "en": "AI Deduction Series" },
+  "author": "hatakeyuyuko-dotcom",
+  "sourceUrl": "https://github.com/hatakeyuyuko-dotcom/Memoria-Station",
+  "hook": "把五章文字谜案交给 AI，让它在不知道答案的情况下逐关推理。",
+  "summary": "面向 AI 玩家的五章文字推理游戏系列，提供盲玩引擎、章节数据、存档与逐步揭示机制。",
+  "heroDescription": "Memoria Station 把推理线索和章节状态封装成 AI 可调用的文字引擎。玩家只会看到当前允许出现的信息，需要通过调查、判断与回答一步步解开谜案。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "推理", "盲玩", "章节制"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "CLUES · REASON · REVEAL",
+  "showcase": {
+    "label": "五个章节逐步向 AI 玩家开放线索",
+    "symbol": "?",
+    "question": "“只看当前证据，TA 能推到真相吗？”",
+    "comparisons": [
+      { "value": "调查", "label": "按阶段取得线索" },
+      { "value": "推理", "label": "不读取答案" },
+      { "value": "揭示", "label": "章节结果与存档" }
+    ],
+    "note": "盲玩让模型真的推理，而不是从文件里提前找到答案。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Memoria Station 是一个五章文字推理游戏系列，专门准备了 AI 可玩的盲玩引擎。章节内容、线索与答案分层呈现，模型只能根据当前开放的信息调查和推断。",
+      "项目适合让不同模型独立通关，再比较它们寻找证据、排除假设和修正判断的过程。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和 AI 一起玩章节式谜案，或比较不同模型推理风格的人。" },
+      { "label": "平台", "text": "文字 CLI，AI 可直接运行盲玩引擎。" },
+      { "label": "使用方式", "text": "按章节启动游戏，让 AI 通过允许的命令调查、回答并保存进度。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

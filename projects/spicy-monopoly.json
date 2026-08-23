@@ -10,9 +10,10 @@
   "badges": [
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
-    { "label": "18+", "tone": "adult" }
+    { "label": "18+", "tone": "adult" },
+    { "label": "游戏", "tone": "game" }
   ],
-  "tags": ["18+", "双人游戏", "MCP", "安全词"],
+  "tags": ["18+", "游戏", "双人游戏", "安全词"],
   "language": "Python / JavaScript",
   "platform": "CLI / Web / MCP",
   "updated": "2026-08-23",

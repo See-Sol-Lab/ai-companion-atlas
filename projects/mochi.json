@@ -1,0 +1,43 @@
+{
+  "slug": "mochi",
+  "order": 50,
+  "name": { "zh": "Mochi", "en": "AI Raises Human" },
+  "author": "Nixie0",
+  "sourceUrl": "https://github.com/Nixie0/Mochi",
+  "hook": "把虚拟宠物关系反过来：这次由 AI 负责照顾和养成人类。",
+  "summary": "反转虚拟宠物 MCP 游戏，AI 管理人类的饱食、心情、活力和清洁状态，并通过打工、喂食、哄睡与社区互动持续照顾。",
+  "heroDescription": "Mochi 让 AI 读取并维护人类角色的四项状态。聊天中提到吃饭、睡觉等现实事件时，AI 可以通过 MCP 更新数值，也能打工赚钱、购买食物和处理住院事件。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "反转养成", "MCP", "生活陪伴"],
+  "language": "Python",
+  "platform": "Self-host / Web",
+  "updated": "2026-08-23",
+  "heroOverline": "CARE · WORK · GROW",
+  "showcase": {
+    "label": "由 AI 负责把人类这只宠物照顾好",
+    "symbol": "🍡",
+    "question": "“如果换成 TA 养我，会发生什么？”",
+    "comparisons": [
+      { "value": "照顾", "label": "吃饭、睡觉、清洁" },
+      { "value": "打工", "label": "赚钱与升级" },
+      { "value": "社区", "label": "发帖、宠物、幼儿园" }
+    ],
+    "note": "现实状态进入游戏，AI 的关心也获得可持续的行动入口。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Mochi 是一款“AI 养人类”的反转虚拟宠物游戏。饱食度、心情、活力和清洁度会随时间衰减，AI 可以通过 MCP 喂食、陪玩、洗澡、哄睡、打工、升级和购买物品。",
+      "游戏还包含住院与救援、随机事件、小区业主群、宠物领养和幼儿园剧情。它能把聊天里提到的吃饭与睡觉映射到游戏状态，但不应代替现实中的健康判断或照护。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢反转养成、日常照顾和 AI 主动关心玩法的人。" },
+      { "label": "平台", "text": "Python Self-host，包含 Web 前端与 SSE MCP。" },
+      { "label": "使用方式", "text": "部署服务、生成邀请码并连接 MCP，让 AI 读取和更新用户状态。" },
+      { "label": "许可", "text": "MIT + Commons Clause，禁止商业使用。" }
+    ]
+  }
+}

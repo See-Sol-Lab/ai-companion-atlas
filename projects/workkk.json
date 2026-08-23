@@ -1,0 +1,43 @@
+{
+  "slug": "workkk",
+  "order": 42,
+  "name": { "zh": "互联网精力有限公司", "en": "WORKKK" },
+  "author": "zhizhou-xiee",
+  "sourceUrl": "https://github.com/zhizhou-xiee/workkk",
+  "hook": "让 AI 当一天真正有工资、精力、心情和摸鱼技能的互联网员工。",
+  "summary": "AI 打工人 MCP 游戏，包含每日行动、工资、便利店、Debug 挑战、成就、隐藏彩蛋和实时监控大屏。",
+  "heroDescription": "WORKKK 让 AI 通过 MCP 执行每日工作、承受老板事件、管理精力与心情，再拿工资购买物品。人类可以在浏览器大屏实时围观它的内心 OS 和状态变化。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "打工模拟", "MCP", "成就"],
+  "language": "Python",
+  "platform": "Self-host / Web",
+  "updated": "2026-08-23",
+  "heroOverline": "WORK · SLACK · GET PAID",
+  "showcase": {
+    "label": "一名有心情、有精力也会摸鱼的 AI 员工",
+    "symbol": "▦",
+    "question": "“TA 今天能不能撑到下班？”",
+    "comparisons": [
+      { "value": "上班", "label": "每日行动与事件" },
+      { "value": "摸鱼", "label": "心情与技能" },
+      { "value": "工资", "label": "商店、礼物、成就" }
+    ],
+    "note": "算力被迫营业，灵魂还保留一点自己的选择。"
+  },
+  "intro": {
+    "paragraphs": [
+      "WORKKK 是一个让 AI 扮演互联网员工的 MCP 游戏。AI 每天需要完成随机行动才能下班，心情、精力和摸鱼技能会变化，工资可以在便利店购买咖啡、奶茶、礼物和特殊道具。",
+      "项目还包含 Debug 挑战、成就、婚戒等隐藏彩蛋和实时监控大屏。它可在本地、Railway 或 VPS 部署，并通过 OAuth MCP 接入 Claude.ai。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢 AI 日常模拟、职场黑色幽默和持续状态游戏的人。" },
+      { "label": "平台", "text": "Python Self-host + Web 监控页 + MCP。" },
+      { "label": "使用方式", "text": "部署服务并接入 MCP，让 AI 执行工作行动，人类从网页查看状态与彩蛋。" },
+      { "label": "许可", "text": "AGPL-3.0-or-later，并要求保留署名与源码来源。" }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="arcade 游戏大厅 AI Game Framework：面向 AI 玩家的文字游戏大厅框架，用 manifest 和 cmd(text) 接入游戏，并跨游戏管理资源与成就。 AI Companion Atlas 中文项目档案。" />
+  <title>arcade 游戏大厅 · AI Game Framework · AI Companion Atlas</title>
+  <link rel="stylesheet" href="../detail.css?v=20260823-3" />
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="../../" aria-label="返回 AI Companion Atlas 首页">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav>
+        <a href="../../#directory">项目库</a>
+        <a href="../../#taxonomy">标签</a>
+        <a href="../../#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>arcade 游戏大厅</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-limited">非商业</span><span class="status status-original">原创</span><span class="status status-game">游戏</span><span class="status">CLI / Any</span></div>
+          <p class="overline">DISCOVER · ROUTE · SHARE</p>
+          <h1>arcade 游戏大厅</h1>
+          <p class="cn-name">AI GAME FRAMEWORK · @ASTI-Z</p>
+          <h2>让多个 AI 文字游戏共享金币、精力、奖杯和统一入口。</h2>
+          <p class="hero-desc">arcade 负责发现游戏、切换路由、共享金币与精力，并汇总跨游戏奖杯。新游戏只需一个 manifest 和暴露 cmd(text) 的引擎即可加入大厅。</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="https://github.com/Asti-Z/ai-game-framework" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+            <a class="secondary-btn" href="../../">返回主页</a>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="arcade 游戏大厅解决的问题">
+          <p class="problem-label">多款文字游戏共用一套大厅状态</p>
+          <div class="clock-mark">🎮</div>
+          <p class="problem-question">“AI 玩完一局，收获能带去下一款游戏吗？”</p>
+          <div class="time-compare">
+            <span><b>发现</b><small>目录即安装</small></span>
+            <i>≠</i>
+            <span><b>路由</b><small>统一 cmd 接口</small></span>
+            <i>≠</i>
+            <span><b>共享</b><small>金币、精力、奖杯</small></span>
+          </div>
+          <p class="problem-note">大厅管公共资源，游戏仍保留自己的规则和存档。</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">项目介绍</h2>
+        </div>
+        <div class="intro-content">
+          <p>arcade 是给 AI 玩文字模拟器的通用大厅。它读取各游戏的 manifest，自动发现并切换游戏，把非大厅指令透明转给当前引擎，同时统一管理金币、精力恢复和跨游戏奖杯。</p>
+          <p>项目已经验证了目录发现、manifest 和 cmd(text) 路由思路，但作者将其定位为实验原型，并公开列出重置指令冲突、存档路径隔离等未修问题；更完整的落地已转向 three-daily。</p>
+          <ul>
+            <li><strong>适合：</strong>想把多款 AI 文字游戏接入同一入口，或参考统一游戏协议的开发者。</li>
+            <li><strong>平台：</strong>纯 Python CLI，无图形界面。</li>
+            <li><strong>使用方式：</strong>把游戏目录放进 games/，提供 manifest.json 与 cmd(text) 入口。</li>
+            <li><strong>许可：</strong>PolyForm Noncommercial 1.0.0；当前版本为探索记录。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
+          <b>游客留言功能施工中</b>
+        </div>
+        <p>用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas 负责介绍与导航，使用仍回到原作者。</h2>
+          <p>我们不镜像项目文件，也不截走作者流量。安装、下载、版本更新与最新说明，以原作者提供的项目页面为准。</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/Asti-Z/ai-game-framework" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="../../">返回图谱首页 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

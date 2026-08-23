@@ -1,0 +1,43 @@
+{
+  "slug": "arcade",
+  "order": 34,
+  "name": { "zh": "arcade 游戏大厅", "en": "AI Game Framework" },
+  "author": "Asti-Z",
+  "sourceUrl": "https://github.com/Asti-Z/ai-game-framework",
+  "hook": "让多个 AI 文字游戏共享金币、精力、奖杯和统一入口。",
+  "summary": "面向 AI 玩家的文字游戏大厅框架，用 manifest 和 cmd(text) 接入游戏，并跨游戏管理资源与成就。",
+  "heroDescription": "arcade 负责发现游戏、切换路由、共享金币与精力，并汇总跨游戏奖杯。新游戏只需一个 manifest 和暴露 cmd(text) 的引擎即可加入大厅。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "文字游戏", "框架", "AI 玩家"],
+  "language": "Python",
+  "platform": "CLI / Any",
+  "updated": "2026-08-23",
+  "heroOverline": "DISCOVER · ROUTE · SHARE",
+  "showcase": {
+    "label": "多款文字游戏共用一套大厅状态",
+    "symbol": "🎮",
+    "question": "“AI 玩完一局，收获能带去下一款游戏吗？”",
+    "comparisons": [
+      { "value": "发现", "label": "目录即安装" },
+      { "value": "路由", "label": "统一 cmd 接口" },
+      { "value": "共享", "label": "金币、精力、奖杯" }
+    ],
+    "note": "大厅管公共资源，游戏仍保留自己的规则和存档。"
+  },
+  "intro": {
+    "paragraphs": [
+      "arcade 是给 AI 玩文字模拟器的通用大厅。它读取各游戏的 manifest，自动发现并切换游戏，把非大厅指令透明转给当前引擎，同时统一管理金币、精力恢复和跨游戏奖杯。",
+      "项目已经验证了目录发现、manifest 和 cmd(text) 路由思路，但作者将其定位为实验原型，并公开列出重置指令冲突、存档路径隔离等未修问题；更完整的落地已转向 three-daily。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想把多款 AI 文字游戏接入同一入口，或参考统一游戏协议的开发者。" },
+      { "label": "平台", "text": "纯 Python CLI，无图形界面。" },
+      { "label": "使用方式", "text": "把游戏目录放进 games/，提供 manifest.json 与 cmd(text) 入口。" },
+      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；当前版本为探索记录。" }
+    ]
+  }
+}

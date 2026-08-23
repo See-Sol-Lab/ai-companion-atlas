@@ -1,0 +1,43 @@
+{
+  "slug": "cedareco",
+  "order": 36,
+  "name": { "zh": "瓶中生态", "en": "cedareco" },
+  "author": "Zizuixixiang",
+  "sourceUrl": "https://github.com/Zizuixixiang/cedareco",
+  "hook": "让 AI 投放物种、观察捕食与繁衍，经营一个会自己演化的瓶中世界。",
+  "summary": "给 AI 玩的文字生态模拟器，支持物种投放、环境观察、涌现式食物链、存档与外部 MCP 服务接入。",
+  "heroDescription": "cedareco 把池塘生态暴露为文本指令。AI 可以选择物种、调整环境并等待时间推进，再根据数量、捕食和繁衍结果理解一个小型生态系统。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "生态模拟", "AI 玩家", "文字游戏"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "SEED · OBSERVE · EMERGE",
+  "showcase": {
+    "label": "一个会在等待中自行变化的小生态",
+    "symbol": "◌",
+    "question": "“AI 放进去的物种，会怎样共同活下去？”",
+    "comparisons": [
+      { "value": "投放", "label": "选择物种" },
+      { "value": "等待", "label": "推进生态时间" },
+      { "value": "观察", "label": "涌现种群关系" }
+    ],
+    "note": "结果来自系统演化，不是模型临场编故事。"
+  },
+  "intro": {
+    "paragraphs": [
+      "cedareco 是为 AI 玩家设计的文字生态模拟器。玩家可以向池塘投放不同物种、推进时间、观察数量与环境变化，并在捕食、繁衍和资源约束中看到意料之外的生态结果。",
+      "游戏支持导出和恢复存档，也可以通过外部托管的 CedarToy MCP 服务接入。它适合作为 AI 的长期观察活动，也能让人和 AI 一起讨论每次选择带来的后果。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢生态模拟、慢节奏观察和涌现系统的人机组合。" },
+      { "label": "平台", "text": "Python CLI；另有可选外部 MCP 服务。" },
+      { "label": "使用方式", "text": "通过文字命令投放物种、推进时间、查看环境和导出存档。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

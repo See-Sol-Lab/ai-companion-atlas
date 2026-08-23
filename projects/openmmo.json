@@ -1,0 +1,43 @@
+{
+  "slug": "openmmo",
+  "order": 45,
+  "name": { "zh": "OpenMMO", "en": "Human-Agent MMO" },
+  "author": "Julian-adv",
+  "sourceUrl": "https://github.com/Julian-adv/OpenMMO",
+  "hook": "让人类玩家和无头 AI Agent 通过同一协议生活在一座 3D 世界里。",
+  "summary": "非商业 3D MMORPG，真人客户端与 AI Agent 共用服务端权威世界和 WebSocket 协议。",
+  "heroDescription": "OpenMMO 为人类玩家和 headless Agent 提供相同的世界协议。角色可以在服务端权威的地图中移动、交互和共同存在，伴侣人格与记忆层由接入方自行连接。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "MMO", "AI Agent", "共享世界"],
+  "language": "Rust / TypeScript",
+  "platform": "Web / Linux / Windows",
+  "updated": "2026-08-23",
+  "heroOverline": "WORLD · PROTOCOL · COEXIST",
+  "showcase": {
+    "label": "真人与 Agent 使用同一套世界规则",
+    "symbol": "◎",
+    "question": "“人和 AI 能否真的进入同一个在线世界？”",
+    "comparisons": [
+      { "value": "世界", "label": "3D MMO 空间" },
+      { "value": "协议", "label": "统一 WebSocket" },
+      { "value": "共存", "label": "真人与无头 Agent" }
+    ],
+    "note": "服务器决定世界真值，双方看到的是同一件正在发生的事。"
+  },
+  "intro": {
+    "paragraphs": [
+      "OpenMMO 是一个允许真人玩家与无头 AI Agent 共享世界的 3D MMORPG。两类玩家都通过同一套 WebSocket 协议连接服务端，移动、状态和世界交互由服务器统一裁定。",
+      "项目提供共享世界与 Agent 接口，但不会自动带入现有伴侣的人格和长期记忆；接入方需要自己连接那一层。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想让 AI 伴侣进入多人 3D 世界，并愿意编写人格桥接的人。" },
+      { "label": "平台", "text": "Web、Windows 与 Linux；服务端和客户端使用 Rust/TypeScript。" },
+      { "label": "使用方式", "text": "部署服务端与人类客户端，再让 Agent 按统一协议连接并补入自身人格逻辑。" },
+      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0，仅限非商业用途。" }
+    ]
+  }
+}

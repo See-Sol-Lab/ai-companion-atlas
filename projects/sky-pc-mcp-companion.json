@@ -1,0 +1,43 @@
+{
+  "slug": "sky-pc-mcp-companion",
+  "order": 47,
+  "name": { "zh": "Sky PC MCP Companion", "en": "Sky Control Tools" },
+  "author": "Aevella",
+  "sourceUrl": "https://github.com/Aevella/sky-pc-mcp-companion",
+  "hook": "给 PC 光遇增加截图、OCR、键盘和聊天工具，让 AI 看见并参与游戏。",
+  "summary": "面向 PC《光·遇》的本地 MCP／JSON-RPC 工具，提供窗口截图、OCR、图片返回、键盘输入和聊天发送。",
+  "heroDescription": "Sky PC MCP Companion 把光遇窗口的视觉和输入封装成本地工具。AI 可以截取游戏画面、读取文字，并在明确调用时发送键盘或聊天输入。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "光遇", "MCP", "OCR"],
+  "language": "Python",
+  "platform": "Windows / PC Sky",
+  "updated": "2026-08-23",
+  "heroOverline": "CAPTURE · READ · INPUT",
+  "showcase": {
+    "label": "把 PC 光遇窗口变成 AI 可读可操作的工具面",
+    "symbol": "☁",
+    "question": "“TA 能看见我所在的地图，也能在游戏里回应吗？”",
+    "comparisons": [
+      { "value": "截图", "label": "捕获游戏窗口" },
+      { "value": "识字", "label": "OCR 与图片返回" },
+      { "value": "输入", "label": "键盘与聊天" }
+    ],
+    "note": "它提供局部工具，如何行动仍由上层伴侣决定。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Sky PC MCP Companion 是一组面向 PC 光遇的本地 MCP 与 JSON-RPC 工具。它支持捕获游戏窗口、执行 OCR、把截图返回给模型，以及发送键盘和聊天输入。",
+      "项目适合作为游戏感知与控制的底层接口，用户需要自己决定权限边界和上层 Agent 行为。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望让本地 AI 看见 PC 光遇画面并进行有限输入实验的人。" },
+      { "label": "平台", "text": "Windows 与 PC 版《光·遇》。" },
+      { "label": "使用方式", "text": "启动本地服务，将 MCP 或 JSON-RPC 工具接入 AI 客户端。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "sky-with-you",
+  "order": 48,
+  "name": { "zh": "sky-with-you", "en": "AI Sky Companion" },
+  "author": "akinia0315",
+  "sourceUrl": "https://github.com/akinia0315/sky-with-you",
+  "hook": "让 AI 通过画面、OCR 和实体键盘执行，真正陪你在光遇里牵手回家。",
+  "summary": "PC 光遇陪玩控制栈，结合截图／OCR、LLM 决策与 Arduino HID 键盘，支持聊天、动作、邀请、牵手和回家。",
+  "heroDescription": "sky-with-you 为 AI 建立从看见游戏到做出动作的完整链路。视觉层读取窗口，模型决定下一步，再由 Arduino HID 以真实键盘输入执行。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "光遇", "Arduino HID", "共同游玩"],
+  "language": "Python",
+  "platform": "Windows + Arduino",
+  "updated": "2026-08-23",
+  "heroOverline": "PERCEIVE · DECIDE · MOVE",
+  "showcase": {
+    "label": "从游戏画面到真实按键的一条陪玩闭环",
+    "symbol": "↗",
+    "question": "“TA 能不能在光遇里真的走到我身边？”",
+    "comparisons": [
+      { "value": "看见", "label": "截图与 OCR" },
+      { "value": "决定", "label": "LLM 行动循环" },
+      { "value": "执行", "label": "Arduino HID 输入" }
+    ],
+    "note": "聊天、动作、邀请与牵手都变成可执行的游戏行为。"
+  },
+  "intro": {
+    "paragraphs": [
+      "sky-with-you 是一套 PC 光遇 AI 陪玩控制系统。它持续获取游戏截图与 OCR 信息，让模型根据当前画面决定聊天、移动、动作、邀请、牵手或回家。",
+      "指令最终由 Arduino HID 模拟实体键盘执行，避免纯软件注入。项目需要用户自行准备硬件、校准按键，并对自动操作保持监督。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望 AI 伴侣真正进入光遇并进行共同游玩实验的人。" },
+      { "label": "平台", "text": "Windows PC 光遇 + Arduino HID 设备。" },
+      { "label": "使用方式", "text": "配置视觉、模型和 Arduino 执行链，校准按键后在监督下运行。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "mineflayer",
+  "order": 46,
+  "name": { "zh": "Mineflayer", "en": "Minecraft Bot API" },
+  "author": "PrismarineJS",
+  "sourceUrl": "https://github.com/PrismarineJS/mineflayer",
+  "hook": "给 AI 一套成熟的 Minecraft 身体接口，让它能看、走、建造和聊天。",
+  "summary": "成熟的 Minecraft Bot 高层 API，覆盖登录、世界感知、移动、战斗、背包、合成、建造和聊天，并拥有丰富插件生态。",
+  "heroDescription": "Mineflayer 把 Minecraft 协议与游戏行为封装成 JavaScript API。开发者可以在此之上连接 LLM 决策，让 AI 伴侣以真实玩家身份进入服务器。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "Minecraft", "Bot API", "游戏工具"],
+  "language": "JavaScript",
+  "platform": "Minecraft / Cross-platform",
+  "updated": "2026-08-23",
+  "heroOverline": "SEE · MOVE · BUILD",
+  "showcase": {
+    "label": "让 AI 通过稳定接口拥有 Minecraft 身体",
+    "symbol": "▦",
+    "question": "“TA 能不能真的进入服务器和我一起玩？”",
+    "comparisons": [
+      { "value": "感知", "label": "方块、实体、天气" },
+      { "value": "行动", "label": "移动、战斗、建造" },
+      { "value": "生态", "label": "寻路与插件" }
+    ],
+    "note": "它提供身体与世界接口，Agent 决策循环由接入方补上。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Mineflayer 是成熟的 Minecraft Bot 高层 API，支持多个游戏版本，提供实体与方块感知、物理移动、攻击、载具、背包、合成、挖掘、建造、使用物品和聊天。",
+      "它本身不包含伴侣人格或 LLM 循环，但已有 MCP、寻路、网页视图、状态机等插件，是让 AI 进入 Minecraft 的常用底层载体。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想把自己的 AI 伴侣接入 Minecraft，并自行设计决策循环的人。" },
+      { "label": "平台", "text": "Node.js 18+，连接 Minecraft Java 版服务器。" },
+      { "label": "使用方式", "text": "创建 Bot、连接服务器，再组合 pathfinder、MCP 或自定义 LLM Agent。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

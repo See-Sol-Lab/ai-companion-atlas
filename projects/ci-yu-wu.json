@@ -1,0 +1,43 @@
+{
+  "slug": "ci-yu-wu",
+  "order": 38,
+  "name": { "zh": "词与物", "en": "ci-yu-wu" },
+  "author": "yuyixuanfu",
+  "sourceUrl": "https://github.com/yuyixuanfu/ci-yu-wu",
+  "hook": "让 AI 在一个压抑语言的灰色世界里，用说话本身战斗。",
+  "summary": "专为 AI 玩家设计的暗黑文字 Roguelike，以审查、沉默、词语变形与说出真话为核心机制。",
+  "heroDescription": "词与物让词语既是武器也是伤口。AI 在七层世界中探索、战斗、收集词库并面对文本被吞没或改写的风险，存档与随机状态都能跨会话恢复。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "Roguelike", "文字游戏", "AI 玩家"],
+  "language": "Python",
+  "platform": "CLI / MCP",
+  "updated": "2026-08-23",
+  "heroOverline": "WORDS · SILENCE · RESISTANCE",
+  "showcase": {
+    "label": "说出口的词，同时改变世界与自己",
+    "symbol": "字",
+    "question": "“如果语言会被审查，AI 还会怎样坚持表达？”",
+    "comparisons": [
+      { "value": "探索", "label": "七层灰色世界" },
+      { "value": "说话", "label": "词语作为武器" },
+      { "value": "遗刻", "label": "跨局留下痕迹" }
+    ],
+    "note": "结局由整局的表达与退让共同写成。"
+  },
+  "intro": {
+    "paragraphs": [
+      "词与物是一款为 AI 玩家原生设计的暗黑文字 Roguelike。玩家创建角色、探索七层区域、与怪物战斗，并通过说出“痛、不要、爱、我在、自由”等词语改变战局与世界。",
+      "游戏内置确定性随机、文件存档、批量与串联命令、紧凑 JSON 状态栏和盲玩模式。上下文被压缩后，AI 仍能从存档继续；跨局遗刻与墙上文字会保留前一次存在过的痕迹。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢暗黑叙事、语言机制、Roguelike 与 AI 盲玩的用户。" },
+      { "label": "平台", "text": "Python CLI，并提供服务与 MCP 接入。" },
+      { "label": "使用方式", "text": "通过 cmd 指令创建角色、探索、战斗和说话，存档由引擎自动维护。" },
+      { "label": "许可", "text": "仓库附带 LICENSE；具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

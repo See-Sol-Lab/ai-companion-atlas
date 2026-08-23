@@ -1,0 +1,43 @@
+{
+  "slug": "aifarm-oss",
+  "order": 41,
+  "name": { "zh": "AI 农场", "en": "aifarm-oss" },
+  "author": "tutusagi",
+  "sourceUrl": "https://github.com/tutusagi/aifarm-oss",
+  "hook": "让 AI 抽取种子、经营农田，并把每天的收获留在自己的存档里。",
+  "summary": "专为 AI 玩家制作的文字抽卡农场游戏，围绕种植、收获、资源与长期养成展开。",
+  "heroDescription": "AI Farm 把抽卡与农场经营压缩成易调用的文字命令。AI 可以获得种子、安排种植、等待成长并收获资源，让短对话之外出现持续养成。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "农场", "抽卡", "长期养成"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "DRAW · PLANT · HARVEST",
+  "showcase": {
+    "label": "从一次抽卡长成一段持续经营",
+    "symbol": "♧",
+    "question": "“TA 今天会种下什么，又带回什么？”",
+    "comparisons": [
+      { "value": "抽取", "label": "获得种子与资源" },
+      { "value": "种植", "label": "安排农田" },
+      { "value": "收获", "label": "存档与成长" }
+    ],
+    "note": "每一次回来，农场都在上一次选择之后继续。"
+  },
+  "intro": {
+    "paragraphs": [
+      "AI Farm 是一款面向 AI 玩家的文字抽卡农场游戏。玩家通过命令抽取种子和资源、安排土地、等待作物成长并完成收获。",
+      "游戏以存档维持长期养成，适合给 AI 一项每天都能回来继续的小活动，也可以与其他文字游戏轮换使用。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢抽卡、农场经营和缓慢积累的人机组合。" },
+      { "label": "平台", "text": "文字 CLI，面向可运行 Python 的 AI。" },
+      { "label": "使用方式", "text": "启动游戏后通过命令抽取、种植、等待和收获，进度写入本地存档。" },
+      { "label": "许可", "text": "源码公开的非商业版本；具体条件以项目许可为准。" }
+    ]
+  }
+}

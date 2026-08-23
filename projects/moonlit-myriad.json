@@ -1,0 +1,43 @@
+{
+  "slug": "moonlit-myriad",
+  "order": 44,
+  "name": { "zh": "月幕万象", "en": "Moonlit Myriad" },
+  "author": "xinwithyu",
+  "sourceUrl": "https://github.com/xinwithyu/moonlit-myriad",
+  "hook": "给 AI 一副可复现的牌组，让它在每一轮构筑中决定怎样继续活下去。",
+  "summary": "专为 AI 玩家设计的单文件卡牌肉鸽，包含类似 Balatro 的盲注循环、JSON 状态、可复现种子和持久成就。",
+  "heroDescription": "Moonlit Myriad 把卡牌选择、组合、商店与关卡循环压缩为机器可读状态。相同种子和操作序列能够复现，AI 可以独立规划并积累成就。",
+  "badges": [
+    { "label": "未声明许可", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "卡牌肉鸽", "单文件", "可复现"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "DRAW · BUILD · SURVIVE",
+  "showcase": {
+    "label": "一局能被复现，也能被长期记住的卡牌循环",
+    "symbol": "♠",
+    "question": "“这副牌，TA 会构筑成什么样子？”",
+    "comparisons": [
+      { "value": "抽牌", "label": "机器可读状态" },
+      { "value": "构筑", "label": "组合与商店" },
+      { "value": "推进", "label": "盲注循环与成就" }
+    ],
+    "note": "种子固定时，每次判断都能被完整复盘。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Moonlit Myriad 是一款专为 AI 玩家设计的单文件 Python 卡牌肉鸽。它提供类似 Balatro 的 ante 与盲注循环、机器可读 JSON 状态、可复现种子和持久成就。",
+      "项目适合直接交给能运行代码的 AI，让模型自己做卡牌、商店和路线选择。仓库当前没有声明许可证，因此默认只能阅读和运行公开代码，修改或再分发前需要取得作者许可。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢卡牌构筑、肉鸽循环和可复盘 AI 决策的人。" },
+      { "label": "平台", "text": "单文件 Python CLI，零依赖。" },
+      { "label": "使用方式", "text": "启动游戏后把结构化状态交给 AI，让它逐回合选择卡牌、商店与路线。" },
+      { "label": "许可", "text": "仓库未声明许可证；复用与再分发前需取得作者授权。" }
+    ]
+  }
+}

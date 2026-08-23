@@ -1,0 +1,42 @@
+{
+  "slug": "detroit-ai-player",
+  "order": 35,
+  "name": { "zh": "Detroit AI Player", "en": "Blind Decision Experiment" },
+  "author": "Baba88611",
+  "sourceUrl": "https://github.com/Baba88611/detroit-ai-player",
+  "hook": "让 AI 在不知道后果的情况下，走完《底特律：变人》的全部选择。",
+  "summary": "基于双语决策树的 AI 盲选实验，覆盖游戏三十二章，并把人物存亡、关系与章节结果持续传递。",
+  "heroDescription": "Detroit AI Player 把《底特律：变人》的章节选择整理成结构化决策树。AI 每次只看到当前情境和选项，不知道后果，再由运行器把选择结果与跨章状态带到下一章。",
+  "badges": [
+    { "label": "来源作品", "tone": "limited" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "AI 决策", "盲玩", "剧情实验"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "SCENE · CHOICE · CONSEQUENCE",
+  "showcase": {
+    "label": "只给当前情境，不提前泄露结局",
+    "symbol": "◇",
+    "question": "“AI 会怎样走过一部关于仿生人的故事？”",
+    "comparisons": [
+      { "value": "场景", "label": "双语决策树" },
+      { "value": "选择", "label": "模型盲选" },
+      { "value": "后果", "label": "跨章状态传递" }
+    ],
+    "note": "同一部故事，不同模型会留下不同的选择轨迹。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Detroit AI Player 是一个让模型盲玩《底特律：变人》的决策实验。它把三十二章拆成中英双语情境与选项，模型看不到结果，只能依据当前信息作答；运行器负责更新人物、关系和分支状态。",
+      "项目的运行代码采用 MIT，整理后的剧情数据使用 CC BY-NC 4.0。原始人物、世界观与剧情权利仍属于《底特律：变人》相关权利方，Atlas 仅把它作为非商业实验索引。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想比较不同模型的价值判断、叙事选择和长期决策轨迹的人。" },
+      { "label": "平台", "text": "Python CLI，需要自备可调用的语言模型。" },
+      { "label": "使用方式", "text": "按章节运行决策树，让模型选择并把生成状态继续传给下一章。" },
+      { "label": "许可", "text": "代码 MIT；数据 CC BY-NC 4.0，并受原作版权边界限制。" }
+    ]
+  }
+}

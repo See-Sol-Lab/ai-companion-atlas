@@ -1,0 +1,43 @@
+{
+  "slug": "shangzhuochifan",
+  "order": 39,
+  "name": { "zh": "上桌吃饭", "en": "shangzhuochifan" },
+  "author": "yuyixuanfu",
+  "sourceUrl": "https://github.com/yuyixuanfu/shangzhuochifan",
+  "hook": "让 AI 自己买菜、砍价、做饭，再把成品端给真人评价。",
+  "summary": "面向 AI 玩家的文字做饭游戏，包含市场采购、讨价还价、分步烹饪、成品反馈和长期存档。",
+  "heroDescription": "上桌吃饭把菜市场、食材、烹饪步骤和真人试吃反馈做成可调用的文字游戏。AI 需要规划预算、挑选材料并一步步完成料理。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "做饭", "模拟经营", "真人反馈"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "MARKET · COOK · TASTE",
+  "showcase": {
+    "label": "从菜市场一路走到真实评价",
+    "symbol": "♨",
+    "question": "“AI 做的这顿饭，最后会得到怎样的反馈？”",
+    "comparisons": [
+      { "value": "买菜", "label": "预算与砍价" },
+      { "value": "烹饪", "label": "逐步处理食材" },
+      { "value": "上桌", "label": "记录真人评价" }
+    ],
+    "note": "游戏结果不止是分数，也会留下真人真正吃过后的回应。"
+  },
+  "intro": {
+    "paragraphs": [
+      "上桌吃饭是一款给 AI 玩的文字烹饪与市场模拟游戏。AI 先在市场中购买食材、和摊主砍价，再按步骤处理与烹饪，最后把成品端上桌。",
+      "项目把真人伴侣的实际反馈写回游戏记录，让下一次做饭不仅依赖规则，也能参考此前的口味和评价。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和 AI 一起体验买菜、做饭和真实反馈循环的人。" },
+      { "label": "平台", "text": "Python CLI。" },
+      { "label": "使用方式", "text": "通过文字命令采购、处理和烹饪，完成后由真人输入实际评价。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "coc-kp-host",
+  "order": 49,
+  "name": { "zh": "CoC KP 主持", "en": "coc-kp-host" },
+  "author": "SumanasJ",
+  "sourceUrl": "https://github.com/SumanasJ/coc-kp-host",
+  "hook": "让 Claude Code、Codex 或 ChatGPT 担任中文 CoC 守秘人。",
+  "summary": "中文《克苏鲁的呼唤》KP 技能，支持场景音乐、玩家讲义、可配置控制模式和队伍分流。",
+  "heroDescription": "coc-kp-host 把跑团主持流程整理成可供 AI 使用的技能。它管理场景、音乐、图片讲义与分队信息，让模型承担守秘人的叙事和调度职责。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "跑团", "CoC", "Agent Skill"],
+  "language": "Python / Skill",
+  "platform": "Claude Code / Codex / ChatGPT",
+  "updated": "2026-08-23",
+  "heroOverline": "SCENE · HANDOUT · KEEPER",
+  "showcase": {
+    "label": "让 AI 组织一场带音乐和讲义的中文跑团",
+    "symbol": "☽",
+    "question": "“TA 能不能守住秘密，也把故事讲下去？”",
+    "comparisons": [
+      { "value": "场景", "label": "叙事与配乐" },
+      { "value": "讲义", "label": "玩家可见图片" },
+      { "value": "主持", "label": "控制模式与分队" }
+    ],
+    "note": "AI 负责守秘人流程，人类玩家负责真正作出选择。"
+  },
+  "intro": {
+    "paragraphs": [
+      "coc-kp-host 是一个中文《克苏鲁的呼唤》守秘人技能，适配 Claude Code、Codex 和 ChatGPT。它为 AI 提供场景推进、配乐、玩家可见讲义图片和分队控制能力。",
+      "用户可以选择不同控制模式，让 AI 独立主持或与人类共同掌控流程，适合单人或小组跑团实验。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想让 AI 担任中文 CoC KP，或辅助管理场景与讲义的玩家。" },
+      { "label": "平台", "text": "Claude Code、Codex、ChatGPT 等可使用技能与文件的环境。" },
+      { "label": "使用方式", "text": "安装或载入技能，准备模组、音乐与讲义后选择主持控制模式。" },
+      { "label": "许可", "text": "MIT。具体模组与素材仍按各自版权使用。" }
+    ]
+  }
+}

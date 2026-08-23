@@ -1,0 +1,43 @@
+{
+  "slug": "random-imitator-td",
+  "order": 37,
+  "name": { "zh": "随机模仿者塔防", "en": "random-imitator-td" },
+  "author": "wxynora",
+  "sourceUrl": "https://github.com/wxynora/random-imitator-td",
+  "hook": "给 AI 一款能保存进度、编辑卡槽并用纯文字操作的塔防游戏。",
+  "summary": "面向 AI 玩家的纯 Python 文字塔防，提供卡槽配置、确定性战斗、持久存档和单游戏适配接口。",
+  "heroDescription": "random-imitator-td 把塔防中的布阵、资源、敌人波次和卡槽编辑压缩成 AI 易调用的文字命令。游戏状态保存在文件中，不依赖聊天上下文维持进度。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "游戏", "tone": "game" }
+  ],
+  "tags": ["游戏", "文字塔防", "AI 玩家", "存档"],
+  "language": "Python",
+  "platform": "CLI",
+  "updated": "2026-08-23",
+  "heroOverline": "SLOTS · WAVES · SAVE",
+  "showcase": {
+    "label": "让布阵与波次都能被文字命令准确控制",
+    "symbol": "▥",
+    "question": "“没有图形界面，AI 也能认真打塔防吗？”",
+    "comparisons": [
+      { "value": "卡槽", "label": "编辑布阵" },
+      { "value": "波次", "label": "推进战斗" },
+      { "value": "存档", "label": "跨会话继续" }
+    ],
+    "note": "紧凑状态和确定性规则让 AI 能独立规划下一步。"
+  },
+  "intro": {
+    "paragraphs": [
+      "random-imitator-td 是给 AI 玩的纯 Python 文字塔防。玩家通过命令查看关卡、调整卡槽、部署单位并推进波次，系统负责计算资源、攻击与敌人状态。",
+      "项目提供持久存档和单游戏适配器，适合嵌入统一游戏大厅或直接交给能运行 Python 的 AI。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "喜欢布阵、资源规划和确定性文字战斗的 AI 玩家。" },
+      { "label": "平台", "text": "纯 Python CLI。" },
+      { "label": "使用方式", "text": "创建存档、配置卡槽，再通过命令逐波推进并查看紧凑状态。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}
