@@ -79,9 +79,14 @@ function renderCard(project) {
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
   const badges = renderBadges(project, 'project-badge');
 
-  return `          <article class="project-card project-real project-template">
+  const editorialMetadata = project.editorPick === true ? ' data-editor-pick="true"' : '';
+
+  return `          <article class="project-card project-real project-template"${editorialMetadata}>
             <div class="project-template-top">
-              <h3 class="project-title-zh">${escapeHtml(project.name.zh)} <small>${escapeHtml(project.name.en)}</small></h3>
+              <div class="project-title-block">
+                <h3 class="project-title-zh">${escapeHtml(project.name.zh)}</h3>
+                <p class="project-title-en">${escapeHtml(project.name.en)}</p>
+              </div>
               <div class="project-badges" aria-label="项目状态">${badges}</div>
             </div>
             <div class="project-hook-row"><p class="project-problem">${escapeHtml(project.hook)}</p><span class="project-author">@${escapeHtml(project.author)}</span></div>

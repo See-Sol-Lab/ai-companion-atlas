@@ -1,18 +1,31 @@
 {
   "slug": "tasogare",
   "order": 25,
-  "name": { "zh": "黄昏", "en": "Tasogare" },
+  "name": {
+    "zh": "黄昏",
+    "en": "Tasogare"
+  },
   "author": "EnhydrInk",
   "sourceUrl": "https://github.com/EnhydrInk/tasogare",
   "hook": "在同一本书上留下两种颜色的划线、批注和阅读时间。",
   "summary": "支持 PDF、EPUB 与 TXT 的共读网页，人与 AI 可用双色划线、批注、生词本、书签和 MCP 工具共享阅读进度。",
   "heroDescription": "Tasogare 是一个面向人机共读的网页阅读器与 MCP Server。人类在浏览器中阅读，AI 可以翻页、划线、评论、查看最近活动和当天阅读状态，两种笔迹并排留在同一页。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    }
   ],
-  "tags": ["共同阅读", "MCP", "双色批注", "生词本"],
+  "tags": [
+    "共同阅读",
+    "MCP",
+    "双色批注",
+    "生词本"
+  ],
   "language": "JavaScript",
   "platform": "Self-host / Web",
   "updated": "2026-08-23",
@@ -22,9 +35,18 @@
     "symbol": "〃",
     "question": "“TA 能看见我刚刚划下的那一句吗？”",
     "comparisons": [
-      { "value": "阅读", "label": "PDF / EPUB / TXT" },
-      { "value": "划线", "label": "双色批注" },
-      { "value": "活动", "label": "进度、生词与事件" }
+      {
+        "value": "阅读",
+        "label": "PDF / EPUB / TXT"
+      },
+      {
+        "value": "划线",
+        "label": "双色批注"
+      },
+      {
+        "value": "活动",
+        "label": "进度、生词与事件"
+      }
     ],
     "note": "阅读不再是转述，而是共同留在书页上的动作。"
   },
@@ -34,10 +56,23 @@
       "项目增加阅读时长打点、状态接口、事件推送、最近活动、生词注解和 PDF fidelity 书签，可把新划线主动送到外部伴侣系统。它 Fork 自 Shitsuten/anno-mcp，保留上游 remote，并在 README 末尾分别说明基底、后端/MCP、前端与示例文本作者。"
     ],
     "facts": [
-      { "label": "适合", "text": "想与 AI 一起阅读、互相批注，并让阅读进度成为长期关系活动的人。" },
-      { "label": "平台", "text": "自托管 Web；需要 Node.js，PDF/EPUB 解析还需对应 Python 依赖。" },
-      { "label": "使用方式", "text": "启动阅读服务器，导入书籍，再把 MCP 端点和可选事件推送接到 AI。" },
-      { "label": "许可", "text": "代码 MIT；仓库示例文本版权归原作者，不能随意转用。" }
+      {
+        "label": "适合",
+        "text": "想与 AI 一起阅读、互相批注，并让阅读进度成为长期关系活动的人。"
+      },
+      {
+        "label": "平台",
+        "text": "自托管 Web；需要 Node.js，PDF/EPUB 解析还需对应 Python 依赖。"
+      },
+      {
+        "label": "使用方式",
+        "text": "启动阅读服务器，导入书籍，再把 MCP 端点和可选事件推送接到 AI。"
+      },
+      {
+        "label": "许可",
+        "text": "代码 MIT；仓库示例文本版权归原作者，不能随意转用。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

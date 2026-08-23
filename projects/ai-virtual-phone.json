@@ -34,10 +34,6 @@
     {
       "label": "PC 前端",
       "tone": "desktop"
-    },
-    {
-      "label": "✦ 人工精选",
-      "tone": "pick"
     }
   ],
   "tags": [
@@ -93,5 +89,6 @@
         "text": "AGPL-3.0-only。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }

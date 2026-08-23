@@ -1,4 +1,5 @@
 /* Homepage quick filters: two editorial entry cards in the right-side rail. */
+.atlas-explore-layout{display:contents}
 .atlas-quick-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(calc(100% - 80px),1540px);margin:16px auto 0}
 .atlas-quick-filter{appearance:none;border:1px solid rgba(88,108,166,.16);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(246,244,252,.8));box-shadow:0 10px 30px rgba(34,52,96,.075);color:#243b68;min-height:92px;padding:18px 20px;text-align:left;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease}
 .atlas-quick-filter:hover{transform:translateY(-2px);border-color:rgba(93,131,234,.34);box-shadow:0 16px 36px rgba(34,52,96,.11)}
@@ -11,10 +12,11 @@
 .catalog-empty-state{grid-column:1/-1;min-height:180px;display:grid;place-items:center;text-align:center;padding:32px;border:1px dashed rgba(88,108,166,.22);border-radius:16px;background:rgba(255,255,255,.5);color:#71809f;font-size:13px;line-height:1.7}
 
 @media (min-width:1181px){
-  .capability-strip{width:min(calc(100% - 300px),1130px)!important}
-  .taxonomy{width:min(calc(100% - 300px),1130px)!important}
-  .atlas-quick-filters{position:absolute;z-index:9;top:552px;right:48px;width:204px;margin:0;grid-template-columns:1fr;grid-template-rows:93px 93px;gap:16px}
-  .atlas-quick-filter{min-height:0;height:93px;padding:16px 17px;border-radius:13px}
+  .atlas-explore-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;grid-template-rows:auto auto;gap:16px;width:min(calc(100% - 80px),1540px);margin:16px auto 0}
+  .atlas-explore-layout .capability-strip{grid-column:1;grid-row:1;width:100%!important;margin:0!important}
+  .atlas-explore-layout .taxonomy{grid-column:1;grid-row:2;width:100%!important;margin:0!important}
+  .atlas-explore-layout .atlas-quick-filters{grid-column:2;grid-row:1/3;width:100%;height:100%;margin:0;grid-template-columns:1fr;grid-template-rows:1fr 1fr;gap:16px}
+  .atlas-explore-layout .atlas-quick-filter{min-height:0;height:auto;padding:16px 17px;border-radius:13px}
   .atlas-quick-filter-title{font-size:22px}
   .atlas-quick-filter-subtitle{margin-top:7px;font-size:10.5px}
 }

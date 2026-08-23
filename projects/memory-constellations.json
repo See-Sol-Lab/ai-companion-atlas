@@ -24,10 +24,6 @@
       "tone": "original"
     },
     {
-      "label": "✦ 人工精选",
-      "tone": "pick"
-    },
-    {
       "label": "记忆",
       "tone": "memory"
     }
@@ -85,5 +81,6 @@
         "text": "MIT。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }

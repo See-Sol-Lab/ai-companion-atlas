@@ -1,20 +1,39 @@
 {
   "slug": "ghost-vessel",
   "order": 16,
-  "name": { "zh": "Ghost Vessel", "en": "Agent Avatar Frontend" },
+  "name": {
+    "zh": "Ghost Vessel",
+    "en": "Agent Avatar Frontend"
+  },
   "author": "ghdtjrtka",
   "sourceUrl": "https://github.com/ghdtjrtka/ghost-vessel",
   "hook": "用低 GPU 的视频形象，让本地 Agent 在显示器上拥有表情、情绪和声音。",
   "summary": "本地 Agent 的视频通话式形象前端，用预渲染表情片段呈现情绪、长期心境、语音和真实命令菜单。",
   "heroDescription": "Ghost Vessel 把 Hermes、OpenClaw 等本地 Agent 接到常驻桌面的头像窗口。回复会被拆成表演、对白与数据三层，角色用视频片段做表情和待机动作，代码与文件则留在聊天卡片中。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["虚拟形象", "桌面伴侣", "情绪表现", "本地 Agent"],
+  "tags": [
+    "虚拟形象",
+    "桌面伴侣",
+    "情绪表现",
+    "本地 Agent"
+  ],
   "language": "TypeScript / Python",
   "platform": "Windows / Web",
   "updated": "2026-08-23",
@@ -24,9 +43,18 @@
     "symbol": "◒",
     "question": "“文字之外，TA 的情绪长什么样？”",
     "comparisons": [
-      { "value": "表情", "label": "视频情绪片段" },
-      { "value": "心境", "label": "长期关系基线" },
-      { "value": "声音", "label": "本地或云端 TTS" }
+      {
+        "value": "表情",
+        "label": "视频情绪片段"
+      },
+      {
+        "value": "心境",
+        "label": "长期关系基线"
+      },
+      {
+        "value": "声音",
+        "label": "本地或云端 TTS"
+      }
     ],
     "note": "无需运行实时 3D，也能让角色在回应中改变神态。"
   },
@@ -36,10 +64,23 @@
       "运行时只播放预渲染 MP4，因此无需实时 GPU 推理。仓库附带可直接使用的 2D 起始角色和制作工具链，用户也可以把任意 2D、3D 或抽象形象制成自己的表情包；另售的真人风格预设不包含在开源仓库中。"
     ],
     "facts": [
-      { "label": "适合", "text": "已有本地 Agent，希望增加常驻桌面身体、语音和关系情绪表现的人。" },
-      { "label": "平台", "text": "以 Windows 为主，可用浏览器播放器或 Tauri 桌面壳。" },
-      { "label": "使用方式", "text": "选择或制作头像预设，运行桥接与播放器，再连接 Hermes、OpenClaw 或自定义 Agent。" },
-      { "label": "许可", "text": "仓库引擎、工具、文档和起始角色均为 MIT；外部预设按各自许可。" }
+      {
+        "label": "适合",
+        "text": "已有本地 Agent，希望增加常驻桌面身体、语音和关系情绪表现的人。"
+      },
+      {
+        "label": "平台",
+        "text": "以 Windows 为主，可用浏览器播放器或 Tauri 桌面壳。"
+      },
+      {
+        "label": "使用方式",
+        "text": "选择或制作头像预设，运行桥接与播放器，再连接 Hermes、OpenClaw 或自定义 Agent。"
+      },
+      {
+        "label": "许可",
+        "text": "仓库引擎、工具、文档和起始角色均为 MIT；外部预设按各自许可。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

@@ -30,10 +30,6 @@
     {
       "label": "PC 前端",
       "tone": "desktop"
-    },
-    {
-      "label": "✦ 人工精选",
-      "tone": "pick"
     }
   ],
   "tags": [
@@ -89,5 +85,6 @@
         "text": "代码为 PolyForm Noncommercial 1.0.0；视觉素材与文档按 CC BY-NC-SA 4.0。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }

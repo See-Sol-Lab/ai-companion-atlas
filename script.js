@@ -54,6 +54,7 @@ if (visual && map && !window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const PROJECTS_PER_PAGE = 30;
 const directorySection = document.getElementById('directory');
 const taxonomySection = document.getElementById('taxonomy');
+const capabilityStrip = document.querySelector('.capability-strip');
 const projectGrid = directorySection?.querySelector('.project-grid');
 const projectCards = projectGrid
   ? Array.from(projectGrid.querySelectorAll(':scope > .project-card'))
@@ -105,7 +106,14 @@ if (taxonomySection && directorySection) {
       <span class="atlas-quick-filter-subtitle">高质量 / 有影响力项目</span>
     </button>
   `;
-  taxonomySection.insertAdjacentElement('afterend', quickFilters);
+  if (capabilityStrip) {
+    const exploreLayout = document.createElement('div');
+    exploreLayout.className = 'atlas-explore-layout';
+    capabilityStrip.insertAdjacentElement('beforebegin', exploreLayout);
+    exploreLayout.append(capabilityStrip, taxonomySection, quickFilters);
+  } else {
+    taxonomySection.insertAdjacentElement('afterend', quickFilters);
+  }
 }
 
 if (directorySection && projectGrid && projectCards.length > 0) {

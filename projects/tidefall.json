@@ -22,10 +22,6 @@
     {
       "label": "非商业",
       "tone": "limited"
-    },
-    {
-      "label": "✦ 人工精选",
-      "tone": "pick"
     }
   ],
   "tags": [
@@ -81,5 +77,6 @@
         "text": "PolyForm Noncommercial 1.0.0；分发与部署需保留项目署名。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }

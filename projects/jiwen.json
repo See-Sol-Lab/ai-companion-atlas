@@ -30,10 +30,6 @@
     {
       "label": "原创",
       "tone": "original"
-    },
-    {
-      "label": "✦ 人工精选",
-      "tone": "pick"
     }
   ],
   "tags": [
@@ -89,5 +85,6 @@
         "text": "MIT。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }

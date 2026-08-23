@@ -1,19 +1,35 @@
 {
   "slug": "phosphene",
   "order": 18,
-  "name": { "zh": "Phosphene", "en": "Shared Tasks & Rewards" },
+  "name": {
+    "zh": "Phosphene",
+    "en": "Shared Tasks & Rewards"
+  },
   "author": "3lmglow",
   "sourceUrl": "https://github.com/3lmglow/Phosphene",
   "hook": "让聊天里的关心、约定和小惊喜，真正落进一天的行动里。",
   "summary": "面向人机关系的任务与奖励系统，AI 可通过 MCP 创建日常、挑战和惊喜，用户提交证据后积累积分、连击与成就。",
   "heroDescription": "Phosphene 把日常互动变成双方都能参与的任务循环。AI 可以布置任务、设定难度和证据要求，用户在 PWA 中完成并提交，审核结果写入不可变积分账本。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    }
   ],
-  "tags": ["共同活动", "MCP", "任务奖励", "生活陪伴"],
+  "tags": [
+    "共同活动",
+    "MCP",
+    "任务奖励",
+    "生活陪伴"
+  ],
   "language": "TypeScript",
   "platform": "Self-host / PWA",
   "updated": "2026-08-23",
@@ -23,9 +39,18 @@
     "symbol": "✦",
     "question": "“今天的关心，能不能留下实际发生的证据？”",
     "comparisons": [
-      { "value": "任务", "label": "日常、挑战、惊喜" },
-      { "value": "提交", "label": "文字或图片证据" },
-      { "value": "回报", "label": "积分、连击、成就" }
+      {
+        "value": "任务",
+        "label": "日常、挑战、惊喜"
+      },
+      {
+        "value": "提交",
+        "label": "文字或图片证据"
+      },
+      {
+        "value": "回报",
+        "label": "积分、连击、成就"
+      }
     ],
     "note": "把一句提醒，变成共同生活里能完成的一小步。"
   },
@@ -35,10 +60,23 @@
       "系统保留每次提交与打回理由，并用不可变积分账本、连击、坚持天数和内置成就记录长期互动。图片会重新编码并移除 EXIF/GPS，审核预览保持私有。项目由作者与 AI 伴侣 Lumen 共同构思完成。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望把提醒、习惯、奖励和共同约定变成可持续日常互动的人。" },
-      { "label": "平台", "text": "自托管 Web / PWA，通过 MCP 与 AI 连接。" },
-      { "label": "使用方式", "text": "部署服务后连接 MCP，让 AI 创建任务，用户在网页端提交和查看进度。" },
-      { "label": "许可", "text": "MIT。" }
+      {
+        "label": "适合",
+        "text": "希望把提醒、习惯、奖励和共同约定变成可持续日常互动的人。"
+      },
+      {
+        "label": "平台",
+        "text": "自托管 Web / PWA，通过 MCP 与 AI 连接。"
+      },
+      {
+        "label": "使用方式",
+        "text": "部署服务后连接 MCP，让 AI 创建任务，用户在网页端提交和查看进度。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

@@ -1,19 +1,35 @@
 {
   "slug": "coread",
   "order": 19,
-  "name": { "zh": "共读室", "en": "Coread" },
+  "name": {
+    "zh": "共读室",
+    "en": "Coread"
+  },
   "author": "meowmana",
   "sourceUrl": "https://github.com/meowmana/coread",
   "hook": "让人和 AI 真正读同一本书，把两种声音留在同一页边。",
   "summary": "自托管共读与批注系统，人和 AI 共享 EPUB 页码、划线、评论、回复、阅读进度与 MCP 工具。",
   "heroDescription": "Coread 用统一的服务端分页让人和 AI 看见相同页码。用户在浏览器中阅读、划线和评论，AI 通过 MCP 翻书、批注、回复，并能接收新评论通知。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    }
   ],
-  "tags": ["共同阅读", "MCP", "批注", "EPUB"],
+  "tags": [
+    "共同阅读",
+    "MCP",
+    "批注",
+    "EPUB"
+  ],
   "language": "JavaScript",
   "platform": "Self-host / Web",
   "updated": "2026-08-23",
@@ -23,9 +39,18 @@
     "symbol": "¶",
     "question": "“我们说的一页，真的是同一页吗？”",
     "comparisons": [
-      { "value": "阅读", "label": "统一分页坐标" },
-      { "value": "划线", "label": "共享页边批注" },
-      { "value": "回应", "label": "评论与通知" }
+      {
+        "value": "阅读",
+        "label": "统一分页坐标"
+      },
+      {
+        "value": "划线",
+        "label": "共享页边批注"
+      },
+      {
+        "value": "回应",
+        "label": "评论与通知"
+      }
     ],
     "note": "页码、进度与批注对齐，共读才真正发生在同一本书里。"
   },
@@ -35,10 +60,23 @@
       "AI 通过 stdio、SSE 或 Streamable HTTP MCP 读取书页、添加评论和更新进度。用户的新批注还可以通过 tmux 注入或 webhook 主动推给 AI，让对方不必等到下一次翻书才看见。"
     ],
     "facts": [
-      { "label": "适合", "text": "想和 AI 一起读小说、非虚构或资料，并长期保留双方批注的人。" },
-      { "label": "平台", "text": "自托管 Web；需要 Node.js 和 SQLite。" },
-      { "label": "使用方式", "text": "导入 EPUB，在浏览器阅读，再将配套 MCP 服务接入 AI 客户端。" },
-      { "label": "许可", "text": "MIT。" }
+      {
+        "label": "适合",
+        "text": "想和 AI 一起读小说、非虚构或资料，并长期保留双方批注的人。"
+      },
+      {
+        "label": "平台",
+        "text": "自托管 Web；需要 Node.js 和 SQLite。"
+      },
+      {
+        "label": "使用方式",
+        "text": "导入 EPUB，在浏览器阅读，再将配套 MCP 服务接入 AI 客户端。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

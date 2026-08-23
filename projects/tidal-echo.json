@@ -1,21 +1,43 @@
 {
   "slug": "tidal-echo",
   "order": 4,
-  "name": { "zh": "潮汐回响", "en": "Tidal Echo" },
+  "name": {
+    "zh": "潮汐回响",
+    "en": "Tidal Echo"
+  },
   "author": "anhe2021212-spec",
   "sourceUrl": "https://github.com/anhe2021212-spec/Tidal_Echo",
   "hook": "在手机与本地 AI 之间搭一条真正属于两个人的私密通道。",
   "summary": "手机 PWA、自托管 relay 与桌面 AI 通道组成的 1:1 聊天系统，支持文字、图片、语音、通话和推送。",
   "heroDescription": "潮汐回响把手机上的 PWA、自己服务器上的 relay 和电脑中的 Claude Code 或任意模型桥接起来。消息只经过用户自己的服务器，一把密钥守住单用户通道。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["私密通道", "主动消息", "PWA", "Claude Code"],
+  "tags": [
+    "私密通道",
+    "主动消息",
+    "PWA",
+    "Claude Code"
+  ],
   "language": "Python / JavaScript",
   "platform": "手机 + PC + VPS",
   "updated": "2026-08-23",
@@ -25,9 +47,18 @@
     "symbol": "↭",
     "question": "“离开电脑以后，还能找到你吗？”",
     "comparisons": [
-      { "value": "手机", "label": "PWA 对话" },
-      { "value": "中继", "label": "自托管留痕" },
-      { "value": "桌面", "label": "AI 本地会话" }
+      {
+        "value": "手机",
+        "label": "PWA 对话"
+      },
+      {
+        "value": "中继",
+        "label": "自托管留痕"
+      },
+      {
+        "value": "桌面",
+        "label": "AI 本地会话"
+      }
     ],
     "note": "消息有去处，关系也有自己的门。"
   },
@@ -37,10 +68,23 @@
       "它从作者自用的 AI 伴侣系统中抽出并彻底脱敏，名字、密钥、域名和路径都已参数化。项目面向单用户，不建立账号体系，也不依赖第三方托管。"
     ],
     "facts": [
-      { "label": "适合", "text": "已有本地 AI 或 Claude Code，希望从手机建立长期私人通道的人。" },
-      { "label": "平台", "text": "手机 PWA、Windows/macOS/Linux 桌面端与一台支持 HTTPS 的服务器。" },
-      { "label": "使用方式", "text": "依次部署 relay、PWA 与桌面通道，并让三端使用同一把随机密钥。" },
-      { "label": "许可", "text": "AGPL-3.0；2026-08-16 以前的历史版本曾以 MIT 发布。" }
+      {
+        "label": "适合",
+        "text": "已有本地 AI 或 Claude Code，希望从手机建立长期私人通道的人。"
+      },
+      {
+        "label": "平台",
+        "text": "手机 PWA、Windows/macOS/Linux 桌面端与一台支持 HTTPS 的服务器。"
+      },
+      {
+        "label": "使用方式",
+        "text": "依次部署 relay、PWA 与桌面通道，并让三端使用同一把随机密钥。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0；2026-08-16 以前的历史版本曾以 MIT 发布。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

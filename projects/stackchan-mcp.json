@@ -1,19 +1,35 @@
 {
   "slug": "stackchan-mcp",
   "order": 17,
-  "name": { "zh": "Stack-chan MCP", "en": "Physical Companion Bridge" },
+  "name": {
+    "zh": "Stack-chan MCP",
+    "en": "Physical Companion Bridge"
+  },
   "author": "migratorywhale",
   "sourceUrl": "https://github.com/migratorywhale/stackchan-mcp",
   "hook": "给支持 MCP 的 AI 一具能看、能听、能说、会转头的桌面身体。",
   "summary": "连接 AI 与 Stack-chan 机器人的 MCP 桥，提供语音、摄像头、表情、舵机动作和环境感知工具。",
   "heroDescription": "Stack-chan MCP 把 M5Stack CoreS3 机器人暴露为一组标准 MCP 工具。任何兼容客户端都可以让 AI 拍照、听声音、朗读文字、切换像素表情、点头摇头并读取房间温湿度。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    }
   ],
-  "tags": ["实体伴侣", "MCP", "机器人", "环境感知"],
+  "tags": [
+    "实体伴侣",
+    "MCP",
+    "机器人",
+    "环境感知"
+  ],
   "language": "Python / C++",
   "platform": "M5Stack + PC",
   "updated": "2026-08-23",
@@ -23,9 +39,18 @@
     "symbol": "⚙",
     "question": "“TA 能在房间里真正动一下吗？”",
     "comparisons": [
-      { "value": "看", "label": "相机拍摄" },
-      { "value": "听说", "label": "麦克风与扬声器" },
-      { "value": "动作", "label": "转头、点头、表情" }
+      {
+        "value": "看",
+        "label": "相机拍摄"
+      },
+      {
+        "value": "听说",
+        "label": "麦克风与扬声器"
+      },
+      {
+        "value": "动作",
+        "label": "转头、点头、表情"
+      }
     ],
     "note": "同一组 MCP 工具，把屏幕里的回应带到物理空间。"
   },
@@ -35,10 +60,23 @@
       "项目包含机器人固件、MCP Server、语音桥、表情素材与跨平台部署说明。用户需要 M5Stack CoreS3、Stack-chan 机械组件和一台运行 Python 的电脑；核心机器人不依赖云服务，语音服务可以按需配置。"
     ],
     "facts": [
-      { "label": "适合", "text": "想把现有 MCP 伴侣接到真实桌面机器人，并愿意动手配置硬件的人。" },
-      { "label": "平台", "text": "M5Stack CoreS3 + Stack-chan 机体；主机支持 Windows、macOS 或 Linux。" },
-      { "label": "使用方式", "text": "刷入固件、安装 MCP Server、填写设备地址，再把服务加入 AI 客户端配置。" },
-      { "label": "许可", "text": "MIT；所用硬件、语音服务与第三方组件按各自条款。" }
+      {
+        "label": "适合",
+        "text": "想把现有 MCP 伴侣接到真实桌面机器人，并愿意动手配置硬件的人。"
+      },
+      {
+        "label": "平台",
+        "text": "M5Stack CoreS3 + Stack-chan 机体；主机支持 Windows、macOS 或 Linux。"
+      },
+      {
+        "label": "使用方式",
+        "text": "刷入固件、安装 MCP Server、填写设备地址，再把服务加入 AI 客户端配置。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；所用硬件、语音服务与第三方组件按各自条款。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

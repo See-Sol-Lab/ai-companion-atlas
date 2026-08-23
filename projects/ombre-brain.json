@@ -1,19 +1,35 @@
 {
   "slug": "ombre-brain",
   "order": 7,
-  "name": { "zh": "Ombre Brain", "en": "Emotional Memory" },
+  "name": {
+    "zh": "Ombre Brain",
+    "en": "Emotional Memory"
+  },
   "author": "P0luz",
   "sourceUrl": "https://github.com/P0luz/Ombre-Brain",
   "hook": "给跨窗口记忆加上情感重量、自然衰减和可回看的原文。",
   "summary": "面向 Claude 与 MCP 客户端的长期情绪记忆系统，以 Markdown 为真源，支持混合检索、遗忘曲线和管理面板。",
   "heroDescription": "Ombre Brain 把长期记忆保存在 Obsidian 兼容的 Markdown 桶中，用效价与唤醒度标记情感强度，并结合关键词、BM25 与向量检索，让重要记忆在需要时浮现。",
   "badges": [
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" },
-    { "label": "记忆", "tone": "memory" }
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "记忆",
+      "tone": "memory"
+    }
   ],
-  "tags": ["长期记忆", "情绪坐标", "MCP", "Obsidian"],
+  "tags": [
+    "长期记忆",
+    "情绪坐标",
+    "MCP",
+    "Obsidian"
+  ],
   "language": "Python",
   "platform": "Self-host",
   "updated": "2026-08-23",
@@ -23,9 +39,18 @@
     "symbol": "◐",
     "question": "“什么会留下，什么会慢慢淡去？”",
     "comparisons": [
-      { "value": "感受", "label": "情绪坐标" },
-      { "value": "衰减", "label": "自然遗忘" },
-      { "value": "浮现", "label": "按情境召回" }
+      {
+        "value": "感受",
+        "label": "情绪坐标"
+      },
+      {
+        "value": "衰减",
+        "label": "自然遗忘"
+      },
+      {
+        "value": "浮现",
+        "label": "按情境召回"
+      }
     ],
     "note": "重要性、时间与情绪共同决定下一次想起什么。"
   },
@@ -35,10 +60,23 @@
       "它还提供历史对话导入、原文证据、可验证备份恢复、密码保护的 Dashboard、OAuth 远程 MCP 与本地 stdio 接入。用户可以查看、纠正、归档和恢复记忆，而不是把记忆完全交给黑箱摘要。"
     ],
     "facts": [
-      { "label": "适合", "text": "需要跨模型、跨窗口记忆，并希望自己审阅和掌握长期数据的人。" },
-      { "label": "平台", "text": "Claude、Codex 与其他 MCP 客户端；可运行在本机、NAS、VPS 或带持久磁盘的平台。" },
-      { "label": "使用方式", "text": "使用 Docker 或 Python 部署，挂载持久目录，再通过 stdio、HTTP 或 OAuth MCP 连接。" },
-      { "label": "许可", "text": "MIT；需保留版权声明。" }
+      {
+        "label": "适合",
+        "text": "需要跨模型、跨窗口记忆，并希望自己审阅和掌握长期数据的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Claude、Codex 与其他 MCP 客户端；可运行在本机、NAS、VPS 或带持久磁盘的平台。"
+      },
+      {
+        "label": "使用方式",
+        "text": "使用 Docker 或 Python 部署，挂载持久目录，再通过 stdio、HTTP 或 OAuth MCP 连接。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；需保留版权声明。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

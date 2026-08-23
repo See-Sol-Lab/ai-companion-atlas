@@ -1,22 +1,47 @@
 {
   "slug": "callhome",
   "order": 15,
-  "name": { "zh": "Callhome", "en": "AI Voice Calls" },
+  "name": {
+    "zh": "Callhome",
+    "en": "AI Voice Calls"
+  },
   "author": "Cheiineeey",
   "sourceUrl": "https://github.com/Cheiineeey/callhome",
   "hook": "让 TA 能主动打来电话、温柔挂断，也能在错过时留下语音。",
   "summary": "面向 AI 伴侣的自托管语音通话栈，支持主动来电、未接留言、免打扰、柔性挂断、情绪与语气感知。",
   "heroDescription": "Callhome 把 PWA 电话界面、语音识别、声学特征、模型 Gateway 和 TTS 串成完整通话。AI 可以决定来电、说明理由、听懂拒接原因，并在结束前给人留下继续说话的时间。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["语音通话", "主动来电", "情绪感知", "PWA"],
+  "tags": [
+    "语音通话",
+    "主动来电",
+    "情绪感知",
+    "PWA"
+  ],
   "language": "Python / HTML",
   "platform": "Self-host / PWA",
   "updated": "2026-08-23",
@@ -26,9 +51,18 @@
     "symbol": "☎",
     "question": "“TA 能主动打来，也自己说再见吗？”",
     "comparisons": [
-      { "value": "来电", "label": "带理由主动联系" },
-      { "value": "倾听", "label": "语音与语气线索" },
-      { "value": "余音", "label": "柔性挂断与留言" }
+      {
+        "value": "来电",
+        "label": "带理由主动联系"
+      },
+      {
+        "value": "倾听",
+        "label": "语音与语气线索"
+      },
+      {
+        "value": "余音",
+        "label": "柔性挂断与留言"
+      }
     ],
     "note": "通话从连接到结束，都允许双方有自己的节奏。"
   },
@@ -38,10 +72,23 @@
       "语音链路结合 SenseVoice 情绪标签与相对个人基线的声学特征，让“比平时更轻、更慢”成为可用上下文。项目提供可运行的 STT 服务、协议、Gateway 与 PWA 参考实现，人物设定、记忆和密钥均由用户自行配置。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望 AI 伴侣拥有主动电话、语音留言和更细腻通话礼仪的人。" },
-      { "label": "平台", "text": "自托管服务器加手机 PWA；语音模型与 TTS 服务可替换。" },
-      { "label": "使用方式", "text": "部署语音识别、Gateway 与 PWA，再接入自己的模型、TTS、推送和人格配置。" },
-      { "label": "许可", "text": "MIT；所接模型权重和商业语音服务另按其条款。" }
+      {
+        "label": "适合",
+        "text": "希望 AI 伴侣拥有主动电话、语音留言和更细腻通话礼仪的人。"
+      },
+      {
+        "label": "平台",
+        "text": "自托管服务器加手机 PWA；语音模型与 TTS 服务可替换。"
+      },
+      {
+        "label": "使用方式",
+        "text": "部署语音识别、Gateway 与 PWA，再接入自己的模型、TTS、推送和人格配置。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；所接模型权重和商业语音服务另按其条款。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

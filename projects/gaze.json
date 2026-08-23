@@ -1,19 +1,35 @@
 {
   "slug": "gaze",
   "order": 20,
-  "name": { "zh": "凝视", "en": "gaze" },
+  "name": {
+    "zh": "凝视",
+    "en": "gaze"
+  },
   "author": "jiangxi1129",
   "sourceUrl": "https://github.com/jiangxi1129/gaze",
   "hook": "给 AI 借一只受控的眼睛，让它知道你们正在一起看什么。",
   "summary": "Windows 本地屏幕感知工具，捕获指定窗口并生成视觉旁白、OCR 与字幕流，写入 AI 可读取的实时上下文。",
   "heroDescription": "gaze 用一个本地 Python 循环捕获用户明确选择的窗口，再把画面概述、OCR 文字和音频字幕写成可供 AI 读取的滚动上下文。它强调窄范围捕获、隐私黑名单和防止 AI 看见自身界面的递归保护。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    }
   ],
-  "tags": ["屏幕感知", "视觉", "OCR", "共同观看"],
+  "tags": [
+    "屏幕感知",
+    "视觉",
+    "OCR",
+    "共同观看"
+  ],
   "language": "Python",
   "platform": "Windows",
   "updated": "2026-08-23",
@@ -23,9 +39,18 @@
     "symbol": "◉",
     "question": "“我说‘快看这段’，TA 知道是哪一段吗？”",
     "comparisons": [
-      { "value": "画面", "label": "视觉旁白" },
-      { "value": "文字", "label": "窗口 OCR" },
-      { "value": "对白", "label": "音频字幕流" }
+      {
+        "value": "画面",
+        "label": "视觉旁白"
+      },
+      {
+        "value": "文字",
+        "label": "窗口 OCR"
+      },
+      {
+        "value": "对白",
+        "label": "音频字幕流"
+      }
     ],
     "note": "它没有接管桌面，只为共同观看打开一条窄门。"
   },
@@ -35,10 +60,23 @@
       "项目默认采用窄门策略：找不到目标窗口就跳过，不自动截取整个桌面；银行、聊天、密码管理器和邮件等窗口进入黑名单，同时独立阻止 AI 客户端与浮窗被递归捕获。用户也可以完全离线记录，不向外部服务发送画面。"
     ],
     "facts": [
-      { "label": "适合", "text": "想让 AI 陪自己看视频、读屏、玩游戏，同时保留明确视觉边界的人。" },
-      { "label": "平台", "text": "Windows 10/11；纯 Python，最小模式无需 Node 或浏览器自动化。" },
-      { "label": "使用方式", "text": "选择窗口和视觉服务，按需要开启 OCR、音频字幕与记忆推送。" },
-      { "label": "许可", "text": "MIT。" }
+      {
+        "label": "适合",
+        "text": "想让 AI 陪自己看视频、读屏、玩游戏，同时保留明确视觉边界的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows 10/11；纯 Python，最小模式无需 Node 或浏览器自动化。"
+      },
+      {
+        "label": "使用方式",
+        "text": "选择窗口和视觉服务，按需要开启 OCR、音频字幕与记忆推送。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT。"
+      }
     ]
-  }
+  },
+  "editorPick": true
 }

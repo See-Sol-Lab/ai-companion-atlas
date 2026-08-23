@@ -34,10 +34,6 @@
     {
       "label": "PC 前端",
       "tone": "desktop"
-    },
-    {
-      "label": "✦ 人工精选",
-      "tone": "pick"
     }
   ],
   "tags": [
@@ -93,5 +89,6 @@
         "text": "PolyForm Noncommercial 1.0.0，允许非商业使用、研究、修改与分发。"
       }
     ]
-  }
+  },
+  "editorPick": true
 }
