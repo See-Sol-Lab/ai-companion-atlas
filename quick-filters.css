@@ -20,6 +20,7 @@
 .atlas-quick-filter[data-catalog-filter="editor-pick"].is-active{border-color:rgba(139,78,99,.5);box-shadow:0 0 0 2px rgba(173,111,121,.14),0 16px 38px rgba(104,63,69,.18)}
 .atlas-quick-filter{position:relative}
 .catalog-empty-state{grid-column:1/-1;min-height:180px;display:grid;place-items:center;text-align:center;padding:32px;border:1px dashed rgba(88,108,166,.22);border-radius:16px;background:rgba(255,255,255,.5);color:#71809f;font-size:13px;line-height:1.7}
+.catalog-empty-state[hidden]{display:none}
 
 @media (min-width:1181px){
   .atlas-explore-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;grid-template-rows:auto auto;gap:16px;width:min(calc(100% - 80px),1540px);margin:16px auto 0}

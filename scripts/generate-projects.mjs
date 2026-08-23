@@ -79,6 +79,9 @@ function renderBadges(badges, classPrefix) {
 
 function renderCard(project) {
   const tags = project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
+  const secondaryName = /[\u3400-\u9fff]/u.test(project.name.zh)
+    ? `\n                <p class="project-title-en">${escapeHtml(project.name.en)}</p>`
+    : '';
   const dateLabel = project.dateLabel ?? (project.sourceUrl.startsWith('https://github.com/') ? '更新' : '核验');
   const meta = [project.language, project.platform, `${dateLabel} ${project.updated}`]
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
@@ -107,8 +110,7 @@ function renderCard(project) {
   return `          <article class="project-card project-real project-template"${editorialMetadata}>
             <div class="project-template-top">
               <div class="project-title-block">
-                <h3 class="project-title-zh">${escapeHtml(project.name.zh)}</h3>
-                <p class="project-title-en">${escapeHtml(project.name.en)}</p>
+                <h3 class="project-title-zh">${escapeHtml(project.name.zh)}</h3>${secondaryName}
               </div>
               <div class="project-badges" aria-label="项目状态">${badges}</div>
             </div>

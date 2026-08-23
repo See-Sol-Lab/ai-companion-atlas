@@ -22,6 +22,7 @@ if (menuToggle && mainNav) {
   const scrollTargets = new Map([
     ['#taxonomy', 'center'],
     ['#guides', 'start'],
+    ['#submit', 'start'],
     ['#about', 'start']
   ]);
 

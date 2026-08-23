@@ -13,7 +13,7 @@
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }
   ],
-  "tags": ["18+", "BLE 逆向", "Web Bluetooth", "MCP"],
+  "tags": ["18+", "Toy", "BLE 逆向", "Web Bluetooth", "MCP"],
   "language": "Python / JavaScript",
   "platform": "Android / PC / Railway",
   "updated":"2026-06-15",
