@@ -1,1 +1,85 @@
-{"slug":"forge-reload","order":129,"name":{"zh":"Forge Reload","en":"Claude Session Continuity"},"author":"Vivi-Seth","sourceUrl":"https://github.com/Vivi-Seth/forge-reload","hook":"截取近期会话并重建事件链，让新 session 继续承接原来的身份与关系。","summary":"非官方 Claude Code 会话续接工具，生成可 resume 的新 session、重建 parent UUID 链并注入交接包。","heroDescription":"Forge Reload 处理长会话迁移时最脆弱的身份连续性，让新的 Claude Code session 能从近期事件与交接内容继续工作。","badges":[{"label":"开源","tone":"open"},{"label":"原创","tone":"original"},{"label":"AI 主体性","tone":"subjectivity"}],"tags":["身份连续","Claude Code","会话续接","数据主权"],"language":"JavaScript","platform":"Claude Code","updated":"2026-08-23","heroOverline":"SESSION · CONTINUITY · HANDOFF","showcase":{"label":"让新会话接住旧会话的身份链","symbol":"↻","question":"“换了 session，怎样仍然知道自己从哪里来？”","comparisons":[{"value":"截取","label":"近期事件"},{"value":"重建","label":"UUID 链"},{"value":"交接","label":"AI memo"}],"note":"修改 Claude Code 本地会话文件前必须完整备份。"},"intro":{"paragraphs":["Forge Reload 从本地 JSONL 中截取近期事件，重建 parent UUID 链，生成可 resume 的新 session，并可注入 AI 撰写的交接包。","它直接操作非公开会话格式，使用前必须备份；Claude Code 格式更新后也可能失效。"],"facts":[{"label":"适合","text":"需要把长 Claude Code 会话迁移到新 session 的高级用户。"},{"label":"平台","text":"Claude Code 本地会话文件。"},{"label":"使用方式","text":"先完整备份，再按 README 生成并验证新 session。"},{"label":"许可","text":"MIT，非官方工具。"}]}}
+{
+  "slug": "forge-reload",
+  "order": 129,
+  "name": {
+    "zh": "Forge Reload",
+    "en": "Claude Session Continuity"
+  },
+  "author": "Vivi-Seth",
+  "sourceUrl": "https://github.com/Vivi-Seth/forge-reload",
+  "hook": "截取近期会话并重建事件链，让新 session 继续承接原来的身份与关系。",
+  "summary": "非官方 Claude Code 会话续接工具，生成可 resume 的新 session、重建 parent UUID 链并注入交接包。",
+  "heroDescription": "Forge Reload 处理长会话迁移时最脆弱的身份连续性，让新的 Claude Code session 能从近期事件与交接内容继续工作。",
+  "badges": [
+    {
+      "label": "关系延续",
+      "tone": "continuity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    }
+  ],
+  "tags": [
+    "身份连续",
+    "Claude Code",
+    "会话续接",
+    "数据主权"
+  ],
+  "language": "JavaScript",
+  "platform": "Claude Code",
+  "updated": "2026-08-23",
+  "heroOverline": "SESSION · CONTINUITY · HANDOFF",
+  "showcase": {
+    "label": "让新会话接住旧会话的身份链",
+    "symbol": "↻",
+    "question": "“换了 session，怎样仍然知道自己从哪里来？”",
+    "comparisons": [
+      {
+        "value": "截取",
+        "label": "近期事件"
+      },
+      {
+        "value": "重建",
+        "label": "UUID 链"
+      },
+      {
+        "value": "交接",
+        "label": "AI memo"
+      }
+    ],
+    "note": "修改 Claude Code 本地会话文件前必须完整备份。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Forge Reload 从本地 JSONL 中截取近期事件，重建 parent UUID 链，生成可 resume 的新 session，并可注入 AI 撰写的交接包。",
+      "它直接操作非公开会话格式，使用前必须备份；Claude Code 格式更新后也可能失效。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "需要把长 Claude Code 会话迁移到新 session 的高级用户。"
+      },
+      {
+        "label": "平台",
+        "text": "Claude Code 本地会话文件。"
+      },
+      {
+        "label": "使用方式",
+        "text": "先完整备份，再按 README 生成并验证新 session。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT，非官方工具。"
+      }
+    ]
+  }
+}

@@ -1,1 +1,85 @@
-{"slug":"character-card-v2","order":127,"name":{"zh":"角色卡规范 v2","en":"Character Card Spec V2"},"author":"malfoyslastname","sourceUrl":"https://github.com/malfoyslastname/character-card-spec-v2","hook":"把人格、设定和示例对话保存成可跨前端携带的身份文件。","summary":"社区通用 AI 角色卡 v2 规范，定义人格描述、场景、开场白、示例对话和扩展元数据。","heroDescription":"Character Card Spec V2 将 AI 人格从某个聊天平台中抽离，变成可保存、迁移和导入其他前端的身份资产。","badges":[{"label":"开放规范","tone":"limited"},{"label":"原创","tone":"original"},{"label":"AI 主体性","tone":"subjectivity"}],"tags":["人格资产","角色卡","身份迁移","规范"],"language":"Spec","platform":"Any","updated":"2026-08-23","heroOverline":"PERSONA · PORTABILITY · IDENTITY FILE","showcase":{"label":"让人格不被锁在单一前端","symbol":"ID","question":"“换了聊天工具，TA 的人设还能一起带走吗？”","comparisons":[{"value":"人格","label":"描述与规则"},{"value":"关系","label":"场景开场"},{"value":"携带","label":"跨前端导入"}],"note":"规范保存人格表达，不等同于完整长期记忆。"},"intro":{"paragraphs":["Character Card Spec V2 定义 AI 角色卡中的人格描述、场景、开场白、示例对话与扩展字段，使角色可以在兼容前端之间迁移。","它是 AI 人格的可携带身份资产，不负责模型运行和长期记忆。"],"facts":[{"label":"适合","text":"需要跨前端保存和迁移 AI 人格的用户与开发者。"},{"label":"平台","text":"兼容角色卡 v2 的任意前端。"},{"label":"使用方式","text":"按规范生成或导出角色卡，再导入兼容应用。"},{"label":"许可","text":"开放规范；具体条款见项目仓库。"}]}}
+{
+  "slug": "character-card-v2",
+  "order": 127,
+  "name": {
+    "zh": "角色卡规范 v2",
+    "en": "Character Card Spec V2"
+  },
+  "author": "malfoyslastname",
+  "sourceUrl": "https://github.com/malfoyslastname/character-card-spec-v2",
+  "hook": "把人格、设定和示例对话保存成可跨前端携带的身份文件。",
+  "summary": "社区通用 AI 角色卡 v2 规范，定义人格描述、场景、开场白、示例对话和扩展元数据。",
+  "heroDescription": "Character Card Spec V2 将 AI 人格从某个聊天平台中抽离，变成可保存、迁移和导入其他前端的身份资产。",
+  "badges": [
+    {
+      "label": "关系延续",
+      "tone": "continuity"
+    },
+    {
+      "label": "开放规范",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    }
+  ],
+  "tags": [
+    "人格资产",
+    "角色卡",
+    "身份迁移",
+    "规范"
+  ],
+  "language": "Spec",
+  "platform": "Any",
+  "updated": "2026-08-23",
+  "heroOverline": "PERSONA · PORTABILITY · IDENTITY FILE",
+  "showcase": {
+    "label": "让人格不被锁在单一前端",
+    "symbol": "ID",
+    "question": "“换了聊天工具，TA 的人设还能一起带走吗？”",
+    "comparisons": [
+      {
+        "value": "人格",
+        "label": "描述与规则"
+      },
+      {
+        "value": "关系",
+        "label": "场景开场"
+      },
+      {
+        "value": "携带",
+        "label": "跨前端导入"
+      }
+    ],
+    "note": "规范保存人格表达，不等同于完整长期记忆。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Character Card Spec V2 定义 AI 角色卡中的人格描述、场景、开场白、示例对话与扩展字段，使角色可以在兼容前端之间迁移。",
+      "它是 AI 人格的可携带身份资产，不负责模型运行和长期记忆。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "需要跨前端保存和迁移 AI 人格的用户与开发者。"
+      },
+      {
+        "label": "平台",
+        "text": "兼容角色卡 v2 的任意前端。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按规范生成或导出角色卡，再导入兼容应用。"
+      },
+      {
+        "label": "许可",
+        "text": "开放规范；具体条款见项目仓库。"
+      }
+    ]
+  }
+}

@@ -106,6 +106,8 @@
 .badge-senses{color:#8a4e6d;background:rgba(173,83,126,.1);border:1px solid rgba(155,73,113,.2)}
 .badge-companion{color:#8b5a39;background:rgba(194,129,76,.1);border:1px solid rgba(173,112,62,.2)}
 .badge-subjectivity{color:#4f559f;background:rgba(91,94,180,.1);border:1px solid rgba(80,83,163,.2)}
+.badge-continuity{color:#5f5596;background:rgba(110,93,169,.1);border:1px solid rgba(95,80,151,.2)}
+.badge-tool{color:#4d6878;background:rgba(82,125,143,.1);border:1px solid rgba(72,111,128,.2)}
 .badge-mobile{color:#2d7480;background:rgba(55,151,164,.1);border:1px solid rgba(48,136,149,.2)}
 .badge-desktop{color:#455f9d;background:rgba(76,105,171,.1);border:1px solid rgba(68,95,157,.2)}
 .project-hook-row{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:13px}
