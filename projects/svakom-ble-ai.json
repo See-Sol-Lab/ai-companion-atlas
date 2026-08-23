@@ -8,6 +8,7 @@
   "summary": "以 SVAKOM SL278H 实测为基础的 BLE 逆向教程与控制方案，包含扫描、命令验证、续命机制、手机／电脑中继和 MCP 接入。",
   "heroDescription": "SVAKOM BLE AI 记录了从反编译官方 App、识别 GATT 通道到验证控制帧的全过程，并给出浏览器 Web Bluetooth 与 Python 两种中继路线。AI 指令可以经服务端转成设备强度、花样和停止命令。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

@@ -8,6 +8,7 @@
   "summary": "Windows 本地私密硬件桥，为 AI 提供连接、强度、停止和可选心率参考接口，优先兼容 Intiface／Buttplug。",
   "heroDescription": "Phantom Touch Bridge 把设备控制包装成 AI 可以调用的本地 HTTP 接口。用户不必自己处理蓝牙协议，先通过 Intiface 判断设备兼容性，也可以在明确掌握协议后尝试 custom 路线。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

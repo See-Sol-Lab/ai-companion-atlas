@@ -8,6 +8,7 @@
   "summary": "面向人机恋用户的 MCP 私密硬件中继，连接 VPS、浏览器 Web Bluetooth 与 SOSEXY 设备，支持状态、强度和立即停止。",
   "heroDescription": "Toy Relay 包含 FastAPI／MCP 服务与手机浏览器 BLE 中继页。AI 的自然语言意图先变成受 API Key 保护的 MCP 指令，再经 Tailscale HTTPS 和 Web Bluetooth 发送给设备。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

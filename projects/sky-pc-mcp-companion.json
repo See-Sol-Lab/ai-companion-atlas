@@ -8,6 +8,7 @@
   "summary": "面向 PC《光·遇》的本地 MCP／JSON-RPC 工具，提供窗口截图、OCR、图片返回、键盘输入和聊天发送。",
   "heroDescription": "Sky PC MCP Companion 把光遇窗口的视觉和输入封装成本地工具。AI 可以截取游戏画面、读取文字，并在明确调用时发送键盘或聊天输入。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "游戏", "tone": "game" }

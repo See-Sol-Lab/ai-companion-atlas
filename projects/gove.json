@@ -1,0 +1,13 @@
+{
+  "slug": "gove", "order": 96,
+  "name": { "zh": "Gove", "en": "Male TTS Voice Model" },
+  "author": "OmniDimen", "sourceUrl": "https://github.com/OmniDimen/Gove",
+  "hook": "为 GPT-SoVITS 提供一套可直接使用的多语言男声音色。",
+  "summary": "基于 GPT-SoVITS 的多语言男声 TTS 模型与示例，用于中文、英文和日文语音合成。",
+  "heroDescription": "Gove 不是完整 TTS 引擎，而是一套放入 GPT-SoVITS 环境使用的男声音色模型，为伴侣补上具体可辨认的声音。",
+  "badges": [{ "label": "模型权重", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["声音", "男声", "GPT-SoVITS", "多语言"], "language": "Model Weights", "platform": "GPT-SoVITS", "updated": "2026-08-23",
+  "heroOverline": "VOICE MODEL · MALE TIMBRE · MULTILINGUAL",
+  "showcase": { "label": "把语音引擎变成具体声线", "symbol": "G", "question": "“有了 TTS 引擎，伴侣具体用什么声音？”", "comparisons": [{ "value": "中文", "label": "主要语言" }, { "value": "英文", "label": "跨语种" }, { "value": "日文", "label": "多语言" }], "note": "音色模型需要放入 GPT-SoVITS 环境才能说话。" },
+  "intro": { "paragraphs": ["Gove 提供基于 GPT-SoVITS 的多语言男声音色模型，可用于中文、英文和日文文本转语音。仓库包含模型说明和使用示例。", "它需要现成 GPT-SoVITS 环境，不单独承担训练或推理框架。仓库当前未给出清晰许可证，使用和再分发权重前需向项目页面确认。"], "facts": [{ "label": "适合", "text": "已经部署 GPT-SoVITS，并需要现成多语言男声音色的人。" }, { "label": "平台", "text": "GPT-SoVITS 推理环境。" }, { "label": "使用方式", "text": "下载模型权重并按 README 放入 GPT-SoVITS 后进行推理。" }, { "label": "许可", "text": "模型权重公开；仓库当前未声明清晰许可证。" }] }
+}

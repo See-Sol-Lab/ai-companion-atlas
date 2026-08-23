@@ -1,0 +1,13 @@
+{
+  "slug": "cosyvoice", "order": 93,
+  "name": { "zh": "CosyVoice", "en": "Multilingual Voice Generation" },
+  "author": "QwenAudio", "sourceUrl": "https://github.com/QwenAudio/CosyVoice",
+  "hook": "让伴侣用多语言、跨语言和可控情绪的声音自然说话。",
+  "summary": "多语言大规模语音生成模型，覆盖零样本音色、跨语言合成、指令控制、流式推理、训练和部署。",
+  "heroDescription": "CosyVoice 提供从模型到流式服务的完整语音生成栈，适合为伴侣构建低延迟、多语言的声音器官。",
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["声音", "TTS", "流式语音", "多语言"], "language": "Python", "platform": "Self-host / GPU", "updated": "2026-08-23",
+  "heroOverline": "VOICE · STREAMING · CONTROL",
+  "showcase": { "label": "一套可训练、可部署的声音器官", "symbol": "≈", "question": "“声音怎样兼顾自然度、语言和实时响应？”", "comparisons": [{ "value": "音色", "label": "零样本复刻" }, { "value": "语言", "label": "多语与跨语" }, { "value": "实时", "label": "流式合成" }], "note": "从研究模型到在线推理服务都在同一套工程中。" },
+  "intro": { "paragraphs": ["CosyVoice 支持多语言和跨语言语音生成、零样本音色复刻、指令式语音控制与流式输出，并提供训练、推理和部署工具。", "伴侣系统可将它部署为本地或服务器 TTS 后端，用于通话、语音消息和朗读等持续声音输出。"], "facts": [{ "label": "适合", "text": "需要多语言、低延迟和可训练 TTS 后端的伴侣项目。" }, { "label": "平台", "text": "Python 与 GPU 自托管环境。" }, { "label": "使用方式", "text": "下载预训练模型，运行 WebUI、推理脚本或服务接口。" }, { "label": "许可", "text": "Apache-2.0。" }] }
+}

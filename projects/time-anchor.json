@@ -11,6 +11,7 @@
   "summary": "给 AI 一只表，让真实时间间隔参与下一次回应。它关心的是“间隔感”，不是机械报时。",
   "heroDescription": "给 AI 一只表，让真实时间间隔参与下一次回应。它关心的不是机械报时，而是让“十秒后回来”和“四小时后回来”不再被当成同一件事。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" }

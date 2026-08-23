@@ -8,6 +8,7 @@
   "summary": "AI 人格情感驱力 sidecar，追踪十六个心理维度，并根据对话、睡眠和日历事件维护快情绪与慢心境。",
   "heroDescription": "Drivesoid 作为本地 HTTP sidecar 接收对话事件，用快情绪、慢心境、习惯化和负面偏差模拟长期情感余波，再输出可注入模型的状态上下文。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "记忆 / 人格", "tone": "memory" },

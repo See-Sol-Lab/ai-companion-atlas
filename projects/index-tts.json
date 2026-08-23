@@ -1,0 +1,13 @@
+{
+  "slug": "index-tts", "order": 94,
+  "name": { "zh": "IndexTTS", "en": "Controllable Zero-shot TTS" },
+  "author": "index-tts", "sourceUrl": "https://github.com/index-tts/index-tts",
+  "hook": "用零样本音色和细粒度控制，为伴侣生成稳定、高质量的中文声音。",
+  "summary": "工业级可控零样本 TTS 系统，支持参考音色、情绪与韵律控制、长文本和高效推理。",
+  "heroDescription": "IndexTTS 面向可控、高效语音合成，为伴侣的中文说话、朗读和情绪表达提供成熟声音后端。",
+  "badges": [{ "label": "模型许可", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["声音", "TTS", "零样本", "情绪控制"], "language": "Python", "platform": "Self-host / GPU", "updated": "2026-08-23",
+  "heroOverline": "ZERO-SHOT · CONTROL · EFFICIENT TTS",
+  "showcase": { "label": "把音色与说话方式分开控制", "symbol": "声", "question": "“同一种声音，怎样表达不同情绪与节奏？”", "comparisons": [{ "value": "音色", "label": "参考语音" }, { "value": "情绪", "label": "表达控制" }, { "value": "节奏", "label": "韵律与长文" }], "note": "适合需要稳定中文合成与精细控制的声音器官。" },
+  "intro": { "paragraphs": ["IndexTTS 是可控零样本语音合成系统，使用参考音频复刻音色，并提供情绪、韵律和长文本生成能力，面向高质量与高效率部署。", "它可以作为伴侣的中文语音后端，但项目使用 bilibili Model Use License Agreement，部署和再分发前应阅读许可与免责声明。"], "facts": [{ "label": "适合", "text": "重视中文自然度、音色复刻和表达控制的语音系统。" }, { "label": "平台", "text": "Python 与 GPU 自托管环境。" }, { "label": "使用方式", "text": "下载模型并启动推理或 WebUI，提供参考音频和待合成文本。" }, { "label": "许可", "text": "bilibili Model Use License Agreement。" }] }
+}

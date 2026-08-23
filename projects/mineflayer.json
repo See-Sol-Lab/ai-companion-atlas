@@ -8,6 +8,7 @@
   "summary": "成熟的 Minecraft Bot 高层 API，覆盖登录、世界感知、移动、战斗、背包、合成、建造和聊天，并拥有丰富插件生态。",
   "heroDescription": "Mineflayer 把 Minecraft 协议与游戏行为封装成 JavaScript API。开发者可以在此之上连接 LLM 决策，让 AI 伴侣以真实玩家身份进入服务器。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "游戏", "tone": "game" }

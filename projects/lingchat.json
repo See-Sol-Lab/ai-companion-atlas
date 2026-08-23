@@ -8,6 +8,7 @@
   "summary": "Windows AI Galgame 伴侣前端，支持永久记忆、情绪表情、桌宠、屏幕感知、语音、日程和互动剧情。",
   "heroDescription": "LingChat 把角色立绘、情绪动作、语音、剧情和桌宠融进 Windows 聊天软件，让伴侣既能在主界面交流，也能停留在桌面。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "PC 前端", "tone": "desktop" }

@@ -8,6 +8,7 @@
   "summary": "Android AI Agent 平台，连接云端或本地模型，提供工具调用、设备自动化、长期记忆、角色体系与完整开发环境。",
   "heroDescription": "Operit 把 AI 对话与 Android 系统能力、文件、浏览器、终端和项目工作区连接起来。它既能作为多角色聊天客户端，也能让 Agent 在授权后完成实际设备操作和开发任务。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" },

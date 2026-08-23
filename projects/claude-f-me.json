@@ -8,6 +8,7 @@
   "summary": "面向 Claude Code 与其他 MCP 客户端的私密硬件插件，支持 Intiface 设备、模拟器、主遥控器、视频、游戏、音频与生物反馈模式。",
   "heroDescription": "claude-f-me 把自然语言、MCP 工具、响应式网页控制台和 Buttplug／Intiface 设备连接成一个进程。没有硬件时也可用内置模拟器完整体验和配置。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

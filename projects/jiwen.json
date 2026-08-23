@@ -8,6 +8,7 @@
   "summary": "零依赖的角色主动意识引擎，用五个连续数值模拟连接需求、骄傲、情绪、唤醒度与沉浸状态。",
   "heroDescription": "积温是一个约 500 行的 JavaScript 状态引擎。它不写回复、不存记忆、不调用模型，只根据时间和事件推进角色状态，在达到阈值时输出联系、观察或自我调节信号。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" },

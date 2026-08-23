@@ -8,6 +8,7 @@
   "summary": "原生 iOS 语音伴侣，集成动画角色、免手唤醒、多家 AI 与语音服务，并把对话和密钥留在本机。",
   "heroDescription": "Scowld 把文字聊天、语音输入、TTS、视觉上下文和 VRM 动画角色装进一款原生 iOS 应用。用户自备模型与语音服务密钥，可以保存历史对话、切换角色并用唤醒词开始交谈。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "手机前端", "tone": "mobile" },

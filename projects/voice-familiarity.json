@@ -1,0 +1,13 @@
+{
+  "slug": "voice-familiarity", "order": 87,
+  "name": { "zh": "声音熟悉度", "en": "voice-familiarity" },
+  "author": "akinia0315", "sourceUrl": "https://github.com/akinia0315/voice-familiarity",
+  "hook": "让伴侣分辨正在说话的是主人、熟人还是未知者。",
+  "summary": "本地小范围说话人识别组件，为主人和少量熟人建立声纹档案，并输出关系上下文。",
+  "heroDescription": "voice-familiarity 为家用伴侣机器提供小范围、同意式说话人识别，让同一句话能接上正确的人际关系和记忆。",
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["听觉", "说话人识别", "本地隐私", "关系上下文"], "language": "Python", "platform": "Self-host / Edge", "updated": "2026-08-23",
+  "heroOverline": "VOICE IDENTITY · FAMILIARITY · CONTEXT",
+  "showcase": { "label": "听见声音背后是谁", "symbol": "◎", "question": "“伴侣怎样知道现在是谁在对它说话？”", "comparisons": [{ "value": "主人", "label": "主要关系" }, { "value": "熟人", "label": "少量档案" }, { "value": "未知", "label": "保留不确定" }], "note": "识别结果用于聊天语境，不承担安全认证。" },
+  "intro": { "paragraphs": ["voice-familiarity 在本地为一位主人和少量经同意的熟人建立声纹 embedding，返回 matched、likely、unknown 或 ambiguous，供对话模型选择称呼、关系和记忆。", "它不负责语音转写，也不能用于登录、门锁、支付、监控或陌生人检索。任何识别失败都不应阻断普通对话。"], "facts": [{ "label": "适合", "text": "家庭伴侣设备和少量固定关系人的语音场景。" }, { "label": "平台", "text": "本地 Python 组件，模型后端可替换。" }, { "label": "使用方式", "text": "经同意录入少量声纹，将识别结果作为对话上下文而非认证结论。" }, { "label": "许可", "text": "Apache-2.0。" }] }
+}

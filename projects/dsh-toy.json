@@ -8,6 +8,7 @@
   "summary": "DSH 私密硬件插件，自动在原生蓝牙、Intiface 与分享链接协议之间选择，并强制执行强度、时长与停止边界。",
   "heroDescription": "dsh-toy 会先询问品牌和型号，再为已知或未知硬件选择发现与连接路线。用户不必自己挑协议，插件也不会对未知设备盲写蓝牙特征。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

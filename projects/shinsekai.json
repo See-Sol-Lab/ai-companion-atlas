@@ -8,6 +8,7 @@
   "summary": "桌面 AI 视觉小说与剧情 RPG 前端，支持角色演出、语音、记忆、插件、视觉和工具扩展。",
   "heroDescription": "Shinsekai 用本地桌面前端承接 Galgame、乙女和剧情 RPG 式对话，让角色对白与立绘、情绪和语音同步演出。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "PC 前端", "tone": "desktop" }

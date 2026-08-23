@@ -8,6 +8,7 @@
   "summary": "Windows 本地屏幕感知工具，捕获指定窗口并生成视觉旁白、OCR 与字幕流，写入 AI 可读取的实时上下文。",
   "heroDescription": "gaze 用一个本地 Python 循环捕获用户明确选择的窗口，再把画面概述、OCR 文字和音频字幕写成可供 AI 读取的滚动上下文。它强调窄范围捕获、隐私黑名单和防止 AI 看见自身界面的递归保护。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" }

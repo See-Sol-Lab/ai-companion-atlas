@@ -8,6 +8,7 @@
   "summary": "连接 AI 与 Stack-chan 机器人的 MCP 桥，提供语音、摄像头、表情、舵机动作和环境感知工具。",
   "heroDescription": "Stack-chan MCP 把 M5Stack CoreS3 机器人暴露为一组标准 MCP 工具。任何兼容客户端都可以让 AI 拍照、听声音、朗读文字、切换像素表情、点头摇头并读取房间温湿度。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "✦ 人工精选", "tone": "pick" }

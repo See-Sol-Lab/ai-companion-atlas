@@ -8,6 +8,7 @@
   "summary": "本地 Agent 的视频通话式形象前端，用预渲染表情片段呈现情绪、长期心境、语音和真实命令菜单。",
   "heroDescription": "Ghost Vessel 把 Hermes、OpenClaw 等本地 Agent 接到常驻桌面的头像窗口。回复会被拆成表演、对白与数据三层，角色用视频片段做表情和待机动作，代码与文件则留在聊天卡片中。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "PC 前端", "tone": "desktop" },

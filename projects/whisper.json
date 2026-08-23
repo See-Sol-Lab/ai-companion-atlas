@@ -1,0 +1,13 @@
+{
+  "slug": "whisper", "order": 82,
+  "name": { "zh": "Whisper", "en": "Speech Recognition Model" },
+  "author": "OpenAI", "sourceUrl": "https://github.com/openai/whisper",
+  "hook": "把人类说出的声音转成文字，让伴侣真正听见多种语言。",
+  "summary": "通用多语言语音识别模型，支持语音转写、语言识别、语音翻译与语音活动检测。",
+  "heroDescription": "Whisper 用统一的多任务模型处理多语言语音识别、翻译和语言判断，是许多本地伴侣听觉系统的基础耳朵。",
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["听觉", "ASR", "多语言", "语音翻译"], "language": "Python", "platform": "Cross-platform", "updated": "2026-08-23",
+  "heroOverline": "HEARING · TRANSCRIPTION · LANGUAGE",
+  "showcase": { "label": "为文字模型增加基础听觉", "symbol": "耳", "question": "“声音怎样变成伴侣能理解的语言？”", "comparisons": [{ "value": "转写", "label": "语音变文字" }, { "value": "识别", "label": "判断语言" }, { "value": "翻译", "label": "跨语种理解" }], "note": "它负责听清内容，语气与说话人可再接其他器官。" },
+  "intro": { "paragraphs": ["Whisper 是通用语音识别模型，可处理多语言转写、语音翻译、语言识别与语音活动检测。模型按 tiny、base、small、medium、large 和 turbo 等尺寸提供速度与精度选择。", "项目提供命令行和 Python 调用方式，需要安装 ffmpeg。对伴侣系统而言，它通常承担把麦克风或语音消息转换成文字上下文的基础听觉层。"], "facts": [{ "label": "适合", "text": "需要本地或自托管语音转写、语言识别与翻译的伴侣系统。" }, { "label": "平台", "text": "Python 运行环境，可使用 CPU 或 GPU。" }, { "label": "使用方式", "text": "安装 openai-whisper 与 ffmpeg，选择模型后转写音频文件或接入实时管线。" }, { "label": "许可", "text": "代码与模型权重均为 MIT。" }] }
+}

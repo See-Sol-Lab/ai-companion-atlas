@@ -8,6 +8,7 @@
   "summary": "PC 光遇陪玩控制栈，结合截图／OCR、LLM 决策与 Arduino HID 键盘，支持聊天、动作、邀请、牵手和回家。",
   "heroDescription": "sky-with-you 为 AI 建立从看见游戏到做出动作的完整链路。视觉层读取窗口，模型决定下一步，再由 Arduino HID 以真实键盘输入执行。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "游戏", "tone": "game" }

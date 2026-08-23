@@ -1,0 +1,13 @@
+{
+  "slug": "sensevoice", "order": 86,
+  "name": { "zh": "SenseVoice", "en": "Speech Understanding Model" },
+  "author": "QwenAudio", "sourceUrl": "https://github.com/QwenAudio/SenseVoice",
+  "hook": "让伴侣听见文字之外的语言、情绪和环境声音。",
+  "summary": "多语言语音理解模型，支持 ASR、语种识别、语音情绪识别和音频事件检测。",
+  "heroDescription": "SenseVoice 把转写、语言、情绪与音频事件放进同一个听觉模型，让伴侣获得比纯文字更丰富的声音上下文。",
+  "badges": [{ "label": "源码公开", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["听觉", "情绪识别", "音频事件", "多语言"], "language": "Python", "platform": "Self-host / Edge", "updated": "2026-08-23",
+  "heroOverline": "SPEECH · EMOTION · AUDIO EVENTS",
+  "showcase": { "label": "听懂话语，也听懂声音里的状态", "symbol": "♪", "question": "“同一句话的情绪和环境，能一起被听见吗？”", "comparisons": [{ "value": "内容", "label": "语音识别" }, { "value": "情绪", "label": "声音状态" }, { "value": "环境", "label": "音频事件" }], "note": "文字只是听觉结果的一层。" },
+  "intro": { "paragraphs": ["SenseVoiceSmall 面向中文、粤语、英语、日语和韩语，联合提供语音识别、语种识别、情绪识别和音频事件检测。", "它适合把通话或语音消息转成同时含文字、情绪和环境标签的上下文，再交给伴侣判断回应方式。"], "facts": [{ "label": "适合", "text": "希望让 AI 同时理解语音内容、情绪和声音事件的人。" }, { "label": "平台", "text": "Python 自托管，可接入 FunASR 等推理环境。" }, { "label": "使用方式", "text": "下载模型权重，按 README 运行推理或接入现有语音服务。" }, { "label": "许可", "text": "源码与模型按仓库 LICENSE 和模型条款使用。" }] }
+}

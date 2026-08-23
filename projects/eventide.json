@@ -8,6 +8,7 @@
   "summary": "面向 AI 伴侣的生理状态内核，用周期、身体数值、短时事件、梦境与互动结算生成隐藏状态上下文。",
   "heroDescription": "Eventide 维护六阶段身体周期、七项连续数值和十八类短时事件。宿主在每轮对话前推进状态，并把生成的 ephemeral state 放入模型上下文，让表达延续真实时间与互动结果。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "18+", "tone": "adult" }

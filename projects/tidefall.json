@@ -8,6 +8,7 @@
   "summary": "运行在 Supabase 上的伴侣身体状态系统，用周期、数值、事件、关键词触发和可视化面板持续维护状态。",
   "heroDescription": "Tidefall 用 PostgreSQL、pg_cron 和数据库 Trigger 让六阶段周期、七项身体数值和短时事件自动运行。它不需要额外后端，浏览器面板可以直接查看曲线、周期和事件历史。",
   "badges": [
+    { "label": "五感与器官", "tone": "senses" },
     { "label": "非商业", "tone": "limited" },
     { "label": "✦ 人工精选", "tone": "pick" }
   ],

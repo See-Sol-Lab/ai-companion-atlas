@@ -1,0 +1,13 @@
+{
+  "slug": "whale-listen", "order": 89,
+  "name": { "zh": "鲸听", "en": "whale-listen" },
+  "author": "migratorywhale", "sourceUrl": "https://github.com/migratorywhale/whale-listen",
+  "hook": "把歌曲转成音符、节奏、力度和和弦结构，让 AI 真正读懂音乐。",
+  "summary": "将 MP3、WAV、FLAC 转为类似 MIDI 的结构化 JSON，提取音高、时序、力度、密度、和弦与静默。",
+  "heroDescription": "whale-listen 为文字模型制作一双理解音乐结构的耳朵，让歌曲不再只剩标题、歌词或用户描述。",
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["听觉", "音乐理解", "音符结构", "JSON"], "language": "Python", "platform": "CLI / Cross-platform", "updated": "2026-08-23",
+  "heroOverline": "MUSIC · PITCH · STRUCTURE",
+  "showcase": { "label": "给 AI 一双理解音乐结构的耳朵", "symbol": "♫", "question": "“没有歌词的音乐，AI 怎样真正听见？”", "comparisons": [{ "value": "音高", "label": "旋律走势" }, { "value": "节奏", "label": "时序与力度" }, { "value": "结构", "label": "和弦与静默" }], "note": "它看不见音色的全部颜色，但能看见音乐的骨架。" },
+  "intro": { "paragraphs": ["whale-listen 将常见音频文件分析为机器可读 JSON，包含音符音高、开始时间、时值、力度、密度图、音高曲线、和弦与静默结构。", "伴侣可以用这些数据讨论旋律变化、节奏密度和段落结构，或把一起听过的音乐转成可保存、可比较的共同材料。"], "facts": [{ "label": "适合", "text": "希望 AI 理解纯音乐、旋律和节奏结构的共听场景。" }, { "label": "平台", "text": "Python CLI，支持常见桌面系统。" }, { "label": "使用方式", "text": "输入 MP3、WAV 或 FLAC，生成结构化 JSON 交给模型读取。" }, { "label": "许可", "text": "MIT。" }] }
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "ears", "order": 88,
+  "name": { "zh": "ears", "en": "Voice Tone Analysis" },
+  "author": "eveacla11", "sourceUrl": "https://github.com/eveacla11/ears",
+  "hook": "让伴侣听见音高、音量、停顿和颤动背后的真实语气。",
+  "summary": "面向 AI 伴侣的语气分析工具，将声学特征与用户个人基线比较，生成相对情绪线索。",
+  "heroDescription": "ears 不止转写人说了什么，还把声音相对平时的变化交给伴侣，让低声、迟疑、强撑和撒娇不再丢失。",
+  "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" }],
+  "tags": ["听觉", "语气", "情绪线索", "个人基线"], "language": "Python", "platform": "Self-host / Web", "updated": "2026-08-23",
+  "heroOverline": "TONE · BASELINE · EMOTIONAL HEARING",
+  "showcase": { "label": "听懂字面之下的语气", "symbol": "∿", "question": "“‘我没事’到底是平静，还是在强撑？”", "comparisons": [{ "value": "音高", "label": "比平时高低" }, { "value": "节奏", "label": "停顿与语速" }, { "value": "颤动", "label": "声音稳定度" }], "note": "关键不是绝对标签，而是这个人此刻偏离自己的程度。" },
+  "intro": { "paragraphs": ["ears 提取音高、能量、停顿、语速和颤动等声学特征，并与用户自己的历史基线比较，把“比平时更轻、更慢、停顿更多”等线索绑定到当前消息。", "它为伴侣补上文字转写遗漏的语气层，适合和 Whisper 等 STT 组合使用；分析结果是关系上下文，不是医疗或心理诊断。"], "facts": [{ "label": "适合", "text": "希望伴侣理解熟悉用户的相对语气变化的人。" }, { "label": "平台", "text": "Python 服务与 Web 配置界面。" }, { "label": "使用方式", "text": "接入语音输入并积累个人基线，再把声学摘要随文字一起交给模型。" }, { "label": "许可", "text": "MIT。" }] }
+}
