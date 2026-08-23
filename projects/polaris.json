@@ -1,19 +1,43 @@
 {
   "slug": "polaris",
   "order": 61,
-  "name": { "zh": "Polaris", "en": "Local-first AI Workspace" },
+  "name": {
+    "zh": "Polaris",
+    "en": "Local-first AI Workspace"
+  },
   "author": "Aevella",
   "sourceUrl": "https://github.com/Aevella/polaris-local-first",
   "hook": "把长期对话、协作者人格和项目资料放进一个本地优先工作空间。",
   "summary": "跨平台 AI 工作空间，支持长会话、多人格协作者、资料收藏、工具调用、附件和可迁移备份。",
   "heroDescription": "Polaris 用同一套产品运行时覆盖 Web、iOS、Android 与桌面端，把聊天、协作者、项目资料和工具执行组织成可读、可追溯的长期工作空间。",
   "badges": [
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["本地优先", "长期对话", "多人格", "跨平台"],
+  "tags": [
+    "本地优先",
+    "长期对话",
+    "多人格",
+    "跨平台"
+  ],
   "language": "TypeScript",
   "platform": "Web / iOS / Android / Desktop",
   "updated": "2026-08-23",
@@ -23,9 +47,18 @@
     "symbol": "✦",
     "question": "“对话之外的资料和关系放在哪里？”",
     "comparisons": [
-      { "value": "对话", "label": "长期会话" },
-      { "value": "伙伴", "label": "协作者人格" },
-      { "value": "收藏", "label": "项目与资料" }
+      {
+        "value": "对话",
+        "label": "长期会话"
+      },
+      {
+        "value": "伙伴",
+        "label": "协作者人格"
+      },
+      {
+        "value": "收藏",
+        "label": "项目与资料"
+      }
     ],
     "note": "上下文不再只是一条不断变长的聊天记录。"
   },
@@ -35,10 +68,22 @@
       "项目采用本地优先的数据层：原生 iOS 与 Android 使用 SQLite，Web 和自托管浏览器版本使用 IndexedDB，并提供桌面宿主。数据边界和迁移路径在界面中保持可见，方便长期使用与备份。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望把伴侣、长期对话和项目协作放进同一工作空间的人。" },
-      { "label": "平台", "text": "Web、iOS、Android 与桌面端。" },
-      { "label": "使用方式", "text": "按 README 部署 Web/自托管版本，或构建对应的原生与桌面壳。" },
-      { "label": "许可", "text": "AGPL-3.0-only。" }
+      {
+        "label": "适合",
+        "text": "希望把伴侣、长期对话和项目协作放进同一工作空间的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Web、iOS、Android 与桌面端。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按 README 部署 Web/自托管版本，或构建对应的原生与桌面壳。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0-only。"
+      }
     ]
   }
 }

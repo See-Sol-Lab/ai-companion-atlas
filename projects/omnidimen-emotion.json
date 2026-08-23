@@ -9,8 +9,7 @@
   "heroDescription": "OmniDimen Emotion 面向情绪识别和富情感文本生成，提供 4B、7B、14B 等尺寸以及 FP16 与量化 GGUF，方便在边缘设备上部署。",
   "badges": [
     { "label": "五感与器官", "tone": "senses" },
-    { "label": "模型权重", "tone": "limited" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    { "label": "模型权重", "tone": "limited" }
   ],
   "tags": ["记忆", "情绪模型", "本地模型", "GGUF"],
   "language": "Model",

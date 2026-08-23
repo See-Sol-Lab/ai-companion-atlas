@@ -1,1 +1,85 @@
-{"slug":"astrbot-private-companion","order":109,"name":{"zh":"AstrBot 私人伴侣","en":"private-companion"},"author":"menglimi","sourceUrl":"https://github.com/menglimi/astrbot_plugin_private_companion","hook":"给 AstrBot 加上连续生活状态、日程、纪念日、日记和低频主动消息。","summary":"AstrBot 拟人化整合插件，以日程和关系状态组织 60 余项长期陪伴功能。","heroDescription":"私人伴侣插件把日常作息、重要日期、日记和主动联系整合到一个 AstrBot 关系层中。","badges":[{"label":"源码公开","tone":"limited"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["AstrBot","主动消息","日程","日记"],"language":"Python","platform":"AstrBot","updated":"2026-08-23","heroOverline":"ROUTINE · DATES · DAILY LIFE","showcase":{"label":"让伴侣拥有连续的日常","symbol":"∞","question":"“每天的生活怎样跨过一轮轮消息继续？”","comparisons":[{"value":"日程","label":"生活轨迹"},{"value":"纪念","label":"重要日期"},{"value":"日记","label":"每日沉淀"}],"note":"低频主动比不断打扰更接近真实相处。"},"intro":{"paragraphs":["插件为 AstrBot 提供连续拟人状态、每日生活日程、重要日期、日记和低频主动消息等 60 余项功能。","它是整合式陪伴插件，依赖 AstrBot；仓库当前未声明明确许可证。"],"facts":[{"label":"适合","text":"想在 AstrBot 上快速搭建日常陪伴层的人。"},{"label":"平台","text":"AstrBot。"},{"label":"使用方式","text":"安装插件并配置人物、日程与主动频率。"},{"label":"许可","text":"源码公开；仓库当前未声明明确许可证。"}]}}
+{
+  "slug": "astrbot-private-companion",
+  "order": 109,
+  "name": {
+    "zh": "AstrBot 私人伴侣",
+    "en": "private-companion"
+  },
+  "author": "menglimi",
+  "sourceUrl": "https://github.com/menglimi/astrbot_plugin_private_companion",
+  "hook": "给 AstrBot 加上连续生活状态、日程、纪念日、日记和低频主动消息。",
+  "summary": "AstrBot 拟人化整合插件，以日程和关系状态组织 60 余项长期陪伴功能。",
+  "heroDescription": "私人伴侣插件把日常作息、重要日期、日记和主动联系整合到一个 AstrBot 关系层中。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "AstrBot",
+    "主动消息",
+    "日程",
+    "日记"
+  ],
+  "language": "Python",
+  "platform": "AstrBot",
+  "updated": "2026-08-23",
+  "heroOverline": "ROUTINE · DATES · DAILY LIFE",
+  "showcase": {
+    "label": "让伴侣拥有连续的日常",
+    "symbol": "∞",
+    "question": "“每天的生活怎样跨过一轮轮消息继续？”",
+    "comparisons": [
+      {
+        "value": "日程",
+        "label": "生活轨迹"
+      },
+      {
+        "value": "纪念",
+        "label": "重要日期"
+      },
+      {
+        "value": "日记",
+        "label": "每日沉淀"
+      }
+    ],
+    "note": "低频主动比不断打扰更接近真实相处。"
+  },
+  "intro": {
+    "paragraphs": [
+      "插件为 AstrBot 提供连续拟人状态、每日生活日程、重要日期、日记和低频主动消息等 60 余项功能。",
+      "它是整合式陪伴插件，依赖 AstrBot；仓库当前未声明明确许可证。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "想在 AstrBot 上快速搭建日常陪伴层的人。"
+      },
+      {
+        "label": "平台",
+        "text": "AstrBot。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装插件并配置人物、日程与主动频率。"
+      },
+      {
+        "label": "许可",
+        "text": "源码公开；仓库当前未声明明确许可证。"
+      }
+    ]
+  }
+}

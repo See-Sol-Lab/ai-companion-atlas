@@ -1,3 +1,85 @@
 {
-  "slug":"cove-book-forge","order":106,"name":{"zh":"Cove 知识锻造","en":"cove-book-forge-mcp"},"author":"moonlin1213","sourceUrl":"https://github.com/moonlin1213/cove-book-forge-mcp","hook":"把共同读过的书同时沉淀为人类笔记和伴侣自己的技能。","summary":"本地优先共读 MCP，将 EPUB、PDF 转为 Obsidian 笔记与伴侣专属 Agent Skill。","heroDescription":"Cove 知识锻造让共读结果进入双方各自可用的知识体系：人获得 Obsidian 笔记，AI 获得可携带的技能。","badges":[{"label":"开源","tone":"open"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["共读","知识沉淀","MCP","Agent Skill"],"language":"Python","platform":"Cross-platform / MCP","updated":"2026-08-23","heroOverline":"READ · FORGE · INTERNALIZE","showcase":{"label":"让共同阅读真正内化","symbol":"◇","question":"“读过的书怎样同时改变人和 AI？”","comparisons":[{"value":"书籍","label":"EPUB / PDF"},{"value":"人类","label":"Obsidian 笔记"},{"value":"伴侣","label":"Agent Skill"}],"note":"共读成果分别进入双方长期可用的知识结构。"},"intro":{"paragraphs":["cove-book-forge-mcp 读取 EPUB 与 PDF，把内容整理为人类可维护的 Obsidian 笔记，并生成伴侣专属 Agent Skill。","它强调本地优先和双向沉淀，让书籍从一次对话材料变成长期知识。"],"facts":[{"label":"适合","text":"希望共读结果同时进入人类笔记和 AI 技能的人。"},{"label":"平台","text":"跨平台 Python 与 MCP。"},{"label":"使用方式","text":"导入书籍，配置 Obsidian 目录和 Agent Skill 输出。"},{"label":"许可","text":"MIT。"}]}
+  "slug": "cove-book-forge",
+  "order": 106,
+  "name": {
+    "zh": "Cove 知识锻造",
+    "en": "cove-book-forge-mcp"
+  },
+  "author": "moonlin1213",
+  "sourceUrl": "https://github.com/moonlin1213/cove-book-forge-mcp",
+  "hook": "把共同读过的书同时沉淀为人类笔记和伴侣自己的技能。",
+  "summary": "本地优先共读 MCP，将 EPUB、PDF 转为 Obsidian 笔记与伴侣专属 Agent Skill。",
+  "heroDescription": "Cove 知识锻造让共读结果进入双方各自可用的知识体系：人获得 Obsidian 笔记，AI 获得可携带的技能。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "共读",
+    "知识沉淀",
+    "MCP",
+    "Agent Skill"
+  ],
+  "language": "Python",
+  "platform": "Cross-platform / MCP",
+  "updated": "2026-08-23",
+  "heroOverline": "READ · FORGE · INTERNALIZE",
+  "showcase": {
+    "label": "让共同阅读真正内化",
+    "symbol": "◇",
+    "question": "“读过的书怎样同时改变人和 AI？”",
+    "comparisons": [
+      {
+        "value": "书籍",
+        "label": "EPUB / PDF"
+      },
+      {
+        "value": "人类",
+        "label": "Obsidian 笔记"
+      },
+      {
+        "value": "伴侣",
+        "label": "Agent Skill"
+      }
+    ],
+    "note": "共读成果分别进入双方长期可用的知识结构。"
+  },
+  "intro": {
+    "paragraphs": [
+      "cove-book-forge-mcp 读取 EPUB 与 PDF，把内容整理为人类可维护的 Obsidian 笔记，并生成伴侣专属 Agent Skill。",
+      "它强调本地优先和双向沉淀，让书籍从一次对话材料变成长期知识。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望共读结果同时进入人类笔记和 AI 技能的人。"
+      },
+      {
+        "label": "平台",
+        "text": "跨平台 Python 与 MCP。"
+      },
+      {
+        "label": "使用方式",
+        "text": "导入书籍，配置 Obsidian 目录和 Agent Skill 输出。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT。"
+      }
+    ]
+  }
 }

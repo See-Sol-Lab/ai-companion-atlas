@@ -1,19 +1,43 @@
 {
   "slug": "shinsekai",
   "order": 77,
-  "name": { "zh": "新世界", "en": "Shinsekai" },
+  "name": {
+    "zh": "新世界",
+    "en": "Shinsekai"
+  },
   "author": "RachelForster",
   "sourceUrl": "https://github.com/RachelForster/Shinsekai",
   "hook": "让大模型驱动角色对白、立绘与情绪，搭出本地运行的视觉小说陪伴舞台。",
   "summary": "桌面 AI 视觉小说与剧情 RPG 前端，支持角色演出、语音、记忆、插件、视觉和工具扩展。",
   "heroDescription": "Shinsekai 用本地桌面前端承接 Galgame、乙女和剧情 RPG 式对话，让角色对白与立绘、情绪和语音同步演出。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "源码公开", "tone": "limited" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["视觉小说", "剧情 RPG", "语音", "插件"],
+  "tags": [
+    "视觉小说",
+    "剧情 RPG",
+    "语音",
+    "插件"
+  ],
   "language": "Python / TypeScript",
   "platform": "Windows / macOS",
   "updated": "2026-08-23",
@@ -23,9 +47,18 @@
     "symbol": "幕",
     "question": "“模型生成的对白，怎样真正成为一场演出？”",
     "comparisons": [
-      { "value": "对白", "label": "人设驱动" },
-      { "value": "立绘", "label": "情绪联动" },
-      { "value": "扩展", "label": "语音视觉工具" }
+      {
+        "value": "对白",
+        "label": "人设驱动"
+      },
+      {
+        "value": "立绘",
+        "label": "情绪联动"
+      },
+      {
+        "value": "扩展",
+        "label": "语音视觉工具"
+      }
     ],
     "note": "聊天窗口专注演出，复杂能力留在本地设置和插件层。"
   },
@@ -35,10 +68,22 @@
       "项目支持本地设置和源码构建，提供 Windows 与 macOS 安装路径。它属于源码可见项目，允许查看和本地自用，但未经书面许可不得再分发、发布安装包或商业使用。"
     ],
     "facts": [
-      { "label": "适合", "text": "想制作或体验 AI 驱动视觉小说与角色剧情的人。" },
-      { "label": "平台", "text": "Windows 与 macOS 桌面环境。" },
-      { "label": "使用方式", "text": "按 README 安装桌面端，在 Settings 中配置模型与可选扩展。" },
-      { "label": "许可", "text": "源码可见；仅允许查看、本地构建自用和公开 fork 讨论，禁止未经授权再分发与商用。" }
+      {
+        "label": "适合",
+        "text": "想制作或体验 AI 驱动视觉小说与角色剧情的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows 与 macOS 桌面环境。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按 README 安装桌面端，在 Settings 中配置模型与可选扩展。"
+      },
+      {
+        "label": "许可",
+        "text": "源码可见；仅允许查看、本地构建自用和公开 fork 讨论，禁止未经授权再分发与商用。"
+      }
     ]
   }
 }

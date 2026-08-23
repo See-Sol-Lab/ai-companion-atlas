@@ -1,21 +1,51 @@
 {
   "slug": "ai-virtual-phone",
   "order": 13,
-  "name": { "zh": "AI 虚拟手机", "en": "AI Virtual Phone" },
+  "name": {
+    "zh": "AI 虚拟手机",
+    "en": "AI Virtual Phone"
+  },
   "author": "xiaolongbao0709",
   "sourceUrl": "https://github.com/xiaolongbao0709/ai-virtual-phone",
   "hook": "把聊天、朋友圈、剧情和共同活动装进一部可以自己搭建的虚拟手机。",
   "summary": "浏览器中的完整 AI 虚拟手机，支持多角色社交、长期关系、剧情创作、应用市场、游戏、多媒体与 PWA 安装。",
   "heroDescription": "AI Virtual Phone 用 Next.js 模拟一部完整手机，让用户创建角色、私聊、群聊、看朋友圈、写日记、跑剧情、玩游戏和安装自定义应用。所有模型服务由用户自行配置。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    }
   ],
-  "tags": ["虚拟手机", "角色社交", "共同活动", "PWA"],
+  "tags": [
+    "虚拟手机",
+    "角色社交",
+    "共同活动",
+    "PWA"
+  ],
   "language": "TypeScript",
   "platform": "Web / PWA",
   "updated": "2026-08-23",
@@ -25,9 +55,18 @@
     "symbol": "▤",
     "question": "“关系能不能生活在聊天框之外？”",
     "comparisons": [
-      { "value": "聊天", "label": "私聊与群聊" },
-      { "value": "动态", "label": "朋友圈与日记" },
-      { "value": "世界", "label": "剧情、游戏与 3D" }
+      {
+        "value": "聊天",
+        "label": "私聊与群聊"
+      },
+      {
+        "value": "动态",
+        "label": "朋友圈与日记"
+      },
+      {
+        "value": "世界",
+        "label": "剧情、游戏与 3D"
+      }
     ],
     "note": "从一条消息，扩展成一整套可共同探索的手机生活。"
   },
@@ -37,10 +76,22 @@
       "项目还包含应用市场 SDK、游戏大厅、生图、语音、音乐、3D 世界和主题美化。用户自备 LLM 与可选多媒体服务的 API Key；开启自托管模式后无需账号和激活码即可在本机使用。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望用虚拟手机承载多角色关系、社交动态、剧情和共同游戏的人。" },
-      { "label": "平台", "text": "现代浏览器与 PWA；本地或 Netlify/Vercel 部署。" },
-      { "label": "使用方式", "text": "启动项目、开启 self-hosted 模式，在设置中添加模型并创建或导入角色卡。" },
-      { "label": "许可", "text": "AGPL-3.0-only。" }
+      {
+        "label": "适合",
+        "text": "希望用虚拟手机承载多角色关系、社交动态、剧情和共同游戏的人。"
+      },
+      {
+        "label": "平台",
+        "text": "现代浏览器与 PWA；本地或 Netlify/Vercel 部署。"
+      },
+      {
+        "label": "使用方式",
+        "text": "启动项目、开启 self-hosted 模式，在设置中添加模型并创建或导入角色卡。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0-only。"
+      }
     ]
   }
 }

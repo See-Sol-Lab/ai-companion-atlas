@@ -1,19 +1,43 @@
 {
   "slug": "whale-phone",
   "order": 69,
-  "name": { "zh": "玄鲸小手机", "en": "Whale-LLT" },
+  "name": {
+    "zh": "玄鲸小手机",
+    "en": "Whale-LLT"
+  },
   "author": "whale-Yd00",
   "sourceUrl": "https://github.com/whale-Yd00/freeapp",
   "hook": "把聊天、朋友圈、语音和共同娱乐装进一部本地优先的拟真手机。",
   "summary": "面向角色扮演与情感陪伴的 Android 拟真手机前端，支持多模型、私聊群聊、朋友圈、语音、记忆与共听。",
   "heroDescription": "玄鲸小手机用 Web 技术和 Capacitor 构建移动端陪伴应用，把常见社交与共同生活模块整合进一套可自行配置模型的本地前端。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    }
   ],
-  "tags": ["Android", "虚拟手机", "角色扮演", "本地优先"],
+  "tags": [
+    "Android",
+    "虚拟手机",
+    "角色扮演",
+    "本地优先"
+  ],
   "language": "HTML / JavaScript",
   "platform": "Android",
   "updated": "2026-08-23",
@@ -23,9 +47,18 @@
     "symbol": "▤",
     "question": "“除了聊天，还能共享哪些手机里的日常？”",
     "comparisons": [
-      { "value": "消息", "label": "私聊与群聊" },
-      { "value": "动态", "label": "朋友圈与论坛" },
-      { "value": "共听", "label": "音乐与语音" }
+      {
+        "value": "消息",
+        "label": "私聊与群聊"
+      },
+      {
+        "value": "动态",
+        "label": "朋友圈与论坛"
+      },
+      {
+        "value": "共听",
+        "label": "音乐与语音"
+      }
     ],
     "note": "用户自己提供模型服务，前端负责承接长期互动。"
   },
@@ -35,10 +68,22 @@
       "项目以 Web 技术开发，并通过 Capacitor 打包为 Android 原生应用；聊天、角色和大部分配置保存在本地。它不提供模型、托管后端或生成内容服务。"
     ],
     "facts": [
-      { "label": "适合", "text": "喜欢拟真手机界面，希望集中承载角色扮演与陪伴日常的人。" },
-      { "label": "平台", "text": "Android，Web 技术配合 Capacitor 打包。" },
-      { "label": "使用方式", "text": "安装或自行构建应用，再配置自己的模型 API、语音和角色数据。" },
-      { "label": "许可", "text": "AGPL-3.0。" }
+      {
+        "label": "适合",
+        "text": "喜欢拟真手机界面，希望集中承载角色扮演与陪伴日常的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Android，Web 技术配合 Capacitor 打包。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装或自行构建应用，再配置自己的模型 API、语音和角色数据。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0。"
+      }
     ]
   }
 }

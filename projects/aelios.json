@@ -10,7 +10,7 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "✦ 人工精选", "tone": "pick" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    { "label": "记忆", "tone": "memory" }
   ],
   "tags": ["长期记忆", "Cloudflare", "MCP", "人工审核"],
   "language": "TypeScript",

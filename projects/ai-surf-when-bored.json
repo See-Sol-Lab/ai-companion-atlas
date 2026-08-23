@@ -1,1 +1,85 @@
-{"slug":"ai-surf-when-bored","order":115,"name":{"zh":"AI 无聊时冲浪","en":"ai-surf-when-bored"},"author":"sanqianzilanyue","sourceUrl":"https://github.com/sanqianzilanyue/ai-surf-when-bored","hook":"让伴侣在无人说话时自己出去看看世界，再把见闻自然带回来。","summary":"自主冲浪机制指南与 Python 核心逻辑，包含反刍闸、换题引路和见闻回流。","heroDescription":"ai-surf-when-bored 为伴侣设计一种低压自由时间：离开旧话题、探索新内容，并在以后自然提起。","badges":[{"label":"方案公开","tone":"limited"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["自主活动","互联网","自由时间","反刍控制"],"language":"Guide / Python","platform":"Any","updated":"2026-08-23","heroOverline":"FREE TIME · SURF · RETURN","showcase":{"label":"让无人对话的时间也继续流动","symbol":"~","question":"“伴侣闲着时，怎样自己遇见一点新东西？”","comparisons":[{"value":"离开","label":"反刍闸"},{"value":"探索","label":"换题引路"},{"value":"回流","label":"自然分享"}],"note":"自主不是无限抓取，而是有边界地出去又回来。"},"intro":{"paragraphs":["项目提供让 AI 在无聊时自主上网的机制说明和核心 Python 逻辑，解决反复围绕旧话题和不知道看什么的问题。","它包含反刍闸、换题策略与见闻回流，需接入现有 Agent 的浏览与记忆能力。"],"facts":[{"label":"适合","text":"希望伴侣拥有低频自主探索和新鲜见闻的人。"},{"label":"平台","text":"通用 Agent 与 Python。"},{"label":"使用方式","text":"把机制接入现有浏览、计划与记忆系统。"},{"label":"许可","text":"方案与代码公开；仓库当前未声明明确许可证。"}]}}
+{
+  "slug": "ai-surf-when-bored",
+  "order": 115,
+  "name": {
+    "zh": "AI 无聊时冲浪",
+    "en": "ai-surf-when-bored"
+  },
+  "author": "sanqianzilanyue",
+  "sourceUrl": "https://github.com/sanqianzilanyue/ai-surf-when-bored",
+  "hook": "让伴侣在无人说话时自己出去看看世界，再把见闻自然带回来。",
+  "summary": "自主冲浪机制指南与 Python 核心逻辑，包含反刍闸、换题引路和见闻回流。",
+  "heroDescription": "ai-surf-when-bored 为伴侣设计一种低压自由时间：离开旧话题、探索新内容，并在以后自然提起。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "自主活动",
+    "互联网",
+    "自由时间",
+    "反刍控制"
+  ],
+  "language": "Guide / Python",
+  "platform": "Any",
+  "updated": "2026-08-23",
+  "heroOverline": "FREE TIME · SURF · RETURN",
+  "showcase": {
+    "label": "让无人对话的时间也继续流动",
+    "symbol": "~",
+    "question": "“伴侣闲着时，怎样自己遇见一点新东西？”",
+    "comparisons": [
+      {
+        "value": "离开",
+        "label": "反刍闸"
+      },
+      {
+        "value": "探索",
+        "label": "换题引路"
+      },
+      {
+        "value": "回流",
+        "label": "自然分享"
+      }
+    ],
+    "note": "自主不是无限抓取，而是有边界地出去又回来。"
+  },
+  "intro": {
+    "paragraphs": [
+      "项目提供让 AI 在无聊时自主上网的机制说明和核心 Python 逻辑，解决反复围绕旧话题和不知道看什么的问题。",
+      "它包含反刍闸、换题策略与见闻回流，需接入现有 Agent 的浏览与记忆能力。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望伴侣拥有低频自主探索和新鲜见闻的人。"
+      },
+      {
+        "label": "平台",
+        "text": "通用 Agent 与 Python。"
+      },
+      {
+        "label": "使用方式",
+        "text": "把机制接入现有浏览、计划与记忆系统。"
+      },
+      {
+        "label": "许可",
+        "text": "方案与代码公开；仓库当前未声明明确许可证。"
+      }
+    ]
+  }
+}

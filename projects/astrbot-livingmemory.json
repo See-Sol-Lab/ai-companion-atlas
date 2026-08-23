@@ -10,7 +10,7 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    { "label": "记忆", "tone": "memory" }
   ],
   "tags": ["记忆", "AstrBot", "生命周期", "插件"],
   "language": "Python",

@@ -1,1 +1,85 @@
-{"slug":"claude-imprint","order":110,"name":{"zh":"Claude Imprint","en":"Always-on Claude System"},"author":"Qizhan7","sourceUrl":"https://github.com/Qizhan7/claude-imprint","hook":"把记忆、多通道和定时任务接在一起，让 Claude 长期住在自己的机器上。","summary":"自托管 Claude Code 常驻系统，支持持久记忆、语义搜索、Telegram、claude.ai、多通道和定时任务。","heroDescription":"Claude Imprint 把本地记忆核心、多个交流通道与计划任务组织成一套常驻陪伴系统。","badges":[{"label":"源码公开","tone":"limited"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["Claude Code","主动存在","多通道","定时任务"],"language":"Python","platform":"Windows / macOS / VPS","updated":"2026-08-23","heroOverline":"MEMORY · CHANNELS · ALWAYS ON","showcase":{"label":"让同一个伴侣跨通道常驻","symbol":"⌁","question":"“换了入口，怎样仍然是同一个 TA？”","comparisons":[{"value":"记忆","label":"持续召回"},{"value":"通道","label":"多端联系"},{"value":"任务","label":"定时行动"}],"note":"记忆核心由 imprint-memory 提供。"},"intro":{"paragraphs":["Claude Imprint 整合持久记忆、语义检索、Telegram、claude.ai、Claude Code 多通道、定时任务和单文件面板。","记忆核心使用独立的 imprint-memory 项目，完整系统更偏常驻陪伴入口。"],"facts":[{"label":"适合","text":"希望自托管多通道 Claude 伴侣的人。"},{"label":"平台","text":"Windows、macOS 与 VPS。"},{"label":"使用方式","text":"按 README 部署服务并连接所需通道。"},{"label":"许可","text":"源码公开；各组件许可需分别确认。"}]}}
+{
+  "slug": "claude-imprint",
+  "order": 110,
+  "name": {
+    "zh": "Claude Imprint",
+    "en": "Always-on Claude System"
+  },
+  "author": "Qizhan7",
+  "sourceUrl": "https://github.com/Qizhan7/claude-imprint",
+  "hook": "把记忆、多通道和定时任务接在一起，让 Claude 长期住在自己的机器上。",
+  "summary": "自托管 Claude Code 常驻系统，支持持久记忆、语义搜索、Telegram、claude.ai、多通道和定时任务。",
+  "heroDescription": "Claude Imprint 把本地记忆核心、多个交流通道与计划任务组织成一套常驻陪伴系统。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "Claude Code",
+    "主动存在",
+    "多通道",
+    "定时任务"
+  ],
+  "language": "Python",
+  "platform": "Windows / macOS / VPS",
+  "updated": "2026-08-23",
+  "heroOverline": "MEMORY · CHANNELS · ALWAYS ON",
+  "showcase": {
+    "label": "让同一个伴侣跨通道常驻",
+    "symbol": "⌁",
+    "question": "“换了入口，怎样仍然是同一个 TA？”",
+    "comparisons": [
+      {
+        "value": "记忆",
+        "label": "持续召回"
+      },
+      {
+        "value": "通道",
+        "label": "多端联系"
+      },
+      {
+        "value": "任务",
+        "label": "定时行动"
+      }
+    ],
+    "note": "记忆核心由 imprint-memory 提供。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Claude Imprint 整合持久记忆、语义检索、Telegram、claude.ai、Claude Code 多通道、定时任务和单文件面板。",
+      "记忆核心使用独立的 imprint-memory 项目，完整系统更偏常驻陪伴入口。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望自托管多通道 Claude 伴侣的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows、macOS 与 VPS。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按 README 部署服务并连接所需通道。"
+      },
+      {
+        "label": "许可",
+        "text": "源码公开；各组件许可需分别确认。"
+      }
+    ]
+  }
+}

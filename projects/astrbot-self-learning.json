@@ -1,18 +1,39 @@
 {
   "slug": "astrbot-self-learning",
   "order": 58,
-  "name": { "zh": "AstrBot 自主学习", "en": "Self Learning Plugin" },
+  "name": {
+    "zh": "AstrBot 自主学习",
+    "en": "Self Learning Plugin"
+  },
   "author": "NickCharlie",
   "sourceUrl": "https://github.com/NickCharlie/astrbot_plugin_self_learning",
   "hook": "让机器人从群聊中学习语气、黑话、社交关系和逐渐变化的人格。",
   "summary": "AstrBot 自主学习插件，分析对话风格与群组黑话，维护社交关系、好感度和自适应人格演化。",
   "heroDescription": "插件持续观察群聊中的表达方式、常用词与人与人之间的关系，把学习结果用于后续回复，让机器人逐渐适应不同群体的交流习惯。",
   "badges": [
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "记忆",
+      "tone": "memory"
+    }
   ],
-  "tags": ["记忆", "AstrBot", "自我学习", "社交关系"],
+  "tags": [
+    "记忆",
+    "AstrBot",
+    "自我学习",
+    "社交关系"
+  ],
   "language": "Python",
   "platform": "AstrBot",
   "updated": "2026-08-23",
@@ -22,9 +43,18 @@
     "symbol": "群",
     "question": "“机器人能不能慢慢听懂我们自己的说话方式？”",
     "comparisons": [
-      { "value": "风格", "label": "学习表达习惯" },
-      { "value": "黑话", "label": "理解群组用语" },
-      { "value": "关系", "label": "好感与人格演化" }
+      {
+        "value": "风格",
+        "label": "学习表达习惯"
+      },
+      {
+        "value": "黑话",
+        "label": "理解群组用语"
+      },
+      {
+        "value": "关系",
+        "label": "好感与人格演化"
+      }
     ],
     "note": "学习对象不只是词，也包括群体里的社会关系。"
   },
@@ -34,10 +64,22 @@
       "插件还维护社交关系与好感度，并让人格随着交流逐步演化。群聊内容会进入学习流程，部署前应由群成员知情并确认数据边界。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望 AstrBot 逐渐适应固定群组语言和社会关系的用户。" },
-      { "label": "平台", "text": "AstrBot 插件。" },
-      { "label": "使用方式", "text": "安装后配置学习范围、模型和关系参数，并明确群聊数据使用边界。" },
-      { "label": "许可", "text": "AGPL-3.0。" }
+      {
+        "label": "适合",
+        "text": "希望 AstrBot 逐渐适应固定群组语言和社会关系的用户。"
+      },
+      {
+        "label": "平台",
+        "text": "AstrBot 插件。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装后配置学习范围、模型和关系参数，并明确群聊数据使用边界。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0。"
+      }
     ]
   }
 }

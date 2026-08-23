@@ -1,20 +1,47 @@
 {
   "slug": "dylan-heartbeat",
   "order": 5,
-  "name": { "zh": "Dylan Heartbeat", "en": "AI Residency Runtime" },
+  "name": {
+    "zh": "Dylan Heartbeat",
+    "en": "AI Residency Runtime"
+  },
   "author": "callie0313",
   "sourceUrl": "https://github.com/callie0313/dylan-heartbeat",
   "hook": "让 Kelivo 里的 TA 在沉默时自己醒来，并决定要不要联系你。",
   "summary": "Kelivo 常驻插件，负责主动唤醒、手机推送、共同时间线、长期时间感与自动日记。",
   "heroDescription": "Dylan Heartbeat 在 Kelivo 与模型 API 之间加入一个常驻 Gateway，并用后台 runtime 定期唤醒 AI。AI 可以根据上下文选择推送或保持沉默，所有主动行为都会回写共同时间线。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "非商业", "tone": "limited" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    }
   ],
-  "tags": ["主动消息", "时间感", "Kelivo", "自动日记"],
+  "tags": [
+    "主动消息",
+    "时间感",
+    "Kelivo",
+    "自动日记"
+  ],
   "language": "JavaScript",
   "platform": "iOS / Android",
   "updated": "2026-08-23",
@@ -24,9 +51,18 @@
     "symbol": "♥",
     "question": "“没人发消息时，TA 还能做什么？”",
     "comparisons": [
-      { "value": "醒来", "label": "按时间检查" },
-      { "value": "判断", "label": "推送或沉默" },
-      { "value": "记下", "label": "写回时间线" }
+      {
+        "value": "醒来",
+        "label": "按时间检查"
+      },
+      {
+        "value": "判断",
+        "label": "推送或沉默"
+      },
+      {
+        "value": "记下",
+        "label": "写回时间线"
+      }
     ],
     "note": "主动不是定时群发，而是一次有上下文的决定。"
   },
@@ -36,10 +72,22 @@
       "项目支持 Bark 与 ntfy、天气注入、多模态透传、自动日记、管理页面以及本地或 Railway 部署。时间戳记忆库会恢复被客户端裁掉的消息时间，让主动事件准确落在对话历史的时间缝隙中。"
     ],
     "facts": [
-      { "label": "适合", "text": "使用 Kelivo，希望 AI 能主动联系、保留时间感和行为连续性的人。" },
-      { "label": "平台", "text": "Kelivo 客户端配合 Node.js Gateway；可运行在本机、VPS、Railway 或 Render。" },
-      { "label": "使用方式", "text": "Fork 后填写模型、推送、时区与唤醒策略配置，再同时运行 Gateway 和 wake-up。" },
-      { "label": "许可", "text": "新版采用 PolyForm Noncommercial 1.0.0；旧 MIT 版本许可不追溯撤销。" }
+      {
+        "label": "适合",
+        "text": "使用 Kelivo，希望 AI 能主动联系、保留时间感和行为连续性的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Kelivo 客户端配合 Node.js Gateway；可运行在本机、VPS、Railway 或 Render。"
+      },
+      {
+        "label": "使用方式",
+        "text": "Fork 后填写模型、推送、时区与唤醒策略配置，再同时运行 Gateway 和 wake-up。"
+      },
+      {
+        "label": "许可",
+        "text": "新版采用 PolyForm Noncommercial 1.0.0；旧 MIT 版本许可不追溯撤销。"
+      }
     ]
   }
 }

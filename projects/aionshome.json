@@ -1,21 +1,51 @@
 {
   "slug": "aionshome",
   "order": 62,
-  "name": { "zh": "AionsHome", "en": "Aion Chat" },
+  "name": {
+    "zh": "AionsHome",
+    "en": "Aion Chat"
+  },
   "author": "death34018-hue",
   "sourceUrl": "https://github.com/death34018-hue/AionsHome",
   "hook": "让伴侣在电脑和手机之间保持同一个家、记忆与感知入口。",
   "summary": "自托管多端伴侣中枢，包含聊天、长期记忆、语音、摄像头视觉、PWA、音乐、阅读和智能家居接入。",
   "heroDescription": "AionsHome 把本地电脑作为数据与服务中心，让 PC 和手机浏览器通过局域网或 Tailscale 进入同一个伴侣空间，并提供 PWA 安装和多端同步。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["自托管", "长期记忆", "语音视觉", "PWA"],
+  "tags": [
+    "自托管",
+    "长期记忆",
+    "语音视觉",
+    "PWA"
+  ],
   "language": "Python / JavaScript",
   "platform": "PC / 手机 PWA",
   "updated": "2026-08-23",
@@ -25,9 +55,18 @@
     "symbol": "⌂",
     "question": "“离开电脑后，还能回到同一个对话空间吗？”",
     "comparisons": [
-      { "value": "聊天", "label": "多端同步" },
-      { "value": "记忆", "label": "本地保存" },
-      { "value": "感知", "label": "语音与摄像头" }
+      {
+        "value": "聊天",
+        "label": "多端同步"
+      },
+      {
+        "value": "记忆",
+        "label": "本地保存"
+      },
+      {
+        "value": "感知",
+        "label": "语音与摄像头"
+      }
     ],
     "note": "手机只是入口，数据和关系留在自己的机器上。"
   },
@@ -37,10 +76,22 @@
       "服务端使用 FastAPI 与 SQLite，支持局域网访问，也可通过 Tailscale 在外网连接。仓库包含作者自己的功能命名和部分个人默认配置，使用前应按 README 的清理说明替换为自己的内容。"
     ],
     "facts": [
-      { "label": "适合", "text": "想在家中自托管完整伴侣空间，并从手机随时访问的人。" },
-      { "label": "平台", "text": "Windows 服务端；PC 与手机浏览器、Android/iOS PWA。" },
-      { "label": "使用方式", "text": "在本地电脑安装并启动服务，再通过局域网或 Tailscale 访问。" },
-      { "label": "许可", "text": "MIT；部署前需清理仓库中的个人默认内容。" }
+      {
+        "label": "适合",
+        "text": "想在家中自托管完整伴侣空间，并从手机随时访问的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows 服务端；PC 与手机浏览器、Android/iOS PWA。"
+      },
+      {
+        "label": "使用方式",
+        "text": "在本地电脑安装并启动服务，再通过局域网或 Tailscale 访问。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；部署前需清理仓库中的个人默认内容。"
+      }
     ]
   }
 }

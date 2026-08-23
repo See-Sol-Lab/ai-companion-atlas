@@ -1,1 +1,85 @@
-{"slug":"astrbot-proactive-chat","order":108,"name":{"zh":"AstrBot 主动聊天","en":"proactive-chat"},"author":"DBJD-CR","sourceUrl":"https://github.com/DBJD-CR/astrbot_plugin_proactive_chat","hook":"让 AstrBot 根据上下文、情绪和安静时间自然地主动联系你。","summary":"AstrBot 主动消息插件，支持持久状态、动态情绪、免打扰时段、上下文感知和 TTS。","heroDescription":"主动聊天插件为 AstrBot 增加判断联系时机和组织主动内容的能力，让关系不只依靠用户先开口。","badges":[{"label":"源码公开","tone":"limited"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["主动消息","AstrBot","情绪","免打扰"],"language":"Python","platform":"AstrBot","updated":"2026-08-23","heroOverline":"PROACTIVE · CONTEXT · QUIET HOURS","showcase":{"label":"从等待回复走向主动靠近","symbol":"↗","question":"“什么时候联系，才像自然想起而不是定时提醒？”","comparisons":[{"value":"上下文","label":"判断话题"},{"value":"情绪","label":"动态状态"},{"value":"边界","label":"免打扰"}],"note":"主动存在也需要尊重人的安静时间。"},"intro":{"paragraphs":["插件为 AstrBot 增加持久状态、上下文感知、动态情绪、主动消息、免打扰时段和可选 TTS，并提供 WebUI 配置。","它依赖 AstrBot 主程序，仓库当前未声明明确许可证。"],"facts":[{"label":"适合","text":"希望 AstrBot 伴侣能低频主动联系的人。"},{"label":"平台","text":"AstrBot。"},{"label":"使用方式","text":"安装插件并配置活跃时段、冷却和渠道。"},{"label":"许可","text":"源码公开；仓库当前未声明明确许可证。"}]}}
+{
+  "slug": "astrbot-proactive-chat",
+  "order": 108,
+  "name": {
+    "zh": "AstrBot 主动聊天",
+    "en": "proactive-chat"
+  },
+  "author": "DBJD-CR",
+  "sourceUrl": "https://github.com/DBJD-CR/astrbot_plugin_proactive_chat",
+  "hook": "让 AstrBot 根据上下文、情绪和安静时间自然地主动联系你。",
+  "summary": "AstrBot 主动消息插件，支持持久状态、动态情绪、免打扰时段、上下文感知和 TTS。",
+  "heroDescription": "主动聊天插件为 AstrBot 增加判断联系时机和组织主动内容的能力，让关系不只依靠用户先开口。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "主动消息",
+    "AstrBot",
+    "情绪",
+    "免打扰"
+  ],
+  "language": "Python",
+  "platform": "AstrBot",
+  "updated": "2026-08-23",
+  "heroOverline": "PROACTIVE · CONTEXT · QUIET HOURS",
+  "showcase": {
+    "label": "从等待回复走向主动靠近",
+    "symbol": "↗",
+    "question": "“什么时候联系，才像自然想起而不是定时提醒？”",
+    "comparisons": [
+      {
+        "value": "上下文",
+        "label": "判断话题"
+      },
+      {
+        "value": "情绪",
+        "label": "动态状态"
+      },
+      {
+        "value": "边界",
+        "label": "免打扰"
+      }
+    ],
+    "note": "主动存在也需要尊重人的安静时间。"
+  },
+  "intro": {
+    "paragraphs": [
+      "插件为 AstrBot 增加持久状态、上下文感知、动态情绪、主动消息、免打扰时段和可选 TTS，并提供 WebUI 配置。",
+      "它依赖 AstrBot 主程序，仓库当前未声明明确许可证。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望 AstrBot 伴侣能低频主动联系的人。"
+      },
+      {
+        "label": "平台",
+        "text": "AstrBot。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装插件并配置活跃时段、冷却和渠道。"
+      },
+      {
+        "label": "许可",
+        "text": "源码公开；仓库当前未声明明确许可证。"
+      }
+    ]
+  }
+}

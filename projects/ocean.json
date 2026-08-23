@@ -1,21 +1,51 @@
 {
   "slug": "ocean",
   "order": 3,
-  "name": { "zh": "Ocean", "en": "Companion PWA" },
+  "name": {
+    "zh": "Ocean",
+    "en": "Companion PWA"
+  },
   "author": "fishwithoctopus",
   "sourceUrl": "https://github.com/fishwithoctopus/Ocean",
   "hook": "把聊天、项目、共读和长期连续性放进同一个自托管空间。",
   "summary": "面向长期陪伴的自托管 PWA，用一个 Gateway 管理模型、会话、项目、阅读、通知与可选记忆服务。",
   "heroDescription": "Ocean 是一个 provider-neutral 的自托管伴侣空间。它把移动端 PWA 与服务端 Gateway 连接起来，让不同房间、项目、书籍和模型共享稳定的会话边界，同时保留使用量、通知和数据所有权。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "非商业", "tone": "limited" },
-    { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    }
   ],
-  "tags": ["自托管", "连续性", "共读", "PWA"],
+  "tags": [
+    "自托管",
+    "连续性",
+    "共读",
+    "PWA"
+  ],
   "language": "TypeScript",
   "platform": "Web / PWA",
   "updated": "2026-08-23",
@@ -25,9 +55,18 @@
     "symbol": "≈",
     "question": "“换一个房间，还能自然接上吗？”",
     "comparisons": [
-      { "value": "客厅", "label": "日常对话" },
-      { "value": "书房", "label": "项目与共读" },
-      { "value": "会议", "label": "多模型协作" }
+      {
+        "value": "客厅",
+        "label": "日常对话"
+      },
+      {
+        "value": "书房",
+        "label": "项目与共读"
+      },
+      {
+        "value": "会议",
+        "label": "多模型协作"
+      }
     ],
     "note": "场景分开，关系和数据仍由自己掌握。"
   },
@@ -37,10 +76,22 @@
       "模型密钥和私有连接器保存在服务端环境，浏览器只接收公开清单和标准化响应。长期记忆是可选的外接服务；项目 README 明确说明其 Memory 3.0 参考实现由 Ombre-Brain 衍生，并未嵌入 Ocean 主仓库。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望自己托管伴侣入口，并把聊天、项目、阅读与通知放在同一空间的人。" },
-      { "label": "平台", "text": "现代浏览器与可安装 PWA；需要 Node.js 20+ 和 HTTPS 部署环境。" },
-      { "label": "使用方式", "text": "配置至少一家模型提供方，启动 Gateway 与前端；房间和外接服务可按需保留。" },
-      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0，允许非商业使用、研究、修改与分发。" }
+      {
+        "label": "适合",
+        "text": "希望自己托管伴侣入口，并把聊天、项目、阅读与通知放在同一空间的人。"
+      },
+      {
+        "label": "平台",
+        "text": "现代浏览器与可安装 PWA；需要 Node.js 20+ 和 HTTPS 部署环境。"
+      },
+      {
+        "label": "使用方式",
+        "text": "配置至少一家模型提供方，启动 Gateway 与前端；房间和外接服务可按需保留。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0，允许非商业使用、研究、修改与分发。"
+      }
     ]
   }
 }

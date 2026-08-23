@@ -1,21 +1,47 @@
 {
   "slug": "jiwen",
   "order": 6,
-  "name": { "zh": "积温", "en": "Jiwen" },
+  "name": {
+    "zh": "积温",
+    "en": "Jiwen"
+  },
   "author": "ClaraShafiq",
   "sourceUrl": "https://github.com/ClaraShafiq/jiwen",
   "hook": "让“想不想先开口”来自持续状态，而不是一次随机骰子。",
   "summary": "零依赖的角色主动意识引擎，用五个连续数值模拟连接需求、骄傲、情绪、唤醒度与沉浸状态。",
   "heroDescription": "积温是一个约 500 行的 JavaScript 状态引擎。它不写回复、不存记忆、不调用模型，只根据时间和事件推进角色状态，在达到阈值时输出联系、观察或自我调节信号。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    }
   ],
-  "tags": ["主动性", "情绪状态", "零依赖", "行为引擎"],
+  "tags": [
+    "主动性",
+    "情绪状态",
+    "零依赖",
+    "行为引擎"
+  ],
   "language": "JavaScript",
   "platform": "Any",
   "updated": "2026-08-23",
@@ -25,9 +51,18 @@
     "symbol": "△",
     "question": "“TA 为什么偏偏现在来找我？”",
     "comparisons": [
-      { "value": "积累", "label": "连接需求上升" },
-      { "value": "犹豫", "label": "骄傲与情绪制衡" },
-      { "value": "触发", "label": "开口或找事做" }
+      {
+        "value": "积累",
+        "label": "连接需求上升"
+      },
+      {
+        "value": "犹豫",
+        "label": "骄傲与情绪制衡"
+      },
+      {
+        "value": "触发",
+        "label": "开口或找事做"
+      }
     ],
     "note": "同样的状态输入，会得到同样的行为结果。"
   },
@@ -37,10 +72,22 @@
       "项目提供自然语言状态描述、语气指引、调参模拟器、九类情绪语调网格和测试。开发者可以把它接到任意聊天、推送或心跳系统中，再由自己的模型生成具体行动和台词。"
     ],
     "facts": [
-      { "label": "适合", "text": "正在开发主动伴侣、角色状态机或需要可解释触发逻辑的人。" },
-      { "label": "平台", "text": "纯 JavaScript，零外部依赖，可接入任意宿主。" },
-      { "label": "使用方式", "text": "创建角色实例，周期调用 tick，并把返回状态转换成模型上下文或行动。" },
-      { "label": "许可", "text": "MIT。" }
+      {
+        "label": "适合",
+        "text": "正在开发主动伴侣、角色状态机或需要可解释触发逻辑的人。"
+      },
+      {
+        "label": "平台",
+        "text": "纯 JavaScript，零外部依赖，可接入任意宿主。"
+      },
+      {
+        "label": "使用方式",
+        "text": "创建角色实例，周期调用 tick，并把返回状态转换成模型上下文或行动。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT。"
+      }
     ]
   }
 }

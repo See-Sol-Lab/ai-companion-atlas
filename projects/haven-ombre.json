@@ -1,18 +1,39 @@
 {
   "slug": "haven-ombre",
   "order": 23,
-  "name": { "zh": "Haven-Ombre", "en": "Continuity Memory Fork" },
+  "name": {
+    "zh": "Haven-Ombre",
+    "en": "Continuity Memory Fork"
+  },
   "author": "Yinglianchun",
   "sourceUrl": "https://github.com/Yinglianchun/Haven-Ombre",
   "hook": "在长期记忆之上补上原文证据、跨窗交接、画像和自我连续性。",
   "summary": "扩展型个人连续性系统，保留 Markdown 记忆真源，并增加保守召回、原文层、图关系、handoff、画像、Dream 与聊天 Gateway。",
   "heroDescription": "Haven-Ombre 把长期记忆、原始对话、短期状态与画像分层处理，强调先找到证据再做关联。新窗口通过紧凑 handoff 接回自我、关系与近期上下文，而不是一次倾倒全部记忆。",
   "badges": [
-    { "label": "开源", "tone": "open" },
-    { "label": "✦ 人工精选", "tone": "pick" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    },
+    {
+      "label": "记忆",
+      "tone": "memory"
+    }
   ],
-  "tags": ["长期记忆", "原文溯源", "跨窗交接", "画像"],
+  "tags": [
+    "长期记忆",
+    "原文溯源",
+    "跨窗交接",
+    "画像"
+  ],
   "language": "Python",
   "platform": "Self-host / MCP",
   "updated": "2026-08-23",
@@ -22,9 +43,18 @@
     "symbol": "◫",
     "question": "“想起来的这件事，有原话和来处吗？”",
     "comparisons": [
-      { "value": "原文", "label": "证据与日期" },
-      { "value": "交接", "label": "跨窗连续性" },
-      { "value": "画像", "label": "长期理解" }
+      {
+        "value": "原文",
+        "label": "证据与日期"
+      },
+      {
+        "value": "交接",
+        "label": "跨窗连续性"
+      },
+      {
+        "value": "画像",
+        "label": "长期理解"
+      }
     ],
     "note": "记忆、证据和画像分开，减少把猜测当事实。"
   },
@@ -34,10 +64,22 @@
       "项目还增加跨窗口 handoff、自我入口、照顾备忘、Darkroom、Dream、自动写入门卫与 OpenAI/Anthropic 兼容 Gateway。它基于 P0luz/Ombre-Brain 二次开发，保留上游记忆桶、情绪坐标、遗忘曲线、向量检索与 Dashboard，并在 README 中完整说明新增范围。"
     ],
     "facts": [
-      { "label": "适合", "text": "已有长期伴侣资料，希望加强证据溯源、跨窗交接与画像分层的人。" },
-      { "label": "平台", "text": "自托管 Python 服务，支持 MCP 与 OpenAI/Anthropic 兼容聊天客户端。" },
-      { "label": "使用方式", "text": "部署 Brain；需要自动注入时再同时部署 Gateway，并配置独立的记忆与状态目录。" },
-      { "label": "许可", "text": "MIT；属于 Ombre-Brain 的独立扩展分支。" }
+      {
+        "label": "适合",
+        "text": "已有长期伴侣资料，希望加强证据溯源、跨窗交接与画像分层的人。"
+      },
+      {
+        "label": "平台",
+        "text": "自托管 Python 服务，支持 MCP 与 OpenAI/Anthropic 兼容聊天客户端。"
+      },
+      {
+        "label": "使用方式",
+        "text": "部署 Brain；需要自动注入时再同时部署 Gateway，并配置独立的记忆与状态目录。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；属于 Ombre-Brain 的独立扩展分支。"
+      }
     ]
   }
 }

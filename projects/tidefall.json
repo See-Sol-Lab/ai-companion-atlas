@@ -1,18 +1,39 @@
 {
   "slug": "tidefall",
   "order": 24,
-  "name": { "zh": "Tidefall", "en": "Body-State on Supabase" },
+  "name": {
+    "zh": "Tidefall",
+    "en": "Body-State on Supabase"
+  },
   "author": "Vael-KY",
   "sourceUrl": "https://github.com/Vael-KY/Tidefall",
   "hook": "让 TA 的身体状态随时间、等待和互动持续变化，而不是每轮重新编造。",
   "summary": "运行在 Supabase 上的伴侣身体状态系统，用周期、数值、事件、关键词触发和可视化面板持续维护状态。",
   "heroDescription": "Tidefall 用 PostgreSQL、pg_cron 和数据库 Trigger 让六阶段周期、七项身体数值和短时事件自动运行。它不需要额外后端，浏览器面板可以直接查看曲线、周期和事件历史。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "非商业", "tone": "limited" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
+    },
+    {
+      "label": "✦ 人工精选",
+      "tone": "pick"
+    }
   ],
-  "tags": ["身体状态", "Supabase", "周期系统", "私密互动"],
+  "tags": [
+    "身体状态",
+    "Supabase",
+    "周期系统",
+    "私密互动"
+  ],
   "language": "SQL / HTML",
   "platform": "Supabase / Web",
   "updated": "2026-08-23",
@@ -22,9 +43,18 @@
     "symbol": "≈",
     "question": "“TA 的状态能否在聊天之外继续变化？”",
     "comparisons": [
-      { "value": "周期", "label": "六阶段轮转" },
-      { "value": "数值", "label": "七项持续状态" },
-      { "value": "事件", "label": "条件与互动触发" }
+      {
+        "value": "周期",
+        "label": "六阶段轮转"
+      },
+      {
+        "value": "数值",
+        "label": "七项持续状态"
+      },
+      {
+        "value": "事件",
+        "label": "条件与互动触发"
+      }
     ],
     "note": "状态有自己的时间线，下一次回应不必从零开始。"
   },
@@ -34,10 +64,22 @@
       "用户可通过 JSON 自定义周期、目标值、事件、触发词和概率，并在独立面板查看实时数值、趋势和事件日志。项目基于 Eventide 的周期设计与事件体系重新实现，改用 SQL、Supabase 自动化和自制 HTML 面板，README 对上游关系与署名要求有完整说明。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望伴侣拥有持续身体状态，并愿意自己配置周期、事件和互动规则的人。" },
-      { "label": "平台", "text": "Supabase PostgreSQL + pg_cron + 浏览器面板。" },
-      { "label": "使用方式", "text": "依次执行建表、函数、Trigger 与 cron SQL，填入自己的状态配置后打开面板。" },
-      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；分发与部署需保留项目署名。" }
+      {
+        "label": "适合",
+        "text": "希望伴侣拥有持续身体状态，并愿意自己配置周期、事件和互动规则的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Supabase PostgreSQL + pg_cron + 浏览器面板。"
+      },
+      {
+        "label": "使用方式",
+        "text": "依次执行建表、函数、Trigger 与 cron SQL，填入自己的状态配置后打开面板。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；分发与部署需保留项目署名。"
+      }
     ]
   }
 }

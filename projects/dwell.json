@@ -1,18 +1,39 @@
 {
   "slug": "dwell",
   "order": 75,
-  "name": { "zh": "dwell", "en": "Companion Living Space" },
+  "name": {
+    "zh": "dwell",
+    "en": "Companion Living Space"
+  },
   "author": "xinwithyu",
   "sourceUrl": "https://github.com/xinwithyu/dwell-on-something",
   "hook": "把心跳、日记、待办、日历和共同生活收进一套液态玻璃伴侣空间。",
   "summary": "可直接使用的伴侣网页前端与完整架构文档，覆盖主动心跳、推送、日记、待办、共读、健康和媒体卡片。",
   "heroDescription": "dwell 提供一套仿官方风格的完整前端，并把长期伴侣空间背后的数据设计和实现经验拆成可阅读的功能文档。",
   "badges": [
-    { "label": "陪伴类", "tone": "companion" },
-    { "label": "非商业", "tone": "limited" },
-    { "label": "PC 前端", "tone": "desktop" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    }
   ],
-  "tags": ["伴侣空间", "主动心跳", "生活记录", "架构指南"],
+  "tags": [
+    "伴侣空间",
+    "主动心跳",
+    "生活记录",
+    "架构指南"
+  ],
   "language": "HTML / JavaScript",
   "platform": "PC Browser",
   "updated": "2026-08-23",
@@ -22,9 +43,18 @@
     "symbol": "⌂",
     "question": "“聊天之外，共同生活怎样留下形状？”",
     "comparisons": [
-      { "value": "陪伴", "label": "心跳与推送" },
-      { "value": "生活", "label": "日记待办日历" },
-      { "value": "共同", "label": "共读健康媒体" }
+      {
+        "value": "陪伴",
+        "label": "心跳与推送"
+      },
+      {
+        "value": "生活",
+        "label": "日记待办日历"
+      },
+      {
+        "value": "共同",
+        "label": "共读健康媒体"
+      }
     ],
     "note": "前端可直接使用，复杂后端则以清晰文档交付。"
   },
@@ -34,10 +64,22 @@
       "仓库公开完整前端，后端则以实现思路、数据结构和关键代码文档呈现。项目单独列出各功能的原作者与来源；收录时保留这一上游说明，不将其标为纯原创。"
     ],
     "facts": [
-      { "label": "适合", "text": "想参考或搭建一套完整长期伴侣生活空间的人。" },
-      { "label": "平台", "text": "PC 浏览器；后端需按文档自行搭建。" },
-      { "label": "使用方式", "text": "前端可直接运行，完整能力按各章节接入自己的服务。" },
-      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；部分功能另有明确上游来源。" }
+      {
+        "label": "适合",
+        "text": "想参考或搭建一套完整长期伴侣生活空间的人。"
+      },
+      {
+        "label": "平台",
+        "text": "PC 浏览器；后端需按文档自行搭建。"
+      },
+      {
+        "label": "使用方式",
+        "text": "前端可直接运行，完整能力按各章节接入自己的服务。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；部分功能另有明确上游来源。"
+      }
     ]
   }
 }

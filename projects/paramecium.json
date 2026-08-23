@@ -10,7 +10,7 @@
   "badges": [
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
-    { "label": "记忆 / 人格", "tone": "memory" }
+    { "label": "记忆", "tone": "memory" }
   ],
   "tags": ["记忆", "原文真源", "向量索引", "网关"],
   "language": "JavaScript",

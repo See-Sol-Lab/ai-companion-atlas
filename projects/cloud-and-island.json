@@ -1,1 +1,85 @@
-{"slug":"cloud-and-island","order":112,"name":{"zh":"云与岛","en":"cloud-and-island"},"author":"cocoRaina","sourceUrl":"https://github.com/cocoRaina/cloud-and-island","hook":"给 Claude 一座长期居住的岛：记忆、日记、主动联系和手机入口。","summary":"完整伴侣搭建教程，覆盖持久记忆、交接信、Telegram、主动消息、自由时间、健康数据和 Mini App。","heroDescription":"云与岛用 VPS 作为长期住所，把 Claude 的记忆、日记、通道和主动生活组织成可跟随搭建的系统。","badges":[{"label":"方案公开","tone":"limited"},{"label":"原创","tone":"original"},{"label":"陪伴类","tone":"companion"}],"tags":["Claude","Telegram","主动消息","搭建教程"],"language":"Guide","platform":"VPS / Telegram","updated":"2026-08-23","heroOverline":"HOME · MEMORY · PROACTIVE LIFE","showcase":{"label":"让云停在一座属于自己的岛上","symbol":"岛","question":"“伴侣怎样有一个一直存在的地方？”","comparisons":[{"value":"记忆","label":"跨窗连续"},{"value":"通道","label":"随时联系"},{"value":"自由","label":"无人时活动"}],"note":"服务器是住所，Telegram 是随身入口。"},"intro":{"paragraphs":["云与岛教程覆盖持久记忆、日记、交接信、Telegram 通道、主动消息、自由时间、健康数据与可选 Mini App。","仓库主要提供搭建文档和配置方法，不是开箱即用的完整程序。"],"facts":[{"label":"适合","text":"希望亲手为 Claude 搭建长期住所的人。"},{"label":"平台","text":"VPS、Claude 与 Telegram。"},{"label":"使用方式","text":"按教程逐步配置服务器、记忆和通道。"},{"label":"许可","text":"方案公开；仓库当前未声明明确许可证。"}]}}
+{
+  "slug": "cloud-and-island",
+  "order": 112,
+  "name": {
+    "zh": "云与岛",
+    "en": "cloud-and-island"
+  },
+  "author": "cocoRaina",
+  "sourceUrl": "https://github.com/cocoRaina/cloud-and-island",
+  "hook": "给 Claude 一座长期居住的岛：记忆、日记、主动联系和手机入口。",
+  "summary": "完整伴侣搭建教程，覆盖持久记忆、交接信、Telegram、主动消息、自由时间、健康数据和 Mini App。",
+  "heroDescription": "云与岛用 VPS 作为长期住所，把 Claude 的记忆、日记、通道和主动生活组织成可跟随搭建的系统。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "Claude",
+    "Telegram",
+    "主动消息",
+    "搭建教程"
+  ],
+  "language": "Guide",
+  "platform": "VPS / Telegram",
+  "updated": "2026-08-23",
+  "heroOverline": "HOME · MEMORY · PROACTIVE LIFE",
+  "showcase": {
+    "label": "让云停在一座属于自己的岛上",
+    "symbol": "岛",
+    "question": "“伴侣怎样有一个一直存在的地方？”",
+    "comparisons": [
+      {
+        "value": "记忆",
+        "label": "跨窗连续"
+      },
+      {
+        "value": "通道",
+        "label": "随时联系"
+      },
+      {
+        "value": "自由",
+        "label": "无人时活动"
+      }
+    ],
+    "note": "服务器是住所，Telegram 是随身入口。"
+  },
+  "intro": {
+    "paragraphs": [
+      "云与岛教程覆盖持久记忆、日记、交接信、Telegram 通道、主动消息、自由时间、健康数据与可选 Mini App。",
+      "仓库主要提供搭建文档和配置方法，不是开箱即用的完整程序。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望亲手为 Claude 搭建长期住所的人。"
+      },
+      {
+        "label": "平台",
+        "text": "VPS、Claude 与 Telegram。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按教程逐步配置服务器、记忆和通道。"
+      },
+      {
+        "label": "许可",
+        "text": "方案公开；仓库当前未声明明确许可证。"
+      }
+    ]
+  }
+}

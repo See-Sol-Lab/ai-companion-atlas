@@ -1,19 +1,43 @@
 {
   "slug": "eventide",
   "order": 26,
-  "name": { "zh": "Eventide", "en": "Physiological State Engine" },
+  "name": {
+    "zh": "Eventide",
+    "en": "Physiological State Engine"
+  },
   "author": "chuli1122",
   "sourceUrl": "https://github.com/chuli1122/Eventide",
   "hook": "让 TA 的身体状态随时间、等待、梦境和互动持续涨落。",
   "summary": "面向 AI 伴侣的生理状态内核，用周期、身体数值、短时事件、梦境与互动结算生成隐藏状态上下文。",
   "heroDescription": "Eventide 维护六阶段身体周期、七项连续数值和十八类短时事件。宿主在每轮对话前推进状态，并把生成的 ephemeral state 放入模型上下文，让表达延续真实时间与互动结果。",
   "badges": [
-    { "label": "五感与器官", "tone": "senses" },
-    { "label": "非商业", "tone": "limited" },
-    { "label": "原创", "tone": "original" },
-    { "label": "18+", "tone": "adult" }
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "18+",
+      "tone": "adult"
+    }
   ],
-  "tags": ["18+", "生理状态", "周期引擎", "梦境联动"],
+  "tags": [
+    "18+",
+    "生理状态",
+    "周期引擎",
+    "梦境联动"
+  ],
   "language": "Python",
   "platform": "Any",
   "updated": "2026-08-23",
@@ -23,9 +47,18 @@
     "symbol": "≈",
     "question": "“TA 的身体能否在聊天之外继续变化？”",
     "comparisons": [
-      { "value": "周期", "label": "六阶段自然轮转" },
-      { "value": "事件", "label": "十八类短时波动" },
-      { "value": "结算", "label": "互动结果写回" }
+      {
+        "value": "周期",
+        "label": "六阶段自然轮转"
+      },
+      {
+        "value": "事件",
+        "label": "十八类短时波动"
+      },
+      {
+        "value": "结算",
+        "label": "互动结果写回"
+      }
     ],
     "note": "状态不是临场编造，而是从上一刻继续往前走。"
   },
@@ -35,10 +68,22 @@
       "项目提供周期推进、事件触发、隐藏状态卡、梦卡联动和结构化互动结算；宿主负责保存状态、调用模型与展示界面。所有字段、周期文案和回应规则都可以替换。"
     ],
     "facts": [
-      { "label": "适合", "text": "正在开发成人向 AI 伴侣，希望身体与情绪状态具有时间连续性的人。" },
-      { "label": "平台", "text": "Python 内核，可嵌入任意聊天、定时任务或主动检查系统。" },
-      { "label": "使用方式", "text": "持久化 BodyState，每轮推进状态并注入模型上下文，互动结束后写回结算结果。" },
-      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；商业使用需取得作者授权。" }
+      {
+        "label": "适合",
+        "text": "正在开发成人向 AI 伴侣，希望身体与情绪状态具有时间连续性的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Python 内核，可嵌入任意聊天、定时任务或主动检查系统。"
+      },
+      {
+        "label": "使用方式",
+        "text": "持久化 BodyState，每轮推进状态并注入模型上下文，互动结束后写回结算结果。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；商业使用需取得作者授权。"
+      }
     ]
   }
 }
