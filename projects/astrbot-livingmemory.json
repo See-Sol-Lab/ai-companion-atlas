@@ -1,0 +1,43 @@
+{
+  "slug": "astrbot-livingmemory",
+  "order": 57,
+  "name": { "zh": "LivingMemory", "en": "AstrBot Memory Plugin" },
+  "author": "lxfight-s-Astrbot-Plugins",
+  "sourceUrl": "https://github.com/lxfight-s-Astrbot-Plugins/astrbot_plugin_livingmemory",
+  "hook": "给 AstrBot 增加会生长、衰减和整理的长期记忆生命周期。",
+  "summary": "AstrBot 长期记忆插件，为对话记忆提供动态写入、召回、衰减与生命周期管理。",
+  "heroDescription": "LivingMemory 直接运行在 AstrBot 插件体系中，把聊天片段转成可管理的长期记忆，并根据使用与时间变化调整其生命周期。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "AstrBot", "生命周期", "插件"],
+  "language": "Python",
+  "platform": "AstrBot",
+  "updated": "2026-08-23",
+  "heroOverline": "WRITE · RECALL · DECAY",
+  "showcase": {
+    "label": "让 AstrBot 的记忆拥有自己的生命周期",
+    "symbol": "∞",
+    "question": "“记忆写进去以后，怎样继续变化？”",
+    "comparisons": [
+      { "value": "写入", "label": "从对话生成记忆" },
+      { "value": "召回", "label": "按当前语境返回" },
+      { "value": "衰减", "label": "动态生命周期" }
+    ],
+    "note": "长期记忆不是静态堆积，也会随使用慢慢变化。"
+  },
+  "intro": {
+    "paragraphs": [
+      "LivingMemory 是一个为 AstrBot 提供长期记忆的插件。它从对话中保存有价值的内容，在后续聊天中按需要召回，并用动态生命周期管理记忆的活跃与衰减。",
+      "项目适合已经使用 AstrBot、希望直接通过插件扩展长期陪伴能力，而不另外搭建完整网关的用户。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望给 AstrBot 机器人补上动态长期记忆的用户。" },
+      { "label": "平台", "text": "AstrBot 插件。" },
+      { "label": "使用方式", "text": "安装插件并配置记忆模型与生命周期参数。" },
+      { "label": "许可", "text": "AGPL-3.0。" }
+    ]
+  }
+}

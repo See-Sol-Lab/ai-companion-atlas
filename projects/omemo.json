@@ -1,0 +1,43 @@
+{
+  "slug": "omemo",
+  "order": 53,
+  "name": { "zh": "omemo", "en": "OpenAI Memory Proxy" },
+  "author": "OmniDimen",
+  "sourceUrl": "https://github.com/OmniDimen/omemo",
+  "hook": "在任意 OpenAI 兼容客户端与模型之间，加上一层可替换的长期记忆。",
+  "summary": "OpenAI 兼容记忆代理，支持内置或外部摘要、完整提示注入与 RAG 模式，让现有客户端无需改造即可获得记忆。",
+  "heroDescription": "omemo 坐在聊天应用与上游模型 API 之间，保存对话、提取记忆并在下一轮自动注入。客户端只需把 Base URL 指向代理即可继续使用原有模型与界面。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "OpenAI 兼容", "代理", "RAG"],
+  "language": "Python",
+  "platform": "Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "PROXY · STORE · INJECT",
+  "showcase": {
+    "label": "不改客户端，也能在 API 路径上加入记忆",
+    "symbol": "⇄",
+    "question": "“现有聊天应用能不能直接长出长期记忆？”",
+    "comparisons": [
+      { "value": "代理", "label": "兼容原有请求" },
+      { "value": "保存", "label": "摘要或外部记忆" },
+      { "value": "注入", "label": "完整 Prompt 或 RAG" }
+    ],
+    "note": "客户端继续照常使用，记忆在中间层完成。"
+  },
+  "intro": {
+    "paragraphs": [
+      "omemo 是一个 OpenAI 兼容记忆代理。聊天客户端把请求发给 omemo，代理保存对话、调用内置或外部摘要模式形成记忆，再把相关内容加入后续模型请求。",
+      "项目支持完整 Prompt 注入和 RAG 两种路线，适合不想更换客户端、只愿调整 API 地址的用户。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已有 OpenAI 兼容客户端，希望用最小改动获得长期记忆的人。" },
+      { "label": "平台", "text": "Python Self-host，连接任意 OpenAI 兼容应用与模型服务。" },
+      { "label": "使用方式", "text": "部署代理、配置上游模型，再把客户端 Base URL 改为 omemo。" },
+      { "label": "许可", "text": "Apache-2.0。" }
+    ]
+  }
+}

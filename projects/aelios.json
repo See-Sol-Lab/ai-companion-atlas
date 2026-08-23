@@ -9,7 +9,8 @@
   "heroDescription": "Aelios 通过即时捕获、夜间 dream 和周期 rollup 维护多层记忆，并用候选审核队列控制哪些事实真正进入长期库。它既能作为模型网关，也能单独给 Claude Code、Codex 等 MCP 客户端提供记忆。",
   "badges": [
     { "label": "开源", "tone": "open" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    { "label": "✦ 人工精选", "tone": "pick" },
+    { "label": "记忆 / 人格", "tone": "memory" }
   ],
   "tags": ["长期记忆", "Cloudflare", "MCP", "人工审核"],
   "language": "TypeScript",

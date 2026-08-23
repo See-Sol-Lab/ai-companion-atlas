@@ -1,0 +1,42 @@
+{
+  "slug": "omnidimen-emotion",
+  "order": 60,
+  "name": { "zh": "OmniDimen Emotion", "en": "Emotion-Specialized LLM" },
+  "author": "OmniDimen",
+  "sourceUrl": "https://github.com/OmniDimen/OmniDimen-Emotion",
+  "hook": "把情绪识别和情感化生成做进可本地运行的模型权重。",
+  "summary": "基于 Qwen2.5／3 微调的情绪专用模型系列，提供多尺寸与 GGUF 权重，可在 LM Studio、Ollama 和 PocketPal 运行。",
+  "heroDescription": "OmniDimen Emotion 面向情绪识别和富情感文本生成，提供 4B、7B、14B 等尺寸以及 FP16 与量化 GGUF，方便在边缘设备上部署。",
+  "badges": [
+    { "label": "模型权重", "tone": "limited" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "情绪模型", "本地模型", "GGUF"],
+  "language": "Model",
+  "platform": "LM Studio / Ollama / Edge",
+  "updated": "2026-08-23",
+  "heroOverline": "RECOGNIZE · RESPOND · RUN LOCAL",
+  "showcase": {
+    "label": "把情绪能力放进本地可部署的模型本体",
+    "symbol": "◐",
+    "question": "“不依赖云端，也能运行更关注情绪的模型吗？”",
+    "comparisons": [
+      { "value": "识别", "label": "情绪理解" },
+      { "value": "生成", "label": "情感化回复" },
+      { "value": "本地", "label": "多尺寸 GGUF" }
+    ],
+    "note": "它是一组专用模型权重，不是完整的记忆数据库或伴侣前端。"
+  },
+  "intro": {
+    "paragraphs": [
+      "OmniDimen Emotion 是基于 Qwen2.5／3 微调的情绪专用语言模型系列，重点覆盖情绪识别和富情感文本生成。项目提供多个模型尺寸，以及 FP16 和 Q4_K_M 等 GGUF 格式。",
+      "权重可通过 Transformers、SGLang、vLLM、LM Studio、Ollama 或 PocketPal 使用。它的能力范围比通用基座窄，部署前应阅读对应 Hugging Face 模型卡中的许可证、限制与敏感内容说明。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在本地或边缘设备运行情绪专用模型，并接入自有伴侣系统的人。" },
+      { "label": "平台", "text": "Transformers、SGLang、vLLM、LM Studio、Ollama、PocketPal。" },
+      { "label": "使用方式", "text": "从 Hugging Face 选择合适尺寸与格式，再通过本地推理工具或兼容 API 部署。" },
+      { "label": "许可", "text": "模型基于 Qwen2.5／3 微调；具体权重许可与使用限制以各模型卡为准。" }
+    ]
+  }
+}

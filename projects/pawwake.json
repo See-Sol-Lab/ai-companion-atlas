@@ -1,0 +1,43 @@
+{
+  "slug": "pawwake",
+  "order": 55,
+  "name": { "zh": "爪迹", "en": "Pawwake" },
+  "author": "garan0613",
+  "sourceUrl": "https://github.com/garan0613/pawwake",
+  "hook": "在任何 OpenAI 兼容客户端前加一层记忆、对话线和分区缓存。",
+  "summary": "轻量记忆网关，支持三层记忆、混合检索、对话线、A/B 分区缓存、Dashboard 与双通道鉴权。",
+  "heroDescription": "Pawwake 位于客户端和模型服务之间，自动检索并注入相关记忆，再从新对话中提取候选内容。它同时管理会话摘要和缓存分区，减少长期聊天成本。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "网关", "分区缓存", "Dashboard"],
+  "language": "Python",
+  "platform": "Self-host / OpenAI API",
+  "updated": "2026-08-23",
+  "heroOverline": "EXTRACT · CONSOLIDATE · CACHE",
+  "showcase": {
+    "label": "一条 API 路径同时管理记忆与长对话成本",
+    "symbol": "🐾",
+    "question": "“长期聊天能不能既记得，也少烧一些上下文？”",
+    "comparisons": [
+      { "value": "碎片", "label": "自动提取" },
+      { "value": "事件", "label": "合并与撤回" },
+      { "value": "缓存", "label": "A/B 分区轮转" }
+    ],
+    "note": "记忆与缓存可以独立启停，管理过程留在自己的面板里。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Pawwake（原 AI Memory Gateway）是一个 OpenAI 兼容转发网关。它提供碎片、事件、核心三层记忆，支持自动提取、AI 整理、手动合并、撤回来源和关键词＋向量混合搜索。",
+      "项目还管理跨平台对话线、历史记录、Token 统计和 A/B 分区缓存，并把程序 API 与 Dashboard 登录分开鉴权。客户端只需改 API 地址即可接入。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "使用 Kelivo、ChatBox、NextChat 等客户端，想同时获得记忆与缓存优化的人。" },
+      { "label": "平台", "text": "Python Self-host + PostgreSQL；兼容任意 OpenAI 格式客户端与模型。" },
+      { "label": "使用方式", "text": "先部署纯转发网关，再按需接数据库、记忆、向量搜索与分区缓存。" },
+      { "label": "许可", "text": "AGPL-3.0。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "imprint-memory",
+  "order": 56,
+  "name": { "zh": "imprint-memory", "en": "Persistent Conversation Memory" },
+  "author": "Qizhan7",
+  "sourceUrl": "https://github.com/Qizhan7/imprint-memory",
+  "hook": "把 Claude Code、claude.ai 和 Telegram 的每轮对话汇进同一层本地记忆。",
+  "summary": "本地优先的持久记忆层，通过 Hook、浏览器扩展与 Telegram 适配器自动捕获对话，并提供 FTS5＋向量混合检索。",
+  "heroDescription": "imprint-memory 自动记录不同入口中的每一轮对话，统一进入本地数据库与混合检索。它同时提供 stdio 和 HTTP MCP、消息总线与任务队列。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "Claude Code", "Telegram", "混合检索"],
+  "language": "Python",
+  "platform": "Self-host / MCP",
+  "updated": "2026-08-23",
+  "heroOverline": "CAPTURE · UNIFY · SEARCH",
+  "showcase": {
+    "label": "多个聊天入口写进同一份记忆索引",
+    "symbol": "印",
+    "question": "“换到 Telegram 或网页，过去的对话还能被找到吗？”",
+    "comparisons": [
+      { "value": "捕获", "label": "Hook 与适配器" },
+      { "value": "汇总", "label": "统一本地存储" },
+      { "value": "检索", "label": "FTS5＋向量" }
+    ],
+    "note": "入口可以变化，记忆仍落进同一套本地系统。"
+  },
+  "intro": {
+    "paragraphs": [
+      "imprint-memory 是一个本地优先的持久对话记忆系统。它通过 Claude Code Hook、claude.ai 扩展和 Telegram 适配器捕获每轮对话，再用 FTS5 与语义向量进行混合检索。",
+      "项目提供 stdio／HTTP MCP、消息总线和任务队列，可作为 Claude Imprint 等上层伴侣系统的独立记忆核心。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "同时使用 Claude Code、网页和 Telegram，希望统一保存与召回对话的人。" },
+      { "label": "平台", "text": "Python Self-host，支持 stdio 与 HTTP MCP。" },
+      { "label": "使用方式", "text": "部署记忆服务，再按入口安装 Hook、浏览器扩展或 Telegram 适配器。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "kiwi-mem",
+  "order": 54,
+  "name": { "zh": "kiwi-mem", "en": "Companion Memory System" },
+  "author": "LucieEveille",
+  "sourceUrl": "https://github.com/LucieEveille/kiwi-mem",
+  "hook": "让记忆有热度、有睡眠整理，也能按日历层级慢慢沉淀。",
+  "summary": "面向 AI 伴侣的长期记忆系统，提供向量检索、记忆热度、Dream 睡眠整合与日／周／月层级摘要。",
+  "heroDescription": "kiwi-mem 为陪伴场景组织短期与长期记忆，根据访问、时间和重要性维护记忆热度，并在 Dream／睡眠阶段进行整理和压缩。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "记忆热度", "Dream", "层级摘要"],
+  "language": "Python",
+  "platform": "Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "HEAT · DREAM · CALENDAR",
+  "showcase": {
+    "label": "让短期片段经过睡眠整理成长为长期脉络",
+    "symbol": "🥝",
+    "question": "“哪些记忆该保持温热，哪些该慢慢沉淀？”",
+    "comparisons": [
+      { "value": "热度", "label": "访问与重要度" },
+      { "value": "睡眠", "label": "Dream 整合" },
+      { "value": "日历", "label": "日周月摘要" }
+    ],
+    "note": "记忆不只被搜索，也会在时间里重新组织。"
+  },
+  "intro": {
+    "paragraphs": [
+      "kiwi-mem 是为 AI 伴侣场景设计的长期记忆系统。它结合向量搜索与记忆热度，依据近期访问、时间和重要性安排召回优先级。",
+      "系统还提供 Dream／睡眠整合和日历式层级摘要，把每天的片段逐步沉淀为周与月的长期结构。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望记忆能随时间分层，并拥有睡眠整理过程的伴侣系统。" },
+      { "label": "平台", "text": "Python Self-host。" },
+      { "label": "使用方式", "text": "接入对话数据与向量服务，周期运行 Dream 和日历摘要任务。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

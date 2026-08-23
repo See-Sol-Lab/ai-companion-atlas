@@ -10,7 +10,8 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "✦ 人工精选", "tone": "pick" }
+    { "label": "✦ 人工精选", "tone": "pick" },
+    { "label": "记忆 / 人格", "tone": "memory" }
   ],
   "tags": ["主动性", "情绪状态", "零依赖", "行为引擎"],
   "language": "JavaScript",

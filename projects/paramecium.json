@@ -1,0 +1,43 @@
+{
+  "slug": "paramecium",
+  "order": 52,
+  "name": { "zh": "草履虫", "en": "Paramecium" },
+  "author": "Shitsuten",
+  "sourceUrl": "https://github.com/Shitsuten/paramecium",
+  "hook": "把聊天原文保留为真源，让向量只负责带路，不负责改写记忆。",
+  "summary": "网关式长期记忆架构，以逐字聊天记录为真源，向量仅作为索引，召回时返回原始文本而非摘要替代品。",
+  "heroDescription": "Paramecium 把模型请求经过记忆网关，保存原始对话并建立检索索引。命中时取回的仍是当时真正说过的话，减少摘要在多轮整理中不断漂移。",
+  "badges": [
+    { "label": "源码公开", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "原文真源", "向量索引", "网关"],
+  "language": "JavaScript",
+  "platform": "Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "VERBATIM · INDEX · RETRIEVE",
+  "showcase": {
+    "label": "索引可以变化，原话仍留在原处",
+    "symbol": "原",
+    "question": "“召回的是当时说过的话，还是后来改写的摘要？”",
+    "comparisons": [
+      { "value": "保存", "label": "逐字对话真源" },
+      { "value": "索引", "label": "向量负责定位" },
+      { "value": "召回", "label": "返回原始文本" }
+    ],
+    "note": "记忆检索可以高效，证据仍回到真正发生过的对话。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Paramecium 是一套强调原文真源的网关记忆架构。它保存完整聊天记录，用向量和其他索引寻找相关位置，但召回时返回原始文本，不用模型摘要替换曾经发生过的对话。",
+      "这种路线适合在意证据、措辞和关系细节的长期伴侣系统，也便于用户回看记忆究竟来自哪里。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "不愿让摘要取代原话，希望记忆可追溯到逐字记录的人。" },
+      { "label": "平台", "text": "自托管 JavaScript 网关。" },
+      { "label": "使用方式", "text": "将模型请求经过网关，保存原始对话并让索引只承担定位职责。" },
+      { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
+    ]
+  }
+}

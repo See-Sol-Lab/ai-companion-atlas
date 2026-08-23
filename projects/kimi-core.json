@@ -1,0 +1,43 @@
+{
+  "slug": "kimi-core",
+  "order": 51,
+  "name": { "zh": "kimi-core", "en": "Agent Memory OS" },
+  "author": "marikagura",
+  "sourceUrl": "https://github.com/marikagura/kimi-core",
+  "hook": "把记忆、关切、情感驱力和主动唤醒放进一套可审计的 1v1 内核。",
+  "summary": "个人 1v1 Agent Memory OS，提供混合检索、人工策展、self-drive、concern、会话回归、可复现评测与对抗式自审。",
+  "heroDescription": "kimi-core 用 PostgreSQL／pgvector 保存事件、状态、实体与画像，并把向量、关键词、时间和重要度结合成混合检索。主动层根据 drive 与 concern 决定行动，也允许选择什么都不做。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "记忆 / 人格", "tone": "memory" }
+  ],
+  "tags": ["记忆", "混合检索", "主动性", "自我审计"],
+  "language": "TypeScript",
+  "platform": "Self-host / MCP",
+  "updated": "2026-08-23",
+  "heroOverline": "RECALL · CONCERN · SELF-AUDIT",
+  "showcase": {
+    "label": "让主动关心有真实记忆作为依据",
+    "symbol": "◈",
+    "question": "“TA 为什么现在想起这件事，又为什么选择开口？”",
+    "comparisons": [
+      { "value": "检索", "label": "四信号混合召回" },
+      { "value": "关切", "label": "drive 与 concern" },
+      { "value": "自审", "label": "行为级验证" }
+    ],
+    "note": "内在过程接受外在证据检查，主动也允许沉默。"
+  },
+  "intro": {
+    "paragraphs": [
+      "kimi-core 是一套面向单人与单个 AI 的记忆和自主性内核。它提供向量、BM25／模糊关键词、时间衰减与重要度融合检索，并用 append-only 事件和人工策展避免自动摘要静默改坏记忆。",
+      "self-drive、concern、定时 wake、reentry／closeout 会话生命周期和可复现检索评测都已接入；对外行动默认采用 human-in-the-loop。项目不附带固定人格，关系层由使用者自己建立。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "需要可审计记忆、主动关切和严格检索评测的重度 1v1 Agent 用户。" },
+      { "label": "平台", "text": "Node.js、PostgreSQL／pgvector 与 HTTP MCP；主动 daemon 可选。" },
+      { "label": "使用方式", "text": "初始化人格与配置，启动 Gateway；需要主动唤醒时再运行 daemon。" },
+      { "label": "许可", "text": "AGPL-3.0-or-later。" }
+    ]
+  }
+}
