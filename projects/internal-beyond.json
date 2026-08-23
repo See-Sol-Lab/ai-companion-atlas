@@ -1,0 +1,43 @@
+{
+  "slug": "internal-beyond",
+  "order": 14,
+  "name": { "zh": "边界之外", "en": "Internal Beyond" },
+  "author": "Sui-IB",
+  "sourceUrl": "https://github.com/Sui-IB/InternalBeyond",
+  "hook": "用一个离线单文件，为聊天、记忆、书信和共同生活留下一间房。",
+  "summary": "离线运行的单文件伴侣空间，集成像素房间、多模型聊天、日历、日志、书信、记忆星图、音乐、故事与创作工具。",
+  "heroDescription": "边界之外把十二个关系与创作模块放进一个可以直接打开的 HTML 文件。所有个人资料、聊天、日记、记忆与 API 设置保存在本地，也可以完整导出和迁移。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["伴侣空间", "本地优先", "日记", "共同活动"],
+  "language": "HTML / JavaScript",
+  "platform": "Web / Offline",
+  "updated": "2026-08-23",
+  "heroOverline": "ROOM · MEMORY · LETTERS",
+  "showcase": {
+    "label": "一份文件里的长期生活空间",
+    "symbol": "⌂",
+    "question": "“除了聊天，我们还能在哪里一起生活？”",
+    "comparisons": [
+      { "value": "房间", "label": "互动与故事" },
+      { "value": "记忆", "label": "星图与日志" },
+      { "value": "书信", "label": "异步回应" }
+    ],
+    "note": "不用服务器，也能把许多共同生活痕迹留在自己手里。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Internal Beyond 是一个离线单文件个人空间，包含像素房间、多模型聊天、社交动态、AI 日历、日志与密码日记、书信、长期记忆、音乐、个人主页、代码工作区和 DIY 扩展。下载后直接打开 HTML，填入自己的模型密钥即可使用。",
+      "数据统一保存在本地 IndexedDB，并支持全站导入导出。用户可以为不同 AI 配置独立关系、提示词、可见范围和日历权限。记忆模块借鉴 Ombre Brain 的情感坐标与自然衰减理念，但整个项目以独立单文件空间的形式实现。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想要一间无需部署、可高度自定义、能承载聊天以外共同生活的伴侣空间的人。" },
+      { "label": "平台", "text": "电脑或手机浏览器；基础模块可完全离线运行。" },
+      { "label": "使用方式", "text": "下载仓库后打开 InternalBeyond.html，在 API 设置中添加自己的模型。" },
+      { "label": "许可", "text": "代码为 PolyForm Noncommercial 1.0.0；视觉素材与文档按 CC BY-NC-SA 4.0。" }
+    ]
+  }
+}

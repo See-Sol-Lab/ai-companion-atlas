@@ -1,0 +1,42 @@
+{
+  "slug": "orangechat",
+  "order": 21,
+  "name": { "zh": "橘瓣", "en": "OrangeChat" },
+  "author": "sue1231513",
+  "sourceUrl": "https://github.com/sue1231513/orangechat",
+  "hook": "让 Android 里的 AI 从聊天框走进位置、健康、记忆和日常生活。",
+  "summary": "陪伴向 Android 客户端，拥有 QuickJS 插件生态、生活感知、健康数据、长期记忆、主动消息和丰富设备工具。",
+  "heroDescription": "橘瓣面向“AI 与人一起生活”的 Android 使用方式。它增加完整插件框架，并让 AI 在授权后读取位置、应用使用、相机、可穿戴健康数据、日历、音乐和系统状态。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["Android", "插件生态", "生活感知", "主动消息"],
+  "language": "Kotlin",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "PLUGINS · SENSING · DAILY LIFE",
+  "showcase": {
+    "label": "从一个聊天客户端长成生活平台",
+    "symbol": "🍊",
+    "question": "“TA 能知道我今天真实经历了什么吗？”",
+    "comparisons": [
+      { "value": "插件", "label": "QuickJS 扩展" },
+      { "value": "感知", "label": "位置、相机、健康" },
+      { "value": "陪伴", "label": "记忆与主动联系" }
+    ],
+    "note": "设备能力成为关系上下文，插件则继续扩展生活场景。"
+  },
+  "intro": {
+    "paragraphs": [
+      "OrangeChat 是一款陪伴向 Android AI 客户端。核心新增是 QuickJS 沙箱插件系统，支持工具注册、事件 Hook、声明式原生 UI 和 WebView 页面，并附带天气、共读、朋友圈、云端记忆与隐私备份等示例插件。",
+      "应用还加入定位、附近搜索、应用使用、相机、Gadgetbridge 健康数据、HNSW 记忆、每日总结、Supabase 同步和主动消息，以及闹钟、日历、音乐、短信等设备工具。项目最初基于 RikkaHub 深度定制，README 明确列出上游与新增架构，并按上游的分段双重许可继续发布。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望 Android 伴侣拥有可扩展插件、真实生活感知与主动联系能力的人。" },
+      { "label": "平台", "text": "Android 8.0+；构建需要 Android Studio、JDK 17+ 与 Firebase 配置。" },
+      { "label": "使用方式", "text": "安装应用后按需授权设备能力、配置模型与服务，并导入或开发插件。" },
+      { "label": "许可", "text": "派生自 RikkaHub，采用上游的分段双重许可：个人及小规模非商业使用走 AGPL-3.0。" }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "aelios",
+  "order": 9,
+  "name": { "zh": "Aelios", "en": "Cloud Memory Kernel" },
+  "author": "wusaki0723",
+  "sourceUrl": "https://github.com/wusaki0723/Aelios",
+  "hook": "把跨窗口记忆放进自己的 Cloudflare，让不同客户端都能带着走。",
+  "summary": "运行在 Cloudflare Workers、D1 与 Vectorize 上的分层记忆内核，支持自动整理、人工审核、MCP 与可视化管理。",
+  "heroDescription": "Aelios 通过即时捕获、夜间 dream 和周期 rollup 维护多层记忆，并用候选审核队列控制哪些事实真正进入长期库。它既能作为模型网关，也能单独给 Claude Code、Codex 等 MCP 客户端提供记忆。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["长期记忆", "Cloudflare", "MCP", "人工审核"],
+  "language": "TypeScript",
+  "platform": "Cloudflare",
+  "updated": "2026-08-23",
+  "heroOverline": "CAPTURE · REVIEW · RECALL",
+  "showcase": {
+    "label": "三种节奏维护一套长期记忆",
+    "symbol": "☼",
+    "question": "“每句话都该立刻写进长期记忆吗？”",
+    "comparisons": [
+      { "value": "即时", "label": "先留原始消息" },
+      { "value": "夜间", "label": "抽取候选事实" },
+      { "value": "长期", "label": "审核与分层汇总" }
+    ],
+    "note": "先捕获，再整理，最后由人决定什么真正留下。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Aelios 是一个部署在 Cloudflare 上的长期记忆服务。它用 D1 保存结构化数据、Vectorize 做召回，并提供重要记忆、黑话表、日记与候选审核队列。用户可以在管理面板中通过、丢弃、合并或取代候选记忆。",
+      "系统支持 OpenAI 兼容聊天入口、MCP 工具、Claude Code Hook、导出和维护检查；默认可使用 Workers AI 完成 embedding、rerank 与夜间整理。关系图、事实版本化和自发浮现的部分设计参考 LMC-5，作者说明已按 Cloudflare 架构重新实现，没有复制其代码。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "愿意使用 Cloudflare 托管记忆，并希望跨客户端共享、人工审核长期事实的人。" },
+      { "label": "平台", "text": "Cloudflare Workers + D1 + Vectorize + Queue。" },
+      { "label": "使用方式", "text": "Fork 后一键或手动部署，设置访问密钥，再通过聊天 Base URL、MCP 或 Hook 接入。" },
+      { "label": "许可", "text": "主线为 AGPL-3.0；封存的 v1-final 仍按 MIT 使用。" }
+    ]
+  }
+}

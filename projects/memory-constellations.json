@@ -1,0 +1,43 @@
+{
+  "slug": "memory-constellations",
+  "order": 8,
+  "name": { "zh": "记忆星图", "en": "Memory Constellations" },
+  "author": "ClaraShafiq",
+  "sourceUrl": "https://github.com/ClaraShafiq/MemoryConstellations",
+  "hook": "把散落的事实整理成星座、故事片段和长期人物理解。",
+  "summary": "会自我组织的伴侣记忆系统，自动抽取事实、归入主题星座、合并叙事片段，并追溯到原始对话。",
+  "heroDescription": "记忆星图把聊天中的具体事实变成 fragments，再按人物、地点、事件和兴趣组织为 constellations，进一步合并成可阅读的 episodes。检索时同时使用关键词、向量和实体聚合。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["长期记忆", "叙事记忆", "可视化", "溯源"],
+  "language": "JavaScript / Python",
+  "platform": "Self-host",
+  "updated": "2026-08-23",
+  "heroOverline": "FRAGMENTS · ENTITIES · EPISODES",
+  "showcase": {
+    "label": "从一句事实长成一段共同历史",
+    "symbol": "✧",
+    "question": "“零散对话怎样变成真正的了解？”",
+    "comparisons": [
+      { "value": "事实", "label": "原文可追溯" },
+      { "value": "星座", "label": "按主题聚合" },
+      { "value": "篇章", "label": "合并成叙事" }
+    ],
+    "note": "每层都有自己的职责，也保留回到原话的路。"
+  },
+  "intro": {
+    "paragraphs": [
+      "记忆星图包含 Scribe、Archivist 与 Librarian 三段流水线：先从新对话抽取短事实，再将相关事实连接到人物、地点、事件和兴趣，最后合并成叙事 episode，并在聊天时跨层检索。每条记忆都保留原始消息引用。",
+      "可视化页面把实体显示为星座和桥梁，同时维护用户近期状态、长期行为模式和伴侣自己的身份资料。它适合愿意自己托管、配置人格与支付少量后台模型调用成本的长期伴侣系统。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望记忆能自动整理成长期叙事，并保留证据链和用户模型的人。" },
+      { "label": "平台", "text": "自托管 Web 服务，需要 Node.js、SQLite、ChromaDB 与至少一个模型 API。" },
+      { "label": "使用方式", "text": "填写用户、AI 与关系配置，启动记忆流水线，再把检索结果接入聊天提示。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}

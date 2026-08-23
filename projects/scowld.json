@@ -1,0 +1,43 @@
+{
+  "slug": "scowld",
+  "order": 2,
+  "name": { "zh": "Scowld", "en": "iOS Voice Companion" },
+  "author": "apoorvdarshan",
+  "sourceUrl": "https://github.com/apoorvdarshan/scowld",
+  "hook": "让 AI 在 iPhone 上听见你、看见你，也拥有一张会回应的脸。",
+  "summary": "原生 iOS 语音伴侣，集成动画角色、免手唤醒、多家 AI 与语音服务，并把对话和密钥留在本机。",
+  "heroDescription": "Scowld 把文字聊天、语音输入、TTS、视觉上下文和 VRM 动画角色装进一款原生 iOS 应用。用户自备模型与语音服务密钥，可以保存历史对话、切换角色并用唤醒词开始交谈。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["语音", "视觉", "iOS", "虚拟形象"],
+  "language": "Swift",
+  "platform": "iOS 17+",
+  "updated": "2026-08-23",
+  "heroOverline": "VOICE · VISION · AVATAR",
+  "showcase": {
+    "label": "一部手机里的多模态陪伴",
+    "symbol": "◉",
+    "question": "“可以真的听见我吗？”",
+    "comparisons": [
+      { "value": "说话", "label": "语音输入" },
+      { "value": "看见", "label": "相机上下文" },
+      { "value": "回应", "label": "角色与语音" }
+    ],
+    "note": "声音、画面和表情汇到同一次相遇里。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Scowld 是一款原生 iOS AI 语音伴侣。它支持文字与语音聊天、前置相机视觉上下文、免手唤醒、本地保存的历史对话，以及带口型、待机动作和表情变化的 VRM 角色。",
+      "用户可以连接 Gemini、OpenAI、Claude、Ollama、Groq、OpenRouter 等模型，并分别配置语音识别和语音合成服务。API Key 保存在 iOS Keychain，对话记录和所选上下文保存在设备本地。项目的角色渲染前端使用并署名了 MIT 许可的 Amica / Arbius AI。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想在 iPhone 上获得语音、视觉和动画角色一体化陪伴的人。" },
+      { "label": "平台", "text": "iOS 17.0+；自行构建需要 Xcode 16+。" },
+      { "label": "使用方式", "text": "从 App Store 或源码安装，在设置中填入自己的模型、STT 与 TTS 密钥。" },
+      { "label": "许可", "text": "MIT；第三方模型与语音服务仍按各自条款使用。" }
+    ]
+  }
+}

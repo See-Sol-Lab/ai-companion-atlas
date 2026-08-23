@@ -1,0 +1,42 @@
+{
+  "slug": "lastchat",
+  "order": 22,
+  "name": { "zh": "LastChat", "en": "Android AI Client" },
+  "author": "Cocolalilal",
+  "sourceUrl": "https://github.com/Cocolalilal/LastChat",
+  "hook": "在 Android 上把多模态聊天、长期记忆和本地执行环境装进同一应用。",
+  "summary": "注重隐私与个性化的 Android AI 客户端，提供 RAG 记忆、多角色、多模态、Python/QuickJS 环境、搜索、MCP 与 WebDAV。",
+  "heroDescription": "LastChat 面向需要更多本地能力的 Android 用户。它在多模型聊天之外加入向量记忆、内置 Python 与 JavaScript 环境、Web 搜索、MCP、多角色管理和本地优先的数据保存。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["Android", "RAG 记忆", "本地执行", "多角色"],
+  "language": "Kotlin",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "MEMORY · RUNTIME · PERSONAS",
+  "showcase": {
+    "label": "一个移动客户端里的记忆与执行能力",
+    "symbol": "⬡",
+    "question": "“聊天之外，手机上的 TA 还能做什么？”",
+    "comparisons": [
+      { "value": "记忆", "label": "本地 RAG" },
+      { "value": "运行", "label": "Python 与 QuickJS" },
+      { "value": "角色", "label": "多 Persona 管理" }
+    ],
+    "note": "长期上下文、工具执行和角色管理都留在移动端。"
+  },
+  "intro": {
+    "paragraphs": [
+      "LastChat 是一款功能丰富的 Android AI 客户端。它支持多供应商与自定义接口、图片视频音频输入、RAG 长期记忆、Web 搜索、MCP、图像生成、TTS，以及无限角色的创建、标签、导入和导出。",
+      "应用提供 PRoot Linux 工作区中的 Python 环境和 QuickJS JavaScript 引擎，聊天与向量记忆保存在本机，并可通过 WebDAV 备份。项目是 RikkaHub 的独立命名 fork，README 明确署名上游，并说明其重做 UI 与新增功能。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "需要 Android 多模型客户端，同时重视本地记忆、角色管理和脚本执行的人。" },
+      { "label": "平台", "text": "Android。" },
+      { "label": "使用方式", "text": "安装后配置模型供应商，按需建立角色、启用记忆、搜索、MCP 与本地工作区。" },
+      { "label": "许可", "text": "AGPL-3.0；图像裁剪组件另有上游来源说明。" }
+    ]
+  }
+}

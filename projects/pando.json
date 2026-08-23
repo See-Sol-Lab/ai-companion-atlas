@@ -1,0 +1,43 @@
+{
+  "slug": "pando",
+  "order": 10,
+  "name": { "zh": "Pando", "en": "Claude Code Mobile Gateway" },
+  "author": "Eloise-Aspen",
+  "sourceUrl": "https://github.com/Eloise-Aspen/pando-bridge",
+  "hook": "从手机进入自己电脑里的 Claude Code，会话、工具和数据都留在本机。",
+  "summary": "自托管 Claude Code 移动网关，用 PWA 和 WebSocket 流式传回对话、思考与工具调用，并支持手机审批权限。",
+  "heroDescription": "Pando 是一层很薄的 FastAPI 桥：它驱动本机已经登录的 Claude Code CLI，把输出实时送到手机 PWA。项目不保存 API Key，聊天历史在自己的 SQLite 中，记忆则通过可替换的外部接口接入。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["移动通道", "Claude Code", "自托管", "权限审批"],
+  "language": "Python",
+  "platform": "PC + 手机 PWA",
+  "updated": "2026-08-23",
+  "heroOverline": "PHONE · STREAM · APPROVE",
+  "showcase": {
+    "label": "让本地 CLI 长出一扇手机窗口",
+    "symbol": "⌁",
+    "question": "“离开电脑后，还能继续这场会话吗？”",
+    "comparisons": [
+      { "value": "手机", "label": "PWA 入口" },
+      { "value": "桥", "label": "WebSocket 流" },
+      { "value": "本机", "label": "Claude Code CLI" }
+    ],
+    "note": "远程的是界面，真正工作的仍是自己的电脑。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Pando 把本地 Claude Code CLI 包装成可从手机访问的自托管 PWA。它可以流式显示思考、正文与工具调用，上传图片或 PDF，并把写文件、运行命令等权限请求传到手机，让用户决定允许或拒绝。",
+      "项目本身不实现长期记忆，而是提供四端点 MemoryProvider 契约，任何记忆服务都能替换接入。它默认不带应用层身份验证，因此应放在 Tailscale 等可信私网或带访问策略的隧道后面。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在手机上继续使用自己电脑中的 Claude Code，并掌控数据与权限的人。" },
+      { "label": "平台", "text": "运行 Claude Code 的 Windows、macOS 或 Linux 电脑，加任意手机浏览器。" },
+      { "label": "使用方式", "text": "安装 Python 包、指定工作目录，启动 Pando 后通过可信私网访问 PWA。" },
+      { "label": "许可", "text": "代码 MIT；界面与字体、图标的第三方来源在 NOTICE 中单独说明。" }
+    ]
+  }
+}

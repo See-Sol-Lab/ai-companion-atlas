@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Pando Claude Code Mobile Gateway：自托管 Claude Code 移动网关，用 PWA 和 WebSocket 流式传回对话、思考与工具调用，并支持手机审批权限。 AI Companion Atlas 中文项目档案。" />
+  <title>Pando · Claude Code Mobile Gateway · AI Companion Atlas</title>
+  <link rel="stylesheet" href="../detail.css?v=20260823-3" />
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="../../" aria-label="返回 AI Companion Atlas 首页">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav>
+        <a href="../../#directory">项目库</a>
+        <a href="../../#taxonomy">标签</a>
+        <a href="../../#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>Pando</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-pick">✦ 人工精选</span><span class="status">PC + 手机 PWA</span></div>
+          <p class="overline">PHONE · STREAM · APPROVE</p>
+          <h1>Pando</h1>
+          <p class="cn-name">CLAUDE CODE MOBILE GATEWAY · @ELOISE-ASPEN</p>
+          <h2>从手机进入自己电脑里的 Claude Code，会话、工具和数据都留在本机。</h2>
+          <p class="hero-desc">Pando 是一层很薄的 FastAPI 桥：它驱动本机已经登录的 Claude Code CLI，把输出实时送到手机 PWA。项目不保存 API Key，聊天历史在自己的 SQLite 中，记忆则通过可替换的外部接口接入。</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="https://github.com/Eloise-Aspen/pando-bridge" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+            <a class="secondary-btn" href="../../">返回主页</a>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Pando解决的问题">
+          <p class="problem-label">让本地 CLI 长出一扇手机窗口</p>
+          <div class="clock-mark">⌁</div>
+          <p class="problem-question">“离开电脑后，还能继续这场会话吗？”</p>
+          <div class="time-compare">
+            <span><b>手机</b><small>PWA 入口</small></span>
+            <i>≠</i>
+            <span><b>桥</b><small>WebSocket 流</small></span>
+            <i>≠</i>
+            <span><b>本机</b><small>Claude Code CLI</small></span>
+          </div>
+          <p class="problem-note">远程的是界面，真正工作的仍是自己的电脑。</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">项目介绍</h2>
+        </div>
+        <div class="intro-content">
+          <p>Pando 把本地 Claude Code CLI 包装成可从手机访问的自托管 PWA。它可以流式显示思考、正文与工具调用，上传图片或 PDF，并把写文件、运行命令等权限请求传到手机，让用户决定允许或拒绝。</p>
+          <p>项目本身不实现长期记忆，而是提供四端点 MemoryProvider 契约，任何记忆服务都能替换接入。它默认不带应用层身份验证，因此应放在 Tailscale 等可信私网或带访问策略的隧道后面。</p>
+          <ul>
+            <li><strong>适合：</strong>希望在手机上继续使用自己电脑中的 Claude Code，并掌控数据与权限的人。</li>
+            <li><strong>平台：</strong>运行 Claude Code 的 Windows、macOS 或 Linux 电脑，加任意手机浏览器。</li>
+            <li><strong>使用方式：</strong>安装 Python 包、指定工作目录，启动 Pando 后通过可信私网访问 PWA。</li>
+            <li><strong>许可：</strong>代码 MIT；界面与字体、图标的第三方来源在 NOTICE 中单独说明。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
+          <b>游客留言功能施工中</b>
+        </div>
+        <p>用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas 负责介绍与导航，使用仍回到原作者。</h2>
+          <p>我们不镜像项目文件，也不截走作者流量。安装、下载、版本更新与最新说明，以原作者提供的项目页面为准。</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/Eloise-Aspen/pando-bridge" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="../../">返回图谱首页 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

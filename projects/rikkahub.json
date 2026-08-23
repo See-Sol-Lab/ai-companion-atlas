@@ -1,0 +1,43 @@
+{
+  "slug": "rikkahub",
+  "order": 11,
+  "name": { "zh": "RikkaHub", "en": "Android LLM Client" },
+  "author": "rikkahub",
+  "sourceUrl": "https://github.com/rikkahub/rikkahub",
+  "hook": "在 Android 上自由切换模型、角色、工具和长期聊天方式。",
+  "summary": "功能完整的原生 Android 多模型客户端，支持多供应商、工作区、MCP、多模态、角色卡、记忆与 Web 访问。",
+  "heroDescription": "RikkaHub 是许多 Android AI 使用方案的基础客户端。它把多家模型接口、消息分支、多模态文档、搜索、MCP、角色卡和基于 PRoot 的 Linux 工作区放进一款原生应用。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["Android", "多模型", "MCP", "角色卡"],
+  "language": "Kotlin",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "MODELS · TOOLS · WORKSPACE",
+  "showcase": {
+    "label": "一个客户端容纳不同模型与玩法",
+    "symbol": "◇",
+    "question": "“模型换了，使用空间也要全部重来吗？”",
+    "comparisons": [
+      { "value": "模型", "label": "多供应商切换" },
+      { "value": "工具", "label": "MCP 与搜索" },
+      { "value": "工作区", "label": "Linux Agent 环境" }
+    ],
+    "note": "把选择权留给使用者，也成为许多二次创作的起点。"
+  },
+  "intro": {
+    "paragraphs": [
+      "RikkaHub 是一款原生 Android LLM 客户端，支持 OpenAI、Anthropic、Gemini 及兼容接口，提供图片、文档、多模态输入、Web 访问、搜索、消息分支、角色卡导入和类似 ChatGPT 的记忆功能。",
+      "它还内置基于 PRoot 的 Linux Agent 工作区，并支持 MCP 和自定义 Agent。用户可以为不同模型设置接口、请求头和参数，在手机上构建从普通聊天到工具执行的多种使用方式。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想在 Android 上统一管理多家模型、角色、MCP 与本地工作区的人。" },
+      { "label": "平台", "text": "Android；部分能力可通过内置 Web 访问延伸到其他设备。" },
+      { "label": "使用方式", "text": "安装官方版本，在应用内添加自己的模型供应商、角色卡和工具。" },
+      { "label": "许可", "text": "AGPL-3.0。" }
+    ]
+  }
+}

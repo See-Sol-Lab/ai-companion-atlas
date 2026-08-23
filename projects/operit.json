@@ -1,0 +1,43 @@
+{
+  "slug": "operit",
+  "order": 12,
+  "name": { "zh": "Operit AI", "en": "Android Agent Platform" },
+  "author": "AAswordman",
+  "sourceUrl": "https://github.com/AAswordman/Operit",
+  "hook": "让手机里的 AI 不止聊天，还能使用设备、终端、浏览器和项目工作区。",
+  "summary": "Android AI Agent 平台，连接云端或本地模型，提供工具调用、设备自动化、长期记忆、角色体系与完整开发环境。",
+  "heroDescription": "Operit 把 AI 对话与 Android 系统能力、文件、浏览器、终端和项目工作区连接起来。它既能作为多角色聊天客户端，也能让 Agent 在授权后完成实际设备操作和开发任务。",
+  "badges": [
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "✦ 人工精选", "tone": "pick" }
+  ],
+  "tags": ["Android Agent", "设备控制", "长期记忆", "本地模型"],
+  "language": "Kotlin / C++",
+  "platform": "Android",
+  "updated": "2026-08-23",
+  "heroOverline": "DEVICE · TERMINAL · MEMORY",
+  "showcase": {
+    "label": "把手机本身变成 Agent 的工作环境",
+    "symbol": "▣",
+    "question": "“TA 能真的在设备上帮我做事吗？”",
+    "comparisons": [
+      { "value": "设备", "label": "系统与应用操作" },
+      { "value": "终端", "label": "Ubuntu 工作区" },
+      { "value": "记忆", "label": "角色与图谱" }
+    ],
+    "note": "聊天、工具和真实执行都发生在同一部手机里。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Operit AI 是一个面向 Android 的开源 Agent 平台。它支持多家云模型、自定义端点、MNN 与 llama.cpp 本地模型，并能在授权后操作文件、网页、应用界面、相机和系统工具。",
+      "应用内包含 Ubuntu 24.04 用户空间、代码编辑与预览、SSH、SFTP、Git 和多种项目模板，同时提供多个记忆空间、混合检索、角色卡、多角色对话、工作流、MCP、Skill 与 ToolPkg 扩展。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想让 Android 设备成为 AI 伴侣与 Agent 的完整工作台，而不满足于纯聊天的人。" },
+      { "label": "平台", "text": "Android；跨平台后续版本 Operit 2 为独立项目。" },
+      { "label": "使用方式", "text": "安装应用、配置云端或本地模型，再按实际任务逐项授权设备与工具能力。" },
+      { "label": "许可", "text": "LGPL-3.0。" }
+    ]
+  }
+}
