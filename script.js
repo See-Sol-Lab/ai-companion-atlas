@@ -60,18 +60,45 @@ const projectCards = projectGrid
   ? Array.from(projectGrid.querySelectorAll(':scope > .project-card'))
   : [];
 
-/* Verified 500★+ slugs already in / entering the Atlas. Future generated cards can
+/* Verified 500★+ slugs in the Atlas as of 2026-08-23. Future generated cards can
    use data-stars and will not need to be added here. */
 const HIGH_STAR_SLUGS = new Set([
+  'claude-code',
+  'whisper',
+  'gpt-sovits',
+  'whisper-cpp',
   'airi',
-  'rikkahub',
-  'operit',
   'astrbot',
-  'chatdollkit',
-  'yoji',
+  'fish-speech',
+  'opencli',
+  'faster-whisper',
+  'index-tts',
+  'cosyvoice',
+  'funasr',
+  'memos',
+  'sensevoice',
   'duix-mobile',
+  'mineflayer',
+  'operit',
+  'rikkahub',
+  'clawd-on-desk',
+  'chatgpt-exporter',
   'n-e-k-o',
-  'neko'
+  'bitterbot-desktop',
+  'roboto-origin',
+  'lingchat',
+  'openmmo',
+  'cyberboss',
+  'ombre-brain',
+  'chatdollkit',
+  'whale-phone',
+  'ai-virtual-phone',
+  'aionshome',
+  'fount',
+  'memex-journal',
+  'yoji',
+  'shinsekai',
+  'ai-fishing-game'
 ]);
 
 const cardSlug = (card) => {

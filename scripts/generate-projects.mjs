@@ -70,8 +70,8 @@ function validate(project) {
   }
 }
 
-function renderBadges(project, classPrefix) {
-  return project.badges.map((badge) => {
+function renderBadges(badges, classPrefix) {
+  return badges.map((badge) => {
     const toneClass = classPrefix === 'project-badge' ? `badge-${badge.tone}` : `${classPrefix}-${badge.tone}`;
     return `<span class="${classPrefix} ${toneClass}">${escapeHtml(badge.label)}</span>`;
   }).join('');
@@ -81,7 +81,10 @@ function renderCard(project) {
   const tags = project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
   const meta = [project.language, project.platform, `${project.dateLabel ?? '核验'} ${project.updated}`]
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
-  const badges = renderBadges(project, 'project-badge');
+  const cardBadges = project.badges.length <= 5
+    ? project.badges
+    : [...project.badges].sort((left, right) => [...left.label].length - [...right.label].length).slice(0, 5);
+  const badges = renderBadges(cardBadges, 'project-badge');
 
   const editorialMetadata = [
     project.editorPick === true ? ' data-editor-pick="true"' : '',
@@ -104,7 +107,7 @@ function renderCard(project) {
 }
 
 function renderDetail(project) {
-  const statuses = `${renderBadges(project, 'status')}<span class="status">${escapeHtml(project.platform)}</span>`;
+  const statuses = `${renderBadges(project.badges, 'status')}<span class="status">${escapeHtml(project.platform)}</span>`;
   const comparisons = project.showcase.comparisons.map((item, index) => {
     const separator = index === 0 ? '' : '\n            <i>≠</i>\n            ';
     return `${separator}<span><b>${escapeHtml(item.value)}</b><small>${escapeHtml(item.label)}</small></span>`;
