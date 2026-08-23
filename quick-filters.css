@@ -45,3 +45,148 @@
   .atlas-quick-filter-title{font-size:18px}
   .atlas-quick-filter-subtitle{margin-top:6px;font-size:10px}
 }
+
+/* Project honor medals: editorial distinction, separate from ordinary taxonomy badges. */
+.project-template .project-tags{align-items:center}
+.project-card[data-editor-pick="true"] .project-tags::before,
+.project-card:is(
+  :has(.project-detail-button[href="./projects/claude-code/"]),
+  :has(.project-detail-button[href="./projects/whisper/"]),
+  :has(.project-detail-button[href="./projects/gpt-sovits/"]),
+  :has(.project-detail-button[href="./projects/whisper-cpp/"]),
+  :has(.project-detail-button[href="./projects/airi/"]),
+  :has(.project-detail-button[href="./projects/astrbot/"]),
+  :has(.project-detail-button[href="./projects/fish-speech/"]),
+  :has(.project-detail-button[href="./projects/opencli/"]),
+  :has(.project-detail-button[href="./projects/faster-whisper/"]),
+  :has(.project-detail-button[href="./projects/index-tts/"]),
+  :has(.project-detail-button[href="./projects/cosyvoice/"]),
+  :has(.project-detail-button[href="./projects/funasr/"]),
+  :has(.project-detail-button[href="./projects/memos/"]),
+  :has(.project-detail-button[href="./projects/sensevoice/"]),
+  :has(.project-detail-button[href="./projects/duix-mobile/"]),
+  :has(.project-detail-button[href="./projects/mineflayer/"]),
+  :has(.project-detail-button[href="./projects/operit/"]),
+  :has(.project-detail-button[href="./projects/rikkahub/"]),
+  :has(.project-detail-button[href="./projects/clawd-on-desk/"]),
+  :has(.project-detail-button[href="./projects/chatgpt-exporter/"]),
+  :has(.project-detail-button[href="./projects/n-e-k-o/"]),
+  :has(.project-detail-button[href="./projects/bitterbot-desktop/"]),
+  :has(.project-detail-button[href="./projects/roboto-origin/"]),
+  :has(.project-detail-button[href="./projects/lingchat/"]),
+  :has(.project-detail-button[href="./projects/openmmo/"]),
+  :has(.project-detail-button[href="./projects/cyberboss/"]),
+  :has(.project-detail-button[href="./projects/ombre-brain/"]),
+  :has(.project-detail-button[href="./projects/chatdollkit/"]),
+  :has(.project-detail-button[href="./projects/whale-phone/"]),
+  :has(.project-detail-button[href="./projects/ai-virtual-phone/"]),
+  :has(.project-detail-button[href="./projects/aionshome/"]),
+  :has(.project-detail-button[href="./projects/fount/"]),
+  :has(.project-detail-button[href="./projects/memex-journal/"]),
+  :has(.project-detail-button[href="./projects/yoji/"]),
+  :has(.project-detail-button[href="./projects/shinsekai/"]),
+  :has(.project-detail-button[href="./projects/ai-fishing-game/"])
+) .project-tags::after{
+  content:"";
+  display:block;
+  flex:0 0 46px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  filter:drop-shadow(0 5px 8px rgba(40,50,86,.13));
+  transition:transform .2s ease,filter .2s ease;
+}
+.project-card[data-editor-pick="true"] .project-tags::before{
+  order:90;
+  margin-left:auto;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjI5JSIgY3k9IjIyJSIgcj0iODAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmM2Q4ZDYiLz48c3RvcCBvZmZzZXQ9Ii40IiBzdG9wLWNvbG9yPSIjYzk4ZTkxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGU1ZjcyIi8+PC9yYWRpYWxHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InJpbSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZjBlNiIvPjxzdG9wIG9mZnNldD0iLjIzIiBzdG9wLWNvbG9yPSIjZDlhMTlkIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2YyYzliYiIvPjxzdG9wIG9mZnNldD0iLjc3IiBzdG9wLWNvbG9yPSIjYTg2ZjdjIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjdkN2M4Ii8+PC9saW5lYXJHcmFkaWVudD48ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii0zMCUiIHk9Ii0zMCUiIHdpZHRoPSIxNjAlIiBoZWlnaHQ9IjE2MCUiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIyIiBzdGREZXZpYXRpb249IjIuMiIgZmxvb2QtY29sb3I9IiM2YjQyNTQiIGZsb29kLW9wYWNpdHk9Ii4yOCIvPjwvZmlsdGVyPjwvZGVmcz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyOCIgZmlsbD0idXJsKCNyaW0pIiBmaWx0ZXI9InVybCgjc2hhZG93KSIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI0LjUiIGZpbGw9InVybCgjYmcpIiBzdHJva2U9IiNmNWQxYzUiIHN0cm9rZS13aWR0aD0iMS4yIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjEuMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjE3Ii8+PHBhdGggZD0iTTE3LjcgMzkuOGMtNC44LTQuOC02LjEtMTAuNi00LjEtMTdNMTguMiAzNy4zbC01LjEtMS4yTTE1LjggMzMuNWwtNC4zLTIuM00xNC41IDI5LjJsLTMuNS0zLjJNMTQuMSAyNC44bC0yLjUtNE00Ni4zIDM5LjhjNC44LTQuOCA2LjEtMTAuNiA0LjEtMTdNNDUuOCAzNy4zbDUuMS0xLjJNNDguMiAzMy41bDQuMy0yLjNNNDkuNSAyOS4ybDMuNS0zLjJNNDkuOSAyNC44bDIuNS00IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmU3ZGQiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzIgMTguN2MxLjggNy40IDUuNiAxMS4yIDEzIDEzLTcuNCAxLjgtMTEuMiA1LjYtMTMgMTMtMS44LTcuNC01LjYtMTEuMi0xMy0xMyA3LjQtMS44IDExLjItNS42IDEzLTEzeiIgZmlsbD0iI2ZmZjBlOCIgc3Ryb2tlPSIjZjhkOGNlIiBzdHJva2Utd2lkdGg9Ii43Ii8+PGNpcmNsZSBjeD0iNDIuNSIgY3k9IjIxLjUiIHI9IjIuMSIgZmlsbD0iI2ZmZThkZiIgb3BhY2l0eT0iLjkiLz48cGF0aCBkPSJNMjAgMTEuNWM4LjItNSAxNy45LTQuNCAyNC43LjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=")
+}
+.project-card:is(
+  :has(.project-detail-button[href="./projects/claude-code/"]),
+  :has(.project-detail-button[href="./projects/whisper/"]),
+  :has(.project-detail-button[href="./projects/gpt-sovits/"]),
+  :has(.project-detail-button[href="./projects/whisper-cpp/"]),
+  :has(.project-detail-button[href="./projects/airi/"]),
+  :has(.project-detail-button[href="./projects/astrbot/"]),
+  :has(.project-detail-button[href="./projects/fish-speech/"]),
+  :has(.project-detail-button[href="./projects/opencli/"]),
+  :has(.project-detail-button[href="./projects/faster-whisper/"]),
+  :has(.project-detail-button[href="./projects/index-tts/"]),
+  :has(.project-detail-button[href="./projects/cosyvoice/"]),
+  :has(.project-detail-button[href="./projects/funasr/"]),
+  :has(.project-detail-button[href="./projects/memos/"]),
+  :has(.project-detail-button[href="./projects/sensevoice/"]),
+  :has(.project-detail-button[href="./projects/duix-mobile/"]),
+  :has(.project-detail-button[href="./projects/mineflayer/"]),
+  :has(.project-detail-button[href="./projects/operit/"]),
+  :has(.project-detail-button[href="./projects/rikkahub/"]),
+  :has(.project-detail-button[href="./projects/clawd-on-desk/"]),
+  :has(.project-detail-button[href="./projects/chatgpt-exporter/"]),
+  :has(.project-detail-button[href="./projects/n-e-k-o/"]),
+  :has(.project-detail-button[href="./projects/bitterbot-desktop/"]),
+  :has(.project-detail-button[href="./projects/roboto-origin/"]),
+  :has(.project-detail-button[href="./projects/lingchat/"]),
+  :has(.project-detail-button[href="./projects/openmmo/"]),
+  :has(.project-detail-button[href="./projects/cyberboss/"]),
+  :has(.project-detail-button[href="./projects/ombre-brain/"]),
+  :has(.project-detail-button[href="./projects/chatdollkit/"]),
+  :has(.project-detail-button[href="./projects/whale-phone/"]),
+  :has(.project-detail-button[href="./projects/ai-virtual-phone/"]),
+  :has(.project-detail-button[href="./projects/aionshome/"]),
+  :has(.project-detail-button[href="./projects/fount/"]),
+  :has(.project-detail-button[href="./projects/memex-journal/"]),
+  :has(.project-detail-button[href="./projects/yoji/"]),
+  :has(.project-detail-button[href="./projects/shinsekai/"]),
+  :has(.project-detail-button[href="./projects/ai-fishing-game/"])
+) .project-tags::after{
+  order:91;
+  margin-left:8px;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjMwJSIgY3k9IjI0JSIgcj0iNzglIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM2ZjhmYzciLz48c3RvcCBvZmZzZXQ9Ii4zOCIgc3RvcC1jb2xvcj0iIzMxNTQ4NiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0MmM1MiIvPjwvcmFkaWFsR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJyaW0iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmMWRmYWEiLz48c3RvcCBvZmZzZXQ9Ii4yNCIgc3RvcC1jb2xvcj0iI2I5YzZkOSIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNmMGQ4OTciLz48c3RvcCBvZmZzZXQ9Ii43NyIgc3RvcC1jb2xvcj0iIzg0OTdiMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U4ZDQ5YSIvPjwvbGluZWFyR3JhZGllbnQ+PGZpbHRlciBpZD0ic2hhZG93IiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNjAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMiIgc3RkRGV2aWF0aW9uPSIyLjIiIGZsb29kLWNvbG9yPSIjMTQyNDQwIiBmbG9vZC1vcGFjaXR5PSIuMzQiLz48L2ZpbHRlcj48L2RlZnM+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjgiIGZpbGw9InVybCgjcmltKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyNC41IiBmaWxsPSJ1cmwoI2JnKSIgc3Ryb2tlPSIjZDljNDg2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xNiIvPjxwYXRoIGQ9Ik0xNy43IDM5LjhjLTQuOC00LjgtNi4xLTEwLjYtNC4xLTE3TTE4LjIgMzcuM2wtNS4xLTEuMk0xNS44IDMzLjVsLTQuMy0yLjNNMTQuNSAyOS4ybC0zLjUtMy4yTTE0LjEgMjQuOGwtMi41LTRNNDYuMyAzOS44YzQuOC00LjggNi4xLTEwLjYgNC4xLTE3TTQ1LjggMzcuM2w1LjEtMS4yTTQ4LjIgMzMuNWw0LjMtMi4zTTQ5LjUgMjkuMmwzLjUtMy4yTTQ5LjkgMjQuOGwyLjUtNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTVjZjhjIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTMyIDE4LjdsMy4zIDYuOCA3LjUgMS4xLTUuNCA1LjIgMS4zIDcuNC02LjctMy41LTYuNyAzLjUgMS4zLTcuNC01LjQtNS4yIDcuNS0xLjF6IiBmaWxsPSIjZWZkNThkIiBzdHJva2U9IiNmZmY0YzgiIHN0cm9rZS13aWR0aD0iLjciLz48cGF0aCBkPSJNMjAgMTEuNWM4LjItNSAxNy45LTQuNCAyNC43LjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yOCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=")
+}
+.project-card:not([data-editor-pick="true"]):is(
+  :has(.project-detail-button[href="./projects/claude-code/"]),
+  :has(.project-detail-button[href="./projects/whisper/"]),
+  :has(.project-detail-button[href="./projects/gpt-sovits/"]),
+  :has(.project-detail-button[href="./projects/whisper-cpp/"]),
+  :has(.project-detail-button[href="./projects/airi/"]),
+  :has(.project-detail-button[href="./projects/astrbot/"]),
+  :has(.project-detail-button[href="./projects/fish-speech/"]),
+  :has(.project-detail-button[href="./projects/opencli/"]),
+  :has(.project-detail-button[href="./projects/faster-whisper/"]),
+  :has(.project-detail-button[href="./projects/index-tts/"]),
+  :has(.project-detail-button[href="./projects/cosyvoice/"]),
+  :has(.project-detail-button[href="./projects/funasr/"]),
+  :has(.project-detail-button[href="./projects/memos/"]),
+  :has(.project-detail-button[href="./projects/sensevoice/"]),
+  :has(.project-detail-button[href="./projects/duix-mobile/"]),
+  :has(.project-detail-button[href="./projects/mineflayer/"]),
+  :has(.project-detail-button[href="./projects/operit/"]),
+  :has(.project-detail-button[href="./projects/rikkahub/"]),
+  :has(.project-detail-button[href="./projects/clawd-on-desk/"]),
+  :has(.project-detail-button[href="./projects/chatgpt-exporter/"]),
+  :has(.project-detail-button[href="./projects/n-e-k-o/"]),
+  :has(.project-detail-button[href="./projects/bitterbot-desktop/"]),
+  :has(.project-detail-button[href="./projects/roboto-origin/"]),
+  :has(.project-detail-button[href="./projects/lingchat/"]),
+  :has(.project-detail-button[href="./projects/openmmo/"]),
+  :has(.project-detail-button[href="./projects/cyberboss/"]),
+  :has(.project-detail-button[href="./projects/ombre-brain/"]),
+  :has(.project-detail-button[href="./projects/chatdollkit/"]),
+  :has(.project-detail-button[href="./projects/whale-phone/"]),
+  :has(.project-detail-button[href="./projects/ai-virtual-phone/"]),
+  :has(.project-detail-button[href="./projects/aionshome/"]),
+  :has(.project-detail-button[href="./projects/fount/"]),
+  :has(.project-detail-button[href="./projects/memex-journal/"]),
+  :has(.project-detail-button[href="./projects/yoji/"]),
+  :has(.project-detail-button[href="./projects/shinsekai/"]),
+  :has(.project-detail-button[href="./projects/ai-fishing-game/"])
+) .project-tags::after{margin-left:auto}
+.project-card:hover .project-tags::before,.project-card:hover .project-tags::after{transform:translateY(-1px) scale(1.045);filter:drop-shadow(0 7px 10px rgba(40,50,86,.2)) saturate(1.06)}
+
+@media(max-width:820px){
+  .project-card[data-editor-pick="true"] .project-tags::before,
+  .project-card .project-tags::after{flex-basis:40px;width:40px;height:40px}
+}
