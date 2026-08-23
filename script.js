@@ -3,6 +3,11 @@ quickFilterStyles.rel = 'stylesheet';
 quickFilterStyles.href = './quick-filters.css?v=20260823-1';
 document.head.appendChild(quickFilterStyles);
 
+const honorMedalStyles = document.createElement('link');
+honorMedalStyles.rel = 'stylesheet';
+honorMedalStyles.href = './honor-medals.css?v=20260823-1';
+document.head.appendChild(honorMedalStyles);
+
 const headerCta = document.querySelector('.header-cta');
 if (headerCta) headerCta.remove();
 
@@ -173,6 +178,11 @@ const isHighStarCard = (card) => {
 
 const isEditorPickCard = (card) =>
   card.dataset.editorPick === 'true' || Boolean(card.querySelector('.badge-pick'));
+
+projectCards.forEach((card) => {
+  card.classList.toggle('has-high-star-honor', isHighStarCard(card));
+  card.classList.toggle('has-editor-pick-honor', isEditorPickCard(card));
+});
 
 let catalogFilter = 'all';
 let quickFilters = null;
