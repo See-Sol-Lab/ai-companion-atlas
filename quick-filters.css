@@ -3,11 +3,21 @@
 .atlas-quick-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(calc(100% - 80px),1540px);margin:16px auto 0}
 .atlas-quick-filter{appearance:none;border:1px solid rgba(88,108,166,.16);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(246,244,252,.8));box-shadow:0 10px 30px rgba(34,52,96,.075);color:#243b68;min-height:92px;padding:18px 20px;text-align:left;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease}
 .atlas-quick-filter:hover{transform:translateY(-2px);border-color:rgba(93,131,234,.34);box-shadow:0 16px 36px rgba(34,52,96,.11)}
-.atlas-quick-filter.is-active{border-color:rgba(102,112,218,.42);background:radial-gradient(circle at 92% 10%,rgba(163,126,230,.2),transparent 42%),linear-gradient(145deg,rgba(255,255,255,.96),rgba(238,239,255,.9));box-shadow:0 15px 38px rgba(84,91,190,.15)}
+.atlas-quick-filter.is-active{box-shadow:0 15px 38px rgba(84,91,190,.15)}
 .atlas-quick-filter-title{font-family:var(--serif);font-size:23px;line-height:1.08;font-weight:550;letter-spacing:-.025em;color:#1b315e}
 .atlas-quick-filter-subtitle{margin-top:9px;font-size:11px;line-height:1.45;font-weight:600;color:#7483a3;letter-spacing:.01em}
-.atlas-quick-filter[data-catalog-filter="high-star"]:before{content:'✦';position:absolute;right:16px;top:13px;color:#6689e9;font-size:15px;opacity:.72}
-.atlas-quick-filter[data-catalog-filter="editor-pick"]:before{content:'◇';position:absolute;right:16px;top:13px;color:#9b70d8;font-size:16px;opacity:.72}
+.atlas-quick-filter[data-catalog-filter="high-star"]{border-color:rgba(104,130,193,.42);background:radial-gradient(circle at 92% 9%,rgba(125,145,230,.34),transparent 42%),linear-gradient(145deg,#1c3561,#263f70 58%,#3b467b);box-shadow:0 13px 32px rgba(24,47,91,.2)}
+.atlas-quick-filter[data-catalog-filter="high-star"] .atlas-quick-filter-title{color:#fff}
+.atlas-quick-filter[data-catalog-filter="high-star"] .atlas-quick-filter-subtitle{color:rgba(239,244,255,.76)}
+.atlas-quick-filter[data-catalog-filter="high-star"]:before{content:'✦';position:absolute;right:16px;top:13px;color:#e4eaff;font-size:15px;opacity:.88}
+.atlas-quick-filter[data-catalog-filter="high-star"]:hover{border-color:rgba(175,194,241,.66);background:radial-gradient(circle at 92% 9%,rgba(145,159,238,.4),transparent 42%),linear-gradient(145deg,#223d6d,#2e4a7e 58%,#454f88);box-shadow:0 17px 38px rgba(24,47,91,.26)}
+.atlas-quick-filter[data-catalog-filter="high-star"].is-active{border-color:rgba(211,222,255,.84);box-shadow:0 0 0 2px rgba(126,151,224,.2),0 17px 40px rgba(24,47,91,.28)}
+.atlas-quick-filter[data-catalog-filter="editor-pick"]{border-color:rgba(177,116,104,.28);background:radial-gradient(circle at 91% 8%,rgba(255,255,255,.62),transparent 43%),linear-gradient(145deg,#f6e7df,#e9c9be 60%,#dcb4ae);box-shadow:0 12px 30px rgba(104,63,69,.12)}
+.atlas-quick-filter[data-catalog-filter="editor-pick"] .atlas-quick-filter-title{color:#1b315e}
+.atlas-quick-filter[data-catalog-filter="editor-pick"] .atlas-quick-filter-subtitle{color:#6f6176}
+.atlas-quick-filter[data-catalog-filter="editor-pick"]:before{content:'◇';position:absolute;right:16px;top:13px;color:#805879;font-size:16px;opacity:.76}
+.atlas-quick-filter[data-catalog-filter="editor-pick"]:hover{border-color:rgba(160,91,102,.4);background:radial-gradient(circle at 91% 8%,rgba(255,255,255,.7),transparent 43%),linear-gradient(145deg,#f9ece5,#edcec3 60%,#dfb9b2);box-shadow:0 16px 36px rgba(104,63,69,.17)}
+.atlas-quick-filter[data-catalog-filter="editor-pick"].is-active{border-color:rgba(139,78,99,.5);box-shadow:0 0 0 2px rgba(173,111,121,.14),0 16px 38px rgba(104,63,69,.18)}
 .atlas-quick-filter{position:relative}
 .catalog-empty-state{grid-column:1/-1;min-height:180px;display:grid;place-items:center;text-align:center;padding:32px;border:1px dashed rgba(88,108,166,.22);border-radius:16px;background:rgba(255,255,255,.5);color:#71809f;font-size:13px;line-height:1.7}
 
