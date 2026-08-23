@@ -1,0 +1,50 @@
+/* Generated Atlas honor medals: real 3D assets, kept deliberately small so they read as pins rather than card content. */
+.project-template .project-tags{align-items:center;position:relative}
+
+/* Reserve a fixed right-side medal rail so honors never participate in tag wrapping. */
+.project-card.has-editor-pick-honor .project-tags,
+.project-card.has-high-star-honor .project-tags{padding-right:44px!important}
+.project-card.has-editor-pick-honor.has-high-star-honor .project-tags{padding-right:82px!important}
+
+.project-card.has-editor-pick-honor .project-tags::before,
+.project-card.has-high-star-honor .project-tags::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  display:block;
+  width:38px!important;
+  height:38px!important;
+  border-radius:0!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:contain!important;
+  filter:drop-shadow(0 3px 5px rgba(39,49,82,.14));
+  transform:translateY(-50%);
+  transition:transform .18s ease,filter .18s ease;
+  pointer-events:none;
+}
+
+/* A single medal sits at the far right. */
+.project-card.has-editor-pick-honor .project-tags::before{
+  right:0;
+  background-image:url("./assets/honor-editor-pick.webp")!important;
+}
+
+.project-card.has-high-star-honor .project-tags::after{
+  right:0;
+  background-image:url("./assets/honor-high-star.webp")!important;
+}
+
+/* When both honors exist, keep the rose-gold editor pick to the left of the blue high-star medal. */
+.project-card.has-editor-pick-honor.has-high-star-honor .project-tags::before{right:44px}
+
+.project-card:hover.has-editor-pick-honor .project-tags::before,
+.project-card:hover.has-high-star-honor .project-tags::after{
+  transform:translateY(calc(-50% - 1px)) scale(1.025);
+  filter:drop-shadow(0 4px 7px rgba(39,49,82,.19));
+}
+
+@media (prefers-reduced-motion:reduce){
+  .project-card.has-editor-pick-honor .project-tags::before,
+  .project-card.has-high-star-honor .project-tags::after{transition:none}
+}
