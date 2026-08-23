@@ -1,16 +1,16 @@
-/* Desktop refinement pass: preserve the original visual language, tighten layout scale, restore readable typography. */
+/* Desktop refinement pass: preserve the original visual language, tighten scale and information density. */
 @media (min-width:1181px){
   body{background:linear-gradient(180deg,#f4f1ec 0,#f5f3f7 52%,#f7f5f1 100%)}
   .page-shell{position:relative;width:min(calc(100% - 40px),1420px);margin:0 auto;overflow:hidden;box-shadow:0 0 0 1px rgba(79,94,132,.06),0 24px 80px rgba(28,44,82,.06)}
 
-  .site-header{top:0;width:min(calc(100% - 48px),1324px);height:76px;grid-template-columns:318px minmax(560px,760px);justify-content:space-between;align-items:center;gap:28px}
-  .brand{display:flex;align-items:center;gap:13px;font:650 13px var(--mono);letter-spacing:.17em}
+  .site-header{top:0;width:min(calc(100% - 48px),1324px);height:76px;grid-template-columns:318px minmax(620px,1fr);gap:18px}
+  .brand{gap:13px;font-size:13px;letter-spacing:.17em}
   .brand-mark{width:28px;height:28px}
   .brand-project{font-size:11px;letter-spacing:.14em}
   .brand-divider{height:20px}
 
-  .main-nav{justify-self:end;width:min(100%,760px);display:grid;grid-template-columns:repeat(5,1fr);gap:7px;padding:6px;border:1px solid rgba(255,255,255,.36);border-radius:15px;background:linear-gradient(110deg,rgba(255,255,255,.38),rgba(218,216,248,.2));box-shadow:0 8px 28px rgba(32,48,91,.08),inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(18px) saturate(130%);font-size:14px}
-  .main-nav a{display:flex;align-items:center;justify-content:center;min-height:38px;padding:0 12px;border:1px solid rgba(255,255,255,.36);border-radius:10px;color:#31496f;background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(231,228,255,.32));box-shadow:0 3px 12px rgba(45,61,101,.045);transition:transform .2s,background .2s,border-color .2s,color .2s}
+  .main-nav{justify-self:end;width:min(100%,880px);display:grid;grid-template-columns:repeat(5,1fr);gap:7px;padding:6px;border:1px solid rgba(255,255,255,.36);border-radius:15px;background:linear-gradient(110deg,rgba(255,255,255,.38),rgba(218,216,248,.2));box-shadow:0 8px 28px rgba(32,48,91,.08),inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(18px) saturate(130%);font-size:14px}
+  .main-nav a{display:flex;align-items:center;justify-content:center;min-height:40px;padding:0 12px;border:1px solid rgba(255,255,255,.36);border-radius:10px;color:#31496f;background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(231,228,255,.32));box-shadow:0 3px 12px rgba(45,61,101,.045);transition:transform .2s,background .2s,border-color .2s,color .2s}
   .main-nav a:nth-child(2){background:linear-gradient(135deg,rgba(238,241,255,.73),rgba(213,204,252,.38))}
   .main-nav a:nth-child(3){background:linear-gradient(135deg,rgba(255,248,241,.72),rgba(239,217,236,.32))}
   .main-nav a:nth-child(4){background:linear-gradient(135deg,rgba(255,242,237,.76),rgba(239,192,181,.27));color:#6f4851}
@@ -22,13 +22,13 @@
   .hero{min-height:570px;grid-template-columns:56% 44%}
   .hero:after{left:44%;height:34%}
   .hero-copy{align-self:center;max-width:none;padding:86px 28px 44px 48px}
-  .eyebrow{gap:9px;padding:8px 13px;margin-bottom:18px;font-size:11px}
+  .eyebrow{gap:9px;padding:8px 13px;margin-bottom:16px;font-size:11px}
   .eyebrow-dot{width:6px;height:6px;box-shadow:0 0 0 5px rgba(93,131,234,.1)}
-  .hero-kicker{margin:0 0 10px;font-size:10px;letter-spacing:.17em}
+  .hero-kicker{margin:0 0 8px;font-size:10px;letter-spacing:.17em}
   .hero h1{font-size:clamp(50px,4.15vw,70px);line-height:.95;letter-spacing:-.055em;white-space:nowrap}
   .hero h1 br{display:none}
-  .hero-title-en{margin:13px 0 0;font-size:13px;letter-spacing:.18em}
-  .hero-lead{margin:20px 0 0;font-size:clamp(20px,1.7vw,27px)}
+  .hero-title-en{margin:11px 0 0;font-size:13px;letter-spacing:.18em}
+  .hero-lead{margin:18px 0 0;font-size:clamp(20px,1.7vw,27px)}
   .hero-description{max-width:650px;margin:14px 0 0;font-size:15px;line-height:1.8}
   .hero-actions{gap:14px;margin-top:24px}
   .button{min-height:48px;padding:0 24px;border-radius:11px;font-size:14px;gap:14px}
@@ -41,15 +41,15 @@
   .horizon{bottom:15%;height:68px}
 
   .capability-strip{margin:-18px 0 0 48px;width:min(calc(100% - 250px),1180px);border-radius:13px}
-  .capability-card{min-height:104px;grid-template-columns:58px 1fr;gap:17px;padding:20px 24px}
-  .capability-card:not(:last-child):after{top:22px;bottom:22px}
+  .capability-card{min-height:112px;grid-template-columns:58px 1fr;gap:17px;padding:22px 26px}
+  .capability-card:not(:last-child):after{top:24px;bottom:24px}
   .capability-icon{width:54px;height:54px;font-size:24px}
   .capability-card h2{margin-bottom:6px;font-size:20px}
   .capability-card h2 small{font-size:9px}
   .capability-card p{font-size:12px;line-height:1.55}
 
   .taxonomy,.directory,.plain-language,.submit-section,.site-footer{width:min(calc(100% - 96px),1260px)}
-  .taxonomy{width:min(calc(100% - 250px),1180px);margin:18px 0 0 48px;grid-template-columns:176px 1fr;min-height:72px;padding:12px 16px;border-radius:12px}
+  .taxonomy{width:min(calc(100% - 250px),1180px);margin:16px 0 0 48px;grid-template-columns:170px 1fr;min-height:74px;padding:12px 18px;border-radius:12px}
   .section-label{gap:12px}
   .section-star{font-size:20px}
   .section-label small,.section-overline{font-size:9px}
@@ -59,33 +59,31 @@
   .tag{padding:9px 13px;font-size:11px}
   .tag span{font-size:11px}
 
-  .directory{margin-top:42px}
+  .directory{margin-top:46px}
   .section-heading{margin-bottom:18px}
   .section-heading .section-label h2{font-size:27px}
   .text-link{font-size:12px}
-  .project-grid{gap:16px}
-  .project-card{min-height:206px;padding:22px;border-radius:14px}
-  .project-topline{margin-bottom:16px}
+  .project-grid{gap:18px}
+  .project-card{min-height:225px;padding:24px;border-radius:16px}
+  .project-topline{margin-bottom:18px}
   .project-symbol{width:46px;height:46px;border-radius:12px;font-size:20px}
   .project-state{font-size:8px}
   .project-card h3{margin-bottom:8px;font-size:22px}
   .project-card h3 small{font-size:10px}
   .project-card p{font-size:13px;line-height:1.7}
-  .project-tags{gap:7px;margin-top:16px}
+  .project-tags{gap:7px;margin-top:18px}
   .project-tags span{padding:5px 9px;font-size:9px}
 
-  .plain-language{margin-top:64px;gap:46px;padding:46px;border-radius:23px}
+  .plain-language{margin-top:72px;gap:60px;padding:58px;border-radius:28px}
   .plain-copy h2,.submit-section h2,.about h2{font-size:clamp(30px,3vw,47px)}
   .plain-copy p:last-child,.submit-section p,.about p{font-size:14px;line-height:1.8}
   .wish-grid{gap:12px}
   .wish-grid a{min-height:62px;padding:0 19px;border-radius:12px;font-size:13px}
-  .submit-section{margin-top:22px;gap:32px;padding:40px 46px;border-radius:22px}
+  .submit-section{margin-top:26px;gap:40px;padding:50px 58px;border-radius:26px}
   .submit-section h2{font-size:clamp(28px,2.6vw,42px)}
-  .submit-note{font-size:10px}
-  .about{width:min(calc(100% - 64px),980px);margin:72px auto 76px;grid-template-columns:72px 1fr;gap:22px}
+  .about{width:min(calc(100% - 64px),980px);margin:86px auto 90px;grid-template-columns:90px 1fr;gap:28px}
   .about-mark{width:72px;height:72px;font-size:24px}
-  .site-footer{min-height:104px;font-size:11px}
-  .footer-brand span{font-size:9px}
+  .site-footer{min-height:130px;font-size:11px}
 }
 
 /* Keep the original mobile composition and allow the Chinese title to wrap naturally. */
