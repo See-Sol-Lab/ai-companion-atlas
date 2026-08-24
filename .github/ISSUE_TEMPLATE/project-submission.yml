@@ -1,0 +1,26 @@
+name: 推荐一个项目
+description: 向 AI Companion Atlas 推荐值得被中文用户看见的项目、工具、教程或独立实验
+title: "[项目推荐] "
+body:
+  - type: input
+    id: project-name
+    attributes:
+      label: 项目名称
+      placeholder: 项目的中文名或英文名
+    validations:
+      required: true
+  - type: input
+    id: project-url
+    attributes:
+      label: 项目链接
+      description: GitHub、小红书、博客、作者页面或其他可供人工核验的原始来源
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 推荐理由
+      description: 请说明它解决了什么问题，以及为什么值得被更多人看见
+    validations:
+      required: true

@@ -11,6 +11,7 @@ button, input { font: inherit; }
 header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
 header p { margin: 0; color: #7182a4; font: 650 10px Consolas, monospace; letter-spacing: .14em; }
 h1 { margin: 7px 0 0; font: 500 46px Georgia, "Songti SC", serif; }
+header nav { display: flex; gap: 18px; }
 header a { color: #526a9d; text-decoration: none; }
 .admin-auth { margin-top: 28px; padding: 24px; border: 1px solid rgba(72,91,137,.14); border-radius: 18px; background: rgba(255,255,255,.72); }
 .admin-auth label { display: block; margin-bottom: 9px; font-weight: 700; }
@@ -27,9 +28,11 @@ header a { color: #526a9d; text-decoration: none; }
 .review-heading span, .review-heading time, .review-platform { color: #7b89a4; font-size: 12px; }
 .review-content { margin: 18px 0 0; white-space: pre-wrap; line-height: 1.75; }
 .review-platform { margin: 12px 0 0; }
+.review-link { display: block; margin-top: 16px; color: #4f6aa2; font-size: 12px; overflow-wrap: anywhere; }
 .review-actions { display: flex; gap: 8px; margin-top: 20px; }
 .review-actions button { min-width: 78px; padding: 9px 14px; }
 .review-actions .approve { color: white; background: #577fe2; }
+.review-actions .review { color: white; background: #577fe2; }
 .review-actions .delete { color: #9b4459; background: #f6e8eb; }
 .review-actions button:disabled { cursor: wait; opacity: .55; }
 .review-empty { color: #7b89a4; }
@@ -37,6 +40,7 @@ header a { color: #526a9d; text-decoration: none; }
 @media (max-width: 620px) {
   .admin-shell { width: calc(100% - 28px); padding-top: 28px; }
   header { align-items: flex-start; }
+  header nav { flex-direction: column; gap: 8px; text-align: right; }
   h1 { font-size: 38px; }
   .admin-auth div, .review-heading { flex-direction: column; }
   .admin-auth button { min-height: 44px; }

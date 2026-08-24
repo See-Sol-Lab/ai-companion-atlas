@@ -1,0 +1,37 @@
+.submit-button-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.submit-online-toggle { border: 1px solid rgba(255, 255, 255, .52); color: #fff; background: rgba(255, 255, 255, .09); font: inherit; cursor: pointer; }
+.submission-panel { width: min(calc(100% - 80px), 1540px); margin: 16px auto 0; padding: 36px 42px; border: 1px solid rgba(82, 103, 151, .15); border-radius: 24px; background: radial-gradient(circle at 86% 8%, rgba(165, 122, 231, .15), transparent 30%), rgba(255, 255, 255, .76); box-shadow: 0 16px 48px rgba(25, 44, 91, .08); }
+.submission-panel[hidden], .submission-form[hidden], .submission-success[hidden] { display: none; }
+.submission-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.submission-heading h2 { margin: 6px 0 0; font: 500 clamp(28px, 2.6vw, 40px) Georgia, "Songti SC", serif; }
+.submission-close { border: 0; padding: 8px 0; color: #61759f; background: transparent; font: inherit; cursor: pointer; }
+.submission-intro { max-width: 78ch; margin: 15px 0 0; color: #6c7c99; font-size: 13px; line-height: 1.75; }
+.submission-form { margin-top: 24px; padding-top: 22px; border-top: 1px solid rgba(72, 91, 137, .12); }
+.submission-form-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 14px; }
+.submission-form label { display: grid; gap: 8px; color: #52678f; font-size: 12px; font-weight: 650; }
+.submission-form input, .submission-form textarea { width: 100%; border: 1px solid rgba(74, 94, 144, .2); border-radius: 11px; color: #132347; background: rgba(255, 255, 255, .88); font: 400 13px Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; outline: none; }
+.submission-form input { min-height: 44px; padding: 0 13px; }
+.submission-form textarea { min-height: 132px; padding: 13px; resize: vertical; line-height: 1.65; }
+.submission-form input:focus, .submission-form textarea:focus { border-color: rgba(87, 122, 210, .62); box-shadow: 0 0 0 3px rgba(87, 122, 210, .08); }
+.submission-reason-field { margin-top: 14px; }
+.submission-form-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-top: 14px; }
+.submission-form-bottom > div { display: grid; gap: 8px; }
+.submission-count { color: #8995ac; font-size: 10px; }
+.submission-turnstile { width: min(100%, 300px); }
+.submission-feedback { min-height: 20px; margin: 11px 0 0; color: #687b9f; font-size: 12px; }
+.submission-form button { border: 0; cursor: pointer; }
+.submission-form button:disabled { cursor: wait; opacity: .48; transform: none; }
+.submission-success { margin-top: 24px; padding: 22px 24px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; border: 1px solid rgba(73, 158, 137, .2); border-radius: 16px; background: linear-gradient(135deg, rgba(241, 251, 247, .94), rgba(250, 240, 247, .78)); outline: none; }
+.submission-success-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #54a28c; font-size: 20px; }
+.submission-success strong { color: #315c59; font: 600 19px Georgia, "Songti SC", serif; }
+.submission-success p { margin: 5px 0 0; color: #71809a; font-size: 12px; }
+.submission-again { min-height: 38px; padding: 0 14px; border: 1px solid rgba(82, 103, 151, .2); border-radius: 10px; color: #526a96; background: rgba(255, 255, 255, .72); cursor: pointer; }
+
+@media (max-width: 760px) {
+  .submission-panel { width: calc(100% - 32px); padding: 28px 22px; }
+  .submission-form-grid { grid-template-columns: 1fr; }
+  .submission-form-bottom { align-items: stretch; flex-direction: column; }
+  .submission-form-bottom .button { width: 100%; }
+  .submission-success { grid-template-columns: auto 1fr; }
+  .submission-again { grid-column: 1 / -1; width: 100%; }
+}

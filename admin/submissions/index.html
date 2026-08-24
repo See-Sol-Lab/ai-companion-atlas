@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>留言审核 · AI Companion Atlas</title>
-  <link rel="stylesheet" href="./admin.css" />
+  <title>项目投稿 · AI Companion Atlas</title>
+  <link rel="stylesheet" href="../comments/admin.css" />
   <script src="./admin.js" defer></script>
 </head>
 <body>
@@ -13,18 +13,18 @@
     <header>
       <div>
         <p>AI COMPANION ATLAS</p>
-        <h1>留言审核</h1>
+        <h1>项目投稿</h1>
       </div>
-      <nav><a href="../submissions/">项目投稿</a><a href="../../">返回图谱首页</a></nav>
+      <nav><a href="../comments/">留言审核</a><a href="../../">返回图谱首页</a></nav>
     </header>
 
     <form class="admin-auth" id="admin-auth">
       <label for="admin-token">审核凭据</label>
       <div>
         <input id="admin-token" name="token" type="password" autocomplete="current-password" required />
-        <button type="submit">读取待审核留言</button>
+        <button type="submit">读取待处理投稿</button>
       </div>
-      <p>凭据仅保存在当前浏览器标签页，关闭标签页后清除。</p>
+      <p>凭据与留言审核页共用，仅保存在当前浏览器标签页。</p>
     </form>
 
     <p class="admin-feedback" id="admin-feedback" aria-live="polite"></p>

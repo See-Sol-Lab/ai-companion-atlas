@@ -26,7 +26,7 @@
 - `IP_HASH_SALT`：随机生成的长字符串，用于不可逆 IP 哈希与频控。
 - `ADMIN_TOKEN`：随机生成的长字符串，用于访问审核 API。
 
-审核页地址为 `/admin/comments/`。输入 `ADMIN_TOKEN` 后可读取 pending 留言，并执行通过或删除；令牌仅保存在当前标签页的 `sessionStorage`。
+留言审核页地址为 `/admin/comments/`，项目投稿后台为 `/admin/submissions/`。两页共用 `ADMIN_TOKEN` 与当前标签页的 `sessionStorage`。留言可以通过或删除；投稿可以标记已处理或删除。
 
 ## 4. 部署后验收
 
@@ -39,5 +39,7 @@
 当前频控为同一 IP 哈希每 10 分钟最多 3 条；D1 中不保存原始 IP。
 
 项目点赞只提供正向反馈。同一项目与同一 IP 哈希只记录一次，不提供点踩或取消点赞接口。
+
+在线项目投稿只进入私有人工核验队列，不提供公开读取接口，也不会自动生成项目卡片。
 
 官方配置参考：[Pages D1 bindings](https://developers.cloudflare.com/pages/functions/bindings/)、[Turnstile server validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/)、[D1 prepared statements](https://developers.cloudflare.com/d1/worker-api/prepared-statements/)。

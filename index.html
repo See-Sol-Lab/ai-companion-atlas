@@ -8,6 +8,9 @@
   <title>AI Companion Atlas · 人机关系技术图谱</title>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./refinements.css?v=20260823-9" />
+  <link rel="stylesheet" href="./submission.css?v=20260824-1" />
+  <script src="./submission.js?v=20260824-1" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasSubmissionTurnstileLoad" defer></script>
 </head>
 <body>
   <div class="page-shell">
@@ -2420,8 +2423,38 @@
           <p>GitHub、小红书、博客、教程、脚本或独立实验都可以。我们保存的是索引与技术线索，并把流量送回原作者。</p>
         </div>
         <div class="submit-actions">
-          <a class="button button-primary" href="https://github.com/See-Sol-Lab/ai-companion-atlas" target="_blank" rel="noreferrer">前往 GitHub <span>↗</span></a>
-          <span class="submit-note">网页投稿与作者认领机制正在施工中。</span>
+          <div class="submit-button-row">
+            <button class="button submit-online-toggle" type="button" aria-expanded="false" aria-controls="online-submit-panel">在线投稿</button>
+            <a class="button button-primary" href="https://github.com/See-Sol-Lab/ai-companion-atlas/issues/new?template=project-submission.yml" target="_blank" rel="noreferrer">前往 GitHub <span>↗</span></a>
+          </div>
+          <span class="submit-note">无法访问 GitHub 也可以直接在线推荐，所有投稿都会人工核验。</span>
+        </div>
+      </section>
+
+      <section class="submission-panel" id="online-submit-panel" aria-labelledby="online-submit-title" hidden>
+        <div class="submission-heading">
+          <div><p class="section-overline">ONLINE SUBMISSION</p><h2 id="online-submit-title">在线推荐项目</h2></div>
+          <button class="submission-close" type="button">收起</button>
+        </div>
+        <p class="submission-intro">只需留下项目名称、原始链接和推荐理由。Atlas 会人工核验来源与内容，不会自动公开投稿信息。</p>
+
+        <form class="submission-form">
+          <div class="submission-form-grid">
+            <label>项目名称<input name="projectName" maxlength="100" required placeholder="项目的中文名或英文名" /></label>
+            <label>项目链接<input name="projectUrl" type="url" maxlength="2048" required placeholder="GitHub、小红书、博客或作者页面" /></label>
+          </div>
+          <label class="submission-reason-field">推荐理由<textarea name="reason" minlength="10" maxlength="800" rows="6" required placeholder="它解决了什么问题，为什么值得被更多人看见？（10–800 字）"></textarea></label>
+          <div class="submission-form-bottom">
+            <div><span class="submission-count">0 / 800</span><div class="submission-turnstile"></div></div>
+            <button class="button button-primary" type="submit" disabled>提交推荐</button>
+          </div>
+          <p class="submission-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="submission-success" tabindex="-1" hidden>
+          <span class="submission-success-icon" aria-hidden="true">✓</span>
+          <div><strong>投稿成功</strong><p>项目已进入人工核验队列，收录前会检查来源、状态与介绍准确性。</p></div>
+          <button class="submission-again" type="button">再推荐一个</button>
         </div>
       </section>
 

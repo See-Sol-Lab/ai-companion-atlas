@@ -1,3 +1,5 @@
+import { PROJECT_SLUGS } from './project-slugs.mjs';
+
 const encoder = new TextEncoder();
 const COMMENT_RESULTS = new Set(['success', 'partial', 'failed']);
 const MAX_BODY_BYTES = 16 * 1024;
@@ -59,7 +61,7 @@ export async function readJson(request) {
   }
 }
 
-function cleanPlainText(value, { multiline = false } = {}) {
+export function cleanPlainText(value, { multiline = false } = {}) {
   if (typeof value !== 'string') return '';
   let text = value
     .replace(/<[^>]*>/gu, '')
@@ -76,6 +78,44 @@ function cleanPlainText(value, { multiline = false } = {}) {
     text = text.replace(/\s+/gu, ' ');
   }
   return text.trim();
+}
+
+export function validateSubmissionInput(input) {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) {
+    throw new RequestError(400, '投稿内容格式不正确。');
+  }
+
+  const projectName = cleanPlainText(input.projectName);
+  const projectUrl = cleanPlainText(input.projectUrl);
+  const reason = cleanPlainText(input.reason, { multiline: true });
+  const turnstileToken = typeof input.turnstileToken === 'string' ? input.turnstileToken.trim() : '';
+
+  if (textLength(projectName) < 1 || textLength(projectName) > 100) {
+    throw new RequestError(400, '项目名称需要 1–100 字。');
+  }
+  if (!projectUrl || projectUrl.length > 2048) throw new RequestError(400, '项目链接无效。');
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(projectUrl);
+  } catch {
+    throw new RequestError(400, '项目链接无效。');
+  }
+  if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+    throw new RequestError(400, '项目链接必须使用 http 或 https。');
+  }
+  if (textLength(reason) < 10 || textLength(reason) > 800) {
+    throw new RequestError(400, '推荐理由需要 10–800 字。');
+  }
+  if (!turnstileToken || turnstileToken.length > 2048) {
+    throw new RequestError(400, '请先完成人机验证。');
+  }
+
+  return {
+    projectName,
+    projectUrl: parsedUrl.href,
+    reason,
+    turnstileToken
+  };
 }
 
 const textLength = (value) => [...value].length;
@@ -140,7 +180,7 @@ export async function hashIp(request, salt) {
   return [...digest].map((byte) => byte.toString(16).padStart(2, '0')).join('');
 }
 
-export async function verifyTurnstile({ secret, token, ip, expectedHostname }) {
+export async function verifyTurnstile({ secret, token, ip, expectedHostname, expectedAction = 'submit-comment' }) {
   const body = new FormData();
   body.set('secret', secret);
   body.set('response', token);
@@ -149,12 +189,13 @@ export async function verifyTurnstile({ secret, token, ip, expectedHostname }) {
 
   const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
     method: 'POST',
+    signal: AbortSignal.timeout(10000),
     body
   });
   if (!response.ok) throw new RequestError(503, '人机验证服务暂时不可用。');
 
   const result = await response.json();
-  if (!result.success || result.action !== 'submit-comment') {
+  if (!result.success || result.action !== expectedAction) {
     throw new RequestError(400, '人机验证失败或已过期，请重试。');
   }
   if (expectedHostname && result.hostname !== expectedHostname) {
@@ -186,4 +227,3 @@ export function assertSameOrigin(request) {
     throw new RequestError(403, '请求来源无效。');
   }
 }
-import { PROJECT_SLUGS } from './project-slugs.mjs';

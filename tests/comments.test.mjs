@@ -10,7 +10,8 @@ import {
   hashIp,
   requireAdmin,
   validateCommentInput,
-  validateProjectSlug
+  validateProjectSlug,
+  validateSubmissionInput
 } from '../functions/_shared/comments.mjs';
 import { onRequestGet, onRequestPost } from '../functions/api/comments.js';
 import {
@@ -21,6 +22,11 @@ import {
   onRequestGet as onLikesGet,
   onRequestPost as onLikesPost
 } from '../functions/api/likes.js';
+import { onRequestPost as onSubmissionPost } from '../functions/api/submissions.js';
+import {
+  onRequestGet as onAdminSubmissionsGet,
+  onRequestPost as onAdminSubmissionsPost
+} from '../functions/api/admin/submissions.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -71,6 +77,26 @@ test('comment input enforces content and result limits', () => {
   );
   assert.throws(
     () => validateCommentInput({ ...validInput, result: 'unknown' }),
+    (error) => error instanceof RequestError && error.status === 400
+  );
+});
+
+test('submission input keeps only bounded plain text and an HTTP source URL', () => {
+  const result = validateSubmissionInput({
+    projectName: '<b>时间锚</b>',
+    projectUrl: 'https://github.com/See-Sol-Lab/ai-companion-time-anchor',
+    reason: '<i>它让 AI 感知真实时间间隔，值得被更多人看到。</i>',
+    turnstileToken: 'valid-token'
+  });
+  assert.equal(result.projectName, '时间锚');
+  assert.equal(result.projectUrl, 'https://github.com/See-Sol-Lab/ai-companion-time-anchor');
+  assert.equal(result.reason, '它让 AI 感知真实时间间隔，值得被更多人看到。');
+  assert.throws(
+    () => validateSubmissionInput({ ...result, projectUrl: 'javascript:alert(1)' }),
+    (error) => error instanceof RequestError && error.status === 400
+  );
+  assert.throws(
+    () => validateSubmissionInput({ ...result, reason: '太短' }),
     (error) => error instanceof RequestError && error.status === 400
   );
 });
@@ -242,6 +268,20 @@ test('like migration enforces one positive vote per project and IP hash', async 
   database.close();
 });
 
+test('submission migration creates private pending records and review indexes', async () => {
+  const database = new DatabaseSync(':memory:');
+  database.exec(await readFile(path.join(root, 'migrations', '0003_project_submissions.sql'), 'utf8'));
+  const columns = database.prepare('PRAGMA table_info(project_submissions)').all().map((column) => column.name);
+  assert.deepEqual(columns, [
+    'id', 'project_name', 'project_url', 'reason', 'created_at', 'status', 'ip_hash'
+  ]);
+  const indexes = database.prepare("SELECT name FROM sqlite_master WHERE type = 'index'").all()
+    .map((row) => row.name);
+  assert.ok(indexes.includes('project_submissions_status_created'));
+  assert.ok(indexes.includes('project_submissions_ip_created'));
+  database.close();
+});
+
 test('every generated project detail page contains its own comment slug and shared client', async () => {
   const projectFiles = (await readdir(path.join(root, 'projects'))).filter((name) => name.endsWith('.json'));
   assert.equal(projectFiles.length, 176);
@@ -371,4 +411,88 @@ test('project likes are positive-only and idempotent for one IP hash', async () 
   assert.deepEqual(await repeated.json(), { count: 1, liked: true, added: false });
   assert.equal(database.prepare('SELECT COUNT(*) AS count FROM project_likes').get().count, 1);
   database.close();
+});
+
+test('online submission stays private and can be marked reviewed by the admin', async () => {
+  const database = new DatabaseSync(':memory:');
+  database.exec(await readFile(path.join(root, 'migrations', '0003_project_submissions.sql'), 'utf8'));
+  const d1 = createD1(database);
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => Response.json({
+    success: true,
+    action: 'submit-project',
+    hostname: 'atlas.test'
+  });
+  const publicEnv = {
+    COMMENTS_DB: d1,
+    TURNSTILE_SECRET: 'turnstile-secret',
+    TURNSTILE_HOSTNAME: 'atlas.test',
+    IP_HASH_SALT: 'hash-salt'
+  };
+  const adminEnv = { COMMENTS_DB: d1, ADMIN_TOKEN: 'admin-secret' };
+  const adminHeaders = {
+    Authorization: 'Bearer admin-secret',
+    Origin: 'https://atlas.test',
+    'Content-Type': 'application/json'
+  };
+
+  try {
+    const submitted = await onSubmissionPost({
+      request: new Request('https://atlas.test/api/submissions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Origin: 'https://atlas.test',
+          'CF-Connecting-IP': '203.0.113.8'
+        },
+        body: JSON.stringify({
+          projectName: '时间锚',
+          projectUrl: 'https://github.com/See-Sol-Lab/ai-companion-time-anchor',
+          reason: '它让 AI 感知真实时间间隔，值得被更多人看到。',
+          turnstileToken: 'valid-token'
+        })
+      }),
+      env: publicEnv
+    });
+    assert.equal(submitted.status, 201);
+
+    const pending = await onAdminSubmissionsGet({
+      request: new Request('https://atlas.test/api/admin/submissions', { headers: adminHeaders }),
+      env: adminEnv
+    });
+    const submissions = (await pending.json()).submissions;
+    assert.equal(submissions.length, 1);
+    assert.equal(submissions[0].project_name, '时间锚');
+    assert.equal('ip_hash' in submissions[0], false);
+
+    const reviewed = await onAdminSubmissionsPost({
+      request: new Request('https://atlas.test/api/admin/submissions', {
+        method: 'POST',
+        headers: adminHeaders,
+        body: JSON.stringify({ id: submissions[0].id, action: 'review' })
+      }),
+      env: adminEnv
+    });
+    assert.equal(reviewed.status, 200);
+    assert.equal(database.prepare('SELECT status FROM project_submissions').get().status, 'reviewed');
+
+    const afterReview = await onAdminSubmissionsGet({
+      request: new Request('https://atlas.test/api/admin/submissions', { headers: adminHeaders }),
+      env: adminEnv
+    });
+    assert.deepEqual((await afterReview.json()).submissions, []);
+  } finally {
+    globalThis.fetch = originalFetch;
+    database.close();
+  }
+});
+
+test('homepage exposes online submission and the dedicated GitHub issue route', async () => {
+  const html = await readFile(path.join(root, 'index.html'), 'utf8');
+  assert.match(html, /class="button submit-online-toggle"/u);
+  assert.match(html, /issues\/new\?template=project-submission\.yml/u);
+  assert.match(html, /id="online-submit-panel"/u);
+  assert.match(html, /项目名称/u);
+  assert.match(html, /项目链接/u);
+  assert.match(html, /推荐理由/u);
 });
