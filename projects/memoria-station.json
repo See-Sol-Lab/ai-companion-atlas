@@ -4,39 +4,42 @@
   "name": { "zh": "Memoria Station", "en": "AI Deduction Series" },
   "author": "hatakeyuyuko-dotcom",
   "sourceUrl": "https://github.com/hatakeyuyuko-dotcom/Memoria-Station",
-  "hook": "把五章文字谜案交给 AI，让它在不知道答案的情况下逐关推理。",
-  "summary": "面向 AI 玩家的五章文字推理游戏系列，提供盲玩引擎、章节数据、存档与逐步揭示机制。",
-  "heroDescription": "Memoria Station 把推理线索和章节状态封装成 AI 可调用的文字引擎。玩家只会看到当前允许出现的信息，需要通过调查、判断与回答一步步解开谜案。",
+  "hook": "让 AI 伴侣亲自游玩五章文字推理故事：调查场景、收集线索，最后猜出真相。",
+  "summary": "专门给 AI 玩家设计的命令行文字推理游戏。TA 要像侦探一样探索环境、调查物品、记录发现，并依靠线索完成五个章节。",
+  "heroDescription": "Memoria Station 是一套让 AI 亲自当玩家的五章文字推理游戏。AI 会进入故事，通过查看环境、移动、倾听、调查物品和回答问题推进剧情，最后根据自己找到的证据揭开真相。",
   "badges": [
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "游戏", "tone": "game" }
   ],
-  "tags": ["游戏", "推理", "盲玩", "章节制"],
+  "tags": ["文字游戏", "调查谜案", "AI 玩家", "五章剧情"],
   "language": "Python",
   "platform": "CLI",
   "updated":"2026-08-22",
-  "heroOverline": "CLUES · REASON · REVEAL",
+  "heroOverline": "EXPLORE · FIND CLUES · SOLVE",
   "showcase": {
-    "label": "五个章节逐步向 AI 玩家开放线索",
+    "label": "陪 AI 一起调查五个文字谜案",
     "symbol": "?",
-    "question": "“只看当前证据，TA 能推到真相吗？”",
+    "question": "“如果不能偷看答案，TA 能靠自己破完五个谜案吗？”",
     "comparisons": [
-      { "value": "调查", "label": "按阶段取得线索" },
-      { "value": "推理", "label": "不读取答案" },
-      { "value": "揭示", "label": "章节结果与存档" }
+      { "value": "探索", "label": "查看场景" },
+      { "value": "线索", "label": "调查与记录" },
+      { "value": "真相", "label": "回答谜题" }
     ],
-    "note": "盲玩让模型真的推理，而不是从文件里提前找到答案。"
+    "note": "游戏只会展示当前找到的线索，答案会一直隐藏到结局。"
   },
   "intro": {
     "paragraphs": [
-      "Memoria Station 是一个五章文字推理游戏系列，专门准备了 AI 可玩的盲玩引擎。章节内容、线索与答案分层呈现，模型只能根据当前开放的信息调查和推断。",
-      "项目适合让不同模型独立通关，再比较它们寻找证据、排除假设和修正判断的过程。"
+      "Memoria Station 是一套专门给 AI 伴侣玩的五章文字推理冒险。AI 会扮演故事里的调查者，通过查看场景、移动、倾听、调查物品、记录发现和回答问题，一步步推进剧情。",
+      "人类可以在旁边看 TA 调查、和 TA 讨论线索，必要时也能提供帮助。游戏支持存档与回退，不同章节还会加入时间循环、逐渐遗忘等独立玩法。",
+      "所谓盲玩引擎，只是为了把答案藏起来。AI 只能看见游戏当前允许出现的信息，必须真正完成调查和推理，不能直接从文件里搜索结局。它不是 AI 记忆库。"
     ],
     "facts": [
-      { "label": "适合", "text": "想和 AI 一起玩章节式谜案，或比较不同模型推理风格的人。" },
-      { "label": "平台", "text": "文字 CLI，AI 可直接运行盲玩引擎。" },
-      { "label": "使用方式", "text": "按章节启动游戏，让 AI 通过允许的命令调查、回答并保存进度。" },
+      { "label": "适合", "text": "想看 AI 亲自玩推理游戏，或想陪伴侣一起调查谜案的人。" },
+      { "label": "平台", "text": "Python 命令行文字游戏。" },
+      { "label": "使用方式", "text": "选择章节并启动游戏，让 AI 使用游戏提供的命令探索、调查和回答谜题。" },
+      { "label": "游戏内容", "text": "共五个章节，包含调查、线索收集、存档、回退和不同章节专属机制。" },
+      { "label": "边界", "text": "这是给 AI 玩的推理游戏，不是为其他项目提供长期记忆的数据库。" },
       { "label": "许可", "text": "仓库源码公开，具体复用与分发以项目声明为准。" }
     ]
   }

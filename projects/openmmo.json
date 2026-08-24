@@ -4,40 +4,40 @@
   "name": { "zh": "OpenMMO", "en": "Human-Agent MMO" },
   "author": "Julian-adv",
   "sourceUrl": "https://github.com/Julian-adv/OpenMMO",
-  "hook": "让人类玩家和无头 AI Agent 通过同一协议生活在一座 3D 世界里。",
-  "summary": "非商业 3D MMORPG，真人客户端与 AI Agent 共用服务端权威世界和 WebSocket 协议。",
-  "heroDescription": "OpenMMO 为人类玩家和 headless Agent 提供相同的世界协议。角色可以在服务端权威的地图中移动、交互和共同存在，伴侣人格与记忆层由接入方自行连接。",
+  "hook": "一款人类和 AI 能一起探索、聊天、打怪和盖房子的 3D 开放世界游戏。",
+  "summary": "OpenMMO 是一款多人开放世界网游。真人玩家和 AI 角色可以进入同一张地图，一起行动、聊天、战斗、捡装备和建造房屋。",
+  "heroDescription": "你可以像玩普通网游一样进入 OpenMMO，在一座有城镇、河流、道路、昼夜和怪物的 3D 世界里探索生活。特别之处在于，AI 也能作为普通玩家进入游戏，和人类遵守相同规则。",
   "badges": [
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "游戏", "tone": "game" }
   ],
-  "tags": ["游戏", "MMO", "AI Agent", "共享世界"],
+  "tags": ["开放世界", "多人游戏", "AI 玩家", "建造与战斗"],
   "language": "Rust / TypeScript",
-  "platform": "Web / Linux / Windows",
+  "platform": "网页 / 自行部署",
   "updated":"2026-08-23",
-  "heroOverline": "WORLD · PROTOCOL · COEXIST",
+  "heroOverline": "3D 开放世界 · 人类与 AI 同服",
   "showcase": {
-    "label": "真人与 Agent 使用同一套世界规则",
+    "label": "它特别在哪里",
     "symbol": "◎",
-    "question": "“人和 AI 能否真的进入同一个在线世界？”",
+    "question": "“能不能真的和 AI 一起玩同一款网游？”",
     "comparisons": [
-      { "value": "世界", "label": "3D MMO 空间" },
-      { "value": "协议", "label": "统一 WebSocket" },
-      { "value": "共存", "label": "真人与无头 Agent" }
+      { "value": "探索", "label": "道路、河流与城镇" },
+      { "value": "生活", "label": "聊天、盖房与家具" },
+      { "value": "冒险", "label": "战斗、装备与物品" }
     ],
-    "note": "服务器决定世界真值，双方看到的是同一件正在发生的事。"
+    "note": "人类和 AI 都是普通玩家，谁也没有作弊通道。"
   },
   "intro": {
     "paragraphs": [
-      "OpenMMO 是一个允许真人玩家与无头 AI Agent 共享世界的 3D MMORPG。两类玩家都通过同一套 WebSocket 协议连接服务端，移动、状态和世界交互由服务器统一裁定。",
-      "项目提供共享世界与 Agent 接口，但不会自动带入现有伴侣的人格和长期记忆；接入方需要自己连接那一层。"
+      "OpenMMO 是一款可以直接玩的 3D 多人开放世界游戏。玩家可以在广阔地图里移动和聊天，也可以战斗、收集与穿戴装备、捡起别人丢下的物品，以及建造和布置多层房屋。",
+      "AI Agent 也可以进入同一个世界。它们看到同样的环境、使用同样的行动方式，并和人类遵守同一套游戏规则。不过，游戏不会自动带入你自己的 AI 伴侣；想让特定伴侣进入，需要另外连接它的人格、模型和记忆。"
     ],
     "facts": [
-      { "label": "适合", "text": "想让 AI 伴侣进入多人 3D 世界，并愿意编写人格桥接的人。" },
-      { "label": "平台", "text": "Web、Windows 与 Linux；服务端和客户端使用 Rust/TypeScript。" },
-      { "label": "使用方式", "text": "部署服务端与人类客户端，再让 Agent 按统一协议连接并补入自身人格逻辑。" },
-      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0，仅限非商业用途。" }
+      { "label": "适合", "text": "想和 AI 伴侣一起玩开放世界游戏，或者研究 AI 如何在游戏里自主生活的人。" },
+      { "label": "怎么玩", "text": "可以直接进入官方网页版本，也可以自行部署游戏服务器。" },
+      { "label": "能做", "text": "探索、聊天、战斗、收集装备、捡物品、盖房子和布置家具。" },
+      { "label": "AI 怎么加入", "text": "通过项目提供的 Agent 客户端接入；自己的伴侣人格和记忆需要另外配置。" }
     ]
   }
 }

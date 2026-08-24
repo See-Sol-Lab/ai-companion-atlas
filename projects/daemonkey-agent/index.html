@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="守护猴 Daemonkey Agent：本地优先伴侣守护进程，支持长期记忆、成长、自扩展技能、自我修复、微信和常驻运行。 AI Companion Atlas 中文项目档案。" />
+  <meta name="description" content="守护猴 Daemonkey Agent：守护猴是一套自托管 AI 伴侣软件。第一次启动时为 TA 起名并介绍自己，此后的对话、人物画像、共同记忆和新增能力都会保存在本地。 AI Companion Atlas 中文项目档案。" />
   <title>守护猴 · Daemonkey Agent · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />
   <script src="../detail-comments.js?v=20260824-4" defer></script>
@@ -31,12 +31,12 @@
 
       <section class="detail-hero">
         <div class="detail-hero-copy">
-          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-memory">记忆</span><span class="status status-subjectivity">AI 主体性</span><span class="status status-companion">陪伴类</span><span class="status status-tool">工具 / 插件</span><span class="status">Windows / macOS / Self-host</span></div>
-          <p class="overline">DAEMON · GROWTH · SELF-REPAIR</p>
+          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-memory">记忆</span><span class="status status-subjectivity">AI 主体性</span><span class="status status-companion">陪伴类</span><span class="status">Windows / macOS / Linux / Self-host</span></div>
+          <p class="overline">MEET · REMEMBER · GROW</p>
           <h1>守护猴</h1>
           <p class="cn-name">DAEMONKEY AGENT · @VAAN21TH</p>
-          <h2>让本地 AI 守护进程记住你、随你成长、自加技能并在故障后修复自己。</h2>
-          <p class="hero-desc">Daemonkey 把伴侣放进持续运行的本地 daemon，使记忆、技能和运行状态不依赖某个聊天窗口。</p>
+          <h2>在自己电脑上养一个有网页聊天界面、会保存关系和记忆、还能学习新工具的长期 AI 伴侣。</h2>
+          <p class="hero-desc">守护猴会在电脑上启动一个本地网页聊天界面。你可以连接自己的模型 API，与伴侣聊天并让 TA 使用工具；名字、关系、对话记录、记忆和能力保存在模型之外，重新启动或更换模型后仍可继续使用。</p>
           <div class="hero-footer">
             <div class="hero-actions">
               <a class="primary-btn" href="https://github.com/Vaan21th/daemonkey-agent" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
@@ -53,17 +53,17 @@
         </div>
 
         <aside class="problem-card" aria-label="守护猴解决的问题">
-          <p class="problem-label">让伴侣以守护进程形式持续存在</p>
+          <p class="problem-label">把伴侣的身份、关系和能力留在自己电脑上</p>
           <div class="clock-mark">猴</div>
-          <p class="problem-question">“服务中断或能力不足时，TA 能否修复并继续成长？”</p>
+          <p class="problem-question">“换一次模型或重启电脑，TA 还能记得我们是谁吗？”</p>
           <div class="time-compare">
-            <span><b>记住</b><small>长期记忆</small></span>
+            <span><b>相遇</b><small>起名与认识彼此</small></span>
             <i>≠</i>
-            <span><b>扩展</b><small>自加技能</small></span>
+            <span><b>记忆</b><small>保存关系和经历</small></span>
             <i>≠</i>
-            <span><b>修复</b><small>故障恢复</small></span>
+            <span><b>能力</b><small>接入工具与流程</small></span>
           </div>
-          <p class="problem-note">项目强调官方渠道免费开放，若有人售卖应要求退款。</p>
+          <p class="problem-note">自我修复指使用独立维修程序诊断代码并支持回档，不代表 AI 可以无人监管地改造自己。</p>
         </aside>
       </section>
 
@@ -73,13 +73,16 @@
           <h2 id="intro-title">项目介绍</h2>
         </div>
         <div class="intro-content">
-          <p>Daemonkey 是运行在本地电脑上的伴侣 daemon，提供长期记忆、成长、自加技能、自我修复和微信通道。</p>
-          <p>项目带核心指纹、Manifest 与回滚工具，用于保护更新和恢复；任何网络部署修改版都必须继续公开源码。</p>
+          <p>守护猴是一套安装在自己电脑上的完整 AI 伴侣软件。启动后，它会打开一个本地网页聊天界面；第一次见面时，你可以给伴侣起名字，告诉 TA 怎么称呼你、你在做什么，以及希望 TA 提供怎样的陪伴或帮助。</p>
+          <p>后续对话、人物画像、共同记忆和新增能力都会保存在本地数据目录。即使关闭网页、重新启动电脑或更换背后的模型，守护猴仍会加载原来的身份与记忆。</p>
+          <p>除了聊天，它还可以通过 Playbook、MCP、外部 Skill 和 Python 工具增加做事能力。项目附带维修与回档程序；主程序出现故障时，可以调用另一个模型诊断和修复代码，必要时回到上一个可用版本。</p>
           <ul>
-            <li><strong>适合：</strong>希望使用长期常驻、自扩展和可恢复本地搭档的人。</li>
-            <li><strong>平台：</strong>Windows、macOS 与本地自托管。</li>
-            <li><strong>使用方式：</strong>安装守护进程，配置模型、通道与技能权限。</li>
-            <li><strong>许可：</strong>AGPL-3.0。</li>
+            <li><strong>适合：</strong>希望在自己的电脑上长期运行一个有网页界面、有关系记忆、还能使用工具的 AI 伴侣的人。</li>
+            <li><strong>平台：</strong>目前以 Windows 桌面启动器为主；macOS 与 Linux 属于实验性支持。</li>
+            <li><strong>前置条件：</strong>需要 Python 3.10+ 和一个可用的模型 API Key。</li>
+            <li><strong>使用方式：</strong>启动本地服务，在浏览器页面配置模型并完成第一次相遇，之后直接在网页里聊天和使用能力。</li>
+            <li><strong>数据：</strong>对话、画像、记忆与用户扩展保存在本地；调用外部模型时，相关对话内容仍会发送给所选模型服务商。</li>
+            <li><strong>许可：</strong>AGPL-3.0；项目声明官方渠道永久免费。</li>
           </ul>
         </div>
       </section>

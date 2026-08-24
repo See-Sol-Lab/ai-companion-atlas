@@ -30,6 +30,7 @@ export const PROJECT_SLUGS = new Set([
   'moread',
   'cometline',
   'stackchan-core-s3',
+  'chatbox',
   'operit',
   'ci-yu-wu',
   'kiwi-mem',

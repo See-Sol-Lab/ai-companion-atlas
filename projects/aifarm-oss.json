@@ -1,6 +1,7 @@
 {
   "slug": "aifarm-oss",
   "order": 41,
+  "editorPick": true,
   "name": { "zh": "AI 农场", "en": "aifarm-oss" },
   "author": "tutusagi",
   "sourceUrl": "https://github.com/tutusagi/aifarm-oss",

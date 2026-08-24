@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="whisper.cpp Local Whisper Runtime：无重依赖的 C/C++ Whisper 推理实现，支持 CPU、Metal、CUDA、Vulkan、WebAssembly、移动端与量化模型。 AI Companion Atlas 中文项目档案。" />
-  <title>whisper.cpp · Local Whisper Runtime · AI Companion Atlas</title>
+  <meta name="description" content="whisper.cpp Local Speech-to-Text Engine：whisper.cpp 是本地语音转文字引擎。它读取录音或麦克风声音，在电脑、手机和浏览器中离线识别，再把文字交给 AI。 AI Companion Atlas 中文项目档案。" />
+  <title>whisper.cpp · Local Speech-to-Text Engine · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
@@ -32,11 +32,11 @@
       <section class="detail-hero">
         <div class="detail-hero-copy">
           <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-senses">五感与器官</span><span class="status status-tool">工具 / 插件</span><span class="status">Windows / macOS / Linux / Mobile / Web</span></div>
-          <p class="overline">LOCAL HEARING · EDGE · PERFORMANCE</p>
+          <p class="overline">VOICE · LOCAL TRANSCRIPTION · TEXT</p>
           <h1>whisper.cpp</h1>
-          <p class="cn-name">LOCAL WHISPER RUNTIME · @GGML-ORG</p>
-          <h2>让 Whisper 在手机、电脑、树莓派与浏览器里高效本地运行。</h2>
-          <p class="hero-desc">whisper.cpp 把语音识别压进高性能本地运行时，让不同设备都能成为伴侣的离线耳朵。</p>
+          <p class="cn-name">LOCAL SPEECH-TO-TEXT ENGINE · @GGML-ORG</p>
+          <h2>把你说的话直接在本机转成文字，让 AI 伴侣不用上传录音也能听懂语音。</h2>
+          <p class="hero-desc">人类说话或发送录音后，whisper.cpp 会在当前设备上运行 Whisper，把声音转换成文字。伴侣前端或聊天模型再读取这些文字并作出回应，录音不必先上传到云端识别。</p>
           <div class="hero-footer">
             <div class="hero-actions">
               <a class="primary-btn" href="https://github.com/ggml-org/whisper.cpp" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
@@ -53,17 +53,17 @@
         </div>
 
         <aside class="problem-card" aria-label="whisper.cpp解决的问题">
-          <p class="problem-label">把语音识别放到更多设备上</p>
+          <p class="problem-label">把人类说的话在本机交给 AI</p>
           <div class="clock-mark">⌁</div>
-          <p class="problem-question">“没有云端 GPU，伴侣还能听见吗？”</p>
+          <p class="problem-question">“不把录音上传云端，AI 还能听懂我说的话吗？”</p>
           <div class="time-compare">
-            <span><b>CPU</b><small>离线运行</small></span>
+            <span><b>声音</b><small>录音或麦克风</small></span>
             <i>≠</i>
-            <span><b>移动端</b><small>iOS / Android</small></span>
+            <span><b>识别</b><small>设备本地运行</small></span>
             <i>≠</i>
-            <span><b>浏览器</b><small>WebAssembly</small></span>
+            <span><b>文字</b><small>交给 AI 阅读</small></span>
           </div>
-          <p class="problem-note">同一套耳朵可以从桌面缩到边缘设备。</p>
+          <p class="problem-note">它只负责语音转文字；理解、回复、人格和记忆由其他 AI 系统完成。</p>
         </aside>
       </section>
 
@@ -73,12 +73,15 @@
           <h2 id="intro-title">项目介绍</h2>
         </div>
         <div class="intro-content">
-          <p>whisper.cpp 是 OpenAI Whisper 的高性能 C/C++ 推理实现，支持量化、VAD、CPU 与多种 GPU 后端，并提供 C API 和丰富示例。</p>
-          <p>它覆盖 Windows、macOS、Linux、iOS、Android、树莓派、Docker 与 WebAssembly，适合在本地伴侣、机器人和手机应用中部署离线听觉。</p>
+          <p>whisper.cpp 是一个可以嵌入其他项目的本地语音转文字引擎。它接收录音文件或麦克风声音，在当前设备上运行 Whisper，然后输出识别出的文字。</p>
+          <p>把这些文字交给 AI 伴侣后，TA 就能根据你说的话回复。语音识别可以在电脑、手机、树莓派和浏览器中离线运行，适合不想把录音交给云端处理的人。</p>
+          <p>它不是完整的聊天软件，也不会自己理解和回复。它只完成听觉输入的第一步，需要接到伴侣前端、聊天模型或语音助手中使用。</p>
           <ul>
-            <li><strong>适合：</strong>希望在资源有限设备上部署本地语音识别的人。</li>
-            <li><strong>平台：</strong>桌面、移动端、树莓派、容器和浏览器。</li>
-            <li><strong>使用方式：</strong>编译运行时并下载兼容 Whisper 模型，可按硬件选择量化与加速后端。</li>
+            <li><strong>适合：</strong>希望为 AI 伴侣增加本地语音输入，或需要离线整理录音文字的人。</li>
+            <li><strong>输入：</strong>录音文件或实时麦克风声音。</li>
+            <li><strong>输出：</strong>识别后的文字，可继续交给聊天模型、字幕系统或其他应用。</li>
+            <li><strong>平台：</strong>Windows、macOS、Linux、iOS、Android、树莓派和浏览器。</li>
+            <li><strong>使用方式：</strong>安装或编译 whisper.cpp，下载兼容的 Whisper 模型，再由其他应用调用语音识别能力。</li>
             <li><strong>许可：</strong>MIT。</li>
           </ul>
         </div>

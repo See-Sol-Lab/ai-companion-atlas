@@ -34,8 +34,7 @@
     {
       "label": "PC 前端",
       "tone": "desktop"
-    },
-    { "label": "工具 / 插件", "tone": "tool" }
+    }
   ],
   "tags": [
     "语音通话",

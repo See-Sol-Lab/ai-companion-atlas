@@ -1,0 +1,87 @@
+{
+  "slug": "chatbox",
+  "order": 180,
+  "editorPick": true,
+  "stars": 41500,
+  "name": {
+    "zh": "Chatbox",
+    "en": "Community Edition"
+  },
+  "author": "chatboxai",
+  "sourceUrl": "https://github.com/chatboxai/chatbox",
+  "hook": "把 ChatGPT、Claude、Gemini、DeepSeek 和本地模型放进同一个聊天客户端。",
+  "summary": "跨电脑、网页和手机使用的多模型聊天前端，支持切换模型、读取文件、生成图片、保存对话和连接 Ollama 本地模型。",
+  "heroDescription": "Chatbox 是一个开箱即用的多模型聊天应用。配置常用的模型服务或本地 Ollama 后，就能在同一个界面里聊天、切换模型、处理文件并保存对话，不必来回打开多个网站。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    }
+  ],
+  "tags": [
+    "多模型",
+    "本地模型",
+    "跨平台",
+    "文件对话"
+  ],
+  "language": "TypeScript",
+  "platform": "Windows / macOS / Linux / Web / iOS / Android",
+  "updated": "2026-08-22",
+  "heroOverline": "MODELS · FILES · DEVICES",
+  "showcase": {
+    "label": "把不同模型放进同一个聊天窗口",
+    "symbol": "□",
+    "question": "“能不能在一个应用里使用不同的 AI？”",
+    "comparisons": [
+      {
+        "value": "模型",
+        "label": "多家服务"
+      },
+      {
+        "value": "设备",
+        "label": "电脑与手机"
+      },
+      {
+        "value": "资料",
+        "label": "文件与图片"
+      }
+    ],
+    "note": "它提供统一聊天界面；伴侣人格、长期记忆与关系设定取决于所连接的模型和具体配置。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Chatbox 把多个 AI 模型装进同一个聊天界面。你可以接入 OpenAI、Claude、Google Gemini、DeepSeek 等模型服务，也可以连接电脑上的 Ollama 本地模型，然后像使用普通聊天软件一样开始对话。",
+      "它同时提供 Windows、macOS、Linux、Web、iOS 和 Android 版本，并支持文件理解、图片生成、提示词设置和对话导出。社区版代码以 GPL-3.0 许可证公开。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望用一个界面管理不同模型，或想连接自己的 API 与本地模型的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows、macOS、Linux、Web、iOS 与 Android。"
+      },
+      {
+        "label": "使用方式",
+        "text": "下载安装客户端，选择模型服务并填写相应配置；也可以连接本机 Ollama。"
+      },
+      {
+        "label": "许可",
+        "text": "社区版 GPL-3.0；云端服务与专业版功能按官方条款使用。"
+      }
+    ]
+  }
+}

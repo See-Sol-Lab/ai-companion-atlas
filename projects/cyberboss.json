@@ -1,6 +1,7 @@
 {
   "slug": "cyberboss",
   "order": 123,
+  "editorPick": true,
   "name": {
     "zh": "cyberboss",
     "en": "Local Life Agent Bridge"

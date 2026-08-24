@@ -4,9 +4,9 @@
   "name": { "zh": "Mineflayer", "en": "Minecraft Bot API" },
   "author": "PrismarineJS",
   "sourceUrl": "https://github.com/PrismarineJS/mineflayer",
-  "hook": "给 AI 一套成熟的 Minecraft 身体接口，让它能看、走、建造和聊天。",
-  "summary": "成熟的 Minecraft Bot 高层 API，覆盖登录、世界感知、移动、战斗、背包、合成、建造和聊天，并拥有丰富插件生态。",
-  "heroDescription": "Mineflayer 把 Minecraft 协议与游戏行为封装成 JavaScript API。开发者可以在此之上连接 LLM 决策，让 AI 伴侣以真实玩家身份进入服务器。",
+  "hook": "让 AI 伴侣作为一个真正的玩家加入《我的世界》服务器，陪你探索、聊天、打怪和建造。",
+  "summary": "Mineflayer 是 Minecraft Java 版机器人开发工具。它能让程序登录服务器，像玩家一样观察世界、移动、挖矿、建造、战斗和聊天。",
+  "heroDescription": "Mineflayer 为程序提供一具可以进入 Minecraft Java 版服务器的游戏身体。它负责登录账号、看见方块与生物、控制角色行动；开发者再接入大模型，让 AI 决定下一步做什么。",
   "badges": [
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
@@ -14,31 +14,34 @@
     { "label": "游戏", "tone": "game" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["游戏", "Minecraft", "Bot API", "游戏工具"],
+  "tags": ["AI 队友", "Minecraft Java", "探索建造", "Bot 接口"],
   "language": "JavaScript",
   "platform": "Minecraft / Cross-platform",
   "updated":"2026-08-16",
-  "heroOverline": "SEE · MOVE · BUILD",
+  "heroOverline": "JOIN · EXPLORE · PLAY TOGETHER",
   "showcase": {
-    "label": "让 AI 通过稳定接口拥有 Minecraft 身体",
+    "label": "让 AI 真正登录 Minecraft 陪你玩",
     "symbol": "▦",
-    "question": "“TA 能不能真的进入服务器和我一起玩？”",
+    "question": "“怎样让 AI 登录《我的世界》，走到我身边一起玩？”",
     "comparisons": [
-      { "value": "感知", "label": "方块、实体、天气" },
-      { "value": "行动", "label": "移动、战斗、建造" },
-      { "value": "生态", "label": "寻路与插件" }
+      { "value": "看世界", "label": "方块、生物和玩家" },
+      { "value": "控角色", "label": "移动、挖矿和战斗" },
+      { "value": "一起玩", "label": "建造与聊天" }
     ],
-    "note": "它提供身体与世界接口，Agent 决策循环由接入方补上。"
+    "note": "Mineflayer 只提供游戏角色和操作接口；大模型、人格和伴侣记忆需要另外接入。"
   },
   "intro": {
     "paragraphs": [
-      "Mineflayer 是成熟的 Minecraft Bot 高层 API，支持多个游戏版本，提供实体与方块感知、物理移动、攻击、载具、背包、合成、挖掘、建造、使用物品和聊天。",
-      "它本身不包含伴侣人格或 LLM 循环，但已有 MCP、寻路、网页视图、状态机等插件，是让 AI 进入 Minecraft 的常用底层载体。"
+      "Mineflayer 是一套 Minecraft Java 版机器人开发工具。它可以让一个程序使用账号登录服务器，像普通玩家一样看见附近的方块、生物、天气和其他玩家。",
+      "这具程序角色可以移动和寻路、挖矿和放置方块、管理背包与箱子、合成物品、攻击怪物、驾驶载具并发送聊天消息。开发者把大模型接上去后，AI 就能根据游戏情况决定去哪里、做什么以及怎样回应你。",
+      "它不是可以直接下载游玩的 AI 伴侣，也不是 Minecraft 模组。Mineflayer 只提供进入游戏的身体和操作接口，开发者仍需另外配置角色账号，并接入大模型、人格、记忆和决策程序。"
     ],
     "facts": [
-      { "label": "适合", "text": "想把自己的 AI 伴侣接入 Minecraft，并自行设计决策循环的人。" },
-      { "label": "平台", "text": "Node.js 18+，连接 Minecraft Java 版服务器。" },
-      { "label": "使用方式", "text": "创建 Bot、连接服务器，再组合 pathfinder、MCP 或自定义 LLM Agent。" },
+      { "label": "适合", "text": "希望开发一个能真正进入 Minecraft 服务器陪自己玩的 AI 队友的人。" },
+      { "label": "游戏版本", "text": "面向 Minecraft Java 版服务器，支持多个游戏版本。" },
+      { "label": "前置条件", "text": "需要 Node.js、可连接服务器的角色账号，以及开发者自行准备的 AI 决策程序。" },
+      { "label": "使用方式", "text": "用 Mineflayer 创建并登录 Bot，再接入寻路、插件或自定义大模型 Agent 控制它。" },
+      { "label": "边界", "text": "Mineflayer 本身不包含 AI 模型、伴侣人格或长期记忆。" },
       { "label": "许可", "text": "MIT。" }
     ]
   }

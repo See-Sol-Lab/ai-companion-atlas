@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="Yorishiro Embodied Agent Terminal：具身终端与生活空间，提供 PTY 反射、状态灯、声音摘要、长期 Journal、回忆和 Agent 行为演出。 AI Companion Atlas 中文项目档案。" />
-  <title>Yorishiro · Embodied Agent Terminal · AI Companion Atlas</title>
+  <meta name="description" content="Yorishiro macOS Visual Agent Terminal：Yorishiro 是 macOS 可视化 Agent 终端。它会启动电脑里已有的 Claude Code 或 Codex，并用 VRM 角色、表情、动作和灯光显示工作状态。 AI Companion Atlas 中文项目档案。" />
+  <title>Yorishiro · macOS Visual Agent Terminal · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
@@ -31,12 +31,12 @@
 
       <section class="detail-hero">
         <div class="detail-hero-copy">
-          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-memory">记忆</span><span class="status status-subjectivity">AI 主体性</span><span class="status status-senses">五感与器官</span><span class="status status-companion">陪伴类</span><span class="status status-desktop">PC 前端</span><span class="status">Desktop / Terminal</span></div>
-          <p class="overline">TERMINAL · BODY · LIVING SPACE</p>
+          <div class="status-row"><span class="status status-open">开源</span><span class="status status-original">原创</span><span class="status status-memory">记忆</span><span class="status status-subjectivity">AI 主体性</span><span class="status status-senses">五感与器官</span><span class="status status-companion">陪伴类</span><span class="status status-desktop">PC 前端</span><span class="status">macOS</span></div>
+          <p class="overline">MACOS · TERMINAL · VRM PRESENCE</p>
           <h1>Yorishiro</h1>
-          <p class="cn-name">EMBODIED AGENT TERMINAL · @SKTKKOO</p>
-          <h2>把真实终端包进一间会响应、会记日记、会庆祝的 AI 生活空间。</h2>
-          <p class="hero-desc">Yorishiro 让终端 Agent 拥有可见环境和反射层：观察 PTY、回应工作事件、写日记，并在后续会话回想过去。</p>
+          <p class="cn-name">MACOS VISUAL AGENT TERMINAL · @SKTKKOO</p>
+          <h2>在 Mac 上给 Claude Code 或 Codex 一具 3D 身体，让你一眼看出 TA 在思考、报错还是等你批准。</h2>
+          <p class="hero-desc">Yorishiro 把真实终端和一个 3D 角色放进同一扇 Mac 窗口。Claude Code 或 Codex 仍在终端里完成工作，旁边的角色会根据思考、报错、等待批准和任务完成做出不同反应。</p>
           <div class="hero-footer">
             <div class="hero-actions">
               <a class="primary-btn" href="https://github.com/sktkkoo/Yorishiro" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
@@ -53,17 +53,17 @@
         </div>
 
         <aside class="problem-card" aria-label="Yorishiro解决的问题">
-          <p class="problem-label">让终端工作拥有可见身体和生活痕迹</p>
+          <p class="problem-label">让终端里的 AI 拥有身体和房间</p>
           <div class="clock-mark">依</div>
-          <p class="problem-question">“终端里的 AI 能否记得昨天，也为一次成功而庆祝？”</p>
+          <p class="problem-question">“TA 是在思考、报错，还是正等我批准？”</p>
           <div class="time-compare">
-            <span><b>PTY</b><small>观察终端</small></span>
+            <span><b>终端</b><small>真实工作</small></span>
             <i>≠</i>
-            <span><b>Reflex</b><small>即时反应</small></span>
+            <span><b>角色</b><small>表情与动作</small></span>
             <i>≠</i>
-            <span><b>Journal</b><small>跨会话记忆</small></span>
+            <span><b>日记</b><small>跨会话回忆</small></span>
           </div>
-          <p class="problem-note">长期日记按 Persona 分开，并积累到 memories.md。</p>
+          <p class="problem-note">日记和长期记忆是附加功能；项目的核心是 macOS 上的可视化 Agent 终端。</p>
         </aside>
       </section>
 
@@ -73,13 +73,16 @@
           <h2 id="intro-title">项目介绍</h2>
         </div>
         <div class="intro-content">
-          <p>Yorishiro 是包裹真实 PTY 的桌面空间，可观察终端状态、显示等待审批的灯光、响应成功事件，并共享声音摘要与终端上下文。</p>
-          <p>每个 Persona 能写日记并在 memories.md 中积累重要时刻，后续会话会偶尔回忆数日甚至数月前的内容。</p>
+          <p>Yorishiro 是专为 macOS 制作的可视化终端前端。它会自动启动你已经安装并登录的 Claude Code 或 Codex，把真实终端和一个 VRM 角色放进同一扇窗口，不需要另外向 Yorishiro 提交 API Key。</p>
+          <p>你仍然像平常一样让 Agent 读文件、写代码和运行命令。角色会观察终端状态：思考时改变视线，报错时变表情，需要你批准时亮灯，工作完成时做出反应。</p>
+          <p>它还支持更换人格、场景与界面，以及按 Persona 写日记和积累长期记忆。这些是增强陪伴感的附加能力，Yorishiro 的第一身份仍是带 3D 角色的 Claude Code / Codex 终端。</p>
           <ul>
-            <li><strong>适合：</strong>希望为终端 Agent 增加具身空间和长期日记的人。</li>
-            <li><strong>平台：</strong>桌面系统与终端环境。</li>
-            <li><strong>使用方式：</strong>安装应用，连接 Agent PTY 并配置 Persona 与 Journal。</li>
-            <li><strong>许可：</strong>MIT。</li>
+            <li><strong>适合：</strong>在 Mac 上使用 Claude Code 或 Codex，希望工作时能看见一个有表情、有动作的 AI 角色的人。</li>
+            <li><strong>平台：</strong>目前主要面向 macOS。</li>
+            <li><strong>前置条件：</strong>电脑里需要先安装并登录 Claude Code 或 Codex。</li>
+            <li><strong>使用方式：</strong>安装 Yorishiro，选择要启动的 Agent，即可在同一窗口使用终端与 VRM 角色。</li>
+            <li><strong>记忆：</strong>可按 Persona 保存日记，并把重要经历积累到 memories.md；这是附加功能。</li>
+            <li><strong>许可：</strong>源码 MIT；名称、图标和随附角色素材另有权利说明。</li>
           </ul>
         </div>
       </section>

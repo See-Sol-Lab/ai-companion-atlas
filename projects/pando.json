@@ -7,9 +7,9 @@
   },
   "author": "Eloise-Aspen",
   "sourceUrl": "https://github.com/Eloise-Aspen/pando-bridge",
-  "hook": "从手机进入自己电脑里的 Claude Code，会话、工具和数据都留在本机。",
-  "summary": "自托管 Claude Code 移动网关，用 PWA 和 WebSocket 流式传回对话、思考与工具调用，并支持手机审批权限。",
-  "heroDescription": "Pando 是一层很薄的 FastAPI 桥：它驱动本机已经登录的 Claude Code CLI，把输出实时送到手机 PWA。项目不保存 API Key，聊天历史在自己的 SQLite 中，记忆则通过可替换的外部接口接入。",
+  "hook": "电脑开着，人离开桌前，也能用手机继续让 Claude Code 干活。",
+  "summary": "Pando 把电脑里的 Claude Code 变成一个手机网页。你可以继续聊天、查看工作过程，并批准或拒绝它改文件、运行命令。",
+  "heroDescription": "先在电脑上启动 Pando，再用手机打开它提供的私人网页。Claude Code 仍在电脑上读取项目、修改文件和运行命令；手机负责发消息、看进度，以及处理需要你确认的操作。",
   "badges": [
     {
       "label": "开源",
@@ -22,64 +22,59 @@
     {
       "label": "手机前端",
       "tone": "mobile"
-    },
-    {
-      "label": "PC 前端",
-      "tone": "desktop"
-    },
-    { "label": "工具 / 插件", "tone": "tool" }
+    }
   ],
   "tags": [
-    "移动通道",
+    "手机遥控",
     "Claude Code",
-    "自托管",
-    "权限审批"
+    "远程访问",
+    "权限确认"
   ],
   "language": "Python",
-  "platform": "PC + 手机 PWA",
-  "updated":"2026-08-23",
-  "heroOverline": "PHONE · STREAM · APPROVE",
+  "platform": "电脑 + 手机浏览器",
+  "updated": "2026-08-23",
+  "heroOverline": "手机访问 · 电脑执行 · 权限确认",
   "showcase": {
-    "label": "让本地 CLI 长出一扇手机窗口",
+    "label": "它解决的问题",
     "symbol": "⌁",
-    "question": "“离开电脑后，还能继续这场会话吗？”",
+    "question": "“离开电脑后，还能继续让 Claude Code 工作吗？”",
     "comparisons": [
       {
+        "value": "电脑",
+        "label": "运行 Claude Code"
+      },
+      {
         "value": "手机",
-        "label": "PWA 入口"
+        "label": "远程聊天与查看"
       },
       {
-        "value": "桥",
-        "label": "WebSocket 流"
-      },
-      {
-        "value": "本机",
-        "label": "Claude Code CLI"
+        "value": "确认",
+        "label": "允许或拒绝操作"
       }
     ],
-    "note": "远程的是界面，真正工作的仍是自己的电脑。"
+    "note": "电脑负责干活，手机负责遥控。"
   },
   "intro": {
     "paragraphs": [
-      "Pando 把本地 Claude Code CLI 包装成可从手机访问的自托管 PWA。它可以流式显示思考、正文与工具调用，上传图片或 PDF，并把写文件、运行命令等权限请求传到手机，让用户决定允许或拒绝。",
-      "项目本身不实现长期记忆，而是提供四端点 MemoryProvider 契约，任何记忆服务都能替换接入。它默认不带应用层身份验证，因此应放在 Tailscale 等可信私网或带访问策略的隧道后面。"
+      "Pando 给电脑上的 Claude Code 配了一个手机遥控网页。电脑保持开机并运行 Pando 后，你可以离开桌前，用手机继续发送消息、查看回复和工作进度，也可以上传图片或 PDF。",
+      "当 Claude Code 想修改文件或运行命令时，Pando 可以把确认请求送到手机，由你选择允许或拒绝。它不提供新的 AI，也不会把 Claude Code 装进手机；真正工作的始终是自己的电脑。"
     ],
     "facts": [
       {
         "label": "适合",
-        "text": "希望在手机上继续使用自己电脑中的 Claude Code，并掌控数据与权限的人。"
+        "text": "希望离开电脑桌后，仍能用手机继续指挥 Claude Code 工作的人。"
       },
       {
-        "label": "平台",
-        "text": "运行 Claude Code 的 Windows、macOS 或 Linux 电脑，加任意手机浏览器。"
+        "label": "需要",
+        "text": "一台已经安装并登录 Claude Code 的 Windows、macOS 或 Linux 电脑，以及一部手机。"
       },
       {
-        "label": "使用方式",
-        "text": "安装 Python 包、指定工作目录，启动 Pando 后通过可信私网访问 PWA。"
+        "label": "能做",
+        "text": "手机聊天、查看工作过程、上传图片或 PDF，并确认是否允许改文件或运行命令。"
       },
       {
-        "label": "许可",
-        "text": "代码 MIT；界面与字体、图标的第三方来源在 NOTICE 中单独说明。"
+        "label": "安全边界",
+        "text": "Pando 自身没有登录验证，只能放在可信私人网络中使用，不能直接暴露到公网。"
       }
     ]
   },

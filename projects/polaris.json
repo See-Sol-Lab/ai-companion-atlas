@@ -2,8 +2,8 @@
   "slug": "polaris",
   "order": 61,
   "name": {
-    "zh": "Polaris",
-    "en": "Local-first AI Workspace"
+    "zh": "北极星",
+    "en": "Polaris"
   },
   "author": "Aevella",
   "sourceUrl": "https://github.com/Aevella/polaris-local-first",

@@ -12,8 +12,7 @@
     { "label": "陪伴类", "tone": "companion" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "工具 / 插件", "tone": "tool" }
+    { "label": "手机前端", "tone": "mobile" }
   ],
   "tags": ["共读", "移动优先", "ChatGPT Apps", "小说漫画"],
   "language": "TypeScript",

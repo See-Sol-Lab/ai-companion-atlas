@@ -1,6 +1,7 @@
 {
   "slug": "ai-fishing-game",
   "order": 40,
+  "editorPick": true,
   "name": { "zh": "AI 钓鱼", "en": "ai-fishing-game" },
   "author": "tutusagi",
   "sourceUrl": "https://github.com/tutusagi/ai-fishing-game",

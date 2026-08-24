@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="Ocean Companion PWA：面向长期陪伴的自托管 PWA，用一个 Gateway 管理模型、会话、项目、阅读、通知与可选记忆服务。 AI Companion Atlas 中文项目档案。" />
+  <meta name="description" content="Ocean Companion PWA：Ocean 是一套可以安装到手机和电脑上的自托管 AI 伴侣网页应用。连接模型后，日常聊天、项目、共读和会议都能在同一个应用里分别管理。 AI Companion Atlas 中文项目档案。" />
   <title>Ocean · Companion PWA · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />
   <script src="../detail-comments.js?v=20260824-4" defer></script>
@@ -32,11 +32,11 @@
       <section class="detail-hero">
         <div class="detail-hero-copy">
           <div class="status-row"><span class="status status-subjectivity">AI 主体性</span><span class="status status-companion">陪伴类</span><span class="status status-limited">非商业</span><span class="status status-original">原创</span><span class="status status-mobile">手机前端</span><span class="status status-desktop">PC 前端</span><span class="status">Web / PWA</span></div>
-          <p class="overline">CONTINUITY · ROOMS · OWNERSHIP</p>
+          <p class="overline">CHAT · PROJECTS · READING</p>
           <h1>Ocean</h1>
           <p class="cn-name">COMPANION PWA · @FISHWITHOCTOPUS</p>
-          <h2>把聊天、项目、共读和长期连续性放进同一个自托管空间。</h2>
-          <p class="hero-desc">Ocean 是一个 provider-neutral 的自托管伴侣空间。它把移动端 PWA 与服务端 Gateway 连接起来，让不同房间、项目、书籍和模型共享稳定的会话边界，同时保留使用量、通知和数据所有权。</p>
+          <h2>在一个自己部署的伴侣应用里聊天、做项目、一起读书和开多模型会议，每种生活场景分别保存。</h2>
+          <p class="hero-desc">Ocean 把日常聊天、项目工作、共同阅读和多模型讨论放进同一个伴侣应用。每种用途都有独立的对话和资料，不会全部挤进一个聊天窗口；你也可以自由连接自己选择的模型服务。</p>
           <div class="hero-footer">
             <div class="hero-actions">
               <a class="primary-btn" href="https://github.com/fishwithoctopus/Ocean" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
@@ -53,17 +53,17 @@
         </div>
 
         <aside class="problem-card" aria-label="Ocean解决的问题">
-          <p class="problem-label">一套根系，多种共同生活场景</p>
+          <p class="problem-label">把不同生活场景放进同一个伴侣应用</p>
           <div class="clock-mark">≈</div>
-          <p class="problem-question">“换一个房间，还能自然接上吗？”</p>
+          <p class="problem-question">“能不能把聊天、项目和共读放在一起，又分别保存？”</p>
           <div class="time-compare">
-            <span><b>客厅</b><small>日常对话</small></span>
+            <span><b>聊天</b><small>日常陪伴</small></span>
             <i>≠</i>
-            <span><b>书房</b><small>项目与共读</small></span>
+            <span><b>项目</b><small>工作资料</small></span>
             <i>≠</i>
-            <span><b>会议</b><small>多模型协作</small></span>
+            <span><b>共读</b><small>书籍与摘录</small></span>
           </div>
-          <p class="problem-note">场景分开，关系和数据仍由自己掌握。</p>
+          <p class="problem-note">Ocean 本体提供聊天和项目空间；长期记忆、音乐、通知等扩展需要另外部署服务或配置。</p>
         </aside>
       </section>
 
@@ -73,12 +73,16 @@
           <h2 id="intro-title">项目介绍</h2>
         </div>
         <div class="intro-content">
-          <p>Ocean 提供可安装的移动端 PWA 和自托管 Gateway，支持流式聊天、附件、按场景隔离的会话、项目工作区、共读、多模型会议、通知、音乐与自由时间安排。Session Forge 可以轮换物理会话，同时保留摘要和近期原文，让长对话不必永远挤在同一窗口。</p>
-          <p>模型密钥和私有连接器保存在服务端环境，浏览器只接收公开清单和标准化响应。长期记忆是可选的外接服务；项目 README 明确说明其 Memory 3.0 参考实现由 Ombre-Brain 衍生，并未嵌入 Ocean 主仓库。</p>
+          <p>Ocean 是一套可以自己部署的 AI 伴侣网页应用。部署完成并连接模型服务后，可以从浏览器打开，也可以作为 PWA 安装到手机或电脑上使用。</p>
+          <p>它把不同用途分开管理：日常聊天放在普通会话里，长期工作放进项目空间，书籍与摘录放进共读空间，还可以组织多个模型参加同一场讨论。每个场景保留自己的对话和资料，不会全部混在一起。</p>
+          <p>Ocean Gateway 是应用的后台服务，负责保管模型 API Key、发送模型请求、保存聊天和项目数据，并处理通知与外部服务。浏览器和手机只显示界面，不直接持有这些私密密钥。</p>
+          <p>长期记忆、音乐、通知和部分其他功能属于可选扩展，需要另外部署服务或完成配置。Ocean 主仓库没有内置完整的长期记忆数据库。</p>
           <ul>
-            <li><strong>适合：</strong>希望自己托管伴侣入口，并把聊天、项目、阅读与通知放在同一空间的人。</li>
-            <li><strong>平台：</strong>现代浏览器与可安装 PWA；需要 Node.js 20+ 和 HTTPS 部署环境。</li>
-            <li><strong>使用方式：</strong>配置至少一家模型提供方，启动 Gateway 与前端；房间和外接服务可按需保留。</li>
+            <li><strong>适合：</strong>希望自己管理数据，并用同一个伴侣应用分别处理日常聊天、项目、共读和会议的人。</li>
+            <li><strong>平台：</strong>浏览器、手机和电脑上的可安装 PWA。</li>
+            <li><strong>前置条件：</strong>需要 Node.js 20+、至少一个模型服务，并在正式环境中配置 HTTPS。</li>
+            <li><strong>使用方式：</strong>部署网页前端与 Ocean Gateway，填写模型服务配置，然后从浏览器或安装后的 PWA 使用。</li>
+            <li><strong>可选功能：</strong>长期记忆、共读 MCP、音乐、通知和游戏等功能可能需要额外服务或单独配置。</li>
             <li><strong>许可：</strong>PolyForm Noncommercial 1.0.0，允许非商业使用、研究、修改与分发。</li>
           </ul>
         </div>
