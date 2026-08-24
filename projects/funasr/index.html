@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="FunASR Speech Recognition Toolkit：端到端语音识别工具包，覆盖流式 ASR、VAD、标点、说话人分离、训练推理与 OpenAI 兼容服务。 AI Companion Atlas 中文项目档案。" />
   <title>FunASR · Speech Recognition Toolkit · AI Companion Atlas</title>
-  <link rel="stylesheet" href="../detail.css?v=20260823-3" />
+  <link rel="stylesheet" href="../detail.css?v=20260824-1" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+  <script src="../detail-comments.js?v=20260824-1" defer></script>
 </head>
 <body>
   <div class="detail-shell">
@@ -73,13 +75,31 @@
         </div>
       </section>
 
-      <section class="discussion-preview" aria-labelledby="discussion-title">
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="funasr">
         <div class="discussion-title">
           <span>◌</span>
           <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
-          <b>游客留言功能施工中</b>
+          <b>游客留言 · 审核后公开</b>
         </div>
-        <p>用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+        <p class="comments-intro">用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">正在读取公开留言…</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>昵称（可空）<input name="nickname" maxlength="40" placeholder="匿名旅人" autocomplete="nickname" /></label>
+            <label>使用平台（可空）<input name="platform" maxlength="60" placeholder="例如 Windows / Android" /></label>
+            <label>使用结果<select name="result" required><option value="success">已跑通</option><option value="partial">部分跑通</option><option value="failed">未跑通</option></select></label>
+          </div>
+          <label class="comment-content-field">留言正文<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="写下安装过程、实际体验或踩坑信息（10–800 字）"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>提交留言</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
       </section>
 
       <section class="source-section">

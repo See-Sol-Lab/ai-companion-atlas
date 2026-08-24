@@ -9,3 +9,5 @@
 3. 检查首页卡片与 `projects/<slug>/` 详情页。
 
 网站保持纯静态，不需要安装依赖。
+
+匿名项目留言使用 Cloudflare Pages Functions、D1 与 Turnstile。部署前按 [`COMMENTS_SETUP.md`](./COMMENTS_SETUP.md) 配置数据库绑定与 Secrets。

@@ -1,0 +1,106 @@
+const authForm = document.querySelector('#admin-auth');
+const tokenInput = document.querySelector('#admin-token');
+const feedback = document.querySelector('#admin-feedback');
+const list = document.querySelector('#review-list');
+const resultLabels = { success: '已跑通', partial: '部分跑通', failed: '未跑通' };
+let adminToken = sessionStorage.getItem('atlas-admin-token') || '';
+
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+async function api(path, options = {}) {
+  const response = await fetch(path, {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${adminToken}`,
+      ...options.headers
+    }
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    if (response.status === 401) {
+      adminToken = '';
+      sessionStorage.removeItem('atlas-admin-token');
+    }
+    throw new Error(data.error || '请求失败。');
+  }
+  return data;
+}
+
+function render(comments) {
+  list.replaceChildren();
+  if (!comments.length) {
+    list.append(element('p', 'review-empty', '目前没有待审核留言。'));
+    return;
+  }
+
+  for (const comment of comments) {
+    const article = element('article', 'review-card');
+    const heading = element('div', 'review-heading');
+    const title = element('div');
+    title.append(
+      element('strong', '', comment.nickname || '匿名旅人'),
+      element('span', '', `${comment.project_slug} · ${resultLabels[comment.result] || comment.result}`)
+    );
+    heading.append(title, element('time', '', new Date(comment.created_at).toLocaleString('zh-CN')));
+    article.append(heading, element('p', 'review-content', comment.content));
+    if (comment.platform) article.append(element('p', 'review-platform', `使用平台：${comment.platform}`));
+
+    const actions = element('div', 'review-actions');
+    const approve = element('button', 'approve', '通过');
+    const remove = element('button', 'delete', '删除');
+    approve.type = 'button';
+    remove.type = 'button';
+    approve.addEventListener('click', () => moderate(comment.id, 'approve', article));
+    remove.addEventListener('click', () => {
+      if (window.confirm('确定永久删除这条留言吗？')) moderate(comment.id, 'delete', article);
+    });
+    actions.append(approve, remove);
+    article.append(actions);
+    list.append(article);
+  }
+}
+
+async function loadPending() {
+  feedback.textContent = '正在读取…';
+  try {
+    const data = await api('/api/admin/comments');
+    render(data.comments || []);
+    feedback.textContent = `待审核 ${data.comments?.length || 0} 条`;
+  } catch (error) {
+    list.replaceChildren();
+    feedback.textContent = error.message;
+  }
+}
+
+async function moderate(id, action, article) {
+  const buttons = article.querySelectorAll('button');
+  buttons.forEach((button) => { button.disabled = true; });
+  try {
+    await api('/api/admin/comments', {
+      method: 'POST',
+      body: JSON.stringify({ id, action })
+    });
+    article.remove();
+    if (!list.children.length) render([]);
+    feedback.textContent = action === 'approve' ? '留言已公开。' : '留言已删除。';
+  } catch (error) {
+    feedback.textContent = error.message;
+    buttons.forEach((button) => { button.disabled = false; });
+  }
+}
+
+authForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  adminToken = tokenInput.value.trim();
+  sessionStorage.setItem('atlas-admin-token', adminToken);
+  tokenInput.value = '';
+  loadPending();
+});
+
+if (adminToken) loadPending();

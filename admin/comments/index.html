@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>留言审核 · AI Companion Atlas</title>
+  <link rel="stylesheet" href="./admin.css" />
+  <script src="./admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header>
+      <div>
+        <p>AI COMPANION ATLAS</p>
+        <h1>留言审核</h1>
+      </div>
+      <a href="../../">返回图谱首页</a>
+    </header>
+
+    <form class="admin-auth" id="admin-auth">
+      <label for="admin-token">审核凭据</label>
+      <div>
+        <input id="admin-token" name="token" type="password" autocomplete="current-password" required />
+        <button type="submit">读取待审核留言</button>
+      </div>
+      <p>凭据仅保存在当前浏览器标签页，关闭标签页后清除。</p>
+    </form>
+
+    <p class="admin-feedback" id="admin-feedback" aria-live="polite"></p>
+    <section class="review-list" id="review-list" aria-live="polite"></section>
+  </main>
+</body>
+</html>
