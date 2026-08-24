@@ -1,5 +1,8 @@
 const panel = document.querySelector('[data-comments-project]');
 const likeControl = document.querySelector('[data-project-like]');
+let resolveTurnstileReady;
+const turnstileReady = new Promise((resolve) => { resolveTurnstileReady = resolve; });
+window.onAtlasTurnstileLoad = resolveTurnstileReady;
 
 if (likeControl) {
   const projectSlug = likeControl.dataset.projectLike;
@@ -122,7 +125,12 @@ if (panel) {
     try {
       const response = await fetch('/api/config');
       const config = await response.json();
-      if (!response.ok || !config.turnstileSiteKey || !window.turnstile) throw new Error('未配置');
+      if (!response.ok || !config.turnstileSiteKey) throw new Error('未配置');
+      await Promise.race([
+        turnstileReady,
+        new Promise((_, reject) => setTimeout(() => reject(new Error('加载超时')), 10000))
+      ]);
+      if (!window.turnstile) throw new Error('未加载');
       turnstileWidgetId = window.turnstile.render(panel.querySelector('.turnstile-slot'), {
         sitekey: config.turnstileSiteKey,
         action: 'submit-comment',

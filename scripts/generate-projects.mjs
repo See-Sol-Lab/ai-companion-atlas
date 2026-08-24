@@ -143,8 +143,8 @@ function renderDetail(project) {
   <meta name="description" content="${escapeHtml(project.name.zh)} ${escapeHtml(project.name.en)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(project.name.zh)} · ${escapeHtml(project.name.en)} · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-2" />
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
-  <script src="../detail-comments.js?v=20260824-2" defer></script>
+  <script src="../detail-comments.js?v=20260824-3" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
 </head>
 <body>
   <div class="detail-shell">
