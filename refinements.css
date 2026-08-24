@@ -91,6 +91,7 @@
 
 /* Data-generated catalog cards. */
 .project-template{position:relative;display:flex;flex-direction:column;min-height:292px!important;border-color:rgba(91,109,178,.24)!important;background:radial-gradient(circle at 92% 5%,rgba(170,139,235,.14),transparent 32%),linear-gradient(150deg,rgba(255,255,255,.94),rgba(249,247,252,.88))!important}
+.project-card[data-categories~="coding"]::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 96% 82% at 0 100%,rgba(88,151,232,.24) 0%,rgba(157,199,245,.14) 43%,rgba(255,255,255,0) 82%)}
 .project-template-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,52%);align-items:start;gap:14px;margin-bottom:16px}
 .project-title-block{min-width:0}
 .project-title-zh{min-width:0;margin:0!important;font-family:var(--serif)!important;font-size:30px!important;line-height:1.05!important;font-weight:500!important;letter-spacing:-.025em!important;color:#132347!important;overflow-wrap:anywhere}

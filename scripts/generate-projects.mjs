@@ -136,7 +136,7 @@ function renderDetail(project) {
   const sourceUrl = escapeHtml(project.sourceUrl);
   const officialHighlightClass = project.officialHighlight === true ? ' project-official-highlight' : '';
   const officialHighlightStylesheet = project.officialHighlight === true
-    ? '\n  <link rel="stylesheet" href="../../official-highlights.css?v=20260824-1" />'
+    ? '\n  <link rel="stylesheet" href="../../official-highlights.css?v=20260824-2" />'
     : '';
 
   return `<!doctype html>

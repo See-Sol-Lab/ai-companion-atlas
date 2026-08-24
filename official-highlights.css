@@ -1,11 +1,11 @@
 .project-card.project-official-highlight {
   background:
-    radial-gradient(ellipse 78% 72% at 100% 0%, rgba(242, 174, 142, 0.58) 0%, rgba(255, 222, 203, 0.42) 38%, rgba(255, 255, 255, 0) 76%),
+    radial-gradient(ellipse 118% 112% at 100% 0%, rgba(242, 174, 142, 0.58) 0%, rgba(255, 222, 203, 0.42) 45%, rgba(255, 255, 255, 0) 90%),
     linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(249, 247, 252, 0.88)) !important;
 }
 
 .detail-hero-copy.project-official-highlight {
   background:
-    radial-gradient(ellipse 88% 82% at 100% 0%, rgba(242, 174, 142, 0.58) 0%, rgba(255, 222, 203, 0.44) 40%, rgba(255, 255, 255, 0) 78%),
+    radial-gradient(ellipse 128% 118% at 100% 0%, rgba(242, 174, 142, 0.58) 0%, rgba(255, 222, 203, 0.44) 46%, rgba(255, 255, 255, 0) 92%),
     linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(250, 247, 244, 0.86)) !important;
 }

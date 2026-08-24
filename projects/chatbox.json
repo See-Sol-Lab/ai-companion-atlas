@@ -2,6 +2,7 @@
   "slug": "chatbox",
   "order": 180,
   "editorPick": true,
+  "officialHighlight": true,
   "stars": 41500,
   "name": {
     "zh": "Chatbox",

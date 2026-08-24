@@ -1,6 +1,7 @@
 {
   "slug": "zcode",
   "order": 182,
+  "officialHighlight": true,
   "editorPick": true,
   "name": {
     "zh": "ZCode",
