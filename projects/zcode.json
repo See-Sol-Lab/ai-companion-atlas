@@ -1,0 +1,91 @@
+{
+  "slug": "zcode",
+  "order": 182,
+  "editorPick": true,
+  "name": {
+    "zh": "ZCode",
+    "en": "GLM Vibe Coding"
+  },
+  "author": "Z.ai",
+  "sourceUrl": "https://zcode.z.ai/cn",
+  "hook": "把想做的网站、应用或功能告诉 AI，让多个 Agent 帮你规划、写代码、检查并完成。",
+  "summary": "智谱 GLM 官方氛围编程桌面工具，面向从入门到专业的开发任务，支持多 Agent 协作、长程目标、代码修改与结果验证。",
+  "heroDescription": "打开一个项目或新建工作区，用自然语言描述想实现的结果。ZCode 会让 AI Agent 分解任务、读写文件、运行命令并持续检查进度，让不熟悉完整开发流程的人也能从一个想法开始制作软件。",
+  "badges": [
+    {
+      "label": "官方前端",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "开发与编程",
+      "tone": "coding"
+    }
+  ],
+  "tags": [
+    "Vibe Coding",
+    "多 Agent",
+    "长程任务",
+    "远程控制"
+  ],
+  "language": "Desktop IDE",
+  "platform": "Windows / macOS / Linux",
+  "updated": "2026-08-24",
+  "heroOverline": "DESCRIBE · BUILD · REVIEW",
+  "showcase": {
+    "label": "用自然语言把想法逐步做成软件",
+    "symbol": "Z",
+    "question": "“刚开始学开发，也能让 AI 帮我把想法真正做出来吗？”",
+    "comparisons": [
+      {
+        "value": "描述",
+        "label": "说清想做什么"
+      },
+      {
+        "value": "开发",
+        "label": "多 Agent 执行"
+      },
+      {
+        "value": "检查",
+        "label": "进度与结果可见"
+      }
+    ],
+    "note": "ZCode 能降低开发起步门槛；生成的代码、命令和最终结果仍需要用户检查。"
+  },
+  "intro": {
+    "paragraphs": [
+      "ZCode 是智谱推出的官方氛围编程桌面工具。用户可以打开现有项目，也可以从一个空目录开始，直接用自然语言描述想制作的网站、应用、游戏或功能。",
+      "它会让 AI Agent 阅读项目、拆分步骤、修改文件、运行命令并验证结果。复杂任务可以通过 Goal 持续推进，也能由多个 Agent 分工协作，而不必把所有操作都挤在一次对话里。",
+      "ZCode 还支持通过微信、飞书或 Telegram 远程唤起任务。它适合刚接触 AI 编程的人，也能用于较大的真实项目，但用户仍应审查权限、代码改动和运行结果。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "想用自然语言制作网站、应用和自动化工具，或希望 AI 参与现有项目开发的人。"
+      },
+      {
+        "label": "平台",
+        "text": "macOS、Windows 与 Linux；Linux 版本当前标为 Beta。"
+      },
+      {
+        "label": "使用方式",
+        "text": "从 ZCode 官方页面下载安装，登录后打开工作区并描述希望完成的目标。"
+      },
+      {
+        "label": "主要能力",
+        "text": "长程 Goal、多 Agent 协作、文件与命令操作、进度验证及远程任务唤起。"
+      },
+      {
+        "label": "费用",
+        "text": "模型额度与套餐可能调整，以 GLM Coding Plan 官方页面的当前说明为准。"
+      },
+      {
+        "label": "来源",
+        "text": "北京智谱华章科技股份有限公司官方产品。"
+      }
+    ]
+  }
+}

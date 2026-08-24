@@ -93,6 +93,7 @@ const CATEGORY_FILTERS = {
   continuity: '关系延续',
   desktop: 'PC 前端',
   mobile: '手机前端',
+  coding: '开发与编程',
   game: '游戏',
   tool: '工具 / 插件',
   adult: '18+'

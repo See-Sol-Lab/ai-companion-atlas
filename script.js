@@ -93,6 +93,6 @@ backToTopButton.addEventListener('click', () => {
   backToTopAnimationFrame = requestAnimationFrame(step);
 });
 
-import('./script-runtime.js?v=20260823-retired-1').catch((error) => {
+import('./script-runtime.js?v=20260824-coding-1').catch((error) => {
   console.error('Atlas catalog runtime failed to load:', error);
 });

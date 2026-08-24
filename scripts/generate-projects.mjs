@@ -107,8 +107,9 @@ function renderCard(project) {
     project.editorPick === true ? ' data-editor-pick="true"' : '',
     Number.isInteger(project.stars) ? ` data-stars="${project.stars}"` : ''
   ].join('');
+  const officialHighlightClass = project.officialHighlight === true ? ' project-official-highlight' : '';
 
-  return `          <article class="project-card project-real project-template"${editorialMetadata}>
+  return `          <article class="project-card project-real project-template${officialHighlightClass}"${editorialMetadata}>
             <div class="project-template-top">
               <div class="project-title-block">
                 <h3 class="project-title-zh">${escapeHtml(project.name.zh)}</h3>${secondaryName}
@@ -133,6 +134,10 @@ function renderDetail(project) {
   const facts = project.intro.facts
     .map((fact) => `            <li><strong>${escapeHtml(fact.label)}：</strong>${escapeHtml(fact.text)}</li>`).join('\n');
   const sourceUrl = escapeHtml(project.sourceUrl);
+  const officialHighlightClass = project.officialHighlight === true ? ' project-official-highlight' : '';
+  const officialHighlightStylesheet = project.officialHighlight === true
+    ? '\n  <link rel="stylesheet" href="../../official-highlights.css?v=20260824-1" />'
+    : '';
 
   return `<!doctype html>
 <html lang="zh-CN">
@@ -142,7 +147,7 @@ function renderDetail(project) {
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="${escapeHtml(project.name.zh)} ${escapeHtml(project.name.en)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(project.name.zh)} · ${escapeHtml(project.name.en)} · AI Companion Atlas</title>
-  <link rel="stylesheet" href="../detail.css?v=20260824-4" />
+  <link rel="stylesheet" href="../detail.css?v=20260824-4" />${officialHighlightStylesheet}
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
 </head>
@@ -166,7 +171,7 @@ function renderDetail(project) {
       <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>${escapeHtml(project.name.zh)}</strong></div>
 
       <section class="detail-hero">
-        <div class="detail-hero-copy">
+        <div class="detail-hero-copy${officialHighlightClass}">
           <div class="status-row">${statuses}</div>
           <p class="overline">${escapeHtml(project.heroOverline)}</p>
           <h1>${escapeHtml(project.name.zh)}</h1>

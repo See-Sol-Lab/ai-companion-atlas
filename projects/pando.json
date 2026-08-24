@@ -7,7 +7,7 @@
   },
   "author": "Eloise-Aspen",
   "sourceUrl": "https://github.com/Eloise-Aspen/pando-bridge",
-  "hook": "电脑开着，人离开桌前，也能用手机继续让 Claude Code 干活。",
+  "hook": "电脑开着，人离开桌前，也能用手机继续和 Claude Code 交流。",
   "summary": "Pando 把电脑里的 Claude Code 变成一个手机网页。你可以继续聊天、查看工作过程，并批准或拒绝它改文件、运行命令。",
   "heroDescription": "先在电脑上启动 Pando，再用手机打开它提供的私人网页。Claude Code 仍在电脑上读取项目、修改文件和运行命令；手机负责发消息、看进度，以及处理需要你确认的操作。",
   "badges": [

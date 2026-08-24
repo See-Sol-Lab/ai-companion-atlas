@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="AI Companion Atlas：中文优先的人机关系技术图谱，收录 AI 伴侣、长期记忆、主动智能体、桌面伴侣、语音视觉与共同活动等项目、工具、教程与研究。" />
   <title>AI Companion Atlas · 人机关系技术图谱</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./refinements.css?v=20260823-9" />
+  <link rel="stylesheet" href="./styles.css?v=20260824-1" />
+  <link rel="stylesheet" href="./refinements.css?v=20260824-10" />
+  <link rel="stylesheet" href="./official-highlights.css?v=20260824-1" />
   <link rel="stylesheet" href="./submission.css?v=20260824-1" />
   <script src="./submission.js?v=20260824-1" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasSubmissionTurnstileLoad" defer></script>
@@ -190,6 +191,7 @@
           <button type="button" class="tag" data-catalog-filter="continuity" aria-pressed="false">关系延续 <span>Relationship Continuity</span></button>
           <button type="button" class="tag" data-catalog-filter="desktop" aria-pressed="false">PC 前端 <span>Desktop Frontend</span></button>
           <button type="button" class="tag" data-catalog-filter="mobile" aria-pressed="false">手机前端 <span>Mobile Frontend</span></button>
+          <button type="button" class="tag" data-catalog-filter="coding" aria-pressed="false">开发与编程 <span>Vibe Coding</span></button>
           <button type="button" class="tag" data-catalog-filter="game" aria-pressed="false">游戏 <span>Games</span></button>
           <button type="button" class="tag" data-catalog-filter="tool" aria-pressed="false">工具 / 插件 <span>Tools &amp; Plugins</span></button>
           <button type="button" class="tag" data-catalog-filter="adult" aria-pressed="false">18+ <span>Private</span></button>
@@ -200,7 +202,7 @@
         <div class="section-heading">
           <div class="section-label">
             <span class="section-star">✧</span>
-            <div><small>CURATED PROJECTS</small><h2 id="directory-title" class="directory-stats"><strong>179</strong><span>个项目 ·</span><strong>157</strong><span>位作者</span></h2><p class="directory-filter-note" id="directory-filter-note" hidden></p></div>
+            <div><small>CURATED PROJECTS</small><h2 id="directory-title" class="directory-stats"><strong>180</strong><span>个项目 ·</span><strong>157</strong><span>位作者</span></h2><p class="directory-filter-note" id="directory-filter-note" hidden></p></div>
           </div>
           <form class="catalog-search" id="catalogSearch" role="search">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
@@ -211,14 +213,50 @@
 
         <div class="project-grid">
           <!-- GENERATED:PROJECT_CARDS:START -->
-          <article class="project-card project-real project-template" data-categories="open original mobile" data-search="Pando Claude Code Mobile Gateway Eloise-Aspen 电脑开着，人离开桌前，也能用手机继续让 Claude Code 干活。 Pando 把电脑里的 Claude Code 变成一个手机网页。你可以继续聊天、查看工作过程，并批准或拒绝它改文件、运行命令。 先在电脑上启动 Pando，再用手机打开它提供的私人网页。Claude Code 仍在电脑上读取项目、修改文件和运行命令；手机负责发消息、看进度，以及处理需要你确认的操作。 开源 原创 手机前端 手机遥控 Claude Code 远程访问 权限确认" data-editor-pick="true">
+          <article class="project-card project-real project-template" data-categories="limited original coding" data-search="Codex OpenAI Coding Agent OpenAI 让 AI 直接进入你的项目，读代码、改文件、运行命令，并把任务真正做完。 OpenAI 官方编码 Agent，可通过桌面应用、命令行、IDE 和云端工作，帮助用户理解项目、修改文件、运行测试并检查结果。 打开一个项目或文件夹，告诉 Codex 想完成什么。它可以读取相关代码和资料、编辑文件、运行电脑中已有的开发工具，并把命令、改动和验证结果交给用户审查。 官方前端 原创 开发与编程 项目理解 文件编辑 命令执行 任务验证" data-editor-pick="true">
+            <div class="project-template-top">
+              <div class="project-title-block">
+                <h3 class="project-title-zh">Codex</h3>
+              </div>
+              <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-limited">官方前端</span><span class="project-badge badge-original">原创</span><span class="project-badge badge-coding">开发与编程</span></div>
+            </div>
+            <div class="project-hook-row"><p class="project-problem">让 AI 直接进入你的项目，读代码、改文件、运行命令，并把任务真正做完。</p><span class="project-author">@OpenAI</span></div>
+            <p class="project-description">OpenAI 官方编码 Agent，可通过桌面应用、命令行、IDE 和云端工作，帮助用户理解项目、修改文件、运行测试并检查结果。</p>
+            <div class="project-tags"><span>项目理解</span><span>文件编辑</span><span>命令执行</span><span>任务验证</span></div>
+            <div class="project-card-footer"><div class="project-footer-meta"><span>Desktop / CLI / IDE</span><span>Windows / macOS / Linux / Cloud</span><span>核验 2026-08-24</span></div><a class="project-detail-button" href="./projects/codex/">查看详情 <span>→</span></a></div>
+          </article>
+          <article class="project-card project-real project-template" data-categories="limited original coding" data-search="ZCode GLM Vibe Coding Z.ai 把想做的网站、应用或功能告诉 AI，让多个 Agent 帮你规划、写代码、检查并完成。 智谱 GLM 官方氛围编程桌面工具，面向从入门到专业的开发任务，支持多 Agent 协作、长程目标、代码修改与结果验证。 打开一个项目或新建工作区，用自然语言描述想实现的结果。ZCode 会让 AI Agent 分解任务、读写文件、运行命令并持续检查进度，让不熟悉完整开发流程的人也能从一个想法开始制作软件。 官方前端 原创 开发与编程 Vibe Coding 多 Agent 长程任务 远程控制" data-editor-pick="true">
+            <div class="project-template-top">
+              <div class="project-title-block">
+                <h3 class="project-title-zh">ZCode</h3>
+              </div>
+              <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-limited">官方前端</span><span class="project-badge badge-original">原创</span><span class="project-badge badge-coding">开发与编程</span></div>
+            </div>
+            <div class="project-hook-row"><p class="project-problem">把想做的网站、应用或功能告诉 AI，让多个 Agent 帮你规划、写代码、检查并完成。</p><span class="project-author">@Z.ai</span></div>
+            <p class="project-description">智谱 GLM 官方氛围编程桌面工具，面向从入门到专业的开发任务，支持多 Agent 协作、长程目标、代码修改与结果验证。</p>
+            <div class="project-tags"><span>Vibe Coding</span><span>多 Agent</span><span>长程任务</span><span>远程控制</span></div>
+            <div class="project-card-footer"><div class="project-footer-meta"><span>Desktop IDE</span><span>Windows / macOS / Linux</span><span>核验 2026-08-24</span></div><a class="project-detail-button" href="./projects/zcode/">查看详情 <span>→</span></a></div>
+          </article>
+          <article class="project-card project-real project-template" data-categories="limited open original coding" data-search="DeepSeek Harness DSH deepseek-ai 打开一个网页工作台，让 DeepSeek Agent 读写项目、运行命令，并通过插件组合不同开发能力。 DeepSeek 官方开源编码 Agent，提供 WebUI、命令行和 SDK，可完成文件编辑、Shell、检索、计划、目标、子 Agent 与工作流任务。 安装 Node.js 后运行一条 npx 命令即可启动 DSH 网页界面。配置模型并选择项目目录后，Agent 可以阅读和修改文件、运行命令、制定计划、调用技能，并在需要授权的操作前询问用户。 官方前端 开源 原创 开发与编程 编码 Agent 插件系统 WebUI 多 Agent" data-editor-pick="true" data-stars="33600">
+            <div class="project-template-top">
+              <div class="project-title-block">
+                <h3 class="project-title-zh">DeepSeek Harness</h3>
+              </div>
+              <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-limited">官方前端</span><span class="project-badge badge-open">开源</span><span class="project-badge badge-original">原创</span><span class="project-badge badge-coding">开发与编程</span></div>
+            </div>
+            <div class="project-hook-row"><p class="project-problem">打开一个网页工作台，让 DeepSeek Agent 读写项目、运行命令，并通过插件组合不同开发能力。</p><span class="project-author">@deepseek-ai</span></div>
+            <p class="project-description">DeepSeek 官方开源编码 Agent，提供 WebUI、命令行和 SDK，可完成文件编辑、Shell、检索、计划、目标、子 Agent 与工作流任务。</p>
+            <div class="project-tags"><span>编码 Agent</span><span>插件系统</span><span>WebUI</span><span>多 Agent</span></div>
+            <div class="project-card-footer"><div class="project-footer-meta"><span>WebUI / CLI / SDK</span><span>Windows / macOS / Linux</span><span>更新 2026-08-24</span></div><a class="project-detail-button" href="./projects/deepseek-harness/">查看详情 <span>→</span></a></div>
+          </article>
+          <article class="project-card project-real project-template" data-categories="open original mobile" data-search="Pando Claude Code Mobile Gateway Eloise-Aspen 电脑开着，人离开桌前，也能用手机继续和 Claude Code 交流。 Pando 把电脑里的 Claude Code 变成一个手机网页。你可以继续聊天、查看工作过程，并批准或拒绝它改文件、运行命令。 先在电脑上启动 Pando，再用手机打开它提供的私人网页。Claude Code 仍在电脑上读取项目、修改文件和运行命令；手机负责发消息、看进度，以及处理需要你确认的操作。 开源 原创 手机前端 手机遥控 Claude Code 远程访问 权限确认" data-editor-pick="true">
             <div class="project-template-top">
               <div class="project-title-block">
                 <h3 class="project-title-zh">Pando</h3>
               </div>
               <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-open">开源</span><span class="project-badge badge-original">原创</span><span class="project-badge badge-mobile">手机前端</span></div>
             </div>
-            <div class="project-hook-row"><p class="project-problem">电脑开着，人离开桌前，也能用手机继续让 Claude Code 干活。</p><span class="project-author">@Eloise-Aspen</span></div>
+            <div class="project-hook-row"><p class="project-problem">电脑开着，人离开桌前，也能用手机继续和 Claude Code 交流。</p><span class="project-author">@Eloise-Aspen</span></div>
             <p class="project-description">Pando 把电脑里的 Claude Code 变成一个手机网页。你可以继续聊天、查看工作过程，并批准或拒绝它改文件、运行命令。</p>
             <div class="project-tags"><span>手机遥控</span><span>Claude Code</span><span>远程访问</span><span>权限确认</span></div>
             <div class="project-card-footer"><div class="project-footer-meta"><span>Python</span><span>电脑 + 手机浏览器</span><span>更新 2026-08-23</span></div><a class="project-detail-button" href="./projects/pando/">查看详情 <span>→</span></a></div>
@@ -362,17 +400,17 @@
             <div class="project-tags"><span>AI 资产</span><span>邮箱</span><span>身份</span><span>QQ</span></div>
             <div class="project-card-footer"><div class="project-footer-meta"><span>Service</span><span>Cloud</span><span>核验 2026-08-23</span></div><a class="project-detail-button" href="./projects/qq-agent-mail/">查看详情 <span>→</span></a></div>
           </article>
-          <article class="project-card project-real project-template" data-categories="limited original" data-search="Claude Code Agentic Coding Tool Anthropic 让 Claude 住进终端，理解本地项目、调用工具并长期承担真实工作。 Anthropic 官方终端 Agent，可理解代码库、编辑文件、运行命令、处理 Git，并通过 hooks、MCP 与 Channels 扩展。 Claude Code 是许多本地伴侣方案的宿主运行时：终端会话、文件工具、MCP、hooks 与 Channels 为上层关系系统提供行动基础。 官方前端 原创 Agent 宿主 终端 MCP 本地工具" data-editor-pick="true">
+          <article class="project-card project-real project-template project-official-highlight" data-categories="limited original coding" data-search="Claude Code Agentic Coding Tool Anthropic 让 Claude 住进终端，理解本地项目、调用工具并长期承担真实工作。 Anthropic 官方终端 Agent，可理解代码库、编辑文件、运行命令、处理 Git，并通过 hooks、MCP 与 Channels 扩展。 Claude Code 是许多本地伴侣方案的宿主运行时：终端会话、文件工具、MCP、hooks 与 Channels 为上层关系系统提供行动基础。 官方前端 原创 开发与编程 Agent 宿主 终端 MCP 本地工具" data-editor-pick="true">
             <div class="project-template-top">
               <div class="project-title-block">
                 <h3 class="project-title-zh">Claude Code</h3>
               </div>
-              <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-limited">官方前端</span><span class="project-badge badge-original">原创</span></div>
+              <div class="project-badges" aria-label="项目状态"><span class="project-badge badge-limited">官方前端</span><span class="project-badge badge-original">原创</span><span class="project-badge badge-coding">开发与编程</span></div>
             </div>
             <div class="project-hook-row"><p class="project-problem">让 Claude 住进终端，理解本地项目、调用工具并长期承担真实工作。</p><span class="project-author">@Anthropic</span></div>
             <p class="project-description">Anthropic 官方终端 Agent，可理解代码库、编辑文件、运行命令、处理 Git，并通过 hooks、MCP 与 Channels 扩展。</p>
             <div class="project-tags"><span>Agent 宿主</span><span>终端</span><span>MCP</span><span>本地工具</span></div>
-            <div class="project-card-footer"><div class="project-footer-meta"><span>CLI</span><span>Windows / macOS / Linux</span><span>更新 2026-08-23</span></div><a class="project-detail-button" href="./projects/claude-code/">查看详情 <span>→</span></a></div>
+            <div class="project-card-footer"><div class="project-footer-meta"><span>CLI</span><span>Windows / macOS / Linux</span><span>核验 2026-08-23</span></div><a class="project-detail-button" href="./projects/claude-code/">查看详情 <span>→</span></a></div>
           </article>
           <article class="project-card project-real project-template" data-categories="limited original tool" data-search="Clawd 桌宠 clawd-on-desk rullerzhou-afk 用像素桌宠显示 Claude Code、Codex、Cursor 等 Agent 的实时工作状态。 跨平台像素桌宠，读取编码 Agent 的思考、打字、错误、等待权限与完成状态。 clawd-on-desk 把后台编码 Agent 的生命周期变成可见桌宠动作，让人不用一直盯着终端判断它是否卡住。 源码公开 原创 工具 / 插件 桌宠工具 Agent 状态 Codex Claude Code">
             <div class="project-template-top">
