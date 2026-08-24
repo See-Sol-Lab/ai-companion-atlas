@@ -62,6 +62,8 @@ if (panel) {
   const submitButton = panel.querySelector('button[type="submit"]');
   const contentInput = form.elements.content;
   const counter = panel.querySelector('.comment-count');
+  const successPanel = panel.querySelector('.comment-success');
+  const againButton = panel.querySelector('.comment-again');
   let turnstileWidgetId = null;
   let turnstileToken = '';
 
@@ -194,12 +196,24 @@ if (panel) {
       if (!response.ok) throw new Error(data.error || '提交失败，请稍后再试。');
       form.reset();
       counter.textContent = '0 / 800';
-      feedback.textContent = data.message;
+      feedback.textContent = '';
+      turnstileToken = '';
+      submitButton.disabled = true;
+      form.hidden = true;
+      successPanel.hidden = false;
+      successPanel.focus();
     } catch (error) {
       feedback.textContent = error.message;
-    } finally {
       resetTurnstile();
     }
+  });
+
+  againButton.addEventListener('click', () => {
+    successPanel.hidden = true;
+    form.hidden = false;
+    feedback.textContent = '';
+    resetTurnstile();
+    form.elements.nickname.focus();
   });
 
   loadComments();

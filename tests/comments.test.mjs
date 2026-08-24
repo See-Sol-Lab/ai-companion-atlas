@@ -253,6 +253,8 @@ test('every generated project detail page contains its own comment slug and shar
     assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
     assert.match(html, /detail-comments\.js/u);
     assert.match(html, /当前版本为游客模式，留言不需要注册账号。/u);
+    assert.match(html, /class="comment-success"/u);
+    assert.match(html, /提交成功/u);
     assert.doesNotMatch(html, /游客留言功能施工中/u);
   }
 });
