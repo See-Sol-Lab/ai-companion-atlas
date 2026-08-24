@@ -6,6 +6,34 @@
   margin-top: 24px;
 }
 
+.hero-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-top: 28px; }
+.hero-footer .hero-actions { margin-top: 0; }
+.project-like { display: grid; flex: 0 0 auto; justify-items: center; gap: 5px; margin-left: auto; }
+.project-like-button {
+  min-width: 62px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 1px solid rgba(174, 93, 128, .2);
+  border-radius: 16px;
+  color: #9f5876;
+  background: linear-gradient(145deg, rgba(255, 249, 248, .95), rgba(241, 222, 232, .72));
+  box-shadow: 0 9px 24px rgba(106, 78, 117, .09);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, color .18s ease;
+}
+.project-like-button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(118, 76, 113, .15); }
+.project-like-button:disabled { cursor: default; opacity: .72; }
+.project-like-button.is-liked { color: #b55379; border-color: rgba(190, 91, 128, .3); background: linear-gradient(145deg, #fff6f5, #eed6e3); opacity: 1; }
+.project-like-heart { font-size: 25px; line-height: 1; }
+.project-like-count { color: inherit; font-size: 12px; }
+.project-like small { color: #8792a8; font-size: 9px; letter-spacing: .04em; }
+.project-like-button.just-liked { animation: atlas-heart-pop .42s ease; }
+@keyframes atlas-heart-pop { 50% { transform: scale(1.12); } }
+
 .comments-empty,
 .comment-item {
   margin: 0;
@@ -58,4 +86,9 @@
   .comment-form-grid { grid-template-columns: 1fr; }
   .comment-form-bottom { align-items: stretch; flex-direction: column; }
   .comment-form-bottom .primary-btn { width: 100%; }
+}
+
+@media (max-width: 560px) {
+  .hero-footer { flex-wrap: wrap; align-items: flex-end; }
+  .project-like { margin-left: auto; }
 }

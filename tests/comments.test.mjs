@@ -17,6 +17,10 @@ import {
   onRequestGet as onAdminGet,
   onRequestPost as onAdminPost
 } from '../functions/api/admin/comments.js';
+import {
+  onRequestGet as onLikesGet,
+  onRequestPost as onLikesPost
+} from '../functions/api/likes.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -28,6 +32,25 @@ const validInput = {
   result: 'success',
   turnstileToken: 'valid-token'
 };
+
+function createD1(database) {
+  return {
+    prepare(sql) {
+      const statement = database.prepare(sql);
+      let values = [];
+      const query = {
+        bind(...nextValues) { values = nextValues; return query; },
+        async all() { return { results: statement.all(...values) }; },
+        async first() { return statement.get(...values) || null; },
+        async run() {
+          const result = statement.run(...values);
+          return { meta: { changes: Number(result.changes) } };
+        }
+      };
+      return query;
+    }
+  };
+}
 
 test('comment input becomes bounded plain text', () => {
   const result = validateCommentInput({
@@ -205,6 +228,20 @@ test('D1 migration creates the required comment fields and indexes', async () =>
   database.close();
 });
 
+test('like migration enforces one positive vote per project and IP hash', async () => {
+  const database = new DatabaseSync(':memory:');
+  database.exec(await readFile(path.join(root, 'migrations', '0002_project_likes.sql'), 'utf8'));
+  const columns = database.prepare('PRAGMA table_info(project_likes)').all().map((column) => column.name);
+  assert.deepEqual(columns, ['id', 'project_slug', 'created_at', 'ip_hash']);
+  database.prepare(`
+    INSERT INTO project_likes (project_slug, created_at, ip_hash) VALUES (?, ?, ?)
+  `).run('time-anchor', '2026-08-24T00:00:00.000Z', 'hash');
+  assert.throws(() => database.prepare(`
+    INSERT INTO project_likes (project_slug, created_at, ip_hash) VALUES (?, ?, ?)
+  `).run('time-anchor', '2026-08-24T00:00:01.000Z', 'hash'), /UNIQUE constraint/u);
+  database.close();
+});
+
 test('every generated project detail page contains its own comment slug and shared client', async () => {
   const projectFiles = (await readdir(path.join(root, 'projects'))).filter((name) => name.endsWith('.json'));
   assert.equal(projectFiles.length, 176);
@@ -213,7 +250,9 @@ test('every generated project detail page contains its own comment slug and shar
     const project = JSON.parse(await readFile(path.join(root, 'projects', fileName), 'utf8'));
     const html = await readFile(path.join(root, 'projects', project.slug, 'index.html'), 'utf8');
     assert.match(html, new RegExp(`data-comments-project="${project.slug}"`, 'u'));
+    assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
     assert.match(html, /detail-comments\.js/u);
+    assert.match(html, /当前版本为游客模式，留言不需要注册账号。/u);
     assert.doesNotMatch(html, /游客留言功能施工中/u);
   }
 });
@@ -221,22 +260,7 @@ test('every generated project detail page contains its own comment slug and shar
 test('pending comment stays private until the admin approves it', async () => {
   const database = new DatabaseSync(':memory:');
   database.exec(await readFile(path.join(root, 'migrations', '0001_comments.sql'), 'utf8'));
-  const d1 = {
-    prepare(sql) {
-      const statement = database.prepare(sql);
-      let values = [];
-      const query = {
-        bind(...nextValues) { values = nextValues; return query; },
-        async all() { return { results: statement.all(...values) }; },
-        async first() { return statement.get(...values) || null; },
-        async run() {
-          const result = statement.run(...values);
-          return { meta: { changes: Number(result.changes) } };
-        }
-      };
-      return query;
-    }
-  };
+  const d1 = createD1(database);
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async () => Response.json({
     success: true,
@@ -304,4 +328,45 @@ test('pending comment stays private until the admin approves it', async () => {
     globalThis.fetch = originalFetch;
     database.close();
   }
+});
+
+test('project likes are positive-only and idempotent for one IP hash', async () => {
+  const database = new DatabaseSync(':memory:');
+  database.exec(await readFile(path.join(root, 'migrations', '0002_project_likes.sql'), 'utf8'));
+  const env = { COMMENTS_DB: createD1(database), IP_HASH_SALT: 'hash-salt' };
+  const commonHeaders = {
+    'CF-Connecting-IP': '203.0.113.8',
+    'Content-Type': 'application/json',
+    Origin: 'https://atlas.test'
+  };
+
+  const initial = await onLikesGet({
+    request: new Request('https://atlas.test/api/likes?project=time-anchor', {
+      headers: { 'CF-Connecting-IP': '203.0.113.8' }
+    }),
+    env
+  });
+  assert.deepEqual(await initial.json(), { count: 0, liked: false });
+
+  const first = await onLikesPost({
+    request: new Request('https://atlas.test/api/likes', {
+      method: 'POST',
+      headers: commonHeaders,
+      body: JSON.stringify({ projectSlug: 'time-anchor' })
+    }),
+    env
+  });
+  assert.deepEqual(await first.json(), { count: 1, liked: true, added: true });
+
+  const repeated = await onLikesPost({
+    request: new Request('https://atlas.test/api/likes', {
+      method: 'POST',
+      headers: commonHeaders,
+      body: JSON.stringify({ projectSlug: 'time-anchor' })
+    }),
+    env
+  });
+  assert.deepEqual(await repeated.json(), { count: 1, liked: true, added: false });
+  assert.equal(database.prepare('SELECT COUNT(*) AS count FROM project_likes').get().count, 1);
+  database.close();
 });

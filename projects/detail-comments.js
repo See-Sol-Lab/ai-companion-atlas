@@ -1,4 +1,55 @@
 const panel = document.querySelector('[data-comments-project]');
+const likeControl = document.querySelector('[data-project-like]');
+
+if (likeControl) {
+  const projectSlug = likeControl.dataset.projectLike;
+  const button = likeControl.querySelector('.project-like-button');
+  const heart = likeControl.querySelector('.project-like-heart');
+  const count = likeControl.querySelector('.project-like-count');
+
+  function renderLike(state, animate = false) {
+    count.textContent = String(state.count);
+    heart.textContent = state.liked ? '♥' : '♡';
+    button.classList.toggle('is-liked', state.liked);
+    button.setAttribute('aria-pressed', String(state.liked));
+    button.setAttribute('aria-label', state.liked ? '已为项目点赞' : '给项目点赞');
+    button.disabled = state.liked;
+    if (animate) {
+      button.classList.add('just-liked');
+      button.addEventListener('animationend', () => button.classList.remove('just-liked'), { once: true });
+    }
+  }
+
+  async function loadLikes() {
+    try {
+      const response = await fetch(`/api/likes?project=${encodeURIComponent(projectSlug)}`);
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || '加载失败');
+      renderLike(data);
+    } catch {
+      button.title = '点赞功能暂不可用';
+    }
+  }
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    try {
+      const response = await fetch('/api/likes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectSlug })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || '点赞失败');
+      renderLike(data, data.added);
+    } catch {
+      button.disabled = false;
+      button.title = '点赞失败，请稍后重试';
+    }
+  });
+
+  loadLikes();
+}
 
 if (panel) {
   const projectSlug = panel.dataset.commentsProject;

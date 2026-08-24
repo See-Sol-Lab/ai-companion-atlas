@@ -142,9 +142,9 @@ function renderDetail(project) {
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="${escapeHtml(project.name.zh)} ${escapeHtml(project.name.en)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(project.name.zh)} · ${escapeHtml(project.name.en)} · AI Companion Atlas</title>
-  <link rel="stylesheet" href="../detail.css?v=20260824-1" />
+  <link rel="stylesheet" href="../detail.css?v=20260824-2" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
-  <script src="../detail-comments.js?v=20260824-1" defer></script>
+  <script src="../detail-comments.js?v=20260824-2" defer></script>
 </head>
 <body>
   <div class="detail-shell">
@@ -173,9 +173,18 @@ function renderDetail(project) {
           <p class="cn-name">${escapeHtml(project.name.en.toUpperCase())} · @${escapeHtml(project.author.toUpperCase())}</p>
           <h2>${escapeHtml(project.hook)}</h2>
           <p class="hero-desc">${escapeHtml(project.heroDescription)}</p>
-          <div class="hero-actions">
-            <a class="primary-btn" href="${sourceUrl}" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
-            <a class="secondary-btn" href="../../">返回主页</a>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="${sourceUrl}" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+              <a class="secondary-btn" href="../../">返回主页</a>
+            </div>
+            <div class="project-like" data-project-like="${escapeHtml(project.slug)}">
+              <button class="project-like-button" type="button" aria-label="给项目点赞" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>给项目点赞</small>
+            </div>
           </div>
         </div>
 
@@ -209,7 +218,7 @@ ${facts}
           <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
           <b>游客留言 · 审核后公开</b>
         </div>
-        <p class="comments-intro">用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。第一版不要求注册账号，后续会接入轻量游客留言。</p>
+        <p class="comments-intro">用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。当前版本为游客模式，留言不需要注册账号。</p>
 
         <div class="comments-list" aria-live="polite">
           <p class="comments-empty">正在读取公开留言…</p>

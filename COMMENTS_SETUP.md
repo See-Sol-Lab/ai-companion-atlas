@@ -5,7 +5,7 @@
 ## 1. 创建并绑定 D1
 
 1. 在 Cloudflare 控制台创建一个 D1 数据库。
-2. 在 D1 控制台执行 [`migrations/0001_comments.sql`](./migrations/0001_comments.sql)。
+2. 在 D1 控制台按文件名顺序执行 [`migrations/`](./migrations/) 目录内的 SQL 迁移。
 3. 打开当前 Pages 项目的 **Settings → Bindings → D1 database bindings**，添加绑定：
    - Variable name：`COMMENTS_DB`
    - D1 database：刚创建的数据库
@@ -37,5 +37,7 @@
 5. 删除测试数据，确认审核页恢复为空。
 
 当前频控为同一 IP 哈希每 10 分钟最多 3 条；D1 中不保存原始 IP。
+
+项目点赞只提供正向反馈。同一项目与同一 IP 哈希只记录一次，不提供点踩或取消点赞接口。
 
 官方配置参考：[Pages D1 bindings](https://developers.cloudflare.com/pages/functions/bindings/)、[Turnstile server validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/)、[D1 prepared statements](https://developers.cloudflare.com/d1/worker-api/prepared-statements/)。
