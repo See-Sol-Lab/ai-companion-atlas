@@ -1,0 +1,12 @@
+{
+  "name": "ai-companion-atlas",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-08-24",
+  "d1_databases": [
+    {
+      "binding": "COMMENTS_DB",
+      "database_name": "ai-companion-atlas-comments",
+      "database_id": "7c6a231c-c9fc-45ed-9cba-0d746b1d723f"
+    }
+  ]
+}
