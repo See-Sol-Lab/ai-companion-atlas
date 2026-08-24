@@ -83,7 +83,7 @@ function renderCard(project) {
   const secondaryName = /[\u3400-\u9fff]/u.test(project.name.zh)
     ? `\n                <p class="project-title-en">${escapeHtml(project.name.en)}</p>`
     : '';
-  const dateLabel = project.dateLabel ?? (project.sourceUrl.startsWith('https://github.com/') ? '更新' : '核验');
+  const dateLabel = project.dateLabel ?? '更新';
   const meta = [project.language, project.platform, `${dateLabel} ${project.updated}`]
     .map((item) => `<span>${escapeHtml(item)}</span>`).join('');
   const cardBadges = project.badges.length <= 5

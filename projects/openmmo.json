@@ -15,7 +15,7 @@
   "tags": ["开放世界", "多人游戏", "AI 玩家", "建造与战斗"],
   "language": "Rust / TypeScript",
   "platform": "网页 / 自行部署",
-  "updated":"2026-08-23",
+  "updated":"2026-08-24",
   "heroOverline": "3D 开放世界 · 人类与 AI 同服",
   "showcase": {
     "label": "它特别在哪里",
