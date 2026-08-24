@@ -1,8 +1,5 @@
 const panel = document.querySelector('[data-comments-project]');
 const likeControl = document.querySelector('[data-project-like]');
-let resolveTurnstileReady;
-const turnstileReady = new Promise((resolve) => { resolveTurnstileReady = resolve; });
-window.onAtlasTurnstileLoad = resolveTurnstileReady;
 
 if (likeControl) {
   const projectSlug = likeControl.dataset.projectLike;
@@ -59,13 +56,15 @@ if (panel) {
   const list = panel.querySelector('.comments-list');
   const form = panel.querySelector('.comment-form');
   const feedback = panel.querySelector('.comment-form-feedback');
-  const submitButton = panel.querySelector('button[type="submit"]');
+  const submitButton = panel.querySelector('button[type="submit"], #atlas-comment-submit');
   const contentInput = form.elements.content;
   const counter = panel.querySelector('.comment-count');
   const successPanel = panel.querySelector('.comment-success');
   const againButton = panel.querySelector('.comment-again');
-  let turnstileWidgetId = null;
-  let turnstileToken = '';
+  const captchaElement = panel.querySelector('.captcha-slot, .turnstile-slot');
+  let captchaConfig = null;
+  let captchaInstance = null;
+  let aliyunScriptPromise = null;
 
   const resultLabels = {
     success: '已跑通',
@@ -123,58 +122,22 @@ if (panel) {
     }
   }
 
-  async function setupTurnstile() {
-    try {
-      const response = await fetch('/api/config');
-      const config = await response.json();
-      if (!response.ok || !config.turnstileSiteKey) throw new Error('未配置');
-      await Promise.race([
-        turnstileReady,
-        new Promise((_, reject) => setTimeout(() => reject(new Error('加载超时')), 10000))
-      ]);
-      if (!window.turnstile) throw new Error('未加载');
-      turnstileWidgetId = window.turnstile.render(panel.querySelector('.turnstile-slot'), {
-        sitekey: config.turnstileSiteKey,
-        action: 'submit-comment',
-        size: 'flexible',
-        theme: 'light',
-        callback(token) {
-          turnstileToken = token;
-          submitButton.disabled = false;
-          feedback.textContent = '';
-        },
-        'expired-callback'() {
-          turnstileToken = '';
-          submitButton.disabled = true;
-        },
-        'error-callback'() {
-          turnstileToken = '';
-          submitButton.disabled = true;
-          feedback.textContent = '人机验证加载失败，请刷新后重试。';
-        }
-      });
-    } catch {
-      feedback.textContent = '留言提交暂未完成站点配置，公开留言仍可正常查看。';
-    }
+  function loadAliyunScript() {
+    if (window.initAliyunCaptcha) return Promise.resolve();
+    if (aliyunScriptPromise) return aliyunScriptPromise;
+
+    aliyunScriptPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('阿里云验证码加载失败'));
+      document.head.appendChild(script);
+    });
+
+    return aliyunScriptPromise;
   }
 
-  function resetTurnstile() {
-    turnstileToken = '';
-    submitButton.disabled = true;
-    if (turnstileWidgetId !== null && window.turnstile) window.turnstile.reset(turnstileWidgetId);
-  }
-
-  contentInput.addEventListener('input', () => {
-    counter.textContent = `${[...contentInput.value].length} / 800`;
-  });
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (!turnstileToken) {
-      feedback.textContent = '请先完成人机验证。';
-      return;
-    }
-
+  async function submitComment(captchaVerifyParam) {
     submitButton.disabled = true;
     feedback.textContent = '正在提交…';
     const formData = new FormData(form);
@@ -189,33 +152,99 @@ if (panel) {
           content: formData.get('content'),
           platform: formData.get('platform'),
           result: formData.get('result'),
-          turnstileToken
+          captchaVerifyParam
         })
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || '提交失败，请稍后再试。');
+
       form.reset();
       counter.textContent = '0 / 800';
       feedback.textContent = '';
-      turnstileToken = '';
-      submitButton.disabled = true;
       form.hidden = true;
       successPanel.hidden = false;
       successPanel.focus();
     } catch (error) {
       feedback.textContent = error.message;
-      resetTurnstile();
+      await initializeCaptcha();
     }
+  }
+
+  async function initializeCaptcha() {
+    submitButton.disabled = true;
+    feedback.textContent = '正在初始化人机验证…';
+
+    try {
+      if (!captchaConfig) {
+        const response = await fetch('/api/config');
+        captchaConfig = await response.json();
+        if (!response.ok || captchaConfig.captchaProvider !== 'aliyun' || !captchaConfig.aliyunPrefix || !captchaConfig.commentSceneId) {
+          throw new Error('验证码配置未完成');
+        }
+      }
+
+      window.AliyunCaptchaConfig = {
+        region: captchaConfig.aliyunRegion || 'cn',
+        prefix: captchaConfig.aliyunPrefix
+      };
+
+      await loadAliyunScript();
+      if (!window.initAliyunCaptcha) throw new Error('验证码脚本未加载');
+
+      captchaInstance?.destroyCaptcha?.();
+      captchaElement.replaceChildren();
+      captchaElement.id ||= 'atlas-comment-captcha';
+      submitButton.id ||= 'atlas-comment-submit';
+      submitButton.type = 'button';
+
+      window.initAliyunCaptcha({
+        SceneId: captchaConfig.commentSceneId,
+        mode: 'popup',
+        element: `#${captchaElement.id}`,
+        button: `#${submitButton.id}`,
+        language: 'cn',
+        delayBeforeSuccess: false,
+        slideStyle: {
+          width: 360,
+          height: 40
+        },
+        getInstance(instance) {
+          captchaInstance = instance;
+          submitButton.disabled = false;
+          feedback.textContent = '';
+        },
+        fail(error) {
+          console.error('Aliyun captcha rejected:', error);
+          feedback.textContent = '人机验证未通过，请重新尝试。';
+        },
+        success(captchaVerifyParam) {
+          submitComment(captchaVerifyParam);
+        }
+      });
+    } catch (error) {
+      console.error('Aliyun captcha setup failed:', error);
+      feedback.textContent = '留言提交暂时不可用，公开留言仍可正常查看。';
+      submitButton.disabled = true;
+    }
+  }
+
+  contentInput.addEventListener('input', () => {
+    counter.textContent = `${[...contentInput.value].length} / 800`;
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!submitButton.disabled) submitButton.click();
   });
 
   againButton.addEventListener('click', () => {
     successPanel.hidden = true;
     form.hidden = false;
     feedback.textContent = '';
-    resetTurnstile();
+    initializeCaptcha();
     form.elements.nickname.focus();
   });
 
   loadComments();
-  setupTurnstile();
+  initializeCaptcha();
 }
