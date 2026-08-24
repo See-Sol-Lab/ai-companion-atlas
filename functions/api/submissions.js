@@ -13,6 +13,10 @@ import {
 const RATE_LIMIT_COUNT = 3;
 const RATE_LIMIT_WINDOW_MS = 24 * 60 * 60 * 1000;
 
+export function onRequestGet() {
+  return json({ error: '投稿内容不公开。' }, 405, { Allow: 'POST' });
+}
+
 export async function onRequestPost({ request, env }) {
   try {
     assertSameOrigin(request);

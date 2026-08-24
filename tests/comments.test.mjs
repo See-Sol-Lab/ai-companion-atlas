@@ -22,7 +22,10 @@ import {
   onRequestGet as onLikesGet,
   onRequestPost as onLikesPost
 } from '../functions/api/likes.js';
-import { onRequestPost as onSubmissionPost } from '../functions/api/submissions.js';
+import {
+  onRequestGet as onSubmissionGet,
+  onRequestPost as onSubmissionPost
+} from '../functions/api/submissions.js';
 import {
   onRequestGet as onAdminSubmissionsGet,
   onRequestPost as onAdminSubmissionsPost
@@ -485,6 +488,13 @@ test('online submission stays private and can be marked reviewed by the admin', 
     globalThis.fetch = originalFetch;
     database.close();
   }
+});
+
+test('public submission endpoint never exposes the private queue', async () => {
+  const response = onSubmissionGet();
+  assert.equal(response.status, 405);
+  assert.equal(response.headers.get('Allow'), 'POST');
+  assert.deepEqual(await response.json(), { error: '投稿内容不公开。' });
 });
 
 test('homepage exposes online submission and the dedicated GitHub issue route', async () => {
