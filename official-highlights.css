@@ -9,3 +9,48 @@
     radial-gradient(ellipse 128% 118% at 100% 0%, rgba(242, 174, 142, 0.58) 0%, rgba(255, 222, 203, 0.44) 46%, rgba(255, 255, 255, 0) 92%),
     linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(250, 247, 244, 0.86)) !important;
 }
+
+/* Catalog layout resilience: long contributor lists and long repo names must not
+   steal the reading column or make an entire grid row balloon in height. */
+@media (min-width: 821px) {
+  .project-template-top {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 44%);
+  }
+
+  .project-title-block,
+  .project-badges,
+  .project-problem,
+  .project-author {
+    min-width: 0;
+  }
+
+  .project-title-zh {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .project-hook-row {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .project-problem {
+    flex: 1 1 auto;
+  }
+
+  .project-author {
+    flex: 0 1 38%;
+    max-width: 38%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
+
+/* Keep unbroken English identifiers from overflowing on narrow cards. */
+.project-title-en,
+.project-description,
+.project-footer-meta {
+  overflow-wrap: anywhere;
+}
