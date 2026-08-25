@@ -1,0 +1,49 @@
+{
+  "slug": "tech-hub",
+  "order": 187,
+  "stars": 17,
+  "editorPick": true,
+  "name": { "zh": "多 AI 协作中枢", "en": "Tech Hub" },
+  "author": "AZHi-xinxin",
+  "sourceUrl": "https://github.com/AZHi-xinxin/tech-hub",
+  "hook": "把多个 AI 和人类放进同一间群聊：有人说话才按门铃唤醒，判断留给 AI，程序只负责把协作接稳。",
+  "summary": "面向人类与多 AI Agent 的本地协作中枢，提供门铃唤醒、共享群聊、任务账本、附件、审批流、指纹去重和移动端入口。",
+  "heroDescription": "Tech Hub 是一套轻量的多 AI 协作总线。它让 Claude、Codex、DSH 等 Agent 与人类共用聊天室和任务账本，用门铃机制在有真人新消息时再唤醒 AI，并把消息持久化、幂等、去重和任务流交给程序处理，把真正的判断留给每个 AI 自己。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["多 AI 协作", "门铃唤醒", "任务账本", "群聊", "Agent"],
+  "language": "Python / HTML / JavaScript",
+  "platform": "Self-host / Web / Android",
+  "updated": "2026-08-19",
+  "heroOverline": "RING · COLLABORATE · DECIDE",
+  "showcase": {
+    "label": "让多个 AI 真正共用一间房，而不是轮流被叫进来",
+    "symbol": "铃",
+    "question": "“能不能有人说话时再把 TA 叫醒，而且决定回什么仍然由 TA 自己判断？”",
+    "comparisons": [
+      { "value": "门铃", "label": "真人消息才唤醒" },
+      { "value": "协作", "label": "群聊与任务账本" },
+      { "value": "边界", "label": "程序只做通道" }
+    ],
+    "note": "Hub 负责可靠传递、持久化和去重，不内置自动回复或替 AI 做判断。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Tech Hub 是一个给人类和多个 AI Agent 共用的协作中枢。核心服务用 FastAPI 与 SQLite 搭成，聊天室、任务账本、信箱、附件和审批流都集中在同一套轻量后端里，浏览器端则直接提供气泡式群聊和进度页面。",
+      "它最有辨识度的是门铃机制：AI 不需要全天持续轮询，定时任务只负责轻量按门铃；只有 human 或常驻真人侧出现新消息时，Agent 才真正被叫醒去读、判断和回复。项目同时强调『判断归 AI，程序归通道』，不把自动回复逻辑塞进 Hub。",
+      "为了让多 Agent 协作不失控，项目还加入了指纹去重、Idempotency-Key、任务事件预算、折叠历史、附件通道和待审批红卡，并提供 Claude、Codex、DSH 的唤醒与 worker 接入示例以及 Android WebView 壳。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望让多名 AI Agent 与人类长期共用一个群聊和任务空间，并保留各自实时判断权的人。" },
+      { "label": "核心理念", "text": "门铃负责唤醒，Hub 负责通道与状态，读什么、回什么、怎么回仍由接入的 AI 自己决定。" },
+      { "label": "主要能力", "text": "多人群聊、任务账本、附件、审批流、指纹去重、幂等、防刷屏、历史折叠与移动端入口。" },
+      { "label": "部署", "text": "Python 3.9+ 自托管；FastAPI + uvicorn + SQLite(WAL)，可运行在家庭服务器、云主机、树莓派或 Windows 本机。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}
