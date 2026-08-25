@@ -3,12 +3,13 @@ set -euo pipefail
 
 SOURCE="/srv/atlas-source"
 WEBROOT="/var/www/atlas"
-SITE="https://ailover-atlas.com"
+SITE="https://www.ailover-atlas.com"
+ANALYTICS_TOKEN="b8477ada2f504530bf2b707ee1ac3efe"
 
 say() { printf '\n[atlas-deploy] %s\n' "$*"; }
 fail() { printf '\n[atlas-deploy] ERROR: %s\n' "$*" >&2; exit 1; }
 
-for command in git rsync sed find curl python3; do
+for command in git rsync sed find curl python3 grep; do
   command -v "$command" >/dev/null 2>&1 || fail "missing command: $command"
 done
 
@@ -89,15 +90,50 @@ if [ -d "$WEBROOT/projects" ]; then
     {} +
 fi
 
+# Cloudflare Web Analytics is intentionally injected only into the Hong Kong
+# production copy. The GitHub source and Cloudflare Pages mirror remain free of
+# this beacon, so this Analytics property represents www.ailover-atlas.com.
+say "Injecting production Web Analytics..."
+python3 - "$WEBROOT" "$ANALYTICS_TOKEN" <<'PY'
+from pathlib import Path
+import sys
+
+root = Path(sys.argv[1])
+token = sys.argv[2]
+marker = "<!-- Cloudflare Web Analytics -->"
+snippet = (
+    f'{marker}<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
+    f'data-cf-beacon=\'{{"token":"{token}"}}\'></script>'
+    '<!-- End Cloudflare Web Analytics -->'
+)
+
+injected = 0
+for path in root.rglob("*.html"):
+    try:
+        text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        continue
+    if marker in text:
+        continue
+    if "</body>" not in text:
+        continue
+    path.write_text(text.replace("</body>", f"{snippet}\n</body>", 1), encoding="utf-8")
+    injected += 1
+
+print(f"[atlas-deploy] Analytics injected into {injected} HTML files.")
+PY
+
 rm -f "$WEBROOT/captcha-test.html"
 printf '%s\n' "$DEPLOY_SHA" > "$WEBROOT/.deployed-commit"
 
 say "Running production smoke checks..."
 curl -fsS "$SITE/" >/dev/null
+curl -fsS "$SITE/" | grep -Fq "$ANALYTICS_TOKEN" || fail "Web Analytics beacon missing from production homepage"
 curl -fsS "$SITE/api/config" | python3 -c \
   'import json,sys; data=json.load(sys.stdin); assert data.get("captchaProvider") == "aliyun"'
 curl -fsS "$SITE/api/likes?project=time-anchor" >/dev/null
 
 say "Deployment complete: ${DEPLOY_SHA}"
 printf 'Site: %s\n' "$SITE"
+printf 'Cloudflare Web Analytics: active on HK production HTML.\n'
 printf 'Dynamic API / SQLite / secrets were not modified.\n'
