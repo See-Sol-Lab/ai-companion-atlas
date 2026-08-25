@@ -46,6 +46,16 @@
     white-space: nowrap;
     text-align: right;
   }
+
+  /* Directory cards are previews, not detail pages. Cap the middle summary by
+     visible lines so one verbose project cannot stretch the whole grid row. */
+  .project-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+  }
 }
 
 /* Keep unbroken English identifiers from overflowing on narrow cards. */
