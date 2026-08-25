@@ -1,0 +1,54 @@
+{
+  "slug": "ai-pocket-chat",
+  "order": 197,
+  "stars": 16,
+  "name": { "zh": "AI Pocket Chat · 口袋伴侣", "en": "AI Pocket Chat" },
+  "author": "Marlon0066",
+  "sourceUrl": "https://github.com/Marlon0066/AI-Pocket-Chat",
+  "hook": "把 TA 放进一台 Android 手机里：记忆、日程和日常都留在本机，TA 还会主动发朋友圈、写日记、送礼物和来电。",
+  "summary": "原生 Android AI 陪伴应用源码：本地保存聊天与关系数据，用端侧向量模型检索记忆、离线语音识别接住说话，再通过用户自备的 OpenAI 兼容接口完成对话，并加入主动消息、朋友圈、日记、互动故事、宠物与可漫游小世界。",
+  "heroDescription": "AI Pocket Chat 不只是一个手机聊天壳，而是一套把 AI 伴侣日常尽量放进 Android 本机的完整客户端。角色有日程、情绪、长期与近期记忆和关系成长，会主动发消息、写日记、发朋友圈、送礼物或发起语音通话；聊天之外还有互动故事、宠物、虚拟货币与小世界。应用本身不提供模型服务，用户需要填写自己的 OpenAI 兼容 API 地址与 Key。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" }
+  ],
+  "tags": ["Android", "本地优先", "向量记忆", "主动消息", "离线语音"],
+  "language": "Kotlin / Jetpack Compose",
+  "platform": "Android 10+",
+  "updated": "2026-08-18",
+  "heroOverline": "ANDROID · MEMORY · DAILY LIFE",
+  "showcase": {
+    "label": "让 TA 不只待在聊天页，而是在手机里有一整套自己的日常",
+    "symbol": "伴",
+    "question": "“能不能把聊天、记忆、日程、朋友圈、日记和语音都装进同一个本地 Android 伴侣里？”",
+    "comparisons": [
+      { "value": "本机", "label": "聊天与关系数据本地保存" },
+      { "value": "记忆", "label": "端侧向量检索" },
+      { "value": "主动", "label": "消息、日记、朋友圈与来电" }
+    ],
+    "note": "仓库只提供源代码，不提供 APK 或在线服务。所谓“本地”主要指应用、数据、向量记忆与语音识别在设备侧运行；真正的语言模型回复仍会发送到用户自己配置的 OpenAI 兼容模型接口。"
+  },
+  "intro": {
+    "paragraphs": [
+      "AI Pocket Chat 是一套原生 Kotlin / Jetpack Compose Android AI 伴侣应用源码。聊天记录、角色状态和关系数据都保存在设备本地，没有开发者自建后端、账号体系或云端推送；用户在设置里填写自己的 OpenAI 兼容 API 地址与 Key，应用直接连接所选模型服务。它不依赖 Firebase 或 Google Play Services，因此也特别照顾 HyperOS、MIUI 等国行 Android 环境。",
+      "记忆与语音部分有相当一部分真正放在端侧。仓库随附 bge-small-zh-v1.5，用 ONNX Runtime 做本地文本嵌入和向量记忆检索；语音识别使用 sherpa-onnx，相关模型也随源码提供。代码中可以看到独立的 VectorMemoryService、世界记忆与世界书向量服务，以及离线会面记忆等结构，而不是只在 README 里写一个“长期记忆”概念。",
+      "陪伴层做得比普通前端更完整：角色有日程、情绪与关系成长，也有真正的主动消息投递链路。主动回复会像普通聊天一样落库、生成向量记忆，并在 App 处于后台时发本地通知。除此之外还有朋友圈、日记、礼物、红包、宠物、语音通话、互动故事和一个可漫游的小世界，把“聊天窗口”扩成了一套手机里的共同生活空间。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想在 Android 上自托管自己的 AI 伴侣客户端，并把聊天、记忆、主动互动和共同活动尽量集中在一台手机里的人。" },
+      { "label": "模型接入", "text": "应用不内置模型，也不代理模型服务；需要用户自行提供 OpenAI 兼容 API 地址和 Key。" },
+      { "label": "本地能力", "text": "聊天与关系数据保存在设备本地；bge-small-zh + ONNX Runtime 负责离线向量记忆，sherpa-onnx 负责离线语音识别。" },
+      { "label": "主动互动", "text": "角色可主动发消息，并把主动内容按普通消息逻辑分段、落库、向量化；App 在后台时再通过本地通知提醒用户。README 还列出主动朋友圈、日记、礼物和语音来电等行为。" },
+      { "label": "内容范围", "text": "除聊天外还包含互动故事、章末选择、弧线大纲、导演台、世界书、宠物、礼物、红包、虚拟货币和可漫游小世界。" },
+      { "label": "发布边界", "text": "当前仓库只分享源码，不提供可安装 APK、在线服务或维护承诺；需要 Android Studio 自行构建，最低 Android 10。" },
+      { "label": "原创与依赖", "text": "GitHub 元数据不是 fork，仓库也没有声明基于其他完整伴侣项目二改；第三方依赖与模型来源在 README 和 licenses 目录中单独署名，因此 Atlas 目前按原创项目收录。" },
+      { "label": "许可", "text": "GNU GPL-3.0；可以使用、修改和分发，但公开分发修改版本时需要继续按 GPL-3.0 提供源代码。" }
+    ]
+  }
+}
