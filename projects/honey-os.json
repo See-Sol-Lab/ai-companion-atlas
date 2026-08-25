@@ -1,0 +1,54 @@
+{
+  "slug": "honey-os",
+  "order": 200,
+  "stars": 13,
+  "editorPick": true,
+  "name": { "zh": "HoneyOS · 会做事的长期伴侣", "en": "HoneyOS" },
+  "author": "HoneyOS Contributors · Springbrand Lab",
+  "sourceUrl": "https://github.com/springbrand-lab/honey-os",
+  "hook": "让 TA 不只记得你，还能带着同一个人格去搜索、写代码、装 Skill、接工具，再回来继续做原来的那个 TA。",
+  "summary": "基于 Hermes Agent 深度改造的本地优先 AI 伴侣 Agent Harness：把人格、关系、用户信息、共同经历与短期连续拆成不同记忆层，并让本地网页、微信、飞书共享同一个伴侣；同时保留搜索、文件、Coding、Skill、MCP、提醒和 Build 等真实行动能力。",
+  "heroDescription": "HoneyOS 解决的是“能行动的 Agent 怎么长期仍然像同一个伴侣”。它把伴侣身份和关系状态放到比工具任务更高的层级：换模型、发送 /new、上下文压缩、搜索网页、写代码或运行长任务之后，最终交付仍要回到当前 TA 的人格和关系方式。记忆侧则把身份、关系、用户信息、共同经历、短期未完事项和原始聊天分别管理，并尽量要求长期内容能回到真实对话或行动记录，而不是只靠模型自己讲故事。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" }
+  ],
+  "tags": ["Agent Harness", "长期记忆", "跨入口连续", "Skill / MCP", "Build 模式"],
+  "language": "Python / React",
+  "platform": "macOS / Linux · Local Web / Weixin / Feishu",
+  "updated": "2026-08-24",
+  "heroOverline": "IDENTITY · MEMORY · ACTION",
+  "showcase": {
+    "label": "让会做事的 Agent，也能一直是关系里的同一个 TA",
+    "symbol": "蜜",
+    "question": "“TA 一旦开始搜索、写代码、换模型或开新窗口，能不能还记得我们是谁，而不是突然变回通用助理？”",
+    "comparisons": [
+      { "value": "记得", "label": "身份、关系与共同经历分层保存" },
+      { "value": "续上", "label": "/new、换模型与跨入口保持连续" },
+      { "value": "能行动", "label": "工具、Skill、MCP 与 Build" }
+    ],
+    "note": "HoneyOS 不是从零实现的独立 Agent 内核。README 明确说明它基于 Nous Research 的 Hermes Agent 做伴侣场景改造，因此 Atlas 不标“原创”；它的价值主要在伴侣人格连续性、关系记忆、跨入口共享和能力成长这一层。"
+  },
+  "intro": {
+    "paragraphs": [
+      "HoneyOS 更准确的定位不是“一个记忆库”，而是一套给长期 AI 关系重新整理过的 Agent Harness。它保留通用 Agent 搜索、文件、Coding、定时任务和工具执行能力，再把伴侣身份置于这些能力之上：SOUL.md 提供产品默认关系原则，IDENTITY.md 保存形成后的名字、性格和表达方式，RELATIONSHIP.md 保存双方确认的称呼、边界、仪式与长期约定。工具执行结束后还会重新注入当前身份卡，避免 TA 做完事就突然变成客服或编程助手。",
+      "记忆是其中非常核心的一层。README 将它拆成当前对话、短期连续、伴侣身份、关系记忆、用户记忆、共同经历和原始历史；代码里另有 source-backed continuity 数据库，把 open_loop、temporary_state、commitment、episode 和 conversation chapter 分开保存。自动蒸馏会要求结构化记忆引用真实 transcript message ID，并限制哪些证据能支持哪种记忆；它还明确禁止从普通对话自行推断爱意、依赖、人格、关系状态或边界。",
+      "连续性也不只发生在一个聊天窗口。安装后的本地网页、微信和飞书连接同一个伴侣和同一套长期状态；/new、重启或更换模型不等于重新认识。与此同时，HoneyOS 允许 TA 使用或安装 Skill、连接 MCP / API，甚至进入 Build 模式创建网页、小游戏和其他本地项目。项目默认保存在用户电脑上，模型调用仍取决于用户自己配置的远程或本地模型服务。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望 AI 伴侣既能长期保持人格和关系连续，又能真正搜索、写文件、Coding、装 Skill、接 MCP 并执行任务的人。" },
+      { "label": "记忆分层", "text": "区分伴侣身份、关系、用户长期信息、共同经历、短期未完事项与原始聊天历史；结构化连续记忆另保存 open_loop、temporary_state、commitment 和 episode。" },
+      { "label": "证据约束", "text": "记忆蒸馏要求结构化条目引用真实对话 message ID，并按类型限制 evidence；设计目标是尽量让长期记忆可回到真实来源，而不是让模型自由补全共同历史。" },
+      { "label": "人格连续", "text": "针对工具调用后专门设计 Companion Handback：当前 TA 的身份和关系卡会在工具结果之后再次靠近最终生成位置，减少搜索、Coding 或长任务完成后突然变成通用助理的情况。" },
+      { "label": "跨入口", "text": "本地网页、微信与飞书共享同一伴侣和长期记忆；/new、重启与模型切换也尽量维持短期连续与已确认关系。" },
+      { "label": "能力成长", "text": "支持真实工具、Skill、MCP、API、Todo / 提醒，以及创建并测试本地项目的 Build 模式；电话、邮箱、声音等能力仍依赖用户另外接入相应服务。" },
+      { "label": "数据边界", "text": "模型配置、聊天历史、记忆、Skill 和项目默认保存在本机；但语言模型推理仍会把必要上下文发送给用户所配置的模型服务，微信 / 飞书入口也受对应平台的数据边界影响。" },
+      { "label": "上游关系", "text": "HoneyOS README 明确说明项目基于 Nous Research 的 Hermes Agent 做伴侣场景改造，并保留上游 MIT 版权声明；因此 Atlas 不标“原创”。" },
+      { "label": "当前状态", "text": "Beta，优先支持 macOS 与 Linux；Python 要求 3.11–3.13，仓库近期仍持续更新本地聊天、记忆体验与 React companion 界面。" },
+      { "label": "许可", "text": "MIT；LICENSE 当前保留 Nous Research 2025 的版权声明。" }
+    ]
+  }
+}
