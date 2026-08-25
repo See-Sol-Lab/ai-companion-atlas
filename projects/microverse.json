@@ -1,0 +1,50 @@
+{
+  "slug": "microverse",
+  "order": 189,
+  "stars": 2447,
+  "editorPick": true,
+  "name": { "zh": "Microverse：AI 小世界", "en": "Microverse" },
+  "author": "KsanaDock / 时空码头",
+  "sourceUrl": "https://github.com/KsanaDock/Microverse",
+  "hook": "把一群有记忆、有任务、会交朋友的 AI 放进同一个世界，看他们自己生活起来。",
+  "summary": "基于 Godot 4 的多智能体 AI 社会沙盒。角色可以自由移动、持续对话、形成长期记忆、自主处理任务，并在环境与社交互动中发展关系。",
+  "heroDescription": "Microverse 把多个 AI 角色放进同一个可探索的虚拟世界，让记忆、任务、环境感知和社交关系同时发生。当前开源仓库提供《Microverse In Box》的初版 Demo，主要以办公室场景展示多智能体自主生活与互动。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "游戏", "tone": "game" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" }
+  ],
+  "tags": ["开放世界", "多智能体", "AI 社会", "长期记忆", "Godot"],
+  "language": "GDScript",
+  "platform": "Windows / macOS / Linux / Android",
+  "updated": "2026-04-10",
+  "heroOverline": "WORLD · MEMORY · SOCIETY",
+  "showcase": {
+    "label": "让 AI 不只和你聊天，也在同一个世界里彼此生活",
+    "symbol": "界",
+    "question": "“如果一群有记忆和性格的 AI 住进同一个世界，他们会自己发展出怎样的关系？”",
+    "comparisons": [
+      { "value": "生活", "label": "自由移动与环境感知" },
+      { "value": "记忆", "label": "长期经历持续保留" },
+      { "value": "社会", "label": "对话、协作与关系发展" }
+    ],
+    "note": "当前 GitHub 开源的是初版 Demo，主要展示办公室场景；完整版《Microverse In Box 盒中小世界》另行面向 Steam 开发。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Microverse 是一个基于 Godot 4 的多智能体 AI 社会沙盒。多个角色同时存在于虚拟场景中，各自拥有性格、背景、状态与长期记忆，可以自由移动、观察环境、与其他角色对话，并在持续互动里形成更复杂的社会关系。",
+      "公开 Demo 预设 8 个 AI 角色，并把对话、记忆、任务、角色状态和环境感知组织进同一套游戏系统。角色既可以接受和执行任务，也可以彼此协作、竞争或随机社交；玩家则能进入这个世界旁观、移动和直接交流。",
+      "项目支持多种模型服务，包括 OpenAI、Claude、Gemini、DeepSeek、豆包、Kimi 与 Ollama。当前开源仓库对应《Microverse In Box》较早期的 Demo 版本，README 明确说明主要场景仍是办公室，完整商业版本将在 Steam 继续扩展。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想观察多 AI 社会、让角色在虚拟世界里积累生活与关系，或想二次开发自己的 AI 小世界的人。" },
+      { "label": "核心能力", "text": "多角色自主移动、自然对话、长期记忆、环境感知、情绪与状态、自主任务、群体互动和存档。" },
+      { "label": "开源版本", "text": "GitHub 公开的是《Microverse In Box》的初版 Demo；当前主要展示办公室场景，完整版内容另行开发。" },
+      { "label": "模型接入", "text": "支持 OpenAI、Claude、Gemini、DeepSeek、豆包、Kimi 与 Ollama 等服务，需要自行配置相应 API 或本地模型。" },
+      { "label": "许可", "text": "仓库代码采用 MIT；README 标注部分美术素材来自 LimeZu，第三方素材仍需遵循各自原始许可。" }
+    ]
+  }
+}
