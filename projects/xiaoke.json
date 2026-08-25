@@ -1,0 +1,50 @@
+{
+  "slug": "xiaoke",
+  "order": 192,
+  "stars": 17,
+  "editorPick": true,
+  "name": { "zh": "小可 · 跨窗口上下文网关", "en": "xiaoke" },
+  "author": "Kismetobe_i / 2aluoy99-cpu",
+  "sourceUrl": "https://github.com/2aluoy99-cpu/xiaoke",
+  "hook": "换一个窗口、换一个前端，也把你们刚刚共同经历过的上下文接上。",
+  "summary": "自托管的 OpenAI 兼容共享上下文网关：把成功完成的对话写入本地 Timeline，新窗口缺上下文时只补最近缺失的一段，让多个前端共用连续的近期对话背景。",
+  "heroDescription": "xiaoke 位于聊天前端与上游模型之间，为多个窗口和客户端维护一条共同的本地对话 Timeline。新窗口请求模型时，它先保留前端自己带来的历史，再从共享时间线中补足最近缺失的记录，让跨窗口对话能够继续，而不接管人格、system prompt 或长期记忆系统。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["跨窗口", "共享上下文", "Timeline", "OpenAI 兼容", "自托管"],
+  "language": "Python / JavaScript",
+  "platform": "Self-host / OpenAI-compatible / Web",
+  "updated": "2026-07-27",
+  "heroOverline": "HANDOFF · TIMELINE · CONTINUITY",
+  "showcase": {
+    "label": "让不同窗口共用同一条最近对话时间线",
+    "symbol": "续",
+    "question": "“我换了一个窗口，TA 还能接着刚才的上下文继续聊吗？”",
+    "comparisons": [
+      { "value": "共用", "label": "同一条本地 Timeline" },
+      { "value": "补齐", "label": "只填前端缺的上下文" },
+      { "value": "边界", "label": "人格与记忆仍归前端" }
+    ],
+    "note": "xiaoke 不是长期记忆库，也不管理人格；它只为经过同一网关的成功文字对话维护跨窗口的共享近期上下文。"
+  },
+  "intro": {
+    "paragraphs": [
+      "xiaoke 是一个自托管的 OpenAI 兼容网关，放在聊天前端和上游模型之间。凡是成功经过它完成的 user / assistant 文字轮次，会按顺序写进同一个本地 SQLite Timeline。不同窗口或不同客户端只要连到同一个 xiaoke 部署，就可以共享这条近期对话时间线。",
+      "当一个新窗口缺少共同背景时，xiaoke 不会粗暴再塞一整份历史。它先计算当前客户端已经带了多少普通对话记录，再只用 Timeline 中最新、且当前请求里没有的记录填补剩余位置。之后的第二轮、第三轮也会继续维护这条连续性基线，而不是只在第一次交接时临时注入一次。",
+      "项目刻意不接管 system prompt、persona 或前端自己的记忆机制，也不把失败的流式回复、凭证、请求头、原始附件或未完成工具链写进普通 Timeline。只有真正经过网关的内容才能进入共享时间线；其他 App 的旧历史不会自动导入。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "同时使用多个聊天窗口或多个 OpenAI 兼容前端，希望最近对话背景在切换后仍能连续的人。" },
+      { "label": "怎么工作", "text": "前端把模型请求发给 xiaoke；网关补齐所需共享上下文后再转发给上游模型，并把完整成功的对话轮次写入 SQLite Timeline。" },
+      { "label": "窗口识别", "text": "最好由前端或反向代理提供稳定的会话 ID；没有稳定 ID 时只能依靠保守的历史匹配，多个相似窗口下可靠性会下降。" },
+      { "label": "隐私边界", "text": "Timeline 会保存对话正文，应视为私密应用数据；项目明确避免把 system prompt、人格文本、凭证、请求头、原始附件和未完成工具链写入普通共享记录。" },
+      { "label": "查看与管理", "text": "附带可选 Timeline 浏览器，可按日历、搜索与收藏查看记录，也支持永久删除共享 Timeline 中的记录。" },
+      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；允许非商业自托管、学习、修改与再分发，商业使用需取得作者书面许可。" }
+    ]
+  }
+}
