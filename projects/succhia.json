@@ -1,0 +1,50 @@
+{
+  "slug": "succhia",
+  "order": 184,
+  "stars": 68,
+  "name": { "zh": "Succhia", "en": "iPhone BLE Companion Bridge" },
+  "author": "Cu & Lunedì",
+  "sourceUrl": "https://github.com/29-Cu/succhia",
+  "hook": "让 AI 在 iPhone 上陪你聊天的同时，也能继续控制兼容的 BLE 触觉设备。",
+  "summary": "面向 iPhone 的 18+ BLE 设备控制方案，把聊天、蓝牙连接、可靠性恢复和多通道控制放进同一套页面与桥接链路里。",
+  "heroDescription": "Succhia 解决的是 iPhone 上最麻烦的一段：用户切去聊天后，浏览器后台可能冻结，蓝牙连接也容易断。它把聊天直接嵌进控制页，让 AI 对话与设备控制留在同一个前台环境里，并补上重连、保活、多通道控制和诊断能力。",
+  "badges": [
+    { "label": "18+", "tone": "adult" },
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "非商业", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["18+", "iPhone", "BLE", "现实触觉", "聊天融合"],
+  "language": "HTML / Python / JavaScript",
+  "platform": "iPhone / Bluefy / Web Bluetooth",
+  "updated": "2026-07-25",
+  "heroOverline": "CHAT · BLE · CONTINUITY",
+  "showcase": {
+    "label": "聊天不退出，设备控制也不断线",
+    "symbol": "触",
+    "question": "“在 iPhone 上和 TA 聊天时，设备控制能不能一直保持在线？”",
+    "comparisons": [
+      { "value": "聊天", "label": "嵌进控制页" },
+      { "value": "连接", "label": "看门狗与保活" },
+      { "value": "控制", "label": "多通道并行" }
+    ],
+    "note": "核心思路不是让蓝牙页面在后台硬撑，而是让聊天与控制从一开始就在同一个前台页面。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Succhia 是一套面向 iPhone 的 18+ BLE 设备控制方案。AI 通过 MCP 或 HTTP 把控制状态送到服务器，手机端控制页再通过 Web Bluetooth 操作设备；聊天页面可以直接嵌进控制页，因此用户不用在聊天和蓝牙控制之间来回切换。",
+      "项目针对真实使用里常见的断连和后台冻结做了不少工程处理，包括僵尸连接恢复、看门狗重连、同值保活、双向增量同步、多通道并行控制和远程诊断。协议逆向与部分架构思路来自前人公开工作，作者在 README 中明确列出来源，并说明与 bobo-bridge 的独立撞车关系。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在 iPhone 上把 AI 陪伴对话与兼容 BLE 触觉设备连接起来的成年用户。" },
+      { "label": "内容提示", "text": "涉及成人向触觉设备与亲密互动，Atlas 明确归入 18+ 分类。" },
+      { "label": "手机环境", "text": "iPhone 侧主要依赖支持 Web Bluetooth 的 Bluefy；Android 与桌面浏览器可按项目说明使用兼容浏览器。" },
+      { "label": "主要能力", "text": "聊天融合、防后台冻结、自动重连、保活、多通道控制、限时归零与远程诊断。" },
+      { "label": "来源说明", "text": "SOSEXY 协议逆向与浏览器蓝牙桥思路来自已署名的社区先行工作；本项目重点增加 iPhone 聊天融合和可靠性层。" },
+      { "label": "许可", "text": "CC BY-NC 4.0，允许署名后的非商业分享与改编。" }
+    ]
+  }
+}
