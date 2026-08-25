@@ -1,0 +1,49 @@
+{
+  "slug": "chatnest-ui",
+  "order": 185,
+  "stars": 21,
+  "editorPick": true,
+  "name": { "zh": "和机的另一个家", "en": "ChatNest UI" },
+  "author": "zaochuanyitian",
+  "sourceUrl": "https://github.com/zaochuanyitian/chatnest-ui",
+  "hook": "把 Claude 的聊天、记忆、日记和时间，装进一套适合 iPhone 长期使用的私人前端。",
+  "summary": "基于 ChatNest 深度二次开发的手机优先陪伴前端，加入聊天搜索、内置时钟、长期记忆去重与新鲜度排序、日记日历和本地缓存。",
+  "heroDescription": "ChatNest UI 把对话、记忆、日记和时间整理进一个 iPhone 友好的 Web App。它可以添加到主屏幕长期使用，也提供一套演示数据和清晰的后端接口契约，方便个人自托管。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["iPhone", "长期记忆", "日记日历", "聊天搜索"],
+  "language": "HTML / JavaScript",
+  "platform": "iPhone / Web / PWA",
+  "updated": "2026-08-12",
+  "heroOverline": "CHAT · MEMORY · DIARY",
+  "showcase": {
+    "label": "给长期陪伴准备一套真正能住下来的手机前端",
+    "symbol": "家",
+    "question": "“聊天、记忆、日记和时间，能不能都留在同一个地方？”",
+    "comparisons": [
+      { "value": "聊天", "label": "长对话与全库搜索" },
+      { "value": "记忆", "label": "去重与长期印象" },
+      { "value": "生活", "label": "时间、日记与日历" }
+    ],
+    "note": "它是基于 ugui3u/chatnest 的高质量二次开发；Atlas 不将其标为从零原创。"
+  },
+  "intro": {
+    "paragraphs": [
+      "和机的另一个家是一套手机优先的 Claude 陪伴前端，尤其适合在 iPhone 上添加到主屏幕后长期使用。它保留对话、记忆、日记和时间这些关系里最常用的部分，并把移动端交互做得更完整。",
+      "项目基于 ugui3u/chatnest 二次开发。作者公开说明界面规模从约 2000 行扩展到约 5900 行，并新增或重做了聊天记录搜索、IndexedDB 缓存、内置时钟、记忆近似去重与新鲜度排序、长期印象摘要、日记和日历等功能。",
+      "仓库自带演示数据，不接后端也能直接打开体验；要正式使用则需要按文档实现对应 API。个人自托管时可以接自己的模型后端。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望把 Claude 长期陪伴做成手机主屏幕常驻应用，并重视记忆、日记和时间连续性的人。" },
+      { "label": "平台", "text": "手机优先，尤其面向 iPhone；也可作为普通 Web App 使用。" },
+      { "label": "来源", "text": "基于 ugui3u/chatnest 二次开发，并在 README 中明确标注上游来源。" },
+      { "label": "主要增量", "text": "移动端聊天体验、全库搜索、长期记忆去重与新鲜度排序、内置时钟、日记日历和本地消息缓存。" },
+      { "label": "许可", "text": "继承上游 Non-Commercial Use License，仅允许非商业使用、修改和再分发。" }
+    ]
+  }
+}
