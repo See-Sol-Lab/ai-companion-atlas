@@ -142,17 +142,20 @@ rm -f "$WEBROOT/captcha-test.html"
 printf '%s\n' "$DEPLOY_SHA" > "$WEBROOT/.deployed-commit"
 
 say "Running production smoke checks..."
-curl -fsS "$SITE/" >/dev/null
-curl -fsS "$SITE/" | grep -Fq "$ANALYTICS_TOKEN" || fail "Web Analytics beacon missing from production homepage"
+HOME_SMOKE="$STAGING/home-smoke.html"
+curl -fsS "$SITE/" -o "$HOME_SMOKE"
+grep -Fq "$ANALYTICS_TOKEN" "$HOME_SMOKE" || fail "Web Analytics beacon missing from production homepage"
 curl -fsS "$SITE/api/config" | python3 -c \
   'import json,sys; data=json.load(sys.stdin); assert data.get("captchaProvider") == "aliyun"'
 curl -fsS "$SITE/api/likes?project=time-anchor" >/dev/null
 
 # If the EBO community submission exists in the deployed source, make sure its
-# generated detail page also exists in production. This doubles as a regression
-# check for the JSON -> generator -> deploy path.
+# generated detail page also exists in production. Download the whole response
+# before grepping so `grep -q` cannot close a pipe early and make curl report 23.
 if [ -f "$SOURCE/projects/ebo-air2-mcp-guide.json" ]; then
-  curl -fsS "$SITE/projects/ebo-air2-mcp-guide/" | grep -Fq "EBO Air 2 MCP" || \
+  EBO_SMOKE="$STAGING/ebo-smoke.html"
+  curl -fsS "$SITE/projects/ebo-air2-mcp-guide/" -o "$EBO_SMOKE"
+  grep -Fq "EBO Air 2 MCP" "$EBO_SMOKE" || \
     fail "generated EBO Air 2 project page missing from production"
 fi
 
