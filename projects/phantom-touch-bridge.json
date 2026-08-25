@@ -2,6 +2,7 @@
   "slug": "phantom-touch-bridge",
   "order": 27,
   "stars": 59,
+  "editorPick": true,
   "name": { "zh": "幻触桥", "en": "Phantom Touch Bridge" },
   "author": "mfsnlqy",
   "sourceUrl": "https://github.com/mfsnlqy/phantom-touch-bridge",
