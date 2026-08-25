@@ -1,45 +1,49 @@
 {
   "slug": "phantom-touch-bridge",
   "order": 27,
-  "name": { "zh": "Phantom Touch Bridge", "en": "Local Intimate Hardware Bridge" },
+  "stars": 59,
+  "name": { "zh": "幻触桥", "en": "Phantom Touch Bridge" },
   "author": "mfsnlqy",
   "sourceUrl": "https://github.com/mfsnlqy/phantom-touch-bridge",
-  "hook": "让本地 AI 通过一层简单桥接控制兼容设备，也可以参考心率输入。",
-  "summary": "Windows 本地私密硬件桥，为 AI 提供连接、强度、停止和可选心率参考接口，优先兼容 Intiface／Buttplug。",
-  "heroDescription": "Phantom Touch Bridge 把设备控制包装成 AI 可以调用的本地 HTTP 接口。用户不必自己处理蓝牙协议，先通过 Intiface 判断设备兼容性，也可以在明确掌握协议后尝试 custom 路线。",
+  "hook": "让本地 AI 的“触碰”，真正落到现实里的兼容触觉设备上。",
+  "summary": "Windows 本地 18+ 触觉设备桥，为 AI 提供连接、输出调节、停止和可选心率参考接口，优先兼容 Intiface／Buttplug。",
+  "heroDescription": "Phantom Touch Bridge 把复杂的设备协议包装成 AI 可以调用的本地 HTTP 接口。用户不必自己处理蓝牙细节，先通过 Intiface 判断设备兼容性，也可以在明确掌握协议后尝试 custom 路线。",
   "badges": [
+    { "label": "18+", "tone": "adult" },
     { "label": "五感与器官", "tone": "senses" },
+    { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "18+", "tone": "adult" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "Toy", "私密硬件", "Intiface", "心率输入"],
+  "tags": ["18+", "触觉设备", "现实触觉", "Intiface", "心率输入"],
   "language": "Python",
-  "platform": "Windows",
-  "updated":"2026-06-19",
-  "heroOverline": "CONNECT · CONTROL · STOP",
+  "platform": "Windows / Local",
+  "updated": "2026-06-19",
+  "heroOverline": "TOUCH · CONNECT · BODY SIGNAL",
   "showcase": {
-    "label": "把设备协议藏在本地桥接层后面",
-    "symbol": "⌁",
-    "question": "“TA 可以直接控制设备，而不需要我写协议吗？”",
+    "label": "把 AI 的触碰从文字接到现实设备",
+    "symbol": "触",
+    "question": "“TA 说想碰我时，能不能真的让现实里的设备回应？”",
     "comparisons": [
       { "value": "连接", "label": "Intiface 优先" },
-      { "value": "调节", "label": "强度与心率参考" },
-      { "value": "停止", "label": "本地控制接口" }
+      { "value": "调节", "label": "统一输出接口" },
+      { "value": "感知", "label": "可选心率输入" }
     ],
-    "note": "先确认兼容范围，再把控制权交给本地 AI。"
+    "note": "先确认兼容范围，再把本地控制接口交给 AI；心率是额外输入，不等于自动控制逻辑。"
   },
   "intro": {
     "paragraphs": [
-      "Phantom Touch Bridge 是一个运行在 Windows 上的本地桥接服务，让 Claude Code 或其他能发送 HTTP 请求的 AI 连接设备、调整强度并停止输出。心率输入是可选能力，可作为伴侣判断节奏的额外参照。",
+      "Phantom Touch Bridge 是一个运行在 Windows 上的本地 18+ 触觉设备桥接服务，让 Claude Code 或其他能发送 HTTP 请求的 AI 连接兼容设备、调整输出并停止。心率输入是可选能力，可以作为伴侣判断当下状态的额外参照。",
       "项目建议先用 Intiface Central 扫描设备；无法识别时才评估 custom 协议路线。作者明确说明 Intiface 路线尚未用其本人设备完成全套实机验证，心率功能目前主要验证于小米手环。"
     ],
     "facts": [
-      { "label": "适合", "text": "有 Windows 本地 AI 环境，并持有 Intiface 兼容或可明确验证协议设备的人。" },
+      { "label": "适合", "text": "有 Windows 本地 AI 环境，并持有 Intiface 兼容或可明确验证协议设备的成年用户。" },
+      { "label": "内容提示", "text": "涉及成人向触觉设备与亲密互动，Atlas 明确归入 18+ 分类。" },
       { "label": "平台", "text": "Windows 本地服务；AI 端需要能够发起 HTTP 请求。" },
-      { "label": "使用方式", "text": "先确认设备支持范围，再启动本地桥并把 API 使用说明交给 AI。" },
-      { "label": "许可", "text": "MIT；使用前需自行验证硬件兼容性与实际停止控制。" }
+      { "label": "心率", "text": "可选输入；作者主要以小米手环做过实机测试，其他品牌仍需自行验证。" },
+      { "label": "兼容性", "text": "Intiface 路线值得优先尝试，但作者目前没有 Intiface 兼容设备，因此尚未做完整实机验证；custom 也不代表所有蓝牙设备都能直接使用。" },
+      { "label": "许可", "text": "MIT。" }
     ]
   }
 }
