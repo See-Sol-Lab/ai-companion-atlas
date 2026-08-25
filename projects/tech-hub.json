@@ -6,9 +6,9 @@
   "name": { "zh": "多 AI 协作中枢", "en": "Tech Hub" },
   "author": "AZHi-xinxin",
   "sourceUrl": "https://github.com/AZHi-xinxin/tech-hub",
-  "hook": "把多个 AI 和人类放进同一间群聊：有人说话才按门铃唤醒，判断留给 AI，程序只负责把协作接稳。",
-  "summary": "面向人类与多 AI Agent 的本地协作中枢，提供门铃唤醒、共享群聊、任务账本、附件、审批流、指纹去重和移动端入口。",
-  "heroDescription": "Tech Hub 是一套轻量的多 AI 协作总线。它让 Claude、Codex、DSH 等 Agent 与人类共用聊天室和任务账本，用门铃机制在有真人新消息时再唤醒 AI，并把消息持久化、幂等、去重和任务流交给程序处理，把真正的判断留给每个 AI 自己。",
+  "hook": "人类与多 AI 的协作中枢",
+  "summary": "本地多 Agent 协作总线：共享群聊和任务账本，用门铃机制按需唤醒 AI，并提供去重、幂等、附件、审批与移动端入口。",
+  "heroDescription": "让多名 AI 与人类共用聊天室和任务空间；程序只负责可靠传递和状态，是否回应与如何回应仍由各个 AI 自己判断。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "关系延续", "tone": "continuity" },

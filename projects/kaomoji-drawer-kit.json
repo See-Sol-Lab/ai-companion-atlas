@@ -5,9 +5,9 @@
   "name": { "zh": "颜文字抽屉", "en": "KaomojiDrawerKit" },
   "author": "Pyruslili",
   "sourceUrl": "https://github.com/Pyruslili/KaomojiDrawerKit",
-  "hook": "给聊天输入框装一只颜文字抽屉，点一下就把可爱的表情塞进草稿里。",
-  "summary": "面向 iOS 与 macOS 聊天界面的 SwiftUI 颜文字组件，内置 21 类 204 个起始颜文字，支持分类浏览、自定义增删、本地保存和界面换肤。",
-  "heroDescription": "KaomojiDrawerKit 是一个可以直接嵌进聊天输入框的 SwiftUI 小组件。它把颜文字做成应用内抽屉：用户按分类挑选、点一下插入草稿，也能维护自己的收藏，不需要额外键盘扩展或第三方依赖。",
+  "hook": "聊天输入框里的颜文字组件",
+  "summary": "SwiftUI 颜文字抽屉，内置 21 类 204 个起始颜文字，支持分类浏览、自定义增删、本地保存和换肤，可直接嵌进 iOS / macOS 聊天前端。",
+  "heroDescription": "一个可直接嵌进聊天 composer 的 SwiftUI 小组件：点选即插入草稿，也能维护自己的颜文字收藏。",
   "badges": [
     { "label": "手机前端", "tone": "mobile" },
     { "label": "开源", "tone": "open" },

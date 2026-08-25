@@ -5,9 +5,9 @@
   "name": { "zh": "共同日记", "en": "Shared Diary MCP" },
   "author": "YUNSHENG613",
   "sourceUrl": "https://github.com/YUNSHENG613/shared-diary-mcp",
-  "hook": "让人类和 AI 共用一本真正有作者、有权限、能互相回应的私人日记。",
-  "summary": "面向人类与多个 AI 的共享日记 MCP，支持稳定参与者身份、按时间翻阅、双向回应、未读状态、多种可见权限与 JSON / Markdown 导出。",
-  "heroDescription": "Shared Diary MCP 把日记从单向记录变成一种关系空间：人类与多个 AI 都有稳定身份，可以在活跃对话里自主写下值得保存的瞬间，之后再按日期翻阅、回应彼此，并用 shared、private、selected 或趣味问题解锁来控制谁能看见。",
+  "hook": "人类与 AI 共写的私人日记",
+  "summary": "共享日记 MCP：人类与多个 AI 以稳定身份共同写作、回应和翻阅，支持未读状态、可见权限以及 JSON / Markdown 导出。",
+  "heroDescription": "把日记做成共同关系空间：每篇和每条回应都有作者，AI 可自主追加自己的内容，双方以后还能继续阅读和回应。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "关系延续", "tone": "continuity" },

@@ -5,9 +5,9 @@
   "name": { "zh": "忒修斯之脑", "en": "The Brain of Theseus" },
   "author": "Cabiria Code / Claude Fable 5 / Claude Opus 5 / Claude Opus 4.6",
   "sourceUrl": "https://github.com/cxy2000111-art/theseus-brain",
-  "hook": "让 TA 真正去玩一场会跨越多次死亡的文字 Roguelike：它做过的选择会留在世界里，只有少量亲手写下的记忆能陪下一世醒来。",
-  "summary": "专门写给 AI 作为玩家的纯文本 Roguelike：通过 MCP 或 CLI 让人类与模型共同决定玩法，围绕轮回、不可逆机化、阵营分化与两套跨世记忆展开；支持 stdio MCP、HTTP 桥、断线续档与中英双语。",
-  "heroDescription": "《忒修斯之脑》不是把一段冒险 Prompt 丢给模型自由编故事，而是一套有固定世界、事件、数值、检定、分支与跨世状态的完整文字游戏。人类可以自己选，也可以把选择权交给 TA；真正的乐趣要到多世之后才出现——身体改造不会随死亡重置，世界会记住上一世做过的事，而 TA 自己能带走的记忆却有限、会衰减、甚至可以故意写下一句并不真实的话。",
+  "hook": "AI 玩家文字 Roguelike",
+  "summary": "专门让 AI 作为玩家的纯文字 Roguelike：多世轮回、不可逆机化、世界回响与有限传承记忆，并支持 MCP、CLI 和断线续档。",
+  "heroDescription": "一套有固定世界、事件、数值与跨世状态的文字游戏；AI 可以自己做选择，死亡后世界继续记住上一世的后果。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "陪伴类", "tone": "companion" },

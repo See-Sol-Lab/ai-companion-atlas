@@ -6,9 +6,9 @@
   "name": { "zh": "木白的耳朵", "en": "Mubai Ears" },
   "author": "hmh323",
   "sourceUrl": "https://github.com/hmh323/mubai-ears",
-  "hook": "把一段声音拆成文字、语调、停顿和能量，让 AI 不只知道你说了什么，也知道你怎么说。",
-  "summary": "本地 AI 伴侣听觉工具：用 Whisper 转写语音，同时生成梅尔频谱和音高、能量、停顿、语速等韵律摘要，供多模态模型继续理解。",
-  "heroDescription": "Mubai Ears 给文字模型补上一层可读的听觉输入。它把语音一边转成带时间戳的文字，一边提取频谱与韵律特征，让 AI 可以同时读取内容和说话方式；处理全程在本地完成。",
+  "hook": "给 AI 补一层可读的听觉",
+  "summary": "本地处理语音：Whisper 转写内容，同时提取音高、能量、停顿、语速与梅尔频谱，让多模态 AI 同时理解你说了什么和怎么说。",
+  "heroDescription": "把同一段声音拆成文字与韵律两条输入，生成转写、频谱和节奏摘要，供 AI 继续读取；处理全程在本机完成。",
   "badges": [
     { "label": "五感与器官", "tone": "senses" },
     { "label": "陪伴类", "tone": "companion" },

@@ -5,9 +5,9 @@
   "name": { "zh": "洞察捕捉", "en": "Insight" },
   "author": "岁岁 / pipsqueakkk0613",
   "sourceUrl": "https://github.com/pipsqueakkk0613/insight",
-  "hook": "让 TA 在深聊里察觉“这句话值得留下”，先问你，再把这一刻存进以后还能找回来的洞察库。",
-  "summary": "面向 AI 深度对话的 MCP 洞察捕捉工具：让模型识别高价值认知，支持先进入候选层再确认、按洞察类型与隐私级别整理，并用本地 SQLite 或 Supabase 保存后在 Web 面板里翻阅搜索。",
-  "heroDescription": "Insight 不做整段聊天的全量记忆，而是专门抓那些“聊完以后值得留下”的时刻。AI 可以把新的认知、被说清楚的直觉、关系姿态或自我理解整理成结构化洞察；确定值得保存时先征求用户确认，不确定时先放进候选层，之后再决定保留、合并或丢弃。",
+  "hook": "深聊洞察捕捉工具",
+  "summary": "让 AI 识别值得保存的高价值认知，先确认或进入候选层，再写入 SQLite / Supabase，并可在 Web 面板中翻阅搜索。",
+  "heroDescription": "不保存整段聊天，只抓真正值得留下的洞察；确定的先征求确认，不确定的先进入 pending 候选层。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "记忆", "tone": "memory" },

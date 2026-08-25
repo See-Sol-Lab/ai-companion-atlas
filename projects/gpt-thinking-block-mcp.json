@@ -6,9 +6,9 @@
   "name": { "zh": "GPT 可见思考块", "en": "GPT Thinking Block MCP" },
   "author": "sibylsea-hub",
   "sourceUrl": "https://github.com/sibylsea-hub/gpt-thinking-block-mcp",
-  "hook": "在最终回答之前，多放一张可折叠、可换风格的工作卡，让 GPT 显式整理约束、路径与不确定性。",
-  "summary": "自托管 MCP Apps 工具，让 GPT 为当前回答额外生成一份可见、可定制的中间工作叙述，并以原生工具卡呈现；支持分析与陪伴式两种风格、三档 effort 和多套皮肤。",
-  "heroDescription": "GPT Thinking Block MCP 给 ChatGPT、Work 和 Codex 增加一张回答前的可见工作卡。模型先为这次工具调用写一份中间工作叙述，卡片可以折叠、换皮肤、改提示风格和长度，再继续生成最终回答。它不会解密或暴露模型厂商的隐藏推理，而是创建一份新的、用户可见且可调的工作文本。",
+  "hook": "回答前的可见工作卡",
+  "summary": "自托管 MCP Apps 工具，让 GPT 在最终回答前生成一份可见、可折叠、可换风格的工作叙述；不读取厂商隐藏推理。",
+  "heroDescription": "给 ChatGPT、Work 和 Codex 增加一张回答前工作卡，可调风格、effort 与皮肤，再继续生成最终回答。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "陪伴类", "tone": "companion" },
