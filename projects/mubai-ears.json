@@ -1,0 +1,48 @@
+{
+  "slug": "mubai-ears",
+  "order": 186,
+  "stars": 26,
+  "editorPick": true,
+  "name": { "zh": "木白的耳朵", "en": "Mubai Ears" },
+  "author": "hmh323",
+  "sourceUrl": "https://github.com/hmh323/mubai-ears",
+  "hook": "把一段声音拆成文字、语调、停顿和能量，让 AI 不只知道你说了什么，也知道你怎么说。",
+  "summary": "本地 AI 伴侣听觉工具：用 Whisper 转写语音，同时生成梅尔频谱和音高、能量、停顿、语速等韵律摘要，供多模态模型继续理解。",
+  "heroDescription": "Mubai Ears 给文字模型补上一层可读的听觉输入。它把语音一边转成带时间戳的文字，一边提取频谱与韵律特征，让 AI 可以同时读取内容和说话方式；处理全程在本地完成。",
+  "badges": [
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["语音", "韵律分析", "Whisper", "梅尔频谱", "本地处理"],
+  "language": "Python",
+  "platform": "Windows / macOS / Linux",
+  "updated": "2026-07-30",
+  "heroOverline": "VOICE · PROSODY · LOCAL",
+  "showcase": {
+    "label": "让 AI 同时听见内容与说话方式",
+    "symbol": "耳",
+    "question": "“TA 能不能听懂的不只是我说了什么，还有我是怎么说的？”",
+    "comparisons": [
+      { "value": "文字", "label": "Whisper 转写" },
+      { "value": "语气", "label": "音高与能量" },
+      { "value": "节奏", "label": "停顿与语速" }
+    ],
+    "note": "音频处理全程本地完成；输出被转换成图片、文字和数值，方便多模态 AI 继续读取。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Mubai Ears 是一个给 AI 伴侣补充听觉输入的本地工具。它把同一段音频分成两条路径：transcribe.py 使用 faster-whisper 生成带时间戳的文字，cochlea.py 则生成梅尔频谱图和音高、能量、停顿、语速等韵律摘要。",
+      "这样，模型拿到的不再只有一句转写文本。多模态模型还可以读取 listen.png 和 summary.json，进一步参考声音的高低、轻重、停顿与节奏来理解当下的表达方式。项目强调所有声音处理都在用户自己的电脑上完成。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望让本地或多模态 AI 伴侣理解语音内容，同时保留部分语气与节奏信息的人。" },
+      { "label": "输入", "text": "支持 wav 以及通过 ffmpeg 解码的 webm、m4a、mp3 等常见音频格式。" },
+      { "label": "输出", "text": "梅尔频谱与韵律可视化、韵律 JSON 摘要，以及 Whisper 带时间戳转写。" },
+      { "label": "隐私", "text": "音频分析与转写均在本地运行；首次使用 faster-whisper 时需要下载模型权重。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}
