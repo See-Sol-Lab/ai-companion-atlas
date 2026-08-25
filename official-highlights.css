@@ -73,13 +73,13 @@
     text-align: right;
   }
 
-  /* Directory cards are previews, not detail pages. Cap the middle summary by
-     visible lines so one verbose project cannot stretch the whole grid row. */
+  /* Directory cards are previews, not detail pages. Three lines is enough to
+     explain the project without letting one verbose card stretch its row. */
   .project-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
   }
 }
