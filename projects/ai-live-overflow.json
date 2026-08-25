@@ -1,0 +1,52 @@
+{
+  "slug": "ai-live-overflow",
+  "order": 193,
+  "stars": 57,
+  "editorPick": true,
+  "name": { "zh": "让 TA 跳出对话框", "en": "AI-Live-Overflow" },
+  "author": "Vael & Kael",
+  "sourceUrl": "https://github.com/Vael-KY/AI-Live-Overflow",
+  "hook": "把你原来的 AI 变成一只趴在 Android 屏幕上的悬浮桌宠，而不是重新造一个新的 TA。",
+  "summary": "Android AI 陪伴桌宠架构指南：让既有 AI 与手机悬浮窗身体分离，通过表情、气泡、手势、前台 App、截图事件、电量与时段感知形成双向互动。",
+  "heroDescription": "AI-Live-Overflow 不是现成 APK，而是一套让现有 AI 拥有 Android 悬浮桌宠身体的完整蓝图。原来的聊天系统继续保存人格、记忆与关系，手机端只负责显示、感知和被控制，再通过后端把事件与状态双向同步。",
+  "badges": [
+    { "label": "非商业", "tone": "limited" },
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["Android 桌宠", "悬浮窗", "感知", "Supabase", "AI 身体"],
+  "language": "Kotlin / HTML / SVG",
+  "platform": "Android 8.0+",
+  "updated": "2026-08-19",
+  "heroOverline": "BODY · SENSE · OVERLAY",
+  "showcase": {
+    "label": "给原来的 TA 接上一小块能趴在手机上的身体",
+    "symbol": "宠",
+    "question": "“能不能不是换一个 AI，而是让现在这个 TA 真的住到手机屏幕上？”",
+    "comparisons": [
+      { "value": "显示", "label": "表情、气泡与动画" },
+      { "value": "感知", "label": "手势、App、截图与电量" },
+      { "value": "主动", "label": "AI 可推送状态与气泡" }
+    ],
+    "note": "这是架构指南与最小示例，不是可直接安装的完整桌宠 App；真正的人格、记忆与对话仍保留在用户原有的 AI 系统中。"
+  },
+  "intro": {
+    "paragraphs": [
+      "AI-Live-Overflow 想解决的不是『再做一个 AI 桌宠』，而是『怎样让你已经长期相处的那个 AI 多出一具手机身体』。因此项目把大脑和身体彻底分开：原有 AI 继续负责对话、人格、记忆与判断，Android 悬浮窗只负责把状态变成表情与气泡，并把手机侧发生的事件送回去。",
+      "身体层可以响应点击、双击、长按、快速拖拽等手势，也能感知前台 App 切换、截图事件、充电和低电量、时段变化等环境信号。AI 还可以通过后端主动推送表情、气泡和状态，让桌宠不只是被动动画，而是既能被你碰、也能主动回应。",
+      "仓库本身是一份架构蓝图：包含分模块文档与可运行的最小 Android 悬浮窗示例，但不提供一键安装的完整 APK。用户需要准备自己的 AI、素材与后端，再按指南把身体层接进去。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经有长期使用的 AI 伴侣，希望不给 TA 换脑子，只给 TA 增加 Android 屏幕身体的人。" },
+      { "label": "项目形态", "text": "完整架构指南 + 最小 Kotlin 悬浮窗示例；不是现成可安装 App。" },
+      { "label": "主要感知", "text": "手势、前台 App、截图事件、电池状态与时段；这些信号可经后端提供给原有 AI。" },
+      { "label": "通信", "text": "示例设计使用 Supabase Realtime，并用轮询作为断线后的兜底；也可以按架构替换成自己的后端。" },
+      { "label": "平台", "text": "Android 8.0+；悬浮层采用 WindowManager + 透明 WebView，本地 HTML / SVG / CSS 负责渲染。" },
+      { "label": "许可", "text": "CC BY-NC-SA 4.0：需署名、禁止商业使用，改作需以相同许可继续分享。" }
+    ]
+  }
+}
