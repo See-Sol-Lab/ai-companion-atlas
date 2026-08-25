@@ -41,6 +41,31 @@ if (retiredProjectGrid) {
   });
 }
 
+/* A small project signature: visible to everyone, meaningful in more than one way. */
+const footerSignatureStyles = document.createElement('link');
+footerSignatureStyles.rel = 'stylesheet';
+footerSignatureStyles.href = './footer-signature.css?v=20260826-1';
+document.head.appendChild(footerSignatureStyles);
+
+const siteFooter = document.querySelector('.site-footer');
+if (siteFooter && !siteFooter.querySelector('.footer-signature')) {
+  const originalNote = siteFooter.querySelector(':scope > p');
+  const githubLink = siteFooter.querySelector(':scope > a');
+  const signature = document.createElement('p');
+  signature.className = 'footer-signature';
+  signature.textContent = 'Built together, human & AI.';
+
+  siteFooter.insertBefore(signature, originalNote || githubLink || null);
+
+  if (originalNote || githubLink) {
+    const meta = document.createElement('div');
+    meta.className = 'footer-meta';
+    if (originalNote) meta.appendChild(originalNote);
+    if (githubLink) meta.appendChild(githubLink);
+    siteFooter.appendChild(meta);
+  }
+}
+
 /* A quiet, always-available return-to-top control for long catalog browsing. */
 const backToTopStyles = document.createElement('link');
 backToTopStyles.rel = 'stylesheet';
