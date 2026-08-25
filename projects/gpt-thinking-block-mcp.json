@@ -1,0 +1,50 @@
+{
+  "slug": "gpt-thinking-block-mcp",
+  "order": 188,
+  "stars": 64,
+  "editorPick": true,
+  "name": { "zh": "GPT 可见思考块", "en": "GPT Thinking Block MCP" },
+  "author": "sibylsea-hub",
+  "sourceUrl": "https://github.com/sibylsea-hub/gpt-thinking-block-mcp",
+  "hook": "在最终回答之前，多放一张可折叠、可换风格的工作卡，让 GPT 显式整理约束、路径与不确定性。",
+  "summary": "自托管 MCP Apps 工具，让 GPT 为当前回答额外生成一份可见、可定制的中间工作叙述，并以原生工具卡呈现；支持分析与陪伴式两种风格、三档 effort 和多套皮肤。",
+  "heroDescription": "GPT Thinking Block MCP 给 ChatGPT、Work 和 Codex 增加一张回答前的可见工作卡。模型先为这次工具调用写一份中间工作叙述，卡片可以折叠、换皮肤、改提示风格和长度，再继续生成最终回答。它不会解密或暴露模型厂商的隐藏推理，而是创建一份新的、用户可见且可调的工作文本。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["MCP Apps", "可见思考", "Thinking Block", "ChatGPT", "Codex"],
+  "language": "Python / HTML / CSS / JavaScript",
+  "platform": "ChatGPT / Work / Codex / MCP",
+  "updated": "2026-08-19",
+  "heroOverline": "THINK · RENDER · CONTINUE",
+  "showcase": {
+    "label": "把回答前的工作过程做成一张真正可调的工具卡",
+    "symbol": "思",
+    "question": "“我能不能在最终回答前，看见一份由 TA 主动写出的当前工作草稿？”",
+    "comparisons": [
+      { "value": "风格", "label": "分析 / 陪伴" },
+      { "value": "深度", "label": "low / medium / high" },
+      { "value": "呈现", "label": "可折叠 MCP 卡片" }
+    ],
+    "note": "这里展示的是模型为工具调用新写的一份可见工作叙述，不是对厂商隐藏推理的解密或读取。"
+  },
+  "intro": {
+    "paragraphs": [
+      "GPT Thinking Block MCP 是一个自托管的可见工作卡工具。模型在最终回答前调用 render_thinking_block，把当前要整理的约束、路径、取舍或情绪性思考写进工具参数，再由 MCP Apps UI 渲染成一张可折叠卡片，之后继续完成最终回答。",
+      "项目提供 deep_think 与 relational 两套默认写作风格，low、medium、high 三档 effort，以及 botanical 和 microglow 等视觉皮肤；这些都可以直接改提示词、字数范围和 CSS。项目同时提供 Streamable HTTP MCP、REST /think 与 OpenAPI 接口，并支持 ChatGPT Chat、Work 和 Codex 等兼容宿主。",
+      "作者在技术文档中明确区分了可见工作块与模型厂商的隐藏推理：项目不会解密 encrypted reasoning，而是让模型新写一份当前轮次的可见中间叙述。标准 MCP 版本还有上下文保留边界——工具输入可能留在后续对话记录里，因此不应把密码、token 或其他秘密写进思考块。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望在复杂分析、创作或长期陪伴对话里，看见并定制一层回答前工作过程的人。" },
+      { "label": "呈现", "text": "兼容 MCP Apps UI 的宿主会显示自定义卡片；纯文本 MCP 客户端仍可调用，但可能只显示普通工具调用。" },
+      { "label": "隐私", "text": "默认不把工作块写入磁盘；可选 capture 需用户主动开启。标准 MCP 工具输入仍可能留在会话上下文中，因此不要写入秘密。" },
+      { "label": "部署", "text": "自托管；ChatGPT / Work 需要可访问的 HTTPS MCP 地址，Codex 可直接连接本地 MCP。参考服务器本身不提供认证、限流或访问控制。" },
+      { "label": "来源", "text": "项目公开注明灵感来自 Can Bölük 的教程，relational 风格提示词基于 @不似雪 的公开分享；当前实现发展成独立的自托管 MCP 产品。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}
