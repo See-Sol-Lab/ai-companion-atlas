@@ -5,11 +5,18 @@ SOURCE="/srv/atlas-source"
 WEBROOT="/var/www/atlas"
 SITE="https://www.ailover-atlas.com"
 ANALYTICS_TOKEN="b8477ada2f504530bf2b707ee1ac3efe"
+STAGING=""
 
 say() { printf '\n[atlas-deploy] %s\n' "$*"; }
 fail() { printf '\n[atlas-deploy] ERROR: %s\n' "$*" >&2; exit 1; }
+cleanup() {
+  if [ -n "$STAGING" ] && [ -d "$STAGING" ]; then
+    rm -rf "$STAGING"
+  fi
+}
+trap cleanup EXIT
 
-for command in git rsync sed find curl python3 grep; do
+for command in git rsync sed find curl python3 grep node mktemp; do
   command -v "$command" >/dev/null 2>&1 || fail "missing command: $command"
 done
 
@@ -52,6 +59,17 @@ say "Updating source checkout..."
 git pull --ff-only origin main
 DEPLOY_SHA="$(git rev-parse --short=12 HEAD)"
 
+# Generate cards/detail pages in a disposable staging copy so the checked-out
+# Git repository stays clean. From now on, adding a project JSON to GitHub is
+# enough for HK production: deploy regenerates index.html and every detail page.
+say "Generating project catalog..."
+STAGING="$(mktemp -d /tmp/atlas-deploy.XXXXXX)"
+rsync -a --exclude='.git/' --exclude='node_modules/' "$SOURCE/" "$STAGING/"
+(
+  cd "$STAGING"
+  node scripts/generate-projects.mjs
+)
+
 say "Syncing public website files..."
 rsync -a --delete \
   --exclude='.git/' \
@@ -66,17 +84,15 @@ rsync -a --delete \
   --exclude='COMMENTS_SETUP.md' \
   --exclude='wrangler.jsonc' \
   --exclude='_routes.json' \
-  "$SOURCE/" "$WEBROOT/"
+  "$STAGING/" "$WEBROOT/"
 
-# Hong Kong production uses Aliyun Captcha. Older generated HTML may still
-# contain Cloudflare Turnstile tags; strip them at deploy time. This is safe
-# to keep after the generator is fully neutral because it then becomes a no-op.
+# Hong Kong production uses Aliyun Captcha. Older/generated HTML may still
+# contain Cloudflare Turnstile tags; strip them at deploy time.
 find "$WEBROOT" -type f -name '*.html' -exec \
   sed -i '/challenges\.cloudflare\.com\/turnstile/d' {} +
 
 # Use the deployed Git commit as a cache-busting version for the two dynamic
-# entrypoints whose providers differ between the HK production site and the
-# Cloudflare mirror.
+# entrypoints whose providers differ between HK production and the CF mirror.
 if [ -f "$WEBROOT/index.html" ]; then
   sed -E -i \
     "s#submission\.js(\?v=[^\"']+)?#submission.js?v=${DEPLOY_SHA}#g" \
@@ -91,8 +107,7 @@ if [ -d "$WEBROOT/projects" ]; then
 fi
 
 # Cloudflare Web Analytics is intentionally injected only into the Hong Kong
-# production copy. The GitHub source and Cloudflare Pages mirror remain free of
-# this beacon, so this Analytics property represents www.ailover-atlas.com.
+# production copy. GitHub source and the Cloudflare Pages mirror stay beacon-free.
 say "Injecting production Web Analytics..."
 python3 - "$WEBROOT" "$ANALYTICS_TOKEN" <<'PY'
 from pathlib import Path
@@ -133,7 +148,16 @@ curl -fsS "$SITE/api/config" | python3 -c \
   'import json,sys; data=json.load(sys.stdin); assert data.get("captchaProvider") == "aliyun"'
 curl -fsS "$SITE/api/likes?project=time-anchor" >/dev/null
 
+# If the EBO community submission exists in the deployed source, make sure its
+# generated detail page also exists in production. This doubles as a regression
+# check for the JSON -> generator -> deploy path.
+if [ -f "$SOURCE/projects/ebo-air2-mcp-guide.json" ]; then
+  curl -fsS "$SITE/projects/ebo-air2-mcp-guide/" | grep -Fq "EBO Air 2 MCP" || \
+    fail "generated EBO Air 2 project page missing from production"
+fi
+
 say "Deployment complete: ${DEPLOY_SHA}"
 printf 'Site: %s\n' "$SITE"
+printf 'Project catalog: generated from GitHub JSON files.\n'
 printf 'Cloudflare Web Analytics: active on HK production HTML.\n'
 printf 'Dynamic API / SQLite / secrets were not modified.\n'
