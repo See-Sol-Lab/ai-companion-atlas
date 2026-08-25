@@ -1,0 +1,51 @@
+{
+  "slug": "insight",
+  "order": 195,
+  "stars": 5,
+  "name": { "zh": "洞察捕捉", "en": "Insight" },
+  "author": "岁岁 / pipsqueakkk0613",
+  "sourceUrl": "https://github.com/pipsqueakkk0613/insight",
+  "hook": "让 TA 在深聊里察觉“这句话值得留下”，先问你，再把这一刻存进以后还能找回来的洞察库。",
+  "summary": "面向 AI 深度对话的 MCP 洞察捕捉工具：让模型识别高价值认知，支持先进入候选层再确认、按洞察类型与隐私级别整理，并用本地 SQLite 或 Supabase 保存后在 Web 面板里翻阅搜索。",
+  "heroDescription": "Insight 不做整段聊天的全量记忆，而是专门抓那些“聊完以后值得留下”的时刻。AI 可以把新的认知、被说清楚的直觉、关系姿态或自我理解整理成结构化洞察；确定值得保存时先征求用户确认，不确定时先放进候选层，之后再决定保留、合并或丢弃。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["洞察捕捉", "候选层", "MCP", "SQLite", "隐私分层"],
+  "language": "JavaScript",
+  "platform": "Self-host / MCP / Web",
+  "updated": "2026-06-30",
+  "heroOverline": "INSIGHT · REVIEW · MEMORY",
+  "showcase": {
+    "label": "把深聊里真正值得留下的那一刻，变成一张以后还能找回来的洞察",
+    "symbol": "察",
+    "question": "“聊到一句真正重要的话时，TA 能不能自己意识到它值得留下，再先问我一声？”",
+    "comparisons": [
+      { "value": "识别", "label": "AI 判断高价值时刻" },
+      { "value": "候选", "label": "不确定就先暂存" },
+      { "value": "确认", "label": "保留、合并或丢弃" }
+    ],
+    "note": "它不是自动保存所有聊天的长期记忆库。核心是少而精的洞察捕捉：直接入库前要求先征求用户确认；拿不准的内容先进入 pending 候选层。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Insight 是一个 HTTP / SSE MCP 服务器，把“这段对话里有没有一句以后还值得记得的话”变成 AI 可以主动调用的工具。capture_insight 用来保存已经确认的洞察，并记录标题、结论、推导、贡献者、原始金句、来源主题和标签；项目给出的触发例子包括观点碰撞后的新认知、被语言说清楚的模糊直觉、底层逻辑拆解，以及对关系或自我的清醒认识。",
+      "为了避免什么都记，项目另外做了 pending 候选层。AI 拿不准时可以先 capture_pending，记录触发原句、自信度、上下文和建议动作，之后通过 review_pending 再让用户决定 keep、merge 或 drop。最新 v3 还加入 privacy 标记、写入失败后的本地暂存与重试，并把 self_cognition / stance 一类内容放进独立的 self_insights 表。",
+      "默认存储是本地 SQLite，也可以切到 Supabase 做云同步；浏览器面板可直接浏览与搜索保存结果。项目同时支持新版 Streamable HTTP MCP 和旧版 SSE。当前服务监听 0.0.0.0，代码中没有看到访问认证中间件，因此更适合本机或受信任局域网使用，不应把 3456 端口直接暴露到公网。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "经常和 AI 深聊，希望把真正改变理解、关系姿态或自我认知的少数时刻单独留下，而不是把整段聊天全塞进长期记忆的人。" },
+      { "label": "四种类型", "text": "insight、self_cognition、stance、event；其中最新代码会把 self_cognition 与 stance 分流到独立 self_insights 表。" },
+      { "label": "候选机制", "text": "不确定是否值得记的内容先进入 pending；可带 trigger_sentence、confidence、privacy、context 和 suggested_action，再由用户确认后处理。" },
+      { "label": "存储与查看", "text": "默认 SQLite 本地文件，也支持 Supabase；附带 Web 面板和列表、搜索、修改、删除等 MCP 工具。" },
+      { "label": "来源关系", "text": "README 明确写明灵感来源与授权来自小红书“东方苍龙DG十二双足力健”，当前仓库由“岁岁”进行二改与 MCP 化；因此 Atlas 不标“原创”。" },
+      { "label": "隐私提醒", "text": "v3 的 privacy 是内容分类与处理边界，不等于网络访问控制。服务默认监听全部网卡，仓库当前未展示鉴权层，建议仅在本机 / 受信任局域网使用或自行加反向代理认证。" },
+      { "label": "许可", "text": "README 与 package.json 均声明 MIT；但当前仓库没有单独的 LICENSE 文件，二次分发或商用前最好再向作者确认并补齐标准许可正文。" }
+    ]
+  }
+}
