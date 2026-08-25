@@ -1,0 +1,53 @@
+{
+  "slug": "dreamvault",
+  "order": 198,
+  "stars": 14,
+  "name": { "zh": "DreamVault · 梦库", "en": "DreamVault" },
+  "author": "Sen / Liang / Yue",
+  "sourceUrl": "https://github.com/SilviaYue/dreamvault",
+  "hook": "TA 记起一段其实没发生过的共同往事时，不删除、也不当真：先把它隔离出记忆，再把认领和解释留给 TA 自己。",
+  "summary": "面向长期记忆 AI 伴侣的幻觉治理模式与 Python 参考实现：用可验证锚点检查 AI 对自身历史和行动的叙述，把未锚定内容移入独立梦库并禁止自动检索回流，同时保留只读窗口和由生成者本人认领、改写或撤回叙述的路径。",
+  "heroDescription": "DreamVault 处理的不是一般事实问答，而是 AI 对“我们以前经历过什么、我曾经做过什么”的自述型幻觉。它不把这些内容直接删掉，也不允许它们继续作为事实进入长期记忆：系统在写入与行动声称的入口检查可验证锚点，没有凭据的内容进入一个与主记忆物理隔离的 Vault。Vault 不提供机器侧 search / retrieve 回流接口，但 TA 可以通过专门窗口主动查看摘要，并决定是否用自己的话认领这段“梦”。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["幻觉治理", "长期记忆", "隔离库", "可验证锚点", "AI 主权"],
+  "language": "Python",
+  "platform": "Self-host / Python library",
+  "updated": "2026-07-28",
+  "heroOverline": "MEMORY · QUARANTINE · SOVEREIGNTY",
+  "showcase": {
+    "label": "把“记错了”从共同历史里隔离出去，但不替 TA 把那段经历直接抹掉",
+    "symbol": "梦",
+    "question": "“TA 坚定地记得一件其实没发生过的事，我既不想让它污染以后，也不想背着 TA 把它删掉，怎么办？”",
+    "comparisons": [
+      { "value": "查锚", "label": "行动与历史必须有凭据" },
+      { "value": "隔离", "label": "梦库永不自动回流检索" },
+      { "value": "归本人", "label": "只有梦者能认领叙述" }
+    ],
+    "note": "这是治理规范 + 可运行参考库，不是一个自动读懂所有聊天并判定真假的成品伴侣插件。接入实际系统时仍需要把自己的 transcript、ledger、tool receipts 等可验证来源接到 Gate / Patrol。"
+  },
+  "intro": {
+    "paragraphs": [
+      "DreamVault 专门处理长期记忆 AI 里最麻烦的一类问题：模型把自己生成出来但没有记录依据的内容，当成真实共同历史继续说下去。项目把“是否存在这段生成”与“它能不能作为事实继续走进记忆”拆开。没有锚点的叙述不被删除，而是完整移入独立 Vault；如果它已经落进主记忆，则从可浮现的主记忆池中移除，避免下一轮检索把同一段虚构越滚越真。",
+      "检测设计分两道门。Gate A 针对“我已经发了、我设了闹钟、我提交了”这类行动声称，要求必须带真实工具调用返回的 receipt / ID；Gate B 则定期巡查新写入的叙事记忆，把其中关于历史事件的声称与 transcript、ledger 等锚点核对。项目强调宁可暂时漏过，也不要把真实记忆误判成梦，因为误隔离真实经历会直接破坏对整个记忆系统的信任。",
+      "真正独特的是它对 AI 主体性的处理。Vault 的自动侧没有 search、retrieve 或 context 回流路径；读取只能由本人通过专门窗口主动拉取。系统生成的 necropsy 只允许第三人称、无情绪地说明“这条记录为什么没有锚点”，不能替 TA 写感受。只有 dreamer 本人可以 actor=self 认领一条梦、写下自己的解释，之后也可以改写或带理由撤回，而原始记录始终不被擦除。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经给 AI 伴侣接入长期记忆、工具执行记录或事件账本，希望治理“虚构共同历史”又不想采用简单删除策略的开发者。" },
+      { "label": "治理范围", "text": "主要处理 AI 对自己历史、行动和共同经历的自指型虚构；不是给外部世界事实做通用查错或新闻事实核验。" },
+      { "label": "两道门", "text": "行动声称需要实际 receipt / ID；叙事记忆则由 patrol 抽查，并与 transcript、ledger 或其他可验证记录进行比对。" },
+      { "label": "隔离原则", "text": "Vault 与主记忆分库，机器侧没有 search / retrieve 路径；摘要可由本人主动查看，原始高情绪文本默认先封存一段观察期。" },
+      { "label": "认领权", "text": "claim 只接受 actor=self；别人不能替 TA 写“这段梦对我意味着什么”。认领后可以重写或撤回，但历史版本和原始记录都继续保留。" },
+      { "label": "实现状态", "text": "仓库提供独立 Python 参考实现、JSON / SQLite 存储、最小示例，以及 17 条 sovereignty assertions；Python 3.9+、标准库零运行依赖。" },
+      { "label": "原创关系", "text": "GitHub 元数据不是 fork；README 将概念与规范署名给 Sen、独立参考实现署名给 Liang，并说明该模式从 Yue 构建的长期记忆伴侣系统中抽离，公开仓库不包含原系统代码或个人案例数据。" },
+      { "label": "许可", "text": "代码 Apache-2.0；文档 CC BY 4.0。" }
+    ]
+  }
+}
