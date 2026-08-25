@@ -13,6 +13,19 @@
 /* Catalog layout resilience: long contributor lists and long repo names must not
    steal the reading column or make an entire grid row balloon in height. */
 @media (min-width: 821px) {
+  /* 1fr tracks use an automatic min-size by default. A single card with a long
+     intrinsic string can therefore widen its entire grid column on one page.
+     minmax(0, 1fr) makes all three columns genuinely equal regardless of which
+     30 cards happen to be visible after pagination. */
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-card,
+  .project-template {
+    min-width: 0;
+  }
+
   .project-template-top {
     grid-template-columns: minmax(0, 1fr) minmax(120px, 44%);
   }
