@@ -1,0 +1,56 @@
+.site-footer{
+  grid-template-columns:minmax(220px,1fr) auto minmax(220px,1fr);
+}
+
+.footer-signature{
+  margin:0;
+  justify-self:center;
+  color:#24385f;
+  font-family:Georgia,"Times New Roman","Songti SC",STSong,serif;
+  font-size:clamp(20px,1.65vw,28px);
+  font-style:italic;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+  text-wrap:balance;
+}
+
+.footer-meta{
+  justify-self:end;
+  display:flex;
+  align-items:center;
+  gap:32px;
+  min-width:0;
+}
+
+.footer-meta p{
+  margin:0;
+}
+
+.footer-meta a{
+  white-space:nowrap;
+}
+
+@media(max-width:820px){
+  .site-footer{
+    grid-template-columns:1fr;
+    justify-items:start;
+    gap:14px;
+  }
+
+  .footer-signature{
+    justify-self:center;
+    width:100%;
+    padding:5px 0 3px;
+    font-size:clamp(20px,7vw,27px);
+    white-space:normal;
+    text-align:center;
+  }
+
+  .footer-meta{
+    justify-self:start;
+    flex-wrap:wrap;
+    gap:10px 22px;
+  }
+}
