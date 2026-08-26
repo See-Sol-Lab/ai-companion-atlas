@@ -6,6 +6,7 @@
   "name": { "zh": "ZCode", "en": "ZCode" },
   "author": "Z.ai",
   "sourceUrl": "https://zcode.z.ai/cn",
+  "directUrl": "https://zcode.z.ai/cn",
   "hook": "用多个 AI Agent 帮你规划、编写和检查代码。",
   "summary": "智谱 GLM 官方氛围编程桌面工具，面向从入门到专业的开发任务，支持多 Agent 协作、长程目标、代码修改与结果验证。",
   "heroDescription": "打开一个项目或新建工作区，用自然语言描述想实现的结果。ZCode 会让 AI Agent 分解任务、读写文件、运行命令并持续检查进度，让不熟悉完整开发流程的人也能从一个想法开始制作软件。",
@@ -21,6 +22,10 @@
     {
       "label": "开发与编程",
       "tone": "coding"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
     }
   ],
   "tags": [

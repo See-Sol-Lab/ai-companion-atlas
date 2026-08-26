@@ -1,0 +1,87 @@
+{
+  "slug": "trae",
+  "order": 205,
+  "officialHighlight": true,
+  "name": {
+    "zh": "Trae",
+    "en": "Trae"
+  },
+  "author": "Trae",
+  "sourceUrl": "https://www.trae.cn/",
+  "directUrl": "https://www.trae.cn/",
+  "hook": "边写代码边让 AI 帮忙，也能直接描述需求让它完成任务。",
+  "summary": "字节跳动推出的 AI 编程软件，支持代码补全、问题排查、任务自动执行、项目生成和网页预览，适合日常编程与用自然语言制作软件。",
+  "heroDescription": "Trae 把代码编辑器和 AI 助手放在一起。你可以边写边让它补全和排查问题，也可以直接说出想做什么，让 AI 拆分步骤、修改文件并运行项目。",
+  "badges": [
+    {
+      "label": "官方前端",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "开发与编程",
+      "tone": "coding"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
+    }
+  ],
+  "tags": [
+    "Vibe Coding",
+    "AI IDE",
+    "SOLO",
+    "代码生成"
+  ],
+  "language": "Desktop IDE",
+  "platform": "Windows / macOS",
+  "updated": "2026-08-26",
+  "heroOverline": "WRITE · BUILD · PREVIEW",
+  "showcase": {
+    "label": "从写代码到直接交代开发任务",
+    "symbol": "T",
+    "question": "“我只会描述想法，也能让 AI 帮我把软件做出来吗？”",
+    "comparisons": [
+      {
+        "value": "编写",
+        "label": "补全与问答"
+      },
+      {
+        "value": "执行",
+        "label": "自动推进任务"
+      },
+      {
+        "value": "预览",
+        "label": "直接查看效果"
+      }
+    ],
+    "note": "既能当普通代码编辑器使用，也能把一整项开发任务交给 AI 推进。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Trae 是字节跳动推出的 AI 编程软件。普通开发时，它可以补全代码、回答项目问题、寻找 Bug 和修改文件；想从零开始时，也可以直接用自然语言描述网站、应用或功能。",
+      "在 SOLO 或 Builder 等模式中，AI 会根据目标拆分任务、生成项目、运行命令并展示网页效果。用户仍需要检查生成的代码和最终结果，再决定是否采用。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "想让 AI 辅助日常编程，或希望用自然语言制作网站、应用和办公工具的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "从国内官网下载客户端，打开已有项目或新建工作区后直接描述任务。"
+      },
+      {
+        "label": "主要能力",
+        "text": "代码补全、项目问答、问题排查、自动执行任务、项目生成和网页预览。"
+      },
+      {
+        "label": "费用",
+        "text": "可用模型、免费额度和套餐可能调整，以 Trae 官网当前说明为准。"
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@
   },
   "author": "Aevella",
   "sourceUrl": "https://github.com/Aevella/polaris-local-first",
+  "directUrl": "https://apps.apple.com/cn/app/polaris%E5%8C%97%E6%9E%81%E6%98%9F/id6760319873",
   "hook": "把长期对话、协作者人格和项目资料放进一个本地优先工作空间。",
   "summary": "跨平台 AI 工作空间，支持长会话、多人格协作者、资料收藏、工具调用、附件和可迁移备份。",
   "heroDescription": "Polaris 用同一套产品运行时覆盖 Web、iOS、Android 与桌面端，把聊天、协作者、项目资料和工具执行组织成可读、可追溯的长期工作空间。",
@@ -30,6 +31,10 @@
     {
       "label": "PC 前端",
       "tone": "desktop"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
     }
   ],
   "tags": [
