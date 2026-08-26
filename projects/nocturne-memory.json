@@ -1,0 +1,51 @@
+{
+  "slug": "nocturne-memory",
+  "order": 202,
+  "stars": 1332,
+  "name": { "zh": "Nocturne Memory", "en": "Nocturne Memory" },
+  "author": "Dataojitori",
+  "sourceUrl": "https://github.com/Dataojitori/nocturne_memory",
+  "hook": "让 TA 换窗口、换模型，也能带着同一份长期记忆继续回来。",
+  "summary": "把身份、关系和共同经历放进独立的 MCP 记忆库。不同会话和模型都能读取同一份长期状态，还能在网页里审查修改、接受或回滚记忆。",
+  "heroDescription": "Nocturne Memory 把长期记忆从聊天平台里单独拿出来，交给一个自托管 MCP Server。TA 可以跨会话、跨客户端甚至跨模型读取同一份身份与关系历史，而记忆本身仍由用户掌控。",
+  "badges": [
+    { "label": "AI 主体性", "tone": "subjectivity" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["长期记忆", "跨模型", "MCP", "可回滚"],
+  "language": "Python / JavaScript",
+  "platform": "Self-host / MCP / Web",
+  "updated": "2026-08-09",
+  "heroOverline": "长期记忆 · 跨模型 · 可回滚",
+  "showcase": {
+    "label": "它解决什么",
+    "symbol": "忆",
+    "question": "“换了窗口、客户端甚至模型以后，TA 怎么继续记得我们之前发生过什么？”",
+    "comparisons": [
+      { "value": "记住", "label": "身份、关系与共同经历" },
+      { "value": "带走", "label": "不同模型共用一份记忆" },
+      { "value": "可撤回", "label": "修改前后都能审查回滚" }
+    ],
+    "note": "它共享的是同一份记忆和身份锚点，不保证不同底模的说话方式会完全一样。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Nocturne Memory 是一个给 AI Agent 使用的长期记忆服务器。记忆不再只属于某个聊天窗口或某个平台，而是单独保存在自己的 MCP 服务里。Claude Code、Codex、Gemini CLI、Cursor 等支持 MCP 的客户端，都可以接到同一份长期状态。",
+      "它用层级 URI 整理记忆，同一段内容还能拥有多个联想入口，并分别设置什么时候该被想起。启动时可以先读取指定的核心记忆，让 TA 找回身份、关系和重要背景；需要搜索时则使用关键词全文检索，而不是依赖向量数据库。",
+      "记忆修改也留了后悔药。AI 对记忆做出的新增、修改和删除会进入待审查变化，网页端可以查看前后差异，再决定接受或回滚。不同 AI 人格还可以使用独立 namespace，避免彼此串记忆。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经在多个窗口、客户端或模型之间切换，希望长期身份与共同历史不跟着平台一起丢掉的人。" },
+      { "label": "怎么记", "text": "记忆按 URI 组成层级结构，可添加别名入口、优先级和触发条件；搜索主要依靠全文关键词。" },
+      { "label": "跨模型", "text": "不同模型可以读取同一份长期记忆，但底模本身不同，所以人格表现仍可能有差异。" },
+      { "label": "安全网", "text": "修改会留下前后状态，Dashboard 可以查看 diff，再接受或回滚；多个人格可用 namespace 隔离。" },
+      { "label": "部署", "text": "支持 SQLite 或 PostgreSQL，本机可直接运行，也可以自托管到服务器；网络开放时支持 Bearer Token 保护。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}
