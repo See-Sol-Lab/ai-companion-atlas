@@ -74,8 +74,7 @@ img, svg { display: block; max-width: 100%; }
   box-shadow: 0 7px 22px rgba(45, 64, 112, .08);
 }
 
-.brand-mark svg { width: 20px; height: 20px; }
-.brand-mark circle, .brand-mark path { fill: none; stroke: currentColor; stroke-width: 1.45; }
+.brand-mark img { width: 28px; height: 28px; }
 .brand-copy { min-width: 0; }
 .brand-name { display: block; font-size: 16px; font-weight: 760; letter-spacing: -.015em; }
 .brand-subtitle { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; line-height: 1.4; }
