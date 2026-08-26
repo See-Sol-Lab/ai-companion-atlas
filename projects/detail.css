@@ -8,6 +8,9 @@
 
 .hero-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-top: 28px; }
 .hero-footer .hero-actions { margin-top: 0; }
+.project-source-url { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; margin: 16px 0 0; color: #8792aa; font: 500 11px/1.65 var(--mono); }
+.project-source-url a { color: #5870a5; text-decoration: underline; text-decoration-color: rgba(88, 112, 165, .28); text-underline-offset: 3px; overflow-wrap: anywhere; word-break: break-all; }
+.project-source-url a:hover { color: #36558f; text-decoration-color: currentColor; }
 .project-like { display: grid; flex: 0 0 auto; justify-items: center; gap: 5px; margin-left: auto; }
 .project-like-button {
   min-width: 62px;

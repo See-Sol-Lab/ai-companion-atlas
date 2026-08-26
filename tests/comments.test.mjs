@@ -32,6 +32,12 @@ import {
 } from '../functions/api/admin/submissions.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const escapeHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
 
 const validInput = {
   projectSlug: 'time-anchor',
@@ -291,8 +297,11 @@ test('every generated project detail page contains its own comment slug and shar
   for (const fileName of projectFiles) {
     const project = JSON.parse(await readFile(path.join(root, 'projects', fileName), 'utf8'));
     const html = await readFile(path.join(root, 'projects', project.slug, 'index.html'), 'utf8');
+    const sourceUrl = escapeHtml(project.sourceUrl);
     assert.match(html, new RegExp(`data-comments-project="${project.slug}"`, 'u'));
     assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
+    assert.ok(html.includes('<p class="project-source-url"><span>项目地址（可复制给 AI）：</span>'));
+    assert.ok(html.includes(`<a href="${sourceUrl}" target="_blank" rel="noreferrer">${sourceUrl}</a>`));
     assert.match(html, /detail-comments\.js/u);
     assert.match(html, /当前版本为游客模式，留言不需要注册账号。/u);
     assert.match(html, /class="comment-success"/u);

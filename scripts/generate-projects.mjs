@@ -172,7 +172,7 @@ function renderDetail(project) {
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="${escapeHtml(documentDescriptionName)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(documentTitle)} · AI Companion Atlas</title>
-  <link rel="stylesheet" href="../detail.css?v=20260824-4" />${officialHighlightStylesheet}
+  <link rel="stylesheet" href="../detail.css?v=20260826-1" />${officialHighlightStylesheet}
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
 </head>
@@ -203,6 +203,7 @@ function renderDetail(project) {
           <p class="cn-name">${escapeHtml(identityLine)}</p>
           <h2>${escapeHtml(project.hook)}</h2>
           <p class="hero-desc">${escapeHtml(project.heroDescription)}</p>
+          <p class="project-source-url"><span>项目地址（可复制给 AI）：</span><a href="${sourceUrl}" target="_blank" rel="noreferrer">${sourceUrl}</a></p>
           <div class="hero-footer">
             <div class="hero-actions">
               <a class="primary-btn" href="${sourceUrl}" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
