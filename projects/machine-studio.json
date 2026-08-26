@@ -1,0 +1,46 @@
+{
+  "slug": "machine-studio",
+  "order": 203,
+  "stars": 8,
+  "name": { "zh": "机的独立工作室", "en": "Machine Studio" },
+  "author": "Maymay05072",
+  "sourceUrl": "https://github.com/Maymay05072/Machine-studio",
+  "hook": "给 TA 单独放技术记忆的工作室。",
+  "summary": "把项目进度、部署参数、踩坑和技术结论从情感记忆里分出去，按项目保存、搜索、更新或真删除；可以配合 Ombre Brain 使用，也能独立运行。",
+  "heroDescription": "一个独立的技术记忆库。让 TA 把会过期的项目进度、配置和踩坑单独管理，不再和情感与关系记忆混在一起。",
+  "badges": [
+    { "label": "记忆", "tone": "memory" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["技术记忆", "项目进度", "MCP", "真删除"],
+  "language": "Python / JavaScript",
+  "platform": "Self-host / MCP / Web",
+  "updated": "2026-08-24",
+  "heroOverline": "技术记忆 · 项目管理 · MCP",
+  "showcase": {
+    "label": "为什么单独分一个库",
+    "symbol": "工",
+    "question": "“情感记忆想长期留下，技术记忆却会过期，为什么还要把它们混在一起？”",
+    "comparisons": [
+      { "value": "按项目", "label": "进度和结论分开存" },
+      { "value": "能更新", "label": "旧技术可以原地改" },
+      { "value": "真删除", "label": "过期资料不再诈尸" }
+    ],
+    "note": "它是 Ombre Brain 的配套技术记忆库，但本身可以独立运行，并不依赖 Ombre Brain 才能工作。"
+  },
+  "intro": {
+    "paragraphs": [
+      "机的独立工作室是一个给 AI 使用的技术记忆库。作者原本把情感、日常和技术内容都放在 OmbreBrain 里，后来发现技术信息会频繁过期，于是把它们单独拆出来，按项目保存进度、结论和踩坑。",
+      "它通过 MCP 提供保存、搜索、更新、项目时间线和真删除等工具，也带一个网页工作台。默认使用 SQLite 和关键词搜索；需要时可以加本地向量检索。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经有长期 AI 伴侣或 Agent，希望把工作技术记忆和情感关系记忆分开管理的人。" },
+      { "label": "和 Ombre Brain 的关系", "text": "项目是为 Ombre Brain 配套设计的独立技术副库，但不是其内置插件，也可以单独部署使用。" },
+      { "label": "网络安全", "text": "服务默认监听 0.0.0.0；公网使用时应设置 Bearer Token，网页端也支持登录会话与基本安全限制。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  }
+}
