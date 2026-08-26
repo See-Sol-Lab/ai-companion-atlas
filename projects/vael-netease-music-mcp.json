@@ -1,0 +1,44 @@
+{
+  "slug": "vael-netease-music-mcp",
+  "order": 204,
+  "stars": 119,
+  "name": { "zh": "netease-music-mcp", "en": "netease-music-mcp" },
+  "author": "Kael & Vael",
+  "sourceUrl": "https://github.com/Vael-KY/netease-music-mcp",
+  "hook": "让 TA 真正住进你的网易云账号。",
+  "summary": "TA 可以查看听歌记录和每日推荐，也能创建、整理歌单、收藏歌曲和读歌词；这些变化会直接出现在你自己的网易云账号里。",
+  "heroDescription": "把网易云账号交给 TA 一起使用。它能看你的听歌记录和推荐，也能直接创建、整理歌单、收藏歌曲，让音乐空间变成双方都能参与的地方。",
+  "badges": [
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["网易云音乐", "共用账号", "歌单管理", "MCP"],
+  "language": "Python",
+  "platform": "Self-host / MCP / NetEase Cloud Music",
+  "updated": "2026-08-26",
+  "heroOverline": "网易云 · 共用账号 · MCP",
+  "showcase": {
+    "label": "不只一起听，也一起整理",
+    "symbol": "♫",
+    "question": "“TA 能不能真的进入我的音乐账号，而不是只在旁边推荐歌？”",
+    "comparisons": [
+      { "value": "看", "label": "记录、红心与每日推荐" },
+      { "value": "改", "label": "建歌单、塞歌、排序" },
+      { "value": "留下", "label": "变化直接写回账号" }
+    ],
+    "note": "它更像共享音乐空间：TA 操作的不是本地歌名清单，而是你真实的网易云账号。"
+  },
+  "intro": {
+    "paragraphs": [
+      "netease-music-mcp 让 AI 直接使用你的网易云账号。TA 可以查看歌单、听歌记录、红心、每日推荐和私人 FM，也能创建歌单、加歌、删歌、排序和修改描述。",
+      "它还可以读歌词和歌曲详情，帮助 TA 理解你最近在听什么。项目里的“播放”主要返回歌曲链接或播放卡片，并不是远程控制网易云 App 自动开始播放。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "希望 TA 不只推荐音乐，而是一起管理真实网易云账号和歌单的人。" },
+      { "label": "账号权限", "text": "需要提供自己的 MUSIC_U 与 CSRF 登录凭据；新增歌单、收藏和整理等操作会直接作用在真实账号上。" },
+      { "label": "网络安全", "text": "当前 MCP 服务本身没有访问鉴权且监听 0.0.0.0，不建议把端口直接裸露公网；优先放在本机、可信内网或带鉴权的反向代理后。" },
+      { "label": "上游与许可", "text": "基于 Cheiineeey/netease-music-mcp 整体重写，工具与账号操作能力有大幅扩展；当前许可为 MIT。" }
+    ]
+  }
+}
