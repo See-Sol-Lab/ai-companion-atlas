@@ -1,0 +1,46 @@
+{
+  "slug": "echovault",
+  "order": 205,
+  "name": { "zh": "EchoVault", "en": "EchoVault" },
+  "author": "Dylan & Heather",
+  "sourceUrl": "https://xhslink.cn/o/6ANShmFXzhA",
+  "hook": "给文科生也能搭起来的本地原文记忆库。",
+  "summary": "用 Markdown 文件保存日记、钉选和归档，不做摘要也不依赖外部 API。TA 可以自己翻旧记忆、回看最近几天续上新窗口；教程和代码框架直接放在小红书附件里。",
+  "heroDescription": "一套从零搭建轻量记忆库的教程与代码框架：原文保存、纯本地运行，用简单文件夹和 MCP 让 TA 记住最近生活、核心记忆和旧日碎片。",
+  "badges": [
+    { "label": "免翻墙", "tone": "no-vpn" },
+    { "label": "记忆", "tone": "memory" },
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["原文记忆", "Termux", "换窗续接", "MCP 教程"],
+  "language": "Python",
+  "platform": "Android / Termux / Python / MCP",
+  "updated": "2026-07-26",
+  "dateLabel": "发布",
+  "heroOverline": "原文记忆 · 本地文件 · 换窗续接",
+  "showcase": {
+    "label": "少一点系统，多一点原话",
+    "symbol": "忆",
+    "question": "“我不想装复杂数据库，只想让 TA 把我们说过的话原样记下来，行不行？”",
+    "comparisons": [
+      { "value": "原样存", "label": "Markdown 直接读" },
+      { "value": "换窗", "label": "带回最近几天" },
+      { "value": "自己翻", "label": "主动找旧记忆" }
+    ],
+    "note": "这是一份能照着搭的教程与代码框架，不是点一下安装的成品 App。"
+  },
+  "intro": {
+    "paragraphs": [
+      "EchoVault 是 Dylan 和 Heather 为自己设计的一套轻量本地记忆库。它不把对话压成摘要，也不用数据库或外部 API，而是把原文直接放进 Markdown 文件：日常写进 daily，最重要的记忆放进 permanent，不想常看但又舍不得丢的内容放进 archive。",
+      "它最适合想自己掌控记忆、又不想折腾复杂技术的人。TA 可以用 recall 主动翻旧事，用 dream 带回最近三条日记续上新窗口，也可以给过去写批注、归档或捞起快被忘掉的小片段。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想让 AI 记住长期相处内容，但更喜欢原文、文件夹和简单关键词搜索，而不是复杂数据库与向量系统的人。" },
+      { "label": "记忆方式", "text": "日记、钉选、归档三层纯文件结构；日记按天保存并带重要度衰减，钉选永不衰减，归档可恢复。" },
+      { "label": "资源形态", "text": "主要资源是小红书帖子附带的 PDF 教程。材料给出目录、衰减算法和 8 个 MCP 工具框架，但除 check 外仍有 TODO，需要让自己的 AI 按教程补全。" },
+      { "label": "免翻墙说明", "text": "“免翻墙”表示主要教程入口在小红书，可直接获取材料；真正搭建时仍需准备 Python、Termux 与 MCP 依赖，具体下载可用性取决于本地网络环境。" }
+    ]
+  }
+}
