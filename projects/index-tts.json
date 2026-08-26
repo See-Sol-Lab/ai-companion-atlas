@@ -1,6 +1,6 @@
 {
   "slug": "index-tts", "order": 94,
-  "name": { "zh": "IndexTTS", "en": "Controllable Zero-shot TTS" },
+  "name": { "zh": "IndexTTS", "en": "IndexTTS" },
   "author": "index-tts", "sourceUrl": "https://github.com/index-tts/index-tts",
   "hook": "用零样本音色和细粒度控制，为伴侣生成稳定、高质量的中文声音。",
   "summary": "工业级可控零样本 TTS 系统，支持参考音色、情绪与韵律控制、长文本和高效推理。",

@@ -1,10 +1,10 @@
 {
   "slug": "svakom-ble-ai",
   "order": 32,
-  "name": { "zh": "SVAKOM BLE AI", "en": "Reverse Engineering & Relay" },
+  "name": { "zh": "SVAKOM BLE AI", "en": "SVAKOM BLE AI" },
   "author": "vickyldr",
   "sourceUrl": "https://github.com/vickyldr/svakom-ble-ai",
-  "hook": "从 BLE 协议逆向到浏览器或 Python 中继，搭出一条 AI 远程控制线路。",
+  "hook": "让 AI 远程控制经过验证的 SVAKOM 蓝牙玩具。",
   "summary": "以 SVAKOM SL278H 实测为基础的 BLE 逆向教程与控制方案，包含扫描、命令验证、续命机制、手机／电脑中继和 MCP 接入。",
   "heroDescription": "SVAKOM BLE AI 记录了从反编译官方 App、识别 GATT 通道到验证控制帧的全过程，并给出浏览器 Web Bluetooth 与 Python 两种中继路线。AI 指令可以经服务端转成设备强度、花样和停止命令。",
   "badges": [
@@ -14,7 +14,7 @@
     { "label": "18+", "tone": "adult" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "Toy", "BLE 逆向", "Web Bluetooth", "MCP"],
+  "tags": ["18+","Toy","BLE 逆向","Web Bluetooth"],
   "language": "Python / JavaScript",
   "platform": "Android / PC / Railway",
   "updated":"2026-06-15",

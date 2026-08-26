@@ -1,10 +1,7 @@
 {
   "slug": "scowld",
   "order": 2,
-  "name": {
-    "zh": "Scowld",
-    "en": "iOS Voice Companion"
-  },
+  "name": { "zh": "Scowld", "en": "Scowld" },
   "author": "apoorvdarshan",
   "sourceUrl": "https://github.com/apoorvdarshan/scowld",
   "hook": "让 AI 在 iPhone 上听见你、看见你，也拥有一张会回应的脸。",

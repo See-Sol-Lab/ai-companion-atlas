@@ -1,10 +1,7 @@
 {
   "slug": "landricspace",
   "order": 64,
-  "name": {
-    "zh": "LandricSpace",
-    "en": "Cyber Villa"
-  },
+  "name": { "zh": "LandricSpace", "en": "LandricSpace" },
   "author": "LandricJasmine",
   "sourceUrl": "https://github.com/LandricJasmine/LandricSpace",
   "hook": "把聊天扩展成一座可以共同生活、记录与计划的赛博别墅。",

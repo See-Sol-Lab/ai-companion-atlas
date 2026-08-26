@@ -1,10 +1,7 @@
 {
   "slug": "ombre-brain",
   "order": 7,
-  "name": {
-    "zh": "Ombre Brain",
-    "en": "Emotional Memory"
-  },
+  "name": { "zh": "Ombre Brain", "en": "Ombre Brain" },
   "author": "P0luz",
   "sourceUrl": "https://github.com/P0luz/Ombre-Brain",
   "hook": "给跨窗口记忆加上情感重量、自然衰减和可回看的原文。",

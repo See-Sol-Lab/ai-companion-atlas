@@ -1,10 +1,10 @@
 {
   "slug": "imprint-memory",
   "order": 56,
-  "name": { "zh": "imprint-memory", "en": "Persistent Conversation Memory" },
+  "name": { "zh": "imprint-memory", "en": "imprint-memory" },
   "author": "Qizhan7",
   "sourceUrl": "https://github.com/Qizhan7/imprint-memory",
-  "hook": "把 Claude Code、claude.ai 和 Telegram 的每轮对话汇进同一层本地记忆。",
+  "hook": "让多个聊天入口共用同一层本地记忆。",
   "summary": "本地优先的持久记忆层，通过 Hook、浏览器扩展与 Telegram 适配器自动捕获对话，并提供 FTS5＋向量混合检索。",
   "heroDescription": "imprint-memory 自动记录不同入口中的每一轮对话，统一进入本地数据库与混合检索。它同时提供 stdio 和 HTTP MCP、消息总线与任务队列。",
   "badges": [

@@ -1,7 +1,7 @@
 {
   "slug": "claude-f-me",
   "order": 28,
-  "name": { "zh": "claude-f-me", "en": "Intimate Hardware MCP" },
+  "name": { "zh": "claude-f-me", "en": "claude-f-me" },
   "author": "mana-am",
   "sourceUrl": "https://github.com/mana-am/claude-f-me",
   "hook": "用自然语言控制兼容设备，并把强度、模式和紧急停止放在同一控制台。",
@@ -14,7 +14,7 @@
     { "label": "18+", "tone": "adult" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "Toy", "MCP", "Intiface", "安全上限"],
+  "tags": ["18+","Toy","Intiface","安全上限"],
   "language": "TypeScript",
   "platform": "Cross-platform",
   "updated":"2026-07-05",

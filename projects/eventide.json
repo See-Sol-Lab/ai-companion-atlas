@@ -2,10 +2,7 @@
   "slug": "eventide",
   "order": 26,
   "editorPick": true,
-  "name": {
-    "zh": "Eventide",
-    "en": "Physiological State Engine"
-  },
+  "name": { "zh": "Eventide", "en": "Eventide" },
   "author": "chuli1122",
   "sourceUrl": "https://github.com/chuli1122/Eventide",
   "hook": "让 TA 的身体状态随时间、等待、梦境和互动持续涨落。",

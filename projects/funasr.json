@@ -1,6 +1,6 @@
 {
   "slug": "funasr", "order": 85,
-  "name": { "zh": "FunASR", "en": "Speech Recognition Toolkit" },
+  "name": { "zh": "FunASR", "en": "FunASR" },
   "author": "modelscope", "sourceUrl": "https://github.com/modelscope/FunASR",
   "hook": "把实时转写、断句、说话人区分和语音服务组合成完整听觉工具箱。",
   "summary": "端到端语音识别工具包，覆盖流式 ASR、VAD、标点、说话人分离、训练推理与 OpenAI 兼容服务。",

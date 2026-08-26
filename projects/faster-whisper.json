@@ -1,6 +1,6 @@
 {
   "slug": "faster-whisper", "order": 84,
-  "name": { "zh": "faster-whisper", "en": "CTranslate2 Whisper" },
+  "name": { "zh": "faster-whisper", "en": "faster-whisper" },
   "author": "SYSTRAN", "sourceUrl": "https://github.com/SYSTRAN/faster-whisper",
   "hook": "用更少内存和更快推理，把 Whisper 听觉接进实时陪伴管线。",
   "summary": "基于 CTranslate2 的 Whisper 复实现，支持批量转写、量化、词级时间戳和语音活动检测。",

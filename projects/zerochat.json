@@ -1,7 +1,7 @@
 {
   "slug": "zerochat",
   "order": 70,
-  "name": { "zh": "ZeroChat", "en": "WeChat-style AI Companion" },
+  "name": { "zh": "ZeroChat", "en": "ZeroChat" },
   "author": "sh1nny0u",
   "sourceUrl": "https://github.com/sh1nny0u/ZeroChat",
   "hook": "用熟悉的微信式界面承接多角色聊天、朋友圈与主动联系。",

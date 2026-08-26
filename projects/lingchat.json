@@ -1,10 +1,7 @@
 {
   "slug": "lingchat",
   "order": 76,
-  "name": {
-    "zh": "LingChat",
-    "en": "AI Galgame Companion"
-  },
+  "name": { "zh": "LingChat", "en": "LingChat" },
   "author": "SlimeBoyOwO",
   "sourceUrl": "https://github.com/SlimeBoyOwO/LingChat",
   "hook": "用 Galgame 演出、桌宠和屏幕感知，把对话变成持续发生的视觉陪伴。",

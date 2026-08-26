@@ -1,39 +1,64 @@
-# Atlas card copy schema
+# Atlas 项目文案规范
 
-The directory card is a navigation preview. Full research belongs in the detail page below the hero (`intro` / `facts`).
+项目卡片是导航预览。实现细节、许可、上游关系、限制与技术证据放在详情页的 `intro` 和 `facts`，不要堆进卡片。
 
-## Four visible copy layers
+## 先核实原始来源
 
-1. `name.zh` — display title.
-   - If the project has a Chinese name, use only that Chinese name.
-   - Do not append positioning copy with `·`, `：`, dashes, or helper phrases.
-   - If the project has no Chinese name, put the official English project name here.
+写文案前必须打开 `sourceUrl`，优先核对项目仓库 README 标题、仓库名、About 与作者官方页面。
 
-2. `name.en` — English project name.
-   - When `name.zh` is Chinese, this becomes the second line.
-   - When the project name is already English, keep the same official English name here; the renderer suppresses the duplicate second line.
+- 中文名只能使用作者明确采用的正式名称，禁止自行翻译或创造中文名。
+- README 中的广告、生成器推广语、功能定位和副标题不属于项目名。
+- 文案必须忠实于原始 README。无法从原始来源确认的能力不得写入。
+- 18+ 项目可以克制表达，但必须让成年用户一眼看懂实际用途。
 
-3. `hook` — one concise positioning sentence or phrase.
-   - Say what the project is, not the full feature list.
-   - Good: `AI 小手机`, `角色扮演游戏`, `跨窗口上下文网关`, `会做事的长期伴侣`.
+## 卡片四层字段
 
-4. `summary` — short directory detail.
-   - Maximum target: 150 Chinese characters / equivalent length.
-   - Desktop rendering is capped at three lines.
-   - Keep only the few capabilities needed to understand the project at a glance.
+1. `name.zh`：卡片第一行。
+   - 有正式中文名：只写中文名，不追加定位文案。
+   - 没有正式中文名：写官方英文名。
 
-## Detail hero
+2. `name.en`：英文项目名。
+   - 有正式中文名：写官方英文名，页面显示为第二行。
+   - 没有正式中文名：与 `name.zh` 写入同一个官方英文名；页面自动隐藏重复的第二行。
 
-`heroDescription` should also stay concise: one short paragraph, normally within 150 Chinese characters / equivalent length. Put implementation details, limitations, licensing nuance, upstream relationships, and technical evidence in `intro.paragraphs` and `intro.facts`.
+3. `hook`：一句话简介。
+   - 最多 40 个字符。
+   - 只回答“它是什么”，不列完整功能表。
 
-## Example
+4. `summary`：卡片详情。
+   - 最多 150 个字符。
+   - 使用普通人能理解的语言，只保留理解项目所需的核心能力。
 
-```json
-{
-  "name": { "zh": "万花筒", "en": "Kaleidoscope RP" },
-  "hook": "角色扮演游戏",
-  "summary": "面向一个人和一个 AI 的自托管长线 RP 后端：词槽生成世界，主角可主动召唤旁白或 NPC，并用红线和滚动摘要维持边界与连续性。"
-}
-```
+## 详情页字段
 
-Do not turn the title, hook, and summary into three repetitions of the same long description.
+- `heroDescription`：最多 150 个字符，一小段讲清项目用途。
+- `tags`：1–4 个，只保留最有辨识度的标签。
+- `showcase.comparisons`：固定 3 项。
+- `intro.paragraphs`：1–2 段，小白、简洁、忠实于 README。
+- `intro.facts`：1–4 项，放使用条件、限制、隐私、安全、许可或上游关系等必要事实。
+
+## 审核流程
+
+1. 从原始来源提取正式名称、原始简介、核心用途和限制。
+2. 先输出四层卡片文案和详情页预览，不直接写入 JSON。
+3. 由维护者确认名称与文案。
+4. 确认后再更新 `projects/<slug>.json`。
+5. 运行 `node scripts/generate-projects.mjs` 和测试。
+6. 检查生成差异后再提交。
+
+## 批量写作边界
+
+`scripts/generate-projects.mjs` 只负责校验并渲染已经确认的 JSON，不负责研究项目或自动创作文案。
+
+批量整理项目时，每个项目都必须独立完成下面的步骤：
+
+1. 打开 `sourceUrl`，记录 README 主标题、仓库名、About 原文和原作者简介。
+2. 明确说明是否找到作者正式采用的中文名，并指出证据位置。
+3. 没有中文名时，禁止翻译；`name.zh` 与 `name.en` 都使用官方英文名。
+4. 用普通话解释项目实际用途，不能用技术名词代替“它是做什么的”。
+5. 输出卡片四层字段、详情页文案、标签、介绍和事实栏预览。
+6. 等维护者确认后再写入 JSON。禁止批量生成后直接提交。
+
+原始来源没有说明的功能、兼容性、许可或安全结论必须保持未知，不能补写成确定事实。
+
+不要让标题、`hook`、`summary` 和 `heroDescription` 重复同一段长描述。

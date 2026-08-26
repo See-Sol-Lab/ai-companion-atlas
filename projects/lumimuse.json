@@ -1,10 +1,7 @@
 {
   "slug": "lumimuse",
   "order": 72,
-  "name": {
-    "zh": "LumiMuse",
-    "en": "Private Companion Space"
-  },
+  "name": { "zh": "LumiMuse", "en": "LumiMuse" },
   "author": "in30mn1a",
   "sourceUrl": "https://github.com/in30mn1a/LumiMuse",
   "hook": "在一个安静的自托管空间里创建角色、长期聊天并慢慢积累共同记忆。",

@@ -1,7 +1,7 @@
 {
   "slug": "sky-pc-mcp-companion",
   "order": 47,
-  "name": { "zh": "Sky PC MCP Companion", "en": "Sky Control Tools" },
+  "name": { "zh": "Sky PC MCP Companion", "en": "Sky PC MCP Companion" },
   "author": "Aevella",
   "sourceUrl": "https://github.com/Aevella/sky-pc-mcp-companion",
   "hook": "给 PC 光遇增加截图、OCR、键盘和聊天工具，让 AI 看见并参与游戏。",

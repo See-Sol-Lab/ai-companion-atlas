@@ -8,6 +8,8 @@ const indexPath = path.join(root, 'index.html');
 const projectSlugsPath = path.join(root, 'functions', '_shared', 'project-slugs.mjs');
 const cardsStart = '<!-- GENERATED:PROJECT_CARDS:START -->';
 const cardsEnd = '<!-- GENERATED:PROJECT_CARDS:END -->';
+const hasChineseName = (value) => /[\u3400-\u9fff]/u.test(value);
+const characterCount = (value) => [...value].length;
 
 const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
@@ -42,13 +44,28 @@ function validate(project) {
     throw new Error(`${project.slug}: sourceUrl must use http or https`);
   }
 
+  if (!hasChineseName(project.name.zh) && project.name.zh !== project.name.en) {
+    throw new Error(`${project.slug}: English-only projects must use the same official name in name.zh and name.en`);
+  }
+
+  [
+    ['hook', project.hook, 40],
+    ['summary', project.summary, 150],
+    ['heroDescription', project.heroDescription, 150]
+  ].forEach(([field, value, limit]) => {
+    if (characterCount(value) > limit) {
+      throw new Error(`${project.slug}: ${field} must be ${limit} characters or fewer`);
+    }
+  });
+
   if (!Array.isArray(project.badges) || project.badges.length === 0 ||
       project.badges.some((badge) => !isText(badge.label) || !/^[a-z0-9-]+$/.test(badge.tone))) {
     throw new Error(`${project.slug}: every badge needs a label and a lowercase tone`);
   }
 
-  if (!Array.isArray(project.tags) || project.tags.length === 0 || project.tags.some((tag) => !isText(tag))) {
-    throw new Error(`${project.slug}: tags must be a non-empty array of text values`);
+  if (!Array.isArray(project.tags) || project.tags.length === 0 || project.tags.length > 4 ||
+      project.tags.some((tag) => !isText(tag))) {
+    throw new Error(`${project.slug}: tags must contain one to four text values`);
   }
 
   if (!Array.isArray(project.showcase.comparisons) || project.showcase.comparisons.length !== 3 ||
@@ -57,13 +74,15 @@ function validate(project) {
   }
 
   if (!Array.isArray(project.intro?.paragraphs) || project.intro.paragraphs.length === 0 ||
+      project.intro.paragraphs.length > 2 ||
       project.intro.paragraphs.some((paragraph) => !isText(paragraph))) {
-    throw new Error(`${project.slug}: intro.paragraphs must be a non-empty array of text values`);
+    throw new Error(`${project.slug}: intro.paragraphs must contain one or two text values`);
   }
 
   if (!Array.isArray(project.intro?.facts) || project.intro.facts.length === 0 ||
+      project.intro.facts.length > 4 ||
       project.intro.facts.some((fact) => !isText(fact.label) || !isText(fact.text))) {
-    throw new Error(`${project.slug}: every intro fact needs a label and text`);
+    throw new Error(`${project.slug}: intro.facts must contain one to four items with a label and text`);
   }
 
   if (project.stars !== undefined && (!Number.isInteger(project.stars) || project.stars < 0)) {
@@ -80,7 +99,7 @@ function renderBadges(badges, classPrefix) {
 
 function renderCard(project) {
   const tags = project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
-  const secondaryName = /[\u3400-\u9fff]/u.test(project.name.zh)
+  const secondaryName = hasChineseName(project.name.zh)
     ? `\n                <p class="project-title-en">${escapeHtml(project.name.en)}</p>`
     : '';
   const dateLabel = project.dateLabel ?? '更新';
@@ -124,6 +143,12 @@ function renderCard(project) {
 }
 
 function renderDetail(project) {
+  const localizedName = hasChineseName(project.name.zh);
+  const documentDescriptionName = localizedName ? `${project.name.zh} ${project.name.en}` : project.name.zh;
+  const documentTitle = localizedName ? `${project.name.zh} · ${project.name.en}` : project.name.zh;
+  const identityLine = localizedName
+    ? `${project.name.en.toUpperCase()} · @${project.author.toUpperCase()}`
+    : `@${project.author.toUpperCase()}`;
   const statuses = `${renderBadges(project.badges, 'status')}<span class="status">${escapeHtml(project.platform)}</span>`;
   const comparisons = project.showcase.comparisons.map((item, index) => {
     const separator = index === 0 ? '' : '\n            <i>≠</i>\n            ';
@@ -145,8 +170,8 @@ function renderDetail(project) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="${escapeHtml(project.name.zh)} ${escapeHtml(project.name.en)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
-  <title>${escapeHtml(project.name.zh)} · ${escapeHtml(project.name.en)} · AI Companion Atlas</title>
+  <meta name="description" content="${escapeHtml(documentDescriptionName)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
+  <title>${escapeHtml(documentTitle)} · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />${officialHighlightStylesheet}
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
@@ -175,7 +200,7 @@ function renderDetail(project) {
           <div class="status-row">${statuses}</div>
           <p class="overline">${escapeHtml(project.heroOverline)}</p>
           <h1>${escapeHtml(project.name.zh)}</h1>
-          <p class="cn-name">${escapeHtml(project.name.en.toUpperCase())} · @${escapeHtml(project.author.toUpperCase())}</p>
+          <p class="cn-name">${escapeHtml(identityLine)}</p>
           <h2>${escapeHtml(project.hook)}</h2>
           <p class="hero-desc">${escapeHtml(project.heroDescription)}</p>
           <div class="hero-footer">

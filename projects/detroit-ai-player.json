@@ -1,7 +1,7 @@
 {
   "slug": "detroit-ai-player",
   "order": 35,
-  "name": { "zh": "Detroit AI Player", "en": "Blind Decision Experiment" },
+  "name": { "zh": "Detroit AI Player", "en": "Detroit AI Player" },
   "author": "Baba88611",
   "sourceUrl": "https://github.com/Baba88611/detroit-ai-player",
   "hook": "让 AI 在不知道后果的情况下，走完《底特律：变人》的全部选择。",

@@ -1,10 +1,7 @@
 {
   "slug": "dylan-heartbeat",
   "order": 5,
-  "name": {
-    "zh": "Dylan Heartbeat",
-    "en": "AI Residency Runtime"
-  },
+  "name": { "zh": "Dylan Heartbeat", "en": "Dylan Heartbeat" },
   "author": "callie0313",
   "sourceUrl": "https://github.com/callie0313/dylan-heartbeat",
   "hook": "让 Kelivo 里的 TA 在沉默时自己醒来，并决定要不要联系你。",

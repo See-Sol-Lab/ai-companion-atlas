@@ -1,6 +1,6 @@
 {
   "slug": "cosyvoice", "order": 93,
-  "name": { "zh": "CosyVoice", "en": "Multilingual Voice Generation" },
+  "name": { "zh": "CosyVoice", "en": "CosyVoice" },
   "author": "QwenAudio", "sourceUrl": "https://github.com/QwenAudio/CosyVoice",
   "hook": "让伴侣用多语言、跨语言和可控情绪的声音自然说话。",
   "summary": "多语言大规模语音生成模型，覆盖零样本音色、跨语言合成、指令控制、流式推理、训练和部署。",

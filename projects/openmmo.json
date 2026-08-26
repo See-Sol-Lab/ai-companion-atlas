@@ -1,7 +1,7 @@
 {
   "slug": "openmmo",
   "order": 45,
-  "name": { "zh": "OpenMMO", "en": "Human-Agent MMO" },
+  "name": { "zh": "OpenMMO", "en": "OpenMMO" },
   "author": "Julian-adv",
   "sourceUrl": "https://github.com/Julian-adv/OpenMMO",
   "hook": "一款人类和 AI 能一起探索、聊天、打怪和盖房子的 3D 开放世界游戏。",

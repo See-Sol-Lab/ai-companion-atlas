@@ -1,10 +1,7 @@
 {
   "slug": "airi",
   "order": 65,
-  "name": {
-    "zh": "AIRI",
-    "en": "Cyber Living Companion"
-  },
+  "name": { "zh": "AIRI", "en": "AIRI" },
   "author": "moeru-ai",
   "sourceUrl": "https://github.com/moeru-ai/airi",
   "hook": "给自有 AI 装上会说话、会动、还能一起玩游戏的虚拟身体。",

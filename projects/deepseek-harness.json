@@ -4,13 +4,10 @@
   "officialHighlight": true,
   "editorPick": true,
   "stars": 33600,
-  "name": {
-    "zh": "DeepSeek Harness",
-    "en": "DSH"
-  },
+  "name": { "zh": "DeepSeek Harness", "en": "DeepSeek Harness" },
   "author": "deepseek-ai",
   "sourceUrl": "https://github.com/deepseek-ai/deepseek-harness",
-  "hook": "打开一个网页工作台，让 DeepSeek Agent 读写项目、运行命令，并通过插件组合不同开发能力。",
+  "hook": "DeepSeek 官方开源编码 Agent。",
   "summary": "DeepSeek 官方开源编码 Agent，提供 WebUI、命令行和 SDK，可完成文件编辑、Shell、检索、计划、目标、子 Agent 与工作流任务。",
   "heroDescription": "安装 Node.js 后运行一条 npx 命令即可启动 DSH 网页界面。配置模型并选择项目目录后，Agent 可以阅读和修改文件、运行命令、制定计划、调用技能，并在需要授权的操作前询问用户。",
   "badges": [
@@ -62,36 +59,7 @@
     "note": "当前属于开发者预览版，仍可能出现不兼容改动；重要项目应保留版本控制和人工审查。"
   },
   "intro": {
-    "paragraphs": [
-      "DeepSeek Harness，简称 DSH，是 DeepSeek 官方开放测试的开源编码 Agent。它不仅回答代码问题，还能进入选定的工作区，读取和修改文件、运行 Shell 命令、检索资料、制定计划并完成多步骤开发任务。",
-      "普通用户可以安装 Node.js 后运行 npx @deepseek-ai/dsh web，随后在浏览器中配置模型、选择项目目录并开始任务。标准模式已经包含文件编辑、Shell、检索、Skills、目标、子 Agent 和工作流等能力。",
-      "DSH 的模型、工具、技能、会话、沙箱、存储和界面都由插件组成，开发者可以按需要替换或扩展。项目目前仍是开发者预览版，核心插件和 API 会持续变化。"
-    ],
-    "facts": [
-      {
-        "label": "适合",
-        "text": "希望使用 DeepSeek 官方编码 Agent，或想自由组合模型、工具和工作模式的用户与开发者。"
-      },
-      {
-        "label": "平台",
-        "text": "Windows、macOS 与 Linux；WebUI 需要 Node.js。"
-      },
-      {
-        "label": "快速开始",
-        "text": "安装 Node.js，运行 npx @deepseek-ai/dsh web，打开本地网页后配置模型并选择工作区。"
-      },
-      {
-        "label": "主要能力",
-        "text": "文件编辑、Shell、文件与网页检索、Skills、计划、目标、子 Agent 和工作流。"
-      },
-      {
-        "label": "当前阶段",
-        "text": "开发者预览版，可能出现兼容性破坏；操作真实项目时应保留 Git 记录并检查权限。"
-      },
-      {
-        "label": "许可",
-        "text": "MIT。"
-      }
-    ]
+    "paragraphs": ["DeepSeek Harness，简称 DSH，是 DeepSeek 官方开放测试的开源编码 Agent。它不仅回答代码问题，还能进入选定的工作区，读取和修改文件、运行 Shell 命令、检索资料、制定计划并完成多步骤开发任务。","普通用户可以安装 Node.js 后运行 npx @deepseek-ai/dsh web，随后在浏览器中配置模型、选择项目目录并开始任务。标准模式已经包含文件编辑、Shell、检索、Skills、目标、子 Agent 和工作流等能力。"],
+    "facts": [{"label":"适合","text":"希望使用 DeepSeek 官方编码 Agent，或想自由组合模型、工具和工作模式的用户与开发者。"},{"label":"快速开始","text":"安装 Node.js，运行 npx @deepseek-ai/dsh web，打开本地网页后配置模型并选择工作区。"},{"label":"主要能力","text":"文件编辑、Shell、文件与网页检索、Skills、计划、目标、子 Agent 和工作流。"},{"label":"当前阶段","text":"开发者预览版，可能出现兼容性破坏；操作真实项目时应保留 Git 记录并检查权限。"}]
   }
 }

@@ -1,10 +1,7 @@
 {
   "slug": "operit",
   "order": 12,
-  "name": {
-    "zh": "Operit AI",
-    "en": "Android Agent Platform"
-  },
+  "name": { "zh": "Operit AI", "en": "Operit AI" },
   "author": "AAswordman",
   "sourceUrl": "https://github.com/AAswordman/Operit",
   "hook": "让手机里的 AI 不止聊天，还能使用设备、终端、浏览器和项目工作区。",

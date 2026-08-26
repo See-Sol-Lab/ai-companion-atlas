@@ -2,10 +2,7 @@
   "slug": "cyberboss",
   "order": 123,
   "editorPick": true,
-  "name": {
-    "zh": "cyberboss",
-    "en": "Local Life Agent Bridge"
-  },
+  "name": { "zh": "cyberboss", "en": "cyberboss" },
   "author": "WenXiaoWendy",
   "sourceUrl": "https://github.com/WenXiaoWendy/cyberboss",
   "hook": "让本地 Agent 通过微信理解时间、行踪并主动参与日常生活。",

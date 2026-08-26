@@ -1,10 +1,7 @@
 {
   "slug": "drivesoid",
   "order": 59,
-  "name": {
-    "zh": "Drivesoid",
-    "en": "Emotional Drive Sidecar"
-  },
+  "name": { "zh": "Drivesoid", "en": "Drivesoid" },
   "author": "A1batr055",
   "sourceUrl": "https://github.com/A1batr055/Drivesoid",
   "hook": "让依恋、疲惫、想念、焦虑和亲密驱力在对话与睡眠中持续变化。",

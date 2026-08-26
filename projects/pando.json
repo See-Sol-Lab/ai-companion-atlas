@@ -1,10 +1,7 @@
 {
   "slug": "pando",
   "order": 10,
-  "name": {
-    "zh": "Pando",
-    "en": "Claude Code Mobile Gateway"
-  },
+  "name": { "zh": "Pando", "en": "Pando" },
   "author": "Eloise-Aspen",
   "sourceUrl": "https://github.com/Eloise-Aspen/pando-bridge",
   "hook": "电脑开着，人离开桌前，也能用手机继续和 Claude Code 交流。",

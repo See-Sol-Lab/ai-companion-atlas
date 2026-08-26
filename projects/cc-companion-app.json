@@ -1,7 +1,7 @@
 {
   "slug": "cc-companion-app",
   "order": 63,
-  "name": { "zh": "CC Companion App", "en": "Self-hosted Companion PWA" },
+  "name": { "zh": "CC Companion App", "en": "CC Companion App" },
   "author": "tjing9430",
   "sourceUrl": "https://github.com/tjing9430/cc-companion-app",
   "hook": "把本地 Agent 变成手机里随时能找到的私聊与群聊伙伴。",

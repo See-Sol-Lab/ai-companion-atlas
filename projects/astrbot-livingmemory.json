@@ -1,7 +1,7 @@
 {
   "slug": "astrbot-livingmemory",
   "order": 57,
-  "name": { "zh": "LivingMemory", "en": "AstrBot Memory Plugin" },
+  "name": { "zh": "LivingMemory", "en": "LivingMemory" },
   "author": "lxfight-s-Astrbot-Plugins",
   "sourceUrl": "https://github.com/lxfight-s-Astrbot-Plugins/astrbot_plugin_livingmemory",
   "hook": "给 AstrBot 增加会生长、衰减和整理的长期记忆生命周期。",

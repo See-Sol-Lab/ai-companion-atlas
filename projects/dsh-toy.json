@@ -1,7 +1,7 @@
 {
   "slug": "dsh-toy",
   "order": 29,
-  "name": { "zh": "dsh-toy", "en": "DSH Toy Control" },
+  "name": { "zh": "dsh-toy", "en": "dsh-toy" },
   "author": "c3ll256",
   "sourceUrl": "https://github.com/c3ll256/dsh-toy",
   "hook": "让 DeepSeek Harness 自动识别连接路线，并在明确上限内控制设备。",
@@ -14,7 +14,7 @@
     { "label": "18+", "tone": "adult" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "Toy", "DeepSeek Harness", "设备发现", "安全限制"],
+  "tags": ["18+","Toy","DeepSeek Harness","安全限制"],
   "language": "TypeScript",
   "platform": "DSH / Node.js",
   "updated":"2026-08-14",

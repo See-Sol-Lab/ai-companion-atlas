@@ -1,7 +1,7 @@
 {
   "slug": "omnidimen-emotion",
   "order": 60,
-  "name": { "zh": "OmniDimen Emotion", "en": "Emotion-Specialized LLM" },
+  "name": { "zh": "OmniDimen Emotion", "en": "OmniDimen Emotion" },
   "author": "OmniDimen",
   "sourceUrl": "https://github.com/OmniDimen/OmniDimen-Emotion",
   "hook": "把情绪识别和情感化生成做进可本地运行的模型权重。",

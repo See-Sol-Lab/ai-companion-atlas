@@ -1,7 +1,7 @@
 {
   "slug": "mochi",
   "order": 50,
-  "name": { "zh": "Mochi", "en": "AI Raises Human" },
+  "name": { "zh": "Mochi", "en": "Mochi" },
   "author": "Nixie0",
   "sourceUrl": "https://github.com/Nixie0/Mochi",
   "hook": "把虚拟宠物关系反过来：这次由 AI 负责照顾和养成人类。",

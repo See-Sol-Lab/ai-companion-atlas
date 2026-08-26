@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="OmniRouter Local Model Switchboard：OmniRouter 是本地模型中转与切换工具。它把 OpenAI、OpenRouter、DeepSeek 等接口统一起来，再按任务、分组或故障情况选择模型。 AI Companion Atlas 中文项目档案。" />
-  <title>OmniRouter · Local Model Switchboard · AI Companion Atlas</title>
+  <meta name="description" content="OmniRouter：OmniRouter 是本地模型中转与切换工具。它把 OpenAI、OpenRouter、DeepSeek 等接口统一起来，再按任务、分组或故障情况选择模型。 AI Companion Atlas 中文项目档案。" />
+  <title>OmniRouter · AI Companion Atlas</title>
   <link rel="stylesheet" href="../detail.css?v=20260824-4" />
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
@@ -34,8 +34,8 @@
           <div class="status-row"><span class="status status-limited">源码公开</span><span class="status status-original">原创</span><span class="status status-tool">工具 / 插件</span><span class="status">Windows / macOS / Linux / WebUI</span></div>
           <p class="overline">CONNECT · CHOOSE · SWITCH</p>
           <h1>OmniRouter</h1>
-          <p class="cn-name">LOCAL MODEL SWITCHBOARD · @OMNIDIMEN</p>
-          <h2>把多个模型服务接到一个本地中转站，让所有伴侣前端只填一个地址，并自动选择可用模型。</h2>
+          <p class="cn-name">@OMNIDIMEN</p>
+          <h2>把多个模型服务统一成一个本地接口。</h2>
           <p class="hero-desc">你可以先在 OmniRouter 的网页后台添加模型服务、API Key 和模型分组，然后把它提供的一个固定地址填进伴侣前端。此后所有请求都经过这个地址，再由 OmniRouter 决定交给哪个模型。</p>
           <div class="hero-footer">
             <div class="hero-actions">
@@ -75,14 +75,11 @@
         <div class="intro-content">
           <p>OmniRouter 是一个安装在自己电脑上的模型中转站。你可以在它的网页后台添加 OpenAI、OpenRouter、DeepSeek 和其他兼容服务，并统一保存不同的模型地址与 API Key。</p>
           <p>设置完成后，伴侣前端只需要填写 OmniRouter 提供的一个固定 API 地址。每次聊天请求先到这里，再由它按模型分组、任务类型、顺序、随机或权重选择真正负责回答的模型。</p>
-          <p>当某个模型超时或连续失败时，可以按照设置重试或换到同组的其他模型。用户也能在消息开头写出模型名，临时指定本次请求使用哪个模型。</p>
           <ul>
             <li><strong>适合：</strong>同时使用多个模型服务，不想在每个伴侣前端里反复配置和手动换线路的人。</li>
-            <li><strong>平台：</strong>Windows、macOS 与 Linux；启动后通过本地 WebUI 管理。</li>
             <li><strong>使用方式：</strong>添加 Provider、API Key、模型和分组，再把仪表盘显示的统一 API 地址填入伴侣前端。</li>
             <li><strong>自动选择：</strong>可以按问题类型选择模型组，也支持顺序、随机和权重轮换。</li>
             <li><strong>安全提醒：</strong>API Key 当前以明文保存在本地 SQLite 数据库中；不要分享数据库，也不要把服务直接暴露到公网。</li>
-            <li><strong>许可：</strong>源码公开；仓库当前未声明明确许可证。</li>
           </ul>
         </div>
       </section>

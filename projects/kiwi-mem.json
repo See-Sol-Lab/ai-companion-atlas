@@ -1,7 +1,7 @@
 {
   "slug": "kiwi-mem",
   "order": 54,
-  "name": { "zh": "kiwi-mem", "en": "Companion Memory System" },
+  "name": { "zh": "kiwi-mem", "en": "kiwi-mem" },
   "author": "LucieEveille",
   "sourceUrl": "https://github.com/LucieEveille/kiwi-mem",
   "hook": "让记忆有热度、有睡眠整理，也能按日历层级慢慢沉淀。",

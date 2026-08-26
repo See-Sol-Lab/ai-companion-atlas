@@ -1,10 +1,10 @@
 {
   "slug": "cccompanion",
   "order": 68,
-  "name": { "zh": "CcCompanion", "en": "Claude Code for iPhone" },
+  "name": { "zh": "CcCompanion", "en": "CcCompanion" },
   "author": "CyberSealNull",
   "sourceUrl": "https://github.com/CyberSealNull/CcCompanion",
-  "hook": "从 iPhone 进入电脑上的 Claude Code 会话，把本地 Agent 随身带走。",
+  "hook": "在 iPhone 上继续使用电脑里的 Claude Code。",
   "summary": "原生 iOS Claude Code 客户端，提供聊天、掌上终端、命令面板、语音输入、收藏、多 Agent 群聊和推送。",
   "heroDescription": "CcCompanion 由 SwiftUI iOS App 和电脑端推送服务组成，让 iPhone 通过局域网或私有组网连接自己的 Claude Code 会话。",
   "badges": [

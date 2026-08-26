@@ -1,10 +1,7 @@
 {
   "slug": "tidefall",
   "order": 24,
-  "name": {
-    "zh": "Tidefall",
-    "en": "Body-State on Supabase"
-  },
+  "name": { "zh": "Tidefall", "en": "Tidefall" },
   "author": "Vael-KY",
   "sourceUrl": "https://github.com/Vael-KY/Tidefall",
   "hook": "让 TA 的身体状态随时间、等待和互动持续变化，而不是每轮重新编造。",

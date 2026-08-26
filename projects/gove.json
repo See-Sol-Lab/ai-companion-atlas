@@ -1,6 +1,6 @@
 {
   "slug": "gove", "order": 96,
-  "name": { "zh": "Gove", "en": "Male TTS Voice Model" },
+  "name": { "zh": "Gove", "en": "Gove" },
   "author": "OmniDimen", "sourceUrl": "https://github.com/OmniDimen/Gove",
   "hook": "为 GPT-SoVITS 提供一套可直接使用的多语言男声音色。",
   "summary": "基于 GPT-SoVITS 的多语言男声 TTS 模型与示例，用于中文、英文和日文语音合成。",

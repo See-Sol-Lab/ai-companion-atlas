@@ -1,10 +1,7 @@
 {
   "slug": "callhome",
   "order": 15,
-  "name": {
-    "zh": "Callhome",
-    "en": "AI Voice Calls"
-  },
+  "name": { "zh": "Callhome", "en": "Callhome" },
   "author": "Cheiineeey",
   "sourceUrl": "https://github.com/Cheiineeey/callhome",
   "hook": "让 TA 能主动打来电话、温柔挂断，也能在错过时留下语音。",

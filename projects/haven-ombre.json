@@ -1,10 +1,7 @@
 {
   "slug": "haven-ombre",
   "order": 23,
-  "name": {
-    "zh": "Haven-Ombre",
-    "en": "Continuity Memory Fork"
-  },
+  "name": { "zh": "Haven-Ombre", "en": "Haven-Ombre" },
   "author": "Yinglianchun",
   "sourceUrl": "https://github.com/Yinglianchun/Haven-Ombre",
   "hook": "在长期记忆之上补上原文证据、跨窗交接、画像和自我连续性。",

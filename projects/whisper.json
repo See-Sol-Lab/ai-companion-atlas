@@ -1,6 +1,6 @@
 {
   "slug": "whisper", "order": 82,
-  "name": { "zh": "Whisper", "en": "Speech Recognition Model" },
+  "name": { "zh": "Whisper", "en": "Whisper" },
   "author": "OpenAI", "sourceUrl": "https://github.com/openai/whisper",
   "hook": "把人类说出的声音转成文字，让伴侣真正听见多种语言。",
   "summary": "通用多语言语音识别模型，支持语音转写、语言识别、语音翻译与语音活动检测。",

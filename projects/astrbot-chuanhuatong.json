@@ -2,7 +2,7 @@
   "slug": "astrbot-chuanhuatong", "order": 98,
   "name": { "zh": "传画筒", "en": "AstrBot Galgame Renderer" },
   "author": "bvzrays", "sourceUrl": "https://github.com/bvzrays/astrbot_plugin_chuanhuatong",
-  "hook": "把 AstrBot 的纯文字回复变成带立绘、情绪和多层画面的 Galgame 对话。",
+  "hook": "把 AstrBot 回复变成带立绘和情绪的 Galgame 对话。",
   "summary": "AstrBot 视觉表达插件，根据情绪标签切换立绘，将回复渲染成可自定义布局的 Galgame 聊天框图片。",
   "heroDescription": "传画筒为文字型 AstrBot 增加一套视觉表达器官，让不同情绪、角色立绘和对话层次直接呈现在回复图片里。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],

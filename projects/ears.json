@@ -1,6 +1,6 @@
 {
   "slug": "ears", "order": 88,
-  "name": { "zh": "ears", "en": "Voice Tone Analysis" },
+  "name": { "zh": "ears", "en": "ears" },
   "author": "eveacla11", "sourceUrl": "https://github.com/eveacla11/ears",
   "hook": "让伴侣听见音高、音量、停顿和颤动背后的真实语气。",
   "summary": "面向 AI 伴侣的语气分析工具，将声学特征与用户个人基线比较，生成相对情绪线索。",

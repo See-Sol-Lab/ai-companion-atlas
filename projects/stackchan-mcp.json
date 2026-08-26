@@ -1,10 +1,7 @@
 {
   "slug": "stackchan-mcp",
   "order": 17,
-  "name": {
-    "zh": "Stack-chan MCP",
-    "en": "Physical Companion Bridge"
-  },
+  "name": { "zh": "Stack-chan MCP", "en": "Stack-chan MCP" },
   "author": "migratorywhale",
   "sourceUrl": "https://github.com/migratorywhale/stackchan-mcp",
   "hook": "给支持 MCP 的 AI 一具能看、能听、能说、会转头的桌面身体。",

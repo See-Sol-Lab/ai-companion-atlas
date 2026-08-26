@@ -4,10 +4,7 @@
   "officialHighlight": true,
   "editorPick": true,
   "stars": 117882,
-  "name": {
-    "zh": "Codex",
-    "en": "OpenAI Coding Agent"
-  },
+  "name": { "zh": "Codex", "en": "Codex" },
   "author": "OpenAI",
   "sourceUrl": "https://openai.com/zh-Hans-CN/codex/",
   "hook": "让 AI 直接进入你的项目，读代码、改文件、运行命令，并把任务真正做完。",
@@ -58,36 +55,7 @@
     "note": "Codex 可以在本地或云端执行任务；权限、命令和最终改动仍由用户控制与审查。"
   },
   "intro": {
-    "paragraphs": [
-      "Codex 是 OpenAI 官方编码 Agent。用户选择一个项目或文件夹并描述目标后，它可以阅读代码、查找问题、编辑文件、运行命令和测试，再汇报完成了什么以及怎样验证。",
-      "普通用户可以从官方 Codex 页面了解并下载桌面产品；开发者也可以在终端使用 Codex CLI，或在 VS Code、Cursor、Windsurf、Xcode 与 JetBrains 等编辑器中使用相应集成。较长的任务还可以交给云端环境并行完成。",
-      "它本身是通用工作与编码 Agent，不内置固定的伴侣人格或人机关系记忆。若把 Codex 作为本地伴侣系统的工作宿主，人格、长期记忆与关系层仍需要由上层项目提供。"
-    ],
-    "facts": [
-      {
-        "label": "适合",
-        "text": "希望 AI 直接理解真实项目、修改文件、运行工具并交付可检查结果的人。"
-      },
-      {
-        "label": "使用入口",
-        "text": "桌面应用、Codex CLI、IDE 扩展与 Codex 云端。"
-      },
-      {
-        "label": "平台",
-        "text": "Windows、macOS、Linux，以及支持的编辑器和云端环境。"
-      },
-      {
-        "label": "使用方式",
-        "text": "前往 OpenAI 官方 Codex 页面，选择合适的入口，下载安装或登录后打开项目并描述任务。"
-      },
-      {
-        "label": "权限边界",
-        "text": "Codex 只在用户授予的文件、命令、网络和应用权限内工作；执行过程与改动可由用户审查。"
-      },
-      {
-        "label": "来源",
-        "text": "OpenAI 官方产品；Codex CLI 的开源代码另见 openai/codex 仓库。"
-      }
-    ]
+    "paragraphs": ["Codex 是 OpenAI 官方编码 Agent。用户选择一个项目或文件夹并描述目标后，它可以阅读代码、查找问题、编辑文件、运行命令和测试，再汇报完成了什么以及怎样验证。","普通用户可以从官方 Codex 页面了解并下载桌面产品；开发者也可以在终端使用 Codex CLI，或在 VS Code、Cursor、Windsurf、Xcode 与 JetBrains 等编辑器中使用相应集成。较长的任务还可以交给云端环境并行完成。"],
+    "facts": [{"label":"适合","text":"希望 AI 直接理解真实项目、修改文件、运行工具并交付可检查结果的人。"},{"label":"使用入口","text":"桌面应用、Codex CLI、IDE 扩展与 Codex 云端。"},{"label":"使用方式","text":"前往 OpenAI 官方 Codex 页面，选择合适的入口，下载安装或登录后打开项目并描述任务。"},{"label":"权限边界","text":"Codex 只在用户授予的文件、命令、网络和应用权限内工作；执行过程与改动可由用户审查。"}]
   }
 }

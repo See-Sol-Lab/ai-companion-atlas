@@ -2,10 +2,7 @@
   "slug": "kimi-core",
   "order": 51,
   "editorPick": true,
-  "name": {
-    "zh": "kimi-core",
-    "en": "Agent Memory OS"
-  },
+  "name": { "zh": "kimi-core", "en": "kimi-core" },
   "author": "marikagura",
   "sourceUrl": "https://github.com/marikagura/kimi-core",
   "hook": "把记忆、关切、情感驱力和主动唤醒放进一套可审计的 1v1 内核。",

@@ -1,10 +1,7 @@
 {
   "slug": "aionshome",
   "order": 62,
-  "name": {
-    "zh": "AionsHome",
-    "en": "Aion Chat"
-  },
+  "name": { "zh": "AionsHome", "en": "AionsHome" },
   "author": "death34018-hue",
   "sourceUrl": "https://github.com/death34018-hue/AionsHome",
   "hook": "让伴侣在电脑和手机之间保持同一个家、记忆与感知入口。",

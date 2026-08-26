@@ -1,10 +1,7 @@
 {
   "slug": "aelios",
   "order": 9,
-  "name": {
-    "zh": "Aelios",
-    "en": "Cloud Memory Kernel"
-  },
+  "name": { "zh": "Aelios", "en": "Aelios" },
   "author": "wusaki0723",
   "sourceUrl": "https://github.com/wusaki0723/Aelios",
   "hook": "把跨窗口记忆放进自己的 Cloudflare，让不同客户端都能带着走。",

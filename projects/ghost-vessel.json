@@ -1,10 +1,7 @@
 {
   "slug": "ghost-vessel",
   "order": 16,
-  "name": {
-    "zh": "Ghost Vessel",
-    "en": "Agent Avatar Frontend"
-  },
+  "name": { "zh": "Ghost Vessel", "en": "Ghost Vessel" },
   "author": "ghdtjrtka",
   "sourceUrl": "https://github.com/ghdtjrtka/ghost-vessel",
   "hook": "用低 GPU 的视频形象，让本地 Agent 在显示器上拥有表情、情绪和声音。",

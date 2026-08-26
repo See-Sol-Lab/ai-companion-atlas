@@ -1,10 +1,7 @@
 {
   "slug": "forge-reload",
   "order": 129,
-  "name": {
-    "zh": "Forge Reload",
-    "en": "Claude Session Continuity"
-  },
+  "name": { "zh": "Forge Reload", "en": "Forge Reload" },
   "author": "Vivi-Seth",
   "sourceUrl": "https://github.com/Vivi-Seth/forge-reload",
   "hook": "截取近期会话并重建事件链，让新 session 继续承接原来的身份与关系。",

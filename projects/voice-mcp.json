@@ -1,6 +1,6 @@
 {
   "slug": "voice-mcp", "order": 95,
-  "name": { "zh": "voice-mcp", "en": "AI Voice MCP" },
+  "name": { "zh": "voice-mcp", "en": "voice-mcp" },
   "author": "Yinglianchun", "sourceUrl": "https://github.com/Yinglianchun/voice-mcp",
   "hook": "给 Agent 一个直接调用的 speak 工具，让回复带着专属声音播放出来。",
   "summary": "AI 语音合成 MCP 服务，支持 DashScope 与 ElevenLabs Provider 切换、克隆音色、内联播放器和实时可视化。",

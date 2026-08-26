@@ -4,13 +4,10 @@
   "editorPick": true,
   "officialHighlight": true,
   "stars": 41500,
-  "name": {
-    "zh": "Chatbox",
-    "en": "Community Edition"
-  },
+  "name": { "zh": "Chatbox", "en": "Chatbox" },
   "author": "chatboxai",
   "sourceUrl": "https://github.com/chatboxai/chatbox",
-  "hook": "把 ChatGPT、Claude、Gemini、DeepSeek 和本地模型放进同一个聊天客户端。",
+  "hook": "把多个在线与本地模型放进同一个聊天客户端。",
   "summary": "跨电脑、网页和手机使用的多模型聊天前端，支持切换模型、读取文件、生成图片、保存对话和连接 Ollama 本地模型。",
   "heroDescription": "Chatbox 是一个开箱即用的多模型聊天应用。配置常用的模型服务或本地 Ollama 后，就能在同一个界面里聊天、切换模型、处理文件并保存对话，不必来回打开多个网站。",
   "badges": [

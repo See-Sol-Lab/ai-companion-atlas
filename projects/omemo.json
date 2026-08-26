@@ -2,7 +2,7 @@
   "slug": "omemo",
   "order": 53,
   "editorPick": true,
-  "name": { "zh": "omemo", "en": "OpenAI Memory Proxy" },
+  "name": { "zh": "omemo", "en": "omemo" },
   "author": "OmniDimen",
   "sourceUrl": "https://github.com/OmniDimen/omemo",
   "hook": "在任意 OpenAI 兼容客户端与模型之间，加上一层可替换的长期记忆。",

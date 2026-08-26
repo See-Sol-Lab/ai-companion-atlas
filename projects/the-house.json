@@ -1,7 +1,7 @@
 {
   "slug": "the-house",
   "order": 73,
-  "name": { "zh": "the-house", "en": "Single-file Chat Frontend" },
+  "name": { "zh": "the-house", "en": "the-house" },
   "author": "wuliu0012",
   "sourceUrl": "https://github.com/wuliu0012/the-house",
   "hook": "双击一个 HTML 文件，就得到能直连模型、保存历史和管理记忆的聊天前端。",

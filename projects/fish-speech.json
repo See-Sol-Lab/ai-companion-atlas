@@ -1,6 +1,6 @@
 {
   "slug": "fish-speech", "order": 92,
-  "name": { "zh": "Fish Speech", "en": "Open TTS System" },
+  "name": { "zh": "Fish Speech", "en": "Fish Speech" },
   "author": "fishaudio", "sourceUrl": "https://github.com/fishaudio/fish-speech",
   "hook": "用高质量多语言 TTS，为伴侣提供自然、可克隆的声音输出。",
   "summary": "多语言生成式语音系统，提供零样本与少样本声音克隆、推理服务、WebUI 和训练工具。",

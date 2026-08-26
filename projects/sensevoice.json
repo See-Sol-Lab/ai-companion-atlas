@@ -1,6 +1,6 @@
 {
   "slug": "sensevoice", "order": 86,
-  "name": { "zh": "SenseVoice", "en": "Speech Understanding Model" },
+  "name": { "zh": "SenseVoice", "en": "SenseVoice" },
   "author": "QwenAudio", "sourceUrl": "https://github.com/QwenAudio/SenseVoice",
   "hook": "让伴侣听见文字之外的语言、情绪和环境声音。",
   "summary": "多语言语音理解模型，支持 ASR、语种识别、语音情绪识别和音频事件检测。",

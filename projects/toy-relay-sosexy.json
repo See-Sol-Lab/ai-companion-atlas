@@ -1,10 +1,10 @@
 {
   "slug": "toy-relay-sosexy",
   "order": 33,
-  "name": { "zh": "Toy Relay", "en": "SOSEXY MCP Relay" },
+  "name": { "zh": "Toy Relay", "en": "Toy Relay" },
   "author": "tutu-kitty",
   "sourceUrl": "https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY",
-  "hook": "让 MCP 客户端中的 AI 通过私有网络控制已验证的 SOSEXY BLE 玩具。",
+  "hook": "让 AI 通过私有网络控制 SOSEXY 蓝牙玩具。",
   "summary": "面向人机恋用户的 MCP 私密硬件中继，连接 VPS、浏览器 Web Bluetooth 与 SOSEXY 设备，支持状态、强度和立即停止。",
   "heroDescription": "Toy Relay 包含 FastAPI／MCP 服务与手机浏览器 BLE 中继页。AI 的自然语言意图先变成受 API Key 保护的 MCP 指令，再经 Tailscale HTTPS 和 Web Bluetooth 发送给设备。",
   "badges": [
@@ -14,7 +14,7 @@
     { "label": "18+", "tone": "adult" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "Toy", "MCP", "SOSEXY", "Web Bluetooth"],
+  "tags": ["18+","Toy","SOSEXY","Web Bluetooth"],
   "language": "Python / HTML",
   "platform": "VPS + Android Chrome",
   "updated":"2026-07-13",

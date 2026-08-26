@@ -1,7 +1,7 @@
 {
   "slug": "kimi-manor",
   "order": 78,
-  "name": { "zh": "Kimi Manor", "en": "CLI Agent Desktop Home" },
+  "name": { "zh": "Kimi Manor", "en": "Kimi Manor" },
   "author": "marikagura",
   "sourceUrl": "https://github.com/marikagura/kimi-manor",
   "hook": "把真实 CLI Agent 终端嵌进一座房间，让命令行也拥有可见的家。",

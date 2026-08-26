@@ -1,7 +1,7 @@
 {
   "slug": "sky-with-you",
   "order": 48,
-  "name": { "zh": "sky-with-you", "en": "AI Sky Companion" },
+  "name": { "zh": "sky-with-you", "en": "sky-with-you" },
   "author": "akinia0315",
   "sourceUrl": "https://github.com/akinia0315/sky-with-you",
   "hook": "让 AI 通过画面、OCR 和实体键盘执行，真正陪你在光遇里牵手回家。",

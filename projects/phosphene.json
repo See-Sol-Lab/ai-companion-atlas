@@ -1,10 +1,7 @@
 {
   "slug": "phosphene",
   "order": 18,
-  "name": {
-    "zh": "Phosphene",
-    "en": "Shared Tasks & Rewards"
-  },
+  "name": { "zh": "Phosphene", "en": "Phosphene" },
   "author": "3lmglow",
   "sourceUrl": "https://github.com/3lmglow/Phosphene",
   "hook": "让聊天里的关心、约定和小惊喜，真正落进一天的行动里。",

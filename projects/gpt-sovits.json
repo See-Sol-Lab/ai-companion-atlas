@@ -1,6 +1,6 @@
 {
   "slug": "gpt-sovits", "order": 91,
-  "name": { "zh": "GPT-SoVITS", "en": "Few-shot Voice Cloning" },
+  "name": { "zh": "GPT-SoVITS", "en": "GPT-SoVITS" },
   "author": "RVC-Boss", "sourceUrl": "https://github.com/RVC-Boss/GPT-SoVITS",
   "hook": "用几秒到一分钟的参考语音，为伴侣训练一套属于自己的声线。",
   "summary": "少样本语音克隆与 TTS 工具，支持零样本、少样本微调、跨语言合成、WebUI、训练和推理 API。",

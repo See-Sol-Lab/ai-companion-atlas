@@ -2,10 +2,7 @@
   "slug": "dwell",
   "order": 75,
   "editorPick": true,
-  "name": {
-    "zh": "dwell",
-    "en": "Companion Living Space"
-  },
+  "name": { "zh": "dwell", "en": "dwell" },
   "author": "xinwithyu",
   "sourceUrl": "https://github.com/xinwithyu/dwell-on-something",
   "hook": "把心跳、日记、待办、日历和共同生活收进一套液态玻璃伴侣空间。",
