@@ -118,6 +118,52 @@ backToTopButton.addEventListener('click', () => {
   backToTopAnimationFrame = requestAnimationFrame(step);
 });
 
-import('./script-runtime.js?v=20260824-coding-1').catch((error) => {
+/* Mainland-friendly resource entry. Cards carrying the 免翻墙 badge are searchable
+   as one collection without changing the core catalog runtime. */
+const noVpnStyles = document.createElement('style');
+noVpnStyles.textContent = `
+  .badge-no-vpn {
+    color: #34735d;
+    background: rgba(75, 169, 126, .11);
+    border: 1px solid rgba(65, 151, 111, .2);
+  }
+`;
+document.head.appendChild(noVpnStyles);
+
+import('./script-runtime.js?v=20260824-coding-1').then(() => {
+  const tagList = document.querySelector('#taxonomy .tag-list');
+  const searchInput = document.getElementById('catalogSearchInput');
+  if (!tagList || !searchInput) return;
+
+  const noVpnButton = document.createElement('button');
+  noVpnButton.type = 'button';
+  noVpnButton.className = 'tag tag-no-vpn';
+  noVpnButton.setAttribute('aria-pressed', 'false');
+  noVpnButton.innerHTML = '免翻墙 <span>No VPN</span>';
+  tagList.appendChild(noVpnButton);
+
+  const syncNoVpnState = () => {
+    const active = searchInput.value.trim() === '免翻墙';
+    noVpnButton.classList.toggle('active', active);
+    noVpnButton.setAttribute('aria-pressed', String(active));
+  };
+
+  noVpnButton.addEventListener('click', () => {
+    searchInput.value = searchInput.value.trim() === '免翻墙' ? '' : '免翻墙';
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    syncNoVpnState();
+  });
+
+  searchInput.addEventListener('input', syncNoVpnState);
+
+  /* Switching to a normal catalog category leaves the no-VPN collection cleanly. */
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-catalog-filter]')) return;
+    if (searchInput.value.trim() !== '免翻墙') return;
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    syncNoVpnState();
+  }, true);
+}).catch((error) => {
   console.error('Atlas catalog runtime failed to load:', error);
 });
