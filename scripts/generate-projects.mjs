@@ -44,6 +44,12 @@ function validate(project) {
     throw new Error(`${project.slug}: sourceUrl must use http or https`);
   }
 
+  if (project.directUrl !== undefined) {
+    if (!isText(project.directUrl) || new URL(project.directUrl).protocol !== 'https:') {
+      throw new Error(`${project.slug}: directUrl must use https`);
+    }
+  }
+
   if (!hasChineseName(project.name.zh) && project.name.zh !== project.name.en) {
     throw new Error(`${project.slug}: English-only projects must use the same official name in name.zh and name.en`);
   }
@@ -61,6 +67,10 @@ function validate(project) {
   if (!Array.isArray(project.badges) || project.badges.length === 0 ||
       project.badges.some((badge) => !isText(badge.label) || !/^[a-z0-9-]+$/.test(badge.tone))) {
     throw new Error(`${project.slug}: every badge needs a label and a lowercase tone`);
+  }
+
+  if (project.directUrl !== undefined && !project.badges.some((badge) => badge.tone === 'no-vpn')) {
+    throw new Error(`${project.slug}: directUrl requires a no-vpn badge`);
   }
 
   if (!Array.isArray(project.tags) || project.tags.length === 0 || project.tags.length > 4 ||
@@ -159,6 +169,10 @@ function renderDetail(project) {
   const facts = project.intro.facts
     .map((fact) => `            <li><strong>${escapeHtml(fact.label)}：</strong>${escapeHtml(fact.text)}</li>`).join('\n');
   const sourceUrl = escapeHtml(project.sourceUrl);
+  const directUrl = project.directUrl === undefined ? '' : escapeHtml(project.directUrl);
+  const directAction = directUrl
+    ? `\n        <a class="project-direct-link" href="${directUrl}" target="_blank" rel="noreferrer">免翻墙下载 <span>↗</span></a>`
+    : '';
   const officialHighlightClass = project.officialHighlight === true ? ' project-official-highlight' : '';
   const officialHighlightStylesheet = project.officialHighlight === true
     ? '\n  <link rel="stylesheet" href="../../official-highlights.css?v=20260824-2" />'
@@ -172,7 +186,7 @@ function renderDetail(project) {
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="${escapeHtml(documentDescriptionName)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(documentTitle)} · AI Companion Atlas</title>
-  <link rel="stylesheet" href="../detail.css?v=20260826-1" />${officialHighlightStylesheet}
+  <link rel="stylesheet" href="../detail.css?v=20260826-2" />${officialHighlightStylesheet}
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
 </head>
@@ -230,7 +244,7 @@ function renderDetail(project) {
         </aside>
       </section>
 
-      <section class="project-intro" aria-labelledby="intro-title">
+      <section class="project-intro" aria-labelledby="intro-title">${directAction}
         <div class="intro-heading">
           <p>PROJECT INTRO</p>
           <h2 id="intro-title">项目介绍</h2>

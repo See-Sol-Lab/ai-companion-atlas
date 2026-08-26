@@ -11,6 +11,10 @@
 .project-source-url { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; margin: 16px 0 0; color: #8792aa; font: 500 11px/1.65 var(--mono); }
 .project-source-url a { color: #5870a5; text-decoration: underline; text-decoration-color: rgba(88, 112, 165, .28); text-underline-offset: 3px; overflow-wrap: anywhere; word-break: break-all; }
 .project-source-url a:hover { color: #36558f; text-decoration-color: currentColor; }
+.status-no-vpn { color: #34735d; background: rgba(75, 169, 126, .11); border-color: rgba(65, 151, 111, .2); }
+.project-intro { position: relative; }
+.project-direct-link { float: right; min-height: 42px; margin: 0 0 18px 24px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid rgba(65, 151, 111, .24); border-radius: 12px; color: #2f7159; background: linear-gradient(135deg, rgba(237, 250, 245, .96), rgba(225, 244, 236, .82)); box-shadow: 0 9px 22px rgba(62, 123, 97, .1); font-size: 12px; font-weight: 700; transition: transform .18s ease, box-shadow .18s ease; }
+.project-direct-link:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(62, 123, 97, .16); }
 .project-like { display: grid; flex: 0 0 auto; justify-items: center; gap: 5px; margin-left: auto; }
 .project-like-button {
   min-width: 62px;
@@ -112,5 +116,6 @@
 
 @media (max-width: 560px) {
   .hero-footer { flex-wrap: wrap; align-items: flex-end; }
+  .project-direct-link { float: none; margin: 0 0 20px; }
   .project-like { margin-left: auto; }
 }

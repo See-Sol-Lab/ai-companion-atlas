@@ -302,6 +302,12 @@ test('every generated project detail page contains its own comment slug and shar
     assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
     assert.ok(html.includes('<p class="project-source-url"><span>项目地址（可复制给 AI）：</span>'));
     assert.ok(html.includes(`<a href="${sourceUrl}" target="_blank" rel="noreferrer">${sourceUrl}</a>`));
+    if (project.directUrl !== undefined) {
+      const directUrl = escapeHtml(project.directUrl);
+      assert.ok(html.includes(`<a class="project-direct-link" href="${directUrl}" target="_blank" rel="noreferrer">免翻墙下载 <span>↗</span></a>`));
+    } else {
+      assert.doesNotMatch(html, /class="project-direct-link"/u);
+    }
     assert.match(html, /detail-comments\.js/u);
     assert.match(html, /当前版本为游客模式，留言不需要注册账号。/u);
     assert.match(html, /class="comment-success"/u);
@@ -507,6 +513,10 @@ test('public submission endpoint never exposes the private queue', async () => {
 
 test('homepage exposes online submission and the dedicated GitHub issue route', async () => {
   const html = await readFile(path.join(root, 'index.html'), 'utf8');
+  const rikkaCard = html.match(/<article[^>]*data-search="RikkaHub[\s\S]*?<\/article>/u)?.[0];
+  assert.ok(rikkaCard);
+  assert.match(rikkaCard, /badge-no-vpn/u);
+  assert.match(rikkaCard, /免翻墙/u);
   assert.match(html, /class="button submit-online-toggle"/u);
   assert.match(html, /issues\/new\?template=project-submission\.yml/u);
   assert.match(html, /id="online-submit-panel"/u);

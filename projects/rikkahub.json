@@ -4,6 +4,7 @@
   "name": { "zh": "RikkaHub", "en": "RikkaHub" },
   "author": "rikkahub",
   "sourceUrl": "https://github.com/rikkahub/rikkahub",
+  "directUrl": "https://rikka-ai.com/",
   "hook": "在 Android 上自由切换模型、角色、工具和长期聊天方式。",
   "summary": "功能完整的原生 Android 多模型客户端，支持多供应商、工作区、MCP、多模态、角色卡、记忆与 Web 访问。",
   "heroDescription": "RikkaHub 是许多 Android AI 使用方案的基础客户端。它把多家模型接口、消息分支、多模态文档、搜索、MCP、角色卡和基于 PRoot 的 Linux 工作区放进一款原生应用。",
@@ -19,6 +20,10 @@
     {
       "label": "手机前端",
       "tone": "mobile"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
     }
   ],
   "tags": [
