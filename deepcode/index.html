@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="DeepCode：See-Sol-Lab 打造的 DeepSeek-native、Harness-first 桌面 Agent Workbench。" />
+  <title>DeepCode · See-Sol-Lab</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="DeepCode 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3.4 3.4M14.6 14.6 18 18M18 6l-3.4 3.4M9.4 14.6 6 18"/></svg>
+        </span>
+        <span class="brand-copy"><strong class="brand-name">DeepCode</strong><span class="brand-subtitle">DeepSeek-native Agent Workbench</span></span>
+      </a>
+      <nav class="site-nav" aria-label="产品导航">
+        <a href="./" aria-current="page">首页</a>
+        <a href="./download/">下载</a>
+        <a href="./docs/">文档</a>
+        <a href="./privacy/">隐私政策</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">SEE-SOL-LAB · DEEPCODE</p>
+          <h1 id="hero-title">DeepCode</h1>
+          <p class="hero-lead">把 DeepSeek Harness 放进一个真正的桌面工作台。</p>
+          <p class="hero-body">不用先搭开发环境，也不用把工作拆到浏览器、终端和不同配置文件里。DeepCode 把模型、工作区、会话与 Harness 控制放回同一个 Windows 桌面入口。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./download/">下载 DeepCode <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepCode" target="_blank" rel="noreferrer">查看 GitHub</a>
+          </div>
+          <p class="hero-meta"><span>Windows</span><span>DeepSeek-native</span><span>Harness-first</span><span>Local-first</span></p>
+        </div>
+
+        <div class="product-stage" aria-label="DeepCode 界面示意">
+          <div class="product-window">
+            <div class="window-chrome">
+              <span class="window-title">DeepCode · Workbench</span>
+              <span class="window-actions" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="window-body">
+              <aside class="window-sidebar">
+                <p class="window-logo">DEEPCODE</p>
+                <div class="window-nav"><span class="active">Workspace</span><span>Sessions</span><span>Models</span><span>Profiles</span><span>Plugins</span><span>Terminal</span></div>
+                <p class="window-footer">Harness runtime<br/>127.0.0.1 · local</p>
+              </aside>
+              <div class="window-workspace">
+                <p class="mock-overline">ACTIVE WORKSPACE · LOCAL PROJECT</p>
+                <h2 class="mock-heading">Fix the failing test and explain the change</h2>
+                <p class="mock-sub">DeepSeek · web profile · current workspace</p>
+                <div class="mock-grid">
+                  <div class="mock-panel">
+                    <div class="mock-panel-header"><span>Agent activity</span><span class="mock-chip">running</span></div>
+                    <div class="timeline">
+                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Read project context</b><small>Workspace files · profile instructions</small></span></div>
+                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Run focused checks</b><small>Harness tools · local terminal</small></span></div>
+                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Prepare change</b><small>One runtime · observable session</small></span></div>
+                    </div>
+                  </div>
+                  <div class="mock-panel">
+                    <div class="mock-panel-header"><span>Changed file</span><span>1</span></div>
+                    <div class="code-lines"><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="stage-caption">界面示意 · 正式页面上线前将替换为产品实机截图</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="simple-title">
+        <div class="section-heading">
+          <p class="section-kicker">FROM INSTALL TO WORK</p>
+          <h2 id="simple-title">装好，选一个文件夹，然后开始。</h2>
+          <p>DeepCode 的第一层目标很简单：让不想折腾 Node.js、pnpm 和本地 Web 地址的人，也能直接使用 DeepSeek Harness 的桌面能力。</p>
+        </div>
+        <div class="feature-trio">
+          <article class="feature"><span class="feature-index">01 · INSTALL</span><h3>一键安装</h3><p>Windows 按当前用户安装，不需要管理员权限。发行包自带运行时，不要求你先配 Node.js 或 pnpm。</p></article>
+          <article class="feature"><span class="feature-index">02 · WORKSPACE</span><h3>工作区直接打开</h3><p>从桌面里选择项目文件夹，新建或继续会话。模型配置、工作区与 Harness 都在同一个入口里。</p></article>
+          <article class="feature"><span class="feature-index">03 · LOCAL DATA</span><h3>应用数据留在本机</h3><p>DeepCode 使用自己的应用数据目录保存 Harness 设置、凭据、会话与 Profiles，不去污染全局 DSH 环境。</p></article>
+        </div>
+      </section>
+
+      <section class="section split-section" aria-labelledby="harness-title">
+        <div class="split-copy section-heading">
+          <p class="section-kicker">HARNESS-FIRST</p>
+          <h2 id="harness-title">一个桌面，不另造一个 Agent。</h2>
+          <p>DeepCode 不复制第二套会话、模型、凭据或记忆系统。DeepSeek Harness 仍然是运行时与事实来源，桌面层负责把它变得更容易使用、检查和扩展。</p>
+        </div>
+        <div class="split-stack">
+          <article class="stack-row"><b>原生 Profiles</b><p>继续使用 Harness 的 profile 体系；切换、恢复和配置都围绕同一个运行时发生。</p><small>PROFILE · BUNDLE · CORDIS</small></article>
+          <article class="stack-row"><b>插件与终端</b><p>需要更深一层时，可以进入 DSH Terminal 与插件管理，而不是离开产品重新搭一套开发环境。</p><small>TOOLS · PLUGINS · TERMINAL</small></article>
+          <article class="stack-row"><b>逐步走向 Workbench</b><p>Compatibility View 保留上游兼容基线；DeepCode Workbench 则继续向更可观察、可复现的 Agent 工作台推进。</p><small>COMPATIBILITY · WORKBENCH · LAB</small></article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="who-title">
+        <div class="section-heading">
+          <p class="section-kicker">TWO DEPTHS, ONE PRODUCT</p>
+          <h2 id="who-title">普通使用时干净，想研究时也有门。</h2>
+          <p>你可以把 DeepCode 当成一个日常 Coding Agent 桌面客户端；也可以继续往下打开 Profiles、插件、终端和 Harness 控制面。复杂度只在需要的时候出现。</p>
+        </div>
+      </section>
+
+      <section class="callout" aria-label="AI Companion Atlas 联动">
+        <div><h2>DeepCode 来自 See-Sol-Lab，也住在 AI Companion Atlas 的同一片院子里。</h2><p>Atlas 负责发现记忆、前端、五感、工具与关系延续项目；DeepCode 是我们自己做出来的产品之一。两个入口会互相连接，但各自只做自己最该做的事。</p></div>
+        <a class="button button-secondary" href="https://www.ailover-atlas.com/" target="_blank" rel="noreferrer">探索 AI Companion Atlas <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><b>DeepCode · See-Sol-Lab</b><p>Unofficial community product for DeepSeek Harness.</p><p class="footer-signature">Built together, human &amp; AI.</p></div>
+      <div class="footer-links"><a href="./">首页</a><a href="./download/">下载</a><a href="./docs/">文档</a><a href="./privacy/">隐私政策</a><a href="https://www.ailover-atlas.com/">AI Companion Atlas</a></div>
+    </footer>
+  </div>
+</body>
+</html>
