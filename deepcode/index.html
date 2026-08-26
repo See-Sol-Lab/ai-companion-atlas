@@ -7,7 +7,6 @@
   <meta name="description" content="DeepCode：See-Sol-Lab 打造的 DeepSeek-native、Harness-first 桌面 Agent Workbench。" />
   <title>DeepCode · See-Sol-Lab</title>
   <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./gallery.css?v=20260827-1" />
 </head>
 <body>
   <div class="site-shell">
@@ -41,39 +40,11 @@
         </div>
 
         <div class="product-stage" aria-label="DeepCode 实机界面">
-          <div class="product-window product-shot-switcher" tabindex="0" aria-label="DeepCode 实机界面。默认显示浅色模式，悬停或聚焦可查看深色模式。">
-            <div class="window-chrome">
-              <span class="window-title">DeepCode · Workbench</span>
-              <span class="window-actions" aria-hidden="true"><i></i><i></i><i></i></span>
-            </div>
-            <div class="window-body">
-              <aside class="window-sidebar">
-                <p class="window-logo">DEEPCODE</p>
-                <div class="window-nav"><span class="active">Workspace</span><span>Sessions</span><span>Models</span><span>Profiles</span><span>Plugins</span><span>Terminal</span></div>
-                <p class="window-footer">Harness runtime<br/>127.0.0.1 · local</p>
-              </aside>
-              <div class="window-workspace">
-                <p class="mock-overline">ACTIVE WORKSPACE · LOCAL PROJECT</p>
-                <h2 class="mock-heading">Fix the failing test and explain the change</h2>
-                <p class="mock-sub">DeepSeek · web profile · current workspace</p>
-                <div class="mock-grid">
-                  <div class="mock-panel">
-                    <div class="mock-panel-header"><span>Agent activity</span><span class="mock-chip">running</span></div>
-                    <div class="timeline">
-                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Read project context</b><small>Workspace files · profile instructions</small></span></div>
-                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Run focused checks</b><small>Harness tools · local terminal</small></span></div>
-                      <div class="timeline-item"><span class="timeline-dot"></span><span class="timeline-copy"><b>Prepare change</b><small>One runtime · observable session</small></span></div>
-                    </div>
-                  </div>
-                  <div class="mock-panel">
-                    <div class="mock-panel-header"><span>Changed file</span><span>1</span></div>
-                    <div class="code-lines"><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span><span class="code-line"></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="stage-caption">DeepCode 实机界面 · 悬停查看深色模式</p>
+          <button class="product-window product-shot-switcher" type="button" aria-label="切换 DeepCode 深浅色实机界面" aria-pressed="false">
+            <img class="product-shot product-shot-light" src="./assets/deepcode-light.png" width="1919" height="1199" alt="DeepCode 浅色模式实机界面" fetchpriority="high" />
+            <img class="product-shot product-shot-dark" src="./assets/deepcode-dark.png" width="1919" height="1199" alt="" aria-hidden="true" />
+          </button>
+          <p class="stage-caption">DeepCode 实机界面 · <span class="pointer-caption">悬停查看深色模式</span><span class="touch-caption">轻触切换深浅模式</span></p>
         </div>
       </section>
 
@@ -122,5 +93,20 @@
       <div class="footer-links"><a href="./">首页</a><a href="./download/">下载</a><a href="./docs/">文档</a><a href="./privacy/">隐私政策</a><a href="https://www.ailover-atlas.com/">AI Companion Atlas</a></div>
     </footer>
   </div>
+  <script>
+    const productShots = document.querySelector(".product-shot-switcher");
+
+    productShots.addEventListener("click", () => {
+      const isDark = productShots.classList.toggle("is-dark");
+      productShots.setAttribute("aria-pressed", String(isDark));
+    });
+
+    productShots.addEventListener("mouseleave", () => {
+      if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        productShots.classList.remove("is-dark");
+        productShots.setAttribute("aria-pressed", "false");
+      }
+    });
+  </script>
 </body>
 </html>
