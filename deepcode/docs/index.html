@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="DeepCode 文档：安装、首次配置、工作区、Harness、数据目录、故障排查与许可。" />
+  <title>文档 · DeepCode</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="DeepCode 首页">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3.4 3.4M14.6 14.6 18 18M18 6l-3.4 3.4M9.4 14.6 6 18"/></svg></span>
+        <span class="brand-copy"><strong class="brand-name">DeepCode</strong><span class="brand-subtitle">DeepSeek-native Agent Workbench</span></span>
+      </a>
+      <nav class="site-nav" aria-label="产品导航"><a href="../">首页</a><a href="../download/">下载</a><a href="./" aria-current="page">文档</a><a href="../privacy/">隐私政策</a></nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">DOCUMENTATION</p>
+        <h1>DeepCode 文档</h1>
+        <p class="hero-body">先把最常用的安装与使用路径讲清楚，再把 Profiles、插件、终端和许可放到需要时才打开的第二层。这里是产品文档入口，不要求用户先读仓库 README。</p>
+      </section>
+
+      <div class="content-grid">
+        <nav class="side-nav" aria-label="文档目录">
+          <span class="side-label">QUICK INDEX</span>
+          <a href="#what">DeepCode 是什么</a>
+          <a href="#install">安装</a>
+          <a href="#first-run">首次配置</a>
+          <a href="#runtime">Harness 与 Profiles</a>
+          <a href="#terminal">终端与插件</a>
+          <a href="#data">数据与卸载</a>
+          <a href="#troubleshooting">故障排查</a>
+          <a href="#source">源码运行</a>
+          <a href="#license">许可与上游</a>
+        </nav>
+
+        <div class="content">
+          <section class="content-section" id="what">
+            <h2>DeepCode 是什么</h2>
+            <p>DeepCode 是 See-Sol-Lab 在 DeepSeek Harness 之上构建的 Windows 桌面产品。Harness 是唯一运行时与会话事实来源；DeepCode 负责桌面宿主、工作区入口、模型与 Profile 控制、终端、插件管理以及逐步建设中的 Workbench。</p>
+            <div class="notice"><strong>一句话：</strong>像日常 Coding Agent 一样打开就能工作，需要时又能往下看到 Harness 的真实配置与运行路径。</div>
+          </section>
+
+          <section class="content-section" id="install">
+            <h2>安装</h2>
+            <p>公开安装包上线后，从 DeepCode 官网下载 <code>DeepCode-Setup-&lt;version&gt;.exe</code>。安装器按当前 Windows 用户安装，不需要管理员权限。</p>
+            <ol>
+              <li>双击安装包。</li>
+              <li>文件安装完成后，DeepCode 会自动启动。</li>
+              <li>之后可以从桌面或开始菜单打开 DeepCode。</li>
+            </ol>
+            <p>发行包自带 DeepSeek Harness 运行时，普通用户不需要先装 Node.js 或 pnpm。</p>
+          </section>
+
+          <section class="content-section" id="first-run">
+            <h2>首次配置</h2>
+            <h3>1. 配置模型</h3>
+            <p>打开左下角设置，进入 <strong>Models</strong>。填入 DeepSeek API key。凭据由 Harness 的凭据机制保存在 DeepCode 自己的数据目录中，不进入安装包、命令行或普通诊断日志。</p>
+            <h3>2. 选择工作区</h3>
+            <p>返回首页，选择一个项目文件夹作为 workspace。DeepCode 不需要把项目复制到别处；Agent 在你选择的工作区里工作。</p>
+            <h3>3. 新建或恢复会话</h3>
+            <p>选择模型与工作区后新建会话。已有 Harness 会话、Profiles 与配置继续由同一个运行时管理。</p>
+          </section>
+
+          <section class="content-section" id="runtime">
+            <h2>Harness 与 Profiles</h2>
+            <p>DeepCode 不建立第二套模型、会话、凭据、权限、记忆或 hook 状态。当前激活的 Harness Home 与 Profile 由 Desktop launcher 管理，运行时仍然来自 DeepSeek Harness。</p>
+            <ul>
+              <li><strong>Managed Home：</strong>默认使用 DeepCode 自己的应用数据目录。</li>
+              <li><strong>Existing Home：</strong>高级用户可以显式选择已有 Harness Home；DeepCode 不自动迁移、合并或改写它。</li>
+              <li><strong>Profile：</strong>可以切换 Harness profile；切换失败时保留 last-known-good 状态用于恢复。</li>
+            </ul>
+          </section>
+
+          <section class="content-section" id="terminal">
+            <h2>终端与插件</h2>
+            <p>需要更深层控制时，可以打开 DSH Terminal。DeepCode 为终端准备私有的 <code>dsh</code> / <code>node</code> / <code>pnpm</code> 入口，不修改系统 PATH、注册表或 shell 配置。</p>
+            <p>插件管理继续走 Harness 官方的 <code>dsh plugin</code> 路径。DeepCode 不把“装进 package.json”误当成“插件已经实际加载”，并会区分 Profile Bundles、已安装依赖与 Loader 的真实状态。</p>
+          </section>
+
+          <section class="content-section" id="data">
+            <h2>数据与卸载</h2>
+            <p>打包版默认把 Harness 数据放在 <code>%APPDATA%\DeepCode\dsh</code>，其中包括凭据、设置、会话与 Profiles。DeepCode 的 launcher 和窗口偏好也保存在自己的 userData 目录。</p>
+            <p>普通卸载会询问是否删除 <code>%APPDATA%\DeepCode</code>。如果选择保留，之后重装可以继续使用原来的凭据、设置和会话。静默卸载与升级替换会保留数据。</p>
+          </section>
+
+          <section class="content-section" id="troubleshooting">
+            <h2>故障排查</h2>
+            <h3>端口 3080 被占用</h3>
+            <p>DeepCode 当前固定在本机 <code>127.0.0.1:3080</code> 启动 Harness 服务。端口被其他程序占用时会明确报错，而不是偷偷换端口。</p>
+            <h3>Harness 启动失败</h3>
+            <p>打包版诊断日志位于 DeepCode 应用数据目录。日志会对常见 API key、Bearer token 等凭据形态做脱敏。发生运行时崩溃时，DeepCode 不会无限自动重启；可以从桌面控制层手动 Restart Harness。</p>
+            <h3>窗口关闭后为什么还在</h3>
+            <p>窗口右上角关闭只是隐藏窗口，Harness 继续在系统托盘运行。要真正停止运行时，请使用托盘或菜单中的 <strong>Quit DeepCode</strong>。</p>
+          </section>
+
+          <section class="content-section" id="source">
+            <h2>从源码运行</h2>
+            <p>面向开发者的最短路径：</p>
+            <pre><code>pnpm install
+pnpm run build
+pnpm run dev:desktop</code></pre>
+            <p><code>dev:desktop</code> 会启动本地 DSH Web 服务并打开 DeepCode Desktop。公开发布后，更完整的架构与开发文档仍保留在 GitHub 仓库中。</p>
+          </section>
+
+          <section class="content-section" id="license">
+            <h2>许可与上游</h2>
+            <p>DeepCode 是 DeepSeek Harness 的非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。官方 Harness 与官方 Web UI 是 DeepSeek 的工作成果。</p>
+            <p>仓库采用分层许可：上游 DeepSeek Harness 及上游衍生内容继续保留 MIT；See-Sol-Lab 原创桌面/产品层在明确范围内采用 PolyForm Perimeter 1.0.1。个人、教育、研究、兴趣与允许的内部使用均可；向他人提供与 DeepCode 竞争的替代产品需要另行授权。</p>
+            <div class="page-actions"><a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepCode" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><b>DeepCode · See-Sol-Lab</b><p>Unofficial community product for DeepSeek Harness.</p><p class="footer-signature">Built together, human &amp; AI.</p></div>
+      <div class="footer-links"><a href="../">首页</a><a href="../download/">下载</a><a href="./">文档</a><a href="../privacy/">隐私政策</a><a href="https://www.ailover-atlas.com/">AI Companion Atlas</a></div>
+    </footer>
+  </div>
+</body>
+</html>
