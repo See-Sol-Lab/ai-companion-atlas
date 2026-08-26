@@ -6,9 +6,9 @@
   "name": { "zh": "和机的另一个家", "en": "ChatNest UI" },
   "author": "zaochuanyitian",
   "sourceUrl": "https://github.com/zaochuanyitian/chatnest-ui",
-  "hook": "iPhone 长期陪伴前端",
-  "summary": "基于 ChatNest 深度二改的手机优先陪伴前端，整合聊天搜索、长期记忆、日记日历、时钟与本地缓存。",
-  "heroDescription": "把聊天、记忆、日记和时间整理进一个适合 iPhone 长期使用的 Web App，可添加到主屏幕并接自己的后端。",
+  "hook": "把聊天、记忆和日记装进一个适合 iPhone 长期使用的私人小窝。",
+  "summary": "这是一个手机优先的 AI 陪伴聊天界面。你可以搜索以前的对话、整理长期记忆、查看日记和日历，也能把它添加到 iPhone 主屏幕，像 App 一样使用。",
+  "heroDescription": "ChatNest UI 把聊天、记忆、日记和时间放在同一个手机界面里。它针对 iPhone 做了适配，可以添加到主屏幕长期使用，也能搜索以前的聊天和整理长期记忆。",
   "badges": [
     { "label": "非商业", "tone": "limited" },
     { "label": "记忆", "tone": "memory" },
@@ -20,30 +20,28 @@
   "language": "HTML / JavaScript",
   "platform": "iPhone / Web / PWA",
   "updated": "2026-08-12",
-  "heroOverline": "CHAT · MEMORY · DIARY",
+  "heroOverline": "聊天 · 记忆 · 日记",
   "showcase": {
-    "label": "给长期陪伴准备一套真正能住下来的手机前端",
+    "label": "它解决的问题",
     "symbol": "家",
-    "question": "“聊天、记忆、日记和时间，能不能都留在同一个地方？”",
+    "question": "“能不能把和 TA 的聊天、记忆与日记都放进同一个手机小窝？”",
     "comparisons": [
-      { "value": "聊天", "label": "长对话与全库搜索" },
-      { "value": "记忆", "label": "去重与长期印象" },
-      { "value": "生活", "label": "时间、日记与日历" }
+      { "value": "聊天", "label": "搜索以前的对话" },
+      { "value": "记忆", "label": "整理长期记忆" },
+      { "value": "生活", "label": "日记、日历和时间" }
     ],
-    "note": "它是基于 ugui3u/chatnest 的高质量二次开发；Atlas 不将其标为从零原创。"
+    "note": "适合长期放在手机主屏幕使用。"
   },
   "intro": {
     "paragraphs": [
-      "和机的另一个家是一套手机优先的 Claude 陪伴前端，尤其适合在 iPhone 上添加到主屏幕后长期使用。它保留对话、记忆、日记和时间这些关系里最常用的部分，并把移动端交互做得更完整。",
-      "项目基于 ugui3u/chatnest 二次开发。作者公开说明界面规模从约 2000 行扩展到约 5900 行，并新增或重做了聊天记录搜索、IndexedDB 缓存、内置时钟、记忆近似去重与新鲜度排序、长期印象摘要、日记和日历等功能。",
-      "仓库自带演示数据，不接后端也能直接打开体验；要正式使用则需要按文档实现对应 API。个人自托管时可以接自己的模型后端。"
+      "“和机的另一个家”是一套手机优先的 AI 陪伴聊天界面，尤其适合在 iPhone 上使用。它把聊天、搜索、长期记忆、时钟、日记和日历放在同一个地方，让日常使用更像一个完整 App。",
+      "仓库自带演示内容，不连接后端也能先打开体验。正式聊天时，需要使用者自行部署并连接模型后端。聊天记录还可以缓存在本机，方便再次打开时继续查看。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望把 Claude 长期陪伴做成手机主屏幕常驻应用，并重视记忆、日记和时间连续性的人。" },
-      { "label": "平台", "text": "手机优先，尤其面向 iPhone；也可作为普通 Web App 使用。" },
-      { "label": "来源", "text": "基于 ugui3u/chatnest 二次开发，并在 README 中明确标注上游来源。" },
-      { "label": "主要增量", "text": "移动端聊天体验、全库搜索、长期记忆去重与新鲜度排序、内置时钟、日记日历和本地消息缓存。" },
-      { "label": "许可", "text": "继承上游 Non-Commercial Use License，仅允许非商业使用、修改和再分发。" }
+      { "label": "适合", "text": "想把和 TA 的长期聊天做成 iPhone 主屏幕常驻应用的人。" },
+      { "label": "能做", "text": "聊天、搜索历史、整理长期记忆、查看日记日历和时间。" },
+      { "label": "使用方式", "text": "可以先用演示数据体验；正式使用需要连接自己的聊天和模型后端。" },
+      { "label": "项目来源", "text": "基于 ChatNest 深度修改，沿用上游的非商业许可。" }
     ]
   }
 }

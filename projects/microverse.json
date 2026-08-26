@@ -3,12 +3,12 @@
   "order": 189,
   "stars": 2447,
   "editorPick": true,
-  "name": { "zh": "AI 小世界", "en": "Microverse" },
-  "author": "KsanaDock / 时空码头",
+  "name": { "zh": "Microverse", "en": "Microverse" },
+  "author": "KsanaDock",
   "sourceUrl": "https://github.com/KsanaDock/Microverse",
-  "hook": "多 AI 社会沙盒",
-  "summary": "基于 Godot 4 的多智能体沙盒：AI 角色可移动、对话、积累长期记忆、自主做任务，并在环境和社交互动里发展关系。",
-  "heroDescription": "把多个有性格、状态、记忆和任务的 AI 放进同一个可探索世界，让他们彼此生活、互动和形成关系。",
+  "hook": "一个模拟上帝类的 AI 社会沙盒游戏。",
+  "summary": "一个模拟上帝类的沙盒游戏，基于Godot 4开发的多智能体AI社交模拟系统。在这个虚拟世界中，AI角色拥有独立的思维和记忆，能够自主进行社交互动、完成任务，并在持续的交流中发展出复杂的社会关系。",
+  "heroDescription": "Microverse 把一群有性格、有记忆的 AI 角色放进同一个虚拟世界。它们会自由移动、彼此聊天、完成任务并慢慢形成自己的社会关系。玩家可以在一旁观察，也能进入场景和它们交流。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "记忆", "tone": "memory" },
@@ -17,34 +17,32 @@
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" }
   ],
-  "tags": ["开放世界", "多智能体", "AI 社会", "长期记忆", "Godot"],
+  "tags": ["上帝模拟", "AI 社会", "自主角色", "沙盒游戏"],
   "language": "GDScript",
   "platform": "Windows / macOS / Linux / Android",
   "updated": "2026-04-10",
-  "heroOverline": "WORLD · MEMORY · SOCIETY",
+  "heroOverline": "创建世界 · 观察生活 · 参与互动",
   "showcase": {
-    "label": "让 AI 不只和你聊天，也在同一个世界里彼此生活",
+    "label": "游戏怎么玩",
     "symbol": "界",
-    "question": "“如果一群有记忆和性格的 AI 住进同一个世界，他们会自己发展出怎样的关系？”",
+    "question": "“如果一群会记事、会交朋友的 AI 住进同一个世界，会发生什么？”",
     "comparisons": [
-      { "value": "生活", "label": "自由移动与环境感知" },
-      { "value": "记忆", "label": "长期经历持续保留" },
-      { "value": "社会", "label": "对话、协作与关系发展" }
+      { "value": "观察", "label": "看 AI 自己生活" },
+      { "value": "参与", "label": "进入世界和角色交流" },
+      { "value": "发展", "label": "任务与互动改变关系" }
     ],
-    "note": "当前 GitHub 开源的是初版 Demo，主要展示办公室场景；完整版《Microverse In Box 盒中小世界》另行面向 Steam 开发。"
+    "note": "你可以当观察者，也可以走进这个 AI 社会。"
   },
   "intro": {
     "paragraphs": [
-      "Microverse 是一个基于 Godot 4 的多智能体 AI 社会沙盒。多个角色同时存在于虚拟场景中，各自拥有性格、背景、状态与长期记忆，可以自由移动、观察环境、与其他角色对话，并在持续互动里形成更复杂的社会关系。",
-      "公开 Demo 预设 8 个 AI 角色，并把对话、记忆、任务、角色状态和环境感知组织进同一套游戏系统。角色既可以接受和执行任务，也可以彼此协作、竞争或随机社交；玩家则能进入这个世界旁观、移动和直接交流。",
-      "项目支持多种模型服务，包括 OpenAI、Claude、Gemini、DeepSeek、豆包、Kimi 与 Ollama。当前开源仓库对应《Microverse In Box》较早期的 Demo 版本，README 明确说明主要场景仍是办公室，完整商业版本将在 Steam 继续扩展。"
+      "一个模拟上帝类的沙盒游戏，基于Godot 4开发的多智能体AI社交模拟系统。在这个虚拟世界中，AI角色拥有独立的思维和记忆，能够自主进行社交互动、完成任务，并在持续的交流中发展出复杂的社会关系。",
+      "当前开源版本主要展示办公室场景，里面有 8 个性格和背景不同的 AI 角色。它们会自由移动、聊天、记住经历和接受任务；玩家也可以进入场景探索并直接和它们交流。"
     ],
     "facts": [
-      { "label": "适合", "text": "想观察多 AI 社会、让角色在虚拟世界里积累生活与关系，或想二次开发自己的 AI 小世界的人。" },
-      { "label": "核心能力", "text": "多角色自主移动、自然对话、长期记忆、环境感知、情绪与状态、自主任务、群体互动和存档。" },
-      { "label": "开源版本", "text": "GitHub 公开的是《Microverse In Box》的初版 Demo；当前主要展示办公室场景，完整版内容另行开发。" },
-      { "label": "模型接入", "text": "支持 OpenAI、Claude、Gemini、DeepSeek、豆包、Kimi 与 Ollama 等服务，需要自行配置相应 API 或本地模型。" },
-      { "label": "许可", "text": "仓库代码采用 MIT；README 标注部分美术素材来自 LimeZu，第三方素材仍需遵循各自原始许可。" }
+      { "label": "适合", "text": "想观察多个 AI 自主生活、交流和发展关系，或者想改造自己的 AI 世界的人。" },
+      { "label": "怎么玩", "text": "在虚拟世界里移动、观察角色，也可以主动和它们聊天或分配任务。" },
+      { "label": "当前版本", "text": "GitHub 开源的是早期 Demo，主要提供办公室场景和 8 个预设角色。" },
+      { "label": "使用需要", "text": "需要 Godot 4.3 以上版本，并自行配置可用的 AI 模型接口。" }
     ]
   }
 }

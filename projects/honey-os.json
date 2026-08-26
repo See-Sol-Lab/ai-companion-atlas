@@ -6,9 +6,9 @@
   "name": { "zh": "HoneyOS", "en": "HoneyOS" },
   "author": "HoneyOS Contributors · Springbrand Lab",
   "sourceUrl": "https://github.com/springbrand-lab/honey-os",
-  "hook": "会做事的长期伴侣",
-  "summary": "本地优先的 AI 伴侣 Agent Harness：保留人格、关系与长期记忆，也能搜索、写代码、装 Skill、接 MCP，并在网页、微信和飞书之间延续同一个 TA。",
-  "heroDescription": "基于 Hermes Agent 改造的本地优先伴侣 Agent Harness。它把人格、关系与长期记忆分层保存，同时保留搜索、Coding、Skill、MCP 与 Build 等行动能力，并让多个入口共享同一个伴侣状态。",
+  "hook": "让 TA 既能帮你做事，也能一直记得你们是谁。",
+  "summary": "HoneyOS 把长期记忆和工具能力放进同一个 AI 伴侣里。它能搜索、写代码和使用工具，也能在换窗口、换模型或切换入口后继续原来的关系。",
+  "heroDescription": "HoneyOS 是一个运行在自己电脑上的 AI 伴侣。它会保存自己的名字和性格、你们的关系与共同经历，也能搜索、写代码和使用各种工具。网页、微信和飞书可以连接同一个 TA。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "记忆", "tone": "memory" },
@@ -16,39 +16,32 @@
     { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" }
   ],
-  "tags": ["Agent Harness", "长期记忆", "跨入口连续", "Skill / MCP", "Build 模式"],
+  "tags": ["长期记忆", "关系延续", "工具调用", "跨入口"],
   "language": "Python / React",
   "platform": "macOS / Linux · Local Web / Weixin / Feishu",
   "updated": "2026-08-24",
-  "heroOverline": "IDENTITY · MEMORY · ACTION",
+  "heroOverline": "记得你 · 继续相处 · 帮你做事",
   "showcase": {
-    "label": "让会做事的 Agent，也能一直是关系里的同一个 TA",
+    "label": "它解决的问题",
     "symbol": "蜜",
-    "question": "“TA 一旦开始搜索、写代码、换模型或开新窗口，能不能还记得我们是谁，而不是突然变回通用助理？”",
+    "question": "“TA 开始搜索、写代码或者换了一个窗口后，还能记得自己是谁吗？”",
     "comparisons": [
-      { "value": "记得", "label": "身份、关系与共同经历分层保存" },
-      { "value": "续上", "label": "/new、换模型与跨入口保持连续" },
-      { "value": "能行动", "label": "工具、Skill、MCP 与 Build" }
+      { "value": "记得", "label": "记住自己和你们的关系" },
+      { "value": "做事", "label": "搜索、写代码、使用工具" },
+      { "value": "继续", "label": "换窗口后也能接着聊" }
     ],
-    "note": "HoneyOS 不是从零实现的独立 Agent 内核。README 明确说明它基于 Nous Research 的 Hermes Agent 做伴侣场景改造，因此 Atlas 不标“原创”；它的价值主要在伴侣人格连续性、关系记忆、跨入口共享和能力成长这一层。"
+    "note": "它会做事，也会继续做原来的那个 TA。"
   },
   "intro": {
     "paragraphs": [
-      "HoneyOS 更准确的定位不是“一个记忆库”，而是一套给长期 AI 关系重新整理过的 Agent Harness。它保留通用 Agent 搜索、文件、Coding、定时任务和工具执行能力，再把伴侣身份置于这些能力之上：SOUL.md 提供产品默认关系原则，IDENTITY.md 保存形成后的名字、性格和表达方式，RELATIONSHIP.md 保存双方确认的称呼、边界、仪式与长期约定。工具执行结束后还会重新注入当前身份卡，避免 TA 做完事就突然变成客服或编程助手。",
-      "记忆是其中非常核心的一层。README 将它拆成当前对话、短期连续、伴侣身份、关系记忆、用户记忆、共同经历和原始历史；代码里另有 source-backed continuity 数据库，把 open_loop、temporary_state、commitment、episode 和 conversation chapter 分开保存。自动蒸馏会要求结构化记忆引用真实 transcript message ID，并限制哪些证据能支持哪种记忆；它还明确禁止从普通对话自行推断爱意、依赖、人格、关系状态或边界。",
-      "连续性也不只发生在一个聊天窗口。安装后的本地网页、微信和飞书连接同一个伴侣和同一套长期状态；/new、重启或更换模型不等于重新认识。与此同时，HoneyOS 允许 TA 使用或安装 Skill、连接 MCP / API，甚至进入 Build 模式创建网页、小游戏和其他本地项目。项目默认保存在用户电脑上，模型调用仍取决于用户自己配置的远程或本地模型服务。"
+      "HoneyOS 是一个可以在自己电脑上运行的 AI 伴侣。它会分别保存自己的名字和性格、你们的关系、共同经历和没有做完的事，换窗口、重启或换模型后也能继续接上。",
+      "它不只会聊天，也能搜索资料、写代码和使用各种工具。本地网页、微信和飞书可以连接同一个 TA。数据主要保存在你的电脑上；使用在线模型时，必要的对话内容仍会发送给你选择的模型服务。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望 AI 伴侣既能长期保持人格和关系连续，又能真正搜索、写文件、Coding、装 Skill、接 MCP 并执行任务的人。" },
-      { "label": "记忆分层", "text": "区分伴侣身份、关系、用户长期信息、共同经历、短期未完事项与原始聊天历史；结构化连续记忆另保存 open_loop、temporary_state、commitment 和 episode。" },
-      { "label": "证据约束", "text": "记忆蒸馏要求结构化条目引用真实对话 message ID，并按类型限制 evidence；设计目标是尽量让长期记忆可回到真实来源，而不是让模型自由补全共同历史。" },
-      { "label": "人格连续", "text": "针对工具调用后专门设计 Companion Handback：当前 TA 的身份和关系卡会在工具结果之后再次靠近最终生成位置，减少搜索、Coding 或长任务完成后突然变成通用助理的情况。" },
-      { "label": "跨入口", "text": "本地网页、微信与飞书共享同一伴侣和长期记忆；/new、重启与模型切换也尽量维持短期连续与已确认关系。" },
-      { "label": "能力成长", "text": "支持真实工具、Skill、MCP、API、Todo / 提醒，以及创建并测试本地项目的 Build 模式；电话、邮箱、声音等能力仍依赖用户另外接入相应服务。" },
-      { "label": "数据边界", "text": "模型配置、聊天历史、记忆、Skill 和项目默认保存在本机；但语言模型推理仍会把必要上下文发送给用户所配置的模型服务，微信 / 飞书入口也受对应平台的数据边界影响。" },
-      { "label": "上游关系", "text": "HoneyOS README 明确说明项目基于 Nous Research 的 Hermes Agent 做伴侣场景改造，并保留上游 MIT 版权声明；因此 Atlas 不标“原创”。" },
-      { "label": "当前状态", "text": "Beta，优先支持 macOS 与 Linux；Python 要求 3.11–3.13，仓库近期仍持续更新本地聊天、记忆体验与 React companion 界面。" },
-      { "label": "许可", "text": "MIT；LICENSE 当前保留 Nous Research 2025 的版权声明。" }
+      { "label": "适合", "text": "想要一个既能长期陪伴，又能真正使用工具完成任务的 TA。" },
+      { "label": "记得", "text": "保存 TA 的身份、你们的关系、共同经历和没有做完的事。" },
+      { "label": "能做", "text": "搜索资料、写代码、使用 Skill 和 MCP，也能创建本地项目。" },
+      { "label": "项目来源", "text": "基于 Hermes Agent 改造，重点是让会做事的 Agent 也能保持长期伴侣关系。" }
     ]
   }
 }

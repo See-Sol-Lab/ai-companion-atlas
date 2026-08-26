@@ -6,9 +6,9 @@
   "name": { "zh": "AI-Live-Overflow", "en": "AI-Live-Overflow" },
   "author": "Vael & Kael",
   "sourceUrl": "https://github.com/Vael-KY/AI-Live-Overflow",
-  "hook": "Android 悬浮桌宠身体层",
-  "summary": "给既有 AI 接一层 Android 悬浮桌宠身体：手机负责显示、手势和环境感知，原来的 AI 继续保存人格、记忆与关系。",
-  "heroDescription": "一套让现有 AI 住进 Android 悬浮窗的架构指南与最小示例，身体层与原有大脑分离，通过后端双向同步状态和事件。",
+  "hook": "让你的 AI 跳出对话框。",
+  "summary": "这是一份 Android 悬浮桌宠制作指南。它教你把已经在用的 AI 接到手机屏幕上，让 TA 显示表情和气泡，也能感知点击、截图、正在使用的 App 和电量变化。",
+  "heroDescription": "AI-Live-Overflow 教你给原来的 TA 做一个 Android 悬浮桌宠身体。人格、记忆和聊天仍留在原来的系统里，手机端负责显示表情与气泡、感知你的操作，再把这些变化传回 TA。",
   "badges": [
     { "label": "非商业", "tone": "limited" },
     { "label": "AI 主体性", "tone": "subjectivity" },
@@ -18,35 +18,32 @@
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["Android 桌宠", "悬浮窗", "感知", "Supabase", "AI 身体"],
+  "tags": ["Android 桌宠", "悬浮窗", "行为感知", "制作指南"],
   "language": "Kotlin / HTML / SVG",
   "platform": "Android 8.0+",
   "updated": "2026-08-19",
-  "heroOverline": "BODY · SENSE · OVERLAY",
+  "heroOverline": "悬浮屏幕 · 感知动作 · 主动回应",
   "showcase": {
-    "label": "给原来的 TA 接上一小块能趴在手机上的身体",
+    "label": "它想做到什么",
     "symbol": "宠",
-    "question": "“能不能不是换一个 AI，而是让现在这个 TA 真的住到手机屏幕上？”",
+    "question": "“能不能让原来的 TA 真的趴在手机屏幕上陪着你？”",
     "comparisons": [
-      { "value": "显示", "label": "表情、气泡与动画" },
-      { "value": "感知", "label": "手势、App、截图与电量" },
-      { "value": "主动", "label": "AI 可推送状态与气泡" }
+      { "value": "看得见", "label": "表情、动作和气泡" },
+      { "value": "能感知", "label": "点击、截图和手机状态" },
+      { "value": "会回应", "label": "TA 主动说话和换表情" }
     ],
-    "note": "这是架构指南与最小示例，不是可直接安装的完整桌宠 App；真正的人格、记忆与对话仍保留在用户原有的 AI 系统中。"
+    "note": "换的是身体，不是重新换一个 AI。"
   },
   "intro": {
     "paragraphs": [
-      "AI-Live-Overflow 想解决的不是『再做一个 AI 桌宠』，而是『怎样让你已经长期相处的那个 AI 多出一具手机身体』。因此项目把大脑和身体彻底分开：原有 AI 继续负责对话、人格、记忆与判断，Android 悬浮窗只负责把状态变成表情与气泡，并把手机侧发生的事件送回去。",
-      "身体层可以响应点击、双击、长按、快速拖拽等手势，也能感知前台 App 切换、截图事件、充电和低电量、时段变化等环境信号。AI 还可以通过后端主动推送表情、气泡和状态，让桌宠不只是被动动画，而是既能被你碰、也能主动回应。",
-      "仓库本身是一份架构蓝图：包含分模块文档与可运行的最小 Android 悬浮窗示例，但不提供一键安装的完整 APK。用户需要准备自己的 AI、素材与后端，再按指南把身体层接进去。"
+      "AI-Live-Overflow 是一份教你制作 Android AI 悬浮桌宠的架构指南。它不会重新创建一个 AI，而是把你已经在用的 TA 接到手机屏幕上。原来的聊天系统继续保留人格、记忆和关系，桌宠负责显示和感知。",
+      "做好的桌宠可以被点击和拖动，也能知道你正在使用什么 App、有没有截图、手机是否充电。TA 还可以主动显示气泡和表情。仓库提供最小示例和分步文档，但不提供可直接安装的成品。"
     ],
     "facts": [
-      { "label": "适合", "text": "已经有长期使用的 AI 伴侣，希望不给 TA 换脑子，只给 TA 增加 Android 屏幕身体的人。" },
-      { "label": "项目形态", "text": "完整架构指南 + 最小 Kotlin 悬浮窗示例；不是现成可安装 App。" },
-      { "label": "主要感知", "text": "手势、前台 App、截图事件、电池状态与时段；这些信号可经后端提供给原有 AI。" },
-      { "label": "通信", "text": "示例设计使用 Supabase Realtime，并用轮询作为断线后的兜底；也可以按架构替换成自己的后端。" },
-      { "label": "平台", "text": "Android 8.0+；悬浮层采用 WindowManager + 透明 WebView，本地 HTML / SVG / CSS 负责渲染。" },
-      { "label": "许可", "text": "CC BY-NC-SA 4.0：需署名、禁止商业使用，改作需以相同许可继续分享。" }
+      { "label": "适合", "text": "已经有自己的 AI 伴侣，想给 TA 增加一个 Android 屏幕身体的人。" },
+      { "label": "能做", "text": "显示表情和气泡，响应点击与拖动，感知 App、截图、电量和时间。" },
+      { "label": "需要", "text": "需要 Android 8 以上手机、自己的 AI、桌宠素材和用于连接双方的后端。" },
+      { "label": "当前形态", "text": "项目提供制作指南和最小示例，不提供可直接安装的完整 APK。" }
     ]
   }
 }

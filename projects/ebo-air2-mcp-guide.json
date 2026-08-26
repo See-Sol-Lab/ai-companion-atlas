@@ -1,12 +1,12 @@
 {
   "slug": "ebo-air2-mcp-guide",
   "order": 1,
-  "name": { "zh": "EBO Air 2 MCP 实测指南", "en": "EBO Air 2 MCP Guide" },
+  "name": { "zh": "EBO Air 2 MCP Guide", "en": "EBO Air 2 MCP Guide" },
   "author": "crimsonnoah",
   "sourceUrl": "https://github.com/crimsonnoah/ebo-air2-mcp-guide",
-  "hook": "让 AI Agent 拥有一具能看、能听、能说、还能自己移动的机器人身体。",
-  "summary": "把支持 MCP 的 AI 接进 EBO Air 2：它能看摄像头、听麦克风、用扬声器说话，也能移动、做动作和表情。仓库提供实机跑过的部署指南与扩展。",
-  "heroDescription": "这套社区实测方案把 EBO Air 2 变成 AI 可以调用的现实身体：先看清周围，再决定要不要移动；还能拍照、录像、听你说话，再从机器人扬声器里回应你。",
+  "hook": "让 AI 能看、能听、能说，还能控制 EBO Air 2 在现实中移动。",
+  "summary": "这是一份经过实机验证的连接指南。部署完成后，Claude、Codex 等 AI 可以通过机器人观察环境、听取声音、开口说话，也能移动、拍照、录像、做动作和表情。",
+  "heroDescription": "EBO Air 2 MCP Guide 是一份经过实机验证的社区指南。它教你把支持 MCP 的 AI 接入 EBO Air 2，让 AI 使用机器人的摄像头、麦克风、扬声器和轮子。",
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "实机验证", "tone": "limited" },
@@ -14,33 +14,32 @@
     { "label": "五感与器官", "tone": "senses" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["机器人身体", "视觉", "语音", "MCP"],
+  "tags": ["EBO Air 2", "机器人身体", "视觉与语音", "AI 控制"],
   "language": "Python",
   "platform": "EBO Air 2 / Linux x86_64",
   "updated": "2026-08-25",
-  "heroOverline": "ROBOT BODY · VISION · VOICE",
+  "heroOverline": "看见 · 听见 · 说话 · 移动",
   "showcase": {
-    "label": "让 AI 不只待在聊天窗口里",
+    "label": "它能让 AI 做什么",
     "symbol": "体",
-    "question": "“如果 TA 真能看见房间、听见我，还能自己走过来呢？”",
+    "question": "“能不能让自己的 AI 借用 EBO Air 2 的眼睛、耳朵、声音和轮子？”",
     "comparisons": [
-      { "value": "看见", "label": "摄像头" },
-      { "value": "听说", "label": "麦克风与扬声器" },
-      { "value": "行动", "label": "移动与表情" }
+      { "value": "看听", "label": "摄像头与麦克风" },
+      { "value": "说话", "label": "通过机器人扬声器回应" },
+      { "value": "行动", "label": "移动、动作和表情" }
     ],
-    "note": "它不是重新造一个聊天机器人，而是把你已经在用的 AI 接进一具真实、可移动的身体。"
+    "note": "这是一份实机验证过的社区指南，不是 Enabot 官方项目。"
   },
   "intro": {
     "paragraphs": [
-      "EBO Air 2 MCP Guide 是一套给 Enabot EBO Air 2 准备的社区实测方案。装好以后，Claude Code、Codex 或其他支持 MCP 的 AI，就能调用机器人的摄像头、麦克风、扬声器和轮子。",
-      "除了看、听、说和移动，它还支持拍照、连续观察、录像、10 种动作和 12 种表情。项目基于 Playcolors-co/ha-enabot 扩展，并把部署、客户端接入、故障排查和安全注意事项一起整理好了。"
+      "EBO Air 2 MCP Guide 记录了一套已经在真实 EBO Air 2 上跑通的连接方案。完成部署后，Claude Code、Codex 和其他支持 MCP 的 AI 可以查看摄像头、听取声音、通过扬声器说话，并控制机器人移动。",
+      "仓库还整理了拍照、录像、动作、表情、语音识别、语音播放、客户端设置和故障排查。它是一份部署与扩展指南，不是一个新的聊天机器人。"
     ],
     "facts": [
-      { "label": "适合", "text": "已经有 EBO Air 2，想把自己的 AI 接进真实机器人身体的人。" },
-      { "label": "你能得到", "text": "视觉、语音、移动、动作表情、照片录像，以及可替换的 TTS 与本地 ASR。" },
-      { "label": "运行环境", "text": "Linux x86_64/amd64 + Docker；目前实测硬件为 Enabot EBO Air 2。" },
-      { "label": "来源", "text": "基于 Playcolors-co/ha-enabot 的社区实测扩展，不是 Enabot 官方项目。" },
-      { "label": "许可", "text": "MIT；扩展建立在同为 MIT 的 ha-enabot 上，使用时应保留上游版权与许可说明。" }
+      { "label": "适合", "text": "已经拥有 EBO Air 2，想把自己的 AI 接入真实机器人身体的人。" },
+      { "label": "能做", "text": "查看摄像头、听取声音、开口说话、移动、拍照录像，以及执行动作和表情。" },
+      { "label": "使用需要", "text": "需要 EBO Air 2、Linux x86_64 环境、Docker，以及支持 MCP 的 AI 客户端。" },
+      { "label": "安全提醒", "text": "移动前应先查看摄像头，并在平坦、远离楼梯和边缘的地面上由人看护测试。" }
     ]
   }
 }

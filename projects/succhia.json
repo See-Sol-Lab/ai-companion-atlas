@@ -5,9 +5,9 @@
   "name": { "zh": "Succhia", "en": "Succhia" },
   "author": "Cu & Lunedì",
   "sourceUrl": "https://github.com/29-Cu/succhia",
-  "hook": "iPhone BLE 触觉控制桥",
-  "summary": "把 AI 聊天与 BLE 触觉设备控制放进同一个 iPhone 前台页面，并补上重连、保活、多通道控制和诊断。",
-  "heroDescription": "面向 iPhone 的 18+ BLE 控制方案：聊天和设备控制共用前台页面，减少后台冻结与断连，并提供可靠性恢复和多通道控制。",
+  "hook": "让 AI 在 iPhone 上陪你聊天时，也能控制兼容的蓝牙情趣玩具。",
+  "summary": "这是面向成年用户的 18+ 控制插件。它把聊天和玩具控制放在同一个页面里，避免切换 App 后蓝牙断开，并支持多通道强度、波形、定时停止和一键归零。",
+  "heroDescription": "Succhia 把 AI、控制服务器和兼容的蓝牙情趣玩具连接起来。聊天页面直接放在控制页面中，AI 可以在对话时调整设备状态，使用者也能随时手动接管或停止。",
   "badges": [
     { "label": "18+", "tone": "adult" },
     { "label": "五感与器官", "tone": "senses" },
@@ -17,34 +17,32 @@
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["18+", "iPhone", "BLE", "现实触觉", "聊天融合"],
+  "tags": ["18+", "iPhone", "蓝牙玩具", "AI 控制"],
   "language": "HTML / Python / JavaScript",
   "platform": "iPhone / Bluefy / Web Bluetooth",
   "updated": "2026-07-25",
-  "heroOverline": "CHAT · BLE · CONTINUITY",
+  "heroOverline": "边聊 · 边控制 · 保持连接",
   "showcase": {
-    "label": "聊天不退出，设备控制也不断线",
+    "label": "它能做什么",
     "symbol": "触",
-    "question": "“在 iPhone 上和 TA 聊天时，设备控制能不能一直保持在线？”",
+    "question": "“能不能在 iPhone 上和 TA 聊天时，让它同时控制蓝牙玩具？”",
     "comparisons": [
-      { "value": "聊天", "label": "嵌进控制页" },
-      { "value": "连接", "label": "看门狗与保活" },
-      { "value": "控制", "label": "多通道并行" }
+      { "value": "聊天", "label": "聊天页面嵌入控制页" },
+      { "value": "控制", "label": "调节强度、通道和波形" },
+      { "value": "安全", "label": "定时停止与手动接管" }
     ],
-    "note": "核心思路不是让蓝牙页面在后台硬撑，而是让聊天与控制从一开始就在同一个前台页面。"
+    "note": "只面向知情、自愿的成年用户，手动操作始终优先。"
   },
   "intro": {
     "paragraphs": [
-      "Succhia 是一套面向 iPhone 的 18+ BLE 设备控制方案。AI 通过 MCP 或 HTTP 把控制状态送到服务器，手机端控制页再通过 Web Bluetooth 操作设备；聊天页面可以直接嵌进控制页，因此用户不用在聊天和蓝牙控制之间来回切换。",
-      "项目针对真实使用里常见的断连和后台冻结做了不少工程处理，包括僵尸连接恢复、看门狗重连、同值保活、双向增量同步、多通道并行控制和远程诊断。协议逆向与部分架构思路来自前人公开工作，作者在 README 中明确列出来源，并说明与 bobo-bridge 的独立撞车关系。"
+      "Succhia 是一套让 AI 控制兼容蓝牙情趣玩具的 18+ 工具。iPhone 通过支持蓝牙的浏览器连接设备，AI 再经过控制服务器发送指令。聊天界面可以直接放进控制页，因此不需要在聊天和蓝牙页面之间来回切换。",
+      "项目支持自动重连、连接保活、多通道控制、强度变化模式和到时自动停止。它最初针对 FUNF 啵啵贝开发，其他 BLE 玩具能否使用取决于设备协议，需要自行适配。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望在 iPhone 上把 AI 陪伴对话与兼容 BLE 触觉设备连接起来的成年用户。" },
-      { "label": "内容提示", "text": "涉及成人向触觉设备与亲密互动，Atlas 明确归入 18+ 分类。" },
-      { "label": "手机环境", "text": "iPhone 侧主要依赖支持 Web Bluetooth 的 Bluefy；Android 与桌面浏览器可按项目说明使用兼容浏览器。" },
-      { "label": "主要能力", "text": "聊天融合、防后台冻结、自动重连、保活、多通道控制、限时归零与远程诊断。" },
-      { "label": "来源说明", "text": "SOSEXY 协议逆向与浏览器蓝牙桥思路来自已署名的社区先行工作；本项目重点增加 iPhone 聊天融合和可靠性层。" },
-      { "label": "许可", "text": "CC BY-NC 4.0，允许署名后的非商业分享与改编。" }
+      { "label": "适合", "text": "希望在 iPhone 上把 AI 陪聊与兼容蓝牙情趣玩具连接起来的成年用户。" },
+      { "label": "能做", "text": "调节多个通道的强度和变化模式，也可以设置持续时间与一键停止。" },
+      { "label": "使用需要", "text": "需要兼容的 BLE 玩具、支持 Web Bluetooth 的浏览器、控制服务器和 AI 侧工具。" },
+      { "label": "安全提醒", "text": "应从低强度开始、设置限时，并确保所有参与者成年、自愿且知情。" }
     ]
   }
 }

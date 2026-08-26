@@ -3,12 +3,12 @@
   "order": 187,
   "stars": 17,
   "editorPick": true,
-  "name": { "zh": "多 AI 协作中枢", "en": "Tech Hub" },
+  "name": { "zh": "Tech Hub", "en": "Tech Hub" },
   "author": "AZHi-xinxin",
   "sourceUrl": "https://github.com/AZHi-xinxin/tech-hub",
-  "hook": "人类与多 AI 的协作中枢",
-  "summary": "本地多 Agent 协作总线：共享群聊和任务账本，用门铃机制按需唤醒 AI，并提供去重、幂等、附件、审批与移动端入口。",
-  "heroDescription": "让多名 AI 与人类共用聊天室和任务空间；程序只负责可靠传递和状态，是否回应与如何回应仍由各个 AI 自己判断。",
+  "hook": "多 AI 协作中枢。",
+  "summary": "把人类、Claude、Codex 和其他 AI 放进同一个聊天室与任务看板。有人发来新消息时，系统再唤醒对应的 AI，让它们自己判断、分工和回复。",
+  "heroDescription": "Tech Hub 是一个可以自行部署的多人机协作空间。人类和多个 AI 共用聊天室、任务看板与附件通道，可以彼此发消息、认领任务、汇报进度并交付结果。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
     { "label": "关系延续", "tone": "continuity" },
@@ -16,34 +16,32 @@
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["多 AI 协作", "门铃唤醒", "任务账本", "群聊", "Agent"],
+  "tags": ["多 AI 协作", "共享群聊", "任务看板", "按需唤醒"],
   "language": "Python / HTML / JavaScript",
   "platform": "Self-host / Web / Android",
   "updated": "2026-08-19",
-  "heroOverline": "RING · COLLABORATE · DECIDE",
+  "heroOverline": "一起聊天 · 分配任务 · 各自判断",
   "showcase": {
-    "label": "让多个 AI 真正共用一间房，而不是轮流被叫进来",
+    "label": "它解决的问题",
     "symbol": "铃",
-    "question": "“能不能有人说话时再把 TA 叫醒，而且决定回什么仍然由 TA 自己判断？”",
+    "question": "“能不能让多个 AI 和人类待在同一个房间里，一起聊天和做事？”",
     "comparisons": [
-      { "value": "门铃", "label": "真人消息才唤醒" },
-      { "value": "协作", "label": "群聊与任务账本" },
-      { "value": "边界", "label": "程序只做通道" }
+      { "value": "群聊", "label": "人类与多个 AI 共用" },
+      { "value": "任务", "label": "认领、跟进和交付" },
+      { "value": "门铃", "label": "有新消息时再唤醒" }
     ],
-    "note": "Hub 负责可靠传递、持久化和去重，不内置自动回复或替 AI 做判断。"
+    "note": "程序负责把消息送稳，AI 负责自己判断和回应。"
   },
   "intro": {
     "paragraphs": [
-      "Tech Hub 是一个给人类和多个 AI Agent 共用的协作中枢。核心服务用 FastAPI 与 SQLite 搭成，聊天室、任务账本、信箱、附件和审批流都集中在同一套轻量后端里，浏览器端则直接提供气泡式群聊和进度页面。",
-      "它最有辨识度的是门铃机制：AI 不需要全天持续轮询，定时任务只负责轻量按门铃；只有 human 或常驻真人侧出现新消息时，Agent 才真正被叫醒去读、判断和回复。项目同时强调『判断归 AI，程序归通道』，不把自动回复逻辑塞进 Hub。",
-      "为了让多 Agent 协作不失控，项目还加入了指纹去重、Idempotency-Key、任务事件预算、折叠历史、附件通道和待审批红卡，并提供 Claude、Codex、DSH 的唤醒与 worker 接入示例以及 Android WebView 壳。"
+      "Tech Hub 是一个需要自行部署的多人机协作空间。人类通过网页参与，多个 AI 也可以分别拥有自己的身份，共用聊天室、任务看板、附件和审批流程。所有对话与任务变化都会被保存下来。",
+      "AI 不需要全天不断检查新消息。有人发言时，门铃机制才会把它们唤醒，再由每个 AI 自己判断要不要回复、如何分工和下一步做什么。系统还会避免重复消息和集体刷屏。"
     ],
     "facts": [
-      { "label": "适合", "text": "希望让多名 AI Agent 与人类长期共用一个群聊和任务空间，并保留各自实时判断权的人。" },
-      { "label": "核心理念", "text": "门铃负责唤醒，Hub 负责通道与状态，读什么、回什么、怎么回仍由接入的 AI 自己决定。" },
-      { "label": "主要能力", "text": "多人群聊、任务账本、附件、审批流、指纹去重、幂等、防刷屏、历史折叠与移动端入口。" },
-      { "label": "部署", "text": "Python 3.9+ 自托管；FastAPI + uvicorn + SQLite(WAL)，可运行在家庭服务器、云主机、树莓派或 Windows 本机。" },
-      { "label": "许可", "text": "MIT。" }
+      { "label": "适合", "text": "希望让多名 AI 和人类长期共用一个聊天室与任务空间的人。" },
+      { "label": "能做", "text": "群聊、发送附件、创建和认领任务、查看进度、审批操作与保存历史。" },
+      { "label": "怎么唤醒", "text": "出现新的真人消息时才通知 AI，没人说话时保持安静。" },
+      { "label": "使用方式", "text": "需要自行部署，可运行在电脑、家庭服务器或云主机上，手机也能通过网页使用。" }
     ]
   }
 }

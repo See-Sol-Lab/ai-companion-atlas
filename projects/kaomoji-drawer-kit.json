@@ -2,47 +2,44 @@
   "slug": "kaomoji-drawer-kit",
   "order": 191,
   "stars": 11,
-  "name": { "zh": "颜文字抽屉", "en": "KaomojiDrawerKit" },
+  "name": { "zh": "KaomojiDrawerKit", "en": "KaomojiDrawerKit" },
   "author": "Pyruslili",
   "sourceUrl": "https://github.com/Pyruslili/KaomojiDrawerKit",
-  "hook": "聊天输入框里的颜文字组件",
-  "summary": "SwiftUI 颜文字抽屉，内置 21 类 204 个起始颜文字，支持分类浏览、自定义增删、本地保存和换肤，可直接嵌进 iOS / macOS 聊天前端。",
-  "heroDescription": "一个可直接嵌进聊天 composer 的 SwiftUI 小组件：点选即插入草稿，也能维护自己的颜文字收藏。",
+  "hook": "给聊天框加一个颜文字抽屉，点一下就能放进输入框。",
+  "summary": "这是给 iPhone、iPad 和 Mac 聊天应用使用的小组件。它内置 204 个颜文字，可以按分类挑选，也能添加、删除和保存自己的收藏。",
+  "heroDescription": "KaomojiDrawerKit 可以给聊天应用增加一个颜文字抽屉。使用者能够按分类挑选表情，点一下放进尚未发送的草稿，也可以添加或删除自己的颜文字。",
   "badges": [
     { "label": "手机前端", "tone": "mobile" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
-  "tags": ["颜文字", "SwiftUI", "聊天输入框", "iOS", "macOS"],
+  "tags": ["颜文字", "聊天输入框", "iOS / macOS", "可自定义"],
   "language": "Swift / SwiftUI",
   "platform": "iOS 17+ / macOS 14+",
   "updated": "2026-08-23",
-  "heroOverline": "KAOMOJI · COMPOSER · SWIFTUI",
+  "heroOverline": "打开抽屉 · 挑个表情 · 放进草稿",
   "showcase": {
-    "label": "让聊天输入框多一只随手能拉开的颜文字抽屉",
+    "label": "它能做什么",
     "symbol": "顔",
-    "question": "“能不能不用切键盘，就在聊天框里直接挑一个颜文字？”",
+    "question": "“能不能不切换键盘，直接在聊天框里挑一个颜文字？”",
     "comparisons": [
-      { "value": "204", "label": "起始颜文字" },
-      { "value": "21 类", "label": "分类浏览" },
-      { "value": "本地", "label": "自定义收藏" }
+      { "value": "分类", "label": "按心情快速挑选" },
+      { "value": "插入", "label": "点一下放进草稿" },
+      { "value": "收藏", "label": "添加或删除自己的颜文字" }
     ],
-    "note": "选中颜文字只会把字符串交回聊天草稿，真正发送仍由宿主应用控制；用户也可以完全替换默认颜文字库。"
+    "note": "点选后只会放进草稿，是否发送仍由使用者决定。"
   },
   "intro": {
     "paragraphs": [
-      "KaomojiDrawerKit 是一个专门给聊天 composer 准备的 SwiftUI 颜文字抽屉。它支持横向分类、点选插入、自定义增加和删除，并通过 UserDefaults 在本地保存用户自己的收藏。",
-      "项目内置 21 个分类和 204 个起始颜文字，同时允许应用换成自己的 curated library。相比做系统级自定义键盘，这种应用内抽屉更轻，也更适合直接嵌进 AI 陪伴、聊天或私有通讯前端。",
-      "它以 Swift Package 形式发布，支持 iOS 17+ 与 macOS 14+，没有第三方依赖；项目还包含可定制配色、渐变背景和原创 SVG 图标。"
+      "KaomojiDrawerKit 是给 iPhone、iPad 和 Mac 聊天应用准备的颜文字抽屉。打开后可以按分类浏览，点一下就把选中的颜文字放进当前草稿，不需要切换系统键盘。",
+      "它自带 21 个分类和 204 个颜文字，也可以换成应用自己的颜文字库。使用者添加或删除的内容会保存在本机。"
     ],
     "facts": [
-      { "label": "适合", "text": "正在做 iPhone、iPad 或 Mac 聊天前端，希望给输入框加一个可维护颜文字库的开发者。" },
-      { "label": "主要能力", "text": "分类浏览、点选插入、自定义增删、本地持久化和界面配色定制。" },
-      { "label": "内置内容", "text": "21 个分类、204 个起始颜文字；默认库可以整体替换。" },
-      { "label": "集成", "text": "通过 Swift Package Manager 接入；iOS 17+、macOS 14+，无第三方依赖。" },
-      { "label": "素材", "text": "README 声明随包提供的三个 SVG 图标为项目原创，并与代码一起采用 MIT。" },
-      { "label": "许可", "text": "MIT。" }
+      { "label": "适合", "text": "正在制作 iPhone、iPad 或 Mac 聊天应用，想给输入框增加颜文字功能的开发者。" },
+      { "label": "内置内容", "text": "提供 21 个分类和 204 个起始颜文字。" },
+      { "label": "可以修改", "text": "支持添加、删除和替换颜文字，也能调整抽屉的颜色与背景。" },
+      { "label": "使用方式", "text": "通过 Swift Package 接入应用，支持 iOS 17 以上和 macOS 14 以上版本。" }
     ]
   }
 }

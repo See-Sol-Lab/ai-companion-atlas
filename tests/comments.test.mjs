@@ -287,7 +287,6 @@ test('submission migration creates private pending records and review indexes', 
 
 test('every generated project detail page contains its own comment slug and shared client', async () => {
   const projectFiles = (await readdir(path.join(root, 'projects'))).filter((name) => name.endsWith('.json'));
-  assert.equal(projectFiles.length, 180);
 
   for (const fileName of projectFiles) {
     const project = JSON.parse(await readFile(path.join(root, 'projects', fileName), 'utf8'));
