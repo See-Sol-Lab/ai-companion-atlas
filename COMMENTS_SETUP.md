@@ -1,4 +1,4 @@
-# 匿名留言 V1 部署配置
+# 互动功能部署配置
 
 代码使用 Cloudflare Pages Functions、D1 与 Turnstile。仓库不保存任何生产密钥。
 
@@ -25,8 +25,9 @@
 
 - `IP_HASH_SALT`：随机生成的长字符串，用于不可逆 IP 哈希与频控。
 - `ADMIN_TOKEN`：随机生成的长字符串，用于访问审核 API。
+- `COMMUNITY_INVITE_CODE`：论坛预览阶段的邀请码。发帖与回复时验证，不写入 D1，也不返回给公共接口。
 
-留言审核页地址为 `/admin/comments/`，项目投稿后台为 `/admin/submissions/`。两页共用 `ADMIN_TOKEN` 与当前标签页的 `sessionStorage`。留言可以通过或删除；投稿可以标记已处理或删除。
+留言审核页地址为 `/admin/comments/`，项目投稿后台为 `/admin/submissions/`，社区审核页为 `/admin/community/`。三页共用 `ADMIN_TOKEN` 与当前标签页的 `sessionStorage`。留言和社区内容可以通过或删除；投稿可以标记已处理或删除。
 
 ## 4. 部署后验收
 
@@ -35,6 +36,15 @@
 3. 在 `/admin/comments/` 通过测试留言。
 4. 刷新项目详情页，最长 30 秒后应显示该留言。
 5. 删除测试数据，确认审核页恢复为空。
+
+## 5. Cloudflare 社区预览验收
+
+1. 确认已执行 `migrations/0004_community.sql`，并配置 `COMMUNITY_INVITE_CODE`。
+2. 打开 `/community/`，使用错误邀请码提交一次，确认页面拒绝且 D1 没有新增记录。
+3. 使用正确邀请码提交帖子，确认公共列表暂时不可见。
+4. 在 `/admin/community/` 通过帖子，刷新 `/community/`，确认帖子出现并可进入详情页。
+5. 在详情页提交回复，确认审核前不可见；通过后显示为新的公开楼层。
+6. Preview 验收期间不要运行香港 `atlas-deploy`；确认论坛形态后再决定是否接入正式站。
 
 当前频控为同一 IP 哈希每 10 分钟最多 3 条；D1 中不保存原始 IP。
 

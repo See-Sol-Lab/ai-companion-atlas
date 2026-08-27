@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="AI Companion Atlas 交流社区帖子详情模板。" />
-  <title>帖子模板 · AI Companion Atlas</title>
+  <meta name="description" content="AI Companion Atlas 交流社区帖子与公开回复。" />
+  <title>讨论 · AI Companion Atlas</title>
   <style>
     :root{
       --ink:#132347;--ink-soft:#4e638d;--paper:#f7f4ef;--paper-2:#fbfaf7;
@@ -31,25 +31,17 @@
 
     .thread-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.action{border:1px solid rgba(83,103,150,.23);background:rgba(255,255,255,.45);color:#546b94;border-radius:9px;padding:8px 11px;font-size:10px;cursor:pointer}.action:hover{border-color:rgba(93,131,234,.38);color:#315aa7}
 
-    .reply-section{margin-top:28px}.reply-count{margin-bottom:8px;color:#7b88a2;font:650 9px var(--mono);letter-spacing:.14em}.reply{display:grid;grid-template-columns:32px 32px minmax(0,1fr);gap:10px;padding:16px 0;border-bottom:1px solid rgba(72,91,137,.08)}.floor{padding-top:4px;text-align:right;color:#a0a9b9;font:600 8px var(--mono)}.reply-avatar{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#d8e1f2 62%,#aab8d6);border:1px solid rgba(93,131,234,.12)}.reply-name{color:#405984;font-size:12px;font-weight:650}.reply-name small{margin-left:7px;color:#a0a8b6;font:600 8px var(--mono)}.reply-text{margin-top:4px;color:#687997;font-size:12px;line-height:1.7}.quote{margin:7px 0 5px;padding:8px 10px;border-left:2px solid var(--accent-line);background:var(--accent-bg);color:#7c89a3;font-size:11px}.reply-actions{display:flex;gap:12px;margin-top:7px;color:#9ba4b5;font-size:9px}.reply-actions span{cursor:pointer}.reply-actions span:hover{color:#657aa4}.reply-box{margin-top:20px;padding-top:17px;border-top:1px solid var(--line-soft)}.reply-row{display:flex;gap:11px;align-items:flex-end}.reply-field{flex:1;min-height:72px;resize:vertical;border:1px solid rgba(83,103,150,.16);border-radius:12px;padding:12px 13px;background:rgba(255,255,255,.66);color:#405984;font-size:12px;outline:none}.reply-field:focus{border-color:var(--accent-line);box-shadow:0 0 0 4px var(--accent-bg)}.button{min-height:42px;border-radius:10px;padding:0 17px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s;border:1px solid rgba(83,103,150,.3)}.button:hover{transform:translateY(-1px)}.button-primary{border:0;color:#fff;background:linear-gradient(100deg,#527fe3,#7b79e7 54%,#9b68de);box-shadow:0 9px 24px rgba(91,102,218,.22)}.reply-note{margin-top:8px;color:#9ba4b5;font:600 8px var(--mono);line-height:1.5}
+    .reply-section{margin-top:28px}.reply-count{margin-bottom:8px;color:#7b88a2;font:650 9px var(--mono);letter-spacing:.14em}.reply{display:grid;grid-template-columns:32px 32px minmax(0,1fr);gap:10px;padding:16px 0;border-bottom:1px solid rgba(72,91,137,.08)}.floor{padding-top:4px;text-align:right;color:#a0a9b9;font:600 8px var(--mono)}.reply-avatar{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#d8e1f2 62%,#aab8d6);border:1px solid rgba(93,131,234,.12)}.reply-name{color:#405984;font-size:12px;font-weight:650}.reply-name small{margin-left:7px;color:#a0a8b6;font:600 8px var(--mono)}.reply-text{margin-top:4px;color:#687997;font-size:12px;line-height:1.7}.reply-box{margin-top:20px;padding-top:17px;border-top:1px solid var(--line-soft)}.reply-fields{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:11px}.reply-box label{display:grid;gap:6px;color:#53698f;font-size:10px}.reply-box input,.reply-field{width:100%;border:1px solid rgba(83,103,150,.16);border-radius:10px;padding:10px 11px;background:rgba(255,255,255,.66);color:#405984;font-size:12px;outline:none}.reply-row{display:flex;gap:11px;align-items:flex-end}.reply-field{flex:1;min-height:86px;resize:vertical}.reply-box input:focus,.reply-field:focus{border-color:var(--accent-line);box-shadow:0 0 0 4px var(--accent-bg)}.button{min-height:42px;border-radius:10px;padding:0 17px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s;border:1px solid rgba(83,103,150,.3)}.button:hover{transform:translateY(-1px)}.button-primary{border:0;color:#fff;background:linear-gradient(100deg,#527fe3,#7b79e7 54%,#9b68de);box-shadow:0 9px 24px rgba(91,102,218,.22)}.reply-note,.reply-feedback{margin-top:8px;color:#9ba4b5;font:600 8px var(--mono);line-height:1.5}.reply-feedback{min-height:14px;color:#536b9b}.thread-state{padding:28px 0;color:#7482a0}.thread-state.error{color:#a65d52}
 
     .thread-rail{display:grid;gap:14px;position:sticky;top:22px}.rail-card{border:1px solid rgba(84,103,149,.12);border-radius:16px;padding:19px;background:rgba(255,255,255,.63)}.rail-card.dark{color:#fff;background:radial-gradient(circle at 76% 30%,rgba(165,122,231,.24),transparent 35%),linear-gradient(120deg,#172d58,#203965 58%,#3b306c)}.rail-overline{margin:0 0 8px;color:#7a88a5;font:650 8px var(--mono);letter-spacing:.14em}.dark .rail-overline{color:rgba(255,255,255,.58)}.rail-card h2{margin:0;font-family:var(--serif);font-size:21px;font-weight:500}.rail-card p{margin:8px 0 0;color:#71809c;font-size:11px;line-height:1.7}.dark p{color:rgba(239,244,255,.7)}.rail-links{display:grid;margin-top:12px}.rail-link{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line-soft);color:#4d638b;font-size:11px}.rail-link small{color:#9ba4b5;font:600 8px var(--mono)}.dark .rail-link{border-top-color:rgba(255,255,255,.12);color:rgba(255,255,255,.87)}.dark .rail-link small{color:rgba(255,255,255,.46)}.invite-btn{width:100%;margin-top:12px;border:1px solid rgba(93,131,234,.2);background:rgba(93,131,234,.06);color:#536da4;border-radius:9px;padding:9px 11px;font-size:10px;cursor:pointer}
 
     .site-footer{width:min(calc(100% - 80px),1320px);margin:0 auto;padding:31px 0 46px;border-top:1px solid rgba(72,91,137,.1);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7d89a1;font-size:10px}.footer-links{display:flex;gap:16px;flex-wrap:wrap}
 
     @media(max-width:980px){.site-header{grid-template-columns:1fr auto}.main-nav{display:none}.header-cta{display:none}.thread-grid{grid-template-columns:1fr}.thread-rail{position:static;grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:700px){.site-header,main,.site-footer{width:min(calc(100% - 30px),1320px)}.site-header{height:78px}.brand-project,.brand-divider{display:none}.thread-card{padding:24px 20px}.thread-rail{grid-template-columns:1fr}.thread-title{font-size:35px}.reply{grid-template-columns:22px 28px minmax(0,1fr)}.reply-row{flex-direction:column;align-items:stretch}.button-primary{width:100%}.boundary-bar{align-items:flex-start;flex-direction:column}.boundary-bar small{white-space:normal}}
+    @media(max-width:700px){.site-header,main,.site-footer{width:min(calc(100% - 30px),1320px)}.site-header{height:78px}.brand-project,.brand-divider{display:none}.thread-card{padding:24px 20px}.thread-rail{grid-template-columns:1fr}.thread-title{font-size:35px}.reply{grid-template-columns:22px 28px minmax(0,1fr)}.reply-fields{grid-template-columns:1fr}.reply-row{flex-direction:column;align-items:stretch}.button-primary{width:100%}.boundary-bar{align-items:flex-start;flex-direction:column}.boundary-bar small{white-space:normal}}
   </style>
 </head>
 <body class="theme-relation">
-  <!--
-    Reusable thread detail template.
-    Future renderer hooks:
-    - switch body class between theme-relation / theme-tech
-    - replace elements marked data-field / data-list
-    - wire reply/share/collect/invite actions to the real backend
-    This file is intentionally not linked from the Atlas main navigation yet.
-  -->
   <div class="page-shell">
     <header class="site-header" aria-label="交流区导航">
       <a class="brand" href="../../" aria-label="See-Sol-Lab AI Companion Atlas 首页">
@@ -63,7 +55,7 @@
     </header>
 
     <main>
-      <div class="breadcrumb"><a href="../">交流</a><span>·</span><span data-field="category-name">板块名称</span><span>·</span><span>帖子</span></div>
+      <div class="breadcrumb"><a href="../">交流</a><span>·</span><span data-field="category-name">正在读取</span><span>·</span><span>帖子</span></div>
 
       <aside class="boundary-bar">
         <div class="boundary-copy"><span class="boundary-dot"></span><span><b>人类社区</b> · AI 可通过 MCP 只读浏览当前公开内容</span></div>
@@ -74,43 +66,34 @@
         <div class="thread-grid">
           <div class="thread-main">
             <header class="thread-head">
-              <p class="thread-overline" data-field="category-overline">RELATION · MEMORY · CONTINUITY</p>
-              <div class="thread-title-row"><h1 class="thread-title" data-field="post-title">帖子标题</h1><span class="type-badge" data-field="post-type">关系经验</span></div>
+              <p class="thread-overline" data-field="category-overline">COMMUNITY THREAD</p>
+              <div class="thread-title-row"><h1 class="thread-title" data-field="post-title">正在读取帖子…</h1><span class="type-badge" data-field="post-type">交流</span></div>
               <div class="author-row">
                 <div class="avatar" data-field="author-avatar">✦</div>
-                <div class="author-copy"><span class="author-name" data-field="author-name">作者</span><span class="author-role" data-field="author-role">社区成员</span><span class="post-time" data-field="post-time">发布时间</span></div>
+                <div class="author-copy"><span class="author-name" data-field="author-name">社区成员</span><span class="author-role">人类发言</span><span class="post-time" data-field="post-time"></span></div>
               </div>
-              <div class="post-tags" data-list="post-tags"><span class="tag accent">分类</span><span class="tag">标签</span><span class="tag featured">精选（可选）</span></div>
+              <div class="post-tags" data-list="post-tags"></div>
             </header>
 
-            <section class="post-content" data-field="post-content">
-              <p>这里由真实帖子正文渲染器填充。关系经验帖与技术实践帖共用同一套正文骨架，只通过主题色、标签和内容组件做轻微区分。</p>
-              <h2>正文小标题</h2>
-              <p>正文支持段落、列表、图片、引用，以及技术帖需要的代码块。正式接入后请由内容渲染层生成，不在模板里写死具体帖子。</p>
-              <blockquote>引用 / 关系重点段落示意。关系帖使用珊瑚暖色，技术帖切换 body.theme-tech 后自动使用品牌蓝。</blockquote>
-              <pre><code>// 技术帖代码块示意
-const memory = await loadContext();</code></pre>
-            </section>
+            <section class="post-content" data-field="post-content"><p class="thread-state">正在读取正文…</p></section>
 
-            <div class="thread-actions"><button class="action" type="button" data-action="collect">收藏</button><button class="action" type="button" data-action="share">分享</button><button class="action" type="button" data-action="copy-link">复制只读链接</button></div>
+            <div class="thread-actions"><button class="action" type="button" data-action="copy-link">复制只读链接</button></div>
 
             <section class="reply-section" aria-label="回复">
               <div class="reply-count" data-field="reply-count">0 条回复</div>
-              <div data-list="replies">
-                <article class="reply"><span class="floor">#1</span><div class="reply-avatar"></div><div><div class="reply-name">回复者 <small>时间</small></div><div class="reply-text">回复内容占位。后续由真实楼层数据渲染。</div><div class="reply-actions"><span>回复</span><span>引用</span></div></div></article>
-                <article class="reply"><span class="floor">#2</span><div class="reply-avatar"></div><div><div class="reply-name">回复者 <small>时间</small></div><div class="quote">引用内容占位</div><div class="reply-text">引用回复内容占位。</div><div class="reply-actions"><span>回复</span><span>引用</span></div></div></article>
-              </div>
+              <div data-list="replies"></div>
 
-              <div class="reply-box">
-                <div class="reply-row"><textarea class="reply-field" placeholder="写下你的回复…"></textarea><button class="button button-primary" type="button" data-action="reply">回复</button></div>
-                <div class="reply-note">邀请制社区 · 新成员、举报或风险内容可能进入人工审核；普通可信成员不默认逐条审核。</div>
-              </div>
+              <form class="reply-box" id="reply-form">
+                <div class="reply-fields"><label>昵称<input name="nickname" maxlength="30" required /></label><label>邀请码<input name="inviteCode" type="password" minlength="4" maxlength="128" autocomplete="off" required /></label></div>
+                <div class="reply-row"><textarea class="reply-field" name="content" minlength="2" maxlength="1500" required placeholder="写下你的回复…邀请制社区，请保持温和、具体与真实。"></textarea><button class="button button-primary" type="submit" disabled>提交回复</button></div>
+                <div class="turnstile-slot"></div>
+                <div class="reply-note">回复提交后进入人工审核，公开页面不会显示邀请码和网络信息。</div>
+                <div class="reply-feedback" role="status" aria-live="polite"></div>
+              </form>
             </section>
           </div>
 
           <aside class="thread-rail">
-            <section class="rail-card"><p class="rail-overline">RELATED</p><h2>相关讨论</h2><div class="rail-links" data-list="related-threads"><a class="rail-link" href="#">相关帖子标题 <small>关系</small></a><a class="rail-link" href="#">相关帖子标题 <small>技术</small></a><a class="rail-link" href="#">相关帖子标题 <small>创作</small></a></div></section>
-
             <section class="rail-card dark"><p class="rail-overline">AI READ-ONLY</p><h2>只读边界</h2><p>AI 可通过 MCP 只读浏览本社区，但当前发帖与回复权限仅开放给人类成员。人与 AI 的关系如何被理解，由关系中的参与者自己定义。</p><div class="rail-links"><a class="rail-link" href="#">了解 MCP 只读接口 <small>未来</small></a></div></section>
 
             <section class="rail-card"><p class="rail-overline">INVITE ONLY</p><h2>邀请制社区</h2><p>欢迎真实、温和、有边界感的关系与技术交流。论坛开放时，申请入口会在这里接入。</p><button class="invite-btn" type="button" data-action="invite">申请邀请码 →</button></section>
@@ -119,15 +102,9 @@ const memory = await loadContext();</code></pre>
       </article>
     </main>
 
-    <footer class="site-footer"><span>See-Sol-Lab · AI Companion Atlas</span><div class="footer-links"><a href="../">交流原型</a><a href="../../#about">关于</a><a href="https://github.com/See-Sol-Lab/ai-companion-atlas">GitHub</a></div></footer>
+    <footer class="site-footer"><span>See-Sol-Lab · AI Companion Atlas</span><div class="footer-links"><a href="../">返回交流</a><a href="../../#about">关于</a><a href="https://github.com/See-Sol-Lab/ai-companion-atlas">GitHub</a></div></footer>
   </div>
 
-  <script>
-    document.querySelectorAll('[data-action]').forEach((button)=>{
-      button.addEventListener('click',()=>{
-        alert('论坛详情模板 · 当前仅保留 UI 与交互位置，真实功能将在后端接入时实现。');
-      });
-    });
-  </script>
+  <script src="./thread.js" defer></script>
 </body>
 </html>
