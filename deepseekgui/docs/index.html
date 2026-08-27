@@ -22,7 +22,7 @@
       <section class="page-hero">
         <p class="eyebrow">DOCUMENTATION</p>
         <h1>DeepSeek GUI 文档</h1>
-        <p class="hero-body">先把最常用的安装与使用路径讲清楚，再把 Profiles、插件、终端和许可放到需要时才打开的第二层。这里是产品文档入口，不要求用户先读仓库 README。</p>
+        <p class="hero-body">先把最常用的安装与使用路径讲清楚，再把 Profiles、插件、终端和许可放到需要时才打开的第二层。这里是产品文档入口，需要的信息都在这几页里，读完就能上手。</p>
       </section>
 
       <div class="content-grid">
@@ -48,13 +48,13 @@
 
           <section class="content-section" id="install">
             <h2>安装</h2>
-            <p>公开安装包上线后，从 DeepSeek GUI 官网下载 <code>DeepSeekGUI-Setup-&lt;version&gt;.exe</code>。安装器按当前 Windows 用户安装，不需要管理员权限。</p>
+            <p>公开安装包上线后，从 DeepSeek GUI 官网下载 <code>DeepSeekGUI-Setup-&lt;version&gt;.exe</code>。安装器按当前 Windows 用户安装，普通用户权限就够。</p>
             <ol>
               <li>双击安装包。</li>
               <li>文件安装完成后，DeepSeek GUI 会自动启动。</li>
               <li>之后可以从桌面或开始菜单打开 DeepSeek GUI。</li>
             </ol>
-            <p>发行包自带 DeepSeek Harness 运行时，普通用户不需要先装 Node.js 或 pnpm。</p>
+            <p>发行包自带 DeepSeek Harness 运行时，Node.js 和 pnpm 都已经在里面了。</p>
           </section>
 
           <section class="content-section" id="first-run">
@@ -62,14 +62,14 @@
             <h3>1. 配置模型</h3>
             <p>打开左下角设置，进入 <strong>Models</strong>。填入 DeepSeek API key。凭据由 Harness 的凭据机制保存在 DeepSeek GUI 自己的数据目录中，不进入安装包、命令行或普通诊断日志。</p>
             <h3>2. 选择工作区</h3>
-            <p>返回首页，选择一个项目文件夹作为 workspace。DeepSeek GUI 不需要把项目复制到别处；Agent 在你选择的工作区里工作。</p>
+            <p>返回首页，选择一个项目文件夹作为 workspace。项目留在原地就行，Agent 直接在你选的这个工作区里干活。</p>
             <h3>3. 新建或恢复会话</h3>
             <p>选择模型与工作区后新建会话。已有 Harness 会话、Profiles 与配置继续由同一个运行时管理。</p>
           </section>
 
           <section class="content-section" id="runtime">
             <h2>Harness 与 Profiles</h2>
-            <p>DeepSeek GUI 不建立第二套模型、会话、凭据、权限、记忆或 hook 状态。当前激活的 Harness Home 与 Profile 由 Desktop launcher 管理，运行时仍然来自 DeepSeek Harness。</p>
+            <p>模型、会话、凭据、权限、记忆与 hook 状态全部由 Harness 一家保管。当前激活的 Harness Home 与 Profile 由 Desktop launcher 管理，运行时来自 DeepSeek Harness。</p>
             <ul>
               <li><strong>Managed Home：</strong>默认使用 DeepSeek GUI 自己的应用数据目录。</li>
               <li><strong>Existing Home：</strong>高级用户可以显式选择已有 Harness Home；DeepSeek GUI 不自动迁移、合并或改写它。</li>
