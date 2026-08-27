@@ -22,7 +22,7 @@
       <section class="page-hero">
         <p class="eyebrow">DOCUMENTATION</p>
         <h1>DeepSeek GUI 文档</h1>
-        <p class="hero-body">先把最常用的安装与使用路径讲清楚，再把 Profiles、插件、终端和许可放到需要时才打开的第二层。这里是产品文档入口，需要的信息都在这几页里，读完就能上手。</p>
+        <p class="hero-body">从安装到日常使用，需要的信息都在这一页。Profiles、插件、终端等进阶内容放在后半段，用到时再看。</p>
       </section>
 
       <div class="content-grid">
@@ -42,8 +42,8 @@
         <div class="content">
           <section class="content-section" id="what">
             <h2>DeepSeek GUI 是什么</h2>
-            <p>DeepSeek GUI 是 See-Sol-Lab 在 DeepSeek Harness 之上构建的 Windows 桌面产品。Harness 是唯一运行时与会话事实来源；DeepSeek GUI 负责桌面宿主、工作区入口、模型与 Profile 控制、终端、插件管理以及逐步建设中的 Workbench。</p>
-            <div class="notice"><strong>一句话：</strong>像日常 Coding Agent 一样打开就能工作，需要时又能往下看到 Harness 的真实配置与运行路径。</div>
+            <p>DeepSeek GUI 是 See-Sol-Lab 在 DeepSeek Harness 之上做的 Windows 桌面客户端。Harness 负责所有运行时和会话管理；DeepSeek GUI 负责桌面界面——工作区、模型配置、Profiles、终端和插件管理。</p>
+            <div class="notice"><strong>一句话：</strong>打开就能当日常 Coding Agent 用，想深入时 Harness 的配置和运行细节也全在里面。</div>
           </section>
 
           <section class="content-section" id="install">
@@ -69,7 +69,7 @@
 
           <section class="content-section" id="runtime">
             <h2>Harness 与 Profiles</h2>
-            <p>模型、会话、凭据、权限、记忆与 hook 状态全部由 Harness 一家保管。当前激活的 Harness Home 与 Profile 由 Desktop launcher 管理，运行时来自 DeepSeek Harness。</p>
+            <p>模型、会话、凭据、权限、记忆和 hook 状态都由 Harness 管理。当前的 Harness Home 和 Profile 由桌面启动器控制。</p>
             <ul>
               <li><strong>Managed Home：</strong>默认使用 DeepSeek GUI 自己的应用数据目录。</li>
               <li><strong>Existing Home：</strong>高级用户可以显式选择已有 Harness Home；DeepSeek GUI 不自动迁移、合并或改写它。</li>
@@ -110,7 +110,7 @@ pnpm run dev:desktop</code></pre>
 
           <section class="content-section" id="license">
             <h2>许可与上游</h2>
-            <p>DeepSeek GUI 是 DeepSeek Harness 的非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。官方 Harness 与官方 Web UI 是 DeepSeek 的工作成果。</p>
+            <p>DeepSeek GUI 是 DeepSeek Harness 的非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。Harness 和官方 Web UI 属于 DeepSeek。</p>
             <p>仓库采用分层许可：上游 DeepSeek Harness 及上游衍生内容继续保留 MIT；See-Sol-Lab 原创桌面/产品层在明确范围内采用 PolyForm Perimeter 1.0.1。个人、教育、研究、兴趣与允许的内部使用均可；向他人提供与 DeepSeek GUI 竞争的替代产品需要另行授权。</p>
             <div class="page-actions"><a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div>
           </section>

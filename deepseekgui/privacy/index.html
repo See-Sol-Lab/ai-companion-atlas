@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="DeepSeek GUI 隐私政策：本地数据、API 凭据、第三方模型服务、诊断日志与网站访问说明。" />
+  <meta name="description" content="DeepSeek GUI 隐私政策与商业许可：纯本地应用，不收集用户数据。" />
   <title>隐私政策 · DeepSeek GUI</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
@@ -20,62 +20,61 @@
 
     <main class="page-main">
       <section class="page-hero">
-        <p class="eyebrow">PRIVACY POLICY</p>
+        <p class="eyebrow">PRIVACY &amp; LICENSE</p>
         <h1>隐私政策</h1>
-        <p class="hero-body">最后更新：2026 年 8 月 27 日。DeepSeek GUI 是本地优先的桌面 Agent 产品。本页说明当前公开预览设计中，应用数据、API 凭据、模型请求、诊断日志以及官网访问分别如何处理。</p>
+        <p class="hero-body">最后更新：2026 年 8 月 27 日。DeepSeek GUI 是纯本地的桌面应用——安装后完全运行在你自己的电脑上，我们不运营服务器，不收集用户数据。</p>
       </section>
 
       <article class="policy">
         <section class="policy-section">
-          <h2>1. 适用范围</h2>
-          <p>本政策适用于 See-Sol-Lab 提供的 DeepSeek GUI Desktop、DeepSeek GUI 产品官网与官方下载安装页面。DeepSeek GUI 是 DeepSeek Harness 的非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。</p>
+          <h2>1. 我们不收集你的数据</h2>
+          <p>DeepSeek GUI 没有自己的服务器。你的聊天记录、项目文件、API 凭据和所有配置都只存在你的设备上，不会被发送到 See-Sol-Lab 或任何第三方。我们不收集、不存储、不传输你的任何个人数据或使用信息。</p>
         </section>
 
         <section class="policy-section">
-          <h2>2. 本地应用数据</h2>
-          <p>DeepSeek GUI Desktop 把 Harness 的运行数据与产品偏好保存在用户自己的设备上。打包版默认使用 <code>%APPDATA%\DeepSeekGUI\dsh</code> 保存凭据、设置、会话与 Profiles；桌面 launcher 和窗口偏好也使用 DeepSeek GUI 自己的 userData 目录。</p>
-          <p>DeepSeek GUI 不为了桌面界面再建立第二套会话、模型、凭据、权限、记忆或 hook 存储。Harness 仍是运行时与持久状态的来源。</p>
+          <h2>2. 本地数据存储</h2>
+          <p>DeepSeek GUI 把运行数据保存在你设备上的 <code>%APPDATA%\DeepSeekGUI\dsh</code> 目录中，包括 API 凭据、会话记录、模型配置、Profiles 和桌面偏好设置。这些数据完全由你控制。</p>
+          <p>API 凭据由 Harness 的凭据机制保存在应用自己的数据目录中，不会进入安装包、命令行参数或诊断日志。请妥善保管你的 API key，不要将其提交到 GitHub issue 或其他公开渠道。</p>
         </section>
 
         <section class="policy-section">
-          <h2>3. API Key 与凭据</h2>
-          <p>用户自行配置 DeepSeek 或其他 Harness 支持的模型服务凭据。DeepSeek GUI Desktop 使用 Harness 的凭据机制把密钥保存在应用自己的数据目录中；产品设计要求这些密钥不进入安装包、普通命令行参数或诊断日志。</p>
-          <p>请不要把自己的 API key、token 或其他账号凭据提交到 GitHub issue、公开评论区或其他公开渠道。</p>
+          <h2>3. 第三方模型服务</h2>
+          <p>当你使用 DeepSeek 或其他模型服务时，你的请求内容会发送到你自己选择的服务商。这些第三方如何处理数据，由它们各自的服务条款和隐私政策决定。DeepSeek GUI 本身不经手、不中转这些数据。</p>
         </section>
 
         <section class="policy-section">
-          <h2>4. 第三方模型与服务</h2>
-          <p>当你使用 DeepSeek、OpenAI-compatible endpoint 或其他由 Harness adapter 接入的第三方服务时，为完成你的请求，相关提示词、文件内容或工具结果可能会发送给你主动选择的服务提供商。</p>
-          <p>这些第三方如何保存、训练、审计或处理数据，由它们各自的服务条款和隐私政策决定。DeepSeek GUI 无法替代第三方政策。</p>
+          <h2>4. 诊断日志</h2>
+          <p>DeepSeek GUI 在本机记录有限的运行日志，用于排查启动和运行问题。日志会对 API key、Bearer token 等凭据形态做脱敏处理，并限制历史日志数量和总大小。如果你向维护者提交日志，请自行检查其中是否包含项目路径或其他敏感信息。</p>
         </section>
 
         <section class="policy-section">
-          <h2>5. 诊断日志</h2>
-          <p>打包版会在本机 DeepSeek GUI 应用数据目录记录有限的 Harness 服务诊断日志，用于定位启动和运行问题。当前实现会对常见 API key、GitHub/Slack token、AWS access-key id 与 Bearer token 等凭据形态做脱敏，并限制历史日志数量和总大小。</p>
-          <p>如果你主动把日志提交给维护者，请仍然在发送前检查其中是否包含项目路径、文件名、错误正文或其他你不希望公开的信息。</p>
+          <h2>5. 卸载与数据删除</h2>
+          <p>卸载时会询问是否一并删除应用数据。选择保留后，重装可以继续使用已有的凭据、设置和会话。如需彻底清除本地数据，删除 <code>%APPDATA%\DeepSeekGUI</code> 目录即可。</p>
         </section>
 
         <section class="policy-section">
-          <h2>6. 官网与下载页面</h2>
-          <p>访问 DeepSeek GUI 官网和下载页面时，网站托管、CDN、反向代理或服务器可能为了正常提供页面、安全防护和故障诊断而处理标准 HTTP 元数据，例如 IP 地址、时间、请求路径、User-Agent 和缓存信息。</p>
-          <p>DeepSeek GUI 官网不以出售个人信息、广告画像或跨站追踪为产品目标。如果未来加入额外分析、账号体系、崩溃上报或其他在线服务，我们会在启用前更新本政策并说明用途。</p>
+          <h2>6. 官网访问</h2>
+          <p>DeepSeek GUI 官网托管在第三方平台上。访问网站时，托管服务可能处理标准 HTTP 元数据（IP 地址、User-Agent 等）用于正常提供页面和安全防护。我们不投放广告，不做用户画像，不进行跨站追踪。如果未来加入在线服务或分析功能，我们会在启用前更新本页并说明用途。</p>
         </section>
 
         <section class="policy-section">
-          <h2>7. 删除与卸载</h2>
-          <p>普通卸载 DeepSeek GUI 时，卸载程序会询问是否一并删除 <code>%APPDATA%\DeepSeekGUI</code>。如果选择保留，凭据、设置与会话可以在之后重装时继续使用。静默卸载和升级替换会默认保留应用数据。</p>
-          <p>如需彻底清除本地数据，请在确认不再需要后删除 DeepSeek GUI 的应用数据目录，并同时检查你自己指定的 Existing Harness Home 或外部备份位置。</p>
+          <h2>7. 商业许可条款</h2>
+          <h3>7.1 免费使用</h3>
+          <p>DeepSeek GUI 的产品层采用 <strong>PolyForm Perimeter License 1.0.1</strong>。个人使用、教育、研究、兴趣项目和企业内部使用均免费，无需额外授权。</p>
+          <h3>7.2 竞争限制</h3>
+          <p>不允许基于 DeepSeek GUI 产品层构建与之竞争的替代产品——无论是软件、服务还是其他形式，无论是否收费。如需此类用途，请联系 See-Sol-Lab 获取商业许可。</p>
+          <h3>7.3 上游代码</h3>
+          <p>DeepSeek Harness 的上游代码继续遵循 DeepSeek 的 MIT 许可，不受上述限制。完整的许可说明请参阅仓库中的 <code>DEEPSEEKGUI-LICENSE.md</code>。</p>
         </section>
 
         <section class="policy-section">
-          <h2>8. 外部链接与上游项目</h2>
-          <p>官网可能链接到 GitHub、DeepSeek Harness、AI Companion Atlas 或模型服务商。离开 DeepSeek GUI 官网后，对方网站的数据处理受其各自政策约束。</p>
+          <h2>8. 非官方声明</h2>
+          <p>DeepSeek GUI 是 See-Sol-Lab 构建的 DeepSeek Harness 非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。Harness 和官方 Web UI 属于 DeepSeek。</p>
         </section>
 
         <section class="policy-section">
-          <h2>9. 政策更新与联系</h2>
-          <p>DeepSeek GUI 仍在开发中。如果数据流、网站托管方式或在线能力发生实质变化，我们会更新本页并修改“最后更新”日期。</p>
-          <p>产品公开后，隐私与安全问题可以通过 DeepSeek GUI GitHub 仓库提交；涉及敏感漏洞时，请优先使用仓库公布的安全联系方式，而不是公开 issue。</p>
+          <h2>9. 联系我们</h2>
+          <p>隐私、安全或许可相关问题，请通过 GitHub 联系我们。涉及敏感漏洞时，请优先使用仓库的安全联系方式，而非公开 issue。</p>
           <div class="page-actions"><a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI" target="_blank" rel="noreferrer">DeepSeek GUI GitHub</a></div>
         </section>
       </article>
