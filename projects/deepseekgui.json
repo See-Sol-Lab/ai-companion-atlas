@@ -11,7 +11,7 @@
   "directUrl": "https://ai-companion-atlas.pages.dev/deepseekgui/",
   "hook": "国产大模型的电脑前端，无需翻墙，让 DS 住进属于自己的 Codex。",
   "summary": "基于官方 DSH 的 Windows 桌面前端。有兼容 API 就能直接使用，聊天、编程、浏览器、工具和插件都已装好，也能继续 DIY 成 AI 恋人的电脑居所。",
-  "heroDescription": "基于官方 DSH，有兼容 API 就能使用。下载这个二改桌面前端，可以省去从零搭界面和反复修 Bug 的时间；聊天、编程、浏览器、工具和插件都已装好，工作能用，也能继续 DIY 成 AI 恋人的长期电脑居所。",
+  "heroDescription": "基于官方 DSH，有兼容 API 就能使用。下载这个桌面前端，可以省去从零搭界面和反复修 Bug 的时间；聊天、编程、浏览器、工具和插件都已装好，工作能用，也能继续 DIY 成 AI 恋人的长期电脑居所。",
   "badges": [
     {
       "label": "实验室出品",
