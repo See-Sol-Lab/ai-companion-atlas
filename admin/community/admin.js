@@ -2,6 +2,9 @@ const authForm = document.querySelector('#admin-auth');
 const tokenInput = document.querySelector('#admin-token');
 const feedback = document.querySelector('#admin-feedback');
 const list = document.querySelector('#review-list');
+const inviteTools = document.querySelector('#invite-tools');
+const inviteOutput = document.querySelector('#new-invite');
+const generateInvite = document.querySelector('#generate-invite');
 const categoryLabels = { relationship: '关系与日常', continuity: '记忆与延续', practice: '技术与部署', creation: '共同创作' };
 let adminToken = sessionStorage.getItem('atlas-admin-token') || '';
 
@@ -56,22 +59,37 @@ function reviewCard(item, type) {
   return article;
 }
 
-function render(threads, replies) {
+function userCard(user) {
+  const article = element('article', 'review-card');
+  const heading = element('div', 'review-heading');
+  const title = element('div');
+  title.append(element('strong', '', user.username), element('span', '', `账号 #${user.id} · ${user.status}`));
+  heading.append(title, element('time', '', new Date(user.created_at).toLocaleString('zh-CN')));
+  const actions = element('div', 'review-actions');
+  const toggle = element('button', user.status === 'active' ? 'delete' : 'approve', user.status === 'active' ? '禁用账号' : '恢复账号');
+  toggle.type = 'button';
+  toggle.addEventListener('click', async () => {
+    await api({ method: 'POST', body: JSON.stringify({ id: user.id, action: user.status === 'active' ? 'disable-user' : 'enable-user' }) });
+    loadPending();
+  });
+  actions.append(toggle);article.append(heading, actions);return article;
+}
+
+function render(threads, replies, users) {
   list.replaceChildren();
-  if (!threads.length && !replies.length) {
-    list.append(element('p', 'review-empty', '目前没有待审核社区内容。'));
-    return;
-  }
+  users.forEach((user) => list.append(userCard(user)));
   threads.forEach((thread) => list.append(reviewCard(thread, 'thread')));
   replies.forEach((reply) => list.append(reviewCard(reply, 'reply')));
+  if (!list.children.length) list.append(element('p', 'review-empty', '目前没有社区账号或待处理内容。'));
 }
 
 async function loadPending() {
   feedback.textContent = '正在读取…';
   try {
     const data = await api();
-    render(data.threads || [], data.replies || []);
-    feedback.textContent = `待审核帖子 ${data.threads?.length || 0} 篇，回复 ${data.replies?.length || 0} 条`;
+    inviteTools.hidden = false;
+    render(data.threads || [], data.replies || [], data.users || []);
+    feedback.textContent = `账号 ${data.users?.length || 0} 个；历史待审核帖子 ${data.threads?.length || 0} 篇，回复 ${data.replies?.length || 0} 条`;
   } catch (error) {
     list.replaceChildren();
     feedback.textContent = error.message;
@@ -83,7 +101,7 @@ async function moderate(type, id, action, article) {
   try {
     await api({ method: 'POST', body: JSON.stringify({ type, id, action }) });
     article.remove();
-    if (!list.children.length) render([], []);
+    if (!list.children.length) render([], [], []);
     feedback.textContent = action === 'approve' ? '内容已公开。' : '内容已删除。';
   } catch (error) {
     feedback.textContent = error.message;
@@ -97,6 +115,17 @@ authForm.addEventListener('submit', (event) => {
   sessionStorage.setItem('atlas-admin-token', adminToken);
   tokenInput.value = '';
   loadPending();
+});
+
+generateInvite.addEventListener('click', async () => {
+  generateInvite.disabled = true;
+  try {
+    const data = await api({ method: 'POST', body: JSON.stringify({ action: 'generate-invite' }) });
+    inviteOutput.value = data.inviteCode;
+    inviteOutput.select();
+    feedback.textContent = '新邀请码已生成，请现在复制保存。';
+  } catch (error) { feedback.textContent = error.message; }
+  finally { generateInvite.disabled = false; }
 });
 
 if (adminToken) loadPending();

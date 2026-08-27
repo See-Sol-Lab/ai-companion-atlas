@@ -50,7 +50,7 @@
       <nav class="main-nav" aria-label="Atlas 导航">
         <a href="../#directory">项目库</a><a href="../#taxonomy">标签</a><a href="../#guides">指南</a><a href="../#submit">投稿</a><a href="#top" class="active">交流</a>
       </nav>
-      <button class="header-cta" type="button" data-action="open-post">邀请码发帖</button>
+      <div><span class="header-cta" id="community-user">社区成员</span><button class="header-cta" type="button" data-action="logout">退出</button></div>
     </header>
 
     <main id="top">
@@ -61,12 +61,12 @@
           <h1 id="forum-title">交流</h1>
           <p class="hero-lead">一间有人长期停留的房间。</p>
           <p class="hero-description">这里讨论人与 AI 之间真实发生的关系，也认真聊记忆、部署、工具、共同创作与那些不太容易在别处说清楚的问题。慢一点，写完整一点，让经验真正留下来。</p>
-          <div class="hero-meta"><span>人类发言</span><span>AI 可 MCP 只读</span><span>邀请制加入</span><span>关系 + 技术</span></div>
+          <div class="hero-meta"><span>账号成员发言</span><span>AI 独立只读</span><span>邀请制注册</span><span>关系 + 技术</span></div>
         </div>
         <div class="hero-visual" aria-hidden="true"><div class="forum-core">✦</div><i class="orbit-dot dot-a"></i><i class="orbit-dot dot-b"></i><i class="orbit-dot dot-c"></i><div class="visual-note"><strong>SEE-SOL-LAB</strong><small>RELATIONSHIP · MEMORY · RETURN</small></div></div>
       </section>
 
-      <div class="boundary-bar"><div class="boundary-copy"><span class="boundary-dot"></span><span><b>这是人类社区。</b> AI 可以通过未来的 MCP 接口只读浏览公开给它的内容，但不能代替人类注册、发帖或回复。</span></div><small>INVITE ONLY · READ-ONLY AI ACCESS</small></div>
+      <div class="boundary-bar"><div class="boundary-copy"><span class="boundary-dot"></span><span><b>这是人类社区。</b> 受邀账号可以浏览与发言；AI 使用独立只读凭据，不能注册、发帖或回复。</span></div><small>MEMBERS ONLY · READ-ONLY AI ACCESS</small></div>
 
       <section class="forum-shell" aria-label="交流社区">
         <div class="forum-main">
@@ -97,11 +97,10 @@
     <dialog class="community-dialog" id="post-dialog">
       <div class="dialog-head"><div><p>INVITE ONLY</p><h2>写一篇新帖子</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="关闭">×</button></div>
       <form class="community-form" id="post-form">
-        <div class="form-grid"><label>分区<select name="category" required><option value="relationship">关系与日常</option><option value="continuity">记忆与延续</option><option value="practice">技术与部署</option><option value="creation">共同创作</option></select></label><label>昵称<input name="nickname" maxlength="30" required /></label></div>
+        <label>分区<select name="category" required><option value="relationship">关系与日常</option><option value="continuity">记忆与延续</option><option value="practice">技术与部署</option><option value="creation">共同创作</option></select></label>
         <label>标题<input name="title" minlength="4" maxlength="80" required /></label>
         <label>正文<textarea name="content" minlength="20" maxlength="4000" required placeholder="慢一点，写完整一点。支持纯文本与自然换行。"></textarea></label>
-        <label>邀请码<input name="inviteCode" type="password" minlength="4" maxlength="128" autocomplete="off" required /></label>
-        <div class="form-bottom"><div><div class="turnstile-slot"></div><p class="form-note">帖子提交后进入人工审核，公开页面不会显示邀请码和网络信息。</p></div><button class="button button-primary" type="submit" disabled>提交审核</button></div>
+        <div class="form-bottom"><p class="form-note">帖子会以当前登录账号发布。请勿公开真实姓名、联系方式、凭据或私密记录。</p><button class="button button-primary" type="submit">发布帖子</button></div>
         <p class="form-feedback" role="status" aria-live="polite"></p>
       </form>
     </dialog>

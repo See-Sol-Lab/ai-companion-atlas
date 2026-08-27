@@ -12,11 +12,6 @@ const replyCount = document.querySelector('[data-field="reply-count"]');
 const replyForm = document.querySelector('#reply-form');
 const submitButton = replyForm.querySelector('button[type="submit"]');
 const feedback = replyForm.querySelector('.reply-feedback');
-const captchaSlot = replyForm.querySelector('.turnstile-slot');
-let turnstileSiteKey = '';
-let turnstileWidgetId = null;
-let turnstileToken = '';
-let scriptPromise = null;
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -83,33 +78,8 @@ async function loadThread() {
   }
 }
 
-async function loadTurnstile() {
-  const configResponse = await fetch('/api/config');
-  const config = await configResponse.json();
-  if (!configResponse.ok || !config.turnstileSiteKey) throw new Error('人机验证尚未配置。');
-  turnstileSiteKey = config.turnstileSiteKey;
-  if (!window.turnstile) {
-    scriptPromise ||= new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-      script.onload = resolve;
-      script.onerror = () => reject(new Error('人机验证加载失败。'));
-      document.head.append(script);
-    });
-    await scriptPromise;
-  }
-  turnstileWidgetId = window.turnstile.render(captchaSlot, {
-    sitekey: turnstileSiteKey,
-    action: 'submit-community',
-    callback(token) { turnstileToken = token; submitButton.disabled = false; feedback.textContent = ''; },
-    'expired-callback'() { turnstileToken = ''; submitButton.disabled = true; },
-    'error-callback'() { turnstileToken = ''; submitButton.disabled = true; feedback.textContent = '人机验证失败，请刷新重试。'; }
-  });
-}
-
 replyForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  if (!turnstileToken) return;
   const form = new FormData(replyForm);
   submitButton.disabled = true;
   feedback.textContent = '正在提交…';
@@ -118,8 +88,7 @@ replyForm.addEventListener('submit', async (event) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        threadId, nickname: form.get('nickname'), content: form.get('content'),
-        inviteCode: form.get('inviteCode'), turnstileToken
+        threadId, content: form.get('content')
       })
     });
     const data = await response.json();
@@ -129,8 +98,7 @@ replyForm.addEventListener('submit', async (event) => {
   } catch (error) {
     feedback.textContent = error.message;
   } finally {
-    window.turnstile?.reset(turnstileWidgetId);
-    turnstileToken = '';
+    submitButton.disabled = false;
   }
 });
 
@@ -144,9 +112,7 @@ document.querySelector('[data-action="copy-link"]').addEventListener('click', as
 });
 
 async function init() {
-  if (await loadThread()) {
-    loadTurnstile().catch((error) => { feedback.textContent = error.message; });
-  }
+  await loadThread();
 }
 
 init();

@@ -1,4 +1,4 @@
-import { RequestError, cleanPlainText, requireEnv } from './comments.mjs';
+import { RequestError, cleanPlainText } from './comments.mjs';
 
 export const COMMUNITY_CATEGORIES = new Set([
   'relationship',
@@ -7,7 +7,6 @@ export const COMMUNITY_CATEGORIES = new Set([
   'creation'
 ]);
 
-const encoder = new TextEncoder();
 const textLength = (value) => [...value].length;
 
 function validateBaseInput(input) {
@@ -15,22 +14,8 @@ function validateBaseInput(input) {
     throw new RequestError(400, '提交内容格式不正确。');
   }
 
-  const nickname = cleanPlainText(input.nickname);
   const content = cleanPlainText(input.content, { multiline: true });
-  const inviteCode = typeof input.inviteCode === 'string' ? input.inviteCode.trim() : '';
-  const turnstileToken = typeof input.turnstileToken === 'string' ? input.turnstileToken.trim() : '';
-
-  if (textLength(nickname) < 1 || textLength(nickname) > 30) {
-    throw new RequestError(400, '昵称需要 1–30 字。');
-  }
-  if (inviteCode.length < 4 || inviteCode.length > 128) {
-    throw new RequestError(400, '邀请码格式不正确。');
-  }
-  if (!turnstileToken || turnstileToken.length > 2048) {
-    throw new RequestError(400, '请先完成人机验证。');
-  }
-
-  return { nickname, content, inviteCode, turnstileToken };
+  return { content };
 }
 
 export function validateCommunityCategory(value, { optional = false } = {}) {
@@ -68,16 +53,4 @@ export function validateReplyInput(input) {
     throw new RequestError(400, '回复需要 2–1500 字。');
   }
   return { ...base, threadId };
-}
-
-async function digest(value) {
-  return new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value)));
-}
-
-export async function requireInviteCode(supplied, env) {
-  const expected = requireEnv(env, 'COMMUNITY_INVITE_CODE');
-  const [left, right] = await Promise.all([digest(supplied), digest(expected)]);
-  let difference = 0;
-  for (let index = 0; index < left.length; index += 1) difference |= left[index] ^ right[index];
-  if (difference !== 0) throw new RequestError(403, '邀请码无效。');
 }

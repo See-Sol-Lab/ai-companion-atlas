@@ -1,8 +1,10 @@
 import { RequestError, errorResponse, json, requireEnv } from '../../_shared/comments.mjs';
 import { validateThreadId } from '../../_shared/community.mjs';
+import { requireCommunityReader } from '../../_shared/community-auth.mjs';
 
 export async function onRequestGet({ request, env }) {
   try {
+    await requireCommunityReader(request, env);
     const database = requireEnv(env, 'COMMENTS_DB');
     const id = validateThreadId(new URL(request.url).searchParams.get('id'));
     const thread = await database.prepare(`

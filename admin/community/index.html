@@ -17,11 +17,12 @@
 
     <form class="admin-auth" id="admin-auth">
       <label for="admin-token">审核凭据</label>
-      <div><input id="admin-token" name="token" type="password" autocomplete="current-password" required /><button type="submit">读取待审核内容</button></div>
+      <div><input id="admin-token" name="token" type="password" autocomplete="current-password" required /><button type="submit">读取账号与内容</button></div>
       <p>凭据与其他审核页共用，仅保存在当前浏览器标签页。</p>
     </form>
 
     <p class="admin-feedback" id="admin-feedback" aria-live="polite"></p>
+    <section class="admin-auth" id="invite-tools" hidden><label>一次性注册邀请码</label><div><input id="new-invite" readonly placeholder="点击右侧生成" /><button id="generate-invite" type="button">生成邀请码</button></div><p>邀请码仅显示这一次；注册成功后自动作废。</p></section>
     <section class="review-list" id="review-list" aria-live="polite"></section>
   </main>
 </body>

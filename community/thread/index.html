@@ -84,10 +84,8 @@
               <div data-list="replies"></div>
 
               <form class="reply-box" id="reply-form">
-                <div class="reply-fields"><label>昵称<input name="nickname" maxlength="30" required /></label><label>邀请码<input name="inviteCode" type="password" minlength="4" maxlength="128" autocomplete="off" required /></label></div>
-                <div class="reply-row"><textarea class="reply-field" name="content" minlength="2" maxlength="1500" required placeholder="写下你的回复…邀请制社区，请保持温和、具体与真实。"></textarea><button class="button button-primary" type="submit" disabled>提交回复</button></div>
-                <div class="turnstile-slot"></div>
-                <div class="reply-note">回复提交后进入人工审核，公开页面不会显示邀请码和网络信息。</div>
+                <div class="reply-row"><textarea class="reply-field" name="content" minlength="2" maxlength="1500" required placeholder="写下你的回复…邀请制社区，请保持温和、具体与真实。"></textarea><button class="button button-primary" type="submit">提交回复</button></div>
+                <div class="reply-note">回复会以当前登录账号直接发布。请保持温和、具体与真实。</div>
                 <div class="reply-feedback" role="status" aria-live="polite"></div>
               </form>
             </section>
