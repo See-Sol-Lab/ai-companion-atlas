@@ -1,0 +1,91 @@
+{
+  "slug": "deepseekgui",
+  "order": 206,
+  "officialHighlight": true,
+  "name": {
+    "zh": "DeepSeekGUI",
+    "en": "DeepSeekGUI"
+  },
+  "author": "See-Sol-Lab",
+  "sourceUrl": "https://github.com/See-Sol-Lab/DeepSeekGUI",
+  "directUrl": "https://ai-companion-atlas.pages.dev/deepseekgui/",
+  "hook": "装上、选个文件夹，让 DeepSeek 开始干活。",
+  "summary": "面向 Windows 的 DeepSeek Agent 桌面工作台。它能查看和修改项目、使用工具、浏览网页，也会把正在做什么清楚展示出来。",
+  "heroDescription": "DeepSeekGUI 把原本需要配置命令行和本地网页的 Harness 打包成桌面应用。装好后选个工作文件夹，就能让 Agent 读文件、改代码、运行工具和浏览网页。",
+  "badges": [
+    {
+      "label": "实验室出品",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "开发与编程",
+      "tone": "coding"
+    },
+    {
+      "label": "PC 前端",
+      "tone": "desktop"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
+    }
+  ],
+  "tags": [
+    "Vibe Coding",
+    "Agent Workbench",
+    "DeepSeek Harness",
+    "Windows"
+  ],
+  "language": "TypeScript",
+  "platform": "Windows 10 / 11 x64",
+  "updated": "2026-08-27",
+  "heroOverline": "INSTALL · WORKSPACE · REVIEW",
+  "showcase": {
+    "label": "让 Agent 在桌面里把工作做清楚",
+    "symbol": "D",
+    "question": "“装好以后，我能直接让 DeepSeek 帮我改项目吗？”",
+    "comparisons": [
+      {
+        "value": "安装",
+        "label": "开箱即用"
+      },
+      {
+        "value": "工作",
+        "label": "读写与工具"
+      },
+      {
+        "value": "检查",
+        "label": "过程看得见"
+      }
+    ],
+    "note": "Agent 负责动手，人负责确认权限和最终改动。"
+  },
+  "intro": {
+    "paragraphs": [
+      "DeepSeekGUI 是 See-Sol-Lab 制作的 Windows Agent 工作台。它把 DeepSeek Harness、Node.js 和 pnpm 一起装进桌面应用，不需要先研究命令行；连接模型、选择工作文件夹后就能开始使用。",
+      "Agent 可以查看与修改代码和文件、运行工具、读取图片、使用真实浏览器，也能管理 Harness Profile 和兼容插件。工作过程、权限请求和最终改动都会留在界面里，方便用户随时检查。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "想在 Windows 上直接使用 DeepSeek Agent 编程、处理文件或完成工作任务的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "下载安装包，打开设置连接 DeepSeek 模型，再选择一个工作文件夹开始会话。"
+      },
+      {
+        "label": "当前版本",
+        "text": "V1 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。"
+      },
+      {
+        "label": "项目关系",
+        "text": "这是基于 DeepSeek Harness 的非官方社区产品，与 DeepSeek 无隶属或背书关系。"
+      }
+    ]
+  }
+}
