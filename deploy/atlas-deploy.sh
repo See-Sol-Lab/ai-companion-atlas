@@ -79,6 +79,7 @@ rsync -a --delete \
   --exclude='scripts/' \
   --exclude='tests/' \
   --exclude='deploy/' \
+  --exclude='deepseekgui/releases/' \
   --exclude='node_modules/' \
   --exclude='README.md' \
   --exclude='COMMENTS_SETUP.md' \
