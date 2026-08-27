@@ -18,50 +18,31 @@
       <nav class="site-nav" aria-label="产品导航"><a href="../">首页</a><a href="./" aria-current="page">下载</a><a href="../docs/">文档</a><a href="../privacy/">隐私政策</a></nav>
     </header>
 
-    <main class="page-main">
-      <section class="page-hero">
-        <p class="eyebrow">DOWNLOAD</p>
-        <h1>下载 DeepSeek GUI</h1>
-        <p class="hero-body">安装包从这里下载。首个公开版上线后，这里就是固定的下载入口。</p>
-      </section>
+    <main class="page-main download-main">
+      <section class="download-hero" aria-labelledby="download-title">
+        <div class="download-hero-copy">
+          <p class="eyebrow">DOWNLOAD · WINDOWS</p>
+          <h1 id="download-title"><span>下载</span><span>DeepSeek GUI</span></h1>
+          <p class="download-lead">给 DeepSeek Harness 一个好用、好懂的 Windows 工作台。</p>
+          <p class="download-body">双击安装，选择工作文件夹，就可以让 Agent 查看文件、修改代码和使用工具。</p>
 
-      <section class="download-card" aria-label="Windows 下载">
-        <div>
-          <h2>DeepSeek GUI for Windows</h2>
-          <p>桌面构建版本 1.0.0。安装包由香港主站直接提供；运行前请下载校验文件并核对 SHA-256。</p>
-          <div class="download-meta"><span>Windows x64</span><span>Per-user install</span><span>No admin required</span><span>Bundled runtime</span></div>
+          <div class="download-actions">
+            <a class="button button-primary" href="https://www.ailover-atlas.com/deepseekgui/releases/v1.0.0/DeepSeekGUI-Setup-1.0.0.exe">免费下载 Windows 版 <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI/releases/tag/v1.0.0" target="_blank" rel="noreferrer">GitHub 备用</a>
+          </div>
+
+          <p class="download-meta-line">版本 1.0.0 · Windows 10/11 · 64 位 · 约 126 MB</p>
+          <div class="download-warning"><span aria-hidden="true">!</span><p><strong>首次安装可能出现系统提示。</strong>这是因为当前版本尚未代码签名，选择“更多信息 → 仍要运行”即可继续。</p></div>
         </div>
-        <div class="page-actions">
-          <a class="button button-primary" href="https://www.ailover-atlas.com/deepseekgui/releases/v1.0.0/DeepSeekGUI-Setup-1.0.0.exe">下载 Windows 版 1.0.0 <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="https://www.ailover-atlas.com/deepseekgui/releases/v1.0.0/SHA256SUMS.txt" target="_blank" rel="noreferrer">SHA-256 校验</a>
-          <a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI/releases/tag/v1.0.0" target="_blank" rel="noreferrer">GitHub 备用</a>
+
+        <div class="download-preview" aria-label="DeepSeek GUI 软件界面预览">
+          <div class="download-preview-frame"><img src="../assets/deepseekgui-light.png" width="1925" height="1199" alt="DeepSeek GUI Windows 桌面应用界面" fetchpriority="high" /></div>
+          <p>DeepSeek GUI 1.0.0 · Windows 桌面应用</p>
         </div>
-      </section>
-
-      <div class="notice"><strong>安装包 SHA-256：</strong><code class="checksum-value">149b3abb207d733c3a8aeb2883b3a8a93f0ec13a970ae492b6168e54828a2b2b</code>。DeepSeek GUI 1.0.0 尚未进行代码签名，Windows SmartScreen 可能提示发布者未知。</div>
-
-      <div class="detail-list" aria-label="安装特点">
-        <article class="detail-item"><b>一键安装</b><p>按当前用户安装，普通权限就够。双击，一路下一步，完事。</p></article>
-        <article class="detail-item"><b>自带运行时</b><p>Node.js 和 pnpm 都打包在发行包里。装完就是一个完整的 Harness 环境，直接能跑。</p></article>
-        <article class="detail-item"><b>卸载之后数据还在</b><p>普通卸载会询问是否删除 DeepSeek GUI 应用数据；选择保留后，重装可以继续使用已有设置、凭据与会话。</p></article>
-      </div>
-
-      <section class="section" aria-labelledby="after-install">
-        <div class="section-heading"><p class="section-kicker">FIRST RUN</p><h2 id="after-install">安装之后，四步开始工作。</h2></div>
-        <div class="feature-trio">
-          <article class="feature"><span class="feature-index">01</span><h3>打开 Models</h3><p>在设置里进入 Models，填入 DeepSeek API key。凭据由 Harness 的官方凭据机制保存在 DeepSeek GUI 自己的数据目录。</p></article>
-          <article class="feature"><span class="feature-index">02</span><h3>选择工作区</h3><p>回到首页，选择你要让 Agent 工作的项目文件夹。</p></article>
-          <article class="feature"><span class="feature-index">03 · 04</span><h3>新建会话，开始</h3><p>选择模型与工作区后创建会话。需要更深控制时，再打开 Profiles、插件或 DSH Terminal。</p></article>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="release-note">
-        <div class="section-heading"><p class="section-kicker">RELEASE NOTES</p><h2 id="release-note">关于 1.0.0</h2><p>这是 DeepSeek GUI 更名后的首个公开版本。安装包适用于 Windows 10/11 x64；版本说明、已知限制和许可信息以 GitHub Release 与项目文档为准。</p></div>
-        <div class="notice"><strong>非官方说明：</strong>DeepSeek GUI 是 See-Sol-Lab 构建的 DeepSeek Harness 非官方社区产品，与 DeepSeek 无隶属关系，也未获其背书。</div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer download-footer">
       <div class="footer-brand"><b>DeepSeek GUI · See-Sol-Lab</b><p>Unofficial community product for DeepSeek Harness.</p><p class="footer-signature">Built together, human &amp; AI.</p></div>
       <div class="footer-links"><a href="../">首页</a><a href="./">下载</a><a href="../docs/">文档</a><a href="../privacy/">隐私政策</a><a href="https://www.ailover-atlas.com/">AI Companion Atlas</a></div>
     </footer>
