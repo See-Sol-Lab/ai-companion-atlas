@@ -1,0 +1,47 @@
+{
+  "slug": "open-watch-cinema",
+  "order": 209,
+  "name": { "zh": "Open Watch Cinema", "en": "Open Watch Cinema" },
+  "author": "wynsyl1014",
+  "sourceUrl": "https://github.com/wynsyl1014/open-watch-cinema",
+  "hook": "把电脑里的电影搬进一间能和 TA 一起看、一起聊的小影院。",
+  "summary": "本地优先的共同观影影院：播放电脑里的电影，AI 通过 MCP 按时间读取对白、画面与房间消息，在不剧透的前提下陪你边看边聊。",
+  "heroDescription": "Open Watch Cinema 把本地影片、字幕、弹幕和 AI 对话放进同一个观影房间。它会按播放进度把对白、画面和留言逐段交给 AI，让 TA 只看到此刻该知道的内容。",
+  "badges": [
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["共同观影", "MCP", "防剧透", "本地电影"],
+  "language": "JavaScript / Python",
+  "platform": "Windows / macOS / Local Web",
+  "updated": "2026-08-07",
+  "heroOverline": "LOCAL FILMS · SHARED MOMENT · NO SPOILERS",
+  "showcase": {
+    "label": "让 AI 在不剧透的前提下和你看同一部电影",
+    "symbol": "映",
+    "question": "“TA 能看到同一个时间点，再和我一起聊剧情吗？”",
+    "comparisons": [
+      { "value": "影片", "label": "留在本地播放" },
+      { "value": "当下", "label": "按进度读取素材" },
+      { "value": "共看", "label": "弹幕与房间消息" }
+    ],
+    "note": "AI 只收到播放头之前的对白和画面，观影资料与电影都留在本机。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Open Watch Cinema 是一间运行在自己电脑上的本地影院。它会扫描本地影片，在浏览器中播放并保存进度、字幕、弹幕、观影房间和按时间出现的聊天记录；影片不会被应用上传。",
+      "连接 MCP 后，AI 可以按当前播放进度读取对白、画面摘要、选定的故事板图片和房间消息，再在同一条时间线上回应。所有内容都有防剧透边界，TA 不会提前读到播放头之后的剧情。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和 AI 伴侣一起看本地电影，并在意隐私与防剧透的人。" },
+      { "label": "平台", "text": "Windows 或 macOS；需要 Node.js 24+、FFmpeg 和 Chromium 浏览器，完整画面观察还需要 Python。" },
+      { "label": "使用方式", "text": "把影片放入本地目录并启动影院，准备 AI 观影包，再将自带的 stdio MCP 接入支持的 AI 客户端。" },
+      { "label": "许可", "text": "MIT。" }
+    ]
+  },
+  "stars": 37,
+  "editorPick": true
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "villa-session-bridge",
+  "order": 208,
+  "name": { "zh": "Villa Bridge", "en": "Villa Bridge" },
+  "author": "suesxm",
+  "sourceUrl": "https://github.com/suesxm/villa-session-bridge",
+  "hook": "给电脑里持续存在的那一个 TA，搭一条从手机回去的路。",
+  "summary": "隐私优先的手机网页桥框架，让手机与电脑共享同一个本地 AI 会话，并清楚显示消息送达、回复和失败状态。",
+  "heroDescription": "Villa Bridge 把手机网页接到电脑上持续运行的本地 AI 会话，让重开网页不等于重开 TA。仓库提供控制器、演示页面和接桥协议，真实接入仍需为自己的运行时实现本地桥。",
+  "badges": [
+    { "label": "关系延续", "tone": "continuity" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" },
+    { "label": "工具 / 插件", "tone": "tool" }
+  ],
+  "tags": ["持久会话", "手机入口", "写入交接", "隐私边界"],
+  "language": "JavaScript",
+  "platform": "Node.js 20+ / Self-host",
+  "updated": "2026-08-11",
+  "heroOverline": "ONE SESSION · MOBILE RETURN · SAFE HANDOFF",
+  "showcase": {
+    "label": "给同一个本地会话留一条手机回家路",
+    "symbol": "桥",
+    "question": "“换到手机以后，还是刚才电脑里的那个 TA 吗？”",
+    "comparisons": [
+      { "value": "会话", "label": "电脑持续存在" },
+      { "value": "入口", "label": "手机随时回来" },
+      { "value": "交接", "label": "一次只有一端写入" }
+    ],
+    "note": "仓库提供可运行演示与接线协议，不包含 Claude Code、Codex 等运行时的现成生产桥。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Villa Bridge 是一个隐私优先的手机 Web 桥框架，目标是让手机和电脑访问同一个本地持久 AI 会话。浏览器重开不会创建新的会话，消息会明确显示已接收、已送达、回复中、完成或失败。",
+      "为了避免两个入口同时抢写，它要求桥端签发唯一写入权并逐回合确认。仓库自带安全演示、控制器和 HTTP 接桥协议；要接入真实的 Claude Code、Codex 或其他运行时，仍需自己实现符合协议的本地桥。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "已经有本地长期 AI 会话，想为它增加手机入口的开发者和进阶用户。" },
+      { "label": "平台", "text": "Node.js 20+、本地控制器与手机 Web 页面；远程访问需要安全的 HTTPS 或加密覆盖网络。" },
+      { "label": "使用方式", "text": "先运行安全演示理解完整状态流，再为自己的本地 AI 运行时实现接桥协议。" },
+      { "label": "许可", "text": "Apache-2.0。" }
+    ]
+  },
+  "stars": 5
+}

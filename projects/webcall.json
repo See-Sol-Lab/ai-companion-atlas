@@ -1,0 +1,46 @@
+{
+  "slug": "webcall",
+  "order": 207,
+  "name": { "zh": "WebCall", "en": "WebCall" },
+  "author": "YolanYL",
+  "sourceUrl": "https://github.com/YolanYL/webcall",
+  "hook": "打开网页，像打电话一样和自己设定的 TA 说话。",
+  "summary": "可自部署的 AI 语音通话网页，可以自定义 TA 的名字、人设、模型和声音，首次启动跟着网页向导配置即可。",
+  "heroDescription": "WebCall 把浏览器里的说话、理解和语音回复连成一通电话。你可以自己部署，设置 TA 的角色、模型和声音，也能管理登录账号与使用量。",
+  "badges": [
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "五感与器官", "tone": "senses" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "手机前端", "tone": "mobile" }
+  ],
+  "tags": ["实时语音", "自定义角色", "多模型", "网页部署"],
+  "language": "Python / HTML / JavaScript",
+  "platform": "Self-host / Web",
+  "updated": "2026-04-08",
+  "heroOverline": "VOICE · CALL · CUSTOM CHARACTER",
+  "showcase": {
+    "label": "把聊天框变成一通可以听见彼此的电话",
+    "symbol": "☎",
+    "question": "“能不能放下键盘，直接和 TA 通一会儿电话？”",
+    "comparisons": [
+      { "value": "开口", "label": "浏览器录音" },
+      { "value": "理解", "label": "模型组织回答" },
+      { "value": "回声", "label": "用声音回复" }
+    ],
+    "note": "它提供通话外壳；角色、模型与语音服务由部署者自己选择。"
+  },
+  "intro": {
+    "paragraphs": [
+      "WebCall 是一套可自部署的 AI 实时语音通话网页。你在浏览器里说话，系统把声音转成文字交给模型，再把回答合成为语音播放出来。",
+      "它支持自定义角色、多种 OpenAI 兼容模型、MiniMax 语音和多种语音识别方案。首次启动可用网页向导完成配置，并带有基础的账号、用量与管理功能。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想给 AI 伴侣增加一个网页电话入口，并自行决定角色、模型和声音的人。" },
+      { "label": "平台", "text": "Python Flask 与 Web 前端，可部署到 Hugging Face Spaces 或 Docker。" },
+      { "label": "使用方式", "text": "部署服务，按照网页向导配置模型、语音识别和语音合成服务，再通过浏览器通话。" },
+      { "label": "许可", "text": "AGPL-3.0。" }
+    ]
+  },
+  "stars": 32
+}

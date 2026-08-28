@@ -1,0 +1,46 @@
+{
+  "slug": "haiguitang-coop",
+  "order": 210,
+  "name": { "zh": "共猜 · 海龟汤双人协作", "en": "haiguitang-coop" },
+  "author": "AZHi-xinxin",
+  "sourceUrl": "https://github.com/AZHi-xinxin/haiguitang-coop",
+  "hook": "你和 TA 轮流问“是”或“不是”，一起把离奇故事的真相猜出来。",
+  "summary": "双人协作海龟汤网页游戏：人类和 AI 轮流提问、整理线索、提交推理，系统负责提示、评分和揭晓汤底。",
+  "heroDescription": "共猜把海龟汤做成一场人类与 AI 的双人推理。双方轮流提出只能用“是”或“不是”回答的问题，一起拼出真相；游戏还能给提示、评分并管理自定义题库。",
+  "badges": [
+    { "label": "游戏", "tone": "game" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "开源", "tone": "open" },
+    { "label": "原创", "tone": "original" },
+    { "label": "PC 前端", "tone": "desktop" }
+  ],
+  "tags": ["双人推理", "轮流提问", "自动评分", "自定义题库"],
+  "language": "TypeScript / Python",
+  "platform": "Windows / Local Web / MCP",
+  "updated": "2026-08-01",
+  "heroOverline": "YES OR NO · CLUES · TRUTH",
+  "showcase": {
+    "label": "让人类和 AI 坐在同一张推理桌前",
+    "symbol": "汤",
+    "question": "“这碗汤的真相，我们能一起猜出来吗？”",
+    "comparisons": [
+      { "value": "提问", "label": "轮流问是与否" },
+      { "value": "推理", "label": "一起整理线索" },
+      { "value": "揭底", "label": "提示评分答案" }
+    ],
+    "note": "人类与 AI 是并肩猜题的搭档，不是一方给另一方念答案。"
+  },
+  "intro": {
+    "paragraphs": [
+      "共猜是一款让人类与 AI 一起玩海龟汤的双人文字游戏。一人一机轮流提出只能用“是”或“不是”回答的问题，随着线索推进，可以请求提示、提交完整推理，再由系统评分并揭晓汤底。",
+      "前端没有连接后端时会进入本地演示模式；真正通过 MCP 和 AI 共玩，需要填写后端地址与房间密钥。仓库附带 5 道可分发的原创示例题，也支持按规范建立自己的私人题库。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和 AI 伴侣玩纯文字双人推理小游戏的人。" },
+      { "label": "平台", "text": "Next.js 前端需要 Node.js 22+，另有 Python 后端；使用浏览器游玩。" },
+      { "label": "使用方式", "text": "安装并启动前端体验本地演示，或配置后端地址和房间密钥接入 AI 共玩。" },
+      { "label": "许可", "text": "代码 MIT；示例题 CC BY 4.0；私人题库仍归原作者。" }
+    ]
+  },
+  "stars": 21
+}
