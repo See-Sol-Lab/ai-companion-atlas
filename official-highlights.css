@@ -42,13 +42,6 @@
     word-break: normal;
   }
 
-  /* The directory only gets two badge rows. Extra badges remain available on
-     the detail page and in filtering metadata, but cannot stretch the card. */
-  .project-badges {
-    max-height: 58px;
-    overflow: hidden;
-  }
-
   .project-badge {
     max-width: 100%;
     overflow: hidden;

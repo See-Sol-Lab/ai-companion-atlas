@@ -325,6 +325,27 @@ test('every generated project detail page contains its own comment slug and shar
   }
 });
 
+test('robots and sitemap expose public pages without private surfaces', async () => {
+  const robots = await readFile(path.join(root, 'robots.txt'), 'utf8');
+  assert.match(robots, /User-agent: \*/u);
+  assert.match(robots, /Allow: \//u);
+  for (const pathname of ['/admin/', '/api/', '/community/']) {
+    assert.ok(robots.includes(`Disallow: ${pathname}`));
+  }
+  assert.match(robots, /Sitemap: https:\/\/www\.ailover-atlas\.com\/sitemap\.xml/u);
+
+  const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
+  for (const pathname of ['/', '/deepseekgui/', '/deepseekgui/download/', '/deepseekgui/docs/', '/deepseekgui/privacy/']) {
+    assert.ok(sitemap.includes(`<loc>https://www.ailover-atlas.com${pathname}</loc>`));
+  }
+  const projectFiles = (await readdir(path.join(root, 'projects'))).filter((name) => name.endsWith('.json'));
+  for (const fileName of projectFiles) {
+    const project = JSON.parse(await readFile(path.join(root, 'projects', fileName), 'utf8'));
+    assert.ok(sitemap.includes(`<loc>https://www.ailover-atlas.com/projects/${project.slug}/</loc>`));
+  }
+  assert.doesNotMatch(sitemap, /\/(?:admin|api|community)\//u);
+});
+
 test('pending comment stays private until the admin approves it', async () => {
   const database = new DatabaseSync(':memory:');
   database.exec(await readFile(path.join(root, 'migrations', '0001_comments.sql'), 'utf8'));

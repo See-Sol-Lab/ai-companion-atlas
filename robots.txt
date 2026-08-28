@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /community/
+
+Sitemap: https://www.ailover-atlas.com/sitemap.xml

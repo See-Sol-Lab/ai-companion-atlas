@@ -1,6 +1,8 @@
 /* Desktop refinement pass: preserve the original visual language, tighten scale and information density. */
+html{color-scheme:light;background-color:#f7f4ef}
+body{background-color:#f7f4ef}
 @media (min-width:1181px){
-  body{background:linear-gradient(180deg,#f4f1ec 0,#f5f3f7 52%,#f7f5f1 100%)}
+  body{background:#f7f4ef linear-gradient(180deg,#f4f1ec 0,#f5f3f7 52%,#f7f5f1 100%)}
   .page-shell{position:relative;width:min(calc(100% - 40px),1420px);margin:0 auto;overflow:hidden;box-shadow:0 0 0 1px rgba(79,94,132,.06),0 24px 80px rgba(28,44,82,.06)}
 
   .site-header{top:0;width:min(calc(100% - 48px),1324px);height:76px;grid-template-columns:318px minmax(620px,1fr);gap:18px}
