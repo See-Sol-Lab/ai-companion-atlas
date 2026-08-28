@@ -307,6 +307,7 @@ test('every generated project detail page contains its own comment slug and shar
     const project = JSON.parse(await readFile(path.join(root, 'projects', fileName), 'utf8'));
     const html = await readFile(path.join(root, 'projects', project.slug, 'index.html'), 'utf8');
     const sourceUrl = escapeHtml(project.sourceUrl);
+    assert.match(html, /<link rel="icon" href="\/favicon\.svg" type="image\/svg\+xml" \/>/u);
     assert.match(html, new RegExp(`data-comments-project="${project.slug}"`, 'u'));
     assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
     assert.ok(html.includes('<p class="project-source-url"><span>项目地址（可复制给 AI）：</span>'));

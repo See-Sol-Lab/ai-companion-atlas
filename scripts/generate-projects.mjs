@@ -188,6 +188,7 @@ function renderDetail(project) {
   <meta name="theme-color" content="#f7f4ef" />
   <meta name="description" content="${escapeHtml(documentDescriptionName)}：${escapeHtml(project.summary)} AI Companion Atlas 中文项目档案。" />
   <title>${escapeHtml(documentTitle)} · AI Companion Atlas</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../detail.css?v=20260826-2" />${officialHighlightStylesheet}
   <script src="../detail-comments.js?v=20260824-4" defer></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
