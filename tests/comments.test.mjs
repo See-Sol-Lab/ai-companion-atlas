@@ -221,13 +221,19 @@ test('POST verifies Turnstile and inserts a pending comment with a hashed IP', a
 test('POST rate limit rejects before consuming a Turnstile token', async () => {
   const originalFetch = globalThis.fetch;
   let siteverifyCalled = false;
+  let windowStart = '';
   globalThis.fetch = async () => {
     siteverifyCalled = true;
     throw new Error('should not run');
   };
   const database = {
     prepare() {
-      return { bind: () => ({ first: async () => ({ count: 3 }) }) };
+      return {
+        bind(_ipHash, cutoff) {
+          windowStart = cutoff;
+          return { first: async () => ({ count: 3 }) };
+        }
+      };
     }
   };
 
@@ -241,6 +247,9 @@ test('POST rate limit rejects before consuming a Turnstile token', async () => {
       env: { COMMENTS_DB: database, TURNSTILE_SECRET: 'secret', IP_HASH_SALT: 'salt' }
     });
     assert.equal(response.status, 429);
+    assert.equal((await response.json()).error, '提交得有点快，请两分钟后再试。');
+    const windowAge = Date.now() - Date.parse(windowStart);
+    assert.ok(windowAge >= 2 * 60 * 1000 && windowAge < 2 * 60 * 1000 + 1000);
     assert.equal(siteverifyCalled, false);
   } finally {
     globalThis.fetch = originalFetch;

@@ -12,7 +12,7 @@ import {
 } from '../_shared/comments.mjs';
 
 const RATE_LIMIT_COUNT = 3;
-const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_WINDOW_MS = 2 * 60 * 1000;
 
 export async function onRequestGet({ request, env }) {
   try {
@@ -49,7 +49,7 @@ export async function onRequestPost({ request, env }) {
     `).bind(ipHash, windowStart).first();
 
     if (Number(recent?.count || 0) >= RATE_LIMIT_COUNT) {
-      throw new RequestError(429, '提交得有点快，请十分钟后再试。');
+      throw new RequestError(429, '提交得有点快，请两分钟后再试。');
     }
 
     const ip = request.headers.get('CF-Connecting-IP') || '';
