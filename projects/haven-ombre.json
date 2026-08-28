@@ -5,7 +5,7 @@
   "author": "Yinglianchun",
   "sourceUrl": "https://github.com/Yinglianchun/Haven-Ombre",
   "hook": "在长期记忆之上补上原文证据、跨窗交接、画像和自我连续性。",
-  "summary": "扩展型个人连续性系统，保留 Markdown 记忆真源，并增加保守召回、原文层、图关系、handoff、画像、Dream 与聊天 Gateway。",
+  "summary": "基于 Ombre-Brain 深度二次开发的独立连续性系统，在 Markdown 记忆真源上加入证据门控、跨窗 handoff、画像、Dream 与聊天 Gateway。",
   "heroDescription": "Haven-Ombre 把长期记忆、原始对话、短期状态与画像分层处理，强调先找到证据再做关联。新窗口通过紧凑 handoff 接回自我、关系与近期上下文，而不是一次倾倒全部记忆。",
   "badges": [
     {
@@ -13,12 +13,16 @@
       "tone": "subjectivity"
     },
     {
-      "label": "开源",
-      "tone": "open"
+      "label": "源码公开",
+      "tone": "limited"
     },
     {
       "label": "记忆",
       "tone": "memory"
+    },
+    {
+      "label": "非商业",
+      "tone": "limited"
     },
     { "label": "工具 / 插件", "tone": "tool" }
   ],
@@ -30,7 +34,7 @@
   ],
   "language": "Python",
   "platform": "Self-host / MCP",
-  "updated":"2026-08-07",
+  "updated":"2026-08-19",
   "heroOverline": "EVIDENCE · HANDOFF · PORTRAIT",
   "showcase": {
     "label": "让新窗口接住证据、关系与近期状态",
@@ -55,7 +59,7 @@
   "intro": {
     "paragraphs": [
       "Haven-Ombre 是一套以 Markdown 记忆桶为长期真源、同时提供 MCP 与聊天 Gateway 的个人连续性系统。它把原始对话、长期记忆、短期状态和画像拆成不同层，并用保守召回、日期检索与关系图控制何时引用。",
-      "项目还增加跨窗口 handoff、自我入口、照顾备忘、Darkroom、Dream、自动写入门卫与 OpenAI/Anthropic 兼容 Gateway。它基于 P0luz/Ombre-Brain 二次开发，保留上游记忆桶、情绪坐标、遗忘曲线、向量检索与 Dashboard，并在 README 中完整说明新增范围。"
+      "项目还增加跨窗口 handoff、自我入口、照顾备忘、Darkroom、Dream、自动写入门卫与 OpenAI/Anthropic 兼容 Gateway。它基于 P0luz/Ombre-Brain 深度二次开发，保留上游记忆桶、情绪坐标、遗忘曲线、向量检索与 Dashboard，并在 README 中完整说明新增范围。"
     ],
     "facts": [
       {
@@ -72,9 +76,10 @@
       },
       {
         "label": "许可",
-        "text": "MIT；属于 Ombre-Brain 的独立扩展分支。"
+        "text": "上游代码保留 MIT；本分支新增代码、文档与派生功能仅允许个人学习、私人使用和非商业修改或部署，商业使用需另行获得许可。"
       }
     ]
   },
+  "stars": 120,
   "editorPick": true
 }
