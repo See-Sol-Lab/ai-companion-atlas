@@ -9,7 +9,6 @@
   "summary": "这是给 iPhone、iPad 和 Mac 聊天应用使用的小组件。它内置 204 个颜文字，可以按分类挑选，也能添加、删除和保存自己的收藏。",
   "heroDescription": "KaomojiDrawerKit 可以给聊天应用增加一个颜文字抽屉。使用者能够按分类挑选表情，点一下放进尚未发送的草稿，也可以添加或删除自己的颜文字。",
   "badges": [
-    { "label": "手机前端", "tone": "mobile" },
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }

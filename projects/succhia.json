@@ -12,7 +12,6 @@
     { "label": "18+", "tone": "adult" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "陪伴类", "tone": "companion" },
-    { "label": "手机前端", "tone": "mobile" },
     { "label": "非商业", "tone": "limited" },
     { "label": "原创", "tone": "original" },
     { "label": "工具 / 插件", "tone": "tool" }
