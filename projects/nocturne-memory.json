@@ -20,7 +20,7 @@
   "tags": ["长期记忆", "跨模型", "MCP", "可回滚"],
   "language": "Python / JavaScript",
   "platform": "Self-host / MCP / Web",
-  "updated": "2026-08-09",
+  "updated": "2026-08-27",
   "heroOverline": "长期记忆 · 跨模型 · 可回滚",
   "showcase": {
     "label": "它解决什么",

@@ -11,7 +11,6 @@
   "heroDescription": "Microverse 把一群有性格、有记忆的 AI 角色放进同一个虚拟世界。它们会自由移动、彼此聊天、完成任务并慢慢形成自己的社会关系。玩家可以在一旁观察，也能进入场景和它们交流。",
   "badges": [
     { "label": "AI 主体性", "tone": "subjectivity" },
-    { "label": "记忆", "tone": "memory" },
     { "label": "关系延续", "tone": "continuity" },
     { "label": "游戏", "tone": "game" },
     { "label": "开源", "tone": "open" },

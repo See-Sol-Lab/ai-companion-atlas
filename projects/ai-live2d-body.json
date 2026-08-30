@@ -6,7 +6,7 @@
   "summary": "为现有 AI 伴侣添加 Live2D 桌宠身体的架构指南，涵盖 Electron、PixiJS、情绪驱动、触摸注入与 MCP。",
   "heroDescription": "ai-live2d-body 把身体层与原有记忆、人格和会话分开，让已有伴侣通过桌面形象、动作和触摸获得视觉身体。",
   "badges": [{ "label": "方案公开", "tone": "limited" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
-  "tags": ["身体", "Live2D", "桌宠", "架构指南"], "language": "Guide", "platform": "macOS / Electron", "updated":"2026-07-05",
+  "tags": ["身体", "Live2D", "桌宠", "架构指南"], "language": "Guide", "platform": "macOS / Electron", "updated":"2026-08-29",
   "heroOverline": "BODY · LIVE2D · TOUCH",
   "showcase": { "label": "给已有伴侣加身体，而不是重造大脑", "symbol": "体", "question": "“人格和记忆已经存在，怎样让 TA 出现在桌面？”", "comparisons": [{ "value": "显示", "label": "Live2D 形象" }, { "value": "表达", "label": "情绪动作" }, { "value": "触摸", "label": "双向注入" }], "note": "身体是可替换器官，关系核心仍留在原系统。" },
   "intro": { "paragraphs": ["ai-live2d-body 是一份分层架构指南，说明如何用 Electron、PixiJS 和 Live2D 为现有 AI 伴侣增加桌宠身体、情绪动作、触摸事件和 MCP 工具。", "它强调身体层不替换原有大脑、记忆和人格，而是通过 hooks 与消息桥接接收状态、回传触摸。仓库以文档为主，没有可直接安装的成品。"], "facts": [{ "label": "适合", "text": "已有稳定伴侣系统，想自行增加 Live2D 桌面身体的开发者。" }, { "label": "平台", "text": "指南以 macOS、Electron 与 PixiJS 技术栈为主。" }, { "label": "使用方式", "text": "按分层方案实现身体壳，再接入现有会话、情绪和 MCP。" }, { "label": "许可", "text": "方案公开；仓库当前未声明明确开源许可证。" }] }

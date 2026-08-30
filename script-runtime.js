@@ -147,7 +147,6 @@ const HIGH_STAR_SLUGS = new Set([
   'rikkahub',
   'clawd-on-desk',
   'chatgpt-exporter',
-  'n-e-k-o',
   'bitterbot-desktop',
   'roboto-origin',
   'lingchat',

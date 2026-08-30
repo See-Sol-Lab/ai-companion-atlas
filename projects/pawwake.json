@@ -15,7 +15,7 @@
   "tags": ["记忆", "网关", "分区缓存", "Dashboard"],
   "language": "Python",
   "platform": "Self-host / OpenAI API",
-  "updated":"2026-08-18",
+  "updated":"2026-08-24",
   "heroOverline": "EXTRACT · CONSOLIDATE · CACHE",
   "showcase": {
     "label": "一条 API 路径同时管理记忆与长对话成本",

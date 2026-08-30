@@ -6,7 +6,7 @@
   "summary": "端到端语音识别工具包，覆盖流式 ASR、VAD、标点、说话人分离、训练推理与 OpenAI 兼容服务。",
   "heroDescription": "FunASR 不只听写文字，也提供实时流、断句、标点和说话人管线，适合作为中文陪伴场景的完整听觉基础设施。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
-  "tags": ["听觉", "流式 ASR", "说话人分离", "语音服务"], "language": "Python", "platform": "Self-host / Cross-platform", "updated":"2026-08-21",
+  "tags": ["听觉", "流式 ASR", "说话人分离", "语音服务"], "language": "Python", "platform": "Self-host / Cross-platform", "updated":"2026-08-30",
   "heroOverline": "STREAMING · DIARIZATION · SPEECH PIPELINE",
   "showcase": { "label": "从听见声音到整理成对话", "symbol": "≈", "question": "“实时语音怎样变成可读、可分人的文本？”", "comparisons": [{ "value": "识别", "label": "流式转写" }, { "value": "断句", "label": "VAD 与标点" }, { "value": "分人", "label": "说话人分离" }], "note": "它更像一整套听觉管线，而不只是单个模型。" },
   "intro": { "paragraphs": ["FunASR 提供语音识别训练与推理、流式 ASR、语音活动检测、标点恢复和说话人分离，并可封装为 OpenAI 兼容或 MCP 服务。", "伴侣系统可以用它处理实时麦克风、语音消息和多人环境中的转写，再把带时间与说话人信息的文本交给对话模型。"], "facts": [{ "label": "适合", "text": "需要中文友好、可自托管完整语音识别管线的项目。" }, { "label": "平台", "text": "Python，自托管 CPU/GPU 环境。" }, { "label": "使用方式", "text": "按任务选择模型，组合 ASR、VAD、标点和说话人模块。" }, { "label": "许可", "text": "工具包代码为 MIT；预训练权重许可按各模型卡分别确认。" }] }

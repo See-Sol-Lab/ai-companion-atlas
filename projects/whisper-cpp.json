@@ -6,7 +6,7 @@
   "summary": "whisper.cpp 是本地语音转文字引擎。它读取录音或麦克风声音，在电脑、手机和浏览器中离线识别，再把文字交给 AI。",
   "heroDescription": "人类说话或发送录音后，whisper.cpp 会在当前设备上运行 Whisper，把声音转换成文字。伴侣前端或聊天模型再读取这些文字并作出回应，录音不必先上传到云端识别。",
   "badges": [{ "label": "开源", "tone": "open" }, { "label": "原创", "tone": "original" }, { "label": "五感与器官", "tone": "senses" },{"label":"工具 / 插件","tone":"tool"}],
-  "tags": ["语音转文字", "离线识别", "麦克风", "本地隐私"], "language": "C / C++", "platform": "Windows / macOS / Linux / Mobile / Web", "updated":"2026-08-22",
+  "tags": ["语音转文字", "离线识别", "麦克风", "本地隐私"], "language": "C / C++", "platform": "Windows / macOS / Linux / Mobile / Web", "updated":"2026-08-29",
   "heroOverline": "VOICE · LOCAL TRANSCRIPTION · TEXT",
   "showcase": { "label": "把人类说的话在本机交给 AI", "symbol": "⌁", "question": "“不把录音上传云端，AI 还能听懂我说的话吗？”", "comparisons": [{ "value": "声音", "label": "录音或麦克风" }, { "value": "识别", "label": "设备本地运行" }, { "value": "文字", "label": "交给 AI 阅读" }], "note": "它只负责语音转文字；理解、回复、人格和记忆由其他 AI 系统完成。" },
   "intro": { "paragraphs": ["whisper.cpp 是一个可以嵌入其他项目的本地语音转文字引擎。它接收录音文件或麦克风声音，在当前设备上运行 Whisper，然后输出识别出的文字。","把这些文字交给 AI 伴侣后，TA 就能根据你说的话回复。语音识别可以在电脑、手机、树莓派和浏览器中离线运行，适合不想把录音交给云端处理的人。"],

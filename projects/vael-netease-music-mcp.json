@@ -16,7 +16,7 @@
   "tags": ["网易云音乐", "共用账号", "歌单管理", "MCP"],
   "language": "Python",
   "platform": "Self-host / MCP / NetEase Cloud Music",
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "heroOverline": "网易云 · 共用账号 · MCP",
   "showcase": {
     "label": "不只一起听，也一起整理",
