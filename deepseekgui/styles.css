@@ -421,6 +421,7 @@ pre code { padding: 0; color: inherit; background: none; }
 }
 .download-warning p { margin: 0; }
 .download-warning strong { color: #465a7c; }
+.download-warning a { color: var(--blue-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 .download-preview { position: relative; min-width: 0; }
 .download-preview::before {
   content: "";
@@ -441,6 +442,37 @@ pre code { padding: 0; color: inherit; background: none; }
 .download-preview-frame img { width: 100%; height: auto; }
 .download-preview > p { position: relative; margin: 12px 0 0; color: #7d89a0; text-align: right; font: 600 9px/1.4 var(--mono); }
 .site-footer.download-footer { min-height: 96px; padding-block: 20px; }
+
+.install-guide { padding: 8px 0 56px; scroll-margin-top: 24px; }
+.install-guide-head { max-width: 620px; }
+.install-guide-head h2 { margin: 8px 0 0; font: 500 clamp(26px, 3vw, 34px)/1.2 var(--serif); letter-spacing: -.03em; }
+.install-guide-head > p { margin: 12px 0 0; color: var(--ink-soft); font-size: 14px; line-height: 1.78; }
+.install-steps {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.install-step {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.install-step-shot {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(16, 35, 69, .12);
+}
+.install-step-shot svg { width: 100%; height: auto; }
+.install-step-copy { margin-top: 16px; }
+.install-step-copy b { display: block; color: var(--ink); font: 600 11px/1 var(--mono); letter-spacing: .08em; }
+.install-step-copy p { margin: 8px 0 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.7; }
+.install-step-copy em { color: var(--ink); font-style: normal; font-weight: 600; }
+.install-guide-note { max-width: 620px; margin: 26px 0 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.install-guide-note a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 2px; }
 
 .policy { max-width: 860px; padding-top: 54px; }
 .policy-section { padding: 0 0 34px; margin-bottom: 34px; border-bottom: 1px solid var(--line); }
@@ -508,6 +540,9 @@ pre code { padding: 0; color: inherit; background: none; }
   .download-actions { align-items: stretch; flex-direction: column; }
   .download-actions .button { width: 100%; }
   .download-preview > p { text-align: left; }
+  .install-steps { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .install-guide-head > p,
+  .install-step-copy p { font-size: 15px; line-height: 1.72; }
   .site-footer { align-items: flex-start; flex-direction: column; min-height: 0; padding: 30px 0 46px; }
   .footer-links { justify-content: flex-start; }
 }
