@@ -9,8 +9,7 @@
   "heroDescription": "柚月小手机把角色的现代社交生活嵌进 SillyTavern，用高交互手机 UI 承接聊天、动态和视频通话。",
   "badges": [
     { "label": "源码公开", "tone": "limited" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "原创", "tone": "original" }
   ],
   "tags": ["SillyTavern", "虚拟手机", "角色扮演", "视频通话"],
   "language": "JavaScript / CSS",

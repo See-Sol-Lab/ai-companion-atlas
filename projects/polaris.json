@@ -29,10 +29,6 @@
       "tone": "mobile"
     },
     {
-      "label": "PC 前端",
-      "tone": "desktop"
-    },
-    {
       "label": "免翻墙",
       "tone": "no-vpn"
     }

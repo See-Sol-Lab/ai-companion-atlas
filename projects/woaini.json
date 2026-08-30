@@ -11,8 +11,7 @@
     { "label": "陪伴类", "tone": "companion" },
     { "label": "源码公开", "tone": "limited" },
     { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "手机前端", "tone": "mobile" }
   ],
   "tags": ["PWA", "专注", "角色卡", "离线缓存"],
   "language": "HTML / JavaScript",

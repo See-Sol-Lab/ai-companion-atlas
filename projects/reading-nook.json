@@ -10,8 +10,7 @@
   "badges": [
     { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "原创", "tone": "original" }
   ],
   "tags": ["共读", "网页阅读器", "批注", "自托管"],
   "language": "Python",

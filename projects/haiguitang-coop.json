@@ -11,8 +11,7 @@
     { "label": "游戏", "tone": "game" },
     { "label": "陪伴类", "tone": "companion" },
     { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "原创", "tone": "original" }
   ],
   "tags": ["双人推理", "轮流提问", "自动评分", "自定义题库"],
   "language": "TypeScript / Python",

@@ -10,8 +10,7 @@
   "badges": [
     { "label": "开源", "tone": "open" },
     { "label": "原创", "tone": "original" },
-    { "label": "手机前端", "tone": "mobile" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "手机前端", "tone": "mobile" }
   ],
   "tags": ["PWA", "自托管", "私聊群聊", "Claude Code"],
   "language": "JavaScript",

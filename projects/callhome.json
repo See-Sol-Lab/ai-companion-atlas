@@ -27,10 +27,6 @@
     {
       "label": "手机前端",
       "tone": "mobile"
-    },
-    {
-      "label": "PC 前端",
-      "tone": "desktop"
     }
   ],
   "tags": [

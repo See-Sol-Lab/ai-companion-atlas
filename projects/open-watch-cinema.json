@@ -11,8 +11,7 @@
     { "label": "陪伴类", "tone": "companion" },
     { "label": "五感与器官", "tone": "senses" },
     { "label": "开源", "tone": "open" },
-    { "label": "原创", "tone": "original" },
-    { "label": "PC 前端", "tone": "desktop" }
+    { "label": "原创", "tone": "original" }
   ],
   "tags": ["共同观影", "MCP", "防剧透", "本地电影"],
   "language": "JavaScript / Python",
