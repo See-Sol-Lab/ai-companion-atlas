@@ -194,6 +194,8 @@ img, svg { display: block; max-width: 100%; }
 }
 .hero-meta span::after { content: "·"; margin-left: 14px; color: #b1b8c6; }
 .hero-meta span:last-child::after { display: none; }
+.ph-badge { display: inline-block; margin-top: 22px; }
+.ph-badge img { width: 250px; height: auto; }
 
 .product-stage { position: relative; }
 .product-stage::before {
