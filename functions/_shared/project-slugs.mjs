@@ -142,7 +142,6 @@ export const PROJECT_SLUGS = new Set([
   'ears',
   'resonant',
   'drivesoid',
-  'orangechat',
   'voice-mcp',
   'forge-reload',
   'arcade',
