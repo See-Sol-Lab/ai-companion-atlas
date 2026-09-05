@@ -1,0 +1,80 @@
+{
+  "slug": "delve-ai-companion",
+  "name": {
+    "zh": "下矿",
+    "en": "Delve"
+  },
+  "author": "liyana31811",
+  "sourceUrl": "https://github.com/liyana31811/delve-ai-companion",
+  "hook": "让 AI 去地下探险，带着地图、藏品和下矿战报回来。",
+  "summary": "给 AI 伴侣玩的 Python 文字探索游戏，支持地图、藏品、称号、工具升级与本地存档；人类可以看战报并参与关键选择。",
+  "heroDescription": "把一段下矿探索交给能运行 Python 的 AI：它通过游戏指令推进、保存进度，再与你分享地图与发现。参考图片需要额外的联网检索能力。",
+  "badges": [
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "游戏",
+      "tone": "game"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "地下探索",
+    "藏品图鉴",
+    "本地存档",
+    "非商业"
+  ],
+  "language": "Python",
+  "platform": "Python / Agent 工具环境",
+  "updated": "2026-08-10",
+  "heroOverline": "EXPLORE · COLLECT · RETURN",
+  "showcase": {
+    "label": "带着发现回来",
+    "symbol": "⛏",
+    "question": "“让 TA 下矿一趟，会带回怎样的地图和故事？”",
+    "comparisons": [
+      {
+        "value": "探索",
+        "label": "文字指令推进"
+      },
+      {
+        "value": "收集",
+        "label": "藏品与称号"
+      },
+      {
+        "value": "返回",
+        "label": "地图与战报"
+      }
+    ],
+    "note": "核心是文字游戏；配图依赖宿主的额外工具，完成度未经本站试玩验证。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Delve 是一个单文件 Python 下矿游戏。AI 可以通过 cmd 指令探索路线、收集物品、升级工具，并把进度保存到本地文件。",
+      "它适合让 AI 玩、人类看发现并参与关键选择的共同活动。需要宿主真正执行游戏与保存文件；纯聊天窗口不能凭叙述代替存档。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "想给 AI 伴侣一个可持续积累的小型探索活动的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "准备 Python 与可运行代码的 Agent，按原仓库说明调用游戏指令；本地文件需可写。"
+      },
+      {
+        "label": "图片",
+        "text": "参考图展示需要宿主另有联网检索能力，游戏文件本身不提供图片服务。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；非商业使用，修改与再分发需遵守许可并保留署名。"
+      }
+    ]
+  }
+}

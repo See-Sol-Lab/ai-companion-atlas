@@ -1,0 +1,80 @@
+{
+  "slug": "codex-tandem",
+  "name": {
+    "zh": "Codex Tandem",
+    "en": "Codex Tandem"
+  },
+  "author": "ceniran",
+  "sourceUrl": "https://github.com/ceniran/codex-tandem",
+  "hook": "切换两个自有 Codex CLI 账号，沿用同一份本地会话。",
+  "summary": "A/B 双账号凭据切换工具，保留同一 CODEX_HOME 中的会话、历史和配置。面向已有 Codex CLI 的 Linux/macOS 用户。",
+  "heroDescription": "Codex Tandem 切换本地 auth.json，让两个有权使用的账号沿用同一份会话目录。切换应在任务之间进行；它是独立社区工具，兼容性随 Codex CLI 版本变化。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    },
+    {
+      "label": "关系延续",
+      "tone": "continuity"
+    }
+  ],
+  "tags": [
+    "账号切换",
+    "CLI 工具",
+    "会话保留",
+    "进阶配置"
+  ],
+  "language": "JavaScript / Node.js",
+  "platform": "Linux / macOS",
+  "updated": "2026-08-15",
+  "heroOverline": "TWO ACCOUNTS · ONE HOME",
+  "showcase": {
+    "label": "保留同一份会话目录",
+    "symbol": "⇄",
+    "question": "“换自己的另一个账号时，能否继续原来的本地会话？”",
+    "comparisons": [
+      {
+        "value": "A / B",
+        "label": "两个授权账号"
+      },
+      {
+        "value": "凭据",
+        "label": "切换登录文件"
+      },
+      {
+        "value": "会话",
+        "label": "原目录继续使用"
+      }
+    ],
+    "note": "独立社区项目，非 OpenAI 官方工具；无任务运行时切换，不增加单账号额度。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Codex Tandem 0.1.1 是面向 Codex CLI 的双账号切换器。它保留 CODEX_HOME 下的会话、历史、配置与扩展，仅切换账号凭据，再使用正常的会话恢复流程。",
+      "项目包含本地权限检查、原子替换和失败恢复机制。凭据仍以本地文件保存，使用者需要保护主机账户与备份；这些机制未经本站运行验证。"
+    ],
+    "facts": [
+      {
+        "label": "需要",
+        "text": "Node.js 20+、已安装的 Codex CLI，以及两个本人有权使用的账号。"
+      },
+      {
+        "label": "平台",
+        "text": "README 列 Linux/macOS；作者报告 Linux 实测，macOS 尚缺独立验证，不标 Windows 支持。"
+      },
+      {
+        "label": "使用边界",
+        "text": "在没有 Codex 任务运行时切换。不是账号共享服务，也不保证未来 CLI 版本或桌面客户端兼容。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；凭据文件不应上传或提交到仓库。"
+      }
+    ]
+  }
+}
