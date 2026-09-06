@@ -42,7 +42,7 @@
   ],
   "language": "TypeScript",
   "platform": "Windows 10 / 11 x64",
-  "updated": "2026-08-30",
+  "updated": "2026-09-06",
   "heroOverline": "INSTALL · COMPANION · DIY",
   "showcase": {
     "label": "让国产模型拥有自己的电脑前端",
@@ -80,7 +80,7 @@
       },
       {
         "label": "当前版本",
-        "text": "V1 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。"
+        "text": "当前版本 1.1.0 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。"
       },
       {
         "label": "项目关系",
