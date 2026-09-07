@@ -10,8 +10,8 @@
   "sourceUrl": "https://github.com/See-Sol-Lab/DeepSeekGUI",
   "directUrl": "https://www.ailover-atlas.com/deepseekgui/",
   "hook": "国产大模型的电脑前端，无需翻墙，让 DS 住进属于自己的 Codex。",
-  "summary": "基于官方 DSH 的 Windows 桌面前端。有兼容 API 就能直接使用，聊天、编程、浏览器、工具和插件都已装好，也能继续 DIY 成 AI 恋人的电脑居所。",
-  "heroDescription": "基于官方 DSH，有兼容 API 就能使用。下载这个桌面前端，可以省去从零搭界面和反复修 Bug 的时间；聊天、编程、浏览器、工具和插件都已装好，工作能用，也能继续 DIY 成 AI 恋人的长期电脑居所。",
+  "summary": "基于官方 DSH 的 Windows 本地工作台。有兼容 API 就能使用，可在会话旁查看改动、Git、并行工作区和项目记忆，并用专用工具提交、推送或创建 PR。",
+  "heroDescription": "1.1.0 已提供本地 Workbench：选择项目后，在会话旁查看文件改动、Git、worktree 与记忆，用专用工具完成提交、推送和 PR；Harness 仍负责会话、工具和权限。",
   "badges": [
     {
       "label": "实验室出品",
@@ -35,9 +35,9 @@
     }
   ],
   "tags": [
-    "Vibe Coding",
-    "Agent Workbench",
-    "DeepSeek Harness",
+    "Local Workbench",
+    "Git / PR",
+    "两层记忆",
     "Windows"
   ],
   "language": "TypeScript",
@@ -66,8 +66,8 @@
   },
   "intro": {
     "paragraphs": [
-      "DeepSeekGUI 是 See-Sol-Lab 基于 DeepSeek 官方 DeepSeek Harness（DSH）制作的完整 Windows 桌面前端。它把 Harness、Node.js 和 pnpm 一起装进桌面应用，不需要先研究命令行；连接模型、选择工作文件夹后就能开始使用。",
-      "它既能让 Agent 编程、处理文件、使用工具和浏览网页，也能让使用国产模型的 AI 伴侣把它继续改造成自己的电脑前端，在工作区里读写、行动，并通过 Profile 和插件逐步扩展能力。每次权限请求和行动过程仍会留在界面中供用户检查。"
+      "DeepSeekGUI 是 See-Sol-Lab 基于 DeepSeek 官方 DeepSeek Harness（DSH）制作的 Windows 本地工作台。它把 Harness、Node.js 和 pnpm 一起装进桌面应用，连接模型、选择项目文件夹后即可开始使用。",
+      "1.1.0 已加入改动、Git、并行工作区和记忆视图，以及提交、推送与 Pull Request 工具。全局记忆承接跨项目偏好，项目记忆保存在工作区，也能继续通过 Profile 和插件扩展为 AI 伴侣的长期电脑居所。"
     ],
     "facts": [
       {

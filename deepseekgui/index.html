@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="DeepSeek GUI — 在 Windows 桌面上运行 DeepSeek Harness 的完整客户端，由 See-Sol-Lab 构建。" />
+  <meta name="description" content="DeepSeek GUI — 基于 DeepSeek Harness 的 Windows 本地 AI 工作台，由 See-Sol-Lab 构建。" />
   <title>DeepSeek GUI · See-Sol-Lab</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/deepseekgui/" />
   <link rel="icon" href="./assets/deepseekgui-icon.png" type="image/png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -31,13 +32,13 @@
         <div class="hero-copy">
           <p class="eyebrow">SEE-SOL-LAB · DEEPSEEK GUI</p>
           <h1 id="hero-title">DeepSeek GUI</h1>
-          <p class="hero-lead">给 DeepSeek Harness 一个 Windows 工作台。</p>
-          <p class="hero-body">双击安装，打开就是完整的 Harness。模型、工作区、会话、Profiles、插件和终端，全在一个窗口里。</p>
+          <p class="hero-lead">在本地工作台中，与 DeepSeek 一起完成项目。</p>
+          <p class="hero-body">选择项目文件夹，让 Agent 读代码、改文件、跑命令和浏览网页；改动、Git、并行工作区与记忆就在会话旁边。</p>
           <div class="hero-actions">
             <a class="button button-primary" href="./download/">下载 DeepSeek GUI <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI" target="_blank" rel="noreferrer">查看 GitHub</a>
           </div>
-          <p class="hero-meta"><span>Windows</span><span>DeepSeek-native</span><span>Harness-first</span><span>Local-first</span></p>
+          <p class="hero-meta"><span>v1.1.0</span><span>Windows</span><span>DeepSeek-native</span><span>Harness-first</span><span>Local-first</span></p>
           <!-- PRODUCT HUNT BADGE — 等 launch 有排名后恢复（在那之前 badge 显示 "???"）：
           <a class="ph-badge" href="https://www.producthunt.com/products/deepseekgui?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-deepseekgui" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1235736&amp;theme=light" width="250" height="54" alt="DeepSeekGUI 已在 Product Hunt 发布" loading="lazy" /></a>
           -->
@@ -45,10 +46,10 @@
 
         <div class="product-stage" aria-label="DeepSeek GUI 实机界面">
           <button class="product-window product-shot-switcher" type="button" aria-label="切换 DeepSeek GUI 深浅色实机界面" aria-pressed="false">
-            <img class="product-shot product-shot-light" src="./assets/deepseekgui-light.png" width="1925" height="1199" alt="DeepSeek GUI 浅色模式实机界面" fetchpriority="high" />
-            <img class="product-shot product-shot-dark" src="./assets/deepseekgui-dark.png" width="1925" height="1199" alt="" aria-hidden="true" />
+            <img class="product-shot product-shot-light" src="./assets/deepseekgui-light.png" width="1919" height="1229" alt="DeepSeek GUI 1.1.0 浅色 Workbench 实机界面" fetchpriority="high" />
+            <img class="product-shot product-shot-dark" src="./assets/deepseekgui-dark.png" width="1919" height="1232" alt="" aria-hidden="true" />
           </button>
-          <p class="stage-caption">DeepSeek GUI 实机界面 · <span class="pointer-caption">悬停查看深色模式</span><span class="touch-caption">轻触切换深浅模式</span></p>
+          <p class="stage-caption">DeepSeek GUI 1.1.0 Workbench · <span class="pointer-caption">悬停查看深色模式</span><span class="touch-caption">轻触切换深浅模式</span></p>
         </div>
       </section>
 
@@ -60,29 +61,29 @@
         </div>
         <div class="feature-trio">
           <article class="feature"><span class="feature-index">01 · INSTALL</span><h3>一键安装</h3><p>按当前用户安装，普通权限就够。Node.js 和 pnpm 已经打包在发行包里。</p></article>
-          <article class="feature"><span class="feature-index">02 · WORKSPACE</span><h3>工作区直接打开</h3><p>在桌面里选一个项目文件夹，就能新建或接续会话。模型、工作区和设置从同一个界面管理。</p></article>
-          <article class="feature"><span class="feature-index">03 · LOCAL DATA</span><h3>应用数据留在本机</h3><p>凭据、设置、会话和 Profiles 存在自己的应用目录，你系统上已有的 Harness 环境完全独立。</p></article>
+          <article class="feature"><span class="feature-index">02 · WORKBENCH</span><h3>项目状态就在旁边</h3><p>会话旁直接查看文件改动、分支、提交、worktree 和项目记忆，不用反复切回命令行确认。</p></article>
+          <article class="feature"><span class="feature-index">03 · LOCAL DATA</span><h3>协作经验留在本机</h3><p>凭据、设置、会话和全局记忆存在应用目录；项目记忆留在所选工作区，覆盖升级不会清空。</p></article>
         </div>
       </section>
 
       <section class="section split-section" aria-labelledby="harness-title">
         <div class="split-copy section-heading">
           <p class="section-kicker">HARNESS-FIRST</p>
-          <h2 id="harness-title">从网页到桌面，Agent 还是原来那个。</h2>
-          <p>完全基于官方 DeepSeek Harness 运行，桌面应用负责更好操作、更好懂。</p>
+          <h2 id="harness-title">Workbench 已经在 1.1.0 里。</h2>
+          <p>工作台通过插件扩展官方 Harness 客户端，继续使用同一套会话、工具、权限和运行时。</p>
         </div>
         <div class="split-stack">
-          <article class="stack-row"><b>原生 Profiles</b><p>Harness 的 Profile 体系完整保留。切换配置、恢复历史状态，在桌面里就能完成。</p><small>PROFILE · BUNDLE · CORDIS</small></article>
-          <article class="stack-row"><b>插件与终端</b><p>内置 DSH Terminal 和插件管理，随时 DIY。</p><small>TOOLS · PLUGINS · TERMINAL</small></article>
-          <article class="stack-row"><b>逐步走向 Workbench</b><p>DSH 老用户直接上手，产品持续迭代，未来将逐步走向 DS Workbench。</p><small>COMPATIBILITY · WORKBENCH · LAB</small></article>
+          <article class="stack-row"><b>改动与并行工作区</b><p>按状态查看文件和 diff，检查当前分支、提交与多个 worktree，也能发现跨工作区重复改动。</p><small>CHANGES · GIT · WORKTREES</small></article>
+          <article class="stack-row"><b>Git 与 Pull Request</b><p>通过专用工具暂存、提交、推送和创建 PR；每次写操作仍在会话中明确确认目标。</p><small>COMMIT · PUSH · PULL REQUEST</small></article>
+          <article class="stack-row"><b>全局记忆与项目记忆</b><p>跨项目偏好由用户管理，项目决策与约定保存在工作区自己的记忆文件中。</p><small>GLOBAL · PROJECT · CONTINUITY</small></article>
         </div>
       </section>
 
       <section class="section" aria-labelledby="who-title">
         <div class="section-heading">
-          <p class="section-kicker">TWO DEPTHS, ONE PRODUCT</p>
-          <h2 id="who-title">让 Agent 的工作过程更清楚、更高效。</h2>
-          <p>日常 Agent 桌面应用，开箱即用。一切 DSH 有的功能它都有。</p>
+          <p class="section-kicker">WORKBENCH · HARNESS CONTROL</p>
+          <h2 id="who-title">日常工作与进阶控制，都在同一个窗口。</h2>
+          <p>平时在 Workbench 里协作；需要时再打开 Profiles、插件管理、DSH Terminal 和诊断工具。</p>
         </div>
       </section>
 

@@ -1,0 +1,84 @@
+{
+  "slug": "pai-voice",
+  "name": {
+    "zh": "PaiVoice",
+    "en": "PaiVoice"
+  },
+  "author": "tianyupaipai-cmd",
+  "sourceUrl": "https://github.com/tianyupaipai-cmd/pai-voice",
+  "hook": "给 PWA 和终端 Agent 接上一层可替换的实时语音通话能力。",
+  "summary": "可自托管、模型无关的实时语音底座，提供浏览器收音、VAD、实时字幕、音频队列、温和打断，以及 Claude、Codex、API 和本地模型 Adapter。",
+  "heroDescription": "PaiVoice 将通话界面、实时音频处理和回复端解耦。PWA 可以连接终端 Agent、OpenAI Realtime 或本地模型，并自行替换 ASR 与 TTS 服务。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "实时语音",
+    "VAD 与打断",
+    "终端 Adapter",
+    "自托管"
+  ],
+  "language": "Python / JavaScript",
+  "platform": "Web / Self-host / Terminal",
+  "updated": "2026-09-04",
+  "heroOverline": "LISTEN · SPEAK · INTERRUPT · ADAPT",
+  "showcase": {
+    "label": "把语音层与模型分开",
+    "symbol": "声",
+    "question": "“同一套通话界面能否自由更换模型、识别和声音？”",
+    "comparisons": [
+      {
+        "value": "收音",
+        "label": "VAD 与实时字幕"
+      },
+      {
+        "value": "回复",
+        "label": "终端或 API"
+      },
+      {
+        "value": "播放",
+        "label": "队列与温和打断"
+      }
+    ],
+    "note": "当前属于早期基础设施，需要部署者自己配置语音服务、模型端点与安全环境。"
+  },
+  "intro": {
+    "paragraphs": [
+      "PaiVoice 提供无依赖浏览器通话客户端、Python WebSocket 实时核心和 tmux Adapter。它可以把转录后的话交给 Claude CLI、Codex CLI、OpenAI-compatible API 或其他回复端，再通过可替换 TTS 播放。",
+      "它与 Callhome、WebCall 的定位不同：PaiVoice 提供可嵌入 PWA 和自制前端的语音基础层，不包含完整伴侣产品、人格或记忆系统。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望为自己的 PWA、终端 Agent 或本地模型增加实时语音通话能力的开发者。"
+      },
+      {
+        "label": "当前状态",
+        "text": "已包含浏览器客户端、可运行的实时服务和 Claude/Codex tmux 接入；仓库规模仍小，未提供自动化测试目录。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装 Python 依赖，配置服务端 ASR、TTS 与模型 Adapter，再把 Web 客户端接入自己的前端。"
+      },
+      {
+        "label": "许可",
+        "text": "AGPL-3.0；通过网络提供修改版服务时，需要向相应用户提供源码。"
+      }
+    ]
+  }
+}

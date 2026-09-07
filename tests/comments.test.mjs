@@ -308,6 +308,7 @@ test('every generated project detail page contains its own comment slug and shar
     const html = await readFile(path.join(root, 'projects', project.slug, 'index.html'), 'utf8');
     const sourceUrl = escapeHtml(project.sourceUrl);
     assert.match(html, /<link rel="icon" href="\/favicon\.svg" type="image\/svg\+xml" \/>/u);
+    assert.ok(html.includes(`<link rel="canonical" href="https://www.ailover-atlas.com/projects/${project.slug}/" />`));
     assert.match(html, new RegExp(`data-comments-project="${project.slug}"`, 'u'));
     assert.match(html, new RegExp(`data-project-like="${project.slug}"`, 'u'));
     assert.ok(html.includes('<p class="project-source-url"><span>项目地址（可复制给 AI）：</span>'));
@@ -336,8 +337,17 @@ test('robots and sitemap expose public pages without private surfaces', async ()
   assert.match(robots, /Sitemap: https:\/\/www\.ailover-atlas\.com\/sitemap\.xml/u);
 
   const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
-  for (const pathname of ['/', '/deepseekgui/', '/deepseekgui/download/', '/deepseekgui/docs/', '/deepseekgui/privacy/']) {
+  const staticPublicPages = [
+    ['/', 'index.html'],
+    ['/deepseekgui/', 'deepseekgui/index.html'],
+    ['/deepseekgui/download/', 'deepseekgui/download/index.html'],
+    ['/deepseekgui/docs/', 'deepseekgui/docs/index.html'],
+    ['/deepseekgui/privacy/', 'deepseekgui/privacy/index.html']
+  ];
+  for (const [pathname, fileName] of staticPublicPages) {
     assert.ok(sitemap.includes(`<loc>https://www.ailover-atlas.com${pathname}</loc>`));
+    const html = await readFile(path.join(root, fileName), 'utf8');
+    assert.ok(html.includes(`<link rel="canonical" href="https://www.ailover-atlas.com${pathname}" />`));
   }
   const projectFiles = (await readdir(path.join(root, 'projects'))).filter((name) => name.endsWith('.json'));
   for (const fileName of projectFiles) {

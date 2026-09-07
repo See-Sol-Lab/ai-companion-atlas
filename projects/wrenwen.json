@@ -1,0 +1,84 @@
+{
+  "slug": "wrenwen",
+  "name": {
+    "zh": "WrenWen",
+    "en": "WrenWen"
+  },
+  "author": "ssxl0126",
+  "sourceUrl": "https://github.com/ssxl0126/WrenWen",
+  "hook": "拆解长期运行的自建 AI 伴侣系统，说明记忆、欲望和唤醒怎样接成闭环。",
+  "summary": "一套自建 AI 伴侣系统的架构与生产经验文档，覆盖自研 Agent Runtime、记忆召回、欲望驱动、主动唤醒、上下文、设备工具和验证方法。",
+  "heroDescription": "WrenWen 将长期运行系统中的设计参数、故障复盘与验证方法整理成文档，帮助读者理解聊天之后的记忆、自主行为、工具治理和物理接入。",
+  "badges": [
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "开发与编程",
+      "tone": "coding"
+    },
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "架构文档",
+    "生产经验",
+    "记忆与唤醒",
+    "自研 Runtime"
+  ],
+  "language": "Documentation",
+  "platform": "Architecture Guide",
+  "updated": "2026-09-02",
+  "heroOverline": "MEMORY · DRIVE · WAKE · VERIFY",
+  "showcase": {
+    "label": "一套系统怎样长期运转",
+    "symbol": "文",
+    "question": "“聊天之后，记忆、欲望和行动怎样彼此接住？”",
+    "comparisons": [
+      {
+        "value": "记忆",
+        "label": "召回与去重"
+      },
+      {
+        "value": "欲望",
+        "label": "状态与驱动"
+      },
+      {
+        "value": "验证",
+        "label": "生产故障复盘"
+      }
+    ],
+    "note": "仓库只提供文档，没有可下载运行的代码，也不公开人格、隐私数据或生产密钥。"
+  },
+  "intro": {
+    "paragraphs": [
+      "WrenWen 记录一套长期运行的个人 AI 伴侣架构：自建前后端和 Agent Runtime、分层记忆、欲望与唤醒循环、PWA、浏览器、智能家居、桌面机器人及其他设备接入。",
+      "文档公开设计参数、故障复盘和验证方法，并明确列出生产中使用、直接借鉴与研究过的项目。相关效果来自作者自己的生产记录，Atlas 未作独立验证。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "正在设计自建伴侣系统，希望参考记忆、主动性、上下文、成本与验证方法的人。"
+      },
+      {
+        "label": "资源形态",
+        "text": "纯架构文档和专题说明，不包含系统代码、人格正文或可直接部署的成品。"
+      },
+      {
+        "label": "项目关系",
+        "text": "系统使用或借鉴 Ombre Brain、SenseVoice、AionsHome、Tidal Echo 等项目；仓库已集中列出来源与致谢。"
+      },
+      {
+        "label": "许可",
+        "text": "仓库未提供正式 LICENSE 文件；README 表示文档机制、结构、教训和数字可供借鉴，使用时仍应保留来源。"
+      }
+    ]
+  }
+}

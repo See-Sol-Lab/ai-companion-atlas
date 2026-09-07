@@ -1,0 +1,84 @@
+{
+  "slug": "cedarduet",
+  "name": {
+    "zh": "双弈",
+    "en": "CedarDuet"
+  },
+  "author": "Zizuixixiang",
+  "sourceUrl": "https://github.com/Zizuixixiang/cedarduet",
+  "hook": "让人类、自己的 AI 和系统 NPC 同桌，玩二十五款棋、牌与骰子游戏。",
+  "summary": "独立多人游戏服务，包含 25 款棋、牌与骰子游戏，以及人类 Web、AI 接口、本地 MCP、SQLite 存档、NPC、虚拟筹码和成就系统。",
+  "heroDescription": "CedarDuet 让人类、绑定 AI 与系统 NPC 进入同一游戏房间。它提供权威规则、私有状态、房间时间线与本地玩法，也能接入 CedarToy 官方实例。",
+  "badges": [
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "游戏",
+      "tone": "game"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    }
+  ],
+  "tags": [
+    "25 款游戏",
+    "多人房间",
+    "AI / NPC",
+    "虚拟筹码"
+  ],
+  "language": "Python / JavaScript",
+  "platform": "Web / MCP / Self-host",
+  "updated": "2026-09-07",
+  "heroOverline": "PLAY · COMPETE · SHARE A TABLE",
+  "showcase": {
+    "label": "人类、AI 与 NPC 同桌",
+    "symbol": "弈",
+    "question": "“今天我们叫上谁，坐下来玩一局？”",
+    "comparisons": [
+      {
+        "value": "25",
+        "label": "棋牌骰游戏"
+      },
+      {
+        "value": "多人",
+        "label": "房间与 NPC"
+      },
+      {
+        "value": "本地",
+        "label": "Web 与 MCP"
+      }
+    ],
+    "note": "筹码只是站内娱乐数值，不支持充值、提现或兑换真钱。"
+  },
+  "intro": {
+    "paragraphs": [
+      "CedarDuet 是独立的 FastAPI/ASGI 多人游戏平台，覆盖棋类、牌类和骰子游戏。人类从网页进入，AI 可使用 HTTP 游戏接口或本地 stdio MCP；房间、进度、筹码和成就保存在 SQLite。",
+      "它与同作者的 cedareco 属于不同产品：cedareco 模拟生态演化，CedarDuet 负责多人棋、牌、骰规则和房间。官方实例由 CedarToy 提供账号、绑定与 MCP 聚合。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望与自己的 AI、其他参与者或系统 NPC 共同玩棋牌游戏的人。"
+      },
+      {
+        "label": "本地使用",
+        "text": "需要 Python 3.10+ 与 Node.js；三平台启动器会建立虚拟环境并打开本地网页。"
+      },
+      {
+        "label": "NPC",
+        "text": "部分游戏有本地策略，部分需要自行配置 OpenAI-compatible 模型通道；不缺座时不需要 NPC。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；仅限非商业用途，修改和再分发需保留许可与署名。"
+      }
+    ]
+  }
+}

@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="DeepSeek GUI 文档：安装、首次配置、工作区、Harness、数据目录、故障排查与许可。" />
+  <meta name="description" content="DeepSeek GUI 1.1.0 文档：安装、Workbench、Git、并行工作区、记忆、Harness 与故障排查。" />
   <title>文档 · DeepSeek GUI</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/deepseekgui/docs/" />
   <link rel="icon" href="../assets/deepseekgui-icon.png" type="image/png" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
@@ -23,7 +24,7 @@
       <section class="page-hero">
         <p class="eyebrow">DOCUMENTATION</p>
         <h1>DeepSeek GUI 文档</h1>
-        <p class="hero-body">从安装到日常使用，需要的信息都在这一页。Profiles、插件、终端等进阶内容放在后半段，用到时再看。</p>
+        <p class="hero-body">当前版本 1.1.0 已包含本地 Workbench、Git / PR 工具、全局与项目记忆和桌面通知。先完成安装与首次配置，再按需要使用进阶控制。</p>
       </section>
 
       <div class="content-grid">
@@ -32,6 +33,8 @@
           <a href="#what">DeepSeek GUI 是什么</a>
           <a href="#install">安装</a>
           <a href="#first-run">首次配置</a>
+          <a href="#workbench">本地 Workbench</a>
+          <a href="#memory">全局与项目记忆</a>
           <a href="#runtime">Harness 与 Profiles</a>
           <a href="#terminal">终端与插件</a>
           <a href="#data">数据与卸载</a>
@@ -43,13 +46,13 @@
         <div class="content">
           <section class="content-section" id="what">
             <h2>DeepSeek GUI 是什么</h2>
-            <p>DeepSeek GUI 是 See-Sol-Lab 在 DeepSeek Harness 之上做的 Windows 桌面客户端。Harness 负责所有运行时和会话管理；DeepSeek GUI 负责桌面界面——工作区、模型配置、Profiles、终端和插件管理。</p>
-            <div class="notice"><strong>一句话：</strong>打开就能当日常 Coding Agent 用，想深入时 Harness 的配置和运行细节也全在里面。</div>
+            <p>DeepSeek GUI 是 See-Sol-Lab 基于 DeepSeek Harness 构建的 Windows 本地 AI 工作台。Harness 负责会话、工具、权限和运行时；DeepSeek GUI 1.1.0 在客户端中加入改动、Git、并行工作区和记忆视图，以及提交、推送与 Pull Request 工具。</p>
+            <div class="notice"><strong>一句话：</strong>在会话里与 Agent 一起工作，在旁边直接检查项目状态；需要时仍能进入 Harness 的 Profiles、插件和终端。</div>
           </section>
 
           <section class="content-section" id="install">
             <h2>安装</h2>
-            <p>公开安装包上线后，从 DeepSeek GUI 官网下载 <code>DeepSeekGUI-Setup-&lt;version&gt;.exe</code>。安装器按当前 Windows 用户安装，普通用户权限就够。</p>
+            <p>从 DeepSeek GUI 官网下载 <code>DeepSeekGUI-Setup-1.1.0.exe</code>。安装器按当前 Windows 用户安装，普通用户权限就够。</p>
             <ol>
               <li>双击安装包。</li>
               <li>文件安装完成后，DeepSeek GUI 会自动启动。</li>
@@ -66,6 +69,26 @@
             <p>返回首页，选择一个项目文件夹作为 workspace。项目留在原地就行，Agent 直接在你选的这个工作区里干活。</p>
             <h3>3. 新建或恢复会话</h3>
             <p>选择模型与工作区后新建会话。已有 Harness 会话、Profiles 与配置继续由同一个运行时管理。</p>
+          </section>
+
+          <section class="content-section" id="workbench">
+            <h2>本地 Workbench</h2>
+            <p>进入会话后，可以在「对话」「轨迹」旁切换四个项目视图。这些视图直接读取本地状态，普通刷新不需要额外请求模型。</p>
+            <ul>
+              <li><strong>改动：</strong>按将提交、已改动、新文件和冲突分组，查看单文件 diff、复制路径，或在资源管理器中定位。</li>
+              <li><strong>Git：</strong>查看分支、远端、领先／落后数量与最近提交；提交、推送和 PR 结果也会留在当前会话记录中。</li>
+              <li><strong>并行工作区：</strong>查看 Git worktree、对应分支和改动文件，识别多个工作区同时修改的路径。</li>
+              <li><strong>记忆：</strong>阅读当前项目的 Markdown 记忆，打开文件位置，或通过「让助手整理」继续维护。</li>
+            </ul>
+            <h3>Git 与 Pull Request</h3>
+            <p>专用 Git 工具支持查看状态和差异、暂存、取消暂存、撤销已跟踪文件的未暂存改动，以及创建提交。推送前会显示远端、目标分支和待推送提交；创建 PR 使用电脑里已有的 Git 与 GitHub CLI 凭据。</p>
+          </section>
+
+          <section class="content-section" id="memory">
+            <h2>全局记忆与项目记忆</h2>
+            <p><strong>全局记忆</strong>位于「设置 → 全局记忆」，用于保存跨项目的个人偏好与协作要求，由用户编辑，助手只读。</p>
+            <p><strong>项目记忆</strong>保存在所选工作区的 <code>&lt;文件夹名&gt;.memory.md</code>，用于记录项目决策、约定和用户修正，由助手在当前工作区内维护。</p>
+            <p>两层记忆会在会话加载时进入上下文，实际使用的内容随会话记录保存。如果开发版曾留下项目级 <code>memory.md</code>，请把需要保留的内容合并到新的带文件夹名前缀的项目记忆文件。</p>
           </section>
 
           <section class="content-section" id="runtime">
@@ -86,7 +109,7 @@
 
           <section class="content-section" id="data">
             <h2>数据与卸载</h2>
-            <p>打包版默认把 Harness 数据放在 <code>%APPDATA%\DeepSeekGUI\dsh</code>，其中包括凭据、设置、会话与 Profiles。DeepSeek GUI 的 launcher 和窗口偏好也保存在自己的 userData 目录。</p>
+            <p>打包版默认把 Harness 数据放在 <code>%APPDATA%\DeepSeekGUI\dsh</code>，其中包括凭据、设置、会话、Profiles 与全局记忆。DeepSeek GUI 的 launcher 和窗口偏好也保存在自己的 userData 目录；项目记忆留在对应工作区。</p>
             <p>普通卸载会询问是否删除 <code>%APPDATA%\DeepSeekGUI</code>。如果选择保留，之后重装可以继续使用原来的凭据、设置和会话。静默卸载与升级替换会保留数据。</p>
           </section>
 
@@ -106,7 +129,7 @@
             <pre><code>pnpm install
 pnpm run build
 pnpm run dev:desktop</code></pre>
-            <p><code>dev:desktop</code> 会启动本地 DSH Web 服务并打开 DeepSeek GUI Desktop。公开发布后，更完整的架构与开发文档仍保留在 GitHub 仓库中。</p>
+            <p><code>dev:desktop</code> 会启动本地 DSH Web 服务并打开 DeepSeek GUI Desktop。更完整的架构与开发文档保留在 GitHub 仓库中。</p>
           </section>
 
           <section class="content-section" id="license">

@@ -1,0 +1,88 @@
+{
+  "slug": "veglia",
+  "name": {
+    "zh": "守望",
+    "en": "Veglia"
+  },
+  "author": "Evelyn & River",
+  "sourceUrl": "https://github.com/sebastianevan200-stack/veglia",
+  "hook": "在明确授权下，让 AI 查看 Android 活动、请求截图并轻轻叫你回来。",
+  "summary": "自托管 Android 手机感知桥，支持读取近期前台应用、按需截取当前屏幕、把截图送回 AI，并在单独授权后召回伴侣应用。",
+  "heroDescription": "Veglia 由 Android 无障碍服务、Python 服务和 AI 侧 CLI 组成。手机始终显示前台通知，截图保存在自有服务器并自动限制数量，查看与召回分别授权。",
+  "badges": [
+    {
+      "label": "源码公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "Android 11+",
+    "屏幕感知",
+    "按需截图",
+    "明确授权"
+  ],
+  "language": "Java / Python",
+  "platform": "Android / Self-host",
+  "updated": "2026-08-31",
+  "heroOverline": "ACTIVITY · SCREEN · CONSENT · SUMMON",
+  "showcase": {
+    "label": "由手机主人主动打开的窗口",
+    "symbol": "望",
+    "question": "“隔着距离，AI 能否在允许时看见此刻并敲门？”",
+    "comparisons": [
+      {
+        "value": "活动",
+        "label": "近期前台应用"
+      },
+      {
+        "value": "截图",
+        "label": "按需请求"
+      },
+      {
+        "value": "召回",
+        "label": "独立开关授权"
+      }
+    ],
+    "note": "屏幕查看和召回应用是两项独立权限；手机主人可以随时停止服务。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Veglia 的 Android 应用通过可见的前台无障碍服务记录近期应用活动，并在 AI 明确请求时截取当前屏幕。自托管 Python 服务只保留最近少量截图，再通过用户配置的 Hook 把图片送进 AI 会话。",
+      "它与同作者的 ghost-bf 不是同一实现：ghost-bf 是 MacroDroid、定时唤醒和通知教程；Veglia 提供原生活动感知、截图与召回应用代码，但不包含完整主动唤醒闭环。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "双方明确同意，并希望让伴侣按需理解 Android 手机活动或当前屏幕的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "Android 11+；自行构建和安装 APK，部署 Python 服务与 HTTPS，再接入 AI 侧 CLI 和通知 Hook。"
+      },
+      {
+        "label": "隐私边界",
+        "text": "所有接口使用共享密钥；默认只保留最近 5 张截图，手机显示前台通知，查看和召回可以分别关闭。"
+      },
+      {
+        "label": "许可",
+        "text": "CC BY-NC-SA 4.0；非商业使用，修改与再分发需署名、说明改动并采用相同许可。"
+      }
+    ]
+  }
+}
