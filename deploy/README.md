@@ -54,3 +54,29 @@ Cloudflare Pages remains a separate mirror and can continue using Turnstile. The
 - Public web root: `/var/www/atlas`
 - Deploy command: `/usr/local/bin/atlas-deploy`
 - API service: `atlas-api.service`
+
+## Private download statistics
+
+DeepSeekGUI installer requests can be recorded without visitor identifiers. The
+Caddy access log keeps only the request path, time, response status and byte
+count; IP addresses, ports, headers and TLS details are removed. Other site
+requests are skipped.
+
+From the DogYun root console, install or refresh the configuration after the
+repository has been pulled:
+
+```bash
+/srv/atlas-source/deploy/install-download-stats.sh
+```
+
+The installer backs up `/etc/caddy/Caddyfile`, validates the modified config
+before reloading Caddy, and restores the backup if validation fails. View the
+private aggregate report as `atlasadmin` with:
+
+```bash
+atlas-download-stats
+```
+
+The report counts successful `GET` responses (`200` and `206`), transferred
+bytes, full-installer equivalents, versions and Beijing calendar days. It does
+not estimate unique people because the log deliberately stores no identifier.
