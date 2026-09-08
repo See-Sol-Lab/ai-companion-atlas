@@ -564,4 +564,6 @@ test('homepage exposes online submission and the dedicated GitHub issue route', 
   assert.match(html, /项目名称/u);
   assert.match(html, /项目链接/u);
   assert.match(html, /推荐理由/u);
+  assert.match(html, /站点代码与原创编辑内容采用非商业许可/u);
+  assert.match(html, /ai-companion-atlas#许可与使用/u);
 });
