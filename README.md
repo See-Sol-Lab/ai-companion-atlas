@@ -62,6 +62,22 @@ ssh -t atlas atlas-deploy
 
 更详细的服务器部署说明见 [`deploy/README.md`](./deploy/README.md)。
 
+## 许可与使用
+
+本项目的代码与数据分开授权。
+
+| 部分 | 许可 | 说明 |
+| --- | --- | --- |
+| 站点代码 | [PolyForm Noncommercial 1.0.0](LICENSE) | 可自由用于非商业用途；商业使用需另行授权 |
+| 图谱数据与编辑内容 | [CC BY-NC-SA 4.0](LICENSE-DATA.md) | 署名、非商业、相同方式共享 |
+| 项目名称与标识 | [商标政策](TRADEMARKS.md) | 分发修改版本必须改名、去标识 |
+
+「图谱数据」指本项目撰写的条目文案、取舍与分类、荣誉标记和栏目结构。被收录项目的名称、作者与源地址属于各自作者，本项目不代为授权，详见 [LICENSE-DATA.md](LICENSE-DATA.md)。
+
+被收录项目的作者若希望修改或撤除条目，欢迎提交 Issue。
+
+Required Notice: Copyright 2026 See-Sol-Lab (https://github.com/See-Sol-Lab/ai-companion-atlas)
+
 ---
 
 *Built together, human & AI.*
