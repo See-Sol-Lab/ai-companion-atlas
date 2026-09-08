@@ -41,18 +41,20 @@ logging = """ailover-atlas.com, www.ailover-atlas.com {
             roll_keep_for 720h
         }
         format filter {
-            request>remote_ip delete
-            request>client_ip delete
-            request>remote_port delete
-            request>host delete
-            request>proto delete
-            request>headers delete
-            request>tls delete
-            bytes_read delete
-            user_id delete
-            duration delete
-            resp_headers delete
             wrap json
+            fields {
+                request>remote_ip delete
+                request>client_ip delete
+                request>remote_port delete
+                request>host delete
+                request>proto delete
+                request>headers delete
+                request>tls delete
+                bytes_read delete
+                user_id delete
+                duration delete
+                resp_headers delete
+            }
         }
     }
 """
