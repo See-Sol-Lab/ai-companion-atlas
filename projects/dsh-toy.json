@@ -17,7 +17,7 @@
   "tags": ["18+","Toy","DeepSeek Harness","安全限制"],
   "language": "TypeScript",
   "platform": "DSH / Node.js",
-  "updated":"2026-08-14",
+  "updated":"2026-09-08",
   "heroOverline": "DISCOVER · LIMIT · STOP",
   "showcase": {
     "label": "自动发现设备，也把硬边界放在调度之前",

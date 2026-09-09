@@ -18,7 +18,7 @@
   "tags": ["技术记忆", "项目进度", "MCP", "真删除"],
   "language": "Python / JavaScript",
   "platform": "Self-host / MCP / Web",
-  "updated": "2026-08-24",
+  "updated": "2026-09-01",
   "heroOverline": "技术记忆 · 项目管理 · MCP",
   "showcase": {
     "label": "为什么单独分一个库",
