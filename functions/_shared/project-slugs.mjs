@@ -121,7 +121,6 @@ export const PROJECT_SLUGS = new Set([
   'villa-session-bridge',
   'dylan-heartbeat',
   'delve-ai-companion',
-  'haven-ombre',
   'dwell',
   'open-watch-cinema',
   'duix-mobile',
