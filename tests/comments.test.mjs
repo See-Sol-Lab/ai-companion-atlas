@@ -357,6 +357,32 @@ test('robots and sitemap expose public pages without private surfaces', async ()
   assert.doesNotMatch(sitemap, /\/(?:admin|api|community)\//u);
 });
 
+test('DeepSeekGUI public pages point to the 1.1.1 release', async () => {
+  const project = JSON.parse(await readFile(path.join(root, 'projects', 'deepseekgui.json'), 'utf8'));
+  const home = await readFile(path.join(root, 'deepseekgui', 'index.html'), 'utf8');
+  const download = await readFile(path.join(root, 'deepseekgui', 'download', 'index.html'), 'utf8');
+  const docs = await readFile(path.join(root, 'deepseekgui', 'docs', 'index.html'), 'utf8');
+  const installerUrl = 'https://www.ailover-atlas.com/deepseekgui/releases/v1.1.1/DeepSeekGUI-Setup-1.1.1.exe';
+
+  assert.equal(project.updated, '2026-09-12');
+  assert.match(project.summary, /v1\.1\.1/u);
+  assert.match(home, /<span>v1\.1\.1<\/span>/u);
+  assert.ok(download.includes(`href="${installerUrl}"`));
+  assert.match(download, /版本 1\.1\.1 · Windows 10\/11 · 64 位 · 约 128 MB/u);
+  assert.match(download, /releases\/tag\/v1\.1\.1/u);
+  assert.match(docs, /DeepSeekGUI-Setup-1\.1\.1\.exe/u);
+  assert.match(docs, /id="browser"/u);
+  assert.match(docs, /id="updates"/u);
+  for (const html of [home, download, docs]) {
+    assert.doesNotMatch(html, /DeepSeekGUI-Setup-1\.1\.0\.exe/u);
+  }
+
+  const browserShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-light.png'));
+  const gitShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-dark.png'));
+  assert.deepEqual([browserShot.readUInt32BE(16), browserShot.readUInt32BE(20)], [1913, 1199]);
+  assert.deepEqual([gitShot.readUInt32BE(16), gitShot.readUInt32BE(20)], [1919, 1199]);
+});
+
 test('pending comment stays private until the admin approves it', async () => {
   const database = new DatabaseSync(':memory:');
   database.exec(await readFile(path.join(root, 'migrations', '0001_comments.sql'), 'utf8'));
