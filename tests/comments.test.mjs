@@ -377,10 +377,10 @@ test('DeepSeekGUI public pages point to the 1.1.1 release', async () => {
     assert.doesNotMatch(html, /DeepSeekGUI-Setup-1\.1\.0\.exe/u);
   }
 
-  const browserShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-light.png'));
-  const gitShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-dark.png'));
-  assert.deepEqual([browserShot.readUInt32BE(16), browserShot.readUInt32BE(20)], [1913, 1199]);
-  assert.deepEqual([gitShot.readUInt32BE(16), gitShot.readUInt32BE(20)], [1919, 1199]);
+  const lightThemeShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-light.png'));
+  const darkThemeShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-dark.png'));
+  assert.deepEqual([lightThemeShot.readUInt32BE(16), lightThemeShot.readUInt32BE(20)], [1919, 1229]);
+  assert.deepEqual([darkThemeShot.readUInt32BE(16), darkThemeShot.readUInt32BE(20)], [1919, 1232]);
 });
 
 test('pending comment stays private until the admin approves it', async () => {
