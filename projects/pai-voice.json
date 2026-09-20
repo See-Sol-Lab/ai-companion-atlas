@@ -35,7 +35,7 @@
   ],
   "language": "Python / JavaScript",
   "platform": "Web / Self-host / Terminal",
-  "updated": "2026-09-04",
+  "updated": "2026-09-15",
   "heroOverline": "LISTEN · SPEAK · INTERRUPT · ADAPT",
   "showcase": {
     "label": "把语音层与模型分开",
