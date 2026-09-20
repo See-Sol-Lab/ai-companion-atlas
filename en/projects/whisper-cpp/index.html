@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="whisper.cpp: whisper.cpp is the native speech-to-text engine. It reads recordings or microphone sounds, recognizes them offline on computers, mobile phones and browsers, and then hands the text over to AI. AI Companion Atlas Chinese project archive." />
+  <title>whisper.cpp · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/whisper-cpp/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/whisper-cpp/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/whisper-cpp/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/whisper-cpp/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/whisper-cpp/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>whisper.cpp</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-open">Open source</span><span class="status status-original">Original</span><span class="status status-senses">Senses &amp; Embodiment</span><span class="status status-tool">Tools / Plugins</span><span class="status">Windows / macOS / Linux / Mobile / Web</span></div>
+          <p class="overline">VOICE · LOCAL TRANSCRIPTION · TEXT</p>
+          <h1>whisper.cpp</h1>
+          <p class="cn-name">@GGML-ORG</p>
+          <h2>Convert what you say into text directly on the device, so that the AI companion can understand the speech without uploading the recording.</h2>
+          <p class="hero-desc">After a human speaks or sends a recording, whisper.cpp will run Whisper on the current device to convert the sound into text. The companion front-end or chat model then reads these texts and responds, and the recording does not need to be uploaded to the cloud for recognition first.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/ggml-org/whisper.cpp" target="_blank" rel="noreferrer">https://github.com/ggml-org/whisper.cpp</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/ggml-org/whisper.cpp" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="whisper-cpp">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by whisper.cpp">
+          <p class="problem-label">Give what humans say to AI locally</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">“Can AI still understand what I say without uploading the recording to the cloud?”</p>
+          <div class="time-compare">
+            <span><b>sound</b><small>Recording or microphone</small></span>
+            <i>≠</i>
+            <span><b>Identify</b><small>Device running locally</small></span>
+            <i>≠</i>
+            <span><b>Text</b><small>Leave it to AI to read</small></span>
+          </div>
+          <p class="problem-note">It is only responsible for speech-to-text; understanding, reply, personality, and memory are completed by other AI systems.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>whisper.cpp is a native speech-to-text engine that can be embedded in other projects. It receives a recording file or microphone sound, runs Whisper on the current device, and outputs the recognized text.</p>
+          <p>After giving these texts to your AI companion, he or she can reply based on what you say. Speech recognition can run offline on computers, mobile phones, Raspberry Pis and browsers, making it suitable for people who don't want to hand over recordings to the cloud for processing.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People who want to add local voice input to AI companions, or need to organize recorded text offline.</li>
+            <li><strong>Input:</strong>Recording file or live microphone sound.</li>
+            <li><strong>Output:</strong>The recognized text can be passed on to chat models, subtitle systems or other applications.</li>
+            <li><strong>Usage:</strong>Install or compile whisper.cpp, download the compatible Whisper model, and then call the speech recognition capabilities by other applications.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="whisper-cpp">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/ggml-org/whisper.cpp" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

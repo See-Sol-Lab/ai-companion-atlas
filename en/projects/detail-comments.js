@@ -1,0 +1,338 @@
+const panel = document.querySelector('[data-comments-project]');
+const likeControl = document.querySelector('[data-project-like]');
+window.onAtlasTurnstileLoad = window.onAtlasTurnstileLoad || (() => {});
+
+if (likeControl) {
+  const projectSlug = likeControl.dataset.projectLike;
+  const button = likeControl.querySelector('.project-like-button');
+  const heart = likeControl.querySelector('.project-like-heart');
+  const count = likeControl.querySelector('.project-like-count');
+
+  function renderLike(state, animate = false) {
+    count.textContent = String(state.count);
+    heart.textContent = state.liked ? '♥' : '♡';
+    button.classList.toggle('is-liked', state.liked);
+    button.setAttribute('aria-pressed', String(state.liked));
+    button.setAttribute('aria-label', state.liked ? 'Project liked' : 'Like this project');
+    button.disabled = state.liked;
+    if (animate) {
+      button.classList.add('just-liked');
+      button.addEventListener('animationend', () => button.classList.remove('just-liked'), { once: true });
+    }
+  }
+
+  async function loadLikes() {
+    try {
+      const response = await fetch(`/api/likes?project=${encodeURIComponent(projectSlug)}`);
+      const data = await response.json();
+      if (!response.ok) throw new Error('Could not load');
+      renderLike(data);
+    } catch {
+      button.title = 'Likes are temporarily unavailable';
+    }
+  }
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    try {
+      const response = await fetch('/api/likes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectSlug })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error('Could not add your like');
+      renderLike(data, data.added);
+    } catch {
+      button.disabled = false;
+      button.title = 'Could not add your like. Please try again later.';
+    }
+  });
+
+  loadLikes();
+}
+
+if (panel) {
+  const projectSlug = panel.dataset.commentsProject;
+  const list = panel.querySelector('.comments-list');
+  const form = panel.querySelector('.comment-form');
+  const feedback = panel.querySelector('.comment-form-feedback');
+  const submitButton = panel.querySelector('button[type="submit"], #atlas-comment-submit');
+  const contentInput = form.elements.content;
+  const counter = panel.querySelector('.comment-count');
+  const successPanel = panel.querySelector('.comment-success');
+  const againButton = panel.querySelector('.comment-again');
+  const captchaElement = panel.querySelector('.captcha-slot, .turnstile-slot');
+  let captchaConfig = null;
+  let captchaProvider = '';
+  let captchaInstance = null;
+  let aliyunScriptPromise = null;
+  let turnstileScriptPromise = null;
+  let turnstileWidgetId = null;
+  let turnstileToken = '';
+
+  const resultLabels = {
+    success: 'Working',
+    partial: 'Partly working',
+    failed: 'Not working'
+  };
+
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function formatDate(value) {
+    const date = new Date(value);
+    if (Number.isNaN(date.valueOf())) return '';
+    return new Intl.DateTimeFormat('en', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(date);
+  }
+
+  function renderComments(comments) {
+    list.replaceChildren();
+    if (!comments.length) {
+      list.append(element('p', 'comments-empty', 'No published feedback yet. Tried it? Share your experience.'));
+      return;
+    }
+
+    for (const comment of comments) {
+      const article = element('article', 'comment-item');
+      const header = element('div', 'comment-item-header');
+      const identity = element('div', 'comment-identity');
+      identity.append(
+        element('strong', '', comment.nickname || 'Anonymous visitor'),
+        element('span', `comment-result result-${comment.result}`, resultLabels[comment.result] || comment.result)
+      );
+      header.append(identity, element('time', '', formatDate(comment.created_at)));
+      article.append(header, element('p', 'comment-content', comment.content));
+      if (comment.platform) article.append(element('p', 'comment-platform', `Platform: ${comment.platform}`));
+      list.append(article);
+    }
+  }
+
+  async function loadComments() {
+    try {
+      const response = await fetch(`/api/comments?project=${encodeURIComponent(projectSlug)}`);
+      const data = await response.json();
+      if (!response.ok) throw new Error('Could not load');
+      renderComments(data.comments || []);
+    } catch {
+      list.replaceChildren(element('p', 'comments-empty', 'Could not load feedback. Please refresh later.'));
+    }
+  }
+
+  function loadAliyunScript() {
+    if (window.initAliyunCaptcha) return Promise.resolve();
+    if (aliyunScriptPromise) return aliyunScriptPromise;
+
+    aliyunScriptPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Could not load verification'));
+      document.head.appendChild(script);
+    });
+
+    return aliyunScriptPromise;
+  }
+
+  function loadTurnstileScript() {
+    if (window.turnstile) return Promise.resolve();
+    if (turnstileScriptPromise) return turnstileScriptPromise;
+
+    turnstileScriptPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Could not load Turnstile'));
+      document.head.appendChild(script);
+    });
+
+    return turnstileScriptPromise;
+  }
+
+  function showSuccessState() {
+    captchaInstance?.destroyCaptcha?.();
+    captchaInstance = null;
+    form.reset();
+    counter.textContent = '0 / 800';
+    feedback.textContent = '';
+    form.hidden = true;
+    successPanel.hidden = false;
+    successPanel.removeAttribute('hidden');
+    successPanel.focus();
+    successPanel.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'center'
+    });
+  }
+
+  async function submitComment(captchaValue, captchaField) {
+    submitButton.disabled = true;
+    feedback.textContent = 'Submitting…';
+    const formData = new FormData(form);
+
+    try {
+      const payload = {
+        projectSlug,
+        nickname: formData.get('nickname'),
+        content: formData.get('content'),
+        platform: formData.get('platform'),
+        result: formData.get('result')
+      };
+      payload[captchaField] = captchaValue;
+
+      const response = await fetch('/api/comments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error('Submission failed. Please check your input and try again later.');
+
+      showSuccessState();
+      return true;
+    } catch (error) {
+      const message = 'Submission failed. Please check your input and try again later.';
+      await initializeCaptcha({ feedbackMessage: message });
+      return false;
+    }
+  }
+
+  async function setupAliyunCaptcha(feedbackMessage = '') {
+    window.AliyunCaptchaConfig = {
+      region: captchaConfig.aliyunRegion || 'cn',
+      prefix: captchaConfig.aliyunPrefix
+    };
+
+    await loadAliyunScript();
+    if (!window.initAliyunCaptcha) throw new Error('Verification is not loaded');
+
+    captchaInstance?.destroyCaptcha?.();
+    captchaElement.replaceChildren();
+    captchaElement.id ||= 'atlas-comment-captcha';
+    submitButton.id ||= 'atlas-comment-submit';
+    submitButton.type = 'button';
+
+    window.initAliyunCaptcha({
+      SceneId: captchaConfig.commentSceneId,
+      mode: 'popup',
+      element: `#${captchaElement.id}`,
+      button: `#${submitButton.id}`,
+      language: 'en',
+      delayBeforeSuccess: false,
+      slideStyle: {
+        width: 360,
+        height: 40
+      },
+      getInstance(instance) {
+        captchaInstance = instance;
+        submitButton.disabled = false;
+        feedback.textContent = feedbackMessage;
+      },
+      fail(error) {
+        console.error('Aliyun captcha rejected:', error);
+        feedback.textContent = 'Verification failed. Please try again.';
+      },
+      success(captchaVerifyParam) {
+        submitComment(captchaVerifyParam, 'captchaVerifyParam');
+      }
+    });
+  }
+
+  async function setupTurnstile(feedbackMessage = '') {
+    submitButton.type = 'button';
+    await loadTurnstileScript();
+    if (!window.turnstile) throw new Error('Turnstile is not loaded');
+
+    if (turnstileWidgetId !== null) {
+      window.turnstile.reset(turnstileWidgetId);
+      turnstileToken = '';
+      submitButton.disabled = true;
+      feedback.textContent = feedbackMessage;
+      return;
+    }
+
+    turnstileWidgetId = window.turnstile.render(captchaElement, {
+      sitekey: captchaConfig.turnstileSiteKey,
+      action: 'submit-comment',
+      size: 'flexible',
+      theme: 'light', language: 'en',
+      callback(token) {
+        turnstileToken = token;
+        submitButton.disabled = false;
+        feedback.textContent = feedbackMessage;
+      },
+      'expired-callback'() {
+        turnstileToken = '';
+        submitButton.disabled = true;
+      },
+      'error-callback'() {
+        turnstileToken = '';
+        submitButton.disabled = true;
+        feedback.textContent = 'Could not load verification. Please refresh and try again.';
+      }
+    });
+  }
+
+  async function initializeCaptcha({ feedbackMessage = '' } = {}) {
+    submitButton.disabled = true;
+    feedback.textContent = feedbackMessage || 'Loading verification…';
+
+    try {
+      if (!captchaConfig) {
+        const response = await fetch('/api/config');
+        captchaConfig = await response.json();
+        if (!response.ok) throw new Error('Verification is not configured');
+        captchaProvider = captchaConfig.captchaProvider === 'aliyun'
+          ? 'aliyun'
+          : (captchaConfig.turnstileSiteKey ? 'turnstile' : '');
+      }
+
+      if (captchaProvider === 'aliyun') {
+        if (!captchaConfig.aliyunPrefix || !captchaConfig.commentSceneId) throw new Error('Verification is not configured');
+        await setupAliyunCaptcha(feedbackMessage);
+      } else if (captchaProvider === 'turnstile') {
+        await setupTurnstile(feedbackMessage);
+      } else {
+        throw new Error('Verification is not configured');
+      }
+    } catch (error) {
+      console.error('Captcha setup failed:', error);
+      feedback.textContent = feedbackMessage || 'Posting feedback is temporarily unavailable. Published feedback is still available.';
+      submitButton.disabled = true;
+    }
+  }
+
+  submitButton.addEventListener('click', () => {
+    if (captchaProvider === 'turnstile' && turnstileToken && !submitButton.disabled) {
+      submitComment(turnstileToken, 'turnstileToken');
+    }
+  });
+
+  contentInput.addEventListener('input', () => {
+    counter.textContent = `${[...contentInput.value].length} / 800`;
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!submitButton.disabled) submitButton.click();
+  });
+
+  againButton.addEventListener('click', () => {
+    successPanel.hidden = true;
+    form.hidden = false;
+    feedback.textContent = '';
+    initializeCaptcha();
+    form.elements.nickname.focus();
+  });
+
+  loadComments();
+  initializeCaptcha();
+}

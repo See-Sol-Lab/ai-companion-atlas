@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Villa Bridge: A privacy-first mobile web bridge framework that allows mobile phones and computers to share the same local AI session and clearly display message delivery, reply and failure status. AI Companion Atlas Chinese project archive." />
+  <title>Villa Bridge · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/villa-session-bridge/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/villa-session-bridge/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/villa-session-bridge/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/villa-session-bridge/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/villa-session-bridge/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Villa Bridge</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-continuity">Continuity</span><span class="status status-open">Open source</span><span class="status status-original">Original</span><span class="status status-mobile">Mobile Frontend</span><span class="status status-tool">Tools / Plugins</span><span class="status">Node.js 20+ / Self-host</span></div>
+          <p class="overline">ONE SESSION · MOBILE RETURN · SAFE HANDOFF</p>
+          <h1>Villa Bridge</h1>
+          <p class="cn-name">@SUESXM</p>
+          <h2>Give your AI companion that persists in the computer a way back from the mobile phone.</h2>
+          <p class="hero-desc">Villa Bridge connects the mobile webpage to the local AI session that continues to run on the computer, so that reopening the webpage does not mean reopening your AI companion. The repository provides controllers, demo pages, and bridging protocols. For real access, you still need to implement a local bridge for your own runtime.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/suesxm/villa-session-bridge" target="_blank" rel="noreferrer">https://github.com/suesxm/villa-session-bridge</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/suesxm/villa-session-bridge" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="villa-session-bridge">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by Villa Bridge">
+          <p class="problem-label">Leave a mobile phone route home for the same local session</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">&quot;After switching to a mobile phone, will I still be the same person on the computer just now?&quot;</p>
+          <div class="time-compare">
+            <span><b>session</b><small>Computer persists</small></span>
+            <i>≠</i>
+            <span><b>Entrance</b><small>The phone will come back at any time</small></span>
+            <i>≠</i>
+            <span><b>Handover</b><small>Only one end is written at a time</small></span>
+          </div>
+          <p class="problem-note">The repository provides runnable demos and wiring protocols, and does not include ready-made production bridges for runtimes such as Claude Code and Codex.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Villa Bridge is a privacy-first mobile web bridge framework that aims to allow mobile phones and computers to access the same local persistent AI session. Reopening the browser will not create a new session, and the message will clearly show received, delivered, replying, completed or failed.</p>
+          <p>In order to avoid two entrances rushing to write at the same time, it requires the bridge end to issue a unique write right and confirm it round by round. The repository comes with security demos, controllers, and HTTP bridging protocols; to connect to real Claude Code, Codex, or other runtimes, you still need to implement a local bridge that conforms to the protocol.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>Developers and advanced users who already have a local long-term AI session and want to add a mobile portal to it.</li>
+            <li><strong>Platform:</strong>Node.js 20+, local controller and mobile web page; remote access requires secure HTTPS or encrypted overlay network.</li>
+            <li><strong>Usage:</strong>Run the security demo first to understand the complete state flow, and then implement the bridging protocol for your local AI runtime.</li>
+            <li><strong>License:</strong>Apache-2.0。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="villa-session-bridge">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/suesxm/villa-session-bridge" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

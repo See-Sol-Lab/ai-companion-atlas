@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Aelios: A hierarchical memory kernel running on Cloudflare Workers, D1 and Vectorize, supporting automatic organization, manual review, MCP and visual management. AI Companion Atlas Chinese project archive." />
+  <title>Aelios · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/aelios/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/aelios/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/aelios/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/aelios/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/aelios/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Aelios</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-open">Open source</span><span class="status status-memory">Memory</span><span class="status">Cloudflare</span></div>
+          <p class="overline">CAPTURE · REVIEW · RECALL</p>
+          <h1>Aelios</h1>
+          <p class="cn-name">@WUSAKI0723</p>
+          <h2>Put cross-window memory into your own Cloudflare, so that different clients can take it with them.</h2>
+          <p class="hero-desc">Aelios maintains multiple layers of memory through instant capture, nightly dreams, and periodic rollups, and uses candidate review queues to control which facts actually enter the long-term library. It can not only serve as a model gateway, but also provide memory for MCP clients such as Claude Code and Codex.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/wusaki0723/Aelios" target="_blank" rel="noreferrer">https://github.com/wusaki0723/Aelios</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/wusaki0723/Aelios" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="aelios">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by Aelios">
+          <p class="problem-label">Three rhythms maintain a set of long-term memories</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">&quot;Should every sentence be written immediately into long-term memory?&quot;</p>
+          <div class="time-compare">
+            <span><b>Instant</b><small>Leave the original message first</small></span>
+            <i>≠</i>
+            <span><b>Night</b><small>Extract candidate facts</small></span>
+            <i>≠</i>
+            <span><b>Long term</b><small>Review and hierarchical summary</small></span>
+          </div>
+          <p class="problem-note">Capture first, then organize, and finally people decide what really stays.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Aelios is a long-term memory service deployed on Cloudflare. It uses D1 to save structured data, Vectorize for recall, and provides important memories, slang lists, diaries, and candidate review queues. Users can pass, discard, merge or replace candidate memories in the admin panel.</p>
+          <p>The system supports OpenAI compatible chat portal, MCP tools, Claude Code Hook, export and maintenance checks; by default, Workers AI can be used to complete embedding, reranking and nightly sorting. The design of the relationship diagram, fact versioning and spontaneous emergence part refers to LMC-5. The author states that it has been re-implemented according to the Cloudflare architecture without duplicating its code.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People who are willing to use Cloudflare's hosted memory and want to share, manually review, long-term facts across clients.</li>
+            <li><strong>Platform:</strong>Cloudflare Workers + D1 + Vectorize + Queue。</li>
+            <li><strong>Usage:</strong>Fork and then deploy with one click or manually, set the access key, and then access through chat Base URL, MCP or Hook.</li>
+            <li><strong>License:</strong>The mainline is AGPL-3.0; the archived v1-final is still used under MIT.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="aelios">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/wusaki0723/Aelios" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

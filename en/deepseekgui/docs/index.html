@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="DeepSeek GUI 1.1.1 documentation: First launch, Workbench, built-in browser, in-place updates, data migration, archiving sessions and troubleshooting." />
+  <title>Documentation · DeepSeek GUI</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/deepseekgui/docs/" />
+  <link rel="icon" href="/deepseekgui/assets/deepseekgui-icon.png" type="image/png" />
+  <link rel="stylesheet" href="/deepseekgui/styles.css?v=20260912-1" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/deepseekgui/docs/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/deepseekgui/docs/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/deepseekgui/docs/" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/deepseekgui/assets/deepseekgui-icon.png" width="256" height="256" alt="" /></span>
+        <span class="brand-copy"><strong class="brand-name">DeepSeek GUI</strong><span class="brand-subtitle">DeepSeek-native Agent Workbench</span></span>
+      </div>
+      <nav class="site-nav" aria-label="Product Navigation"><a class="language-switch" href="/deepseekgui/docs/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a><a href="/en/deepseekgui/">Home page</a><a href="/en/deepseekgui/download/">Download</a><a href="/en/deepseekgui/docs/" aria-current="page">Documentation</a><a href="/en/deepseekgui/privacy/">Privacy Policy</a></nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">DOCUMENTATION</p>
+        <h1>DeepSeek GUI documentation</h1>
+        <p class="hero-body">The current version 1.1.1 already includes first-boot bootstrapping, local Workbench, built-in browser, right-hand file bar, in-place updates, data migration, and archive session management.</p>
+      </section>
+
+      <div class="content-grid">
+        <nav class="side-nav" aria-label="Document directory">
+          <span class="side-label">QUICK INDEX</span>
+          <a href="#what">What is DeepSeek GUI?</a>
+          <a href="#install">Installation</a>
+          <a href="#first-run">First time configuration</a>
+          <a href="#workbench">Local Workbench</a>
+          <a href="#browser">Built-in browser and file sidebar</a>
+          <a href="#memory">Global and project memory</a>
+          <a href="#runtime">Harness and Profiles</a>
+          <a href="#terminal">Terminals and plug-ins</a>
+          <a href="#updates">Update in place</a>
+          <a href="#data">Data and Offload</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+          <a href="#source">Source code execution</a>
+          <a href="#license">Licensing and upstream</a>
+        </nav>
+
+        <div class="content">
+          <section class="content-section" id="what">
+            <h2>What is DeepSeek GUI?</h2>
+            <p>DeepSeek GUI is See-Sol-Lab's Windows-native AI workbench built on DeepSeek Harness. Harness takes care of sessions, tools, permissions and runtime; DeepSeek GUI 1.1.1 complements first boot, built-in browser, file sidebar, in-place updates, data migration and archive session management on top of the workbench.</p>
+            <div class="notice"><strong>In one sentence:</strong>Work with the Agent in session and check project status directly from the side; still have access to Harness' Profiles, plugins, and terminal when needed.</div>
+          </section>
+
+          <section class="content-section" id="install">
+            <h2>Installation</h2>
+            <p>Download from DeepSeek GUI official website <code>DeepSeekGUI-Setup-1.1.1.exe</code>. The installer installs according to the current Windows user, and ordinary user rights are sufficient.</p>
+            <ol>
+              <li>Double-click the installation package.</li>
+              <li>After the file installation is complete, the DeepSeek GUI will start automatically.</li>
+              <li>The DeepSeek GUI can then be opened from the desktop or start menu.</li>
+            </ol>
+            <p>The distribution package comes with the DeepSeek Harness runtime, Node.js and pnpm are already in it.</p>
+          </section>
+
+          <section class="content-section" id="first-run">
+            <h2>First time configuration</h2>
+            <p>A fresh installation walks through selecting a workspace, connecting to the model, and sending the first message. Can be skipped at any time; users with existing session data will not be treated as new users.</p>
+            <h3>1. Configuration model</h3>
+            <p>Open the settings in the lower left corner and enter <strong>Model</strong>. Fill in the DeepSeek API key and select the model available for the account; the v1.1.1 built-in directory contains DeepSeek V4.1 Flash that supports image input. Credentials are saved by Harness in the DeepSeek GUI data directory and do not enter the installation package, command line, or general diagnostic logs.</p>
+            <h3>2. Select workspace</h3>
+            <p>Return to the homepage and select a project folder as the workspace. Just leave the project where it is, and the Agent will work directly in the workspace you selected.</p>
+            <h3>3. Create or restore a session</h3>
+            <p>Create a new session after selecting the model and workspace. Existing Harness sessions, Profiles, and configurations continue to be managed by the same runtime.</p>
+          </section>
+
+          <section class="content-section" id="workbench">
+            <h2>Local Workbench</h2>
+            <p>After entering the session, you can switch to &quot;Change&quot;, &quot;Git&quot; and &quot;Memory&quot; next to &quot;Conversation&quot; and &quot;Track&quot;. These views read local state directly, and normal refresh does not require additional requests to the model.</p>
+            <ul>
+              <li><strong>Changes:</strong>Group commits, changed files, new files and conflicts to view a single file diff; open it in the right file bar when positioning is required.</li>
+              <li><strong>Git：</strong>The upper half views the parallel workspace, and the lower half views branches, remotes, leading/behind numbers, and recent commits; commit, push, and PR results will also remain in the current session record.</li>
+              <li><strong>Memory:</strong>Read the Markdown memory of the current project, open the file location, or continue maintenance through &quot;Let Assistant Organize&quot;.</li>
+            </ul>
+            <h3>Git and Pull Request</h3>
+            <p>Dedicated Git tools support viewing status and diffs, staging, unstaged, undoing unstaged changes to tracked files, and creating commits. The remote end, target branch, and commits to be pushed will be displayed before pushing; creating a PR uses the Git and GitHub CLI credentials already in your computer.</p>
+          </section>
+
+          <section class="content-section" id="browser">
+            <h2>Built-in browser and file sidebar</h2>
+            <p>When the assistant opens a public web page, the built-in browser automatically expands to the right of the session. It supports realistic rendering, snapshots, screenshots and interactions; logins, form submissions and other sensitive actions still require user approval.</p>
+            <p>The browser and the Sidebar on the right side of Harness are displayed alternately. Sidebar provides multi-tab and column preview of code, Markdown, HTML, PDF, and images; it is also accessed when opening files from changes or tool results.</p>
+            <div class="notice"><strong>Picture reading ability:</strong>When the text model is asked to view a web page or screenshot, it will first ask whether to switch models and will not pretend to have seen it.</div>
+          </section>
+
+          <section class="content-section" id="memory">
+            <h2>Global memory and project memory</h2>
+            <p><strong>Global memory</strong>Located in &quot;Settings → Global Memory&quot;, it is used to save personal preferences and collaboration requirements across projects. It is edited by the user and is read-only by the assistant.</p>
+            <p><strong>Project memory</strong>saved in the selected workspace <code>&lt;folder name&gt;.memory.md</code>, used to record project decisions, commitments, and user revisions, maintained by the assistant within the current workspace.</p>
+            <p>The two-layer memory will enter the context when the session is loaded, and the actual content used is saved with the session record. If the development version ever left project-level <code>memory.md</code>, please merge the content that needs to be retained into a new project memory file with a folder name prefix.</p>
+          </section>
+
+          <section class="content-section" id="runtime">
+            <h2>Harness and Profiles</h2>
+            <p>Model, session, credentials, permissions, memory, and hook state are all managed by Harness. The current Harness Home and Profile are controlled by the desktop launcher; v1.1.1 embeds DeepSeek Harness 0.1.5-rc.2.</p>
+            <ul>
+              <li><strong>Managed Home：</strong>By default, DeepSeek GUI's own application data directory is used.</li>
+              <li><strong>Existing Home：</strong>Advanced users can explicitly select an existing Harness Home; the DeepSeek GUI does not automatically migrate, merge, or rewrite it.</li>
+              <li><strong>Profile：</strong>Harness profile can be switched; when switching fails, the last-known-good status is retained for recovery.</li>
+            </ul>
+          </section>
+
+          <section class="content-section" id="terminal">
+            <h2>Terminals and plug-ins</h2>
+            <p>When you need deeper control, you can open the DSH Terminal. DeepSeek GUI prepares private for terminal <code>dsh</code> / <code>node</code> / <code>pnpm</code> Entry without modifying system PATH, registry or shell configuration.</p>
+            <p>Plug-in management continues to be Harness official <code>dsh plugin</code> path. DeepSeek GUI does not mistake &quot;loaded in package.json&quot; for &quot;plugin has actually been loaded&quot;, and distinguishes between Profile Bundles, installed dependencies and the true status of Loader.</p>
+          </section>
+
+          <section class="content-section" id="updates">
+            <h2>Update in place</h2>
+            <p>Check for updates from the menu or tray. DeepSeek GUI will download the installation package in the background, check the HTTPS address, file size and SHA-256, and display the version and update instructions; the Windows installer will only be launched after user confirmation.</p>
+            <p>Automatic downloading is on by default and can be turned off in the update panel. Canceling the installation will retain the verified installation package, so there is no need to download it again next time; the file will be checked again before being handed over to the installer.</p>
+          </section>
+
+          <section class="content-section" id="data">
+            <h2>Data and Offload</h2>
+            <p>By default, the packaged version puts Harness data in <code>%APPDATA%\DeepSeekGUI\dsh</code>, which includes credentials, settings, sessions, Profiles and global memory. The DeepSeek GUI's launcher and window preferences are also saved in its own userData directory; project memory remains in the corresponding workspace.</p>
+            <p>&quot;Data Location&quot; in the menu can migrate Managed Harness Home. The program is first copied and verified one by one. After switching, Harness is restarted. After the verification is successful again, it will be asked whether to delete the old copy; the Existing Home, project directory and application installation location will not be moved accordingly.</p>
+            <p>Archived conversations are located in &quot;Settings → Archived Conversations&quot; and can be restored and opened; permanent deletion requires two-step confirmation and will wait for the current reply and tool execution to complete.</p>
+            <p>v1.1.1 will migrate the session data to V3 when opening an old session for the first time and retain the original files; the migrated session can no longer be read by the old version of Harness.</p>
+            <p>Ordinary uninstallation will ask whether to delete <code>%APPDATA%\DeepSeekGUI</code> and the migrated data directory. After selecting Keep, you can continue to use the original credentials, settings, and sessions when reinstalling; upgrade and replacement will preserve the data.</p>
+          </section>
+
+          <section class="content-section" id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <h3>Port 3080 is occupied</h3>
+            <p>DeepSeek GUI is currently fixed on the local machine <code>127.0.0.1:3080</code> Start the Harness service. When the port is occupied by other programs, an error will be clearly reported instead of secretly changing the port.</p>
+            <h3>Harness startup failed</h3>
+            <p>The packaged version of the diagnostic log is located in the DeepSeek GUI application data directory. Harness service log and bounded rotation <code>deepseekgui-main.log</code> will desensitize common API keys, Bearer tokens and other credential forms; you can export a local diagnostic package from &quot;Settings → BUG Diagnosis and Feedback&quot; or ask the assistant to conduct a redaction triage.</p>
+            <h3>Why is the window still there after it is closed?</h3>
+            <p>Closing the upper right corner of the window only hides the window, and Harness continues to run in the system tray. To actually stop the runtime, use the tray or menu <strong>Quit DeepSeek GUI</strong>。</p>
+          </section>
+
+          <section class="content-section" id="source">
+            <h2>Run from source</h2>
+            <p>The shortest path for developers:</p>
+            <pre><code>pnpm install
+pnpm run build
+pnpm run dev:desktop</code></pre>
+            <p><code>dev:desktop</code> will start the local DSH web service and open the DeepSeek GUI Desktop. More complete architecture and development documentation remains in the GitHub repository.</p>
+          </section>
+
+          <section class="content-section" id="license">
+            <h2>Licensing and upstream</h2>
+            <p>DeepSeek GUI is an unofficial community product of DeepSeek Harness and is not affiliated with or endorsed by DeepSeek. Harness and the official web UI belong to DeepSeek.</p>
+            <p>The repository adopts a tiered license: upstream DeepSeek Harness and upstream derivatives continue to remain MIT; the See-Sol-Lab original desktop/product layer adopts PolyForm Perimeter 1.0.1 within the explicit scope. Personal, educational, research, hobby, and permitted internal use are permitted; providing others with alternatives to the DeepSeek GUI requires separate permission.</p>
+            <div class="page-actions"><a class="button button-secondary" href="https://github.com/See-Sol-Lab/DeepSeekGUI" target="_blank" rel="noreferrer">View GitHub repository</a></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><b>DeepSeek GUI · See-Sol-Lab</b><p>Unofficial community product for DeepSeek Harness.</p><p class="footer-signature">Built together, human &amp; AI.</p></div>
+      <div class="footer-links"><a href="/en/deepseekgui/">Home page</a><a href="/en/deepseekgui/download/">Download</a><a href="/en/deepseekgui/docs/">Documentation</a><a href="/en/deepseekgui/privacy/">Privacy Policy</a><a href="https://www.ailover-atlas.com/">AI Companion Atlas</a></div>
+    </footer>
+  </div>
+</body>
+</html>

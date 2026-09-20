@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Toy Relay: MCP private hardware relay for users who love computers, connecting VPS, browser Web Bluetooth and SOSEXY devices, supporting status, intensity and immediate stop. AI Companion Atlas Chinese project archive." />
+  <title>Toy Relay · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/toy-relay-sosexy/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/toy-relay-sosexy/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/toy-relay-sosexy/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/toy-relay-sosexy/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/toy-relay-sosexy/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Toy Relay</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-senses">Senses &amp; Embodiment</span><span class="status status-open">Open source</span><span class="status status-original">Original</span><span class="status status-adult">18+</span><span class="status status-tool">Tools / Plugins</span><span class="status">VPS + Android Chrome</span></div>
+          <p class="overline">MCP · PRIVATE RELAY · BLE</p>
+          <h1>Toy Relay</h1>
+          <p class="cn-name">@TUTU-KITTY</p>
+          <h2>Let AI control SOSEXY Bluetooth toys over a private network.</h2>
+          <p class="hero-desc">Toy Relay includes FastAPI/MCP service and mobile browser BLE relay page. The natural language intent of AI is first turned into MCP instructions protected by API Key, and then sent to the device via Tailscale HTTPS and Web Bluetooth.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY" target="_blank" rel="noreferrer">https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="toy-relay-sosexy">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by Toy Relay">
+          <p class="problem-label">Natural language intent reaches the device via a private relay</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">“Can the cyber lover in the mobile phone truly control the device at hand?”</p>
+          <div class="time-compare">
+            <span><b>Intention</b><small>Any MCP client</small></span>
+            <i>≠</i>
+            <span><b>Relay</b><small>API Key and tailnet</small></span>
+            <i>≠</i>
+            <span><b>Action</b><small>Browser BLE control</small></span>
+          </div>
+          <p class="problem-note">The AI front-end and BLE page are independent of each other and connected by their own services.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Toy Relay is a private hardware MCP relay designed for users who love computers. The repository provides FastAPI/FastMCP services running on VPS and Web Bluetooth page in Android Chrome, supporting suck, vibration, current, stop, status and history tools.</p>
+          <p>The project restricts access through API Key and Tailscale HTTPS by default, and has verified the SOSEXY/Bobo protocol. The README does not state hard intensity caps, session length caps, or automatic stopping, so test at low intensity first, keep relays online, and ensure stop controls are readily available. For the BLE protocol document, please refer to 51enuxu/sosexy-ble-control. The AI ​​relay and interface are independently implemented by this project.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People who have SOSEXY-enabled devices and use MCP clients such as RikkaHub, Claude Desktop, etc.</li>
+            <li><strong>Platform:</strong>Python service on VPS + Android Chrome with Web Bluetooth support; same Tailscale network recommended.</li>
+            <li><strong>Usage:</strong>Deploy the service, set a random API Key, connect to tailnet, and then use the mobile phone relay page to pair the BLE device.</li>
+            <li><strong>License:</strong>MIT; Added device support requires self-verification of UUID, protocol frames, and stop behavior.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="toy-relay-sosexy">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/tutu-kitty/Toy-Relay-AI-mcp-SOSEXY" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

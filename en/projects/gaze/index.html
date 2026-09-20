@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="gaze: Windows native screen awareness tool, captures the specified window and generates visual narration, OCR and subtitle streams, writing real-time context that can be read by AI. AI Companion Atlas Chinese project archive." />
+  <title>gaze · gaze · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/gaze/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/gaze/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/gaze/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/gaze/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/gaze/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>gaze</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-senses">Senses &amp; Embodiment</span><span class="status status-open">Open source</span><span class="status status-original">Original</span><span class="status status-tool">Tools / Plugins</span><span class="status">Windows</span></div>
+          <p class="overline">CAPTION · OCR · SUBTITLES</p>
+          <h1>gaze</h1>
+          <p class="cn-name">GAZE · @JIANGXI1129</p>
+          <h2>Lend the AI a controlled eye and let it know what you are looking at together.</h2>
+          <p class="hero-desc">gaze uses a native Python loop to capture the window explicitly selected by the user, and then writes the screen overview, OCR text, and audio subtitles into a scrolling context that can be read by the AI. It emphasizes narrow-scope capture, privacy blacklists, and recursive protection that prevents the AI ​​from seeing its own interface.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/jiangxi1129/gaze" target="_blank" rel="noreferrer">https://github.com/jiangxi1129/gaze</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/jiangxi1129/gaze" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="gaze">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by staring">
+          <p class="problem-label">Only look at the window you are allowed to look into</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">&quot;I said, 'Look at this paragraph.' Does your AI companion know which paragraph it is?&quot;</p>
+          <div class="time-compare">
+            <span><b>Screen</b><small>Visual narration</small></span>
+            <i>≠</i>
+            <span><b>Text</b><small>Window OCR</small></span>
+            <i>≠</i>
+            <span><b>Dialogue</b><small>Audio subtitle stream</small></span>
+          </div>
+          <p class="problem-note">It does not take over the tabletop, it only opens a narrow door for shared viewing.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>gaze is a native tool for adding screen awareness to existing AI companions. It can continuously capture a specified window or a controlled foreground window, use a visual model to generate short narrations, use OCR to extract text, and optionally listen to system audio to generate subtitles. Real-time context can be written to simple JSON, JSONL, or any own memory service.</p>
+          <p>The project adopts a narrow-gate strategy by default: if the target window cannot be found, it will be skipped, and the entire desktop will not be automatically intercepted; windows such as banking, chat, password manager, and email are blacklisted, and at the same time, AI clients and floating windows are independently prevented from being recursively captured. Users can also record completely offline, without sending footage to external services.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People who want AI to accompany them to watch videos, read screens, and play games while retaining clear visual boundaries.</li>
+            <li><strong>Platform:</strong>Windows 10/11; pure Python, minimal mode without Node or browser automation.</li>
+            <li><strong>Usage:</strong>Select Window and Visual Services, and enable OCR, audio subtitles, and memory push as needed.</li>
+            <li><strong>License:</strong>MIT。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="gaze">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/jiangxi1129/gaze" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

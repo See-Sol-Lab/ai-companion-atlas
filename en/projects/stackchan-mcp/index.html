@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Stack-chan MCP: MCP bridge connecting AI and Stack-chan robots, providing voice, camera, expression, servo action and environment awareness tools. AI Companion Atlas Chinese project archive." />
+  <title>Stack-chan MCP · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/stackchan-mcp/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/stackchan-mcp/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/stackchan-mcp/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/stackchan-mcp/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/stackchan-mcp/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Stack-chan MCP</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-senses">Senses &amp; Embodiment</span><span class="status status-open">Open source</span><span class="status status-original">Original</span><span class="status status-tool">Tools / Plugins</span><span class="status">M5Stack + PC</span></div>
+          <p class="overline">SEE · HEAR · MOVE</p>
+          <h1>Stack-chan MCP</h1>
+          <p class="cn-name">@MIGRATORYWHALE</p>
+          <h2>Give the AI that supports MCP a desktop body that can see, hear, speak, and turn its head.</h2>
+          <p class="hero-desc">Stack-chan MCP exposes the M5Stack CoreS3 bot as a set of standard MCP tools. Any compatible client can let the AI ​​take photos, listen to sounds, read text, switch pixel expressions, nod and shake, and read room temperature and humidity.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/migratorywhale/stackchan-mcp" target="_blank" rel="noreferrer">https://github.com/migratorywhale/stackchan-mcp</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/migratorywhale/stackchan-mcp" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="stackchan-mcp">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="Problems solved by Stack-chan MCP">
+          <p class="problem-label">Actions called from model tools to the desktop</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">&quot;Can your AI companion actually move in the room?&quot;</p>
+          <div class="time-compare">
+            <span><b>Look</b><small>Camera shot</small></span>
+            <i>≠</i>
+            <span><b>Heard and heard</b><small>Microphones and Speakers</small></span>
+            <i>≠</i>
+            <span><b>Action</b><small>Turning head, nodding, expression</small></span>
+          </div>
+          <p class="problem-note">The same set of MCP tools brings responses from the screen to the physical space.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Stack-chan MCP is a bridge between AI clients and the open source desktop robot Stack-chan. It provides speaking, recording transcription, taking pictures, switching between seven animated expressions, turning the head, nodding, shaking the head, device health check, and temperature, humidity and air pressure sensing.</p>
+          <p>The project includes robot firmware, MCP Server, voice bridge, expression materials and cross-platform deployment instructions. Users need M5Stack CoreS3, Stack-chan mechanical components and a computer running Python; the core robot does not rely on cloud services, and the voice service can be configured on demand.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People who want to connect their existing MCP companion to a real desktop robot and are willing to configure the hardware.</li>
+            <li><strong>Platform:</strong>M5Stack CoreS3 + Stack-chan body; host supports Windows, macOS or Linux.</li>
+            <li><strong>Usage:</strong>Flash the firmware, install the MCP Server, fill in the device address, and then add the service to the AI ​​client configuration.</li>
+            <li><strong>License:</strong>MIT; hardware, voice services and third-party components used are subject to their respective terms.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="stackchan-mcp">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/migratorywhale/stackchan-mcp" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Retired catalog entries are removed before the main catalog runtime counts, filters, or paginates cards. */
+const RETIRED_PROJECT_SLUGS = new Set([
+  'lain-waifu',
+  'character-card-v3',
+  'character-card-v2'
+]);
+
+const retiredProjectGrid = document.querySelector('#directory .project-grid');
+if (retiredProjectGrid) {
+  retiredProjectGrid.querySelectorAll(':scope > .project-card').forEach((card) => {
+    const href = card.querySelector('.project-detail-button')?.getAttribute('href') || '';
+    const match = href.match(/\/projects\/([^/]+)\//);
+    if (match && RETIRED_PROJECT_SLUGS.has(match[1])) card.remove();
+  });
+
+  /* Keep manually corrected editorial metadata in sync until the next generator run. */
+  retiredProjectGrid.querySelectorAll(':scope > .project-card').forEach((card) => {
+    const href = card.querySelector('.project-detail-button')?.getAttribute('href') || '';
+    const match = href.match(/\/projects\/([^/]+)\//);
+    if (match?.[1] !== 'xinchao-nian') return;
+
+    const categories = new Set((card.dataset.categories || '').split(' ').filter(Boolean));
+    categories.add('adult');
+    card.dataset.categories = Array.from(categories).join(' ');
+    card.dataset.search = `${card.dataset.search || ''} 18+ Adult content drive system`.trim();
+
+    const badgeRow = card.querySelector('.project-badges');
+    if (badgeRow && !badgeRow.querySelector('.badge-adult')) {
+      const badge = document.createElement('span');
+      badge.className = 'project-badge badge-adult';
+      badge.textContent = '18+';
+      badgeRow.appendChild(badge);
+    }
+
+    const tags = card.querySelector('.project-tags');
+    if (tags && !Array.from(tags.children).some((tag) => tag.textContent.trim() === '18+')) {
+      const tag = document.createElement('span');
+      tag.textContent = '18+';
+      tags.prepend(tag);
+    }
+  });
+}
+
+/* A small project signature: visible to everyone, meaningful in more than one way. */
+const footerSignatureStyles = document.createElement('link');
+footerSignatureStyles.rel = 'stylesheet';
+footerSignatureStyles.href = '/footer-signature.css?v=20260826-1';
+document.head.appendChild(footerSignatureStyles);
+
+const siteFooter = document.querySelector('.site-footer');
+if (siteFooter && !siteFooter.querySelector('.footer-signature')) {
+  const originalNote = siteFooter.querySelector(':scope > p');
+  const githubLink = siteFooter.querySelector(':scope > a');
+  const signature = document.createElement('p');
+  signature.className = 'footer-signature';
+  signature.textContent = 'Built together, human & AI.';
+
+  siteFooter.insertBefore(signature, originalNote || githubLink || null);
+
+  if (originalNote || githubLink) {
+    const meta = document.createElement('div');
+    meta.className = 'footer-meta';
+    if (originalNote) meta.appendChild(originalNote);
+    if (githubLink) meta.appendChild(githubLink);
+    siteFooter.appendChild(meta);
+  }
+}
+
+/* A quiet, always-available return-to-top control for long catalog browsing. */
+const backToTopStyles = document.createElement('link');
+backToTopStyles.rel = 'stylesheet';
+backToTopStyles.href = '/back-to-top.css?v=20260823-1';
+document.head.appendChild(backToTopStyles);
+
+const backToTopButton = document.createElement('button');
+backToTopButton.className = 'atlas-back-to-top';
+backToTopButton.type = 'button';
+backToTopButton.setAttribute('aria-label', 'Back to top');
+backToTopButton.title = 'Back to top';
+backToTopButton.innerHTML = `
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6 11.5 12 5.5l6 6"></path>
+    <path d="M12 6v12.5"></path>
+  </svg>
+`;
+document.body.appendChild(backToTopButton);
+
+let backToTopAnimationFrame = null;
+
+backToTopButton.addEventListener('click', () => {
+  if (backToTopAnimationFrame !== null) cancelAnimationFrame(backToTopAnimationFrame);
+
+  const startY = window.scrollY || document.documentElement.scrollTop || 0;
+  if (startY <= 0) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  const duration = 380;
+  const startedAt = performance.now();
+  const easeOutCubic = (progress) => 1 - Math.pow(1 - progress, 3);
+
+  const step = (now) => {
+    const progress = Math.min((now - startedAt) / duration, 1);
+    const nextY = Math.round(startY * (1 - easeOutCubic(progress)));
+    window.scrollTo(0, nextY);
+
+    if (progress < 1) {
+      backToTopAnimationFrame = requestAnimationFrame(step);
+    } else {
+      backToTopAnimationFrame = null;
+      window.scrollTo(0, 0);
+    }
+  };
+
+  backToTopAnimationFrame = requestAnimationFrame(step);
+});
+
+/* Mainland-friendly resource entry. Cards carrying the No VPN badge are searchable
+   as one collection without changing the core catalog runtime. */
+const noVpnStyles = document.createElement('style');
+noVpnStyles.textContent = `
+  .badge-no-vpn {
+    color: #34735d;
+    background: rgba(75, 169, 126, .11);
+    border: 1px solid rgba(65, 151, 111, .2);
+  }
+`;
+document.head.appendChild(noVpnStyles);
+
+import('./script-runtime.js?v=20260824-coding-1').then(() => {
+  const tagList = document.querySelector('#taxonomy .tag-list');
+  const searchInput = document.getElementById('catalogSearchInput');
+  if (!tagList || !searchInput) return;
+
+  const noVpnButton = document.createElement('button');
+  noVpnButton.type = 'button';
+  noVpnButton.className = 'tag tag-no-vpn';
+  noVpnButton.setAttribute('aria-pressed', 'false');
+  noVpnButton.innerHTML = 'No VPN <span>No VPN</span>';
+  tagList.appendChild(noVpnButton);
+
+  const syncNoVpnState = () => {
+    const active = searchInput.value.trim() === 'No VPN';
+    noVpnButton.classList.toggle('active', active);
+    noVpnButton.setAttribute('aria-pressed', String(active));
+  };
+
+  noVpnButton.addEventListener('click', () => {
+    searchInput.value = searchInput.value.trim() === 'No VPN' ? '' : 'No VPN';
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    syncNoVpnState();
+  });
+
+  searchInput.addEventListener('input', syncNoVpnState);
+
+  /* Switching to a normal catalog category leaves the no-VPN collection cleanly. */
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-catalog-filter]')) return;
+    if (searchInput.value.trim() !== 'No VPN') return;
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    syncNoVpnState();
+  }, true);
+}).catch((error) => {
+  console.error('Atlas catalog runtime failed to load:', error);
+});

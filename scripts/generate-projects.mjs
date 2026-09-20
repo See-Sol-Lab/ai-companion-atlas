@@ -1,6 +1,7 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildEnglish } from './english.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const projectsDirectory = path.join(root, 'projects');
@@ -384,4 +385,7 @@ for (const project of projects) {
   await writeIfChanged(path.join(outputDirectory, 'index.html'), renderDetail(project));
 }
 
-console.log(`Generated ${projects.length} project card(s) and detail page(s).`);
+const englishPaths = await buildEnglish(root, projects);
+const englishUrls = englishPaths.map(pathname => `  <url><loc>${publicOrigin}${pathname}</loc></url>`).join('\n');
+await writeIfChanged(sitemapPath, (await readFile(sitemapPath, 'utf8')).replace('</urlset>', `${englishUrls}\n</urlset>`));
+console.log(`Generated ${projects.length} project card(s) and detail page(s) in Chinese and English.`);
