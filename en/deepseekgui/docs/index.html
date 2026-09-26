@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f4ef" />
-  <meta name="description" content="DeepSeek GUI 1.1.1 documentation: First launch, Workbench, built-in browser, in-place updates, data migration, archiving sessions and troubleshooting." />
+  <meta name="description" content="DeepSeek GUI 1.1.2 documentation: first launch, account and usage, Workbench, memory and skills, the built-in browser, in-place updates, data, and troubleshooting." />
   <title>Documentation · DeepSeek GUI</title>
   <link rel="canonical" href="https://www.ailover-atlas.com/en/deepseekgui/docs/" />
   <link rel="icon" href="/deepseekgui/assets/deepseekgui-icon.png" type="image/png" />
@@ -29,7 +29,7 @@
       <section class="page-hero">
         <p class="eyebrow">DOCUMENTATION</p>
         <h1>DeepSeek GUI documentation</h1>
-        <p class="hero-body">The current version 1.1.1 already includes first-boot bootstrapping, local Workbench, built-in browser, right-hand file bar, in-place updates, data migration, and archive session management.</p>
+        <p class="hero-body">The current version 1.1.2 embeds official Harness 0.1.7 and supports DeepSeek account sign-in. It includes the local Workbench, engineering memory, a local skill library, the built-in browser, the right-hand file sidebar, in-place updates, and approvals for protected locations.</p>
       </section>
 
       <div class="content-grid">
@@ -38,9 +38,12 @@
           <a href="#what">What is DeepSeek GUI?</a>
           <a href="#install">Installation</a>
           <a href="#first-run">First time configuration</a>
+          <a href="#account">Account and usage</a>
           <a href="#workbench">Local Workbench</a>
           <a href="#browser">Built-in browser and file sidebar</a>
           <a href="#memory">Global and project memory</a>
+          <a href="#skills">Local skill library</a>
+          <a href="#safety">Safety protections</a>
           <a href="#runtime">Harness and Profiles</a>
           <a href="#terminal">Terminals and plug-ins</a>
           <a href="#updates">Update in place</a>
@@ -53,13 +56,13 @@
         <div class="content">
           <section class="content-section" id="what">
             <h2>What is DeepSeek GUI?</h2>
-            <p>DeepSeek GUI is See-Sol-Lab's Windows-native AI workbench built on DeepSeek Harness. Harness takes care of sessions, tools, permissions and runtime; DeepSeek GUI 1.1.1 complements first boot, built-in browser, file sidebar, in-place updates, data migration and archive session management on top of the workbench.</p>
+            <p>DeepSeek GUI is See-Sol-Lab's local AI workbench for Windows, built on DeepSeek Harness. Harness handles sessions, tools, permissions, and the runtime; DeepSeek GUI 1.1.2 adds account sign-in and usage, engineering memory, a local skill library, the built-in browser, the file sidebar, in-place updates, data migration, and approvals for protected locations on top of the workbench.</p>
             <div class="notice"><strong>In one sentence:</strong>Work with the Agent in session and check project status directly from the side; still have access to Harness' Profiles, plugins, and terminal when needed.</div>
           </section>
 
           <section class="content-section" id="install">
             <h2>Installation</h2>
-            <p>Download from DeepSeek GUI official website <code>DeepSeekGUI-Setup-1.1.1.exe</code>. The installer installs according to the current Windows user, and ordinary user rights are sufficient.</p>
+            <p>Download from DeepSeek GUI official website <code>DeepSeekGUI-Setup-1.1.2.exe</code>. The installer installs according to the current Windows user, and ordinary user rights are sufficient.</p>
             <ol>
               <li>Double-click the installation package.</li>
               <li>After the file installation is complete, the DeepSeek GUI will start automatically.</li>
@@ -70,22 +73,30 @@
 
           <section class="content-section" id="first-run">
             <h2>First time configuration</h2>
-            <p>A fresh installation walks through selecting a workspace, connecting to the model, and sending the first message. Can be skipped at any time; users with existing session data will not be treated as new users.</p>
-            <h3>1. Configuration model</h3>
-            <p>Open the settings in the lower left corner and enter <strong>Model</strong>. Fill in the DeepSeek API key and select the model available for the account; the v1.1.1 built-in directory contains DeepSeek V4.1 Flash that supports image input. Credentials are saved by Harness in the DeepSeek GUI data directory and do not enter the installation package, command line, or general diagnostic logs.</p>
+            <p>On first launch, if you are not signed in and have no API key configured, a welcome screen lets you sign in with a DeepSeek account, add an API key, or set up later. Users who already configured an API key skip the welcome screen.</p>
+            <h3>1. Sign in or enter an API key</h3>
+            <p>To sign in with an account, DeepSeek GUI opens your system browser and returns to the app afterwards; account sessions use the account's credit, so no API key is needed. After sign-in, the official setup introduces your credit, asks what you plan to use it for, and lets you choose how much work detail to show. You can also enter an API key on the welcome screen or in Settings → Models. Harness stores credentials in the DeepSeek GUI data folder; they never go into the installer, the command line, or ordinary diagnostic logs.</p>
             <h3>2. Select workspace</h3>
             <p>Return to the homepage and select a project folder as the workspace. Just leave the project where it is, and the Agent will work directly in the workspace you selected.</p>
             <h3>3. Create or restore a session</h3>
             <p>Create a new session after selecting the model and workspace. Existing Harness sessions, Profiles, and configurations continue to be managed by the same runtime.</p>
           </section>
 
+          <section class="content-section" id="account">
+            <h2>Account and usage</h2>
+            <p>Settings → Account shows the account and the topped-up and granted balances. View usage and Top up open the DeepSeek platform page inside the window, already signed in.</p>
+            <p>Below it on the same page is DeepSeek GUI's usage view: spending, requests, tokens, and cache hit rate for today, 7 days, and 30 days, plus a 60-day activity heatmap. The data is read with the account sign-in, and the token never reaches any page.</p>
+            <div class="notice"><strong>Known issue:</strong>The account card may show &quot;Account details are not available yet&quot; instead of your name and avatar. Balances, usage, and top-up are not affected.</div>
+          </section>
+
           <section class="content-section" id="workbench">
             <h2>Local Workbench</h2>
-            <p>After entering the session, you can switch to &quot;Change&quot;, &quot;Git&quot; and &quot;Memory&quot; next to &quot;Conversation&quot; and &quot;Track&quot;. These views read local state directly, and normal refresh does not require additional requests to the model.</p>
+            <p>Inside a conversation, switch between Changes, Git, Project management, and Memory next to Conversation and Trace. These views read local state directly, so refreshing them does not call the model.</p>
             <ul>
               <li><strong>Changes:</strong>Group commits, changed files, new files and conflicts to view a single file diff; open it in the right file bar when positioning is required.</li>
               <li><strong>Git：</strong>The upper half views the parallel workspace, and the lower half views branches, remotes, leading/behind numbers, and recent commits; commit, push, and PR results will also remain in the current session record.</li>
-              <li><strong>Memory:</strong>Read the Markdown memory of the current project, open the file location, or continue maintenance through &quot;Let Assistant Organize&quot;.</li>
+              <li><strong>Project management:</strong>Choose which local skills the sessions in this folder may use.</li>
+              <li><strong>Memory:</strong>Read the current project's Markdown memory, or in Enhanced memory mode view, edit, forget, and restore memory entries.</li>
             </ul>
             <h3>Git and Pull Request</h3>
             <p>Dedicated Git tools support viewing status and diffs, staging, unstaged, undoing unstaged changes to tracked files, and creating commits. The remote end, target branch, and commits to be pushed will be displayed before pushing; creating a PR uses the Git and GitHub CLI credentials already in your computer.</p>
@@ -103,11 +114,28 @@
             <p><strong>Global memory</strong>Located in &quot;Settings → Global Memory&quot;, it is used to save personal preferences and collaboration requirements across projects. It is edited by the user and is read-only by the assistant.</p>
             <p><strong>Project memory</strong>saved in the selected workspace <code>&lt;folder name&gt;.memory.md</code>, used to record project decisions, commitments, and user revisions, maintained by the assistant within the current workspace.</p>
             <p>The two-layer memory will enter the context when the session is loaded, and the actual content used is saved with the session record. If the development version ever left project-level <code>memory.md</code>, please merge the content that needs to be retained into a new project memory file with a folder name prefix.</p>
+            <p><strong>Enhanced memory (experimental):</strong>Settings → Global memory can switch to versioned memory entries. The assistant can remember, correct, forget, and recall them, and each step injects only the entries relevant to the current content; you can view, edit, undo, and restore them. Markdown files remain the default, switching asks for confirmation first, and you can switch back at any time.</p>
+          </section>
+
+          <section class="content-section" id="skills">
+            <h2>Local skill library</h2>
+            <p>Settings → Skills imports skills from a folder, a ZIP file, or a single Markdown file. Each import is reviewed first: metadata can be fixed on the spot (only the library copy changes), and blocking issues stop the import.</p>
+            <p>The Project management tab at the top of a conversation selects the skills each project may use. Sessions in the same folder share one selection, unselected skills are invisible to that project, and the official skills keep working as before.</p>
+          </section>
+
+          <section class="content-section" id="safety">
+            <h2>Safety protections</h2>
+            <ul>
+              <li><strong>Protected locations:</strong>When an assistant command or file write touches Windows system files, installed programs, or DeepSeek GUI's own code, a red approval card appears, even under Full access. Enter does not approve it, and focus starts on Reject. The check is heuristic, so paths written inside script files are not seen.</li>
+              <li><strong>Chat-only workspaces:</strong>The user folder, drive roots, and system folders are read-only as workspaces, with Full access and escalation refused.</li>
+              <li><strong>Running as administrator:</strong>Starting as administrator shows a red warning; if you continue, Full access is disabled.</li>
+              <li><strong><code>.git</code> is read-only by default:</strong>In Workspace Write mode, writes to <code>.git</code> are refused, and staging and unstaging ask for approval first.</li>
+            </ul>
           </section>
 
           <section class="content-section" id="runtime">
             <h2>Harness and Profiles</h2>
-            <p>Model, session, credentials, permissions, memory, and hook state are all managed by Harness. The current Harness Home and Profile are controlled by the desktop launcher; v1.1.1 embeds DeepSeek Harness 0.1.5-rc.2.</p>
+            <p>Models, sessions, credentials, permissions, memory, and hook state are all managed by Harness. The desktop launcher controls the current Harness Home and Profile; v1.1.2 embeds DeepSeek Harness 0.1.7-rc.2.</p>
             <ul>
               <li><strong>Managed Home：</strong>By default, DeepSeek GUI's own application data directory is used.</li>
               <li><strong>Existing Home：</strong>Advanced users can explicitly select an existing Harness Home; the DeepSeek GUI does not automatically migrate, merge, or rewrite it.</li>
@@ -118,13 +146,14 @@
           <section class="content-section" id="terminal">
             <h2>Terminals and plug-ins</h2>
             <p>When you need deeper control, you can open the DSH Terminal. DeepSeek GUI prepares private for terminal <code>dsh</code> / <code>node</code> / <code>pnpm</code> Entry without modifying system PATH, registry or shell configuration.</p>
-            <p>Plug-in management continues to be Harness official <code>dsh plugin</code> path. DeepSeek GUI does not mistake &quot;loaded in package.json&quot; for &quot;plugin has actually been loaded&quot;, and distinguishes between Profile Bundles, installed dependencies and the true status of Loader.</p>
+            <p>Plugins are managed on the official Plugins page: install, configure, enable, disable, and uninstall them, with a compatibility check against the running Harness version. The plugins bundled with DeepSeek GUI appear under the &quot;Bundled with DeepSeekGUI&quot; group and cannot be removed.</p>
           </section>
 
           <section class="content-section" id="updates">
             <h2>Update in place</h2>
             <p>Check for updates from the menu or tray. DeepSeek GUI will download the installation package in the background, check the HTTPS address, file size and SHA-256, and display the version and update instructions; the Windows installer will only be launched after user confirmation.</p>
             <p>Automatic downloading is on by default and can be turned off in the update panel. Canceling the installation will retain the verified installation package, so there is no need to download it again next time; the file will be checked again before being handed over to the installer.</p>
+            <p>When GitHub cannot be reached, the same installer is downloaded from the official site instead and goes through the same SHA-256 and size checks.</p>
           </section>
 
           <section class="content-section" id="data">
@@ -132,7 +161,7 @@
             <p>By default, the packaged version puts Harness data in <code>%APPDATA%\DeepSeekGUI\dsh</code>, which includes credentials, settings, sessions, Profiles and global memory. The DeepSeek GUI's launcher and window preferences are also saved in its own userData directory; project memory remains in the corresponding workspace.</p>
             <p>&quot;Data Location&quot; in the menu can migrate Managed Harness Home. The program is first copied and verified one by one. After switching, Harness is restarted. After the verification is successful again, it will be asked whether to delete the old copy; the Existing Home, project directory and application installation location will not be moved accordingly.</p>
             <p>Archived conversations are located in &quot;Settings → Archived Conversations&quot; and can be restored and opened; permanent deletion requires two-step confirmation and will wait for the current reply and tool execution to complete.</p>
-            <p>v1.1.1 will migrate the session data to V3 when opening an old session for the first time and retain the original files; the migrated session can no longer be read by the old version of Harness.</p>
+            <p>v1.1.2 converts older session data to the V4 format when a session is first opened; converted sessions cannot be read by v1.1.1.</p>
             <p>Ordinary uninstallation will ask whether to delete <code>%APPDATA%\DeepSeekGUI</code> and the migrated data directory. After selecting Keep, you can continue to use the original credentials, settings, and sessions when reinstalling; upgrade and replacement will preserve the data.</p>
           </section>
 
@@ -142,6 +171,8 @@
             <p>DeepSeek GUI is currently fixed on the local machine <code>127.0.0.1:3080</code> Start the Harness service. When the port is occupied by other programs, an error will be clearly reported instead of secretly changing the port.</p>
             <h3>Harness startup failed</h3>
             <p>The packaged version of the diagnostic log is located in the DeepSeek GUI application data directory. Harness service log and bounded rotation <code>deepseekgui-main.log</code> will desensitize common API keys, Bearer tokens and other credential forms; you can export a local diagnostic package from &quot;Settings → BUG Diagnosis and Feedback&quot; or ask the assistant to conduct a redaction triage.</p>
+            <h3>Programs in a project folder will not start</h3>
+            <p>A folder where the Windows sandbox ran in Workspace Write mode is permanently marked Low integrity by the official sandbox, so programs started from it afterwards (for example an Electron development build) may fail to run. For symptoms and cleanup, see the <a href="https://github.com/See-Sol-Lab/DeepSeekGUI/blob/main/docs/user/deepseekgui/data-troubleshooting.zh.md" target="_blank" rel="noreferrer">troubleshooting guide in the GitHub repository</a>。</p>
             <h3>Why is the window still there after it is closed?</h3>
             <p>Closing the upper right corner of the window only hides the window, and Harness continues to run in the system tray. To actually stop the runtime, use the tray or menu <strong>Quit DeepSeek GUI</strong>。</p>
           </section>

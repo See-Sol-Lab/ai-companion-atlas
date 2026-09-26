@@ -357,24 +357,24 @@ test('robots and sitemap expose public pages without private surfaces', async ()
   assert.doesNotMatch(sitemap, /\/(?:admin|api|community)\//u);
 });
 
-test('DeepSeekGUI public pages point to the 1.1.1 release', async () => {
+test('DeepSeekGUI public pages point to the 1.1.2 release', async () => {
   const project = JSON.parse(await readFile(path.join(root, 'projects', 'deepseekgui.json'), 'utf8'));
   const home = await readFile(path.join(root, 'deepseekgui', 'index.html'), 'utf8');
   const download = await readFile(path.join(root, 'deepseekgui', 'download', 'index.html'), 'utf8');
   const docs = await readFile(path.join(root, 'deepseekgui', 'docs', 'index.html'), 'utf8');
-  const installerUrl = 'https://www.ailover-atlas.com/deepseekgui/releases/v1.1.1/DeepSeekGUI-Setup-1.1.1.exe';
+  const installerUrl = 'https://www.ailover-atlas.com/deepseekgui/releases/v1.1.2/DeepSeekGUI-Setup-1.1.2.exe';
 
-  assert.equal(project.updated, '2026-09-12');
-  assert.match(project.summary, /v1\.1\.1/u);
-  assert.match(home, /<span>v1\.1\.1<\/span>/u);
+  assert.equal(project.updated, '2026-09-26');
+  assert.match(project.summary, /v1\.1\.2/u);
+  assert.match(home, /<span>v1\.1\.2<\/span>/u);
   assert.ok(download.includes(`href="${installerUrl}"`));
-  assert.match(download, /版本 1\.1\.1 · Windows 10\/11 · 64 位 · 约 128 MB/u);
-  assert.match(download, /releases\/tag\/v1\.1\.1/u);
-  assert.match(docs, /DeepSeekGUI-Setup-1\.1\.1\.exe/u);
+  assert.match(download, /版本 1\.1\.2 · Windows 10\/11 · 64 位 · 约 192 MB/u);
+  assert.match(download, /releases\/tag\/v1\.1\.2/u);
+  assert.match(docs, /DeepSeekGUI-Setup-1\.1\.2\.exe/u);
   assert.match(docs, /id="browser"/u);
   assert.match(docs, /id="updates"/u);
   for (const html of [home, download, docs]) {
-    assert.doesNotMatch(html, /DeepSeekGUI-Setup-1\.1\.0\.exe/u);
+    assert.doesNotMatch(html, /DeepSeekGUI-Setup-1\.1\.[01]\.exe/u);
   }
 
   const lightThemeShot = await readFile(path.join(root, 'deepseekgui', 'assets', 'deepseekgui-light.png'));
