@@ -10,8 +10,8 @@
   "sourceUrl": "https://github.com/See-Sol-Lab/DeepSeekGUI",
   "directUrl": "https://www.ailover-atlas.com/deepseekgui/",
   "hook": "国产大模型的电脑前端，无需翻墙，让 DS 住进属于自己的 Codex。",
-  "summary": "基于官方 DSH 的 Windows 本地工作台。有兼容 API 就能使用；v1.1.1 加入首次启动引导、内置浏览器、文件侧栏、就地更新、数据迁移和归档会话管理。",
-  "heroDescription": "v1.1.1 从第一次启动接到长期使用：在本地 Workbench 中读写项目、浏览网页、管理 Git 与记忆，并安全更新、迁移数据和整理归档会话。",
+  "summary": "基于官方 DSH 的 Windows 本地工作台。可以用 DeepSeek 账号登录，也可以接兼容 API；v1.1.2 升级到 Harness 0.1.7，加入工程记忆、本地技能库、用量视图和受保护位置审批。",
+  "heroDescription": "v1.1.2 跟上官方 Harness 0.1.7：用 DeepSeek 账号登录就能开始，在本地 Workbench 中读写项目、浏览网页、管理 Git、记忆与技能，并在设置里查看余额和用量。",
   "badges": [
     {
       "label": "实验室出品",
@@ -38,11 +38,11 @@
     "本地 Workbench",
     "内置浏览器",
     "就地更新",
-    "数据迁移"
+    "账号登录"
   ],
   "language": "TypeScript",
   "platform": "Windows 10 / 11 x64",
-  "updated": "2026-09-12",
+  "updated": "2026-09-26",
   "heroOverline": "INSTALL · BROWSE · UPDATE · MIGRATE",
   "showcase": {
     "label": "让国产模型拥有自己的电脑前端",
@@ -67,7 +67,7 @@
   "intro": {
     "paragraphs": [
       "DeepSeekGUI 是 See-Sol-Lab 基于 DeepSeek 官方 DeepSeek Harness（DSH）制作的 Windows 本地工作台。它把 Harness、Node.js 和 pnpm 一起装进桌面应用，连接模型、选择项目文件夹后即可开始使用。",
-      "v1.1.1 新增首次启动引导、内置浏览器与右侧文件栏、就地更新、托管数据目录迁移和归档会话管理；同时保留改动、Git、记忆和专用 Pull Request 工具，让日常使用从安装到长期维护都在一个窗口完成。"
+      "v1.1.2 把内嵌的 Harness 升级到官方 0.1.7，支持用 DeepSeek 账号登录（不必填 API Key），新增工程记忆、本地技能库和用量视图，并对系统目录与程序自身的操作加上红色审批；内置浏览器、文件侧栏、改动、Git 和就地更新照旧在一个窗口里完成。"
     ],
     "facts": [
       {
@@ -76,11 +76,11 @@
       },
       {
         "label": "使用方式",
-        "text": "下载安装包，打开设置连接 DeepSeek 模型，再选择一个工作文件夹开始会话。"
+        "text": "下载安装包，用 DeepSeek 账号登录或填入 API Key，再选择一个工作文件夹开始会话。"
       },
       {
         "label": "当前版本",
-        "text": "当前版本 1.1.1 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。"
+        "text": "当前版本 1.1.2 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。"
       },
       {
         "label": "项目关系",
