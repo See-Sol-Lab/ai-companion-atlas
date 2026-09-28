@@ -1,0 +1,81 @@
+{
+  "slug": "cove-tarot-companion",
+  "order": 212,
+  "name": {
+    "zh": "Cove 塔罗牌伴侣",
+    "en": "Cove Tarot Companion"
+  },
+  "author": "moonlin1213",
+  "language": "JavaScript / Node.js",
+  "platform": "Windows / macOS / Linux",
+  "sourceUrl": "https://github.com/moonlin1213/cove-tarot-companion",
+  "hook": "和 AI 一起抽牌，再带着牌面与解读回到原来的聊天。",
+  "summary": "本机塔罗陪伴连接器，先征求同意，再调用固定版本的 Tarot Ritual 引擎，供陪伴 Agent 接回已揭示的牌面与解读结果。",
+  "heroDescription": "Cove 塔罗牌伴侣把抽牌变成共同活动：用户接受邀请、选择牌阵并抽牌，伴侣再读取结果继续交流。自动续聊需要宿主适配。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "塔罗",
+    "共同活动",
+    "同意优先",
+    "Skill"
+  ],
+  "updated": "2026-09-01",
+  "heroOverline": "TAROT · CONSENT · SHARED REFLECTION",
+  "showcase": {
+    "label": "把一次抽牌带回共同的聊天",
+    "symbol": "✦",
+    "question": "“抽完这组牌，还能和原来的伴侣接着聊吗？”",
+    "comparisons": [
+      {
+        "value": "邀请",
+        "label": "先确认是否参与"
+      },
+      {
+        "value": "抽牌",
+        "label": "整组抽齐再揭示"
+      },
+      {
+        "value": "接回",
+        "label": "读取牌面与原文结果"
+      }
+    ],
+    "note": "塔罗用于反思与交流；不保证未来，也不替代专业意见。"
+  },
+  "intro": {
+    "paragraphs": [
+      "连接器在本机运行，调用固定版本的 Tarot Ritual 处理问题、牌阵、抽牌与解读。用户接受邀请后操作原界面，Agent 可在后续聊天回合读取已揭示牌面与原文综合；自动接回会话需要宿主适配，不代表任意客户端都能无缝续聊。",
+      "需要 Node.js 24.5+、npm、Git、支持 WebGL2 的桌面浏览器，以及同一电脑上具备命令与浏览器能力的 Agent。AI 解读须自行配置模型服务；未配置时仍可抽牌。本次收录依据公开文档，未做安装实测。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望与已有 AI 伴侣一起抽牌、讨论与自我反思的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Windows 10/11 x64、macOS Intel / Apple Silicon、Linux x64；需要本机宿主。"
+      },
+      {
+        "label": "使用方式",
+        "text": "从源码运行配套安装器并接入宿主；AI 解读另需模型服务配置，可能产生费用。"
+      },
+      {
+        "label": "许可",
+        "text": "连接器为 ISC；Tarot Ritual 引擎及第三方素材遵循各自许可。"
+      }
+    ]
+  }
+}

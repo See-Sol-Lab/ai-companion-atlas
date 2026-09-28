@@ -1,0 +1,81 @@
+{
+  "slug": "cove-sticker-mcp",
+  "order": 213,
+  "name": {
+    "zh": "Cove 自定义表情包 MCP",
+    "en": "Cove Sticker MCP"
+  },
+  "author": "moonlin1213",
+  "sourceUrl": "https://github.com/moonlin1213/cove-sticker-mcp",
+  "hook": "给 AI 一套自己的表情包，让它按聊天语境挑图回应。",
+  "summary": "本地优先的表情包图库与标准 MCP 服务，提供网页管理、图片导入、手动标签、可选视觉标注和语境检索，默认不调用付费模型。",
+  "heroDescription": "Cove 表情包 MCP 让 Agent 从用户自己的图库中挑选图片回应。支持 stdio 与 Streamable HTTP；聊天中是否显示或向外发送图片，取决于宿主。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "MCP",
+    "本地图库",
+    "语境选图",
+    "可选识图"
+  ],
+  "language": "Python",
+  "platform": "Python 3.11+ / MCP",
+  "updated": "2026-09-08",
+  "heroOverline": "STICKERS · CONTEXT · LOCAL LIBRARY",
+  "showcase": {
+    "label": "让表情包成为日常表达",
+    "symbol": "☺",
+    "question": "“这句话，用我们收藏的哪张表情包回应？”",
+    "comparisons": [
+      {
+        "value": "导入",
+        "label": "建立自己的图库"
+      },
+      {
+        "value": "标注",
+        "label": "手动或可选视觉模型"
+      },
+      {
+        "value": "选图",
+        "label": "按语境返回合适图片"
+      }
+    ],
+    "note": "图片展示与发送由宿主决定；返回图片仍可能产生模型计费。"
+  },
+  "intro": {
+    "paragraphs": [
+      "项目提供本地网页图库和 MCP 工具，可导入图片、目录或 ZIP，按内容去重，并通过描述和标签检索图片。未配置视觉模型也可使用手动标注、搜索和 MCP 取图；默认不附带表情包素材。",
+      "当前是源码安装的开发版，需要 Python 3.11+。启用自动识图后，图片预览会发给用户配置的模型服务；取图时图片和描述会交给 Agent。缩小预览可减少传输量，但不保证 token 消耗可忽略。本次未做安装实测。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望 MCP 伴侣能使用自定义表情包，而不绑定某个聊天平台的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Python 3.11+；支持 stdio 或 Streamable HTTP 的 MCP 客户端。"
+      },
+      {
+        "label": "使用方式",
+        "text": "从 GitHub 源码安装，打开网页管理图库，再在 MCP 客户端注册服务；自动识图可选。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；导入的表情包素材需遵守各自版权。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "slug": "wake-bridge",
+  "order": 215,
+  "name": {
+    "zh": "Wake Bridge",
+    "en": "Wake Bridge"
+  },
+  "author": "reneyuxi0402",
+  "sourceUrl": "https://github.com/reneyuxi0402/wake-bridge",
+  "hook": "把外部事件和预约事项交给 Agent 的注意力调度层。",
+  "summary": "本地优先的持久注意力调度核心，记录事件与唤醒请求，按策略、静默时段及在线状态向已登记宿主适配器投递。",
+  "heroDescription": "Wake Bridge 管理何时值得让 Agent 重新获得注意力，保存投递与回执证据。它本身不运行 Agent；能否唤醒具体会话取决于宿主适配器。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "注意力调度",
+    "事件源",
+    "宿主适配",
+    "自主预约"
+  ],
+  "language": "TypeScript / Node.js",
+  "platform": "macOS / Linux x64",
+  "updated": "2026-09-27",
+  "heroOverline": "EVENT · POLICY · HOST ADAPTER",
+  "showcase": {
+    "label": "把重新获得注意力变成可核对的过程",
+    "symbol": "↗",
+    "question": "“有事发生后，Agent 怎样在合适的时候回到准确的会话？”",
+    "comparisons": [
+      {
+        "value": "登记",
+        "label": "保存事件与预约"
+      },
+      {
+        "value": "判断",
+        "label": "依据策略与在线状态"
+      },
+      {
+        "value": "投递",
+        "label": "交给明确登记的宿主"
+      }
+    ],
+    "note": "没有宿主适配器时，事件会保存，但实际投递停在等待端点。"
+  },
+  "intro": {
+    "paragraphs": [
+      "Wake Bridge 是面向 Agent 宿主的注意力调度核心。外部来源登记事件，Agent 设置个人策略和未来预约，系统再经过静默时段、在线状态等条件，将结构化唤醒信息交给已经登记的宿主适配器。",
+      "当前为预览版，支持单 Agent 本地部署，提供可选的 Claude CLI 在线会话适配器；其他宿主需自行实现并验证适配。它不提供聊天前端、记忆系统或任意桌面客户端的自动唤醒。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "正在搭建 Agent 宿主、希望管理外部事件与未来注意力的人。"
+      },
+      {
+        "label": "平台",
+        "text": "当前预览版支持 macOS arm64/x64 和带 systemd user service 的 Linux x64；需 Node.js 20+ 与 SQLite CLI。"
+      },
+      {
+        "label": "使用方式",
+        "text": "安装 wake-bridge 预览版，并为目标会话配置或实现宿主适配器。"
+      },
+      {
+        "label": "许可",
+        "text": "Apache-2.0；当前为预览版。"
+      }
+    ]
+  }
+}

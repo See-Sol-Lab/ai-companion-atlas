@@ -1,0 +1,81 @@
+{
+  "slug": "ai-island-tutorial",
+  "order": 214,
+  "name": {
+    "zh": "AI 灵动岛教程",
+    "en": "AI Dynamic Island Tutorial"
+  },
+  "author": "ziyaxd23",
+  "sourceUrl": "https://github.com/ziyaxd23/ai-island-tutorial",
+  "hook": "把已有 AI 聊天网页做成安卓 App，并在屏幕顶部显示消息。",
+  "summary": "Android 灵动岛搭建教程：使用 Capacitor 包装已有聊天网页，以原生悬浮通知展示 AI 回复；进阶方案讨论主动推送和设备能力。",
+  "heroDescription": "AI 灵动岛教程教使用者为自己的聊天前端制作安卓入口和顶部通知。基础篇需要已有网页、安卓手机、Node.js 与 Android Studio；不是直接下载安装的完整伴侣 App。",
+  "badges": [
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "原创",
+      "tone": "original"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    }
+  ],
+  "tags": [
+    "Android",
+    "Capacitor",
+    "灵动岛",
+    "搭建教程"
+  ],
+  "language": "Guide / Java",
+  "platform": "Android / Capacitor",
+  "updated": "2026-09-16",
+  "heroOverline": "ANDROID · CHAT PAGE · FLOATING NOTICE",
+  "showcase": {
+    "label": "让聊天页面走到手机屏幕顶部",
+    "symbol": "岛",
+    "question": "“能让自己的 AI 聊天页像手机应用一样提醒我吗？”",
+    "comparisons": [
+      {
+        "value": "包装",
+        "label": "网页做成安卓入口"
+      },
+      {
+        "value": "通知",
+        "label": "顶部悬浮显示回复"
+      },
+      {
+        "value": "扩展",
+        "label": "进阶接入主动消息"
+      }
+    ],
+    "note": "基础篇的主动消息依赖原聊天前端已有的唤醒能力。"
+  },
+  "intro": {
+    "paragraphs": [
+      "仓库提供把现有 AI 聊天网页包装为 Android 应用的教程，并用灵动岛样式的悬浮通知展示回复。基础篇主要面向已有前端的人；进阶篇涉及服务器推送、设备状态和更多系统能力。",
+      "它是教程和演示资料，不是可直接安装的成品。基础路线需要安卓手机、Node.js 和 Android Studio；有主动消息的效果还取决于原前端是否已有唤醒接口。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "已有 AI 聊天网页，想自己制作安卓入口与灵动岛提醒的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Android 手机；电脑需 Node.js 和 Android Studio。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按基础篇从现有前端构建应用；进阶功能需额外服务器与系统能力。"
+      },
+      {
+        "label": "许可",
+        "text": "仓库 README 标注 MIT；请核对教程所用第三方组件各自许可。"
+      }
+    ]
+  }
+}

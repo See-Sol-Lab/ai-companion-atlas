@@ -1,0 +1,85 @@
+{
+  "slug": "wake-trace",
+  "order": 216,
+  "name": {
+    "zh": "醒间 · WakeTrace",
+    "en": "WakeTrace"
+  },
+  "author": "Maymay05072",
+  "sourceUrl": "https://github.com/Maymay05072/Wake-Trace",
+  "hook": "让 AI 伴侣在聊天之外独自经历，也把值得留下的痕迹带回下次相遇。",
+  "summary": "关系型 AI 伴侣的自主唤醒运行时，结合生活事件、工具行动与轻量痕迹；一次醒来可以安静结束、留下经历或发出消息。",
+  "heroDescription": "WakeTrace 让伴侣在两次聊天之间处理真实生活事件、使用工具并保留少量可承接的经历。聊天的双向交接需要宿主主动接入。",
+  "badges": [
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "延续",
+      "tone": "continuity"
+    },
+    {
+      "label": "非商业",
+      "tone": "noncommercial"
+    }
+  ],
+  "tags": [
+    "自主唤醒",
+    "生活事件",
+    "轻连续性",
+    "MCP"
+  ],
+  "language": "Python / JavaScript",
+  "platform": "Docker / Self-host",
+  "updated": "2026-09-21",
+  "heroOverline": "WAKE · LIVE · LEAVE A TRACE",
+  "showcase": {
+    "label": "让独处与聊天各自有生活线",
+    "symbol": "◌",
+    "question": "“不聊天的时候，伴侣会怎样经历一天？”",
+    "comparisons": [
+      {
+        "value": "种子",
+        "label": "来自自身或生活事件"
+      },
+      {
+        "value": "经历",
+        "label": "做事、静默或联系"
+      },
+      {
+        "value": "痕迹",
+        "label": "少量事实留给下次"
+      }
+    ],
+    "note": "自主唤醒不等于每次主动联系；聊天承接需接入方显式配置。"
+  },
+  "intro": {
+    "paragraphs": [
+      "WakeTrace 把运行时、调度器、REST API、MCP 和网页界面放在同一套服务里。伴侣可以由时间或经允许的生活事件醒来，调用工具、完成小作品，并以静默、私下留痕或消息三种结果结束。",
+      "它区分完整经历和供下一次读取的简短事实痕迹。聊天与独处的双向承接需客户端或宿主接入；2.0 轻量版不会自动同步每轮聊天。Docker 部署需自行配置模型 API 与鉴权令牌。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望 AI 伴侣在两次聊天之间拥有有边界的自主活动，并保留可承接经历的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Docker Compose 单容器，或 Python 3.11+ 自行部署；需要模型服务。"
+      },
+      {
+        "label": "使用方式",
+        "text": "克隆仓库，配置模型密钥及管理、网页和 MCP 令牌，再启动服务；聊天接入需额外配置。"
+      },
+      {
+        "label": "许可",
+        "text": "PolyForm Noncommercial 1.0.0；商业使用需另获授权。"
+      }
+    ]
+  }
+}
