@@ -7,6 +7,7 @@
   "name": { "zh": "DeepSeek Harness", "en": "DeepSeek Harness" },
   "author": "deepseek-ai",
   "sourceUrl": "https://github.com/deepseek-ai/deepseek-harness",
+  "directUrl": "https://deepseek.com/harness/",
   "hook": "DeepSeek 官方开源编码 Agent。",
   "summary": "DeepSeek 官方开源编码 Agent，提供 WebUI、命令行和 SDK，可完成文件编辑、Shell、检索、计划、目标、子 Agent 与工作流任务。",
   "heroDescription": "安装 Node.js 后运行一条 npx 命令即可启动 DSH 网页界面。配置模型并选择项目目录后，Agent 可以阅读和修改文件、运行命令、制定计划、调用技能，并在需要授权的操作前询问用户。",
@@ -26,6 +27,10 @@
     {
       "label": "开发与编程",
       "tone": "coding"
+    },
+    {
+      "label": "免翻墙",
+      "tone": "no-vpn"
     }
   ],
   "tags": [
