@@ -29,13 +29,13 @@
       <section class="page-hero">
         <p class="eyebrow">PRIVACY &amp; LICENSE</p>
         <h1>隐私政策</h1>
-        <p class="hero-body">最后更新：2026 年 8 月 27 日。DeepSeek GUI 是纯本地的桌面应用——安装后完全运行在你自己的电脑上，我们不运营服务器，不收集用户数据。</p>
+        <p class="hero-body">最后更新：2026 年 10 月 5 日。DeepSeek GUI 在本机运行并保存应用数据；模型请求、可选反馈和官网访问的数据处理分别说明如下。</p>
       </section>
 
       <article class="policy">
         <section class="policy-section">
-          <h2>1. 我们不收集你的数据</h2>
-          <p>DeepSeek GUI 没有自己的服务器。你的聊天记录、项目文件、API 凭据和所有配置都只存在你的设备上，不会被发送到 See-Sol-Lab 或任何第三方。我们不收集、不存储、不传输你的任何个人数据或使用信息。</p>
+          <h2>1. 本地数据与主动发送</h2>
+          <p>DeepSeek GUI 的会话、凭据和配置默认保存在本机。See-Sol-Lab 不提供聊天记录托管服务。正常模型请求会发送给你选择的服务商；你主动提交反馈或启用开发者模式时，也可能发送相应内容。</p>
         </section>
 
         <section class="policy-section">
@@ -51,17 +51,18 @@
 
         <section class="policy-section">
           <h2>4. 诊断日志</h2>
+          <p>v1.2.0 的开发者模式默认关闭额外会话日志、插件清单和反馈会话上报；关闭时反馈可以记录在本机。启用开发者模式后采用官方相应上报行为，可能上传此前的会话记录，切换前会确认并重启 Harness。通过「BUG 诊断与反馈」提交问题时，发送前可检查内容。</p>
           <p>DeepSeek GUI 在本机记录有限的运行日志，用于排查启动和运行问题。日志会对 API key、Bearer token 等凭据形态做脱敏处理，并限制历史日志数量和总大小。如果你向维护者提交日志，请自行检查其中是否包含项目路径或其他敏感信息。</p>
         </section>
 
         <section class="policy-section">
           <h2>5. 卸载与数据删除</h2>
-          <p>卸载时会询问是否一并删除应用数据。选择保留后，重装可以继续使用已有的凭据、设置和会话。如需彻底清除本地数据，删除 <code>%APPDATA%\DeepSeekGUI</code> 目录即可。</p>
+          <p>卸载时会询问是否删除应用数据。v1.2.0 即使选择删除，也保留全局记忆与全局 AGENTS.md；项目记忆仍在项目文件夹中。迁移过的数据目录需分别核对，删除前请确认需要保留的内容。</p>
         </section>
 
         <section class="policy-section">
           <h2>6. 官网访问</h2>
-          <p>DeepSeek GUI 官网托管在第三方平台上。访问网站时，托管服务可能处理标准 HTTP 元数据（IP 地址、User-Agent 等）用于正常提供页面和安全防护。我们不投放广告，不做用户画像，不进行跨站追踪。如果未来加入在线服务或分析功能，我们会在启用前更新本页并说明用途。</p>
+          <p>官网服务器会处理访问请求的 HTTP 元数据，用于提供页面、安全防护与下载统计。安装包下载统计按请求和传输量汇总，不等同于实际安装人数；官网也使用 Cloudflare Web Analytics 汇总访问情况。</p>
         </section>
 
         <section class="policy-section">

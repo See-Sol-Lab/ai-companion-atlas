@@ -29,13 +29,13 @@
       <section class="page-hero">
         <p class="eyebrow">PRIVACY &amp; LICENSE</p>
         <h1>Privacy Policy</h1>
-        <p class="hero-body">Last updated: August 27, 2026. DeepSeek GUI is a purely local desktop application - after installation, it runs completely on your own computer. We do not operate servers and do not collect user data.</p>
+        <p class="hero-body">Last updated: October 5, 2026. DeepSeek GUI runs locally and stores app data on your device. Model requests, optional feedback, and website visits are described below.</p>
       </section>
 
       <article class="policy">
         <section class="policy-section">
-          <h2>1. We do not collect your data</h2>
-          <p>DeepSeek GUI does not have its own server. Your chat history, project files, API credentials and all configurations live only on your device and are not sent to See-Sol-Lab or any third party. We do not collect, store or transmit any of your personal data or usage information.</p>
+          <h2>1. Local data and explicit uploads</h2>
+          <p>Sessions, credentials, and configuration are stored locally by default. See-Sol-Lab does not host your chat history. Normal model requests go to your chosen provider; explicitly submitting feedback or enabling Developer mode may also send the relevant content.</p>
         </section>
 
         <section class="policy-section">
@@ -51,17 +51,18 @@
 
         <section class="policy-section">
           <h2>4. Diagnostic log</h2>
+          <p>In v1.2.0, Developer mode is off by default, disabling extra session logs, plugin lists, and session reporting with feedback. Feedback can remain local while it is off. Enabling it adopts upstream reporting behavior and may upload earlier session records; the change requires confirmation and a restart. Review content before sending a diagnostic report.</p>
           <p>DeepSeek GUI records limited running logs locally for troubleshooting startup and running problems. Logs will be redacted in the form of credentials such as API key and Bearer token, and the number and total size of historical logs will be limited. If you submit logs to the maintainer, please check yourself whether they contain project paths or other sensitive information.</p>
         </section>
 
         <section class="policy-section">
           <h2>5. Uninstallation and data deletion</h2>
-          <p>When uninstalling, you will be asked whether to delete the application data as well. Once you select Keep, reinstalling will continue to use your existing credentials, settings, and sessions. If you need to completely clear local data, delete <code>%APPDATA%\DeepSeekGUI</code> directory.</p>
+          <p>Uninstalling asks whether to delete app data. Version 1.2.0 retains global memory and global AGENTS.md even if deletion is selected; project memory stays in its folder. Check migrated data locations separately and preserve anything you need before deleting it.</p>
         </section>
 
         <section class="policy-section">
           <h2>6. Official website visit</h2>
-          <p>DeepSeek GUI official website is hosted on a third-party platform. When a website is accessed, the hosting service may process standard HTTP metadata (IP address, User-Agent, etc.) for normal serving of the page and security protection. We do not place ads, do not create user portraits, and do not conduct cross-site tracking. If online services or analytics are added in the future, we will update this page and explain the purpose before enabling it.</p>
+          <p>The website server processes HTTP request metadata to serve pages, provide security, and aggregate download statistics. Request and transfer totals do not represent unique installations. The website also uses Cloudflare Web Analytics for aggregate traffic statistics.</p>
         </section>
 
         <section class="policy-section">
