@@ -29,6 +29,8 @@ Atlas 不只收录完整 AI 伴侣产品，也收录能成为“器官”和“�
 - 成人内容本身不是拒收理由；是否尊重主体性、边界和关系中的双方更重要。
 - 对许可证、二次开发、项目状态和潜在限制如实说明，不替项目背书。
 
+部分条目最初来源于 [awesome-ai-companion](https://github.com/DasterProkio/awesome-ai-companion)（2026-07-03 起整理）。
+
 ## 项目数据与页面生成
 
 项目数据统一保存在 `projects/*.json`。
