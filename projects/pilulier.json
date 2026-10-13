@@ -1,0 +1,81 @@
+{
+  "slug": "pilulier",
+  "order": 217,
+  "name": {
+    "zh": "药丸 · pilulier",
+    "en": "pilulier"
+  },
+  "author": "ceshihaox-dotcom",
+  "sourceUrl": "https://github.com/ceshihaox-dotcom/pilulier",
+  "hook": "手动给下一次回复挂一段提示，让伴侣换一种方式回应。",
+  "summary": "给 AI 伴侣聊天接入的一次性提示词药盒，包含零依赖 Web Component、13 份中文提示和后端接入说明；由用户手动选择。",
+  "heroDescription": "pilulier 让用户把一小段行为提示挂在自己的消息上。目标是生成一次后移除提示原文；需要聊天后端配合，模型当轮的回复仍保留在历史中。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "一次性提示",
+    "手动选择",
+    "Web Component",
+    "聊天接入"
+  ],
+  "language": "JavaScript / HTML",
+  "platform": "Web / Custom backend",
+  "updated": "2026-09-28",
+  "heroOverline": "CHOOSE · ATTACH · REPLY",
+  "showcase": {
+    "label": "给一次回应加一点具体方向",
+    "symbol": "◒",
+    "question": "“这一次，能不能换一种方式接住我的话？”",
+    "comparisons": [
+      {
+        "value": "选择",
+        "label": "用户挑选当前提示"
+      },
+      {
+        "value": "附加",
+        "label": "放在自己的消息前"
+      },
+      {
+        "value": "移除",
+        "label": "后端清理提示原文"
+      }
+    ],
+    "note": "一次性指提示原文不再回放，不保证之后的对话完全不受影响。"
+  },
+  "intro": {
+    "paragraphs": [
+      "仓库提供一个无框架依赖的提示词选择组件、13 份中文提示、演示页面和接入文档。用户手动挑选提示，前端登记在某条消息上，后端在模型请求中加入相应内容。",
+      "完整聊天后端未随仓库发布。阅后移除需要按自己的历史存储实现；文档中的原文匹配清洗可能误删用户写出的相同文字。接入时应保留消息边界并验证兼容性，提示效果也随模型和人设变化。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "制作自己的伴侣聊天前端，希望手动调整某一次回复方式的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "接入组件与提示注册表，再由后端控制单轮注入和历史保存。"
+      },
+      {
+        "label": "当前形态",
+        "text": "组件、提示集合和接入指南；不是独立聊天应用，也不是通用自动安装插件。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；内置提示为中文，其他人称和关系形态可自行改写。"
+      }
+    ]
+  }
+}

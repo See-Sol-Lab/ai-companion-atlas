@@ -1,0 +1,81 @@
+{
+  "slug": "binaural-voice",
+  "order": 219,
+  "name": {
+    "zh": "binaural-voice",
+    "en": "binaural-voice"
+  },
+  "author": "Saekisui",
+  "sourceUrl": "https://github.com/Saekisui/binaural-voice",
+  "hook": "让已有语音像在耳边说话，并按位置标签慢慢移动。",
+  "summary": "把单声道人声渲染为双耳立体声的 Python 工具，使用 KU100 近场 HRIR 数据，支持左右耳、脑后、远近位置标签。",
+  "heroDescription": "binaural-voice 为已有 TTS 或录音增加耳机中的方向与距离感。它处理音频而不是生成声音人格，适合离线语音条；可选 ElevenLabs 合成需另配账号。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "五感与器官",
+      "tone": "senses"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "双耳音频",
+    "空间语音",
+    "TTS",
+    "耳机"
+  ],
+  "language": "Python",
+  "platform": "Python / Headphones",
+  "updated": "2026-09-24",
+  "heroOverline": "VOICE · POSITION · DISTANCE",
+  "showcase": {
+    "label": "让语音在耳机里有位置",
+    "symbol": "◎",
+    "question": "“同一句话，能不能从右耳慢慢绕到脑后？”",
+    "comparisons": [
+      {
+        "value": "人声",
+        "label": "输入已有单声道音频"
+      },
+      {
+        "value": "方位",
+        "label": "标签指定移动目标"
+      },
+      {
+        "value": "距离",
+        "label": "近场数据渲染远近"
+      }
+    ],
+    "note": "空间效果需要耳机；仅水平面，通用假人头数据可能让部分听者前后混淆。"
+  },
+  "intro": {
+    "paragraphs": [
+      "工具把已有单声道语音转换成双耳 WAV，用近场 HRIR 数据渲染方向和距离。位置标签可以指定左右耳、脑后、面前、贴近或退开，移动主要发生在出声时，停顿时保持位置。",
+      "基本处理需要 Python、NumPy 与 SciPy，格式转换可用 FFmpeg。无需 ElevenLabs 也能处理已有音频；可选合成脚本需要自己的 ElevenLabs 凭据。作者建议用于非实时语音条，耳机效果也因听者而异。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望为伴侣语音条或录音增加贴耳、环绕与远近感的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "准备单声道人声，以位置标签和时间点调用渲染脚本，戴耳机播放结果。"
+      },
+      {
+        "label": "局限",
+        "text": "仅耳机、水平面，最近约 25 厘米；不建议用于实时通话。"
+      },
+      {
+        "label": "许可",
+        "text": "代码 MIT；KU100 HRIR 数据按 CC BY 4.0 保留来源署名。"
+      }
+    ]
+  }
+}

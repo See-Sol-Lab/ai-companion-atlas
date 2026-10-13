@@ -364,7 +364,7 @@ test('DeepSeekGUI public pages point to the 1.2.0 release', async () => {
   const docs = await readFile(path.join(root, 'deepseekgui', 'docs', 'index.html'), 'utf8');
   const installerUrl = 'https://www.ailover-atlas.com/deepseekgui/releases/v1.2.0/DeepSeekGUI-Setup-1.2.0.exe';
 
-  assert.equal(project.updated, '2026-10-01');
+  assert.ok((await readFile(path.join(root, 'index.html'), 'utf8')).includes(`更新 ${project.updated}`));
   assert.match(project.summary, /v1\.2\.0/u);
   assert.match(home, /<span>v1\.2\.0<\/span>/u);
   assert.ok(download.includes(`href="${installerUrl}"`));

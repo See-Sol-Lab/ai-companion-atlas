@@ -1,0 +1,85 @@
+{
+  "slug": "proactive-web-surf-agent",
+  "order": 218,
+  "name": {
+    "zh": "Proactive Web Surf Agent",
+    "en": "Proactive Web Surf Agent"
+  },
+  "author": "huihui191",
+  "sourceUrl": "https://github.com/huihui191/proactive-web-surf-agent",
+  "hook": "让伴侣闲下来时发现新网页，挑一件想与你分享的见闻。",
+  "summary": "主动网页发现与分享引擎，负责多来源候选、去重、白天调度和投递状态；模型选文与消息发送通过宿主回调接入。",
+  "heroDescription": "项目从公开来源收集有限的候选网页，让已接入的 Agent 选择一项并组织分享消息，再由宿主发送。它需要现有模型和消息通道，不是独立伴侣应用。",
+  "badges": [
+    {
+      "label": "开源",
+      "tone": "open"
+    },
+    {
+      "label": "AI 主体性",
+      "tone": "subjectivity"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "自主探索",
+    "公开网页",
+    "去重与调度",
+    "主动分享"
+  ],
+  "language": "TypeScript / Node.js",
+  "platform": "Node.js 20+ / Host callbacks",
+  "updated": "2026-08-20",
+  "heroOverline": "DISCOVER · CHOOSE · SHARE",
+  "showcase": {
+    "label": "把看到的新东西带回聊天",
+    "symbol": "↗",
+    "question": "“我不在时，伴侣能遇到什么想和我分享的新东西？”",
+    "comparisons": [
+      {
+        "value": "发现",
+        "label": "从公开来源找候选"
+      },
+      {
+        "value": "挑选",
+        "label": "交给自己的模型判断"
+      },
+      {
+        "value": "分享",
+        "label": "通过已接入通道发送"
+      }
+    ],
+    "note": "需要宿主实现模型挑选与消息发送，公开网页内容应作为不可信资料处理。"
+  },
+  "intro": {
+    "paragraphs": [
+      "引擎提供公开网页发现、URL 去重、近期分享记录、白天随机调度、失败延后和可选配图。示例使用 GitHub 与 Hacker News 来源，模型如何选择和如何发送消息由使用者接入。",
+      "需要 Node.js 20+。截至本次核对，README 所写 npm 包安装入口返回 404，应从源码构建后接入现有 Agent。Telegram、Discord、邮件或自建界面只是可实现的投递通道，不表示已经内置可直接使用的完整连接。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "已有伴侣或 Agent，希望增加低频网页探索与个人化分享的人。"
+      },
+      {
+        "label": "平台",
+        "text": "Node.js 20+；需现有模型和消息发送通道。"
+      },
+      {
+        "label": "使用方式",
+        "text": "获取源码、安装依赖并构建，实现 selector 与 delivery 回调后运行调度。"
+      },
+      {
+        "label": "许可",
+        "text": "MIT；仅访问公开资源，模型调用和发送服务的费用由接入方承担。"
+      }
+    ]
+  }
+}

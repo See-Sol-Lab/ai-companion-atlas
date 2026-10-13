@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="药丸 · pilulier pilulier：给 AI 伴侣聊天接入的一次性提示词药盒，包含零依赖 Web Component、13 份中文提示和后端接入说明；由用户手动选择。 AI Companion Atlas 中文项目档案。" />
+  <title>药丸 · pilulier · pilulier · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/projects/pilulier/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../detail.css?v=20260826-2" />
+  <script src="../detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/pilulier/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/pilulier/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/pilulier/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="../../" aria-label="返回 AI Companion Atlas 首页">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/en/projects/pilulier/" lang="en" hreflang="en" aria-label="Read this page in English">EN</a>
+        <a href="../../#directory">项目库</a>
+        <a href="../../#taxonomy">标签</a>
+        <a href="../../#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="../../">图谱首页</a><span>›</span><a href="../../#directory">项目库</a><span>›</span><strong>药丸 · pilulier</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-open">开源</span><span class="status status-companion">陪伴类</span><span class="status status-tool">工具 / 插件</span><span class="status">Web / Custom backend</span></div>
+          <p class="overline">CHOOSE · ATTACH · REPLY</p>
+          <h1>药丸 · pilulier</h1>
+          <p class="cn-name">PILULIER · @CESHIHAOX-DOTCOM</p>
+          <h2>手动给下一次回复挂一段提示，让伴侣换一种方式回应。</h2>
+          <p class="hero-desc">pilulier 让用户把一小段行为提示挂在自己的消息上。目标是生成一次后移除提示原文；需要聊天后端配合，模型当轮的回复仍保留在历史中。</p>
+          <p class="project-source-url"><span>项目地址（可复制给 AI）：</span><a href="https://github.com/ceshihaox-dotcom/pilulier" target="_blank" rel="noreferrer">https://github.com/ceshihaox-dotcom/pilulier</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/ceshihaox-dotcom/pilulier" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+              <a class="secondary-btn" href="../../">返回主页</a>
+            </div>
+            <div class="project-like" data-project-like="pilulier">
+              <button class="project-like-button" type="button" aria-label="给项目点赞" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>给项目点赞</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="药丸 · pilulier解决的问题">
+          <p class="problem-label">给一次回应加一点具体方向</p>
+          <div class="clock-mark">◒</div>
+          <p class="problem-question">“这一次，能不能换一种方式接住我的话？”</p>
+          <div class="time-compare">
+            <span><b>选择</b><small>用户挑选当前提示</small></span>
+            <i>≠</i>
+            <span><b>附加</b><small>放在自己的消息前</small></span>
+            <i>≠</i>
+            <span><b>移除</b><small>后端清理提示原文</small></span>
+          </div>
+          <p class="problem-note">一次性指提示原文不再回放，不保证之后的对话完全不受影响。</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">项目介绍</h2>
+        </div>
+        <div class="intro-content">
+          <p>仓库提供一个无框架依赖的提示词选择组件、13 份中文提示、演示页面和接入文档。用户手动挑选提示，前端登记在某条消息上，后端在模型请求中加入相应内容。</p>
+          <p>完整聊天后端未随仓库发布。阅后移除需要按自己的历史存储实现；文档中的原文匹配清洗可能误删用户写出的相同文字。接入时应保留消息边界并验证兼容性，提示效果也随模型和人设变化。</p>
+          <ul>
+            <li><strong>适合：</strong>制作自己的伴侣聊天前端，希望手动调整某一次回复方式的人。</li>
+            <li><strong>使用方式：</strong>接入组件与提示注册表，再由后端控制单轮注入和历史保存。</li>
+            <li><strong>当前形态：</strong>组件、提示集合和接入指南；不是独立聊天应用，也不是通用自动安装插件。</li>
+            <li><strong>许可：</strong>MIT；内置提示为中文，其他人称和关系形态可自行改写。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="pilulier">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">评论与反馈</h2></div>
+          <b>游客留言 · 审核后公开</b>
+        </div>
+        <p class="comments-intro">用过这个项目的人，可以回来告诉后来者：在哪个平台跑通、安装有没有踩坑、实际体验如何。当前版本为游客模式，留言不需要注册账号。</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">正在读取公开留言…</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>昵称（可空）<input name="nickname" maxlength="40" placeholder="匿名旅人" autocomplete="nickname" /></label>
+            <label>使用平台（可空）<input name="platform" maxlength="60" placeholder="例如 Windows / Android" /></label>
+            <label>使用结果<select name="result" required><option value="success">已跑通</option><option value="partial">部分跑通</option><option value="failed">未跑通</option></select></label>
+          </div>
+          <label class="comment-content-field">留言正文<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="写下安装过程、实际体验或踩坑信息（10–800 字）"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>提交留言</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>提交成功</strong><p>留言正在等待审核，通过后会公开显示在这里。</p></div>
+          <button class="comment-again" type="button">再写一条</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas 负责介绍与导航，使用仍回到原作者。</h2>
+          <p>我们不镜像项目文件，也不截走作者流量。安装、下载、版本更新与最新说明，以原作者提供的项目页面为准。</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/ceshihaox-dotcom/pilulier" target="_blank" rel="noreferrer">项目链接 <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="../../">返回图谱首页 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

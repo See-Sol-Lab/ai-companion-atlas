@@ -6,7 +6,7 @@
     "en": "proactive-chat"
   },
   "author": "DBJD-CR",
-  "sourceUrl": "https://github.com/DBJD-CR/astrbot_plugin_proactive_chat",
+  "sourceUrl": "https://github.com/Pancakes-Labs/astrbot_plugin_proactive_chat",
   "hook": "让 AstrBot 根据上下文、情绪和安静时间自然地主动联系你。",
   "summary": "AstrBot 主动消息插件，支持持久状态、动态情绪、免打扰时段、上下文感知和 TTS。",
   "heroDescription": "主动聊天插件为 AstrBot 增加判断联系时机和组织主动内容的能力，让关系不只依靠用户先开口。",
@@ -37,7 +37,7 @@
   ],
   "language": "Python",
   "platform": "AstrBot",
-  "updated":"2026-09-24",
+  "updated":"2026-10-11",
   "heroOverline": "PROACTIVE · CONTEXT · QUIET HOURS",
   "showcase": {
     "label": "从等待回复走向主动靠近",
