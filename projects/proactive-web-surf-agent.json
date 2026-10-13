@@ -1,6 +1,7 @@
 {
   "slug": "proactive-web-surf-agent",
   "order": 218,
+  "editorPick": true,
   "name": {
     "zh": "Proactive Web Surf Agent",
     "en": "Proactive Web Surf Agent"

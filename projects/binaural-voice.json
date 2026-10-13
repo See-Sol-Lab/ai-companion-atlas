@@ -1,6 +1,7 @@
 {
   "slug": "binaural-voice",
   "order": 219,
+  "editorPick": true,
   "name": {
     "zh": "binaural-voice",
     "en": "binaural-voice"

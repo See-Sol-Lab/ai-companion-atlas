@@ -1,6 +1,7 @@
 {
   "slug": "pilulier",
   "order": 217,
+  "editorPick": true,
   "name": {
     "zh": "药丸 · pilulier",
     "en": "pilulier"

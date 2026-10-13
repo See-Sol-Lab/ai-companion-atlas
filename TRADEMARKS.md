@@ -1,8 +1,8 @@
 # 商标政策 · Trademark Policy
 
-代码许可（PolyForm Noncommercial License 1.0.0）与内容许可（CC BY-NC-SA 4.0）不包含使用本站名称、域名、标识与视觉形象的许可，但不影响合理署名、链接与客观介绍。
+网页设计与代码许可（PolyForm Noncommercial License 1.0.0）不包含使用本站名称、域名与品牌标识的许可，但不影响合理署名、链接与客观介绍。被收录项目内容的权利与本站品牌政策分开处理，见 [原项目权利说明](LICENSE-DATA.md)。
 
-The code license (PolyForm Noncommercial 1.0.0) and content license (CC BY-NC-SA 4.0) do not grant permission to use the site's names, domains, logos or visual identity. This does not prevent reasonable attribution, linking or factual reference.
+The website design and code license (PolyForm Noncommercial 1.0.0) does not grant permission to use the site's names, domains or brand marks. This does not prevent reasonable attribution, linking or factual reference. Rights in listed project content are separate from this brand policy; see [project content rights](LICENSE-DATA.md).
 
 ## 一、受保护的项目标记 · Project marks
 
