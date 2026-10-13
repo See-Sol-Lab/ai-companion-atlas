@@ -92,7 +92,7 @@ Atlas 提供项目介绍、分类与来源导航，不以条目文案、分类�
 
 本站名称与品牌标识另见[商标政策](TRADEMARKS.md)。
 
-被收录项目的作者若希望修改或撤除条目，欢迎提交 Issue。
+被收录项目的作者若希望修改或撤除条目，请随时提交 Issue，原作者拥有自己项目内容的全部所有权
 
 Required Notice: Copyright 2026 See-Sol-Lab (https://github.com/See-Sol-Lab/ai-companion-atlas)
 
