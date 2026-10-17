@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Android Chat Privacy Guide: app locks, optional biometrics, and recent-app covers, with documented device and timing limitations. Project profile on AI Companion Atlas." />
+  <title>Android Chat Privacy Guide · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/android-app-lock-tutorial/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/android-app-lock-tutorial/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/android-app-lock-tutorial/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/android-app-lock-tutorial/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/android-app-lock-tutorial/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Android Chat Privacy Guide</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-limited">Public guide</span><span class="status status-companion">Companionship</span><span class="status status-mobile">Mobile Frontend</span><span class="status status-tool">Tools / Plugins</span><span class="status">Android / Custom frontend</span></div>
+          <p class="overline">LOCK · COVER · RETURN</p>
+          <h1>Android Chat Privacy Guide</h1>
+          <p class="cn-name">ANDROID CHAT PRIVACY GUIDE · @RESETZERO_1211 · EPHEMERA1117</p>
+          <h2>Add an unlock screen and cover chat content when a companion app leaves the foreground.</h2>
+          <p class="hero-desc">This guide helps Android frontend developers add an app lock and a custom background cover for companion conversations. Known timing and device limitations mean it is not an absolute privacy guarantee.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/Ephemera1117/android-app-lock-tutorial" target="_blank" rel="noreferrer">https://github.com/Ephemera1117/android-app-lock-tutorial</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/Ephemera1117/android-app-lock-tutorial" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="android-app-lock-tutorial">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="What Android Chat Privacy Guide helps with">
+          <p class="problem-label">Reduce accidental on-screen exposure of chats</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">“Can the recent-app view hide my chat when I switch away?”</p>
+          <div class="time-compare">
+            <span><b>Unlock</b><small>PIN and optional system biometrics</small></span>
+            <i>≠</i>
+            <span><b>Cover</b><small>Show a custom recent-app cover</small></span>
+            <i>≠</i>
+            <span><b>Timeout</b><small>Require verification after a timeout</small></span>
+          </div>
+          <p class="problem-note">The author still reports brief content exposure during some foreground transitions. Verify your integration on real devices.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Drawn from the author's chat frontend, the guide covers PIN verification, timeout and screen-off policies, optional system biometrics, custom recent-app covers, and screenshot controls. It explains timing between Activity lifecycle events and task snapshots and provides reference snippets.</p>
+          <p>This tutorial requires changes to the app. The author documents covers appearing during dialogs and brief real-content flashes on some foreground transitions. Findings come mainly from a specific Android device and do not guarantee behavior on every ROM. An app lock is not equivalent to encrypted chat storage.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>Android frontend developers seeking to reduce bystanders' access to visible companion chats.</li>
+            <li><strong>Usage:</strong>Integrate lifecycle, verification, and cover logic, then test app switching, dialogs, and screen-off behavior on target devices.</li>
+            <li><strong>Limitations:</strong>Known content flashes and device differences remain. It does not protect against root or ADB and is not a standalone installable app.</li>
+            <li><strong>License:</strong>The README specifies CC BY-NC-SA 4.0. Credit ResetZero_1211 when sharing or adapting and follow the non-commercial and share-alike conditions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="android-app-lock-tutorial">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/Ephemera1117/android-app-lock-tutorial" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

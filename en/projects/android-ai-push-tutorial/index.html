@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Android Local AI Notifications Guide: scheduled companion messages, notification delivery, and failure diagnostics for your Android frontend. Project profile on AI Companion Atlas." />
+  <title>Android Local AI Notifications Guide · AI Companion Atlas</title>
+  <link rel="canonical" href="https://www.ailover-atlas.com/en/projects/android-ai-push-tutorial/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/projects/detail.css?v=20260826-2" />
+  <script src="/en/projects/detail-comments.js?v=20260824-4" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onAtlasTurnstileLoad" defer></script>
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ailover-atlas.com/projects/android-ai-push-tutorial/" />
+  <link rel="alternate" hreflang="en" href="https://www.ailover-atlas.com/en/projects/android-ai-push-tutorial/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ailover-atlas.com/projects/android-ai-push-tutorial/" />
+  <link rel="stylesheet" href="/language.css?v=20260920" />
+  <script src="/language-switch.js?v=20260920" defer></script>
+</head>
+<body>
+  <div class="detail-shell">
+    <header class="detail-header">
+      <a class="detail-brand" href="/en/" aria-label="Return to AI Companion Atlas home page">
+        <span class="brand-star">✦</span>
+        <strong>SEE-SOL-LAB</strong>
+        <i></i>
+        <span>AI COMPANION ATLAS</span>
+      </a>
+      <nav><a class="language-switch" href="/projects/android-ai-push-tutorial/" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文</a>
+        <a href="/en/#directory">Projects</a>
+        <a href="/en/#taxonomy">Categories</a>
+        <a href="/en/#submit">Submit</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="/en/">Map homepage</a><span>›</span><a href="/en/#directory">Projects</a><span>›</span><strong>Android Local AI Notifications Guide</strong></div>
+
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="status-row"><span class="status status-limited">Public guide</span><span class="status status-companion">Companionship</span><span class="status status-mobile">Mobile Frontend</span><span class="status status-tool">Tools / Plugins</span><span class="status">Android / Custom frontend</span></div>
+          <p class="overline">SCHEDULE · GENERATE · NOTIFY</p>
+          <h1>Android Local AI Notifications Guide</h1>
+          <p class="cn-name">ANDROID LOCAL AI NOTIFICATIONS GUIDE · @RESETZERO_1211 · EPHEMERA1117</p>
+          <h2>Have your phone generate a companion message at a chosen time and notify you.</h2>
+          <p class="hero-desc">This guide explains how to generate proactive companion messages locally on an Android phone, including implementation pitfalls. Scheduling runs on the phone; generation still needs network access and a model service.</p>
+          <p class="project-source-url"><span>Project address (can be copied to AI):</span><a href="https://github.com/Ephemera1117/android-ai-push-tutorial" target="_blank" rel="noreferrer">https://github.com/Ephemera1117/android-ai-push-tutorial</a></p>
+          <div class="hero-footer">
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://github.com/Ephemera1117/android-ai-push-tutorial" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+              <a class="secondary-btn" href="/en/">Return to home page</a>
+            </div>
+            <div class="project-like" data-project-like="android-ai-push-tutorial">
+              <button class="project-like-button" type="button" aria-label="Like this project" aria-pressed="false" disabled>
+                <span class="project-like-heart" aria-hidden="true">♡</span>
+                <strong class="project-like-count">—</strong>
+              </button>
+              <small>Like this project</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="problem-card" aria-label="What Android Local AI Notifications Guide helps with">
+          <p class="problem-label">Add scheduled messages to your mobile frontend</p>
+          <div class="clock-mark">✦</div>
+          <p class="problem-question">“Can the companion on my phone reach out at a time we chose?”</p>
+          <div class="time-compare">
+            <span><b>Schedule</b><small>Trigger a task with a system alarm</small></span>
+            <i>≠</i>
+            <span><b>generate</b><small>Call a model with context</small></span>
+            <i>≠</i>
+            <span><b>Notify</b><small>Save to chat and show a notice</small></span>
+          </div>
+          <p class="problem-note">The phone must be on, online, and have the required permissions. Manufacturer background restrictions can still affect timing.</p>
+        </aside>
+      </section>
+
+      <section class="project-intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p>PROJECT INTRO</p>
+          <h2 id="intro-title">Project introduction</h2>
+        </div>
+        <div class="intro-content">
+          <p>Based on the author's Android AI frontend, the guide covers starting a foreground service from an alarm, scheduling the next task before generation, calling the model, saving a message, and notifying the user. It discusses duplicate triggers, cancellation, reboot recovery, and visible failures.</p>
+          <p>This is implementation guidance and reference code, requiring changes to an open-source frontend or your own app. Local scheduling needs no cloud push server, but generation still needs a network, credentials, and potentially paid model calls. Timing and background execution depend on permissions and the device ROM.</p>
+          <ul>
+            <li><strong>Suitable for:</strong>People with an Android companion frontend who can integrate scheduled local messages.</li>
+            <li><strong>requires:</strong>An Android frontend's source, a model endpoint, and the necessary notification, alarm, and background permissions.</li>
+            <li><strong>Current form:</strong>A tutorial with code snippets, not a standalone APK; on-time delivery is not guaranteed across devices.</li>
+            <li><strong>License:</strong>The README specifies CC BY-NC-SA 4.0. Credit ResetZero_1211 when sharing or adapting and follow the non-commercial and share-alike conditions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discussion-preview" aria-labelledby="discussion-title" data-comments-project="android-ai-push-tutorial">
+        <div class="discussion-title">
+          <span>◌</span>
+          <div><p>COMMENTS & FEEDBACK</p><h2 id="discussion-title">Comments and Feedback</h2></div>
+          <b>Guest message · Will be published after review</b>
+        </div>
+        <p class="comments-intro">People who have used this project can come back and tell newcomers: which platform it ran on, whether there were any pitfalls during the installation, and what the actual experience was like. The current version is in guest mode, and you do not need to register an account to leave a message.</p>
+
+        <div class="comments-list" aria-live="polite">
+          <p class="comments-empty">Reading public comments...</p>
+        </div>
+
+        <form class="comment-form">
+          <div class="comment-form-grid">
+            <label>Nickname (optional)<input name="nickname" maxlength="40" placeholder="Anonymous visitor" autocomplete="nickname" /></label>
+            <label>Use platform (optional)<input name="platform" maxlength="60" placeholder="For example Windows / Android" /></label>
+            <label>Usage results<select name="result" required><option value="success">Working</option><option value="partial">Partly working</option><option value="failed">Not working</option></select></label>
+          </div>
+          <label class="comment-content-field">Message text<textarea name="content" minlength="10" maxlength="800" rows="5" required placeholder="Write down the installation process, actual experience or pitfalls (10–800 characters)"></textarea></label>
+          <div class="comment-form-bottom">
+            <div><span class="comment-count">0 / 800</span><div class="turnstile-slot"></div></div>
+            <button class="primary-btn" type="submit" disabled>Submit message</button>
+          </div>
+          <p class="comment-form-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="comment-success" tabindex="-1" hidden>
+          <span class="comment-success-icon" aria-hidden="true">✓</span>
+          <div><strong>Submission successful</strong><p>The message is waiting for review and will be publicly displayed here after approval.</p></div>
+          <button class="comment-again" type="button">Write another one</button>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div>
+          <p class="overline">SOURCE & CREDIT</p>
+          <h2>Atlas is responsible for the introduction and navigation, and the use still returns to the original author.</h2>
+          <p>We do not mirror project files, nor do we intercept author traffic. For installation, download, version updates and the latest instructions, please refer to the project page provided by the original author.</p>
+        </div>
+        <div class="source-actions">
+          <a class="primary-btn" href="https://github.com/Ephemera1117/android-ai-push-tutorial" target="_blank" rel="noreferrer">Project link <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SEE-SOL-LAB</strong><span>AI COMPANION ATLAS</span></div>
+      <a href="/en/">Return to the map homepage ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

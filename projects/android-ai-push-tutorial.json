@@ -1,0 +1,85 @@
+{
+  "slug": "android-ai-push-tutorial",
+  "order": 220,
+  "name": {
+    "zh": "Android 本地主动推送教程",
+    "en": "Android Local AI Notifications Guide"
+  },
+  "author": "ResetZero_1211 · Ephemera1117",
+  "language": "Guide / Kotlin",
+  "platform": "Android / Custom frontend",
+  "sourceUrl": "https://github.com/Ephemera1117/android-ai-push-tutorial",
+  "hook": "让手机按约定时间生成伴侣消息，再通过通知送到你面前。",
+  "summary": "Android 本地定时消息教程，讲解系统闹钟、前台服务、模型调用、消息落库、通知与失败诊断；需要接入自己的聊天前端。",
+  "heroDescription": "这份教程整理了让 Android 手机本地生成伴侣主动消息的实现方法和踩坑经验。调度在手机上完成，消息生成仍需网络与所选模型服务。",
+  "badges": [
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "Android",
+    "定时消息",
+    "本地调度",
+    "实现教程"
+  ],
+  "updated": "2026-10-17",
+  "heroOverline": "SCHEDULE · GENERATE · NOTIFY",
+  "showcase": {
+    "label": "把定时问候接到自己的手机前端",
+    "symbol": "◷",
+    "question": "“能让手机里的伴侣在约好的时间主动来一句话吗？”",
+    "comparisons": [
+      {
+        "value": "定时",
+        "label": "系统闹钟触发一次任务"
+      },
+      {
+        "value": "生成",
+        "label": "带上下文调用模型"
+      },
+      {
+        "value": "通知",
+        "label": "存入聊天并显示提醒"
+      }
+    ],
+    "note": "手机需要开机、联网并保有权限，厂商后台限制仍可能影响时间。"
+  },
+  "intro": {
+    "paragraphs": [
+      "作者从自用 Android AI 前端中整理出本地定时推送思路：闹钟触发后启动前台服务、先续订下一次任务，再调用模型、保存消息并通知用户。文档重点讨论重复触发、取消任务、重启恢复和失败可见性。",
+      "交付内容是实现说明与参考片段，需要自己修改开源前端或自建应用。手机本地调度不依赖云推送服务器，但模型生成仍需要网络、凭据和可能的调用费用；精确时间与后台运行依赖系统权限和具体 ROM。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "有 Android 伴侣前端，想增加本地定时问候并能自行接入代码的人。"
+      },
+      {
+        "label": "需要",
+        "text": "Android 前端源码、模型接口，以及通知、闹钟和后台运行等相应权限。"
+      },
+      {
+        "label": "当前形态",
+        "text": "教程与代码片段；不提供独立 APK，也不保证所有设备上的准点推送。"
+      },
+      {
+        "label": "许可",
+        "text": "README 标注 CC BY-NC-SA 4.0，转载与改编需署名原作者 ResetZero_1211，并遵守非商业和相同方式共享条件。"
+      }
+    ]
+  }
+}

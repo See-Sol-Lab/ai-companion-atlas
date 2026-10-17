@@ -1,0 +1,81 @@
+{
+  "slug": "ai-daily-rules-tutorial",
+  "order": 222,
+  "name": {
+    "zh": "AI 日常规则动态调整教程",
+    "en": "AI Daily Rules Guide"
+  },
+  "author": "ResetZero_1211 · Ephemera1117",
+  "language": "Guide / Kotlin",
+  "platform": "Android / Configurable chat frontend",
+  "sourceUrl": "https://github.com/Ephemera1117/ai-daily-rules-tutorial",
+  "hook": "把日常约定、近期状态与时间线索交给伴侣，一起调整规则。",
+  "summary": "把规则、状态备忘录、时间感知与提示注入组合的陪伴方案，提供思路、参考代码和现有前端的替代做法。",
+  "heroDescription": "这份教程分享 AI 日常监督与规则调整方法，可用于自愿约定、督学和人机关系互动。状态主要来自用户记录与汇报，并非持续监控或自动强制执行。",
+  "badges": [
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "日常约定",
+    "状态备忘",
+    "时间注入",
+    "自愿监督"
+  ],
+  "updated": "2026-10-15",
+  "heroOverline": "AGREE · RECORD · ADJUST",
+  "showcase": {
+    "label": "让规则跟着近期生活调整",
+    "symbol": "≋",
+    "question": "“能让伴侣记住约定，也知道最近执行得怎么样吗？”",
+    "comparisons": [
+      {
+        "value": "约定",
+        "label": "让规则保持可见"
+      },
+      {
+        "value": "记录",
+        "label": "保存近期执行状态"
+      },
+      {
+        "value": "调整",
+        "label": "结合时间与状态讨论"
+      }
+    ],
+    "note": "执行情况依赖用户主动汇报；需要持续确认约定与规则是否仍合适。"
+  },
+  "intro": {
+    "paragraphs": [
+      "作者将日常规则管理拆为四部分：每轮可见的约定、记录近期状态的备忘录、时间线索，以及提醒模型使用工具和调整规则的提示。教程同时面向督学与人机关系中的自愿互动，也讨论 D/s 场景。",
+      "思路版给出用现有前端工作区、记忆或提示配置组合的替代路线；代码版提供时间注入与备忘录等参考实现。它不是独立应用，效果依赖模型、上下文预算和用户记录；涉及规则的采用、变更与停止应由使用者自主决定。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望与 AI 伴侣一起记录、讨论日常约定和学习进度的人。"
+      },
+      {
+        "label": "使用方式",
+        "text": "先看思路版，按前端已有的工作区、记忆和提示能力配置；需要扩展时再参考代码版。"
+      },
+      {
+        "label": "局限",
+        "text": "主要针对 Android 前端经验，其他平台需适配；不发消息或不记录时，AI 无法据此了解真实执行情况。"
+      },
+      {
+        "label": "许可",
+        "text": "README 标注 CC BY-NC-SA 4.0，转载与改编需署名原作者 ResetZero_1211，并遵守非商业和相同方式共享条件。"
+      }
+    ]
+  }
+}

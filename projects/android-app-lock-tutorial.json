@@ -1,0 +1,85 @@
+{
+  "slug": "android-app-lock-tutorial",
+  "order": 221,
+  "name": {
+    "zh": "Android 聊天隐私保护教程",
+    "en": "Android Chat Privacy Guide"
+  },
+  "author": "ResetZero_1211 · Ephemera1117",
+  "language": "Guide / Kotlin",
+  "platform": "Android / Custom frontend",
+  "sourceUrl": "https://github.com/Ephemera1117/android-app-lock-tutorial",
+  "hook": "为伴侣聊天应用增加解锁入口，并遮住切后台后的对话画面。",
+  "summary": "Android 应用内 PIN 锁、超时锁定、可选系统指纹与后台任务缩略图保护教程，附实现片段和实机踩坑记录。",
+  "heroDescription": "这份教程面向想保护伴侣聊天内容的 Android 前端开发者，介绍应用锁与后台自定义遮罩。它有已知的时序与机型限制，不能作为绝对隐私保证。",
+  "badges": [
+    {
+      "label": "方案公开",
+      "tone": "limited"
+    },
+    {
+      "label": "陪伴类",
+      "tone": "companion"
+    },
+    {
+      "label": "手机前端",
+      "tone": "mobile"
+    },
+    {
+      "label": "工具 / 插件",
+      "tone": "tool"
+    }
+  ],
+  "tags": [
+    "Android",
+    "应用锁",
+    "后台遮罩",
+    "聊天隐私"
+  ],
+  "updated": "2026-10-17",
+  "heroOverline": "LOCK · COVER · RETURN",
+  "showcase": {
+    "label": "减少聊天内容在界面上的意外暴露",
+    "symbol": "◇",
+    "question": "“切到别的应用时，最近任务里能不能藏起聊天？”",
+    "comparisons": [
+      {
+        "value": "解锁",
+        "label": "PIN 与可选系统指纹"
+      },
+      {
+        "value": "遮罩",
+        "label": "任务卡片显示自定义画面"
+      },
+      {
+        "value": "超时",
+        "label": "按设置重新要求验证"
+      }
+    ],
+    "note": "作者仍报告部分回前台时序下会短暂露出内容，接入后需实机验证。"
+  },
+  "intro": {
+    "paragraphs": [
+      "教程从自用聊天前端中整理应用内隐私保护方法，包括 PIN 验证、超时与熄屏策略、可选系统指纹、自定义最近任务保护页和防截屏开关。它说明 Activity 生命周期与任务快照之间的时序问题，并提供参考片段。",
+      "这是一份需要接入应用代码的教程。作者明确列出弹框时误贴遮罩、部分回前台路径可能闪出真实内容等局限；验证主要来自特定 Android 设备，不保证所有 ROM。应用锁也不等同于加密聊天存储。"
+    ],
+    "facts": [
+      {
+        "label": "适合",
+        "text": "希望减少伴侣聊天在手机界面上被旁人看到的 Android 前端开发者。"
+      },
+      {
+        "label": "使用方式",
+        "text": "按教程接入 Activity 生命周期、验证与遮罩逻辑，并在目标设备验证切换、弹框和熄屏行为。"
+      },
+      {
+        "label": "局限",
+        "text": "存在已知内容闪现与机型差异；不防 root、ADB，也不提供独立可安装应用。"
+      },
+      {
+        "label": "许可",
+        "text": "README 标注 CC BY-NC-SA 4.0，转载与改编需署名原作者 ResetZero_1211，并遵守非商业和相同方式共享条件。"
+      }
+    ]
+  }
+}
