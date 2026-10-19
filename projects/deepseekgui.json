@@ -10,8 +10,8 @@
   "sourceUrl": "https://github.com/See-Sol-Lab/DeepSeekGUI",
   "directUrl": "https://www.ailover-atlas.com/deepseekgui/",
   "hook": "国产大模型的电脑前端，无需翻墙，让 DS 住进属于自己的 Codex。",
-  "summary": "基于官方 DSH 的 Windows 本地工作台。v1.2.0 内嵌 Harness 0.2.0-rc.2，回到 Markdown 记忆，新增会话导出、开发者模式和 Windows 沙箱标记清理。",
-  "heroDescription": "用 DeepSeek 账号或兼容 API 连接模型，在本地 Workbench 中读写项目、浏览网页和管理 Git。v1.2.0 支持 Markdown 记忆、会话导出与沙箱标记清理。",
+  "summary": "基于官方 DSH 的 Windows 本地工作台。v1.2.1 内嵌 Harness 0.2.1-rc.2，回到 Markdown 记忆，新增会话导出、开发者模式和 Windows 沙箱标记清理。",
+  "heroDescription": "用 DeepSeek 账号或兼容 API 连接模型，在本地 Workbench 中读写项目、浏览网页和管理 Git。v1.2.1 支持 Markdown 记忆、会话导出与沙箱标记清理。",
   "badges": [
     {
       "label": "实验室出品",
@@ -67,7 +67,7 @@
   "intro": {
     "paragraphs": [
       "DeepSeekGUI 是 See-Sol-Lab 基于 DeepSeek 官方 DeepSeek Harness（DSH）制作的 Windows 本地工作台。它把 Harness、Node.js 和 pnpm 一起装进桌面应用，连接模型、选择项目文件夹后即可开始使用。",
-      "v1.2.0 内嵌官方 Harness 0.2.0-rc.2，移除实验性增强记忆，回到全局与项目 Markdown 文件；新增会话 Markdown 导出和默认关闭额外上报的开发者模式，并在沙箱命令结束、项目空闲后清理 Low 完整性标记。"
+      "v1.2.1 内嵌官方 Harness 0.2.1-rc.2，移除实验性增强记忆，回到全局与项目 Markdown 文件；新增会话 Markdown 导出和默认关闭额外上报的开发者模式，并在沙箱命令结束、项目空闲后清理 Low 完整性标记。"
     ],
     "facts": [
       {
@@ -80,7 +80,7 @@
       },
       {
         "label": "当前版本",
-        "text": "当前版本 1.2.0 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。Linux 实验版在 GitHub 单独发布。"
+        "text": "当前版本 1.2.1 支持 Windows 10/11 x64；安装包尚未代码签名，运行前应按发布页说明核对 SHA-256。Linux 实验版在 GitHub 单独发布。"
       },
       {
         "label": "项目关系",
