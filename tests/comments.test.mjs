@@ -592,7 +592,11 @@ test('homepage exposes online submission and the dedicated GitHub issue route', 
   assert.match(html, /项目名称/u);
   assert.match(html, /项目链接/u);
   assert.match(html, /推荐理由/u);
-  assert.match(html, /网页设计与代码采用非商业许可，项目内容归原作者全权所有/u);
+  assert.match(html, /href="\.\/privacy\/">隐私政策/u);
+  const privacy = await readFile(path.join(root, 'privacy/index.html'), 'utf8');
+  assert.match(privacy, /仍归原作者或相应权利人所有/u);
+  assert.match(privacy, /PolyForm Noncommercial 1\.0\.0/u);
+  assert.match(privacy, /该许可不延伸到被收录项目/u);
   assert.doesNotMatch(html, /站点代码与原创编辑内容采用非商业许可/u);
   assert.match(html, /ai-companion-atlas#许可与使用/u);
 });

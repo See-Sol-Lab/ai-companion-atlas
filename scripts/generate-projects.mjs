@@ -365,6 +365,7 @@ await writeIfChanged(
 
 const publicPaths = [
   '/',
+  '/privacy/',
   '/deepseekgui/',
   '/deepseekgui/download/',
   '/deepseekgui/docs/',

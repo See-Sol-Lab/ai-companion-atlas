@@ -4,7 +4,7 @@ import path from 'node:path';
 const origin = 'https://www.ailover-atlas.com';
 const han = /[\u3400-\u9fff]/u;
 const escapeTranslation = text => text.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'").replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
-export const publicStaticPages = ['index.html', 'deepseekgui/index.html', 'deepseekgui/download/index.html', 'deepseekgui/docs/index.html', 'deepseekgui/privacy/index.html', 'ai-gameboy/index.html'];
+export const publicStaticPages = ['index.html', 'privacy/index.html', 'deepseekgui/index.html', 'deepseekgui/download/index.html', 'deepseekgui/docs/index.html', 'deepseekgui/privacy/index.html', 'ai-gameboy/index.html'];
 export const publicScripts = ['script.js', 'script-runtime.js', 'submission.js', 'projects/detail-comments.js'];
 export const pagePath = (file) => '/' + file.replace(/index\.html$/, '');
 

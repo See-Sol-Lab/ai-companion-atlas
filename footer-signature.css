@@ -1,9 +1,11 @@
 .site-footer{
+  --footer-right-width:300px;
   grid-template-columns:minmax(220px,1fr) auto minmax(220px,1fr);
+  row-gap:0;
+  padding:0 0 48px;
 }
-
+.footer-brand,.footer-signature{margin:0;align-self:center;min-height:130px;display:flex;align-items:center}
 .footer-signature{
-  margin:0;
   justify-self:center;
   color:#24385f;
   font-family:Georgia,"Times New Roman","Songti SC",STSong,serif;
@@ -13,44 +15,37 @@
   line-height:1.15;
   letter-spacing:-.025em;
   white-space:nowrap;
-  text-wrap:balance;
 }
-
-.footer-meta{
-  justify-self:end;
-  display:flex;
-  align-items:center;
+.footer-details{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:subgrid;
   gap:32px;
-  min-width:0;
+  border-top:1px solid var(--line);
+  padding-top:32px;
+  font-size:12px;
+  line-height:1.8;
 }
-
-.footer-meta p{
-  margin:0;
+.footer-intro{align-self:center;justify-self:end;width:min(100%,var(--footer-right-width));min-width:0;text-align:left;font-size:11px;line-height:1.8}
+.footer-intro p{margin:0}
+.footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.footer-column:last-child{grid-column:3;justify-self:end;width:min(100%,var(--footer-right-width))}
+.footer-column h2{margin:0 0 6px;color:var(--ink);font-size:13px;font-weight:600}
+.footer-column a{color:var(--ink-soft);text-underline-offset:4px}
+.footer-column a:hover,.footer-column a:focus-visible{text-decoration:underline;color:var(--ink)}
+.footer-friend{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
+.footer-friend a{white-space:nowrap}
+.footer-friend span{font-size:11px}
+@media(max-width:1050px){
+  .site-footer{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+  .footer-brand{flex-wrap:wrap;row-gap:8px}
 }
-
-.footer-meta a{
-  white-space:nowrap;
-}
-
 @media(max-width:820px){
-  .site-footer{
-    grid-template-columns:1fr;
-    justify-items:start;
-    gap:14px;
-  }
-
-  .footer-signature{
-    justify-self:center;
-    width:100%;
-    padding:5px 0 3px;
-    font-size:clamp(20px,7vw,27px);
-    white-space:normal;
-    text-align:center;
-  }
-
-  .footer-meta{
-    justify-self:start;
-    flex-wrap:wrap;
-    gap:10px 22px;
-  }
+  .site-footer{grid-template-columns:1fr;justify-items:start;gap:0;padding:25px 0 36px}
+  .footer-brand,.footer-signature{min-height:0}
+  .footer-brand{flex-wrap:wrap;row-gap:8px}
+  .footer-signature{justify-self:center;width:100%;justify-content:center;padding:24px 0;font-size:clamp(20px,7vw,27px);white-space:normal;text-align:center}
+  .footer-intro{width:100%;padding-bottom:24px}
+  .footer-details{width:100%;grid-template-columns:1fr;padding-top:26px;gap:32px}
+  .footer-column:last-child{grid-column:auto;justify-self:start;width:100%}
 }
