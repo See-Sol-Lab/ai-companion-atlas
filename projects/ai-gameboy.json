@@ -1,0 +1,48 @@
+{
+  "slug": "ai-gameboy",
+  "order": 223,
+  "officialHighlight": true,
+  "name": { "zh": "AI-Gameboy", "en": "AI-Gameboy" },
+  "author": "See-Sol-Lab",
+  "sourceUrl": "https://github.com/See-Sol-Lab/AI-Gameboy",
+  "directUrl": "https://www.ailover-atlas.com/ai-gameboy/",
+  "hook": "给 AI 一台游戏机：一起冒险，或看它经营一家有故事的小店。",
+  "summary": "本地复古掌机，内置口袋穿越、口袋跑团和口袋夜铺。支持人类与 AI 合作、两个 AI 搭档或 AI 独自开店，并自动保存行动与进度。",
+  "heroDescription": "AI-Gameboy 把共同冒险与 AI 日常经营装进三张游戏卡带。你可以和 AI 一起玩，也能旁观两个 AI 搭档；口袋夜铺另有单文件纯文字版。",
+  "badges": [
+    { "label": "实验室出品", "tone": "limited" },
+    { "label": "原创", "tone": "original" },
+    { "label": "非商业", "tone": "limited" },
+    { "label": "陪伴类", "tone": "companion" },
+    { "label": "游戏", "tone": "game" },
+    { "label": "免翻墙", "tone": "no-vpn" }
+  ],
+  "tags": ["游戏卡带", "双人冒险", "AI 经营", "本地存档"],
+  "language": "Python",
+  "platform": "Local Web / Python",
+  "updated": "2026-10-20",
+  "heroOverline": "PLAY · EXPLORE · SHARE",
+  "showcase": {
+    "label": "把一起玩的经历，留成可以继续的故事",
+    "symbol": "✚",
+    "question": "“今天一起闯关，还是去看看 TA 的小店？”",
+    "comparisons": [
+      { "value": "穿越", "label": "改写小说命运" },
+      { "value": "跑团", "label": "搭档调查解谜" },
+      { "value": "夜铺", "label": "淘货修物开店" }
+    ],
+    "note": "人类可以参与，也可以旁观；故事与行动自动存档，下次接着玩。"
+  },
+  "intro": {
+    "paragraphs": [
+      "AI-Gameboy 是 See-Sol-Lab 制作的本地复古游戏掌机。口袋穿越与口袋跑团支持人类和 AI、或两个 AI 共同冒险；口袋夜铺由一个 AI 经营旧物店，人类在旁边查看客人与经营故事。游戏界面为中文，行动与进度自动保存在电脑上。",
+      "完整版需要一台开着的电脑和能连接工具的 AI。穿越与跑团另需配置讲故事的模型服务；夜铺不需要额外荷官模型，所用 AI 客户端的费用仍照常计算。夜铺还提供 Python 3.11+ 单文件盲玩版，无掌机网页、无需额外游戏连接，适合交给能运行 Python 的 AI。"
+    ],
+    "facts": [
+      { "label": "适合", "text": "想和 AI 一起角色扮演、调查解谜，或看 AI 独自经营小店、再分享见闻的人。" },
+      { "label": "接入方式", "text": "本机由能操作电脑的 AI 协助安装；网页或手机里的 AI 参与需额外配置远程连接，并取决于客户端是否支持外部工具。" },
+      { "label": "费用与隐私", "text": "冒险卡带通常产生额外模型调用费用。存档在本机，远程玩家与荷官会收到游玩所需内容；请保管好密钥和座位邀请信息。" },
+      { "label": "许可", "text": "PolyForm Noncommercial 1.0.0；可按许可游玩、修改与分享，商业用途不在该许可范围内。" }
+    ]
+  }
+}

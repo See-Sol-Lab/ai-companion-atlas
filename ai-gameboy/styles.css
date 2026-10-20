@@ -1,0 +1,27 @@
+.night-shop-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.night-shop-copy { min-width: 0; }
+.night-shop-poster { margin: 0; min-width: 0; }
+.night-shop-poster a { display: block; }
+.night-shop-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 20px 54px rgba(16, 35, 28, .16);
+}
+.night-shop-poster figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .night-shop-hero { grid-template-columns: 1fr; gap: 36px; }
+  .night-shop-poster { width: min(100%, 440px); justify-self: center; }
+}

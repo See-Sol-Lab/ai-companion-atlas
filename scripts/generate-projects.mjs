@@ -369,6 +369,7 @@ const publicPaths = [
   '/deepseekgui/download/',
   '/deepseekgui/docs/',
   '/deepseekgui/privacy/',
+  '/ai-gameboy/',
   ...projects.map((project) => `/projects/${project.slug}/`)
 ];
 const sitemapUrls = publicPaths

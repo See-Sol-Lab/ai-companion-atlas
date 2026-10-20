@@ -4,7 +4,7 @@ import path from 'node:path';
 const origin = 'https://www.ailover-atlas.com';
 const han = /[\u3400-\u9fff]/u;
 const escapeTranslation = text => text.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'").replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
-export const publicStaticPages = ['index.html', 'deepseekgui/index.html', 'deepseekgui/download/index.html', 'deepseekgui/docs/index.html', 'deepseekgui/privacy/index.html'];
+export const publicStaticPages = ['index.html', 'deepseekgui/index.html', 'deepseekgui/download/index.html', 'deepseekgui/docs/index.html', 'deepseekgui/privacy/index.html', 'ai-gameboy/index.html'];
 export const publicScripts = ['script.js', 'script-runtime.js', 'submission.js', 'projects/detail-comments.js'];
 export const pagePath = (file) => '/' + file.replace(/index\.html$/, '');
 
@@ -58,7 +58,7 @@ export async function buildEnglish(root, projects) {
       return `${attr}="${isPage || isScript ? '/en' : ''}${url.pathname}${url.search}${url.hash}"`;
     });
     english = english.replace(/<p class="project-title-en">[^<]*<\/p>/g, '');
-    english = english.replace(/(<a\b[^>]*href=")(https:\/\/www\.ailover-atlas\.com)?(\/deepseekgui\/(?:download\/|docs\/|privacy\/)?)"/g, (all, start, host, target) => start.includes('language-switch') ? all : `${start}/en${target}"`);
+    english = english.replace(/(<a\b[^>]*href=")(https:\/\/www\.ailover-atlas\.com)?(\/deepseekgui\/(?:download\/|docs\/|privacy\/)?|\/ai-gameboy\/)"/g, (all, start, host, target) => start.includes('language-switch') ? all : `${start}/en${target}"`);
     english = english.replace(/(<div class="clock-mark">)[\s\S]*?(<\/div>)/g, '$1✦$2');
     english = english.replace(/(<article\b[^>]*?) data-search="[^"]*"([^>]*>)([\s\S]*?)(<\/article>)/g, (_, start, end, body, close) => {
       const text = body.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').replaceAll('"', '&quot;');
