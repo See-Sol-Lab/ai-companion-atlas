@@ -2,6 +2,7 @@
   "slug": "ai-gameboy",
   "order": 223,
   "officialHighlight": true,
+  "editorPick": true,
   "name": { "zh": "AI-Gameboy", "en": "AI-Gameboy" },
   "author": "See-Sol-Lab",
   "sourceUrl": "https://github.com/See-Sol-Lab/AI-Gameboy",
@@ -20,7 +21,7 @@
   "tags": ["游戏卡带", "双人冒险", "AI 经营", "本地存档"],
   "language": "Python",
   "platform": "Local Web / Python",
-  "updated": "2026-10-20",
+  "updated": "2026-10-26",
   "heroOverline": "PLAY · EXPLORE · SHARE",
   "showcase": {
     "label": "把一起玩的经历，留成可以继续的故事",
