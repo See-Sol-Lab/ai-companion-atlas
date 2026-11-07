@@ -1,5 +1,6 @@
 {
-  "slug": "astrbot-meme-manager", "order": 100,
+  "slug": "astrbot-meme-manager",
+  "stars": 551, "order": 100,
   "name": { "zh": "AstrBot 表情包管理器", "en": "Meme Manager" },
   "author": "anka-afk", "sourceUrl": "https://github.com/anka-afk/astrbot_plugin_meme_manager",
   "hook": "让 AI 根据情绪挑选、发送并积累属于自己的表情包。",
